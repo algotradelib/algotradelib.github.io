@@ -1,0 +1,5 @@
+<map id="algotradelib::PlacedOrder&lt; Broker &gt;" name="algotradelib::PlacedOrder&lt; Broker &gt;">
+<area shape="rect" id="Node000001" title="An accepted order: the acknowledgement and the reference to address it with." alt="" coords="5,101,192,141"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderAck.html" title="The broker&#39;s acknowledgement that it accepted an instruction." alt="" coords="15,5,183,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,45,101,101,96,101,96,45"/>
+</map>

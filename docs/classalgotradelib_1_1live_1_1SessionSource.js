@@ -1,0 +1,24 @@
+var classalgotradelib_1_1live_1_1SessionSource =
+[
+    [ "ObservedFigure", "structalgotradelib_1_1live_1_1SessionSource_1_1ObservedFigure.html", "structalgotradelib_1_1live_1_1SessionSource_1_1ObservedFigure" ],
+    [ "ObservedCharge", "structalgotradelib_1_1live_1_1SessionSource_1_1ObservedCharge.html", "structalgotradelib_1_1live_1_1SessionSource_1_1ObservedCharge" ],
+    [ "BrokerTag", "classalgotradelib_1_1live_1_1SessionSource.html#a6e706515bc6633d55fe9a5de5bbd780b", null ],
+    [ "Caps", "classalgotradelib_1_1live_1_1SessionSource.html#a49a837f51b496c9ada023e75863c5d3a", null ],
+    [ "SessionSource", "classalgotradelib_1_1live_1_1SessionSource.html#a33ab5811daad60e0235c2d95b21c6507", null ],
+    [ "SessionSource", "classalgotradelib_1_1live_1_1SessionSource.html#a3a812b62ba4b74ef070d8001259763e2", null ],
+    [ "bars_fed_as_warmup", "classalgotradelib_1_1live_1_1SessionSource.html#a4b61730375446d0ef773f9ac14e6896b", null ],
+    [ "bars_not_yet_closed", "classalgotradelib_1_1live_1_1SessionSource.html#ad14cd46cb2ff2addb1367b4e23474683", null ],
+    [ "buying_power_currencies", "classalgotradelib_1_1live_1_1SessionSource.html#ac06b51a7dd1bbe05b359a35844e9592d", null ],
+    [ "calendar_country", "classalgotradelib_1_1live_1_1SessionSource.html#afa5f26bda14386cbe1a65e5e8f54244f", null ],
+    [ "charged_costs", "classalgotradelib_1_1live_1_1SessionSource.html#a4b1088d89b6312b1010fec93c14bff73", null ],
+    [ "last_error", "classalgotradelib_1_1live_1_1SessionSource.html#ac53e4e05d97faea590d431200f0fe64e", null ],
+    [ "last_reconcile", "classalgotradelib_1_1live_1_1SessionSource.html#a56d808b4b94adcb78edf350861c78bbc", null ],
+    [ "poll", "classalgotradelib_1_1live_1_1SessionSource.html#a65ae2fe241932b4e7fbc0343b6a04627", null ],
+    [ "read_order_list", "classalgotradelib_1_1live_1_1SessionSource.html#a530929621b505d73267ce72a23cb2c4a", null ],
+    [ "set_bar_query", "classalgotradelib_1_1live_1_1SessionSource.html#adbfd14bae84d4a2d45935a6998da178a", null ],
+    [ "set_buying_power_currencies", "classalgotradelib_1_1live_1_1SessionSource.html#a7382532c84212727bea6ceaf08318f49", null ],
+    [ "set_calendar_country", "classalgotradelib_1_1live_1_1SessionSource.html#a9c12a5c35ef4792ee6d6969299ee9aeb", null ],
+    [ "set_journal", "classalgotradelib_1_1live_1_1SessionSource.html#abd079695b627bc66b05b8d788d81a449", null ],
+    [ "set_match_window", "classalgotradelib_1_1live_1_1SessionSource.html#a90502c01f2ea7d1531fb2f5564ebb079", null ],
+    [ "provides_working_orders", "classalgotradelib_1_1live_1_1SessionSource.html#a9e850d32307ae5788d48b0a2464aeac2", null ]
+];

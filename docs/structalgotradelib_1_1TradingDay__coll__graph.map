@@ -1,0 +1,5 @@
+<map id="algotradelib::TradingDay" name="algotradelib::TradingDay">
+<area shape="rect" id="Node000001" title="One calendar date and whether the market opens on it." alt="" coords="5,101,187,127"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1Date.html" title="A calendar date with no time of day or time zone." alt="" coords="27,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,45,99,101,93,101,93,45"/>
+</map>

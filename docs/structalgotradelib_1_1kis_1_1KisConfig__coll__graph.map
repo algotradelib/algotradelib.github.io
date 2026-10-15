@@ -1,0 +1,7 @@
+<map id="algotradelib::kis::KisConfig" name="algotradelib::kis::KisConfig">
+<area shape="rect" id="Node000001" title="KIS credentials (app key and secret), demo or real account, and the market&#45;data tape." alt="" coords="19,235,153,275"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title=" " alt="" coords="5,131,167,185"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,199,89,234,83,234,83,199"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title="OAuth client credentials (an app key and secret), the base of each broker&#39;s credentials class." alt="" coords="5,5,167,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,73,89,130,83,130,83,73"/>
+</map>

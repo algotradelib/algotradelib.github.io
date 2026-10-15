@@ -1,0 +1,59 @@
+<map id="algotradelib/src/strategy/intent.hpp" name="algotradelib/src/strategy/intent.hpp">
+<area shape="rect" id="Node000001" title="What a strategy asks the runner for: orders (OrderIntent), target positions (TargetPosition) and canc..." alt="" coords="701,5,882,45"/>
+<area shape="rect" id="Node000002" href="$context_8hpp_source.html" title=" " alt="" coords="112,269,281,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="687,28,547,31,388,40,312,49,244,61,187,76,146,96,115,122,95,151,91,167,90,183,94,201,102,220,124,247,153,267,150,271,120,251,97,223,89,203,85,184,86,166,90,149,111,118,143,91,185,71,242,56,311,44,388,35,546,25,687,23"/>
+<area shape="rect" id="Node000007" href="$concept_8hpp.html" title="What a strategy is, how a runner calls its handlers, and ATL_ASSERT_STRATEGY." alt="" coords="157,93,338,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="687,46,339,100,338,95,687,40"/>
+<area shape="rect" id="Node000009" href="$reconcile_8hpp.html" title="Reconciliation: turning a strategy&#39;s intents and targets into the orders and cancellations to send." alt="" coords="385,93,566,133"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="709,52,545,96,544,91,708,46"/>
+<area shape="rect" id="Node000019" href="$buy__and__hold_8hpp_source.html" title=" " alt="" coords="590,93,782,133"/>
+<area shape="poly" id="edge30_Node000001_Node000019" title=" " alt="" coords="759,56,711,95,708,91,756,52"/>
+<area shape="rect" id="Node000020" href="$crossover_8hpp_source.html" title=" " alt="" coords="806,93,987,133"/>
+<area shape="poly" id="edge31_Node000001_Node000020" title=" " alt="" coords="827,52,875,91,872,95,823,56"/>
+<area shape="rect" id="Node000021" href="$reversion_8hpp_source.html" title=" " alt="" coords="1011,93,1193,133"/>
+<area shape="poly" id="edge32_Node000001_Node000021" title=" " alt="" coords="873,46,1035,91,1033,96,872,52"/>
+<area shape="rect" id="Node000022" href="$sizing_8hpp_source.html" title=" " alt="" coords="1217,93,1398,133"/>
+<area shape="poly" id="edge33_Node000001_Node000022" title=" " alt="" coords="896,40,1205,91,1217,93,1216,98,1204,96,895,46"/>
+<area shape="rect" id="Node000023" href="$timed__liquidation_8hpp_source.html" title=" " alt="" coords="1422,93,1638,133"/>
+<area shape="poly" id="edge34_Node000001_Node000023" title=" " alt="" coords="896,34,1132,58,1410,91,1422,92,1421,98,1410,96,1131,63,895,39"/>
+<area shape="rect" id="Node000003" href="$runner_8hpp_source.html" title=" " alt="" coords="235,357,404,397"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,315,294,355,291,359,233,319"/>
+<area shape="rect" id="Node000004" href="$engine_8hpp.html" title="The backtest engine: Backtester replays bars (and quotes) through the same Runner a live session uses..." alt="" coords="117,445,300,485"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="285,408,235,447,232,443,282,404"/>
+<area shape="rect" id="Node000006" href="$bind_8hpp.html" title="Factories that bind a strategy to a broker session in one call: bind, bind_journaled and bind_observe..." alt="" coords="560,445,711,485"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="403,398,567,443,565,448,401,404"/>
+<area shape="rect" id="Node000005" href="$report_8hpp.html" title="The backtest report: performance figures, costs, and every assumption and limitation of the run as a ..." alt="" coords="117,533,300,573"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,499,211,533,206,533,206,499"/>
+<area shape="rect" id="Node000008" href="$dispatch_8hpp_source.html" title=" " alt="" coords="112,181,281,221"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="231,147,210,182,206,180,227,144"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="251,226,275,245,296,268,308,290,315,314,322,357,316,357,310,315,303,292,292,271,272,249,247,231"/>
+<area shape="poly" id="edge27_Node000009_Node000003" title=" " alt="" coords="437,144,416,162,397,183,370,229,350,278,326,358,321,357,345,276,366,227,393,180,412,158,434,140"/>
+<area shape="rect" id="Node000010" href="$fill_8hpp.html" title="The backtest fill model: whether a queued order trades against the next bar, and at what price and co..." alt="" coords="5,357,188,397"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="434,143,295,224,265,233,237,236,187,235,164,235,143,240,122,251,101,271,91,291,88,314,94,357,88,357,83,314,86,289,97,268,119,247,141,235,163,230,187,229,237,231,264,228,293,219,431,138"/>
+<area shape="rect" id="Node000011" href="$session__executor_8hpp_source.html" title=" " alt="" coords="786,269,951,309"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="579,131,622,134,661,134,727,131,757,132,787,140,817,154,848,180,862,200,870,224,873,269,868,269,865,225,858,203,844,183,814,159,785,145,757,138,727,136,661,140,622,140,579,136"/>
+<area shape="rect" id="Node000012" href="$execution_8hpp_source.html" title=" " alt="" coords="664,181,833,221"/>
+<area shape="poly" id="edge14_Node000009_Node000012" title=" " alt="" coords="549,135,690,179,688,184,548,140"/>
+<area shape="rect" id="Node000013" href="$journal_8hpp_source.html" title=" " alt="" coords="541,269,711,309"/>
+<area shape="poly" id="edge26_Node000009_Node000013" title=" " alt="" coords="548,137,577,155,603,180,615,202,623,226,629,269,623,269,618,227,610,204,599,183,574,159,545,142"/>
+<area shape="rect" id="Node000018" href="$risk_8hpp_source.html" title=" " alt="" coords="407,181,589,221"/>
+<area shape="poly" id="edge28_Node000009_Node000018" title=" " alt="" coords="486,146,496,180,490,182,481,147"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="134,404,185,443,182,447,131,408"/>
+<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="876,323,874,362,868,381,857,399,826,426,789,445,750,457,711,464,710,459,748,452,787,440,823,422,853,396,863,379,869,361,871,323"/>
+<area shape="poly" id="edge25_Node000012_Node000003" title=" " alt="" coords="664,228,598,248,531,272,433,317,353,360,351,355,431,312,529,267,597,243,662,222"/>
+<area shape="poly" id="edge15_Node000012_Node000011" title=" " alt="" coords="788,227,844,267,841,271,785,232"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="712,231,655,271,652,267,709,227"/>
+<area shape="rect" id="Node000015" href="$reconcile__orders_8hpp_source.html" title=" " alt="" coords="673,357,843,397"/>
+<area shape="poly" id="edge24_Node000012_Node000015" title=" " alt="" coords="753,235,760,357,754,357,748,235"/>
+<area shape="rect" id="Node000017" href="$loop_8hpp_source.html" title=" " alt="" coords="976,269,1145,309"/>
+<area shape="poly" id="edge22_Node000012_Node000017" title=" " alt="" coords="831,222,993,267,992,272,830,228"/>
+<area shape="poly" id="edge21_Node000013_Node000003" title=" " alt="" coords="546,316,387,360,386,355,545,310"/>
+<area shape="poly" id="edge17_Node000013_Node000006" title=" " alt="" coords="630,323,637,445,632,445,625,323"/>
+<area shape="rect" id="Node000014" href="$file__journal_8hpp_source.html" title=" " alt="" coords="428,357,597,397"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="592,320,539,359,536,355,589,316"/>
+<area shape="poly" id="edge19_Node000013_Node000015" title=" " alt="" coords="668,315,730,355,727,359,665,319"/>
+<area shape="rect" id="Node000016" href="$session__source_8hpp_source.html" title=" " alt="" coords="795,445,948,485"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="795,404,848,443,845,447,792,408"/>
+<area shape="poly" id="edge23_Node000017_Node000016" title=" " alt="" coords="1032,321,894,447,890,443,1028,317"/>
+<area shape="poly" id="edge29_Node000018_Node000003" title=" " alt="" coords="471,233,391,311,341,359,338,355,387,307,467,229"/>
+</map>

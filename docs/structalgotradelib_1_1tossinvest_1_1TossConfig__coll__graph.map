@@ -1,0 +1,7 @@
+<map id="algotradelib::tossinvest::TossConfig" name="algotradelib::tossinvest::TossConfig">
+<area shape="rect" id="Node000001" title="Toss Securities credentials (client id and secret). Toss has no demo environment." alt="" coords="5,235,180,275"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title=" " alt="" coords="12,131,173,185"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,199,95,234,90,234,90,199"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title="OAuth client credentials (an app key and secret), the base of each broker&#39;s credentials class." alt="" coords="12,5,173,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,73,95,130,90,130,90,73"/>
+</map>

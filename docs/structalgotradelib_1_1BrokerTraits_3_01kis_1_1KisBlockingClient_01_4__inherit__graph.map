@@ -1,0 +1,9 @@
+<map id="algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;" name="algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;">
+<area shape="rect" id="Node000001" title="The BlockingSession adapter for kis::KisBlockingClient." alt="" coords="420,69,613,109"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,39,396,68,420,72,419,77,396,73,205,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="6,69,191,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,87,420,87,420,92,205,92"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="6,133,191,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,141,396,115,435,107,436,112,396,120,205,146"/>
+</map>

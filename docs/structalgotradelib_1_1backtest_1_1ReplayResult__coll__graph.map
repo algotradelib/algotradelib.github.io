@@ -1,0 +1,5 @@
+<map id="algotradelib::backtest::ReplayResult" name="algotradelib::backtest::ReplayResult">
+<area shape="rect" id="Node000001" title="Everything a replay produced; summarize turns it into a Report." alt="" coords="7,101,171,141"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="5,5,172,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,45,91,101,86,101,86,45"/>
+</map>

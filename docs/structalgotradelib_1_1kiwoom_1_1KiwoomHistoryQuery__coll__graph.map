@@ -1,0 +1,5 @@
+<map id="algotradelib::kiwoom::KiwoomHistoryQuery" name="algotradelib::kiwoom::KiwoomHistoryQuery">
+<area shape="rect" id="Node000001" title="A Kiwoom order&#45;history query: one date (kt00007 takes no range, so a multi&#45;day query is refused)." alt="" coords="5,101,175,141"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1Date.html" title="A calendar date with no time of day or time zone." alt="" coords="21,5,159,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,45,93,101,87,101,87,45"/>
+</map>

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['unattributable_5fjournal_5fentry_0',['unattributable_journal_entry',['../namespacealgotradelib_1_1runner.html#ae409f1ed5574223f9f82da00eaec3d54',1,'algotradelib::runner']]],
+  ['unclamped_5forders_5frefused_1',['unclamped_orders_refused',['../classalgotradelib_1_1runner_1_1Runner.html#ad3e46eaba920a676b9a606b85609dd3e',1,'algotradelib::runner::Runner']]],
+  ['unclamped_5forders_5frejected_2',['unclamped_orders_rejected',['../classalgotradelib_1_1runner_1_1Runner.html#afffa959e93c1b9e920d0646b2c866006',1,'algotradelib::runner::Runner']]],
+  ['unconfirmed_5fawaiting_5fevidence_3',['unconfirmed_awaiting_evidence',['../classalgotradelib_1_1runner_1_1Runner.html#acdbfbd1f6df782e6541532fad71176c0',1,'algotradelib::runner::Runner']]],
+  ['unconfirmed_5forders_4',['unconfirmed_orders',['../classalgotradelib_1_1runner_1_1Runner.html#a9150672345e36b462343ef9c1e152154',1,'algotradelib::runner::Runner']]],
+  ['unconstrained_5',['unconstrained',['../structalgotradelib_1_1PriceRule.html#a37e9a92e2578424d2dccc19958bdad3d',1,'algotradelib::PriceRule']]],
+  ['undefined_6',['undefined',['../namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb',1,'algotradelib::math']]],
+  ['unestablished_5fholdings_5fscope_7',['unestablished_holdings_scope',['../namespacealgotradelib_1_1kiwoom.html#a216a257aabe6c62da9c54d31bb6b09a5',1,'algotradelib::kiwoom']]],
+  ['uninstall_8',['uninstall',['../classalgotradelib_1_1runner_1_1SignalStop.html#ae4fa4e32463c428f8dd02142287baebe',1,'algotradelib::runner::SignalStop']]],
+  ['unjournaled_5frefusals_9',['unjournaled_refusals',['../classalgotradelib_1_1runner_1_1JournalingExecutor.html#a1fa56bfec5e11565e89093c2bde38dfd',1,'algotradelib::runner::JournalingExecutor']]],
+  ['unknown_10',['unknown',['../structalgotradelib_1_1PriceRule.html#aa816bb3597d2f4d203e0ffc5583257dd',1,'algotradelib::PriceRule']]],
+  ['unobserved_11',['unobserved',['../namespacealgotradelib_1_1math.html#a565f05bdb8c4e28693e25ea163b6276a',1,'algotradelib::math::unobserved(std::size_t count)'],['../namespacealgotradelib_1_1math.html#a5160233e89faca121f0807b7be230686',1,'algotradelib::math::unobserved(std::size_t rows, std::size_t columns)']]],
+  ['unreadable_12',['unreadable',['../classalgotradelib_1_1StatedDate.html#ad479c0ecb972125aab132d13f3b752c9',1,'algotradelib::StatedDate']]],
+  ['unrecognized_13',['unrecognized',['../classalgotradelib_1_1runner_1_1FileStopChannel.html#ae436ed2ed53f5f1c619678304685405d',1,'algotradelib::runner::FileStopChannel']]],
+  ['unresolvable_5freason_14',['unresolvable_reason',['../namespacealgotradelib_1_1runner.html#aa40374a73ffe35df0d567e5d60776b2c',1,'algotradelib::runner']]],
+  ['unresolved_5finstructions_15',['unresolved_instructions',['../namespacealgotradelib_1_1runner.html#abe75759c1f7351fcc6b793f2beac3198',1,'algotradelib::runner']]],
+  ['unsupported_5fbar_5finterval_16',['unsupported_bar_interval',['../namespacealgotradelib_1_1kis.html#a855e1691ff0c7462f698268b796eeda5',1,'algotradelib::kis::unsupported_bar_interval()'],['../namespacealgotradelib_1_1kiwoom.html#a1ba774cd44665198701115ab6e96642c',1,'algotradelib::kiwoom::unsupported_bar_interval()'],['../namespacealgotradelib_1_1tossinvest.html#a07b1a043df66497ab9bc3a48a8405315',1,'algotradelib::tossinvest::unsupported_bar_interval()']]],
+  ['unsupported_5fclient_5forder_5fid_17',['unsupported_client_order_id',['../namespacealgotradelib_1_1kis.html#adbe7479366fa26fdf6012f5392893712',1,'algotradelib::kis::unsupported_client_order_id()'],['../namespacealgotradelib_1_1kiwoom.html#a9b63f9b51cf8298033974fdcd5ceec39',1,'algotradelib::kiwoom::unsupported_client_order_id()']]],
+  ['untracked_5frows_18',['untracked_rows',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#a21456ef66c94dcf98bb5020ceef3eed0',1,'algotradelib::runner::OrderUpdateWatch']]],
+  ['updated_19',['updated',['../structalgotradelib_1_1runner_1_1IterationReport.html#a2b5fc30a64932dd8fc11e1bb856739f7',1,'algotradelib::runner::IterationReport']]],
+  ['usable_5fburst_20',['usable_burst',['../namespacealgotradelib_1_1network.html#a3acbcbad72597790e84e409ed51ff185',1,'algotradelib::network']]],
+  ['usd_21',['usd',['../classalgotradelib_1_1Currency.html#a13193725796b2649f3789b616fa6d53b',1,'algotradelib::Currency']]]
+];

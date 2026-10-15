@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['kept_5fintents_5fdropped_0',['kept_intents_dropped',['../classalgotradelib_1_1runner_1_1Runner.html#a3042e254a28087e6ae5def52116b7ba2',1,'algotradelib::runner::Runner']]],
+  ['key_1',['key',['../classalgotradelib_1_1network_1_1ClientCredentials.html#a58ffe2de2f3f42e97ab7c89811588cf1',1,'algotradelib::network::ClientCredentials']]],
+  ['key_5ffield_2',['key_field',['../structalgotradelib_1_1kis_1_1KisConfig.html#a35f17ebd0df7baa4e788d0bbcc3f19d8',1,'algotradelib::kis::KisConfig::key_field()'],['../structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a777b5d1a635d9d78831284d8ee209d79',1,'algotradelib::kiwoom::KiwoomConfig::key_field()'],['../structalgotradelib_1_1tossinvest_1_1TossConfig.html#add57792b9dc1895b3c32c3052eb8f14e',1,'algotradelib::tossinvest::TossConfig::key_field()']]],
+  ['kind_3',['kind',['../classalgotradelib_1_1VenueKey.html#a9fb4255aac0d1cd8b8df01a75734c9d0',1,'algotradelib::VenueKey::kind()'],['../classalgotradelib_1_1strategy_1_1SizeSpec.html#a7e8d9beec3c4f67ff2b2d016c105319d',1,'algotradelib::strategy::SizeSpec::kind()']]],
+  ['kis_5feffective_5froute_4',['kis_effective_route',['../namespacealgotradelib.html#adf0e087bc27ed5c3b5f65333b09c9bf5',1,'algotradelib']]],
+  ['kis_5frate_5flimit_5flayer_5',['kis_rate_limit_layer',['../namespacealgotradelib_1_1kis.html#a3602c755430f920929fda291e0de616c',1,'algotradelib::kis']]],
+  ['kisauth_6',['KisAuth',['../classalgotradelib_1_1kis_1_1KisAuth.html#ac1aa28296ec922cd6d3bb379c174c565',1,'algotradelib::kis::KisAuth']]],
+  ['kisblockingclient_7',['KisBlockingClient',['../classalgotradelib_1_1kis_1_1KisBlockingClient.html#a32abcedd6929076860714fd44ceb7b84',1,'algotradelib::kis::KisBlockingClient']]],
+  ['kisclient_8',['KisClient',['../classalgotradelib_1_1kis_1_1KisClient.html#a9622f518815c7c1dcd28334b3fe7680e',1,'algotradelib::kis::KisClient']]],
+  ['kisrest_9',['KisRest',['../structalgotradelib_1_1kis_1_1KisRest.html#a963ac14bb5cf271c5c033dc1ccce7bba',1,'algotradelib::kis::KisRest']]],
+  ['kiswebsocket_10',['KisWebsocket',['../structalgotradelib_1_1kis_1_1KisWebsocket.html#a51a0cf413be9ed008376fc12d87348db',1,'algotradelib::kis::KisWebsocket']]],
+  ['kiwoom_5fdeclared_5ferror_11',['kiwoom_declared_error',['../namespacealgotradelib_1_1kiwoom.html#a31eb55a25e793175c968e6fc670420b5',1,'algotradelib::kiwoom']]],
+  ['kiwoom_5feffective_5froute_12',['kiwoom_effective_route',['../namespacealgotradelib_1_1kiwoom.html#af9e754570df57cadfcd737db85150456',1,'algotradelib::kiwoom']]],
+  ['kiwoom_5ferror_5fcategory_13',['kiwoom_error_category',['../namespacealgotradelib_1_1kiwoom.html#aba66ebbb22ef7fae217e84c0ad982fcc',1,'algotradelib::kiwoom']]],
+  ['kiwoom_5frate_5flimit_5flayer_14',['kiwoom_rate_limit_layer',['../namespacealgotradelib_1_1kiwoom.html#a23c389081617120ad0f5a1745ee1a36c',1,'algotradelib::kiwoom']]],
+  ['kiwoom_5frecognized_5frefusal_15',['kiwoom_recognized_refusal',['../namespacealgotradelib_1_1kiwoom.html#af6d1d92495bcad9b3eb0ab2f0041dc4a',1,'algotradelib::kiwoom']]],
+  ['kiwoom_5frefusal_5fcode_16',['kiwoom_refusal_code',['../namespacealgotradelib_1_1kiwoom.html#ac60dd41661922d530d5c6df0409a89d4',1,'algotradelib::kiwoom']]],
+  ['kiwoom_5froute_17',['kiwoom_route',['../namespacealgotradelib.html#aba1fa39a1bf49ab9f92e280ec6fbbbe0',1,'algotradelib']]],
+  ['kiwoomauth_18',['KiwoomAuth',['../classalgotradelib_1_1kiwoom_1_1KiwoomAuth.html#a836e2f29c28042ecbe6eda311987ba3a',1,'algotradelib::kiwoom::KiwoomAuth']]],
+  ['kiwoomblockingclient_19',['KiwoomBlockingClient',['../classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#ab3775b99b9a783823a0b35b695146840',1,'algotradelib::kiwoom::KiwoomBlockingClient']]],
+  ['kiwoomclient_20',['KiwoomClient',['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#ae181a62bf65e937ea88755bad29ffea6',1,'algotradelib::kiwoom::KiwoomClient']]],
+  ['krw_21',['krw',['../classalgotradelib_1_1Currency.html#ab039d37b0dcdd3a33cc621b86fe98600',1,'algotradelib::Currency']]],
+  ['krx_22',['krx',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::strategy::SessionWindow']]],
+  ['krx_5fequity_23',['krx_equity',['../structalgotradelib_1_1PriceRule.html#a5a791a8c9e6878491beb87472cb42597',1,'algotradelib::PriceRule']]]
+];

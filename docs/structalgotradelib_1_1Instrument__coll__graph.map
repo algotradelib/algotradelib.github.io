@@ -1,0 +1,17 @@
+<map id="algotradelib::Instrument" name="algotradelib::Instrument">
+<area shape="rect" id="Node000001" title="Reference data for one instrument." alt="" coords="877,112,1056,137"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="538,5,729,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="743,28,799,40,854,57,907,83,949,110,946,114,905,87,852,62,798,45,742,34"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1MarketSegment.html" title="The market segment an instrument is listed on, such as KOSPI or NASDAQ." alt="" coords="528,59,739,84"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="753,83,854,98,911,109,910,115,853,103,752,88"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Code.html" title=" " alt="" coords="289,51,431,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="444,69,528,69,528,74,444,74"/>
+<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Code.html" title="A short uppercase code (letters, digits, _), stored inline without allocation." alt="" coords="5,59,187,84"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,69,289,69,289,74,200,74"/>
+<area shape="rect" id="Node000006" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="550,112,717,137"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="730,122,877,122,877,127,730,127"/>
+<area shape="rect" id="Node000007" href="$classalgotradelib_1_1StatedDate.html" title="A date a broker stated, did not state, or stated in a form that could not be read." alt="" coords="543,185,724,211"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="737,190,795,182,853,170,900,154,940,135,942,140,902,159,854,175,796,187,738,195"/>
+<area shape="rect" id="Node000008" href="$structalgotradelib_1_1PriceRule.html" title="The price grid (tick sizes) an instrument&#39;s order prices must sit on." alt="" coords="549,239,718,264"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="731,244,792,234,852,214,883,197,911,176,952,136,956,140,914,180,886,201,854,219,794,239,732,250"/>
+</map>

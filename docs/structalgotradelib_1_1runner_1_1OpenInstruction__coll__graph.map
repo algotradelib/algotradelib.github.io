@@ -1,0 +1,9 @@
+<map id="algotradelib::runner::OpenInstruction" name="algotradelib::runner::OpenInstruction">
+<area shape="rect" id="Node000001" title="One instruction of unknown outcome, and the span in which it may have reached the broker." alt="" coords="129,212,280,252"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1runner_1_1JournalEntry.html" title="One journal line: an instruction and what was known about it when the line was written." alt="" coords="129,101,280,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,155,207,212,202,212,202,155"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,39,187,99,183,103,121,42"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="291,43,253,79,228,103,224,99,249,75,287,39"/>
+</map>

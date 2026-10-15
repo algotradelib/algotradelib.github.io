@@ -1,0 +1,5 @@
+<map id="algotradelib::PriceLimits" name="algotradelib::PriceLimits">
+<area shape="rect" id="Node000001" title="The highest and lowest price an instrument may trade at today." alt="" coords="5,101,185,127"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="12,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,45,98,101,93,101,93,45"/>
+</map>

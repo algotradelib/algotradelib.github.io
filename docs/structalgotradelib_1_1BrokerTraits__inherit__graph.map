@@ -1,0 +1,15 @@
+<map id="algotradelib::BrokerTraits&lt; Client &gt;" name="algotradelib::BrokerTraits&lt; Client &gt;">
+<area shape="rect" id="Node000001" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="5,177,191,217"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html" title="The BlockingSession adapter for kis::KisBlockingClient." alt="" coords="465,13,658,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,164,156,113,183,88,213,68,275,44,341,30,406,24,464,23,464,29,406,29,342,36,277,49,216,73,186,92,160,117,121,167"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html" title="The BrokerSession adapter for kis::KisClient." alt="" coords="469,77,654,117"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,167,172,145,214,127,279,110,346,100,468,92,469,98,346,105,280,115,216,132,175,150,138,172"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html" title="The BlockingSession adapter for kiwoom::KiwoomBlockingClient." alt="" coords="432,145,691,185"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="204,187,432,172,432,177,205,193"/>
+<area shape="rect" id="Node000005" href="$structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomClient_01_4.html" title="The BrokerSession adapter for kiwoom::KiwoomClient." alt="" coords="460,209,663,249"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="205,214,215,215,342,224,460,227,460,232,342,229,214,220,204,219"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html" title="The BlockingSession adapter for tossinvest::TossBlockingClient." alt="" coords="437,277,686,317"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="133,225,171,253,216,275,270,290,327,299,437,304,436,309,327,304,269,295,214,280,168,257,130,229"/>
+<area shape="rect" id="Node000007" href="$structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html" title="The BrokerSession adapter for tossinvest::TossClient." alt="" coords="465,341,658,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="118,228,158,284,185,311,216,332,277,356,342,368,406,372,464,370,465,376,406,377,341,373,275,361,213,337,181,315,153,287,114,231"/>
+</map>

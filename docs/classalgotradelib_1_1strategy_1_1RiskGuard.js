@@ -1,0 +1,22 @@
+var classalgotradelib_1_1strategy_1_1RiskGuard =
+[
+    [ "RiskGuard", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a5bfbbcead4b71e31b167bc1737079df2", null ],
+    [ "blocking_reason", "classalgotradelib_1_1strategy_1_1RiskGuard.html#af3b3fea73f17aeb84fbe6fe7e1bba259", null ],
+    [ "blocking_reason_for", "classalgotradelib_1_1strategy_1_1RiskGuard.html#acb4bb5299862da27a00980cd0737ac10", null ],
+    [ "check", "classalgotradelib_1_1strategy_1_1RiskGuard.html#ab0d1e430593b372f0f19438d0ba4ec34", null ],
+    [ "evaluate", "classalgotradelib_1_1strategy_1_1RiskGuard.html#af5bf29b25d94666402eedff4da58018e", null ],
+    [ "forget_before", "classalgotradelib_1_1strategy_1_1RiskGuard.html#ae4971aa0249d7551eef183c27ae62563", null ],
+    [ "halt", "classalgotradelib_1_1strategy_1_1RiskGuard.html#ad2b43ec20c1750e35279e3badcbd7e6c", null ],
+    [ "halt", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a1c084eaac6e73d89906bc5bce2d87409", null ],
+    [ "halt", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a9dd91661d8b7953c6c7236ed7aa8f4df", null ],
+    [ "halted", "classalgotradelib_1_1strategy_1_1RiskGuard.html#ae9e99c0be03b044719b68fb0e0c62281", null ],
+    [ "halted", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a21f067f5c66fc1720bdabd55042fa290", null ],
+    [ "holds", "classalgotradelib_1_1strategy_1_1RiskGuard.html#aa982c918638ef2e982aff5659309467c", null ],
+    [ "limits", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a1e0c05002bfc28a3ce93009c6e7198b2", null ],
+    [ "note_sent", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a180aca7b518a84c6ea0960a2392c6c68", null ],
+    [ "permits_phase", "classalgotradelib_1_1strategy_1_1RiskGuard.html#aa4eb4e5dcf5e8652f8608c332672b827", null ],
+    [ "recent_orders", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a059c6ac4703c5849bf34027905fe852f", null ],
+    [ "resume", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a6bfd79ecdbb68172b49d805ea5e7f56b", null ],
+    [ "resume", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a296a8f63209a1850993012017443385e", null ],
+    [ "total_sent", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a7ee5bd9ce2406114361ee2d42fd300fc", null ]
+];

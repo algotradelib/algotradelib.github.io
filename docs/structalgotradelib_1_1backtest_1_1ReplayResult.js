@@ -1,0 +1,25 @@
+var structalgotradelib_1_1backtest_1_1ReplayResult =
+[
+    [ "aborted_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#ae4f592c35cc79d69e4f0b58ebd96673a", null ],
+    [ "bars_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a45e1d9700ed1ae2e20b30b4e7c31dfc0", null ],
+    [ "currency_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#ac15bf00fc1e87473965e4fa2e3a30340", null ],
+    [ "equity_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#af42c0b72cc2819675d1aad1e93203396", null ],
+    [ "executions_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a8373e9d7fb1cbcdadfbf501be67652f2", null ],
+    [ "expired_day_orders_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a917ac58525054be1fd3d8cd090ad3469", null ],
+    [ "first_overdrawn_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#adb62f0d984f42cc3d35d35aa9dfa2968", null ],
+    [ "first_unvalued_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a5a30adb14e2c64dbd081b8f636ce35f0", null ],
+    [ "gaps_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a88232f04ca9a6cc61e1980540264b8a1", null ],
+    [ "halted_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a9c4ff8ca110347c57c415b281fa5935c", null ],
+    [ "limit_fills_bounded_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a4e1b49a6b2cba347174838a17e5ef16a", null ],
+    [ "lowest_cash_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#ae994c9bc49c1816bbb1ac87369c63357", null ],
+    [ "lowest_cash_at_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#af39742b969e23b48edc730587681061f", null ],
+    [ "overdrawn_bars_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb", null ],
+    [ "quotes_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#abf593948a01e569973b089692848d7f2", null ],
+    [ "refused_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a688685e711a29d2bceaabf38909dcbe6", null ],
+    [ "rejected_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a700ec8831500785ed4a708e1ddc2fecb", null ],
+    [ "stop_fills_intrabar_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#aa3c87e35845bdf58c485fef23acdda51", null ],
+    [ "stop_releases_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a388a5592e90bec192f9a4f6115c5e0e5", null ],
+    [ "unchecked_fill_causality_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a52409541c53241a038c4efd3f1fdc411", null ],
+    [ "unfilled_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a9a10283f434eab9a1586bcd6890225ad", null ],
+    [ "unvalued_bars_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a33d9b018911470bdac0df7ef8a973ee6", null ]
+];

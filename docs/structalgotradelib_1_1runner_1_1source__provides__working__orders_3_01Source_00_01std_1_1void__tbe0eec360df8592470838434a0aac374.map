@@ -1,0 +1,10 @@
+<map id="algotradelib::runner::source_provides_working_orders&lt; Source, std::void_t&lt; decltype(Source::provides_working_orders)&gt; &gt;" name="algotradelib::runner::source_provides_working_orders&lt; Source, std::void_t&lt; decltype(Source::provides_working_orders)&gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="659,50,877,134"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,30,124,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,27,236,13,361,4,499,6,568,13,635,25,696,47,694,52,634,30,567,18,498,11,362,10,237,19,138,32"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1source__provides__working__orders.html" title="Detects whether a source declares static constexpr bool provides_working_orders = true,..." alt="" coords="173,47,392,102"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="138,50,174,56,173,61,137,56"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="181,126,385,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="398,136,658,103,659,108,399,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="406,87,416,88,542,92,658,92,658,97,542,97,416,93,406,92"/>
+</map>

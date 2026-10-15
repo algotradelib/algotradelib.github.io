@@ -1,0 +1,7 @@
+<map id="algotradelib::runner::RejectedCancel&lt; BrokerTag &gt;" name="algotradelib::runner::RejectedCancel&lt; BrokerTag &gt;">
+<area shape="rect" id="Node000001" title="A cancellation that was refused, by the broker or before it was sent." alt="" coords="5,227,231,267"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderRef.html" title=" " alt="" coords="35,116,201,156"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,170,121,226,115,226,115,170"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1OrderRef.html" title="A broker&#39;s reference to one order, used to amend or cancel it." alt="" coords="35,5,201,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,59,121,116,115,116,115,59"/>
+</map>

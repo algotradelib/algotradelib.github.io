@@ -1,0 +1,7 @@
+<map id="algotradelib::tossinvest::TossRest" name="algotradelib::tossinvest::TossRest">
+<area shape="rect" id="Node000001" title="A Toss REST access token and its expiry." alt="" coords="15,205,190,245"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1network_1_1AuthBody.html" title=" " alt="" coords="13,116,193,156"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,170,105,205,100,205,100,170"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1network_1_1AuthBody.html" title="An OAuth access token and its expiry, the base of each broker&#39;s token&#45;response class." alt="" coords="5,5,200,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,59,105,116,100,116,100,59"/>
+</map>

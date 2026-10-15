@@ -1,0 +1,11 @@
+<map id="algotradelib::network::WssSession" name="algotradelib::network::WssSession">
+<area shape="rect" id="Node000001" title="A WebSocket client over TLS; derive from it and override on_message." alt="" coords="931,47,1092,87"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1network_1_1WebSocketSessionBase.html" title=" " alt="" coords="667,25,881,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="895,64,930,64,930,69,895,69"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="227,5,425,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,26,538,32,643,41,667,44,666,50,642,47,538,37,439,32"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1network_1_1WebSocketSessionBase.html" title="The base of the WebSocket clients WsSession and WssSession: connecting, sending, receiving,..." alt="" coords="235,81,417,135"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="431,116,534,119,588,116,642,109,666,104,667,109,643,115,589,121,534,124,431,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,88,177,128"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="191,105,235,105,235,111,191,111"/>
+</map>

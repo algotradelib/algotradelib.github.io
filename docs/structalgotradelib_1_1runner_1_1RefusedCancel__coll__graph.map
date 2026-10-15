@@ -1,0 +1,7 @@
+<map id="algotradelib::runner::RefusedCancel&lt; BrokerTag &gt;" name="algotradelib::runner::RefusedCancel&lt; BrokerTag &gt;">
+<area shape="rect" id="Node000001" title="A cancellation a hold refused (nothing was sent), and which hold." alt="" coords="5,227,227,267"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderRef.html" title=" " alt="" coords="33,116,199,156"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,170,119,226,113,226,113,170"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1OrderRef.html" title="A broker&#39;s reference to one order, used to amend or cancel it." alt="" coords="33,5,199,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,59,119,116,113,116,113,59"/>
+</map>

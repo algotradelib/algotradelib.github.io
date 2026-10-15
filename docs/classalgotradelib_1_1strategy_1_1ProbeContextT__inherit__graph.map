@@ -1,0 +1,7 @@
+<map id="algotradelib::strategy::ProbeContextT&lt; CapsType &gt;" name="algotradelib::strategy::ProbeContextT&lt; CapsType &gt;">
+<area shape="rect" id="Node000001" title="A context for testing a strategy without a runner: it records what the strategy asks for." alt="" coords="5,37,224,77"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1strategy_1_1ProbeContextT.html" title=" " alt="" coords="361,5,568,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,43,361,32,361,37,238,49"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1strategy_1_1ProbeContextT.html" title=" " alt="" coords="362,69,567,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,70,248,71,362,80,362,85,248,76,237,75"/>
+</map>

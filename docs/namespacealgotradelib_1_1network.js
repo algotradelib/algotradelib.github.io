@@ -1,0 +1,37 @@
+var namespacealgotradelib_1_1network =
+[
+    [ "AsyncHttpClient", "classalgotradelib_1_1network_1_1AsyncHttpClient.html", "classalgotradelib_1_1network_1_1AsyncHttpClient" ],
+    [ "AuthBody", "structalgotradelib_1_1network_1_1AuthBody.html", "structalgotradelib_1_1network_1_1AuthBody" ],
+    [ "BasicRateLimitBucket", "classalgotradelib_1_1network_1_1BasicRateLimitBucket.html", "classalgotradelib_1_1network_1_1BasicRateLimitBucket" ],
+    [ "ClientCredentials", "classalgotradelib_1_1network_1_1ClientCredentials.html", "classalgotradelib_1_1network_1_1ClientCredentials" ],
+    [ "HttpClient", "classalgotradelib_1_1network_1_1HttpClient.html", "classalgotradelib_1_1network_1_1HttpClient" ],
+    [ "HttpClientOptions", "structalgotradelib_1_1network_1_1HttpClientOptions.html", "structalgotradelib_1_1network_1_1HttpClientOptions" ],
+    [ "HttpRequest", "structalgotradelib_1_1network_1_1HttpRequest.html", "structalgotradelib_1_1network_1_1HttpRequest" ],
+    [ "RateLimitBudget", "structalgotradelib_1_1network_1_1RateLimitBudget.html", "structalgotradelib_1_1network_1_1RateLimitBudget" ],
+    [ "RateLimitController", "classalgotradelib_1_1network_1_1RateLimitController.html", "classalgotradelib_1_1network_1_1RateLimitController" ],
+    [ "RateLimitGroupStats", "structalgotradelib_1_1network_1_1RateLimitGroupStats.html", "structalgotradelib_1_1network_1_1RateLimitGroupStats" ],
+    [ "RateLimitStats", "structalgotradelib_1_1network_1_1RateLimitStats.html", "structalgotradelib_1_1network_1_1RateLimitStats" ],
+    [ "WebSocketSessionBase", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html", "classalgotradelib_1_1network_1_1WebSocketSessionBase" ],
+    [ "WebSocketSessionOptions", "structalgotradelib_1_1network_1_1WebSocketSessionOptions.html", "structalgotradelib_1_1network_1_1WebSocketSessionOptions" ],
+    [ "WsSession", "classalgotradelib_1_1network_1_1WsSession.html", "classalgotradelib_1_1network_1_1WsSession" ],
+    [ "WssSession", "classalgotradelib_1_1network_1_1WssSession.html", "classalgotradelib_1_1network_1_1WssSession" ],
+    [ "HttpResponse", "namespacealgotradelib_1_1network.html#aead0772bd97b56e17efebc83ccea172b", null ],
+    [ "RateLimitBucket", "namespacealgotradelib_1_1network.html#af7e6ef5713b6a8d4e64496bed5189a6d", null ],
+    [ "WssSessionOptions", "namespacealgotradelib_1_1network.html#a97049b2204eff6da5e12ffcec1c921b6", null ],
+    [ "RateLimitGroup", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940", [
+      [ "TRADING", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d", null ],
+      [ "AUTH", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced", null ],
+      [ "ACCOUNT", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6", null ],
+      [ "MARKET_DATA", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c", null ],
+      [ "REFERENCE", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f", null ]
+    ] ],
+    [ "close_ssl_stream", "namespacealgotradelib_1_1network.html#a89ab64ee4c611c19a0d43fe6f3167e28", null ],
+    [ "make_host_header", "namespacealgotradelib_1_1network.html#ad3e40597b613a8ad74c2f3a5b4c7d53d", null ],
+    [ "rate_limit_group_index", "namespacealgotradelib_1_1network.html#aa4013419d865995b72fa61b0373d1b9d", null ],
+    [ "rate_limit_group_name", "namespacealgotradelib_1_1network.html#afddb9280cc63249a44e9fea1032111e2", null ],
+    [ "rate_limit_priority", "namespacealgotradelib_1_1network.html#a367cb5eea53458acd032fc4ddb8dd12b", null ],
+    [ "shutdown_ssl_stream", "namespacealgotradelib_1_1network.html#a7034ecd750c3f7f76570acfc2b488ae9", null ],
+    [ "transport_error", "namespacealgotradelib_1_1network.html#a430c9c3332bda042ce8377d013be9b05", null ],
+    [ "usable_burst", "namespacealgotradelib_1_1network.html#a3acbcbad72597790e84e409ed51ff185", null ],
+    [ "rate_limit_group_count", "namespacealgotradelib_1_1network.html#abbef45142e4c629274d3d8f94b8dadb8", null ]
+];

@@ -1,0 +1,5 @@
+<map id="examples/live_program.hpp" name="examples/live_program.hpp">
+<area shape="rect" id="Node000001" title="The production wiring of a live run, with no broker named: the part of example&#45;live&#45;program a consume..." alt="" coords="5,5,209,31"/>
+<area shape="rect" id="Node000002" href="$example-live-program_8cpp.html" title="The live program to copy: KIS, Kiwoom or Toss, journalled, recoverable, stoppable." alt="" coords="19,79,195,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,44,110,79,105,79,105,44"/>
+</map>

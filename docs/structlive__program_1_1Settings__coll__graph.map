@@ -1,0 +1,7 @@
+<map id="live_program::Settings" name="live_program::Settings">
+<area shape="rect" id="Node000001" title="What a run is told, gathered so main states it once and a test can state it differently." alt="" coords="93,116,262,141"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1RiskLimits.html" title="The limits the operator sets for RiskGuard." alt="" coords="5,5,168,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,54,169,114,165,118,111,57"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1PollSchedule.html" title="How often a PollingLoop polls each kind; an unset interval disables that poll." alt="" coords="193,5,343,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,57,190,118,186,114,240,54"/>
+</map>

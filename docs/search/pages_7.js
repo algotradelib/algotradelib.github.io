@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['data_0',['Market data',['../market-data.html',1,'guide']]],
+  ['data_20source_20that_20cannot_20trade_1',['A market-data source that cannot trade',['../broker-port.html#autotoc_md106',1,'']]],
+  ['deliberately_20does_20not_20compute_2',['What this layer deliberately does not compute',['../analytics-conventions.html#autotoc_md19',1,'']]],
+  ['dependency_20rule_20and_20the_20rule_20underneath_20it_3',['The dependency rule, and the rule underneath it',['../architecture.html#autotoc_md23',1,'']]],
+  ['describe_20a_20window_20and_20nothing_20is_20annualized_20for_20you_4',['Convention 4: two numbers describe a window, and nothing is annualized for you',['../analytics-conventions.html#autotoc_md17',1,'']]],
+  ['did_20everything_20i_20asked_20for_20go_20out_5',['Did everything I asked for go out?',['../running-a-strategy-live.html#autotoc_md92',1,'']]],
+  ['did_20not_20go_20out_6',['What the report says about orders that did not go out',['../running-a-strategy-live.html#autotoc_md91',1,'']]],
+  ['difference_7',['Normalize the intersection, expose the difference',['../architecture.html#autotoc_md27',1,'']]],
+  ['differs_20between_20the_20brokers_8',['What differs between the brokers',['../market-data.html#autotoc_md58',1,'']]],
+  ['differs_20from_20a_20quote_20driven_20live_20run_9',['Quotes, and the one place a quote-driven replay differs from a quote-driven live run',['../reading-a-backtest.html#autotoc_md66',1,'']]],
+  ['directly_10',['Talking to a broker directly',['../broker-clients.html',1,'guide']]],
+  ['disclaimer_11',['Disclaimer',['../index.html#autotoc_md12',1,'']]],
+  ['distrust_20first_12',['What to distrust first',['../reading-a-backtest.html#autotoc_md76',1,'']]],
+  ['do_13',['do',['../running-a-strategy-live.html#autotoc_md96',1,'Asking the broker what the account can do'],['../reading-a-backtest.html#autotoc_md69',1,'What a replay says an account can do'],['../binding-a-broker.html#autotoc_md36',1,'What it does not do'],['../binding-a-broker.html#autotoc_md40',1,'What killing the process does, and does not do'],['../recovering-after-a-crash.html#autotoc_md82',1,'What matching can and cannot do']]],
+  ['do_20not_20have_20to_20handle_14',['What you do not have to handle',['../writing-a-strategy.html#autotoc_md120',1,'']]],
+  ['do_20yet_15',['do yet',['../recovering-after-a-crash.html#autotoc_md83',1,'What this does not do yet'],['../running-a-strategy-live.html#autotoc_md101',1,'What this does not do yet']]],
+  ['documentation_16',['Documentation',['../index.html#autotoc_md10',1,'']]],
+  ['does_20and_20does_20not_20do_17',['What killing the process does, and does not do',['../binding-a-broker.html#autotoc_md40',1,'']]],
+  ['does_20not_20compute_18',['What this layer deliberately does not compute',['../analytics-conventions.html#autotoc_md19',1,'']]],
+  ['does_20not_20do_19',['does not do',['../binding-a-broker.html#autotoc_md36',1,'What it does not do'],['../binding-a-broker.html#autotoc_md40',1,'What killing the process does, and does not do']]],
+  ['does_20not_20do_20yet_20',['does not do yet',['../recovering-after-a-crash.html#autotoc_md83',1,'What this does not do yet'],['../running-a-strategy-live.html#autotoc_md101',1,'What this does not do yet']]],
+  ['does_20not_20model_20at_20all_21',['What it does not model at all',['../reading-a-backtest.html#autotoc_md67',1,'']]],
+  ['driven_20live_20run_22',['Quotes, and the one place a quote-driven replay differs from a quote-driven live run',['../reading-a-backtest.html#autotoc_md66',1,'']]],
+  ['driven_20replay_20differs_20from_20a_20quote_20driven_20live_20run_23',['Quotes, and the one place a quote-driven replay differs from a quote-driven live run',['../reading-a-backtest.html#autotoc_md66',1,'']]],
+  ['dry_20run_24',['Order request dry-run',['../broker-clients.html#autotoc_md49',1,'']]]
+];

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['narrower_20outbound_0',['Convention 1: one gated boundary, and it is narrower outbound',['../analytics-conventions.html#autotoc_md14',1,'']]],
+  ['needs_20to_20know_20it_1',['The market phase, and what the loop needs to know it',['../running-a-strategy-live.html#autotoc_md94',1,'']]],
+  ['next_2',['next',['../architecture.html#autotoc_md29',1,'Where to go next'],['../broker-clients.html#autotoc_md52',1,'Where to go next'],['../market-data.html#autotoc_md62',1,'Where to go next'],['../broker-port.html#autotoc_md107',1,'Where to go next'],['../transport-and-pacing.html#autotoc_md113',1,'Where to go next']]],
+  ['no_20broker_3',['Running with no broker',['../binding-a-broker.html#autotoc_md31',1,'']]],
+  ['nobody_20can_20account_20for_20stops_20the_20run_4',['An order nobody can account for stops the run',['../running-a-strategy-live.html#autotoc_md97',1,'']]],
+  ['normalize_20the_20intersection_20expose_20the_20difference_5',['Normalize the intersection, expose the difference',['../architecture.html#autotoc_md27',1,'']]],
+  ['not_20an_20order_6',['Emit a target, not an order',['../writing-a-strategy.html#autotoc_md115',1,'']]],
+  ['not_20compute_7',['What this layer deliberately does not compute',['../analytics-conventions.html#autotoc_md19',1,'']]],
+  ['not_20do_8',['not do',['../binding-a-broker.html#autotoc_md36',1,'What it does not do'],['../binding-a-broker.html#autotoc_md40',1,'What killing the process does, and does not do']]],
+  ['not_20do_20yet_9',['not do yet',['../recovering-after-a-crash.html#autotoc_md83',1,'What this does not do yet'],['../running-a-strategy-live.html#autotoc_md101',1,'What this does not do yet']]],
+  ['not_20go_20out_10',['What the report says about orders that did not go out',['../running-a-strategy-live.html#autotoc_md91',1,'']]],
+  ['not_20have_20to_20handle_11',['What you do not have to handle',['../writing-a-strategy.html#autotoc_md120',1,'']]],
+  ['not_20model_20at_20all_12',['What it does not model at all',['../reading-a-backtest.html#autotoc_md67',1,'']]],
+  ['not_20send_20failures_13',['Poll failures are not send failures',['../running-a-strategy-live.html#autotoc_md95',1,'']]],
+  ['not_20stylistic_14',['Numerical choices that are not stylistic',['../analytics-conventions.html#autotoc_md18',1,'']]],
+  ['not_20supported_20yet_15',['Not supported yet',['../broker-clients.html#autotoc_md51',1,'']]],
+  ['not_20two_16',['The calendar answers three states, not two',['../market-data.html#autotoc_md60',1,'']]],
+  ['nothing_20is_20annualized_20for_20you_17',['Convention 4: two numbers describe a window, and nothing is annualized for you',['../analytics-conventions.html#autotoc_md17',1,'']]],
+  ['number_20or_20an_20account_18',['Before you trust a number, or an account',['../guide.html#autotoc_md54',1,'']]],
+  ['numbers_20describe_20a_20window_20and_20nothing_20is_20annualized_20for_20you_19',['Convention 4: two numbers describe a window, and nothing is annualized for you',['../analytics-conventions.html#autotoc_md17',1,'']]],
+  ['numbers_20live_20',['Where the numbers live',['../analytics-conventions.html#autotoc_md20',1,'']]],
+  ['numeric_20types_20at_20all_21',['Why there are two numeric types at all',['../analytics-conventions.html#autotoc_md13',1,'']]],
+  ['numeric_20worlds_20and_20four_20conventions_22',['The analytics layer: two numeric worlds and four conventions',['../analytics-conventions.html',1,'guide']]],
+  ['numeric_20worlds_20one_20gated_20boundary_23',['Two numeric worlds, one gated boundary',['../architecture.html#autotoc_md28',1,'']]],
+  ['numerical_20choices_20that_20are_20not_20stylistic_24',['Numerical choices that are not stylistic',['../analytics-conventions.html#autotoc_md18',1,'']]]
+];

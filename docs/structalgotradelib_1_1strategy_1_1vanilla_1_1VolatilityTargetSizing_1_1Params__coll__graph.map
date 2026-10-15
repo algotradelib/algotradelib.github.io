@@ -1,0 +1,7 @@
+<map id="algotradelib::strategy::vanilla::VolatilityTargetSizing::Params" name="algotradelib::strategy::vanilla::VolatilityTargetSizing::Params">
+<area shape="rect" id="Node000001" title="The strategy&#39;s settings." alt="" coords="95,121,314,176"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,39,186,120,181,123,116,43"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="297,44,256,99,234,123,230,119,252,96,293,41"/>
+</map>

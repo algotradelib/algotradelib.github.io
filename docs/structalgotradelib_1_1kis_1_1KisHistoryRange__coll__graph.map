@@ -1,0 +1,5 @@
+<map id="algotradelib::kis::KisHistoryRange" name="algotradelib::kis::KisHistoryRange">
+<area shape="rect" id="Node000001" title="The date range of a KIS order&#45;history inquiry, both ends included (Korean dates)." alt="" coords="7,121,142,161"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1Date.html" title="A calendar date with no time of day or time zone." alt="" coords="5,5,144,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,45,77,121,72,121,72,45"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title=" " alt="" coords="5,5,167,60"/>
+<area shape="rect" id="Node000001" href="$structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html" title="Kiwoom credentials (app key and secret key), demo or real account, the market&#45;data tape,..." alt="" coords="215,13,375,53"/>
+<area shape="poly" id="edge13_Node000000_Node000001" title=" " alt="" coords="181,30,215,30,215,35,181,35"/>
+</map>

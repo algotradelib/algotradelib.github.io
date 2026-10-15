@@ -1,0 +1,7 @@
+<map id="algotradelib::live::SessionSource&lt; Session, Journal, MarketData &gt;::ObservedCharge" name="algotradelib::live::SessionSource&lt; Session, Journal, MarketData &gt;::ObservedCharge">
+<area shape="rect" id="Node000001" title="One order&#39;s stated charges, as last recorded." alt="" coords="597,13,791,83"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1live_1_1SessionSource_1_1ObservedFigure.html" title="One charge figure of one order, and the filled quantity it was recorded at." alt="" coords="261,13,455,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="469,45,597,45,597,51,469,51"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,35,184,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,45,261,45,261,51,198,51"/>
+</map>

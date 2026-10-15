@@ -1,0 +1,7 @@
+<map id="algotradelib::runner::TargetPosition" name="algotradelib::runner::TargetPosition">
+<area shape="rect" id="Node000001" title="The position a strategy wants to hold in one instrument." alt="" coords="129,101,280,141"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,39,187,99,183,103,121,42"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,43,253,79,228,103,224,99,249,75,287,39"/>
+</map>

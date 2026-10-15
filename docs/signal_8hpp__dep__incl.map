@@ -1,0 +1,9 @@
+<map id="algotradelib/src/strategy/vanilla/signal.hpp" name="algotradelib/src/strategy/vanilla/signal.hpp">
+<area shape="rect" id="Node000001" title="Helpers for the vanilla strategies that compute indicators." alt="" coords="211,5,392,45"/>
+<area shape="rect" id="Node000002" href="$crossover_8hpp_source.html" title=" " alt="" coords="5,93,187,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,53,142,96,140,91,243,48"/>
+<area shape="rect" id="Node000003" href="$reversion_8hpp_source.html" title=" " alt="" coords="211,93,392,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="304,59,304,93,299,93,299,59"/>
+<area shape="rect" id="Node000004" href="$sizing_8hpp_source.html" title=" " alt="" coords="416,93,597,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="360,48,463,91,461,96,358,53"/>
+</map>

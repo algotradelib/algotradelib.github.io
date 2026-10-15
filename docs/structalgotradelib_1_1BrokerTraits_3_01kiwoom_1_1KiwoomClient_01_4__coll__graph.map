@@ -1,0 +1,9 @@
+<map id="algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;" name="algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;">
+<area shape="rect" id="Node000001" title="The BrokerSession adapter for kiwoom::KiwoomClient." alt="" coords="437,69,640,109"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,200,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,39,414,68,438,72,437,77,413,73,213,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="6,69,199,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,87,437,87,437,92,213,92"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="10,133,195,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,141,308,130,413,115,454,107,455,112,414,120,309,135,209,147"/>
+</map>

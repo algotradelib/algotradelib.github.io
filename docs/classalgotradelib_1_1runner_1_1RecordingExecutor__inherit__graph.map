@@ -1,0 +1,5 @@
+<map id="algotradelib::runner::RecordingExecutor&lt; BrokerTag &gt;" name="algotradelib::runner::RecordingExecutor&lt; BrokerTag &gt;">
+<area shape="rect" id="Node000001" title="An executor that sends nothing and records what it was given (the dry run&#39;s default)." alt="" coords="5,5,168,60"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1runner_1_1RecordingExecutor.html" title=" " alt="" coords="5,131,168,185"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,73,89,130,84,130,84,73"/>
+</map>

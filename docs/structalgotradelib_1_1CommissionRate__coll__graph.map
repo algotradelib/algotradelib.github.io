@@ -1,0 +1,11 @@
+<map id="algotradelib::CommissionRate" name="algotradelib::CommissionRate">
+<area shape="rect" id="Node000001" title="One commission rate, the market and venue it applies to, and the dates it applies on." alt="" coords="168,212,387,237"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Code.html" title=" " alt="" coords="25,101,167,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,146,258,210,256,214,140,150"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Code.html" title="A short uppercase code (letters, digits, _), stored inline without allocation." alt="" coords="5,5,187,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="99,45,99,101,93,101,93,45"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1VenueKey.html" title="Which venue a commission rate applies to: any venue, a normalized Venue, or a raw code." alt="" coords="191,109,363,134"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="280,148,280,212,275,212,275,148"/>
+<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="388,109,567,134"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="444,143,301,214,299,209,441,138"/>
+</map>

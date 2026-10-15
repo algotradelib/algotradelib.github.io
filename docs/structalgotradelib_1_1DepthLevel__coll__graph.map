@@ -1,0 +1,5 @@
+<map id="algotradelib::DepthLevel" name="algotradelib::DepthLevel">
+<area shape="rect" id="Node000001" title="One price level of an order book." alt="" coords="5,121,188,147"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="7,5,186,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,45,99,121,94,121,94,45"/>
+</map>

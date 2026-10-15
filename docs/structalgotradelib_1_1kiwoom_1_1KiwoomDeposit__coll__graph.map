@@ -1,0 +1,7 @@
+<map id="algotradelib::kiwoom::KiwoomDeposit" name="algotradelib::kiwoom::KiwoomDeposit">
+<area shape="rect" id="Node000001" title="Kiwoom&#39;s deposit detail (kt00001), as reported; buying_power reads spendable_ from it,..." alt="" coords="113,241,273,281"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,44,97,80,102,125,114,172,134,216,158,239,154,243,130,219,109,174,97,126,92,81,91,44"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="209,5,375,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="297,44,299,81,296,126,286,174,265,219,253,233,238,243,235,239,249,229,260,216,280,173,290,126,293,81,292,45"/>
+</map>

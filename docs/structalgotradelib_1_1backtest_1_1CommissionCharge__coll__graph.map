@@ -1,0 +1,10 @@
+<map id="algotradelib::backtest::CommissionCharge" name="algotradelib::backtest::CommissionCharge">
+<area shape="rect" id="Node000001" title="What one execution was charged: the broker&#39;s commission and the institution fee." alt="" coords="34,232,198,272"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,44,109,161,117,232,111,232,104,162,94,45"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1backtest_1_1AppliedRate.html" title="The commission rate that charged an execution, as the backtest report lists it." alt="" coords="177,121,341,161"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="120,38,191,95,227,119,225,123,188,99,116,42"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,172,143,234,139,230,221,167"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1VenueKey.html" title="Which venue a commission rate applies to: any venue, a normalized Venue, or a raw code." alt="" coords="209,5,381,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="290,45,267,122,262,120,285,43"/>
+</map>

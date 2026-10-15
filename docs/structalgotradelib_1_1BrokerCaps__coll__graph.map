@@ -1,0 +1,5 @@
+<map id="algotradelib::BrokerCaps&lt; Client &gt;" name="algotradelib::BrokerCaps&lt; Client &gt;">
+<area shape="rect" id="Node000001" title="What one broker client implements, as compile&#45;time constants." alt="" coords="11,101,194,141"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1SellableBasis.html" title="What a sellable quantity covers, and how RiskGuard must treat resting sells against it." alt="" coords="5,5,200,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,45,105,101,100,101,100,45"/>
+</map>

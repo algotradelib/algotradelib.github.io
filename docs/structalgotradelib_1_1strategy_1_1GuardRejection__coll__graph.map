@@ -1,0 +1,5 @@
+<map id="algotradelib::strategy::GuardRejection" name="algotradelib::strategy::GuardRejection">
+<area shape="rect" id="Node000001" title="One order a guard refused, with the limit and the value that exceeded it." alt="" coords="19,101,182,141"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,45,103,101,98,101,98,45"/>
+</map>

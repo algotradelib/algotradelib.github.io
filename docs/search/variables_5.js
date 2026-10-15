@@ -1,0 +1,18 @@
+var searchData=
+[
+  ['failed_5f_0',['failed_',['../structalgotradelib_1_1runner_1_1LoopReport.html#a8021a623c8f91f8ba88fe1dd500ed0b2',1,'algotradelib::runner::LoopReport']]],
+  ['fast_5f_1',['fast_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover_1_1Params.html#adb8955b75b50496dd0c51e2227f555c4',1,'algotradelib::strategy::vanilla::MovingAverageCrossover::Params']]],
+  ['fed_5f_2',['fed_',['../structalgotradelib_1_1runner_1_1IterationReport.html#aae8fe19fff6920f161cdea64a7c55402',1,'algotradelib::runner::IterationReport']]],
+  ['fill_5f_3',['fill_',['../structalgotradelib_1_1backtest_1_1Execution.html#a8dd786114c2897d7aa2b7d6095be4cb9',1,'algotradelib::backtest::Execution']]],
+  ['filled_5famount_5f_4',['filled_amount_',['../structalgotradelib_1_1OrderExecution.html#a4011f1fbfa43c3836df0be5a843baca1',1,'algotradelib::OrderExecution']]],
+  ['filled_5fat_5f_5',['filled_at_',['../structalgotradelib_1_1OrderExecution.html#a12d5805340d79699bb0ee2d384e42191',1,'algotradelib::OrderExecution']]],
+  ['filled_5fquantity_5f_6',['filled_quantity_',['../structalgotradelib_1_1OrderExecution.html#a100fdef8584c517c0eb7bbb638b1fdb1',1,'algotradelib::OrderExecution']]],
+  ['final_5fgate_5f_7',['final_gate_',['../structalgotradelib_1_1runner_1_1LoopReport.html#aad7216cf550eefc1d54cbbc77a4fadc3',1,'algotradelib::runner::LoopReport']]],
+  ['final_5fphase_5f_8',['final_phase_',['../structalgotradelib_1_1runner_1_1LoopReport.html#a37c1cc194bc4bec09024e0f143169f27',1,'algotradelib::runner::LoopReport']]],
+  ['first_5foverdrawn_5f_9',['first_overdrawn_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#adb62f0d984f42cc3d35d35aa9dfa2968',1,'algotradelib::backtest::ReplayResult::first_overdrawn_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a882207c2aa23520e11017c607c17f346',1,'algotradelib::backtest::ReportCaveats::first_overdrawn_']]],
+  ['first_5funvalued_5f_10',['first_unvalued_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#a5a30adb14e2c64dbd081b8f636ce35f0',1,'algotradelib::backtest::ReplayResult::first_unvalued_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a27b5aa942cbdcf2944bb4dc45de41fd9',1,'algotradelib::backtest::ReportCaveats::first_unvalued_']]],
+  ['flattened_5f_11',['flattened_',['../structalgotradelib_1_1runner_1_1LoopReport.html#a2ed4a0ed6c408858c386f3adeeb66a3c',1,'algotradelib::runner::LoopReport']]],
+  ['from_5f_12',['from_',['../structalgotradelib_1_1backtest_1_1AppliedRate.html#a41715325dfab6384121640e2464dab2e',1,'algotradelib::backtest::AppliedRate::from_'],['../structalgotradelib_1_1kis_1_1KisHistoryRange.html#a99367e5d545b1c8b4338b23587a30f57',1,'algotradelib::kis::KisHistoryRange::from_'],['../structalgotradelib_1_1tossinvest_1_1TossOrderQuery.html#a4dc1d39ee8e8f57f4cbf1f67ad7175b8',1,'algotradelib::tossinvest::TossOrderQuery::from_'],['../structalgotradelib_1_1TickBand.html#a0d7d133313f566158989ead2b53a821d',1,'algotradelib::TickBand::from_'],['../structalgotradelib_1_1CommissionRate.html#aa528d04134eeee8350796cd024543b1b',1,'algotradelib::CommissionRate::from_'],['../structalgotradelib_1_1OrderHistoryQuery.html#ad8d3309ae91cb732a65947cf495d3950',1,'algotradelib::OrderHistoryQuery::from_']]],
+  ['from_5fbroker_5f_13',['from_broker_',['../structalgotradelib_1_1backtest_1_1CommissionModel.html#aea5851cf26ceaaf0ffc82f1b6a83e449',1,'algotradelib::backtest::CommissionModel']]],
+  ['from_5funreadable_5f_14',['from_unreadable_',['../structalgotradelib_1_1CommissionRate.html#af32050754d718ecced6f6717ab06d1f2',1,'algotradelib::CommissionRate']]]
+];

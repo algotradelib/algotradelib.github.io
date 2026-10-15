@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['named_0',['NAMED',['../namespacealgotradelib_1_1runner.html#acf9bb5d24156a671ddad6f45253135c7a76fb73ba78ce9cd3159dd3ce315223be',1,'algotradelib::runner']]],
+  ['needs_5foperator_1',['NEEDS_OPERATOR',['../namespacealgotradelib_1_1runner.html#a01e2e7f5af1bc68031fd3e2f534c72f6af6b8c28485d0ba365dae686aa038680a',1,'algotradelib::runner']]],
+  ['negative_5fsize_2',['NEGATIVE_SIZE',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163faafbbd269516b91973c8b1dd094dbe9e5',1,'algotradelib::strategy']]],
+  ['net_5fof_5fresting_3',['NET_OF_RESTING',['../namespacealgotradelib_1_1strategy.html#a19c42b8aaf6ae900f613a2aef0e1bae7ad14e9c85a877c6050ec9d7601551680c',1,'algotradelib::strategy']]],
+  ['no_4',['NO',['../namespacealgotradelib.html#a52d41eac5139822823392c23fa87c514ac2f3f489a00553e7a01d369c103c7251',1,'algotradelib']]],
+  ['no_5fpermitted_5fprice_5',['NO_PERMITTED_PRICE',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163fac98e0089d4a0030e89b9f2e02e9d6fff',1,'algotradelib::strategy']]],
+  ['no_5fportfolio_5fvalue_6',['NO_PORTFOLIO_VALUE',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163faf7dc0db5c06d1084b425086db3f459ba',1,'algotradelib::strategy']]],
+  ['no_5fprice_5favailable_7',['NO_PRICE_AVAILABLE',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163fa87922f78af518333dda0fcafc16ccc50',1,'algotradelib::strategy']]],
+  ['no_5freference_5fdata_8',['NO_REFERENCE_DATA',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163fa457af48f971b58ec1b8447b0598df4de',1,'algotradelib::strategy']]],
+  ['none_9',['NONE',['../namespacealgotradelib_1_1kis.html#a2cea30e9e574dc7877db08751a1beca5ab50339a10e1de285ac99d4c3990b8693',1,'algotradelib::kis::NONE'],['../namespacealgotradelib_1_1kiwoom.html#a3245c956be782384ff1486f70c3b9618ab50339a10e1de285ac99d4c3990b8693',1,'algotradelib::kiwoom::NONE'],['../namespacealgotradelib.html#a240f592350113b90da1d86d8957b7624ab50339a10e1de285ac99d4c3990b8693',1,'algotradelib::NONE'],['../namespacealgotradelib_1_1runner.html#acf9bb5d24156a671ddad6f45253135c7ab50339a10e1de285ac99d4c3990b8693',1,'algotradelib::runner::NONE']]],
+  ['normalized_10',['NORMALIZED',['../namespacealgotradelib.html#a29a4ebe76d0ef6a8f4041a623e0e6e91a5dce94de2a2a2772111f3af42badb16f',1,'algotradelib']]],
+  ['not_5fexcluded_11',['NOT_EXCLUDED',['../namespacealgotradelib.html#a94ea833d7ee9eee95608c06f08fa7dfaa7516ff9b169531ead9ff2e720be4dd6f',1,'algotradelib']]],
+  ['not_5fplaced_12',['NOT_PLACED',['../namespacealgotradelib_1_1runner.html#a01e2e7f5af1bc68031fd3e2f534c72f6a42ddb795b78f1b508dae792c2b100c2e',1,'algotradelib::runner']]],
+  ['not_5frepresentable_13',['NOT_REPRESENTABLE',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163fa4c786ffea7d608153f2ededf8eab455b',1,'algotradelib::strategy']]],
+  ['not_5fstated_14',['NOT_STATED',['../classalgotradelib_1_1StatedDate.html#a0dfab292f116b371859c2abc62d7d614af1686678cb22f32699dd6c77841fafc4',1,'algotradelib::StatedDate']]],
+  ['notional_15',['NOTIONAL',['../namespacealgotradelib_1_1strategy.html#ad706c8d4f2f53a5249d5968937ddf10ba4edaf7f256f99c852c66a0a9087d370f',1,'algotradelib::strategy']]],
+  ['nxt_16',['NXT',['../namespacealgotradelib_1_1kis.html#a180426dcbaf904ff2cca1189c5dc3289a3f15fada7994f98f3bc6207bed01c16b',1,'algotradelib::kis::NXT'],['../namespacealgotradelib_1_1kiwoom.html#a1476aa7a976b83d95727aee083da2ca1a3f15fada7994f98f3bc6207bed01c16b',1,'algotradelib::kiwoom::NXT']]]
+];

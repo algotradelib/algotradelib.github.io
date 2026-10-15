@@ -1,0 +1,10 @@
+<map id="algotradelib/src/backtest/ledger.hpp" name="algotradelib/src/backtest/ledger.hpp">
+<area shape="rect" id="Node000001" title="The replay ledger: positions, cash and realized profit a backtest keeps, in exact decimals." alt="" coords="5,5,188,45"/>
+<area shape="rect" id="Node000002" href="$engine_8hpp.html" title="The backtest engine: Backtester replays bars (and quotes) through the same Runner a live session uses..." alt="" coords="5,181,188,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,58,61,94,57,113,61,133,71,158,84,179,80,182,66,160,55,134,52,113,55,93,72,56"/>
+<area shape="rect" id="Node000004" href="$fill_8hpp.html" title="The backtest fill model: whether a queued order trades against the next bar, and at what price and co..." alt="" coords="71,93,253,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="121,55,150,91,145,95,117,58"/>
+<area shape="rect" id="Node000003" href="$report_8hpp.html" title="The backtest report: performance figures, costs, and every assumption and limitation of the run as a ..." alt="" coords="5,269,188,309"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="99,235,99,269,94,269,94,235"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="141,146,113,183,109,179,137,143"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="algotradelib/src/math/eigen.hpp" name="algotradelib/src/math/eigen.hpp">
+<area shape="rect" id="Node000001" title="The math types and decompositions, implemented with Eigen." alt="" coords="95,5,256,45"/>
+<area shape="rect" id="Node000002" href="$scalar_8hpp_source.html" title=" " alt="" coords="127,93,223,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,46,178,79,173,79,173,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,167,76,192"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="160,48,117,95,62,158,58,155,113,92,156,44"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="248,93,351,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="207,43,271,84,268,88,204,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="100,167,163,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,120,148,156,143,154,166,118"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="155,121,76,162,74,158,152,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="187,167,254,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="185,118,208,154,204,157,181,120"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="278,167,345,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="198,116,278,158,276,163,196,121"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="369,167,427,192"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="212,116,356,162,355,167,210,121"/>
+</map>

@@ -1,0 +1,28 @@
+<map id="algotradelib/src/analytics/conversion.hpp" name="algotradelib/src/analytics/conversion.hpp">
+<area shape="rect" id="Node000001" title="Conversions between exact Decimal64 values and the analytics Scalar." alt="" coords="274,5,461,45"/>
+<area shape="rect" id="Node000002" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="160,93,271,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,48,252,89,249,84,330,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,313,68,339"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="275,40,209,60,177,75,149,95,127,118,107,144,76,201,56,256,44,300,39,299,51,255,72,199,103,141,122,115,146,91,175,71,207,55,273,35"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="279,313,346,339"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="366,46,320,300,315,299,361,45"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="370,313,429,339"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="372,45,399,299,394,300,367,46"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="405,93,537,119"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="394,43,447,83,443,87,391,48"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="562,93,647,119"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="425,43,558,87,556,92,423,48"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="671,93,746,119"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="450,43,659,90,657,96,449,48"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="136,167,279,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,119,213,153,207,153,211,119"/>
+<area shape="rect" id="Node000004" href="$scalar_8hpp_source.html" title=" " alt="" coords="167,240,263,265"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="211,192,215,226,210,227,206,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,268,79,311,77,306,186,263"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="184,313,255,339"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="219,266,221,300,215,300,213,266"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="233,263,287,303,284,307,229,268"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="93,313,159,339"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="203,267,153,307,150,302,199,263"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="246,263,358,306,356,311,244,268"/>
+</map>

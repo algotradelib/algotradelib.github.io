@@ -1,0 +1,8 @@
+<map id="algotradelib::backtest::Report" name="algotradelib::backtest::Report">
+<area shape="rect" id="Node000001" title="The summary of a replay; read halted_ and caveats_ before the figures." alt="" coords="13,215,177,255"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,184,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,45,89,101,90,163,95,214,90,215,85,164,84,101,89,44"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1backtest_1_1ReportCaveats.html" title="What a replay&#39;s figures assumed and did not account for." alt="" coords="214,103,378,143"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="131,35,260,100,258,105,129,39"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,152,130,217,128,212,248,147"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="algotradelib::runner::runner_counts_kept_drops&lt; Runner, std::void_t&lt; decltype(std::declval&lt; const Runner &amp; &gt;().kept_intents_dropped())&gt; &gt;" name="algotradelib::runner::runner_counts_kept_drops&lt; Runner, std::void_t&lt; decltype(std::declval&lt; const Runner &amp; &gt;().kept_intents_dropped())&gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="624,68,817,166"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,39,124,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,34,223,16,342,4,406,3,472,6,538,15,601,31,635,45,665,65,662,70,632,50,599,36,537,20,472,11,406,8,342,10,224,22,130,39"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1runner__counts__kept__drops.html" title="Detects whether a runner reports kept_intents_dropped()." alt="" coords="173,60,388,115"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="138,61,174,67,173,73,137,67"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="225,148,337,174"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,152,624,124,624,129,351,157"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="402,112,412,113,522,120,624,119,624,125,522,125,412,118,401,117"/>
+</map>

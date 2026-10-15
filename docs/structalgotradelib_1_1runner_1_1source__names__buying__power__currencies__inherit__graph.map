@@ -1,0 +1,7 @@
+<map id="algotradelib::runner::source_names_buying_power_currencies&lt; Source, typename &gt;" name="algotradelib::runner::source_names_buying_power_currencies&lt; Source, typename &gt;">
+<area shape="rect" id="Node000001" title="Detects whether a source provides const std::vector&lt;Currency&gt;&amp; buying_power_currencies() const." alt="" coords="173,53,380,123"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html" title=" " alt="" coords="629,39,872,137"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="394,85,629,85,629,91,394,91"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,75,124,101"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,85,173,85,173,91,138,91"/>
+</map>

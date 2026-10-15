@@ -1,0 +1,7 @@
+<map id="algotradelib::BarSeries" name="algotradelib::BarSeries">
+<area shape="rect" id="Node000001" title="The bars of one instrument and interval, oldest first." alt="" coords="117,101,287,127"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,38,191,99,188,103,122,42"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="220,5,387,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,44,258,79,225,103,222,99,255,75,286,40"/>
+</map>

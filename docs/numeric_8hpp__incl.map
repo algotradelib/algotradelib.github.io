@@ -1,0 +1,17 @@
+<map id="algotradelib/src/analytics/numeric.hpp" name="algotradelib/src/analytics/numeric.hpp">
+<area shape="rect" id="Node000001" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="127,5,314,45"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="149,93,292,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,46,223,79,218,79,218,46"/>
+<area shape="rect" id="Node000003" href="$scalar_8hpp_source.html" title=" " alt="" coords="173,167,269,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,119,223,153,218,153,218,119"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,240,68,265"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="192,195,81,237,79,232,190,190"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="92,240,163,265"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="207,194,155,234,152,229,204,190"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="187,240,254,265"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="223,192,223,226,218,226,218,192"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="278,240,345,265"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="237,190,287,229,284,233,234,194"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="369,240,427,265"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="250,190,358,232,356,237,248,194"/>
+</map>

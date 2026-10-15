@@ -1,0 +1,15 @@
+<map id="algotradelib::network::AuthBody&lt; BrokerType &gt;" name="algotradelib::network::AuthBody&lt; BrokerType &gt;">
+<area shape="rect" id="Node000001" title="An OAuth access token and its expiry, the base of each broker&#39;s token&#45;response class." alt="" coords="5,69,200,109"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1network_1_1AuthBody.html" title=" " alt="" coords="386,5,558,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,64,224,59,385,33,386,39,224,64,200,69"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1network_1_1AuthBody.html" title=" " alt="" coords="369,69,575,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,87,369,87,369,92,214,92"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1network_1_1AuthBody.html" title=" " alt="" coords="382,133,562,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="200,110,224,115,382,140,381,145,224,120,198,115"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1kis_1_1KisRest.html" title="A KIS REST access token and its expiry." alt="" coords="644,5,779,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="571,23,644,23,644,28,571,28"/>
+<area shape="rect" id="Node000005" href="$structalgotradelib_1_1kiwoom_1_1KiwoomRest.html" title="A Kiwoom REST access token (au10001&#39;s token) and its expiry (expires_dt)." alt="" coords="631,69,791,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="588,87,631,87,631,92,588,92"/>
+<area shape="rect" id="Node000007" href="$structalgotradelib_1_1tossinvest_1_1TossRest.html" title="A Toss REST access token and its expiry." alt="" coords="624,133,799,173"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="576,151,624,151,624,156,576,156"/>
+</map>

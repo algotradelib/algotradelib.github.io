@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['macd_0',['macd',['../namespacealgotradelib_1_1analytics.html#a4b7fb172024599a365ac50590fb116f9',1,'algotradelib::analytics']]],
+  ['main_1',['main',['../example-live-loop_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;example-live-loop.cpp'],['../example-live-program_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;example-live-program.cpp']]],
+  ['make_5fbar_5fevent_2',['make_bar_event',['../namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19',1,'algotradelib::strategy']]],
+  ['make_5fhost_5fheader_3',['make_host_header',['../namespacealgotradelib_1_1network.html#ad3e40597b613a8ad74c2f3a5b4c7d53d',1,'algotradelib::network']]],
+  ['manualclock_4',['ManualClock',['../classalgotradelib_1_1runner_1_1ManualClock.html#a3eb17398be7252935c7a00b39bef7394',1,'algotradelib::runner::ManualClock']]],
+  ['mark_5',['mark',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#ac1486c555aac77cfa001b2b387a46c2b',1,'algotradelib::backtest::ReplayLedger::mark()'],['../classalgotradelib_1_1runner_1_1IndeterminacyLedger.html#aa6667b55528740b0f296a8ccae41588a',1,'algotradelib::runner::IndeterminacyLedger::mark()']]],
+  ['market_6',['market',['../classalgotradelib_1_1strategy_1_1OrderIntent.html#ade48d3ba127c28eff909e503a1e98f76',1,'algotradelib::strategy::OrderIntent::market()'],['../classalgotradelib_1_1runner_1_1OrderIntent.html#ade48d3ba127c28eff909e503a1e98f76',1,'algotradelib::runner::OrderIntent::market()']]],
+  ['market_5fdata_5fconfig_7',['market_data_config',['../kis__credentials_8hpp.html#ac6da581b15e58cc519de0eb01e3f2a96',1,'kis_credentials']]],
+  ['market_5fdivision_5fcode_8',['market_division_code',['../namespacealgotradelib_1_1kis.html#a04043cfb30f3863c3d3919c1497da4a5',1,'algotradelib::kis']]],
+  ['market_5fphase_5fname_9',['market_phase_name',['../namespacealgotradelib_1_1strategy.html#a5e4df3e7b24619eacad1c8ca26b67b77',1,'algotradelib::strategy']]],
+  ['market_5fsegment_10',['market_segment',['../namespacealgotradelib.html#a1b193a1f1359c9e8eb19f0c16d5dc5a4',1,'algotradelib']]],
+  ['match_5fagainst_11',['match_against',['../namespacealgotradelib_1_1runner.html#aa394dc4435e3533c5fd6305c2fb90255',1,'algotradelib::runner::match_against(const OpenInstruction &amp;instruction, const std::vector&lt; OrderSnapshot &gt; &amp;rows, const std::vector&lt; OpenInstruction &gt; &amp;recorded, std::chrono::system_clock::time_point now, const MatchWindow &amp;window={})'],['../namespacealgotradelib_1_1runner.html#ab13f9b8fd3aafbe1a013c0542f263671',1,'algotradelib::runner::match_against(const OpenInstruction &amp;instruction, const std::vector&lt; OrderSnapshot &gt; &amp;rows, std::chrono::system_clock::time_point now, const MatchWindow &amp;window={})']]],
+  ['match_5fverdict_5fname_12',['match_verdict_name',['../namespacealgotradelib_1_1runner.html#aa673c1fabde0f941065f1da69601e97b',1,'algotradelib::runner']]],
+  ['match_5fverdict_5fresolves_13',['match_verdict_resolves',['../namespacealgotradelib_1_1runner.html#a9b76f38046e4e61177795cfd68649f41',1,'algotradelib::runner']]],
+  ['match_5fwindow_5fclosed_14',['match_window_closed',['../namespacealgotradelib_1_1runner.html#a3f806d2e4ad98c9618d7ad9b2ce806f2',1,'algotradelib::runner']]],
+  ['matches_15',['matches',['../classalgotradelib_1_1VenueKey.html#a683fb35d06b440c443781e39b3ee0228',1,'algotradelib::VenueKey']]],
+  ['max_5fdrawdown_16',['max_drawdown',['../namespacealgotradelib_1_1analytics.html#ac722704ca00110ea27bd39822382ded7',1,'algotradelib::analytics']]],
+  ['memoryjournal_17',['MemoryJournal',['../classalgotradelib_1_1runner_1_1MemoryJournal.html#a67b859f80b9caa3d80b87b5df0da43de',1,'algotradelib::runner::MemoryJournal::MemoryJournal()=default'],['../classalgotradelib_1_1runner_1_1MemoryJournal.html#aed1cdb67e780cd6f012e7432625fd254',1,'algotradelib::runner::MemoryJournal::MemoryJournal(std::string scope)']]],
+  ['merge_5fdated_5fhistory_18',['merge_dated_history',['../namespacealgotradelib_1_1runner.html#a1a4303eeb962820b40a64e2248246f4f',1,'algotradelib::runner']]],
+  ['merge_5frows_19',['merge_rows',['../namespacealgotradelib_1_1runner.html#a046e5e74089001e9ef33b696ddb6f79a',1,'algotradelib::runner']]],
+  ['mid_20',['mid',['../structalgotradelib_1_1DepthSnapshot.html#ad3df5ec6a7d53a51a399a4729c74b19f',1,'algotradelib::DepthSnapshot']]],
+  ['missing_21',['missing',['../namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1',1,'algotradelib::math::missing()'],['../namespacealgotradelib_1_1analytics.html#ac779beb008cac496403576f7f5caaaf1',1,'algotradelib::analytics::missing()']]],
+  ['monotonic_5fnow_22',['monotonic_now',['../classalgotradelib_1_1runner_1_1SteadyClock.html#a6e0da7fc801ce14c9a45c3b09f6df131',1,'algotradelib::runner::SteadyClock::monotonic_now()'],['../classalgotradelib_1_1runner_1_1ManualClock.html#a55d6b3e1316432376adcd9dee32a23ed',1,'algotradelib::runner::ManualClock::monotonic_now()']]],
+  ['moveonlycallback_23',['MoveOnlyCallback',['../structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#aa9bd1bec979b7f621bb5a584935cf2be',1,'algotradelib::conformance::MoveOnlyCallback::MoveOnlyCallback()=default'],['../structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a568b1568383f066a56c6cfcfb0fdee51',1,'algotradelib::conformance::MoveOnlyCallback::MoveOnlyCallback(MoveOnlyCallback &amp;&amp;)=default']]]
+];

@@ -1,0 +1,7 @@
+<map id="algotradelib::backtest::AppliedRate" name="algotradelib::backtest::AppliedRate">
+<area shape="rect" id="Node000001" title="The commission rate that charged an execution, as the backtest report lists it." alt="" coords="109,121,273,161"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1VenueKey.html" title="Which venue a commission rate applies to: any venue, a normalized Venue, or a raw code." alt="" coords="5,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,40,178,120,174,123,108,43"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="202,5,381,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="275,43,209,123,205,120,271,40"/>
+</map>

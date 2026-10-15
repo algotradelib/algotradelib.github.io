@@ -1,0 +1,7 @@
+<map id="algotradelib::OrderRequest" name="algotradelib::OrderRequest">
+<area shape="rect" id="Node000001" title="An order to place, in broker&#45;neutral form." alt="" coords="106,101,303,127"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,38,194,99,190,103,122,42"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,43,260,79,226,103,223,99,256,75,291,39"/>
+</map>

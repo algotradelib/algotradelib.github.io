@@ -1,0 +1,15 @@
+<map id="examples/example&#45;live&#45;loop.cpp" name="examples/example&#45;live&#45;loop.cpp">
+<area shape="rect" id="Node000001" title="A live runner loop with no broker, no credentials and no network." alt="" coords="343,5,519,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,152,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,48,144,93,143,88,346,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="177,93,325,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="389,48,291,90,289,85,386,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="349,93,416,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="421,47,399,83,395,80,417,44"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="440,93,520,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="445,44,468,80,463,83,440,47"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="544,93,603,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="466,43,542,84,539,89,464,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="627,93,690,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="486,43,615,87,613,92,484,48"/>
+</map>

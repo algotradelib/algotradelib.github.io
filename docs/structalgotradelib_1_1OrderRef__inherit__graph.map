@@ -1,0 +1,13 @@
+<map id="algotradelib::OrderRef&lt; Broker &gt;" name="algotradelib::OrderRef&lt; Broker &gt;">
+<area shape="rect" id="Node000001" title="A broker&#39;s reference to one order, used to amend or cancel it." alt="" coords="5,133,172,173"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderRef.html" title=" " alt="" coords="377,5,544,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,122,154,95,195,72,240,56,288,43,377,29,377,34,289,48,242,61,197,77,157,100,123,126"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1OrderRef.html" title=" " alt="" coords="377,69,544,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,127,195,123,289,107,377,95,377,101,290,112,197,128,175,133"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1OrderRef.html" title=" " alt="" coords="376,133,545,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,151,376,151,376,156,186,156"/>
+<area shape="rect" id="Node000005" href="$structalgotradelib_1_1OrderRef.html" title=" " alt="" coords="377,197,544,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="175,174,197,179,290,195,377,206,377,211,289,200,195,184,174,179"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1OrderRef.html" title=" " alt="" coords="377,261,544,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="122,181,157,208,197,231,242,247,289,259,377,274,377,279,287,265,240,252,195,236,154,212,119,185"/>
+</map>

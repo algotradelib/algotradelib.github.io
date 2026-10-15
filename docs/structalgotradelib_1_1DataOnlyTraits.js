@@ -1,0 +1,26 @@
+var structalgotradelib_1_1DataOnlyTraits =
+[
+    [ "Account", "structalgotradelib_1_1DataOnlyTraits.html#ababb0d266233dd23ac0a28f304c84a9d", null ],
+    [ "Amendment", "structalgotradelib_1_1DataOnlyTraits.html#aca0e3210994532f1d6f39c8a71d808a0", null ],
+    [ "BrokerTag", "structalgotradelib_1_1DataOnlyTraits.html#a8dbb285cf0a4ec8132294bff000ba249", null ],
+    [ "HistoryQuery", "structalgotradelib_1_1DataOnlyTraits.html#a95e56dc58d052550b76587d1c181b979", null ],
+    [ "PlaceAck", "structalgotradelib_1_1DataOnlyTraits.html#a2c1f07bbdbb0dac648076f7e4bf3a43f", null ],
+    [ "WorkingOrdersResult", "structalgotradelib_1_1DataOnlyTraits.html#a49ad02f6f870f70cb16d382088fb6e58", null ],
+    [ "cancel_order", "structalgotradelib_1_1DataOnlyTraits.html#a435aacc5894d7c61f67dba19828f6a4e", null ],
+    [ "cancel_order", "structalgotradelib_1_1DataOnlyTraits.html#ab6ae4769b5cb5d48bcb9f2f3eb77a68e", null ],
+    [ "holdings", "structalgotradelib_1_1DataOnlyTraits.html#abdfc196c8aae73b8790b25948fffaea6", null ],
+    [ "holdings", "structalgotradelib_1_1DataOnlyTraits.html#a197a129abe08ece52cacc50e379e7d33", null ],
+    [ "normalize_place", "structalgotradelib_1_1DataOnlyTraits.html#a4dbd14dc2339ad8153f1e07ba530acdf", null ],
+    [ "order_history", "structalgotradelib_1_1DataOnlyTraits.html#a9e168ac1f0be1ef7a35be3361078aefe", null ],
+    [ "order_history", "structalgotradelib_1_1DataOnlyTraits.html#a89a4ca814e3e57c1957c5447f48ba58c", null ],
+    [ "place_order", "structalgotradelib_1_1DataOnlyTraits.html#aa5b97385739bbcfcb4d8f8d6e7457e54", null ],
+    [ "place_order", "structalgotradelib_1_1DataOnlyTraits.html#a050456f3fc5b0be5ecbb2cb4d5194361", null ],
+    [ "rate_limit_stats", "structalgotradelib_1_1DataOnlyTraits.html#ae78e8e44ce6f568c680396a4acdd547b", null ],
+    [ "replace_order", "structalgotradelib_1_1DataOnlyTraits.html#a55346b99524ef3a5d871237ffcf9e411", null ],
+    [ "replace_order", "structalgotradelib_1_1DataOnlyTraits.html#a55b863112a06dab2b64153f2104083be", null ],
+    [ "to_cancellation", "structalgotradelib_1_1DataOnlyTraits.html#a905285c59ee72f045b23abc37faff57b", null ],
+    [ "to_history_query", "structalgotradelib_1_1DataOnlyTraits.html#ac6186f99a6c8ddb865e6babd764d6cac", null ],
+    [ "to_replacement", "structalgotradelib_1_1DataOnlyTraits.html#a799dcefdc892b77ba9dc8a8712f10b94", null ],
+    [ "validate_place", "structalgotradelib_1_1DataOnlyTraits.html#a037d1db236c6c2f83e8760d891b0da59", null ],
+    [ "data_only", "structalgotradelib_1_1DataOnlyTraits.html#a26b9332ec5c67d433d6c9b43ac038a1c", null ]
+];

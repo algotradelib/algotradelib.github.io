@@ -1,0 +1,5 @@
+<map id="algotradelib::runner::OrderMatch" name="algotradelib::runner::OrderMatch">
+<area shape="rect" id="Node000001" title="One instruction&#39;s verdict, with context for the operator." alt="" coords="25,101,176,141"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,45,103,101,98,101,98,45"/>
+</map>

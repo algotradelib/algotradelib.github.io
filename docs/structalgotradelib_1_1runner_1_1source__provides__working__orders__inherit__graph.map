@@ -1,0 +1,7 @@
+<map id="algotradelib::runner::source_provides_working_orders&lt; Source, typename &gt;" name="algotradelib::runner::source_provides_working_orders&lt; Source, typename &gt;">
+<area shape="rect" id="Node000001" title="Detects whether a source declares static constexpr bool provides_working_orders = true,..." alt="" coords="173,41,392,95"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html" title=" " alt="" coords="659,26,877,110"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="406,65,658,65,658,71,406,71"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,55,124,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,65,173,65,173,71,138,71"/>
+</map>

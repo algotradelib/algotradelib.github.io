@@ -1,0 +1,13 @@
+<map id="algotradelib::backtest::ReplayConfig" name="algotradelib::backtest::ReplayConfig">
+<area shape="rect" id="Node000001" title="A replay&#39;s settings, besides the strategy and the bars." alt="" coords="339,106,503,146"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="23,5,201,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,30,266,42,316,58,358,80,394,104,391,108,355,84,314,63,264,47,214,35"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="29,56,195,81"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,80,315,98,340,103,339,109,314,103,209,85"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1strategy_1_1RiskLimits.html" title="The limits the operator sets for RiskGuard." alt="" coords="31,106,193,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,123,338,123,338,129,207,129"/>
+<area shape="rect" id="Node000005" href="$structalgotradelib_1_1strategy_1_1SessionWindow.html" title="The intraday session of a market, as the operator states it." alt="" coords="31,170,193,210"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="206,172,314,151,347,143,348,149,315,157,207,178"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1TradingCalendar.html" title="The trading days a broker reported for one market, ascending by date." alt="" coords="5,235,219,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="203,229,259,215,314,194,357,170,393,144,396,148,359,175,316,199,260,220,205,234"/>
+</map>

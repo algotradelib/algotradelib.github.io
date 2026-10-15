@@ -1,0 +1,9 @@
+<map id="algotradelib::strategy::vanilla::RsiThreshold" name="algotradelib::strategy::vanilla::RsiThreshold">
+<area shape="rect" id="Node000001" title="Long&#45;only RSI strategy: buys when the index is oversold, sells when it is overbought." alt="" coords="121,227,288,267"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold_1_1Params.html" title="The strategy&#39;s settings." alt="" coords="121,101,288,156"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,170,207,226,202,226,202,170"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,39,181,99,178,103,119,42"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="291,43,232,103,228,99,287,39"/>
+</map>

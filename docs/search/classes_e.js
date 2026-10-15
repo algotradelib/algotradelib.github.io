@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['obligation_0',['Obligation',['../structalgotradelib_1_1runner_1_1Obligation.html',1,'algotradelib::runner']]],
+  ['observed_1',['Observed',['../structalgotradelib_1_1math_1_1Observed.html',1,'algotradelib::math']]],
+  ['observedcharge_2',['ObservedCharge',['../structalgotradelib_1_1live_1_1SessionSource_1_1ObservedCharge.html',1,'algotradelib::live::SessionSource']]],
+  ['observedfigure_3',['ObservedFigure',['../structalgotradelib_1_1live_1_1SessionSource_1_1ObservedFigure.html',1,'algotradelib::live::SessionSource']]],
+  ['openinstruction_4',['OpenInstruction',['../structalgotradelib_1_1runner_1_1OpenInstruction.html',1,'algotradelib::runner']]],
+  ['orderack_5',['OrderAck',['../structalgotradelib_1_1OrderAck.html',1,'algotradelib']]],
+  ['orderexecution_6',['OrderExecution',['../structalgotradelib_1_1OrderExecution.html',1,'algotradelib']]],
+  ['orderhistoryquery_7',['OrderHistoryQuery',['../structalgotradelib_1_1OrderHistoryQuery.html',1,'algotradelib']]],
+  ['orderintent_8',['OrderIntent',['../classalgotradelib_1_1runner_1_1OrderIntent.html',1,'algotradelib::runner::OrderIntent'],['../classalgotradelib_1_1strategy_1_1OrderIntent.html',1,'algotradelib::strategy::OrderIntent']]],
+  ['ordermatch_9',['OrderMatch',['../structalgotradelib_1_1runner_1_1OrderMatch.html',1,'algotradelib::runner']]],
+  ['orderpage_10',['OrderPage',['../structalgotradelib_1_1OrderPage.html',1,'algotradelib']]],
+  ['orderref_11',['OrderRef',['../structalgotradelib_1_1OrderRef.html',1,'algotradelib']]],
+  ['orderref_3c_20brokertag_20_3e_12',['OrderRef&lt; BrokerTag &gt;',['../structalgotradelib_1_1OrderRef.html',1,'algotradelib']]],
+  ['orderref_3c_20kis_3a_3abroker_20_3e_13',['OrderRef&lt; kis::Broker &gt;',['../structalgotradelib_1_1OrderRef.html',1,'algotradelib']]],
+  ['orderref_3c_20kiwoom_3a_3abroker_20_3e_14',['OrderRef&lt; kiwoom::Broker &gt;',['../structalgotradelib_1_1OrderRef.html',1,'algotradelib']]],
+  ['orderref_3c_20tag_20_3e_15',['OrderRef&lt; Tag &gt;',['../structalgotradelib_1_1OrderRef.html',1,'algotradelib']]],
+  ['orderref_3c_20tossinvest_3a_3abroker_20_3e_16',['OrderRef&lt; tossinvest::Broker &gt;',['../structalgotradelib_1_1OrderRef.html',1,'algotradelib']]],
+  ['orderrequest_17',['OrderRequest',['../structalgotradelib_1_1OrderRequest.html',1,'algotradelib']]],
+  ['ordershape_18',['OrderShape',['../structalgotradelib_1_1OrderShape.html',1,'algotradelib']]],
+  ['ordersnapshot_19',['OrderSnapshot',['../structalgotradelib_1_1OrderSnapshot.html',1,'algotradelib']]],
+  ['orderupdatewatch_20',['OrderUpdateWatch',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html',1,'algotradelib::runner']]],
+  ['orderupdatewatch_3c_20algotradelib_3a_3abacktest_3a_3abacktesttag_20_3e_21',['OrderUpdateWatch&lt; algotradelib::backtest::BacktestTag &gt;',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html',1,'algotradelib::runner']]],
+  ['orderupdatewatch_3c_20brokertag_20_3e_22',['OrderUpdateWatch&lt; BrokerTag &gt;',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html',1,'algotradelib::runner']]]
+];
