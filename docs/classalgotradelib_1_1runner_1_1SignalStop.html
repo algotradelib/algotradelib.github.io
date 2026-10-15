@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classalgotrade
 </div><!--header-->
 <div class="contents">
 
-<p>Routes <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> to a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html" title="A stop request the loop polls; safe to set from a signal handler.">StopSource</a></span> as a quiesce, and ignores <span class="tt">SIGHUP</span>; only when <span class="tt"><a class="el" href="#a5692aa8e544d3f7ccefbafb70e83df76" title="Installs the handlers: SIGINT and SIGTERM request a quiesce on source; SIGHUP is ignored.">install</a></span> is called.  
+<p>Routes <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> to a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html" title="A stop request the loop polls; safe to set from a signal handler.">StopSource</a></span> as a quiesce, and ignores <span class="tt">SIGHUP</span> where it exists (POSIX); only when <span class="tt"><a class="el" href="#a5692aa8e544d3f7ccefbafb70e83df76" title="Installs the handlers: SIGINT and SIGTERM request a quiesce on source; SIGHUP, where it exists,...">install</a></span> is called.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="signal__stop_8hpp_source.html">algotradelib/src/runner/signal_stop.hpp</a>&gt;</code></p>
@@ -130,15 +130,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classalgotrade
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5692aa8e544d3f7ccefbafb70e83df76" id="r_a5692aa8e544d3f7ccefbafb70e83df76"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5692aa8e544d3f7ccefbafb70e83df76">install</a> (<a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html">StopSource</a> &amp;source) noexcept</td></tr>
-<tr class="memdesc:a5692aa8e544d3f7ccefbafb70e83df76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs the handlers: <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> request a quiesce on <span class="tt">source</span>; <span class="tt">SIGHUP</span> is ignored.  <br /></td></tr>
+<tr class="memdesc:a5692aa8e544d3f7ccefbafb70e83df76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs the handlers: <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> request a quiesce on <span class="tt">source</span>; <span class="tt">SIGHUP</span>, where it exists, is ignored.  <br /></td></tr>
 <tr class="memitem:ae4fa4e32463c428f8dd02142287baebe" id="r_ae4fa4e32463c428f8dd02142287baebe"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae4fa4e32463c428f8dd02142287baebe">uninstall</a> () noexcept</td></tr>
-<tr class="memdesc:ae4fa4e32463c428f8dd02142287baebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the default disposition of <span class="tt">SIGINT</span>, <span class="tt">SIGTERM</span> and <span class="tt">SIGHUP</span>, and forgets the source.  <br /></td></tr>
+<tr class="memdesc:ae4fa4e32463c428f8dd02142287baebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores the default disposition of <span class="tt">SIGINT</span>, <span class="tt">SIGTERM</span> and (POSIX) <span class="tt">SIGHUP</span>, and forgets the source.  <br /></td></tr>
 <tr class="memitem:a36bff2eaa41ede4edd84e4975f83ae46" id="r_a36bff2eaa41ede4edd84e4975f83ae46"><td class="memItemLeft">static <a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html">StopSource</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a36bff2eaa41ede4edd84e4975f83ae46">installed</a> () noexcept</td></tr>
 <tr class="memdesc:a36bff2eaa41ede4edd84e4975f83ae46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the installed source.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Routes <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> to a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html" title="A stop request the loop polls; safe to set from a signal handler.">StopSource</a></span> as a quiesce, and ignores <span class="tt">SIGHUP</span>; only when <span class="tt"><a class="el" href="#a5692aa8e544d3f7ccefbafb70e83df76" title="Installs the handlers: SIGINT and SIGTERM request a quiesce on source; SIGHUP is ignored.">install</a></span> is called. </p>
-<p>Both signals mean <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677adc48e73143b0e2d385a4bba45af2fc0a" title="Stop sending new orders; nothing is cancelled or closed. The default, and what a signal means.">StopIntent::QUIESCE</a></span>, never a flatten, since they arrive for routine reasons (a reboot, a deploy, <span class="tt">Ctrl+C</span>). <span class="tt">SIGHUP</span> is ignored so a dropped SSH session does not stop a process holding positions.</p>
+<div class="textblock"><p>Routes <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> to a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html" title="A stop request the loop polls; safe to set from a signal handler.">StopSource</a></span> as a quiesce, and ignores <span class="tt">SIGHUP</span> where it exists (POSIX); only when <span class="tt"><a class="el" href="#a5692aa8e544d3f7ccefbafb70e83df76" title="Installs the handlers: SIGINT and SIGTERM request a quiesce on source; SIGHUP, where it exists,...">install</a></span> is called. </p>
+<p>Both signals mean <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677adc48e73143b0e2d385a4bba45af2fc0a" title="Stop sending new orders; nothing is cancelled or closed. The default, and what a signal means.">StopIntent::QUIESCE</a></span>, never a flatten, since they arrive for routine reasons (a reboot, a deploy, <span class="tt">Ctrl+C</span>). <span class="tt">SIGHUP</span> is ignored so a dropped SSH session does not stop a process holding positions; Windows has no <span class="tt">SIGHUP</span>.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Situation  </th><th class="markdownTableHeadNone">What arrives  </th></tr>
@@ -178,11 +178,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Installs the handlers: <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> request a quiesce on <span class="tt">source</span>; <span class="tt">SIGHUP</span> is ignored. </p>
+<p>Installs the handlers: <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> request a quiesce on <span class="tt">source</span>; <span class="tt">SIGHUP</span>, where it exists, is ignored. </p>
 <p>Only one source can be installed at a time.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>The stop source; it must outlive the handlers (until <span class="tt"><a class="el" href="#ae4fa4e32463c428f8dd02142287baebe" title="Restores the default disposition of SIGINT, SIGTERM and SIGHUP, and forgets the source.">uninstall</a></span>). </td></tr>
+    <tr><td class="paramname">source</td><td>The stop source; it must outlive the handlers (until <span class="tt"><a class="el" href="#ae4fa4e32463c428f8dd02142287baebe" title="Restores the default disposition of SIGINT, SIGTERM and (POSIX) SIGHUP, and forgets the source.">uninstall</a></span>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -244,7 +244,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Restores the default disposition of <span class="tt">SIGINT</span>, <span class="tt">SIGTERM</span> and <span class="tt">SIGHUP</span>, and forgets the source. </p>
+<p>Restores the default disposition of <span class="tt">SIGINT</span>, <span class="tt">SIGTERM</span> and (POSIX) <span class="tt">SIGHUP</span>, and forgets the source. </p>
 
 <p class="definition">Definition at line <a class="el" href="signal__stop_8hpp_source.html#l00051">51</a> of file <a class="el" href="signal__stop_8hpp_source.html">signal_stop.hpp</a>.</p>
 
