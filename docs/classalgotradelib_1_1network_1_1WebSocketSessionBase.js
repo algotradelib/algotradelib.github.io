@@ -2,6 +2,7 @@ var classalgotradelib_1_1network_1_1WebSocketSessionBase =
 [
     [ "WebSocketSessionBase", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a7fc84be79a07f3540e1affcf506b98fe", null ],
     [ "~WebSocketSessionBase", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a07d1bf733cd5f07d70bce6e083efa275", null ],
+    [ "abandon_if_closing", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a198784600c71e27d393b59c96017f410", null ],
     [ "close", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#adb6704727c717d1744512914f5d18dbc", null ],
     [ "connect", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#ac98af983bc232c02a44cda30ffa853dd", null ],
     [ "fail", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a323d83de1ffd1ee9f29b559f242fd05a", null ],

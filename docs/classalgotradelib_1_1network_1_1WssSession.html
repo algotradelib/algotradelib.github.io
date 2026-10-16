@@ -157,6 +157,7 @@ Public Member Functions</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:ae046b77bce15ef7d435c6934f7b55d09" id="r_ae046b77bce15ef7d435c6934f7b55d09"><td class="memTemplParams" colspan="2">template&lt;typename, typename&gt; </td></tr>
 <tr class="memitem:ae046b77bce15ef7d435c6934f7b55d09 template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#ae046b77bce15ef7d435c6934f7b55d09">WebSocketSessionBase</a></td></tr>
+<tr class="memitem:ad55dc5990b4063c9bcb919e0f64b8ac3" id="r_ad55dc5990b4063c9bcb919e0f64b8ac3"><td class="memItemLeft">struct&#160;</td><td class="memItemRight"><a class="el" href="#ad55dc5990b4063c9bcb919e0f64b8ac3">WebSocketSessionTestAccess</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -180,6 +181,8 @@ virtual&#160;</td><td class="memItemRight"><b>~WebSocketSessionBase</b> ()=defau
 <tr class="memdesc:a828d1028de54d17e83e38ef4e06be3c1 inherit pro_methods_classalgotradelib_1_1network_1_1WebSocketSessionBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the DNS lookup; called by the transport class's <span class="tt">do_connect()</span> once <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#acd161b2fdd3866218f6c2848e2b8fbd2">ws_</a></span> is ready.  <br /></td></tr>
 <tr class="memitem:a2a9915ee3e237be7ba4b7a2e49a3cc27 inherit pro_methods_classalgotradelib_1_1network_1_1WebSocketSessionBase" id="r_a2a9915ee3e237be7ba4b7a2e49a3cc27"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2a9915ee3e237be7ba4b7a2e49a3cc27">start_ws_handshake</a> ()</td></tr>
 <tr class="memdesc:a2a9915ee3e237be7ba4b7a2e49a3cc27 inherit pro_methods_classalgotradelib_1_1network_1_1WebSocketSessionBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the upgrade request; called once connected (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WsSession.html" title="A WebSocket client over plain TCP (no TLS); derive from it and override on_message.">WsSession</a></span>) or after the TLS handshake (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WssSession.html" title="A WebSocket client over TLS; derive from it and override on_message.">WssSession</a></span>).  <br /></td></tr>
+<tr class="memitem:a198784600c71e27d393b59c96017f410 inherit pro_methods_classalgotradelib_1_1network_1_1WebSocketSessionBase" id="r_a198784600c71e27d393b59c96017f410"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a198784600c71e27d393b59c96017f410">abandon_if_closing</a> ()</td></tr>
+<tr class="memdesc:a198784600c71e27d393b59c96017f410 inherit pro_methods_classalgotradelib_1_1network_1_1WebSocketSessionBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends a connect that <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#adb6704727c717d1744512914f5d18dbc">close()</a></span> interrupted, if it did; called first by each connect stage that completed without an error.  <br /></td></tr>
 <tr class="memitem:a323d83de1ffd1ee9f29b559f242fd05a inherit pro_methods_classalgotradelib_1_1network_1_1WebSocketSessionBase" id="r_a323d83de1ffd1ee9f29b559f242fd05a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a323d83de1ffd1ee9f29b559f242fd05a">fail</a> (std::string_view stage, beast::error_code error)</td></tr>
 <tr class="memdesc:a323d83de1ffd1ee9f29b559f242fd05a inherit pro_methods_classalgotradelib_1_1network_1_1WebSocketSessionBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tears the session down after a failure, calls <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#aea5aeb7fe3eb26b045e69101ba5a6fed">on_error</a></span> (and <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1ab8d5372a6114321fe220597d2e8ded">on_closed</a></span> if closing), and schedules a reconnect if configured.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_classalgotradelib_1_1network_1_1WebSocketSessionBase"><td colspan="2" class="dyn-inherit"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html">algotradelib::network::WebSocketSessionBase&lt; WssSession, websocket::stream&lt; ssl::stream&lt; beast::tcp_stream &gt; &gt; &gt;</a></td></tr>
@@ -371,6 +374,30 @@ template&lt;typename, typename&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="wss__session_8hpp_source.html#l00074">74</a> of file <a class="el" href="wss__session_8hpp_source.html">wss_session.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad55dc5990b4063c9bcb919e0f64b8ac3" name="ad55dc5990b4063c9bcb919e0f64b8ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55dc5990b4063c9bcb919e0f64b8ac3">&#9670;&#160;</a></span>WebSocketSessionTestAccess</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct WebSocketSessionTestAccess</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wss__session_8hpp_source.html#l00075">75</a> of file <a class="el" href="wss__session_8hpp_source.html">wss_session.hpp</a>.</p>
 
 </div>
 </div>

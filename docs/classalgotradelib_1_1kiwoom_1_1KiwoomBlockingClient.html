@@ -166,7 +166,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55aa9b9a312deadf06e5798a79165e2e" id="r_a55aa9b9a312deadf06e5798a79165e2e"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; <a class="el" href="structalgotradelib_1_1OrderPage.html">OrderPage</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a55aa9b9a312deadf06e5798a79165e2e">order_history</a> (<a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomAccount.html">KiwoomAccount</a> account, <a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomHistoryQuery.html">KiwoomHistoryQuery</a> query)</td></tr>
 <tr class="memdesc:a55aa9b9a312deadf06e5798a79165e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one day of order history.  <br /></td></tr>
 <tr class="memitem:a31b12649d65dc8c3cade45aad54894d8" id="r_a31b12649d65dc8c3cade45aad54894d8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a31b12649d65dc8c3cade45aad54894d8">close</a> ()</td></tr>
-<tr class="memdesc:a31b12649d65dc8c3cade45aad54894d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the client for good; see <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a00726f4c79810f45e851e3aaa7cc164a" title="Closes the client for good: pending and later requests complete with CANCELLED. A request already bei...">KiwoomClient::close</a></span>.  <br /></td></tr>
+<tr class="memdesc:a31b12649d65dc8c3cade45aad54894d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the client for good; see <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a00726f4c79810f45e851e3aaa7cc164a" title="Closes the client for good: pending requests, and later ones that would send, complete with CANCELLED...">KiwoomClient::close</a></span>.  <br /></td></tr>
 <tr class="memitem:a2c3e6dc7a6efbae51986153c9c49fec6" id="r_a2c3e6dc7a6efbae51986153c9c49fec6"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1network_1_1RateLimitStats.html">network::RateLimitStats</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2c3e6dc7a6efbae51986153c9c49fec6">rate_limit_stats</a> () const</td></tr>
 <tr class="memdesc:a2c3e6dc7a6efbae51986153c9c49fec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rate limiter's statistics.  <br /></td></tr>
 </table>
@@ -174,7 +174,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A blocking Kiwoom client: each call runs a <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomClient.html" title="The asynchronous Kiwoom REST client: market data, account inquiries and orders for domestic stocks.">KiwoomClient</a></span> request on a private event loop and returns its result. Not thread-safe. Order references work with either client. </p>
 <p>A call whose loop stops before the request completes returns a <span class="tt">TRANSPORT</span> error (<span class="tt">event_loop_stopped</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03751">3751</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03784">3784</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab3775b99b9a783823a0b35b695146840" name="ab3775b99b9a783823a0b35b695146840"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3775b99b9a783823a0b35b695146840">&#9670;&#160;</a></span>KiwoomBlockingClient()</h2>
@@ -218,7 +218,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03759">3759</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03792">3792</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,9 +249,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns the one account the bound credential drives. </p>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03909">3909</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03942">3942</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00984">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::accounts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00987">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::accounts()</a>.</p>
 
 </div>
 </div>
@@ -287,9 +287,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03834">3834</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03867">3867</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00965">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::bars()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00968">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::bars()</a>.</p>
 
 </div>
 </div>
@@ -330,9 +330,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03865">3865</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03898">3898</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01009">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::buying_power()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01012">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::buying_power()</a>.</p>
 
 </div>
 </div>
@@ -373,9 +373,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03955">3955</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03988">3988</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01050">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::cancel_order()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01053">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::cancel_order()</a>.</p>
 
 </div>
 </div>
@@ -402,9 +402,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Closes the client for good; see <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a00726f4c79810f45e851e3aaa7cc164a" title="Closes the client for good: pending and later requests complete with CANCELLED. A request already bei...">KiwoomClient::close</a></span>. </p>
+<p>Closes the client for good; see <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a00726f4c79810f45e851e3aaa7cc164a" title="Closes the client for good: pending requests, and later ones that would send, complete with CANCELLED...">KiwoomClient::close</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03992">3992</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l04025">4025</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -434,9 +434,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns the configuration; see <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#aae42da009a97e7601a2c73f853b5f785" title="Returns the configuration (the session reads its holdings assertions from it).">KiwoomClient::config</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The configuration. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03845">3845</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03878">3878</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00994">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::holdings()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l03759">KiwoomBlockingClient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00997">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::holdings()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l03792">KiwoomBlockingClient()</a>.</p>
 
 </div>
 </div>
@@ -466,7 +466,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns Kiwoom's own fuller deposit detail. </p>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03876">3876</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03909">3909</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -502,9 +502,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03797">3797</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03830">3830</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00955">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::depth()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00958">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::depth()</a>.</p>
 
 </div>
 </div>
@@ -540,9 +540,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03852">3852</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03885">3885</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00994">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::holdings()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00997">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::holdings()</a>.</p>
 
 </div>
 </div>
@@ -578,9 +578,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03822">3822</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03855">3855</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l03797">depth()</a>, <a class="el" href="kiwoom_2traits_8hpp_source.html#l00975">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::instrument()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l03890">orderable_amount()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l03785">price_limits()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l03773">quote()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l03810">trades()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l03830">depth()</a>, <a class="el" href="kiwoom_2traits_8hpp_source.html#l00978">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::instrument()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l03923">orderable_amount()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l03818">price_limits()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l03806">quote()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l03843">trades()</a>.</p>
 
 </div>
 </div>
@@ -616,9 +616,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03969">3969</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l04002">4002</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01064">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::working_orders()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01067">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::working_orders()</a>.</p>
 
 </div>
 </div>
@@ -659,9 +659,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03982">3982</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l04015">4015</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01075">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::order_history()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01078">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::order_history()</a>.</p>
 
 </div>
 </div>
@@ -708,7 +708,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03890">3890</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03923">3923</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -749,9 +749,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03923">3923</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03956">3956</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01024">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::place_order()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01027">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::place_order()</a>.</p>
 
 </div>
 </div>
@@ -787,9 +787,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03785">3785</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03818">3818</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00930">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::price_limits()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00933">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::price_limits()</a>.</p>
 
 </div>
 </div>
@@ -825,9 +825,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03773">3773</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03806">3806</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00920">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::quote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00923">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::quote()</a>.</p>
 
 </div>
 </div>
@@ -858,9 +858,9 @@ Public Member Functions</h2></td></tr>
 <p>Read them on the client's strand or while no request is in progress (between calls on the blocking client).</p>
 <dl class="section return"><dt>Returns</dt><dd>The statistics, or null if the client has no rate-limit budget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l04002">4002</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l04035">4035</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00910">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::rate_limit_stats()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00913">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::rate_limit_stats()</a>.</p>
 
 </div>
 </div>
@@ -901,9 +901,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03939">3939</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03972">3972</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01035">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::replace_order()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l01038">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::replace_order()</a>.</p>
 
 </div>
 </div>
@@ -944,9 +944,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03810">3810</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l03843">3843</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00941">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::trades()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00944">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::trades()</a>.</p>
 
 </div>
 </div>

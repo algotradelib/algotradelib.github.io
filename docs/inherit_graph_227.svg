@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1tossinvest_1_1TossAccount.html" target="_top" xlink:title="A Toss account, as account discovery (async_accounts) returns it.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1tossinvest_1_1Broker.html" target="_top" xlink:title="The Toss Securities broker tag: order references are typed by it, so a Toss reference works with both...">
 <polygon fill="white" stroke="#666666" points="131,-30 0,-30 0,0 131,0 131,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::tossinvest</text>
-<text text-anchor="middle" x="65.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::TossAccount</text>
+<text text-anchor="middle" x="65.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::Broker</text>
 </a>
 </g>
 </g>

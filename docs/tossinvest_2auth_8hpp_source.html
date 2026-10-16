@@ -174,16 +174,19 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('tossinvest_2au
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    boost::system::error_code ec;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">const</span> <span class="keyword">auto</span> jv = json::parse(resp, ec);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span> (ec || !jv.is_object()) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Token authentication failed: &quot;</span> + resp);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    rest_resp_.from_json(jv.as_object());</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="comment">// Not the body: a token reply that did not parse may still hold the token.</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="stringliteral">&quot;Token authentication failed: the reply is not a JSON object (&quot;</span> + std::to_string(resp.size()) + <span class="stringliteral">&quot; bytes)&quot;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    rest_resp_.from_json(jv.as_object());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>} <span class="comment">// namespace tossinvest</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// namespace tossinvest</span></div>
 </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>} <span class="comment">// namespace algotradelib</span></div>
 <div class="ttc" id="aclassalgotradelib_1_1network_1_1ClientCredentials_html_a586837684328010477d65b1b221cf6a8"><div class="ttname"><a href="classalgotradelib_1_1network_1_1ClientCredentials.html#a586837684328010477d65b1b221cf6a8">algotradelib::network::ClientCredentials::to_form_urlencoded_body</a></div><div class="ttdeci">std::string to_form_urlencoded_body() const</div><div class="ttdoc">Builds a form-encoded token-request body (grant_type, client_id, client_secret).</div><div class="ttdef"><b>Definition</b> <a href="oauth_8hpp_source.html#l00087">oauth.hpp:87</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1tossinvest_1_1TossAuth_html"><div class="ttname"><a href="classalgotradelib_1_1tossinvest_1_1TossAuth.html">algotradelib::tossinvest::TossAuth</a></div><div class="ttdoc">Obtains and caches a Toss access token with blocking requests; thread-safe.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">auth.hpp:18</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1tossinvest_1_1TossAuth_html_a610e51192176d17cc0b4a5e3dbb89b49"><div class="ttname"><a href="classalgotradelib_1_1tossinvest_1_1TossAuth.html#a610e51192176d17cc0b4a5e3dbb89b49">algotradelib::tossinvest::TossAuth::~TossAuth</a></div><div class="ttdeci">virtual ~TossAuth()=default</div><div class="ttdoc">Destroys the wrapper.</div></div>

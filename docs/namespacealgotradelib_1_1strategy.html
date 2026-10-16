@@ -607,7 +607,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aae377ebdae21b45a09b6e1132773163fa4c786ffea7d608153f2ededf8eab455b" name="aae377ebdae21b45a09b6e1132773163fa4c786ffea7d608153f2ededf8eab455b"></a>NOT_REPRESENTABLE&#160;</td><td class="fielddoc"><p>The decimal arithmetic did not fit, or the portfolio's rows did not add up. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aae377ebdae21b45a09b6e1132773163fac98e0089d4a0030e89b9f2e02e9d6fff" name="aae377ebdae21b45a09b6e1132773163fac98e0089d4a0030e89b9f2e02e9d6fff"></a>NO_PERMITTED_PRICE&#160;</td><td class="fielddoc"><p>Reserved for a limit price the day's band leaves no valid tick for; nothing produces it yet (a band narrower than one tick is not refused). </p>
+<tr><td class="fieldname"><a id="aae377ebdae21b45a09b6e1132773163fac98e0089d4a0030e89b9f2e02e9d6fff" name="aae377ebdae21b45a09b6e1132773163fac98e0089d4a0030e89b9f2e02e9d6fff"></a>NO_PERMITTED_PRICE&#160;</td><td class="fielddoc"><p>Rounding the limit onto the grid, in the cautious direction, would move it out of the day's band: no tick lies between the band's bound and the limit (clamped into the band). </p>
+<p>It takes a band with no tick on that side of the limit; on KRX, for example, only a band narrower than one tick, at a price of a few won. A limit the strategy itself set beyond the band (a buy below the lower bound, a sell above the upper) is left alone, as without a band. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aae377ebdae21b45a09b6e1132773163fa016f51672772a90a11012b584fa56899" name="aae377ebdae21b45a09b6e1132773163fa016f51672772a90a11012b584fa56899"></a>BROKER_REFUSED&#160;</td><td class="fielddoc"><p>The broker refused the instruction (a request was sent). </p>
 </td></tr>
@@ -951,9 +952,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for a stop order. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00430">430</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00457">457</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00430">is_stop_order()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00457">is_stop_order()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1085,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00020">20</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01113">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00020">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00412">projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00462">reconcile()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01114">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00020">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00412">projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
 
 </div>
 </div>
@@ -1201,7 +1202,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A plan with one placement, or one <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1Rejection.html" title="One instruction that was not placed, and why.">Rejection</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00680">680</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00710">710</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1260,9 +1261,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The plan. A refusal for any reason other than <span class="tt">STOP_ORDER_RESTING</span> clears the cancellations and placements and carries one <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1Rejection.html" title="One instruction that was not placed, and why.">Rejection</a></span>; with <span class="tt">STOP_ORDER_RESTING</span> the cancellations stay, and the caller should send them. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00462">462</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00489">489</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00680">reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>.</p>
 
 </div>
 </div>
@@ -1298,9 +1299,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00097">97</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00101">101</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00097">reject_reason_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00101">reject_reason_name()</a>.</p>
 
 </div>
 </div>
@@ -1386,9 +1387,9 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00829">829</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00862">862</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00829">weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00862">weight_target()</a>.</p>
 
 </div>
 </div>

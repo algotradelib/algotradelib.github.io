@@ -1,5 +1,17 @@
 var NAVTREEINDEX11 =
 {
+"running-a-strategy-live.html#autotoc_md94":[0,18,8],
+"running-a-strategy-live.html#autotoc_md95":[0,18,9],
+"running-a-strategy-live.html#autotoc_md96":[0,18,10],
+"running-a-strategy-live.html#autotoc_md97":[0,18,10,0],
+"running-a-strategy-live.html#autotoc_md98":[0,18,11],
+"running-a-strategy-live.html#autotoc_md99":[0,18,12],
+"scalar_8hpp_source.html":[3,0,0,0,5,2],
+"sellable__convention_8hpp_source.html":[3,0,0,0,8,7],
+"series__buffer_8hpp_source.html":[3,0,0,0,0,8],
+"session__executor_8hpp_source.html":[3,0,0,0,4,1],
+"session__source_8hpp_source.html":[3,0,0,0,4,2],
+"signal_8hpp.html":[3,0,0,0,8,0,3],
 "signal_8hpp_source.html":[3,0,0,0,8,0,3],
 "signal__stop_8hpp_source.html":[3,0,0,0,7,10],
 "sizing_8hpp_source.html":[3,0,0,0,8,0,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX11 =
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a7e5acd708935cb9360983a106a04dc77":[1,0,0,23,15],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a7e5acd708935cb9360983a106a04dc77":[2,0,0,23,15],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a8368a533f48909384bf3ff04d6c871b0":[1,0,0,23,19],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a8368a533f48909384bf3ff04d6c871b0":[2,0,0,23,19],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9ad26f20f875046a59ee714885584423":[1,0,0,23,22],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9ad26f20f875046a59ee714885584423":[2,0,0,23,22],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9e7f7e9052b84198759615d42c8e5d52":[1,0,0,23,2],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9e7f7e9052b84198759615d42c8e5d52":[2,0,0,23,2],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aac73e28de118933992b647faad97cbb0":[1,0,0,23,20],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aac73e28de118933992b647faad97cbb0":[2,0,0,23,20],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aaebaf5c17c064267cec5a740a1d1e444":[1,0,0,23,1],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aaebaf5c17c064267cec5a740a1d1e444":[2,0,0,23,1],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abc4ed4c8a75b5226844b2dc5d8e5aaff":[1,0,0,23,0],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abc4ed4c8a75b5226844b2dc5d8e5aaff":[2,0,0,23,0],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abdbfeca73b0f85c08861b84c247b7e1e":[1,0,0,23,10],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abdbfeca73b0f85c08861b84c247b7e1e":[2,0,0,23,10]
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a8368a533f48909384bf3ff04d6c871b0":[2,0,0,23,19]
 };

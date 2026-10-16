@@ -1,5 +1,17 @@
 var NAVTREEINDEX14 =
 {
+"structalgotradelib_1_1InstrumentId.html#ae6b55230f184e82484c349d9a2df03b1":[1,0,0,42,0],
+"structalgotradelib_1_1InstrumentId.html#ae6b55230f184e82484c349d9a2df03b1":[2,0,0,42,0],
+"structalgotradelib_1_1MarketSegment.html":[1,0,0,43],
+"structalgotradelib_1_1MarketSegment.html":[2,0,0,43],
+"structalgotradelib_1_1MarketSegment.html#a3a0326fc3177a231a2665215c56dd43e":[1,0,0,43,5],
+"structalgotradelib_1_1MarketSegment.html#a3a0326fc3177a231a2665215c56dd43e":[2,0,0,43,5],
+"structalgotradelib_1_1MarketSegment.html#a73da1c930a819b997e249cc9a52a422a":[1,0,0,43,2],
+"structalgotradelib_1_1MarketSegment.html#a73da1c930a819b997e249cc9a52a422a":[2,0,0,43,2],
+"structalgotradelib_1_1MarketSegment.html#a8a7104bf7e8209fbe924cf4bad697667":[1,0,0,43,4],
+"structalgotradelib_1_1MarketSegment.html#a8a7104bf7e8209fbe924cf4bad697667":[2,0,0,43,4],
+"structalgotradelib_1_1MarketSegment.html#ad12faa6d16cfe217a6ca1f56d94fa751":[1,0,0,43,0],
+"structalgotradelib_1_1MarketSegment.html#ad12faa6d16cfe217a6ca1f56d94fa751":[2,0,0,43,0],
 "structalgotradelib_1_1MarketSegment.html#ad31b2c4fc892e0fb69542a71be8038b9":[1,0,0,43,1],
 "structalgotradelib_1_1MarketSegment.html#ad31b2c4fc892e0fb69542a71be8038b9":[2,0,0,43,1],
 "structalgotradelib_1_1MarketSegment.html#af3270a4f0cc1621b3ec3ccdb57ff7eb5":[1,0,0,43,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX14 =
 "structalgotradelib_1_1TickBand.html":[1,0,0,60],
 "structalgotradelib_1_1TickBand.html":[2,0,0,60],
 "structalgotradelib_1_1TickBand.html#a0d7d133313f566158989ead2b53a821d":[1,0,0,60,0],
-"structalgotradelib_1_1TickBand.html#a0d7d133313f566158989ead2b53a821d":[2,0,0,60,0],
-"structalgotradelib_1_1TickBand.html#a986ce8cf9d02dff70851682ab4cbd582":[1,0,0,60,1],
-"structalgotradelib_1_1TickBand.html#a986ce8cf9d02dff70851682ab4cbd582":[2,0,0,60,1],
-"structalgotradelib_1_1TopOfBook.html":[1,0,0,61],
-"structalgotradelib_1_1TopOfBook.html":[2,0,0,61],
-"structalgotradelib_1_1TopOfBook.html#a08814db9bbdd2d997ad0db873cc54233":[1,0,0,61,2],
-"structalgotradelib_1_1TopOfBook.html#a08814db9bbdd2d997ad0db873cc54233":[2,0,0,61,2],
-"structalgotradelib_1_1TopOfBook.html#a1fbcf5f50124f7cc9a90dcf6b0ee4efd":[1,0,0,61,0],
-"structalgotradelib_1_1TopOfBook.html#a1fbcf5f50124f7cc9a90dcf6b0ee4efd":[2,0,0,61,0],
-"structalgotradelib_1_1TopOfBook.html#a7cad3ceefb71057d7cbf7d2d00ab7ef6":[1,0,0,61,3],
-"structalgotradelib_1_1TopOfBook.html#a7cad3ceefb71057d7cbf7d2d00ab7ef6":[2,0,0,61,3],
-"structalgotradelib_1_1TopOfBook.html#af5195f57fe5bacd9652bcf04db11da8f":[1,0,0,61,1],
-"structalgotradelib_1_1TopOfBook.html#af5195f57fe5bacd9652bcf04db11da8f":[2,0,0,61,1]
+"structalgotradelib_1_1TickBand.html#a0d7d133313f566158989ead2b53a821d":[2,0,0,60,0]
 };

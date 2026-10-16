@@ -803,7 +803,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 </div><div class="memdoc">
 
 <p>Sets the journal each order listing is checked against. </p>
-<p>Use the journal the runner writes to (<span class="tt"><a class="el" href="namespacealgotradelib_1_1live.html#a245c65cba8ab0c8ec4af16d5633014ff" title="Binds a strategy to a broker session, recording every instruction in a journal before it is sent.">bind_journaled</a></span>). Listings arrive with the startup order-list read and every working-order poll; a broker without a working-order inquiry is checked only at startup.</p>
+<p>Use the journal the runner writes to (<span class="tt"><a class="el" href="namespacealgotradelib_1_1live.html#a3ce65f98a5517b9dfdb8502d798508d7" title="Binds a strategy to a broker session, recording every instruction in a journal before it is sent.">bind_journaled</a></span>). Listings arrive with the startup order-list read and every working-order poll; a broker without a working-order inquiry is checked only at startup.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">journal</td><td>The journal; borrowed, and must outlive the source. </td></tr>

@@ -63,6 +63,7 @@ var hierarchy =
     [ "algotradelib::network::ClientCredentials&lt; TossConfig &gt;", "classalgotradelib_1_1network_1_1ClientCredentials.html", [
       [ "algotradelib::tossinvest::TossConfig", "structalgotradelib_1_1tossinvest_1_1TossConfig.html", null ]
     ] ],
+    [ "algotradelib::runner::ClockReference&lt; Clock &gt;", "classalgotradelib_1_1runner_1_1ClockReference.html", null ],
     [ "algotradelib::Code&lt; N &gt;", "classalgotradelib_1_1Code.html", null ],
     [ "algotradelib::backtest::CommissionCharge", "structalgotradelib_1_1backtest_1_1CommissionCharge.html", null ],
     [ "algotradelib::backtest::CommissionModel", "structalgotradelib_1_1backtest_1_1CommissionModel.html", null ],

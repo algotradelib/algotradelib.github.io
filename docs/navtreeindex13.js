@@ -1,5 +1,17 @@
 var NAVTREEINDEX13 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aab61329ead8c8ed546ae96367e91eb88":[1,0,0,27,30],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aab61329ead8c8ed546ae96367e91eb88":[2,0,0,27,30],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ab6793c8bf7dd1f92b1d9256ff51769bd":[1,0,0,27,5],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ab6793c8bf7dd1f92b1d9256ff51769bd":[2,0,0,27,5],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#abe80a31bbef343a08f08689d459d717b":[1,0,0,27,11],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#abe80a31bbef343a08f08689d459d717b":[2,0,0,27,11],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ac7c38c1e9307b160c8a4a9e8e720cdca":[1,0,0,27,31],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ac7c38c1e9307b160c8a4a9e8e720cdca":[2,0,0,27,31],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#acffb0b0aba0f9e9f9670b261c84d091a":[1,0,0,27,18],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#acffb0b0aba0f9e9f9670b261c84d091a":[2,0,0,27,18],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ad6c71bfee60712448929ff4713102f9f":[1,0,0,27,29],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ad6c71bfee60712448929ff4713102f9f":[2,0,0,27,29],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ae40a27c56381bea7205ce4c74c99589a":[1,0,0,27,26],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ae40a27c56381bea7205ce4c74c99589a":[2,0,0,27,26],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ae63c2fa1d5d0eff9cc5391a97cd58824":[1,0,0,27,14],
@@ -237,17 +249,5 @@ var NAVTREEINDEX13 =
 "structalgotradelib_1_1InstrumentId.html#a85f8cf172c430c42217e8f2b6be732f0":[1,0,0,42,4],
 "structalgotradelib_1_1InstrumentId.html#a85f8cf172c430c42217e8f2b6be732f0":[2,0,0,42,4],
 "structalgotradelib_1_1InstrumentId.html#ad3d92f4c439475739efb8915993ab335":[1,0,0,42,3],
-"structalgotradelib_1_1InstrumentId.html#ad3d92f4c439475739efb8915993ab335":[2,0,0,42,3],
-"structalgotradelib_1_1InstrumentId.html#ae6b55230f184e82484c349d9a2df03b1":[1,0,0,42,0],
-"structalgotradelib_1_1InstrumentId.html#ae6b55230f184e82484c349d9a2df03b1":[2,0,0,42,0],
-"structalgotradelib_1_1MarketSegment.html":[1,0,0,43],
-"structalgotradelib_1_1MarketSegment.html":[2,0,0,43],
-"structalgotradelib_1_1MarketSegment.html#a3a0326fc3177a231a2665215c56dd43e":[1,0,0,43,5],
-"structalgotradelib_1_1MarketSegment.html#a3a0326fc3177a231a2665215c56dd43e":[2,0,0,43,5],
-"structalgotradelib_1_1MarketSegment.html#a73da1c930a819b997e249cc9a52a422a":[1,0,0,43,2],
-"structalgotradelib_1_1MarketSegment.html#a73da1c930a819b997e249cc9a52a422a":[2,0,0,43,2],
-"structalgotradelib_1_1MarketSegment.html#a8a7104bf7e8209fbe924cf4bad697667":[1,0,0,43,4],
-"structalgotradelib_1_1MarketSegment.html#a8a7104bf7e8209fbe924cf4bad697667":[2,0,0,43,4],
-"structalgotradelib_1_1MarketSegment.html#ad12faa6d16cfe217a6ca1f56d94fa751":[1,0,0,43,0],
-"structalgotradelib_1_1MarketSegment.html#ad12faa6d16cfe217a6ca1f56d94fa751":[2,0,0,43,0]
+"structalgotradelib_1_1InstrumentId.html#ad3d92f4c439475739efb8915993ab335":[2,0,0,42,3]
 };

@@ -21,7 +21,7 @@ var searchData=
   ['journal_5fscope_5f_18',['journal_scope_',['../structlive__program_1_1Settings.html#ac537065e3e3baf86b336a5dc539543dd',1,'live_program::Settings']]],
   ['journalaction_19',['JournalAction',['../namespacealgotradelib_1_1runner.html#ac6ce2dd3ddcfc9bddc4a003a65ad5835',1,'algotradelib::runner']]],
   ['journalbytes_20',['JournalBytes',['../structalgotradelib_1_1runner_1_1JournalBytes.html',1,'algotradelib::runner']]],
-  ['journaledrunner_21',['JournaledRunner',['../namespacealgotradelib_1_1live.html#ac0753a5a4d02f21be28df029f7b8ef80',1,'algotradelib::live']]],
+  ['journaledrunner_21',['JournaledRunner',['../namespacealgotradelib_1_1live.html#aa6a5bfa531abc9945b7c87db10cfe2ee',1,'algotradelib::live']]],
   ['journalentry_22',['JournalEntry',['../structalgotradelib_1_1runner_1_1JournalEntry.html',1,'algotradelib::runner']]],
   ['journalingexecutor_23',['JournalingExecutor',['../classalgotradelib_1_1runner_1_1JournalingExecutor.html',1,'algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;'],['../classalgotradelib_1_1runner_1_1JournalingExecutor.html#afe6e2a9af0450f0eb3fd7a224341f3d2',1,'algotradelib::runner::JournalingExecutor::JournalingExecutor()']]],
   ['journaloutcome_24',['JournalOutcome',['../namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56e',1,'algotradelib::runner']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['journaledrunner_0',['JournaledRunner',['../namespacealgotradelib_1_1live.html#ac0753a5a4d02f21be28df029f7b8ef80',1,'algotradelib::live']]]
+  ['journaledrunner_0',['JournaledRunner',['../namespacealgotradelib_1_1live.html#aa6a5bfa531abc9945b7c87db10cfe2ee',1,'algotradelib::live']]]
 ];

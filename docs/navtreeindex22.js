@@ -1,5 +1,17 @@
 var NAVTREEINDEX22 =
 {
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html":[1,0,0,10,1,2,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html":[2,0,0,10,0,2,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#a0450354b21217822b2636959a037bd76":[1,0,0,10,1,2,0,1],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#a0450354b21217822b2636959a037bd76":[2,0,0,10,0,2,0,1],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#a089db0318de31193b2352c8edd3f30ee":[1,0,0,10,1,2,0,3],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#a089db0318de31193b2352c8edd3f30ee":[2,0,0,10,0,2,0,3],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#ac120fcd6a78bbfa084303901f5fcc637":[1,0,0,10,1,2,0,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#ac120fcd6a78bbfa084303901f5fcc637":[2,0,0,10,0,2,0,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#aea9ed3b7277de243b411fb199e87fb9b":[1,0,0,10,1,2,0,2],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#aea9ed3b7277de243b411fb199e87fb9b":[2,0,0,10,0,2,0,2],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover.html":[1,0,0,10,1,3],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover.html":[2,0,0,10,0,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover.html#a6de114a9ea8e0390f1f27e094f4b2109":[1,0,0,10,1,3,2],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover.html#a6de114a9ea8e0390f1f27e094f4b2109":[2,0,0,10,0,3,2],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover.html#a948c1b79bf32ca8f57a7973877c87c8d":[1,0,0,10,1,3,1],
@@ -237,13 +249,5 @@ var NAVTREEINDEX22 =
 "version_8hpp_source.html":[3,0,0,0,9],
 "writing-a-strategy.html":[0,13],
 "writing-a-strategy.html#autotoc_md114":[0,13,0],
-"writing-a-strategy.html#autotoc_md115":[0,13,1],
-"writing-a-strategy.html#autotoc_md116":[0,13,2],
-"writing-a-strategy.html#autotoc_md117":[0,13,3],
-"writing-a-strategy.html#autotoc_md118":[0,13,4],
-"writing-a-strategy.html#autotoc_md119":[0,13,5],
-"writing-a-strategy.html#autotoc_md120":[0,13,6],
-"ws__session_8hpp_source.html":[3,0,0,0,6,3],
-"ws__session__base_8hpp_source.html":[3,0,0,0,6,4],
-"wss__session_8hpp_source.html":[3,0,0,0,6,5]
+"writing-a-strategy.html#autotoc_md115":[0,13,1]
 };

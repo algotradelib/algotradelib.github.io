@@ -162,7 +162,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>Which venue a commission rate applies to: any venue, a normalized <span class="tt"><a class="el" href="namespacealgotradelib.html#ac78f755f933a0a9a9f38040d8e56828d" title="A trading venue: an exchange, or the combined view across exchanges.">Venue</a></span>, or a raw code. </p>
 <p>The three kinds never match each other: a <span class="tt">RAW</span> key never equals a <span class="tt">NORMALIZED</span> one even if the text looks the same. A backtest refuses <span class="tt">Venue::COMBINED</span> as the venue a fill happened at, since it names consolidated routing (KIS <span class="tt">SOR</span>), not where an order matched. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01186">1186</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01193">1193</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9515542d26ae5c6353db7fbf92a9715b" name="a9515542d26ae5c6353db7fbf92a9715b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9515542d26ae5c6353db7fbf92a9715b">&#9670;&#160;</a></span>VenueKey()</h2>
@@ -189,7 +189,7 @@ Friends</h2></td></tr>
 
 <p>Constructs the key for any venue. </p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01195">any()</a>, <a class="el" href="types_8hpp_source.html#l01261">matches()</a>, <a class="el" href="types_8hpp_source.html#l01202">normalized()</a>, <a class="el" href="types_8hpp_source.html#l01290">operator!=</a>, <a class="el" href="types_8hpp_source.html#l01282">operator==</a>, and <a class="el" href="types_8hpp_source.html#l01217">raw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01202">any()</a>, <a class="el" href="types_8hpp_source.html#l01268">matches()</a>, <a class="el" href="types_8hpp_source.html#l01209">normalized()</a>, <a class="el" href="types_8hpp_source.html#l01297">operator!=</a>, <a class="el" href="types_8hpp_source.html#l01289">operator==</a>, and <a class="el" href="types_8hpp_source.html#l01224">raw()</a>.</p>
 
 </div>
 </div>
@@ -220,9 +220,9 @@ Friends</h2></td></tr>
 <p>Returns the key for any venue. </p>
 <dl class="section return"><dt>Returns</dt><dd>A key of kind <span class="tt">ANY</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01195">1195</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01202">1202</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01584">algotradelib::CommissionSchedule::rate_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01591">algotradelib::CommissionSchedule::rate_for()</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ Friends</h2></td></tr>
 <p>Tests whether the key is for any venue. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for kind <span class="tt">ANY</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01238">1238</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01245">1245</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +282,7 @@ Friends</h2></td></tr>
 <p>Returns the key's kind. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ANY</span>, <span class="tt">NORMALIZED</span> or <span class="tt">RAW</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01232">1232</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01239">1239</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00211">algotradelib::backtest::CommissionPolicy::scheduled()</a>.</p>
 
@@ -321,7 +321,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the kinds and values are equal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01261">1261</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01268">1268</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +357,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The key, or <span class="tt">std::nullopt</span> for <span class="tt">Venue::UNSPECIFIED</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01202">1202</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01209">1209</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -393,7 +393,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The key, or <span class="tt">std::nullopt</span> if <span class="tt">code</span> is empty or cannot be stored. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01217">1217</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01224">1224</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -423,7 +423,7 @@ Friends</h2></td></tr>
 <p>Returns the raw venue code. </p>
 <dl class="section return"><dt>Returns</dt><dd>The code for kind <span class="tt">RAW</span>; empty otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01250">1250</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01257">1257</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,9 +453,9 @@ Friends</h2></td></tr>
 <p>Returns the normalized venue. </p>
 <dl class="section return"><dt>Returns</dt><dd>The venue for kind <span class="tt">NORMALIZED</span>; <span class="tt">UNSPECIFIED</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01244">1244</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01251">1251</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01202">normalized()</a>, and <a class="el" href="cost_8hpp_source.html#l00211">algotradelib::backtest::CommissionPolicy::scheduled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01209">normalized()</a>, and <a class="el" href="cost_8hpp_source.html#l00211">algotradelib::backtest::CommissionPolicy::scheduled()</a>.</p>
 
 </div>
 </div>
@@ -497,7 +497,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if they do not match. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01290">1290</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01297">1297</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -538,7 +538,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if they match. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01282">1282</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01289">1289</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>

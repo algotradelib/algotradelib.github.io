@@ -4,6 +4,7 @@ var namespacealgotradelib_1_1runner =
     [ "BrokerRefusal", "structalgotradelib_1_1runner_1_1BrokerRefusal.html", "structalgotradelib_1_1runner_1_1BrokerRefusal" ],
     [ "CancelIntent", "structalgotradelib_1_1runner_1_1CancelIntent.html", "structalgotradelib_1_1runner_1_1CancelIntent" ],
     [ "ChargedCosts", "structalgotradelib_1_1runner_1_1ChargedCosts.html", "structalgotradelib_1_1runner_1_1ChargedCosts" ],
+    [ "ClockReference", "classalgotradelib_1_1runner_1_1ClockReference.html", "classalgotradelib_1_1runner_1_1ClockReference" ],
     [ "Context", "classalgotradelib_1_1runner_1_1Context.html", "classalgotradelib_1_1runner_1_1Context" ],
     [ "DryRunReport", "structalgotradelib_1_1runner_1_1DryRunReport.html", "structalgotradelib_1_1runner_1_1DryRunReport" ],
     [ "DryTag", "structalgotradelib_1_1runner_1_1DryTag.html", "structalgotradelib_1_1runner_1_1DryTag" ],

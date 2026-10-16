@@ -1,20 +1,23 @@
 <map id="algotradelib/src/analytics/returns.hpp" name="algotradelib/src/analytics/returns.hpp">
-<area shape="rect" id="Node000001" title="Simple, log and cumulative returns of a price series." alt="" coords="235,5,422,45"/>
-<area shape="rect" id="Node000002" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="227,93,337,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,47,298,83,294,80,315,44"/>
+<area shape="rect" id="Node000001" title="Simple, log and cumulative returns of a price series." alt="" coords="261,5,447,45"/>
+<area shape="rect" id="Node000002" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="248,93,359,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="344,47,321,83,316,80,339,44"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="357,313,428,339"/>
-<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="338,45,351,93,376,208,391,299,386,300,370,209,346,94,332,47"/>
-<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="187,167,329,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="281,120,269,154,264,153,276,118"/>
-<area shape="rect" id="Node000004" href="$scalar_8hpp_source.html" title=" " alt="" coords="177,240,273,265"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="255,193,238,229,233,227,250,191"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="362,45,374,93,388,208,394,299,389,300,383,209,369,94,357,46"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="123,167,265,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,121,225,161,222,157,284,116"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="5,313,68,339"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="195,268,81,311,79,306,194,263"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="253,263,354,305,352,310,251,268"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="93,313,159,339"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="210,268,155,307,152,303,207,263"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="183,313,250,339"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="226,266,222,300,217,300,221,265"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="249,115,178,132,143,147,112,169,85,199,66,235,52,270,44,300,39,299,47,268,61,232,81,196,108,165,141,143,177,127,247,110"/>
+<area shape="poly" id="edge10_Node000002_Node000006" title=" " alt="" coords="311,118,385,299,380,301,306,120"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="274,313,333,339"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="239,263,282,302,279,306,236,267"/>
+<area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="306,119,306,299,301,299,301,119"/>
+<area shape="rect" id="Node000004" href="$scalar_8hpp_source.html" title=" " alt="" coords="157,240,253,265"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="198,192,204,226,198,227,193,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="179,268,78,310,76,305,177,263"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="236,263,350,306,348,311,234,268"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="183,313,250,339"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="209,265,215,299,210,300,204,266"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="93,313,159,339"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="194,267,151,306,147,302,190,263"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="222,263,278,303,275,307,219,268"/>
 </map>

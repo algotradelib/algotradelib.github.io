@@ -125,23 +125,82 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('numeric_8hpp_s
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="matrix_8hpp.html">../math/matrix.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib.html">algotradelib</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib_1_1analytics.html">analytics</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Kept apart from conversion.hpp so indicator headers do not include the trading types.</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using </span><a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">using </span><a class="code hl_function" href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1">math::missing</a>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">using </span><a class="code hl_function" href="namespacealgotradelib_1_1math.html#a19fc7f3d86cafd06105c227a9caed294">math::observed</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace analytics</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib.html">algotradelib</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib_1_1analytics.html">analytics</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// Kept apart from conversion.hpp so indicator headers do not include the trading types.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">using </span><a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">using </span><a class="code hl_function" href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1">math::missing</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">using </span><a class="code hl_function" href="namespacealgotradelib_1_1math.html#a19fc7f3d86cafd06105c227a9caed294">math::observed</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span>constant_detail {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Whether a deviation computed about `mean` over `count` observations is small enough to be</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// rounding alone. Equal observations that are not exact binary fractions have a computed mean an</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// ulp or so away from them (the mean of {0.1, 0.1, 0.1} is not 0.1), so their deviation comes out a</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// few ulps of the mean rather than zero. The bound is a generous relative one, `8 * count * epsilon`</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// of the mean&#39;s magnitude, against a summation error of about `count * epsilon / 2`.</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> within_rounding(<a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> deviation, <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> mean, std::size_t count) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">return</span> deviation &lt;=</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::abs(mean) * <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a><span class="keyword">&gt;</span>(count) * <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>{8} * std::numeric_limits&lt;Scalar&gt;::epsilon();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// Whether every observed row of `values` in `[first, first + length)` holds the same value;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// `present` is the presence mask `math::Observed` gives (`1` observed, `0` not).</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> all_equal(</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&amp; values,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&amp; present,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a4f572d3e24fee3cb9c44f99a13415fca">math::Index</a> first,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a4f572d3e24fee3cb9c44f99a13415fca">math::Index</a> length</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">bool</span> seen = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> reference{0};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a4f572d3e24fee3cb9c44f99a13415fca">math::Index</a> row = first; row &lt; first + length; ++row) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (present[row] == <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>{0}) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> (!seen) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      reference = values[row];</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      seen = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (values[row] != reference) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// Whether a window whose deviation about `mean` came out rounding-small holds equal observations,</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// checked value by value. Each caller keeps its own exact-zero test beside it: this one never</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// reads a zero as equality by itself, since a positive dispersion can underflow to a zero deviation.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> rounded_constant(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> deviation,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> mean,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  std::size_t count,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&amp; values,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&amp; present,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a4f572d3e24fee3cb9c44f99a13415fca">math::Index</a> first,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_typedef" href="namespacealgotradelib_1_1math.html#a4f572d3e24fee3cb9c44f99a13415fca">math::Index</a> length</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">return</span> within_rounding(deviation, mean, count) &amp;&amp; all_equal(values, present, first, length);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <span class="comment">// namespace constant_detail</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>} <span class="comment">// namespace analytics</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace algotradelib</span></div>
 <div class="ttc" id="amatrix_8hpp_html"><div class="ttname"><a href="matrix_8hpp.html">matrix.hpp</a></div><div class="ttdoc">The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,...</div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1analytics_html"><div class="ttname"><a href="namespacealgotradelib_1_1analytics.html">algotradelib::analytics</a></div><div class="ttdoc">Returns, rolling statistics, indicators and performance metrics over numeric series.</div><div class="ttdef"><b>Definition</b> <a href="conversion_8hpp_source.html#l00014">conversion.hpp:14</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1math_html_a12b8c1ca53ee5215eab439879f5e394e"><div class="ttname"><a href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">algotradelib::math::Scalar</a></div><div class="ttdeci">double Scalar</div><div class="ttdoc">The floating-point type the analytics and math layers compute in (double).</div><div class="ttdef"><b>Definition</b> <a href="scalar_8hpp_source.html#l00018">scalar.hpp:18</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1math_html_a19fc7f3d86cafd06105c227a9caed294"><div class="ttname"><a href="namespacealgotradelib_1_1math.html#a19fc7f3d86cafd06105c227a9caed294">algotradelib::math::observed</a></div><div class="ttdeci">bool observed(Scalar value)</div><div class="ttdoc">Tests whether a value is an observation.</div><div class="ttdef"><b>Definition</b> <a href="scalar_8hpp_source.html#l00036">scalar.hpp:36</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1math_html_a4f572d3e24fee3cb9c44f99a13415fca"><div class="ttname"><a href="namespacealgotradelib_1_1math.html#a4f572d3e24fee3cb9c44f99a13415fca">algotradelib::math::Index</a></div><div class="ttdeci">Eigen::Index Index</div><div class="ttdoc">The signed index type of rows and columns.</div><div class="ttdef"><b>Definition</b> <a href="eigen_8hpp_source.html#l00065">eigen.hpp:65</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1math_html_aabc11d522f83cde7f94a27adc0ddfb1f"><div class="ttname"><a href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">algotradelib::math::Vector</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, 1 &gt; Vector</div><div class="ttdoc">A dense column vector of Scalar.</div><div class="ttdef"><b>Definition</b> <a href="eigen_8hpp_source.html#l00048">eigen.hpp:48</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1math_html_ac779beb008cac496403576f7f5caaaf1"><div class="ttname"><a href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1">algotradelib::math::missing</a></div><div class="ttdeci">Scalar missing()</div><div class="ttdoc">Returns the value that stands for &quot;no observation&quot; (a quiet NaN).</div><div class="ttdef"><b>Definition</b> <a href="scalar_8hpp_source.html#l00028">scalar.hpp:28</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html"><div class="ttname"><a href="namespacealgotradelib.html">algotradelib</a></div><div class="ttdoc">The library: broker-neutral types (core), and the modules below.</div><div class="ttdef"><b>Definition</b> <a href="conversion_8hpp_source.html#l00013">conversion.hpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

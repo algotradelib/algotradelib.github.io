@@ -50,7 +50,7 @@ var searchData=
   ['bids_5f_47',['bids_',['../structalgotradelib_1_1DepthSnapshot.html#ac71be635433c85f29a0f6b1188f6a726',1,'algotradelib::DepthSnapshot']]],
   ['bind_48',['bind',['../namespacealgotradelib_1_1live.html#af531075724b5c38aa848c5d8bbec48ed',1,'algotradelib::live']]],
   ['bind_2ehpp_49',['bind.hpp',['../bind_8hpp.html',1,'']]],
-  ['bind_5fjournaled_50',['bind_journaled',['../namespacealgotradelib_1_1live.html#a245c65cba8ab0c8ec4af16d5633014ff',1,'algotradelib::live']]],
+  ['bind_5fjournaled_50',['bind_journaled',['../namespacealgotradelib_1_1live.html#a3ce65f98a5517b9dfdb8502d798508d7',1,'algotradelib::live']]],
   ['bind_5fobserver_51',['bind_observer',['../namespacealgotradelib_1_1live.html#a4277e01edb971953e079b47f1e587440',1,'algotradelib::live']]],
   ['binding_20a_20broker_52',['Binding a broker',['../binding-a-broker.html',1,'Binding a broker'],['../architecture.html#autotoc_md26',1,'Binding a broker']]],
   ['binding_20a_20real_20broker_53',['Binding a real broker',['../binding-a-broker.html#autotoc_md37',1,'']]],

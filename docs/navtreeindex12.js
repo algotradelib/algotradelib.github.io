@@ -1,5 +1,17 @@
 var NAVTREEINDEX12 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9ad26f20f875046a59ee714885584423":[1,0,0,23,22],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9ad26f20f875046a59ee714885584423":[2,0,0,23,22],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9e7f7e9052b84198759615d42c8e5d52":[1,0,0,23,2],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a9e7f7e9052b84198759615d42c8e5d52":[2,0,0,23,2],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aac73e28de118933992b647faad97cbb0":[1,0,0,23,20],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aac73e28de118933992b647faad97cbb0":[2,0,0,23,20],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aaebaf5c17c064267cec5a740a1d1e444":[1,0,0,23,1],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#aaebaf5c17c064267cec5a740a1d1e444":[2,0,0,23,1],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abc4ed4c8a75b5226844b2dc5d8e5aaff":[1,0,0,23,0],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abc4ed4c8a75b5226844b2dc5d8e5aaff":[2,0,0,23,0],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abdbfeca73b0f85c08861b84c247b7e1e":[1,0,0,23,10],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abdbfeca73b0f85c08861b84c247b7e1e":[2,0,0,23,10],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abe0cf8908e10762e000c52f197b57c8f":[1,0,0,23,9],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#abe0cf8908e10762e000c52f197b57c8f":[2,0,0,23,9],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#ad5f4cd3f203a28875898b99973c20d7e":[1,0,0,23,16],
@@ -237,17 +249,5 @@ var NAVTREEINDEX12 =
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#a9deaab69b04756b217dc6a5a542b4d40":[1,0,0,27,27],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#a9deaab69b04756b217dc6a5a542b4d40":[2,0,0,27,27],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aa93c80b459daa1a663a6ba0578c602f0":[1,0,0,27,23],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aa93c80b459daa1a663a6ba0578c602f0":[2,0,0,27,23],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aab61329ead8c8ed546ae96367e91eb88":[1,0,0,27,30],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aab61329ead8c8ed546ae96367e91eb88":[2,0,0,27,30],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ab6793c8bf7dd1f92b1d9256ff51769bd":[1,0,0,27,5],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ab6793c8bf7dd1f92b1d9256ff51769bd":[2,0,0,27,5],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#abe80a31bbef343a08f08689d459d717b":[1,0,0,27,11],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#abe80a31bbef343a08f08689d459d717b":[2,0,0,27,11],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ac7c38c1e9307b160c8a4a9e8e720cdca":[1,0,0,27,31],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ac7c38c1e9307b160c8a4a9e8e720cdca":[2,0,0,27,31],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#acffb0b0aba0f9e9f9670b261c84d091a":[1,0,0,27,18],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#acffb0b0aba0f9e9f9670b261c84d091a":[2,0,0,27,18],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ad6c71bfee60712448929ff4713102f9f":[1,0,0,27,29],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#ad6c71bfee60712448929ff4713102f9f":[2,0,0,27,29]
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aa93c80b459daa1a663a6ba0578c602f0":[2,0,0,27,23]
 };

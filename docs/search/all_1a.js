@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wait_5ffor_0',['wait_for',['../classalgotradelib_1_1runner_1_1SteadyClock.html#a749d402bcfe646da52c4e08470a676a7',1,'algotradelib::runner::SteadyClock::wait_for()'],['../classalgotradelib_1_1runner_1_1ManualClock.html#aafa83fdaf2194c32d6c2a0bd8a2bc59a',1,'algotradelib::runner::ManualClock::wait_for(std::chrono::nanoseconds duration) noexcept']]],
+  ['wait_5ffor_0',['wait_for',['../classalgotradelib_1_1runner_1_1SteadyClock.html#a749d402bcfe646da52c4e08470a676a7',1,'algotradelib::runner::SteadyClock::wait_for()'],['../classalgotradelib_1_1runner_1_1ClockReference.html#a63df486eb0a104849692706c6f6f63d9',1,'algotradelib::runner::ClockReference::wait_for()'],['../classalgotradelib_1_1runner_1_1ManualClock.html#aafa83fdaf2194c32d6c2a0bd8a2bc59a',1,'algotradelib::runner::ManualClock::wait_for(std::chrono::nanoseconds duration) noexcept']]],
   ['waited_1',['waited',['../classalgotradelib_1_1runner_1_1ManualClock.html#a57308059b551022ddf63623c524799ca',1,'algotradelib::runner::ManualClock']]],
   ['waited_5f_2',['waited_',['../structalgotradelib_1_1network_1_1RateLimitGroupStats.html#a1d7bd5a8e4fb3ba2141d6f22c680aa66',1,'algotradelib::network::RateLimitGroupStats']]],
   ['waits_3',['waits',['../classalgotradelib_1_1runner_1_1ManualClock.html#a9654e3dbafffbebec15ce767f39eb62e',1,'algotradelib::runner::ManualClock']]],

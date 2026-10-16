@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1strategy_1_1NoCaps.html" target="_top" xlink:title="A capability set in which the broker implements nothing optional.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1strategy_1_1InstrumentBasis.html" target="_top" xlink:title="An instrument&#39;s currency and the price to value it at, for the exposure ceiling.">
 <polygon fill="white" stroke="#666666" points="122,-30 0,-30 0,0 122,0 122,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::strategy</text>
-<text text-anchor="middle" x="61" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::NoCaps</text>
+<text text-anchor="middle" x="61" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::InstrumentBasis</text>
 </a>
 </g>
 </g>

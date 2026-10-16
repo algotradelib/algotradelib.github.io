@@ -232,7 +232,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
   <table class="params">
     <tr><td class="paramname">inner</td><td>The executor to wrap. </td></tr>
     <tr><td class="paramname">journal</td><td>The journal; borrowed, and must outlive this executor. </td></tr>
-    <tr><td class="paramname">clock</td><td>The clock. </td></tr>
+    <tr><td class="paramname">clock</td><td>The clock lines are stamped with; pass a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1ClockReference.html" title="A clock that reads another one, so that two holders (a loop and its journal) read one time.">ClockReference</a></span> to share a loop's clock. </td></tr>
   </table>
   </dd>
 </dl>
@@ -897,7 +897,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </div><div class="memdoc">
 
 <p>Sets the prefix of line ids. </p>
-<p>Ids are the prefix, a hyphen and a counter starting at one (<span class="tt">&lt;prefix&gt;-1</span>), and recovery pairs lines by id, so the prefix must differ between every executor run that shares a journal. The default is the construction time in microseconds, which is distinct only if no two executors on the journal are made at the same instant.</p>
+<p>Ids are the prefix, a hyphen and a counter starting at one (<span class="tt">&lt;prefix&gt;-1</span>), and recovery pairs lines by id, so the prefix must differ between every executor run that shares a journal. The default is the wall-clock construction time in microseconds (not the injected clock's), which is distinct only if no two executors on the journal are made at the same instant.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prefix</td><td>The prefix. </td></tr>

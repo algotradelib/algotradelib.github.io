@@ -77,7 +77,7 @@ var searchData=
   ['model_20assumes_74',['What the fill model assumes',['../reading-a-backtest.html#autotoc_md65',1,'']]],
   ['model_20at_20all_75',['What it does not model at all',['../reading-a-backtest.html#autotoc_md67',1,'']]],
   ['money_76',['Money',['../structalgotradelib_1_1Money.html',1,'algotradelib']]],
-  ['monotonic_5fnow_77',['monotonic_now',['../classalgotradelib_1_1runner_1_1SteadyClock.html#a6e0da7fc801ce14c9a45c3b09f6df131',1,'algotradelib::runner::SteadyClock::monotonic_now()'],['../classalgotradelib_1_1runner_1_1ManualClock.html#a55d6b3e1316432376adcd9dee32a23ed',1,'algotradelib::runner::ManualClock::monotonic_now()']]],
+  ['monotonic_5fnow_77',['monotonic_now',['../classalgotradelib_1_1runner_1_1SteadyClock.html#a6e0da7fc801ce14c9a45c3b09f6df131',1,'algotradelib::runner::SteadyClock::monotonic_now()'],['../classalgotradelib_1_1runner_1_1ClockReference.html#a84bff07351512fb756b88491fe6b2eeb',1,'algotradelib::runner::ClockReference::monotonic_now()'],['../classalgotradelib_1_1runner_1_1ManualClock.html#a55d6b3e1316432376adcd9dee32a23ed',1,'algotradelib::runner::ManualClock::monotonic_now()']]],
   ['month_5f_78',['month_',['../structalgotradelib_1_1Date.html#a6f7678b6c851df8d3d27ab20593804bd',1,'algotradelib::Date']]],
   ['most_79',['The rule that matters most',['../binding-a-broker.html#autotoc_md39',1,'']]],
   ['most_20common_20way_20a_20backtest_20lies_80',['Costs, which are the most common way a backtest lies',['../reading-a-backtest.html#autotoc_md71',1,'']]],

@@ -179,26 +179,29 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('kiwoom_2auth_8
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    boost::system::error_code ec;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> <span class="keyword">auto</span> jv = json::parse(resp, ec);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (ec || !jv.is_object()) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Kiwoom authentication failed: &quot;</span> + resp);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Kiwoom states a business failure in the body of an HTTP 200, so a successful status is not</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// a successful token. The classification lives in `kiwoom_declared_error` and is shared with</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// every other endpoint rather than restated here: `8020` (no appkey or secretkey), `8011` and</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// `8012` (a missing or wrong grant_type) all arrive this way.</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; doc = jv.as_object();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> declared = <a class="code hl_function" href="namespacealgotradelib_1_1kiwoom.html#a31eb55a25e793175c968e6fc670420b5">kiwoom_declared_error</a>(doc)) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordflow">throw</span> std::runtime_error(</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="stringliteral">&quot;Kiwoom authentication failed [&quot;</span> + declared-&gt;broker_code_ + <span class="stringliteral">&quot;]: &quot;</span> + declared-&gt;message_</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      );</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    rest_resp_.from_json(doc);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="comment">// Not the body: a token reply that did not parse may still hold the token.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="stringliteral">&quot;Kiwoom authentication failed: the reply is not a JSON object (&quot;</span> + std::to_string(resp.size()) + <span class="stringliteral">&quot; bytes)&quot;</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      );</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Kiwoom states a business failure in the body of an HTTP 200, so a successful status is not</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// a successful token. The classification lives in `kiwoom_declared_error` and is shared with</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// every other endpoint rather than restated here: `8020` (no appkey or secretkey), `8011` and</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// `8012` (a missing or wrong grant_type) all arrive this way.</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; doc = jv.as_object();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> declared = <a class="code hl_function" href="namespacealgotradelib_1_1kiwoom.html#a31eb55a25e793175c968e6fc670420b5">kiwoom_declared_error</a>(doc)) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="stringliteral">&quot;Kiwoom authentication failed [&quot;</span> + declared-&gt;broker_code_ + <span class="stringliteral">&quot;]: &quot;</span> + declared-&gt;message_</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      );</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    rest_resp_.from_json(doc);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace kiwoom</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} <span class="comment">// namespace kiwoom</span></div>
 </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>} <span class="comment">// namespace algotradelib</span></div>
 <div class="ttc" id="aclassalgotradelib_1_1kiwoom_1_1KiwoomAuth_html"><div class="ttname"><a href="classalgotradelib_1_1kiwoom_1_1KiwoomAuth.html">algotradelib::kiwoom::KiwoomAuth</a></div><div class="ttdoc">Obtains and caches a Kiwoom access token with blocking requests; thread-safe.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">auth.hpp:21</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1kiwoom_1_1KiwoomAuth_html_a836e2f29c28042ecbe6eda311987ba3a"><div class="ttname"><a href="classalgotradelib_1_1kiwoom_1_1KiwoomAuth.html#a836e2f29c28042ecbe6eda311987ba3a">algotradelib::kiwoom::KiwoomAuth::KiwoomAuth</a></div><div class="ttdeci">KiwoomAuth(net::io_context &amp;ioc, ssl::context &amp;ctx, const KiwoomConfig &amp;config)</div><div class="ttdoc">Constructs the wrapper.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">auth.hpp:29</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1kiwoom_1_1KiwoomAuth_html_ad2b1c1a65e60ddb9147d337bb3068f71"><div class="ttname"><a href="classalgotradelib_1_1kiwoom_1_1KiwoomAuth.html#ad2b1c1a65e60ddb9147d337bb3068f71">algotradelib::kiwoom::KiwoomAuth::accessToken</a></div><div class="ttdeci">std::string accessToken()</div><div class="ttdoc">Returns an access token, requesting a new one if none is held or it expires within five minutes.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">auth.hpp:42</a></div></div>

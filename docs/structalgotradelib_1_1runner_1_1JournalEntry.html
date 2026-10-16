@@ -174,7 +174,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>One journal line: an instruction and what was known about it when the line was written. </p>
-<p>Every line repeats the whole instruction, so an answering line is readable on its own (with <span class="tt">tail</span>) and survives the loss of its <span class="tt">PENDING</span> line. <span class="tt"><a class="el" href="#a07bb55de1fc9d1c710bbfc48dbfb2bd8" title="When the line was written (for PENDING, before the request went out).">recorded_at_</a></span> is this machine's clock, not the broker's. </p>
+<p>Every line repeats the whole instruction, so an answering line is readable on its own (with <span class="tt">tail</span>) and survives the loss of its <span class="tt">PENDING</span> line. <span class="tt"><a class="el" href="#a07bb55de1fc9d1c710bbfc48dbfb2bd8" title="When the line was written (for PENDING, before the request went out).">recorded_at_</a></span> is the executor's clock (this machine's, unless one was injected), not the broker's. </p>
 
 <p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00210">210</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>

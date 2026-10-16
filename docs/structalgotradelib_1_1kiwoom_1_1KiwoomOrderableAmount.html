@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structalgotrad
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a13bcb5dec16c9bc485709ca4c3e67031" id="r_a13bcb5dec16c9bc485709ca4c3e67031"><td class="memItemLeft">std::vector&lt; <a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomMarginTier.html">KiwoomMarginTier</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a13bcb5dec16c9bc485709ca4c3e67031">tiers_</a></td></tr>
-<tr class="memdesc:a13bcb5dec16c9bc485709ca4c3e67031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every 증거금률 tier Kiwoom answered with, in the order it publishes them.  <br /></td></tr>
+<tr class="memdesc:a13bcb5dec16c9bc485709ca4c3e67031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always seven 증거금률 tiers: 20, 30, 40, 50, 60 and 100 %, then the 60 % 증거금감면 tier (<span class="tt">reduced_</span>). A tier's figures are empty where Kiwoom sent none.  <br /></td></tr>
 <tr class="memitem:ae7a1775b19d2d7b6f64120cffbb7cec5" id="r_ae7a1775b19d2d7b6f64120cffbb7cec5"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae7a1775b19d2d7b6f64120cffbb7cec5">orderable_cash_</a></td></tr>
 <tr class="memdesc:ae7a1775b19d2d7b6f64120cffbb7cec5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">ord_alowa</span> 주문가능현금: the cash available to order with.  <br /></td></tr>
 <tr class="memitem:a892703bc8611fb566c7b012a41007086" id="r_a892703bc8611fb566c7b012a41007086"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a>&#160;</td><td class="memItemRight"><a class="el" href="#a892703bc8611fb566c7b012a41007086">withdrawable_</a></td></tr>
@@ -170,7 +170,7 @@ Public Attributes</h2></td></tr>
 
 <p>The currency every amount above is in, which is won. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00857">857</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00860">860</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ Public Attributes</h2></td></tr>
 
 <p><span class="tt">profa_rdex_aplc_tp</span>: whether the 증거금감면 tiers are the ones in force (<span class="tt">1</span>) or not (<span class="tt">0</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00855">855</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00858">858</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -206,7 +206,7 @@ Public Attributes</h2></td></tr>
 
 <p><span class="tt">ord_alowa</span> 주문가능현금: the cash available to order with. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00849">849</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00852">852</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +224,7 @@ Public Attributes</h2></td></tr>
 
 <p>When the figures arrived, on this machine's clock. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00859">859</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00862">862</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -242,7 +242,7 @@ Public Attributes</h2></td></tr>
 
 <p><span class="tt">d2entra</span> D+2 추정예수금. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00853">853</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00856">856</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -258,9 +258,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Every 증거금률 tier Kiwoom answered with, in the order it publishes them. </p>
+<p>Always seven 증거금률 tiers: 20, 30, 40, 50, 60 and 100 %, then the 60 % 증거금감면 tier (<span class="tt">reduced_</span>). A tier's figures are empty where Kiwoom sent none. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00847">847</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00850">850</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Public Attributes</h2></td></tr>
 
 <p><span class="tt">wthd_alowa</span> 인출가능금액. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00851">851</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00854">854</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>

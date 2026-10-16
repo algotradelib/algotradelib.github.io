@@ -14,7 +14,7 @@ var searchData=
   ['best_5fbid_11',['best_bid',['../structalgotradelib_1_1DepthSnapshot.html#afa7bc4e504118975a4a1b5bd055bf144',1,'algotradelib::DepthSnapshot']]],
   ['beta_12',['beta',['../namespacealgotradelib_1_1analytics.html#a1b4736f6008b85783cacf0fe959dc228',1,'algotradelib::analytics::beta(math::SeriesView asset, math::SeriesView market, std::size_t window, std::size_t min_observed)'],['../namespacealgotradelib_1_1analytics.html#a9e6905d6dc3691e1734ba856a9627446',1,'algotradelib::analytics::beta(math::SeriesView asset, math::SeriesView market, std::size_t window)']]],
   ['bind_13',['bind',['../namespacealgotradelib_1_1live.html#af531075724b5c38aa848c5d8bbec48ed',1,'algotradelib::live']]],
-  ['bind_5fjournaled_14',['bind_journaled',['../namespacealgotradelib_1_1live.html#a245c65cba8ab0c8ec4af16d5633014ff',1,'algotradelib::live']]],
+  ['bind_5fjournaled_14',['bind_journaled',['../namespacealgotradelib_1_1live.html#a3ce65f98a5517b9dfdb8502d798508d7',1,'algotradelib::live']]],
   ['bind_5fobserver_15',['bind_observer',['../namespacealgotradelib_1_1live.html#a4277e01edb971953e079b47f1e587440',1,'algotradelib::live']]],
   ['blocking_5freason_16',['blocking_reason',['../classalgotradelib_1_1strategy_1_1RiskGuard.html#af3b3fea73f17aeb84fbe6fe7e1bba259',1,'algotradelib::strategy::RiskGuard']]],
   ['blocking_5freason_5ffor_17',['blocking_reason_for',['../classalgotradelib_1_1strategy_1_1RiskGuard.html#acb4bb5299862da27a00980cd0737ac10',1,'algotradelib::strategy::RiskGuard']]],

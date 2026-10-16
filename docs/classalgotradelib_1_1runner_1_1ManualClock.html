@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A clock for tests: <span class="tt"><a class="el" href="#aafa83fdaf2194c32d6c2a0bd8a2bc59a" title="Advances the clock by a duration instead of waiting, and counts the wait.">wait_for</a></span> advances it instead of sleeping. </p>
 <p>A loop under test runs instantly while seeing whatever elapsed time the test chooses. <span class="tt"><a class="el" href="#a9654e3dbafffbebec15ce767f39eb62e" title="Returns how many times wait_for was called.">waits()</a></span> counts the waits, so a test can tell a loop that paced itself from one that spun. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00056">56</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00096">96</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3eb17398be7252935c7a00b39bef7394" name="a3eb17398be7252935c7a00b39bef7394"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3eb17398be7252935c7a00b39bef7394">&#9670;&#160;</a></span>ManualClock()</h2>
@@ -183,7 +183,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00062">62</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00102">102</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +219,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00093">93</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00133">133</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>
@@ -254,7 +254,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00104">104</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00144">144</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +284,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the monotonic reading: how far <span class="tt"><a class="el" href="#aafa83fdaf2194c32d6c2a0bd8a2bc59a" title="Advances the clock by a duration instead of waiting, and counts the wait.">wait_for</a></span> and <span class="tt"><a class="el" href="#a4dc95ea675a15432827e9e6c55f63052" title="Advances the clock without counting a wait: time that passed, as inside a slow call.">advance</a></span> have moved the clock. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reading; <span class="tt"><a class="el" href="#a9ae54b61134c660ee3dc66ec8df7a800" title="Moves the wall-clock reading alone, forward or back, as an operator or NTP setting the clock does.">jump</a></span> does not move it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00074">74</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00114">114</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>
@@ -314,7 +314,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the current time. </p>
 <dl class="section return"><dt>Returns</dt><dd>The time the clock has been advanced to. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00068">68</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00108">108</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +349,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00080">80</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00120">120</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>
@@ -379,7 +379,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the total positive duration passed to <span class="tt"><a class="el" href="#aafa83fdaf2194c32d6c2a0bd8a2bc59a" title="Advances the clock by a duration instead of waiting, and counts the wait.">wait_for</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The sum. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00118">118</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00158">158</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>
@@ -409,7 +409,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns how many times <span class="tt"><a class="el" href="#aafa83fdaf2194c32d6c2a0bd8a2bc59a" title="Advances the clock by a duration instead of waiting, and counts the wait.">wait_for</a></span> was called. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00112">112</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_2clock_8hpp_source.html#l00152">152</a> of file <a class="el" href="runner_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
 </div>
 </div>

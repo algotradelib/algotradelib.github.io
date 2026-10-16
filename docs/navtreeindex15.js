@@ -1,5 +1,17 @@
 var NAVTREEINDEX15 =
 {
+"structalgotradelib_1_1TickBand.html#a986ce8cf9d02dff70851682ab4cbd582":[1,0,0,60,1],
+"structalgotradelib_1_1TickBand.html#a986ce8cf9d02dff70851682ab4cbd582":[2,0,0,60,1],
+"structalgotradelib_1_1TopOfBook.html":[1,0,0,61],
+"structalgotradelib_1_1TopOfBook.html":[2,0,0,61],
+"structalgotradelib_1_1TopOfBook.html#a08814db9bbdd2d997ad0db873cc54233":[1,0,0,61,2],
+"structalgotradelib_1_1TopOfBook.html#a08814db9bbdd2d997ad0db873cc54233":[2,0,0,61,2],
+"structalgotradelib_1_1TopOfBook.html#a1fbcf5f50124f7cc9a90dcf6b0ee4efd":[1,0,0,61,0],
+"structalgotradelib_1_1TopOfBook.html#a1fbcf5f50124f7cc9a90dcf6b0ee4efd":[2,0,0,61,0],
+"structalgotradelib_1_1TopOfBook.html#a7cad3ceefb71057d7cbf7d2d00ab7ef6":[1,0,0,61,3],
+"structalgotradelib_1_1TopOfBook.html#a7cad3ceefb71057d7cbf7d2d00ab7ef6":[2,0,0,61,3],
+"structalgotradelib_1_1TopOfBook.html#af5195f57fe5bacd9652bcf04db11da8f":[1,0,0,61,1],
+"structalgotradelib_1_1TopOfBook.html#af5195f57fe5bacd9652bcf04db11da8f":[2,0,0,61,1],
 "structalgotradelib_1_1TradePrint.html":[1,0,0,62],
 "structalgotradelib_1_1TradePrint.html":[2,0,0,62],
 "structalgotradelib_1_1TradePrint.html#a2676614c04b335809812b8465f15cfe7":[1,0,0,62,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX15 =
 "structalgotradelib_1_1backtest_1_1ReplayResult.html#af42c0b72cc2819675d1aad1e93203396":[1,0,0,1,15,3],
 "structalgotradelib_1_1backtest_1_1ReplayResult.html#af42c0b72cc2819675d1aad1e93203396":[2,0,0,1,15,3],
 "structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb":[1,0,0,1,15,13],
-"structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb":[2,0,0,1,15,13],
-"structalgotradelib_1_1backtest_1_1Report.html":[1,0,0,1,16],
-"structalgotradelib_1_1backtest_1_1Report.html":[2,0,0,1,16],
-"structalgotradelib_1_1backtest_1_1Report.html#a0d486030112b4ac09ffb8c92fec1edbe":[1,0,0,1,16,8],
-"structalgotradelib_1_1backtest_1_1Report.html#a0d486030112b4ac09ffb8c92fec1edbe":[2,0,0,1,16,8],
-"structalgotradelib_1_1backtest_1_1Report.html#a1b54d38ccf71d6cbf8c58876f8cfe6fc":[1,0,0,1,16,22],
-"structalgotradelib_1_1backtest_1_1Report.html#a1b54d38ccf71d6cbf8c58876f8cfe6fc":[2,0,0,1,16,22],
-"structalgotradelib_1_1backtest_1_1Report.html#a256e75cc9d41c3c895f855fc7ae92071":[1,0,0,1,16,17],
-"structalgotradelib_1_1backtest_1_1Report.html#a256e75cc9d41c3c895f855fc7ae92071":[2,0,0,1,16,17],
-"structalgotradelib_1_1backtest_1_1Report.html#a2bf04c9e6dfbea969755ed28fa128ecd":[1,0,0,1,16,12],
-"structalgotradelib_1_1backtest_1_1Report.html#a2bf04c9e6dfbea969755ed28fa128ecd":[2,0,0,1,16,12],
-"structalgotradelib_1_1backtest_1_1Report.html#a3a69398f1d645faf248f74d094c633f0":[1,0,0,1,16,21],
-"structalgotradelib_1_1backtest_1_1Report.html#a3a69398f1d645faf248f74d094c633f0":[2,0,0,1,16,21]
+"structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb":[2,0,0,1,15,13]
 };

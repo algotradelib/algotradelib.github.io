@@ -1,5 +1,17 @@
 var NAVTREEINDEX17 =
 {
+"structalgotradelib_1_1kis_1_1KisRest.html":[1,0,0,4,12],
+"structalgotradelib_1_1kis_1_1KisRest.html":[2,0,0,4,12],
+"structalgotradelib_1_1kis_1_1KisRest.html#a112ae9b2e85596a128cea951557e30b1":[1,0,0,4,12,1],
+"structalgotradelib_1_1kis_1_1KisRest.html#a112ae9b2e85596a128cea951557e30b1":[2,0,0,4,12,1],
+"structalgotradelib_1_1kis_1_1KisRest.html#a1bc4e13cc482c529fe08bb827b170374":[1,0,0,4,12,4],
+"structalgotradelib_1_1kis_1_1KisRest.html#a1bc4e13cc482c529fe08bb827b170374":[2,0,0,4,12,4],
+"structalgotradelib_1_1kis_1_1KisRest.html#a21ccab1679bec0d4ec085b03344f780e":[1,0,0,4,12,2],
+"structalgotradelib_1_1kis_1_1KisRest.html#a21ccab1679bec0d4ec085b03344f780e":[2,0,0,4,12,2],
+"structalgotradelib_1_1kis_1_1KisRest.html#a963ac14bb5cf271c5c033dc1ccce7bba":[1,0,0,4,12,0],
+"structalgotradelib_1_1kis_1_1KisRest.html#a963ac14bb5cf271c5c033dc1ccce7bba":[2,0,0,4,12,0],
+"structalgotradelib_1_1kis_1_1KisRest.html#affeb268997a9176db8c3d8edaca099f5":[1,0,0,4,12,3],
+"structalgotradelib_1_1kis_1_1KisRest.html#affeb268997a9176db8c3d8edaca099f5":[2,0,0,4,12,3],
 "structalgotradelib_1_1kis_1_1KisWebsocket.html":[1,0,0,4,13],
 "structalgotradelib_1_1kis_1_1KisWebsocket.html":[2,0,0,4,13],
 "structalgotradelib_1_1kis_1_1KisWebsocket.html#a51a0cf413be9ed008376fc12d87348db":[1,0,0,4,13,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX17 =
 "structalgotradelib_1_1network_1_1RateLimitBudget.html":[1,0,0,8,7],
 "structalgotradelib_1_1network_1_1RateLimitBudget.html":[2,0,0,8,7],
 "structalgotradelib_1_1network_1_1RateLimitBudget.html#a471d3ca7b4f1499bd6d9d058cb7fd05f":[1,0,0,8,7,2],
-"structalgotradelib_1_1network_1_1RateLimitBudget.html#a471d3ca7b4f1499bd6d9d058cb7fd05f":[2,0,0,8,7,2],
-"structalgotradelib_1_1network_1_1RateLimitBudget.html#a9b119ccb608736fa795ea884a16d32b2":[1,0,0,8,7,1],
-"structalgotradelib_1_1network_1_1RateLimitBudget.html#a9b119ccb608736fa795ea884a16d32b2":[2,0,0,8,7,1],
-"structalgotradelib_1_1network_1_1RateLimitBudget.html#a9bb5796e85d6a662cffccde28c370248":[1,0,0,8,7,0],
-"structalgotradelib_1_1network_1_1RateLimitBudget.html#a9bb5796e85d6a662cffccde28c370248":[2,0,0,8,7,0],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html":[1,0,0,8,9],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html":[2,0,0,8,9],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html#a086c7277c892575d65014fb42d7b7da9":[1,0,0,8,9,1],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html#a086c7277c892575d65014fb42d7b7da9":[2,0,0,8,9,1],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html#a1d7bd5a8e4fb3ba2141d6f22c680aa66":[1,0,0,8,9,3],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html#a1d7bd5a8e4fb3ba2141d6f22c680aa66":[2,0,0,8,9,3],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html#ade8ce87c52ee7fafb8b37a6bb8cf6057":[1,0,0,8,9,0],
-"structalgotradelib_1_1network_1_1RateLimitGroupStats.html#ade8ce87c52ee7fafb8b37a6bb8cf6057":[2,0,0,8,9,0]
+"structalgotradelib_1_1network_1_1RateLimitBudget.html#a471d3ca7b4f1499bd6d9d058cb7fd05f":[2,0,0,8,7,2]
 };

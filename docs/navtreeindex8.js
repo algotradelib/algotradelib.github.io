@@ -1,5 +1,17 @@
 var NAVTREEINDEX8 =
 {
+"functions_rela.html":[2,3,5],
+"functions_s.html":[2,3,0,18],
+"functions_t.html":[2,3,0,19],
+"functions_type.html":[2,3,3],
+"functions_u.html":[2,3,0,20],
+"functions_v.html":[2,3,0,21],
+"functions_vars.html":[2,3,2],
+"functions_vars.html":[2,3,2,0],
+"functions_vars_b.html":[2,3,2,1],
+"functions_vars_c.html":[2,3,2,2],
+"functions_vars_d.html":[2,3,2,3],
+"functions_vars_e.html":[2,3,2,4],
 "functions_vars_f.html":[2,3,2,5],
 "functions_vars_g.html":[2,3,2,6],
 "functions_vars_h.html":[2,3,2,7],
@@ -237,17 +249,5 @@ var NAVTREEINDEX8 =
 "namespacealgotradelib_1_1analytics.html#abd8c85839d39f5875ba6f2e7408846b8":[1,0,0,0,57],
 "namespacealgotradelib_1_1analytics.html#abe8d7cb06e21d24506173da7d6d16553":[1,0,0,0,27],
 "namespacealgotradelib_1_1analytics.html#ac722704ca00110ea27bd39822382ded7":[1,0,0,0,29],
-"namespacealgotradelib_1_1analytics.html#ac779beb008cac496403576f7f5caaaf1":[1,0,0,0,30],
-"namespacealgotradelib_1_1analytics.html#ac804410ab9765a80b47b53dc741a0828":[1,0,0,0,48],
-"namespacealgotradelib_1_1analytics.html#ad72a3dd09a9ecade69cd5f59c0737b05":[1,0,0,0,15],
-"namespacealgotradelib_1_1analytics.html#ad7a8b6a2ceb875c7e5570c2a09e31438":[1,0,0,0,47],
-"namespacealgotradelib_1_1analytics.html#ade0cbc3120e48d70d294d706bad3f7ee":[1,0,0,0,55],
-"namespacealgotradelib_1_1analytics.html#ae3efdc25f1b58a29c8466dd77dc3ddd9":[1,0,0,0,26],
-"namespacealgotradelib_1_1analytics.html#ae513271d6929b08cab9a1b66ee56041c":[1,0,0,0,33],
-"namespacealgotradelib_1_1analytics.html#af24e9e7b0236d8585417e404de6f7c98":[1,0,0,0,50],
-"namespacealgotradelib_1_1analytics.html#af356368f324a195e12252ce635f372c5":[1,0,0,0,54],
-"namespacealgotradelib_1_1analytics.html#af431142dc2423fa892daf1e76dd7ba49":[1,0,0,0,34],
-"namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020":[1,0,0,0,8],
-"namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020a7938d3eb8c9ef87a0dd8661d42543688":[1,0,0,0,8,2],
-"namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020aa0494c90519e4a08049470357751e736":[1,0,0,0,8,1]
+"namespacealgotradelib_1_1analytics.html#ac779beb008cac496403576f7f5caaaf1":[1,0,0,0,30]
 };

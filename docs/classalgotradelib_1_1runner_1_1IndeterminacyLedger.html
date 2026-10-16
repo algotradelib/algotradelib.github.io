@@ -144,10 +144,10 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The instruments with an order of unknown outcome, where nothing may be placed until the broker's order list is read and the instrument resolved. </p>
-<p>Named cancellations are not blocked. Only <span class="tt"><a class="el" href="#ab0c6914bd84ea89d2a05f809f2fa1a00" title="Clears an instrument; call it only after reading the broker&#39;s order list for it.">resolve_after_reading_orders</a></span> clears an entry; reading the list alone does not. The ledger is in memory: it does not survive the process, and an order in flight when a process is killed is never recorded. After an abnormal exit, read the broker's order list before trading; <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> does this before its first send, and a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1FileJournal.html" title="The order journal on disk: one JSON object per line, appended and flushed to disk (fsync) before appe...">FileJournal</a></span> (<span class="tt"><a class="el" href="namespacealgotradelib_1_1live.html#a245c65cba8ab0c8ec4af16d5633014ff" title="Binds a strategy to a broker session, recording every instruction in a journal before it is sent.">live::bind_journaled</a></span>) carries unresolved instructions across a restart for <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">recover_runner</a></span>.</p>
+<p>Named cancellations are not blocked. Only <span class="tt"><a class="el" href="#ab0c6914bd84ea89d2a05f809f2fa1a00" title="Clears an instrument; call it only after reading the broker&#39;s order list for it.">resolve_after_reading_orders</a></span> clears an entry; reading the list alone does not. The ledger is in memory: it does not survive the process, and an order in flight when a process is killed is never recorded. After an abnormal exit, read the broker's order list before trading; <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> does this before its first send, and a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1FileJournal.html" title="The order journal on disk: one JSON object per line, appended and flushed to disk (fsync) before appe...">FileJournal</a></span> (<span class="tt"><a class="el" href="namespacealgotradelib_1_1live.html#a3ce65f98a5517b9dfdb8502d798508d7" title="Binds a strategy to a broker session, recording every instruction in a journal before it is sent.">live::bind_journaled</a></span>) carries unresolved instructions across a restart for <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">recover_runner</a></span>.</p>
 <dl class="section note"><dt>Note</dt><dd>Killing a runner does not cancel orders the broker already accepted. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00393">393</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00394">394</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a11d8860dba3578ae533fac821ac22aaf" name="a11d8860dba3578ae533fac821ac22aaf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11d8860dba3578ae533fac821ac22aaf">&#9670;&#160;</a></span>detail()</h2>
@@ -181,9 +181,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The detail, or an empty view if it is resolved. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00429">429</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00430">430</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00400">mark()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00401">mark()</a>.</p>
 
 </div>
 </div>
@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
 <p>Tests whether nothing is unresolved. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the ledger is empty. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00468">468</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00469">469</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +253,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00400">400</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00401">401</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01245">algotradelib::runner::recover_into()</a>.</p>
 
@@ -285,7 +285,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns every instrument waiting for reconciliation. </p>
 <dl class="section return"><dt>Returns</dt><dd>The instruments. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00455">455</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00456">456</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +321,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if nothing may be placed for it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00415">415</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00416">416</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01245">algotradelib::runner::recover_into()</a>.</p>
 
@@ -358,7 +358,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00442">442</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00443">443</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 </div>
 </div>

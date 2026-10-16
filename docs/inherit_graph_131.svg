@@ -11,11 +11,11 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="classalgotradelib_1_1runner_1_1Context_1_1Log.html" target="_top" xlink:title="A log that keeps lines in memory for the runner to emit or a test to read.">
+<g id="a_Node000000"><a xlink:href="classalgotradelib_1_1runner_1_1Context.html" target="_top" xlink:title="What a strategy&#39;s handlers receive as ctx: everything the strategy may read, and where it queues what...">
 <polygon fill="white" stroke="#666666" points="123,-41 0,-41 0,0 123,0 123,-41"/>
 <text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::runner</text>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">::Context&lt; BrokerTag,</text>
-<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> CapsType &gt;::Log</text>
+<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> CapsType &gt;</text>
 </a>
 </g>
 </g>

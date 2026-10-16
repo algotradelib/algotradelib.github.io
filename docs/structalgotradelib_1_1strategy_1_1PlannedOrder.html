@@ -170,7 +170,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>One order the runner is to place. </p>
 <p>The <span class="tt"><a class="el" href="#aaccf5bb59750c712fcd621bd3bd744b4" title="Whether the price was rounded onto the tick grid.">price_rounded_</a></span>, <span class="tt"><a class="el" href="#a4c334d270a0005148a84533f8c73ff9f" title="Whether the price was clamped to the day&#39;s band (an aggressive limit beyond it).">price_clamped_</a></span> and <span class="tt"><a class="el" href="#a9ee6acf70f9b4a22693dcbc94f9dd7e4" title="Whether the quantity was rounded down onto the lot.">quantity_rounded_</a></span> flags say what reconciliation changed from what the strategy asked for. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00145">145</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00149">149</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a5145556493a5c06774e6b05759025ed2" name="a5145556493a5c06774e6b05759025ed2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5145556493a5c06774e6b05759025ed2">&#9670;&#160;</a></span>client_order_id_</h2>
@@ -186,9 +186,9 @@ Public Attributes</h2></td></tr>
 
 <p>The idempotency key, if the intent carried one. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00171">171</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00175">175</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -206,9 +206,9 @@ Public Attributes</h2></td></tr>
 
 <p>The instrument to trade. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00147">147</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00151">151</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -226,9 +226,9 @@ Public Attributes</h2></td></tr>
 
 <p>The limit price, after clamping and rounding; empty for a market order. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00165">165</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00169">169</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -246,9 +246,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the price was clamped to the day's band (an aggressive limit beyond it). </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00176">176</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00180">180</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -266,9 +266,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the price was rounded onto the tick grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00174">174</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00178">178</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -287,7 +287,7 @@ Public Attributes</h2></td></tr>
 <p>Whether a price band was known but not applied (too old), and would have clamped this price. </p>
 <p>Set by <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">runner::Runner</a></span>, not by reconciliation; see <span class="tt">Runner::set_maximum_price_limits_age</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00183">183</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00187">187</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,9 +305,9 @@ Public Attributes</h2></td></tr>
 
 <p>The quantity, after rounding onto the lot. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00163">163</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00167">167</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +325,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the quantity was rounded down onto the lot. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00185">185</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00189">189</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -345,7 +345,7 @@ Public Attributes</h2></td></tr>
 
 <p>The trading session. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00155">155</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00159">159</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, and <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>.</p>
 
@@ -365,9 +365,9 @@ Public Attributes</h2></td></tr>
 
 <p>The side. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00149">149</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00153">153</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -385,9 +385,9 @@ Public Attributes</h2></td></tr>
 
 <p>The tag of the intent or target the order came from. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00169">169</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00173">173</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -405,9 +405,9 @@ Public Attributes</h2></td></tr>
 
 <p>How long the order stays valid. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00153">153</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00157">157</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -425,9 +425,9 @@ Public Attributes</h2></td></tr>
 
 <p>The trigger price of a <span class="tt">STOP_LIMIT</span> order, exactly as stated; empty otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00167">167</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00171">171</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -445,9 +445,9 @@ Public Attributes</h2></td></tr>
 
 <p>The order type. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00151">151</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00155">155</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile_8hpp_source.html#l00680">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00462">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -466,7 +466,7 @@ Public Attributes</h2></td></tr>
 <p>Where to route the order; see <span class="tt"><a class="el" href="structalgotradelib_1_1OrderRequest.html#a82d92f84acf9428b83053f1ccc709526" title="Where to route the order, if the broker offers a choice.">OrderRequest::venue_</a></span>. </p>
 <p>Strategies do not set it; a live runner fills in its binding's route before sending. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00161">161</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00165">165</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>, and <a class="el" href="journal_8hpp_source.html#l00586">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::route_of()</a>.</p>
 
