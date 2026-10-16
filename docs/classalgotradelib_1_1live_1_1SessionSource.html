@@ -161,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad14cd46cb2ff2addb1367b4e23474683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many bars were left for a later poll because their period had not ended.  <br /></td></tr>
 <tr class="memitem:a4b61730375446d0ef773f9ac14e6896b" id="r_a4b61730375446d0ef773f9ac14e6896b"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a4b61730375446d0ef773f9ac14e6896b">bars_fed_as_warmup</a> () const noexcept</td></tr>
 <tr class="memdesc:a4b61730375446d0ef773f9ac14e6896b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many bars were fed as history (<span class="tt">Runner::feed_warmup</span>), so their decisions were discarded.  <br /></td></tr>
+<tr class="memitem:a04ada8941c9bf9ec30d3b3076f14046c" id="r_a04ada8941c9bf9ec30d3b3076f14046c"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a04ada8941c9bf9ec30d3b3076f14046c">bars_not_delivered</a> () const noexcept</td></tr>
+<tr class="memdesc:a04ada8941c9bf9ec30d3b3076f14046c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many bars a strategy declaring <span class="tt">on_bars</span> was not shown.  <br /></td></tr>
 <tr class="memitem:adbfd14bae84d4a2d45935a6998da178a" id="r_adbfd14bae84d4a2d45935a6998da178a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adbfd14bae84d4a2d45935a6998da178a">set_bar_query</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, int count)</td></tr>
 <tr class="memdesc:adbfd14bae84d4a2d45935a6998da178a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bars each poll requests.  <br /></td></tr>
 <tr class="memitem:a9c12a5c35ef4792ee6d6969299ee9aeb" id="r_a9c12a5c35ef4792ee6d6969299ee9aeb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9c12a5c35ef4792ee6d6969299ee9aeb">set_calendar_country</a> (<a class="el" href="namespacealgotradelib.html#a9ac772587aa2f4d74513bfcb82bd6fe9">Country</a> country)</td></tr>
@@ -187,6 +189,7 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Session, typename Journal = runner::MemoryJournal, typename MarketData = Session&gt;<br />
 class algotradelib::live::SessionSource&lt; Session, Journal, MarketData &gt;</div><p>The source a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">runner::PollingLoop</a></span> polls: reads a broker session and feeds bars, quotes, holdings, orders, buying power, price bands and the calendar to a runner. </p>
 <p>Bars: each poll reads every instrument, then feeds the bars not fed before in period-end order across instruments. A bar whose period has not ended by the later of <span class="tt">Runner::observed_at()</span> and the series' receipt time is left for a later poll (a daily bar read during the session waits); this check applies to close-stamped bars and to daily and minute bars, and only once either instant is known (open-stamped weekly, monthly and yearly bars are fed unchecked). Of the bars collected, only each instrument's newest (which may be yesterday's, if today's is still forming) is fed live, and only if it ended strictly after every older bar collected in the same poll, of any instrument (a tie is history; instruments' newest bars are not compared with each other). The rest go through <span class="tt">Runner::feed_warmup</span>, so a restart does not act on the history it reads. This does not make the newest bar recent.</p>
+<p>For a strategy declaring <span class="tt">on_bars</span>, the same bars are recorded in the same order and each period's bars are delivered together (<span class="tt">Runner::feed</span> or <span class="tt">feed_warmup</span> of a <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1BarSlice.html" title="Every instrument&#39;s bar of one interval for one period end, delivered to on_bars.">strategy::BarSlice</a></span>, one per interval) before a later period's. A bar arriving after its period was delivered is cached but not delivered; see <span class="tt"><a class="el" href="#a04ada8941c9bf9ec30d3b3076f14046c" title="Returns how many bars a strategy declaring on_bars was not shown.">bars_not_delivered</a></span>. An exception during such a poll (a bar the cache refuses, a handler that throws) stops the source: its period may be partly recorded and partly delivered, so every later bar poll throws <span class="tt">std::logic_error</span>. Restart the program with a fresh runner and source: older periods warm up the strategy, and the newest eligible period may trade.</p>
 <p>Requests are tagged by kind, so a client budget with a trading reserve (<span class="tt"><a class="el" href="structalgotradelib_1_1network_1_1RateLimitBudget.html#a471d3ca7b4f1499bd6d9d058cb7fd05f" title="The part of burst_ only AUTH and TRADING requests may use, so polling cannot use up the capacity an o...">network::RateLimitBudget::trading_reserve_</a></span>) keeps capacity for orders. A kind the broker does not offer compiles to no request and returns <span class="tt">UNCHANGED</span>. A failed poll leaves the previous calendar, buying power and price bands in place.</p>
 <p>With a journal (<span class="tt"><a class="el" href="#abd079695b627bc66b05b8d788d81a449" title="Sets the journal each order listing is checked against.">set_journal</a></span>), every order listing is also checked against the instructions the journal holds as unresolved, resolving them in the runner's ledger where the broker's rows settle them.</p>
 <p>Market data can come from a second session (<span class="tt">MarketData</span>): bars, quotes, price bands and the calendar are read from it, everything about the account from <span class="tt">Session</span>. For example, a KIS demo account cannot read the calendar, so it is read through a session built from a real account's keys and an empty <span class="tt">KisAccount</span> (which refuses every account request and order before any I/O).</p>
@@ -199,7 +202,7 @@ class algotradelib::live::SessionSource&lt; Session, Journal, MarketData &gt;</d
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00137">137</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00160">160</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a6e706515bc6633d55fe9a5de5bbd780b" name="a6e706515bc6633d55fe9a5de5bbd780b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e706515bc6633d55fe9a5de5bbd780b">&#9670;&#160;</a></span>BrokerTag</h2>
@@ -217,7 +220,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 
 <p>The broker tag, from the account session. </p>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00160">160</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00183">183</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -237,7 +240,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 
 <p>The broker's capabilities, from the account session. </p>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00158">158</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00181">181</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -280,7 +283,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00184">184</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00207">207</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +331,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00194">194</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00217">217</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -361,7 +364,40 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p>Returns how many bars were fed as history (<span class="tt">Runner::feed_warmup</span>), so their decisions were discarded. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the source's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00253">253</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00276">276</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a04ada8941c9bf9ec30d3b3076f14046c" name="a04ada8941c9bf9ec30d3b3076f14046c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ada8941c9bf9ec30d3b3076f14046c">&#9670;&#160;</a></span>bars_not_delivered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Session, typename Journal = runner::MemoryJournal, typename MarketData = Session&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classalgotradelib_1_1live_1_1SessionSource.html">algotradelib::live::SessionSource</a>&lt; Session, Journal, MarketData &gt;::bars_not_delivered </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns how many bars a strategy declaring <span class="tt">on_bars</span> was not shown. </p>
+<p>A bar whose period was already delivered (a name that missed its period's poll and reported in a later one) is cached for its own series, without moving the last price or the clock, and not delivered: a second slice for that period, or an older one after a newer, would decide twice or backwards. A second bar of one instrument and interval for one period is skipped. Zero for a strategy with <span class="tt">on_bar</span>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The count over the source's life (each bar counted once). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00289">289</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -394,7 +430,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p>Nonzero is normal for daily bars polled during the session.</p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the source's life (each bar counted once). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00246">246</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00269">269</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +462,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p>Returns the buying-power currencies; with <span class="tt">RiskLimits::enforce_buying_power_</span> on, the loop holds placements until each has a usable reading. </p>
 <dl class="section return"><dt>Returns</dt><dd>The currencies. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00237">237</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00260">260</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -458,7 +494,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p>Returns the market the calendar poll asks about. </p>
 <dl class="section return"><dt>Returns</dt><dd>The market. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00279">279</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00315">315</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -491,7 +527,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p>A subtotal: a listing cannot show an order that filled between two polls (see <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1ChargedCosts.html" title="Commission and tax the broker stated on the orders a loop happened to poll (Toss states them; KIS doe...">runner::ChargedCosts</a></span>). It accumulates over the source's life; <span class="tt">PollingLoop::run</span> reports each run's difference.</p>
 <dl class="section return"><dt>Returns</dt><dd>The costs. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00407">407</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00443">443</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -524,7 +560,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p>A diagnostic, not the outcome of the last poll: a poll that does nothing (a kind the broker does not offer, or nothing configured) leaves it as it was, and a working-order poll can return <span class="tt">UPDATED</span> while recording a failed journal-reconciliation history read here.</p>
 <dl class="section return"><dt>Returns</dt><dd>The error, or empty if cleared by a later successful read. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00290">290</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00326">326</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +592,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p>Returns what the last check against the journal resolved and left unresolved. </p>
 <dl class="section return"><dt>Returns</dt><dd>The report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00219">219</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00242">242</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -608,7 +644,7 @@ template&lt;typename Runner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">UPDATED</span> if a read succeeded and fed or installed something (holdings and working orders: every successful read), <span class="tt">UNCHANGED</span> if nothing arrived (or the broker does not offer the kind), <span class="tt">FAILED</span> or <span class="tt">RATE_LIMITED</span> on an error (see <span class="tt"><a class="el" href="#ac53e4e05d97faea590d431200f0fe64e" title="Returns the error recorded by the most recent failing read.">last_error()</a></span>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00311">311</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00347">347</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -655,7 +691,7 @@ template&lt;typename Runner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">UPDATED</span> on success, otherwise <span class="tt">FAILED</span> or <span class="tt">RATE_LIMITED</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00344">344</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00380">380</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -697,7 +733,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00260">260</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00296">296</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -735,7 +771,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00228">228</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00251">251</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -773,7 +809,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00273">273</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00309">309</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -811,7 +847,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00206">206</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00229">229</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -848,7 +884,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00213">213</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00236">236</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -878,7 +914,7 @@ template&lt;typename Session, typename Journal = runner::MemoryJournal, typename
 <p><span class="tt">true</span> if an order-list read installs the broker's working orders in the portfolio. </p>
 <p><span class="tt">false</span> at a broker without a working-order inquiry: the list is read from history, which lifts the loop's startup gate but lists nothing to cancel, so a closing pass cannot know what rests. </p>
 
-<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00177">177</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__source_8hpp_source.html#l00200">200</a> of file <a class="el" href="session__source_8hpp_source.html">session_source.hpp</a>.</p>
 
 </div>
 </div>

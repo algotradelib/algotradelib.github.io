@@ -197,6 +197,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a327288f7c928699b2d70577aa5ab6699" id="r_a327288f7c928699b2d70577aa5ab6699"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
 <tr class="memitem:a327288f7c928699b2d70577aa5ab6699 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">algotradelib::strategy::dispatch::bar</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">BarEvent</a> &amp;event)</td></tr>
 <tr class="memdesc:a327288f7c928699b2d70577aa5ab6699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_bar(context, event)</span> if the strategy declares <span class="tt">on_bar</span>; otherwise does nothing.  <br /></td></tr>
+<tr class="memitem:ac523d71c8ba48b9336360423c986502e" id="r_ac523d71c8ba48b9336360423c986502e"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
+<tr class="memitem:ac523d71c8ba48b9336360423c986502e template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">algotradelib::strategy::dispatch::bars</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="structalgotradelib_1_1strategy_1_1BarSlice.html">BarSlice</a> &amp;slice)</td></tr>
+<tr class="memdesc:ac523d71c8ba48b9336360423c986502e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_bars(context, slice)</span> if the strategy declares <span class="tt">on_bars</span>; otherwise does nothing.  <br /></td></tr>
 <tr class="memitem:a0e3967a002298d5207ee304df5bd0e63" id="r_a0e3967a002298d5207ee304df5bd0e63"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
 <tr class="memitem:a0e3967a002298d5207ee304df5bd0e63 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a0e3967a002298d5207ee304df5bd0e63">algotradelib::strategy::dispatch::quote</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="structalgotradelib_1_1strategy_1_1QuoteEvent.html">QuoteEvent</a> &amp;event)</td></tr>
 <tr class="memdesc:a0e3967a002298d5207ee304df5bd0e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_quote(context, event)</span> if the strategy declares <span class="tt">on_quote</span>; otherwise does nothing.  <br /></td></tr>
@@ -218,14 +221,15 @@ Functions</h2></td></tr>
 <div class="line">  Params params_;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_start(Ctx&amp; ctx);</div>
-<div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_bar(Ctx&amp; ctx, <span class="keyword">const</span> BarEvent&amp; bar);</div>
+<div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_bar(Ctx&amp; ctx, <span class="keyword">const</span> BarEvent&amp; bar);     <span class="comment">// or on_bars, not both</span></div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_quote(Ctx&amp; ctx, <span class="keyword">const</span> QuoteEvent&amp; quote);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_fill(Ctx&amp; ctx, <span class="keyword">const</span> Fill&amp; fill);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_order_update(Ctx&amp; ctx, <span class="keyword">const</span> OrderSnapshot&amp; order);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_phase(Ctx&amp; ctx, <span class="keyword">const</span> MarketPhase&amp; phase);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_stop(Ctx&amp; ctx);</div>
 <div class="line">};</div>
-</div><!-- fragment --><p>Because the handlers are templates, the same strategy runs under every runner: a dry run, a live session with any broker, and a backtest. Take the context by reference; a context cannot be copied, so a handler that takes it by value does not compile.</p>
+</div><!-- fragment --><p><span class="tt">on_bar</span> receives one bar at a time. A strategy that decides on several instruments together (a pair's hedge ratio, a ranking across a universe) declares instead <span class="tt">template &lt;class Ctx&gt; void on_bars(Ctx&amp; ctx, const BarSlice&amp; slice);</span>, called once per period end and interval with every instrument's bar for it, after all of them are cached. A strategy declares one of the two; declaring both does not compile, so neither runs in silence beside the other.</p>
+<p>Because the handlers are templates, the same strategy runs under every runner: a dry run, a live session with any broker, and a backtest. Take the context by reference; a context cannot be copied, so a handler that takes it by value does not compile.</p>
 <dl class="section warning"><dt>Warning</dt><dd><span class="tt">on_fill</span> is called in a backtest but never by the shipped live loop; see <span class="tt">Fill</span>. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
@@ -252,13 +256,13 @@ Functions</h2></td></tr>
 <div class="line">  <a class="code hl_variable" href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">::algotradelib::strategy::StrategyConformance&lt;S, Ctx&gt;::value</a>,                         \</div>
 <div class="line">  <span class="stringliteral">&quot;Strategy does not satisfy the algotradelib strategy surface; see the messages above&quot;</span> \</div>
 <div class="line">)</div>
-<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00628">concept.hpp:628</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00691">concept.hpp:691</a></div></div>
 </div><!-- fragment -->
 <p>Asserts at compile time that <span class="tt">S</span> is a strategy a runner with context <span class="tt">Ctx</span> can drive. </p>
 <p>Checks that:</p><ul>
 <li><span class="tt">S</span> is a class and not <span class="tt">final</span>;</li>
 <li><span class="tt">Ctx</span> cannot be copied, so a handler taking it by value does not compile;</li>
-<li><span class="tt">S</span> declares at least one handler;</li>
+<li><span class="tt">S</span> declares at least one handler, and not both <span class="tt">on_bar</span> and <span class="tt">on_bars</span>;</li>
 <li>every handler <span class="tt">S</span> declares can be called the way a runner calls it with <span class="tt">Ctx</span>. Each handler's body is compiled for <span class="tt">Ctx</span>, including handlers for events the program never feeds.</li>
 </ul>
 <p>With <span class="tt">MinimalContext</span> or <span class="tt">FullContext</span> it checks handlers against a probe without series accessors; a strategy that reads <span class="tt">bars()</span> is checked by its runner instead. Usable at namespace, class and block scope.</p>
@@ -271,7 +275,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Not detected: a handler that takes by value a copyable base class of the context. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00649">649</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00712">712</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +311,7 @@ Functions</h2></td></tr>
 <p>Handlers are optional, so something has to decide whether to call one, and this is it: a declared name is called, and a call that does not compile is the compiler's error at the call (see <span class="tt">dispatch</span>). The name is what the author wrote; asking instead whether a particular call compiles would read a handler with a wrong parameter as absent and skip it in silence. Looking NAME up in a class that derives from <span class="tt">S</span> and from one declaring <span class="tt">int NAME</span> is ambiguous exactly when <span class="tt">S</span> declares it, which works for a member template, where <span class="tt">&amp;S::NAME</span> cannot name one.</p>
 <p><b>A <span class="tt">final</span> class cannot be derived from</b>, and a non-class type has no members, so neither can be looked into; <span class="tt">dispatch</span> and <span class="tt">StrategyConformance</span> refuse both rather than read them as declaring nothing. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00062">62</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00068">68</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>

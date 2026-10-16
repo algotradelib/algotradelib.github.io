@@ -24,10 +24,12 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "executor", "classalgotradelib_1_1runner_1_1Runner.html#ab842e080e8595aab8a0571ba6b5fcd21", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a6edfae50f57bd0dda89b3a10b68d659d", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a162a5a1d9be49ce80a71ffac434700d9", null ],
+    [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#abc0af9ff0a1cef64a704ba1e61d77807", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a87270879d6602ab315c5b76768f2d85d", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a4cba5f39b55c063155c50a2dc3da74a6", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#aab86a48e1cfb1cd72e328942967c716d", null ],
     [ "feed_warmup", "classalgotradelib_1_1runner_1_1Runner.html#a6a4a112cb3ec60b20a7a6664af452573", null ],
+    [ "feed_warmup", "classalgotradelib_1_1runner_1_1Runner.html#a7868c77dbf64065a91e3efcbaf7b0cfb", null ],
     [ "guard", "classalgotradelib_1_1runner_1_1Runner.html#aa75264569eaa48592145cf76aa1882f0", null ],
     [ "guard", "classalgotradelib_1_1runner_1_1Runner.html#a7b9d359e09eaffbed27f22f5655cd6ac", null ],
     [ "halt_locally", "classalgotradelib_1_1runner_1_1Runner.html#a99d28dfaf904c2d07f72276ce2a7ed74", null ],
@@ -60,6 +62,8 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "price_bands_withheld", "classalgotradelib_1_1runner_1_1Runner.html#ad034efe3aa6e9a1542ede8c2e4e9c1ca", null ],
     [ "price_limits_age_policy_stated", "classalgotradelib_1_1runner_1_1Runner.html#aeaf592b8128e037b4df2e6d75af83549", null ],
     [ "probe_sellable_convention", "classalgotradelib_1_1runner_1_1Runner.html#a3f4a3e5fe940a8379b4686b504824d51", null ],
+    [ "record", "classalgotradelib_1_1runner_1_1Runner.html#ab39cc16573ad8d0feaaf986bedaf918e", null ],
+    [ "record_history_only", "classalgotradelib_1_1runner_1_1Runner.html#ad1874850ca42461a76126f8ae30858aa", null ],
     [ "refresh_unconfirmed", "classalgotradelib_1_1runner_1_1Runner.html#ad89ab13c3a314a425d5060bf93eb03d0", null ],
     [ "release_obligations", "classalgotradelib_1_1runner_1_1Runner.html#a949d60f8a08ac176f900a46b08eda827", null ],
     [ "require_known_portfolio", "classalgotradelib_1_1runner_1_1Runner.html#a31cb96c4ee087ad9de007feb56fe5632", null ],
@@ -97,5 +101,6 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "withdrawal_accepted_for", "classalgotradelib_1_1runner_1_1Runner.html#aba317615a0a2fad38ccd4e5e0a3c8dda", null ],
     [ "journals_to_a_broker", "classalgotradelib_1_1runner_1_1Runner.html#a1696453a3bd5830cfb37c83ea08fd0c9", null ],
     [ "keeps_sent_orders_until_listed", "classalgotradelib_1_1runner_1_1Runner.html#ae668d14d931ae5161cd54fe2b8238b18", null ],
-    [ "on_fill_never_fires", "classalgotradelib_1_1runner_1_1Runner.html#a1cd4fdfee878b67f6bb50a449f45e678", null ]
+    [ "on_fill_never_fires", "classalgotradelib_1_1runner_1_1Runner.html#a1cd4fdfee878b67f6bb50a449f45e678", null ],
+    [ "takes_bar_slices", "classalgotradelib_1_1runner_1_1Runner.html#a76eee3bb2ff0f70afe7df9ac1f96fc92", null ]
 ];

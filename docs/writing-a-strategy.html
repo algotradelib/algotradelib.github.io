@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('writing-a-stra
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html">algotradelib::strategy</a></div><div class="ttdoc">What a strategy sees and emits: events, intents, the portfolio, reconciliation and risk limits.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00016">concept.hpp:16</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html"><div class="ttname"><a href="namespacealgotradelib.html">algotradelib</a></div><div class="ttdoc">The library: broker-neutral types (core), and the modules below.</div><div class="ttdef"><b>Definition</b> <a href="conversion_8hpp_source.html#l00013">conversion.hpp:13</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1InstrumentId_html"><div class="ttname"><a href="structalgotradelib_1_1InstrumentId.html">algotradelib::InstrumentId</a></div><div class="ttdoc">Identifies an instrument: its country, venue and symbol.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00065">types.hpp:65</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1strategy_1_1BarEvent_html"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1BarEvent.html">algotradelib::strategy::BarEvent</a></div><div class="ttdoc">One bar, delivered to on_bar.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00167">event.hpp:167</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1strategy_1_1BarEvent_html"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1BarEvent.html">algotradelib::strategy::BarEvent</a></div><div class="ttdoc">One bar, delivered to on_bar.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00168">event.hpp:168</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1TargetPosition_html"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1TargetPosition.html">algotradelib::strategy::TargetPosition</a></div><div class="ttdoc">The position a strategy wants to hold in one instrument.</div><div class="ttdef"><b>Definition</b> <a href="intent_8hpp_source.html#l00426">intent.hpp:426</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1TargetPosition_html_a48b7235f4bfab5f2381f5d5f6f51ca62"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1TargetPosition.html#a48b7235f4bfab5f2381f5d5f6f51ca62">algotradelib::strategy::TargetPosition::instrument_</a></div><div class="ttdeci">InstrumentId instrument_</div><div class="ttdoc">The instrument.</div><div class="ttdef"><b>Definition</b> <a href="intent_8hpp_source.html#l00428">intent.hpp:428</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1TargetPosition_html_aba87213d9d38df80a8acdc461fed9784"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1TargetPosition.html#aba87213d9d38df80a8acdc461fed9784">algotradelib::strategy::TargetPosition::tag_</a></div><div class="ttdeci">std::string tag_</div><div class="ttdoc">A label carried to the orders and their fills.</div><div class="ttdef"><b>Definition</b> <a href="intent_8hpp_source.html#l00434">intent.hpp:434</a></div></div>
@@ -167,14 +167,16 @@ The handlers</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">on_bar(Ctx&amp;, const BarEvent&amp;)</span>  </td><td class="markdownTableBodyNone">a bar has <b>closed</b>  </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">on_bars(Ctx&amp;, const BarSlice&amp;)</span>  </td><td class="markdownTableBodyNone">every instrument's bar of a period has closed — instead of <span class="tt">on_bar</span>, see <a class="el" href="#several-instruments" title="Several instruments at once: &lt;tt&gt;on_bars&lt;/tt&gt;">below</a>  </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">on_quote(Ctx&amp;, const QuoteEvent&amp;)</span>  </td><td class="markdownTableBodyNone">a quote was read  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">on_fill(Ctx&amp;, const Fill&amp;)</span>  </td><td class="markdownTableBodyNone">one execution happened against an order of yours — <b>in a backtest only</b>, see below  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">on_order_update(Ctx&amp;, const OrderSnapshot&amp;)</span>  </td><td class="markdownTableBodyNone">an order the broker is still listing changed — see below  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">on_phase(Ctx&amp;, MarketPhase)</span>  </td><td class="markdownTableBodyNone">the session moved between phases  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">on_order_update(Ctx&amp;, const OrderSnapshot&amp;)</span>  </td><td class="markdownTableBodyNone">an order the broker is still listing changed — see below  </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">on_phase(Ctx&amp;, MarketPhase)</span>  </td><td class="markdownTableBodyNone">the session moved between phases  </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">on_stop(Ctx&amp;)</span>  </td><td class="markdownTableBodyNone">after the last event — see below, it cannot trade  </td></tr>
 </table>
 <p><b><span class="tt">on_fill</span> does not fire live, and this is the one difference between the two modes that can cost money.</b> A fill is discovered live by polling: positions are replaced and working orders are replaced, and neither synthesises an execution. Discrete executions cannot be recovered from periodic cumulative snapshots; that waits until the library streams execution notifications. So a strategy that places an entry and sets its stop from <span class="tt">on_fill</span> is <b>correct in a backtest and inert live</b>: the handler never runs and the stop is never placed.</p>
@@ -235,6 +237,36 @@ limit)</span> places one at KIS (<span class="tt">ORD_DVSN</span> <span class="t
 </ul>
 <p>A handler disabled with <span class="tt">enable_if</span> for some contexts is rejected where it is disabled: declare it plainly and gate inside it with <span class="tt">if constexpr</span>. A handler written against one concrete context type compiles only for the runner whose context it takes, and fails where another runner is built. A wrapper that forwards to an inner strategy through <span class="tt">runner::dispatch</span> gets the same check on the inner one.</p>
 <p>A consequence worth knowing before it bites: a strategy declared <em>inside</em> a function cannot have template members at all, because C++ forbids templates in local classes. Declare strategies at namespace scope.</p>
+<h1 class="doxsection"><a class="anchor" id="several-instruments"></a>
+Several instruments at once: <span class="tt">on_bars</span></h1>
+<p><span class="tt">on_bar</span> receives one bar at a time, so a strategy deciding on several instruments together — a pair's hedge ratio, a ranking across a universe — has to hold each bar until the others of the same period arrive. Declare <span class="tt">on_bars</span> instead and the runner does that: it calls it <b>once per period end</b> with a <span class="tt">BarSlice</span> holding every instrument's bar for that period, after all of them are cached.</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>PairSpread {</div>
+<div class="line">  InstrumentId y_;</div>
+<div class="line">  InstrumentId x_;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt;</div>
+<div class="line">  <span class="keywordtype">void</span> on_bars(Ctx&amp; ctx, <span class="keyword">const</span> BarSlice&amp; slice) {</div>
+<div class="line">    <span class="keyword">const</span> BarEvent* y = slice.find(y_);</div>
+<div class="line">    <span class="keyword">const</span> BarEvent* x = slice.find(x_);</div>
+<div class="line">    <span class="keywordflow">if</span> (y == <span class="keyword">nullptr</span> || x == <span class="keyword">nullptr</span>) {</div>
+<div class="line">      <span class="keywordflow">return</span>;  <span class="comment">// a leg has no bar this period</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// Both series end at this period here, so a hedge ratio can be fitted on them directly.</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>* ys = ctx.bars(y_, slice.interval_);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span>* xs = ctx.bars(x_, slice.interval_);</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">  }</div>
+<div class="line">};</div>
+</div><!-- fragment --><ul>
+<li><b>One or the other.</b> A strategy declares <span class="tt">on_bar</span> or <span class="tt">on_bars</span>; declaring both does not compile, so neither runs in silence beside the other. The rest of the handlers are unaffected.</li>
+<li><b>A missing instrument is absent from the slice</b>, and <span class="tt">find</span> returns <span class="tt">nullptr</span> for it. There is no deadline and no placeholder: what an absent bar means is the strategy's decision.</li>
+<li><b>Several intervals</b> ending at the same instant (a minute and a day) give one call each, in the order their first bars arrived; each slice holds one interval.</li>
+<li><b>Instruments that close at different instants</b> (a Korean and a US stock) never share a slice.</li>
+<li><b>In a backtest</b> a period is delivered when the first later bar arrives, before that bar fills anything, or at a quote at or after it, or at <span class="tt">finish()</span>. Its orders wait for a later period's bar, as <span class="tt">on_bar</span>'s do. Feed every bar of a period before anything later: a bar for a period already delivered, an earlier one, or a second bar of one instrument in a period throws <span class="tt">std::invalid_argument</span> before anything changes.</li>
+<li><b>Live</b>, each poll's bars are grouped by period; history periods go through <span class="tt">Runner::feed_warmup</span> as before, and only the newest period can send. A bar that arrives after its period was delivered (a name that missed that period's poll) is cached for its own series but not delivered, and <span class="tt">SessionSource::bars_not_delivered</span> counts it. An exception during such a poll (a handler that throws, a bar the cache refuses) stops the source: later bar polls throw <span class="tt">std::logic_error</span>: restart the program with a fresh runner and source (older periods warm the strategy up, and the newest eligible period may trade).</li>
+<li><b>A source of your own</b> calls <span class="tt">Runner::record</span> for each bar of a period, then <span class="tt">Runner::feed(const BarSlice&amp;)</span>; <span class="tt">Runner::feed(const BarEvent&amp;)</span> does not compile for such a strategy, so a path still feeding single bars cannot skip it.</li>
+<li><b>Without a linear algebra backend</b> there is no cache: the slice is what the strategy has.</li>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md115"></a>
 Emit a target, not an order</h1>
 <p>Every strategy this library ships states a position: <span class="tt">TargetPosition</span>, or — for <span class="tt">EqualWeightRebalance</span> — an <span class="tt">OrderIntent</span> sized by <span class="tt">SizeSpec::target_weight</span>, which the runner plans as the position the weight states. Do the same unless you have a reason not to, and the reason is this:</p>

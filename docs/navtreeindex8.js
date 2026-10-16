@@ -1,5 +1,17 @@
 var NAVTREEINDEX8 =
 {
+"functions_g.html":[2,3,0,6],
+"functions_h.html":[2,3,0,7],
+"functions_i.html":[2,3,0,8],
+"functions_j.html":[2,3,0,9],
+"functions_k.html":[2,3,0,10],
+"functions_l.html":[2,3,0,11],
+"functions_m.html":[2,3,0,12],
+"functions_n.html":[2,3,0,13],
+"functions_o.html":[2,3,0,14],
+"functions_p.html":[2,3,0,15],
+"functions_q.html":[2,3,0,16],
+"functions_r.html":[2,3,0,17],
 "functions_rela.html":[2,3,5],
 "functions_s.html":[2,3,0,18],
 "functions_t.html":[2,3,0,19],
@@ -237,17 +249,5 @@ var NAVTREEINDEX8 =
 "namespacealgotradelib_1_1analytics.html#a9e6905d6dc3691e1734ba856a9627446":[1,0,0,0,17],
 "namespacealgotradelib_1_1analytics.html#aa007f4e18852c2ccd6e7a679693c7e6b":[1,0,0,0,11],
 "namespacealgotradelib_1_1analytics.html#aa14da082dfe045b70173cd3b4acee2ac":[1,0,0,0,42],
-"namespacealgotradelib_1_1analytics.html#aa4190b3405ecaee6e9044e558cebf5a2":[1,0,0,0,24],
-"namespacealgotradelib_1_1analytics.html#aa65ecda5275f95ad1791856febd3ed0f":[1,0,0,0,51],
-"namespacealgotradelib_1_1analytics.html#aa99731f9508ab4ad39127ee2c657b45f":[1,0,0,0,23],
-"namespacealgotradelib_1_1analytics.html#aa9b64127b8c9f0d01c99f29abe7efde7":[1,0,0,0,62],
-"namespacealgotradelib_1_1analytics.html#aaa2831ed57f587c68d273f1699903052":[1,0,0,0,14],
-"namespacealgotradelib_1_1analytics.html#aac78898d749c3d955dfa563178f338fc":[1,0,0,0,35],
-"namespacealgotradelib_1_1analytics.html#aaee174047c611c00d176217a1ff63d4d":[1,0,0,0,53],
-"namespacealgotradelib_1_1analytics.html#ab19fa55f5c2131a1fc28ab652b43d0e1":[1,0,0,0,13],
-"namespacealgotradelib_1_1analytics.html#ab1b8f680cb6dce9e7943695bf110acdb":[1,0,0,0,40],
-"namespacealgotradelib_1_1analytics.html#abd8c85839d39f5875ba6f2e7408846b8":[1,0,0,0,57],
-"namespacealgotradelib_1_1analytics.html#abe8d7cb06e21d24506173da7d6d16553":[1,0,0,0,27],
-"namespacealgotradelib_1_1analytics.html#ac722704ca00110ea27bd39822382ded7":[1,0,0,0,29],
-"namespacealgotradelib_1_1analytics.html#ac779beb008cac496403576f7f5caaaf1":[1,0,0,0,30]
+"namespacealgotradelib_1_1analytics.html#aa4190b3405ecaee6e9044e558cebf5a2":[1,0,0,0,24]
 };

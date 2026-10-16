@@ -29,6 +29,7 @@ var guide =
     ] ],
     [ "Writing a strategy", "writing-a-strategy.html", [
       [ "The handlers", "writing-a-strategy.html#autotoc_md114", null ],
+      [ "Several instruments at once: <span class=\"tt\">on_bars</span>", "writing-a-strategy.html#several-instruments", null ],
       [ "Emit a target, not an order", "writing-a-strategy.html#autotoc_md115", null ],
       [ "What the context gives you", "writing-a-strategy.html#autotoc_md116", null ],
       [ "Prices", "writing-a-strategy.html#autotoc_md117", null ],

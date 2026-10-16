@@ -1,3 +1,21 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structstd_1_1hash_3_01algotradelib_1_1OrderRef_3_01Broker_01_4_01_4.html" title="Hashes an order reference, so it can key an unordered container." alt="" coords="5,5,180,45"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,272,151,312"/>
+<area shape="rect" id="Node000001" href="$classalgotradelib_1_1network_1_1WebSocketSessionBase.html" title=" " alt="" coords="199,5,437,75"/>
+<area shape="poly" id="edge37_Node000000_Node000001" title=" " alt="" coords="88,258,105,219,128,173,159,127,197,86,215,73,218,77,200,90,163,130,133,176,110,221,93,260"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1network_1_1WebSocketSessionBase.html" title=" " alt="" coords="211,99,425,183"/>
+<area shape="poly" id="edge39_Node000000_Node000003" title=" " alt="" coords="110,260,150,227,197,194,219,181,222,186,200,198,154,231,113,265"/>
+<area shape="rect" id="Node000005" href="$classalgotradelib_1_1kis_1_1KisClient.html" title="The asynchronous KIS REST client: market data, account inquiries and orders for domestic stocks." alt="" coords="251,208,385,248"/>
+<area shape="poly" id="edge41_Node000000_Node000005" title=" " alt="" coords="164,266,250,243,251,248,165,272"/>
+<area shape="rect" id="Node000006" href="$classalgotradelib_1_1kiwoom_1_1KiwoomClient.html" title="The asynchronous Kiwoom REST client: market data, account inquiries and orders for domestic stocks." alt="" coords="238,272,398,312"/>
+<area shape="poly" id="edge42_Node000000_Node000006" title=" " alt="" coords="165,289,238,289,238,295,165,295"/>
+<area shape="rect" id="Node000007" href="$classalgotradelib_1_1network_1_1AsyncHttpClient.html" title="An asynchronous HTTP/1.1 client over TLS that keeps one connection to one host, used by the broker cl..." alt="" coords="237,336,399,376"/>
+<area shape="poly" id="edge43_Node000000_Node000007" title=" " alt="" coords="165,312,243,333,241,338,164,317"/>
+<area shape="rect" id="Node000008" href="$classalgotradelib_1_1network_1_1WebSocketSessionBase.html" title="The base of the WebSocket clients WsSession and WssSession: connecting, sending, receiving,..." alt="" coords="227,401,409,455"/>
+<area shape="poly" id="edge44_Node000000_Node000008" title=" " alt="" coords="111,319,152,354,200,386,227,399,225,403,197,390,149,358,108,323"/>
+<area shape="rect" id="Node000009" href="$classalgotradelib_1_1tossinvest_1_1TossClient.html" title="The asynchronous Toss Securities REST client: market data, accounts and orders." alt="" coords="231,480,405,520"/>
+<area shape="poly" id="edge45_Node000000_Node000009" title=" " alt="" coords="95,324,112,358,135,396,165,434,200,466,231,482,229,487,197,470,161,438,131,399,107,360,90,326"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1network_1_1WsSession.html" title="A WebSocket client over plain TCP (no TLS); derive from it and override on_message." alt="" coords="485,20,647,60"/>
+<area shape="poly" id="edge38_Node000001_Node000002" title=" " alt="" coords="451,37,485,37,485,43,451,43"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1network_1_1WssSession.html" title="A WebSocket client over TLS; derive from it and override on_message." alt="" coords="485,121,647,161"/>
+<area shape="poly" id="edge40_Node000003_Node000004" title=" " alt="" coords="439,139,485,139,485,144,439,144"/>
 </map>

@@ -136,6 +136,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a327288f7c928699b2d70577aa5ab6699" id="r_a327288f7c928699b2d70577aa5ab6699"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
 <tr class="memitem:a327288f7c928699b2d70577aa5ab6699 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a327288f7c928699b2d70577aa5ab6699">bar</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">BarEvent</a> &amp;event)</td></tr>
 <tr class="memdesc:a327288f7c928699b2d70577aa5ab6699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_bar(context, event)</span> if the strategy declares <span class="tt">on_bar</span>; otherwise does nothing.  <br /></td></tr>
+<tr class="memitem:ac523d71c8ba48b9336360423c986502e" id="r_ac523d71c8ba48b9336360423c986502e"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
+<tr class="memitem:ac523d71c8ba48b9336360423c986502e template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac523d71c8ba48b9336360423c986502e">bars</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="structalgotradelib_1_1strategy_1_1BarSlice.html">BarSlice</a> &amp;slice)</td></tr>
+<tr class="memdesc:ac523d71c8ba48b9336360423c986502e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_bars(context, slice)</span> if the strategy declares <span class="tt">on_bars</span>; otherwise does nothing.  <br /></td></tr>
 <tr class="memitem:a0e3967a002298d5207ee304df5bd0e63" id="r_a0e3967a002298d5207ee304df5bd0e63"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
 <tr class="memitem:a0e3967a002298d5207ee304df5bd0e63 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0e3967a002298d5207ee304df5bd0e63">quote</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="structalgotradelib_1_1strategy_1_1QuoteEvent.html">QuoteEvent</a> &amp;event)</td></tr>
 <tr class="memdesc:a0e3967a002298d5207ee304df5bd0e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_quote(context, event)</span> if the strategy declares <span class="tt">on_quote</span>; otherwise does nothing.  <br /></td></tr>
@@ -180,6 +183,7 @@ template&lt;typename S, typename Ctx&gt; </div>
 </div><div class="memdoc">
 
 <p>Calls <span class="tt">strategy.on_bar(context, event)</span> if the strategy declares <span class="tt">on_bar</span>; otherwise does nothing. </p>
+<p>Does not compile for a strategy that declares <span class="tt">on_bars</span>: its bars go through <span class="tt"><a class="el" href="#ac523d71c8ba48b9336360423c986502e" title="Calls strategy.on_bars(context, slice) if the strategy declares on_bars; otherwise does nothing.">bars</a></span>, so a path that still delivers one <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html" title="One bar, delivered to on_bar.">BarEvent</a></span> at a time fails to build instead of skipping the strategy in silence.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">S</td><td>The strategy type; a class that is not <span class="tt">final</span>. </td></tr>
@@ -196,9 +200,58 @@ template&lt;typename S, typename Ctx&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00168">168</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00191">191</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00168">bar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00191">bar()</a>.</p>
+
+</div>
+</div>
+<a id="ac523d71c8ba48b9336360423c986502e" name="ac523d71c8ba48b9336360423c986502e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac523d71c8ba48b9336360423c986502e">&#9670;&#160;</a></span>bars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S, typename Ctx&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void algotradelib::strategy::dispatch::bars </td>
+          <td>(</td>
+          <td class="paramtype">S &amp;</td>          <td class="paramname"><span class="paramname"><em>strategy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ctx &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1strategy_1_1BarSlice.html">BarSlice</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>slice</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls <span class="tt">strategy.on_bars(context, slice)</span> if the strategy declares <span class="tt">on_bars</span>; otherwise does nothing. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>The strategy type; a class that is not <span class="tt">final</span>. </td></tr>
+    <tr><td class="paramname">Ctx</td><td>The context type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strategy</td><td>The strategy. </td></tr>
+    <tr><td class="paramname">context</td><td>The context passed to the handler. </td></tr>
+    <tr><td class="paramname">slice</td><td>The slice passed to the handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00218">218</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00218">bars()</a>.</p>
 
 </div>
 </div>
@@ -245,9 +298,9 @@ template&lt;typename S, typename Ctx&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00210">210</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00261">261</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00210">fill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00261">fill()</a>.</p>
 
 </div>
 </div>
@@ -294,9 +347,9 @@ template&lt;typename S, typename Ctx&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00231">231</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00282">282</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00231">order_update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00282">order_update()</a>.</p>
 
 </div>
 </div>
@@ -343,9 +396,9 @@ template&lt;typename S, typename Ctx&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00253">253</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00304">304</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00253">phase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00304">phase()</a>.</p>
 
 </div>
 </div>
@@ -392,9 +445,9 @@ template&lt;typename S, typename Ctx&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00189">189</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00240">240</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00189">quote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00240">quote()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +488,9 @@ template&lt;typename S, typename Ctx&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00129">129</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00149">149</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00129">start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00149">start()</a>.</p>
 
 </div>
 </div>
@@ -478,9 +531,9 @@ template&lt;typename S, typename Ctx&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00148">148</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00168">168</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00148">stop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="concept_8hpp_source.html#l00168">stop()</a>.</p>
 
 </div>
 </div>

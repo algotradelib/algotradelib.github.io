@@ -11,6 +11,7 @@ var concept_8hpp =
     [ "algotradelib::strategy::FullContext", "namespacealgotradelib_1_1strategy.html#ab8a8234520851cbeb8c4230cb038ec94", null ],
     [ "algotradelib::strategy::MinimalContext", "namespacealgotradelib_1_1strategy.html#a2dbe0bb2bf68d1e254ef0bc044d5a399", null ],
     [ "algotradelib::strategy::dispatch::bar", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699", null ],
+    [ "algotradelib::strategy::dispatch::bars", "namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e", null ],
     [ "algotradelib::strategy::dispatch::fill", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a3cddb75a61a8dbcff13d06badba54d2e", null ],
     [ "algotradelib::strategy::dispatch::order_update", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a72ced676025c7899eba75b9149c93e57", null ],
     [ "algotradelib::strategy::dispatch::phase", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a0b21ff6520548277bca3255d0da2a9c4", null ],

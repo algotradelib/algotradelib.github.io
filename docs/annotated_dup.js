@@ -178,6 +178,7 @@ var annotated_dup =
         ] ],
         [ "AllCaps", "structalgotradelib_1_1strategy_1_1AllCaps.html", "structalgotradelib_1_1strategy_1_1AllCaps" ],
         [ "BarEvent", "structalgotradelib_1_1strategy_1_1BarEvent.html", "structalgotradelib_1_1strategy_1_1BarEvent" ],
+        [ "BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", "structalgotradelib_1_1strategy_1_1BarSlice" ],
         [ "CancelIntent", "structalgotradelib_1_1strategy_1_1CancelIntent.html", "structalgotradelib_1_1strategy_1_1CancelIntent" ],
         [ "Fill", "structalgotradelib_1_1strategy_1_1Fill.html", "structalgotradelib_1_1strategy_1_1Fill" ],
         [ "GuardDecision", "structalgotradelib_1_1strategy_1_1GuardDecision.html", "structalgotradelib_1_1strategy_1_1GuardDecision" ],

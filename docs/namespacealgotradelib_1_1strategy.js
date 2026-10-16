@@ -2,6 +2,7 @@ var namespacealgotradelib_1_1strategy =
 [
     [ "dispatch", "namespacealgotradelib_1_1strategy_1_1dispatch.html", [
       [ "bar", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699", null ],
+      [ "bars", "namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e", null ],
       [ "fill", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a3cddb75a61a8dbcff13d06badba54d2e", null ],
       [ "order_update", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a72ced676025c7899eba75b9149c93e57", null ],
       [ "phase", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a0b21ff6520548277bca3255d0da2a9c4", null ],
@@ -12,6 +13,7 @@ var namespacealgotradelib_1_1strategy =
     [ "vanilla", "namespacealgotradelib_1_1strategy_1_1vanilla.html", "namespacealgotradelib_1_1strategy_1_1vanilla" ],
     [ "AllCaps", "structalgotradelib_1_1strategy_1_1AllCaps.html", "structalgotradelib_1_1strategy_1_1AllCaps" ],
     [ "BarEvent", "structalgotradelib_1_1strategy_1_1BarEvent.html", "structalgotradelib_1_1strategy_1_1BarEvent" ],
+    [ "BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", "structalgotradelib_1_1strategy_1_1BarSlice" ],
     [ "CancelIntent", "structalgotradelib_1_1strategy_1_1CancelIntent.html", "structalgotradelib_1_1strategy_1_1CancelIntent" ],
     [ "Fill", "structalgotradelib_1_1strategy_1_1Fill.html", "structalgotradelib_1_1strategy_1_1Fill" ],
     [ "GuardDecision", "structalgotradelib_1_1strategy_1_1GuardDecision.html", "structalgotradelib_1_1strategy_1_1GuardDecision" ],

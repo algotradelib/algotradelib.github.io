@@ -79,5 +79,6 @@ var searchData=
   ['asked_20for_20go_20out_76',['Did everything I asked for go out?',['../running-a-strategy-live.html#autotoc_md92',1,'']]],
   ['asking_20the_20broker_20what_20the_20account_20can_20do_77',['Asking the broker what the account can do',['../running-a-strategy-live.html#autotoc_md96',1,'']]],
   ['assumes_78',['What the fill model assumes',['../reading-a-backtest.html#autotoc_md65',1,'']]],
-  ['at_20all_79',['at all',['../reading-a-backtest.html#autotoc_md67',1,'What it does not model at all'],['../analytics-conventions.html#autotoc_md13',1,'Why there are two numeric types at all']]]
+  ['at_20all_79',['at all',['../reading-a-backtest.html#autotoc_md67',1,'What it does not model at all'],['../analytics-conventions.html#autotoc_md13',1,'Why there are two numeric types at all']]],
+  ['at_20once_3a_20on_5fbars_80',['Several instruments at once: &lt;span class=&quot;tt&quot;&gt;on_bars&lt;/span&gt;',['../writing-a-strategy.html#several-instruments',1,'']]]
 ];

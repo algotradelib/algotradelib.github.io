@@ -7,6 +7,7 @@ var classalgotradelib_1_1live_1_1SessionSource =
     [ "SessionSource", "classalgotradelib_1_1live_1_1SessionSource.html#a33ab5811daad60e0235c2d95b21c6507", null ],
     [ "SessionSource", "classalgotradelib_1_1live_1_1SessionSource.html#a3a812b62ba4b74ef070d8001259763e2", null ],
     [ "bars_fed_as_warmup", "classalgotradelib_1_1live_1_1SessionSource.html#a4b61730375446d0ef773f9ac14e6896b", null ],
+    [ "bars_not_delivered", "classalgotradelib_1_1live_1_1SessionSource.html#a04ada8941c9bf9ec30d3b3076f14046c", null ],
     [ "bars_not_yet_closed", "classalgotradelib_1_1live_1_1SessionSource.html#ad14cd46cb2ff2addb1367b4e23474683", null ],
     [ "buying_power_currencies", "classalgotradelib_1_1live_1_1SessionSource.html#ac06b51a7dd1bbe05b359a35844e9592d", null ],
     [ "calendar_country", "classalgotradelib_1_1live_1_1SessionSource.html#afa5f26bda14386cbe1a65e5e8f54244f", null ],

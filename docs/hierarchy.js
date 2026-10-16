@@ -21,6 +21,7 @@ var hierarchy =
     [ "algotradelib::strategy::BarEvent", "structalgotradelib_1_1strategy_1_1BarEvent.html", null ],
     [ "algotradelib::BarQuery", "structalgotradelib_1_1BarQuery.html", null ],
     [ "algotradelib::BarSeries", "structalgotradelib_1_1BarSeries.html", null ],
+    [ "algotradelib::strategy::BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", null ],
     [ "algotradelib::network::BasicRateLimitBucket&lt; Clock &gt;", "classalgotradelib_1_1network_1_1BasicRateLimitBucket.html", null ],
     [ "algotradelib::BlockingSession&lt; Client &gt;", "classalgotradelib_1_1BlockingSession.html", null ],
     [ "algotradelib::analytics::BollingerBands", "structalgotradelib_1_1analytics_1_1BollingerBands.html", null ],
