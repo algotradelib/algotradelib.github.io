@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"tossinvest_2config_8hpp_source.html":[3,0,0,0,2,2,2],
+"tossinvest_2network_8hpp_source.html":[3,0,0,0,2,2,3],
 "tossinvest_2traits_8hpp_source.html":[3,0,0,0,2,2,4],
 "transport-and-pacing.html":[0,22],
 "transport-and-pacing.html#autotoc_md108":[0,22,0],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"structalgotradelib_1_1network_1_1HttpRequest.html#a1a0fa8d788ec44e15782d2333145475f":[2,0,0,8,6,1],
+"structalgotradelib_1_1network_1_1HttpRequest.html#a41a863ba3ca8d3831ba181e5fae5f422":[1,0,0,8,6,4],
 "structalgotradelib_1_1network_1_1HttpRequest.html#a41a863ba3ca8d3831ba181e5fae5f422":[2,0,0,8,6,4],
 "structalgotradelib_1_1network_1_1HttpRequest.html#a4b5833262aabeb8497a9fc56db010493":[1,0,0,8,6,2],
 "structalgotradelib_1_1network_1_1HttpRequest.html#a4b5833262aabeb8497a9fc56db010493":[2,0,0,8,6,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "structalgotradelib_1_1runner_1_1JournalReplay.html#a0645c2f78edfe7d01848cc62a86e9e36":[2,0,0,9,17,1],
 "structalgotradelib_1_1runner_1_1JournalReplay.html#a20dfd6bb35f477929a8593cbda1b4b22":[1,0,0,9,17,8],
 "structalgotradelib_1_1runner_1_1JournalReplay.html#a20dfd6bb35f477929a8593cbda1b4b22":[2,0,0,9,17,8],
-"structalgotradelib_1_1runner_1_1JournalReplay.html#a2ad7c4349a9c783904b06f98f22ab643":[1,0,0,9,17,0],
-"structalgotradelib_1_1runner_1_1JournalReplay.html#a2ad7c4349a9c783904b06f98f22ab643":[2,0,0,9,17,0],
-"structalgotradelib_1_1runner_1_1JournalReplay.html#a30b70b552e85d61c407cabdf3daba8df":[1,0,0,9,17,4]
+"structalgotradelib_1_1runner_1_1JournalReplay.html#a2ad7c4349a9c783904b06f98f22ab643":[1,0,0,9,17,0]
 };

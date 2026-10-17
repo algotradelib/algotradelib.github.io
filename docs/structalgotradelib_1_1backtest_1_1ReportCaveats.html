@@ -177,6 +177,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a882207c2aa23520e11017c607c17f346"><td class="mdescLeft">&#160;</td><td class="mdescRight">The first bar end at which cash was below zero.  <br /></td></tr>
 <tr class="memitem:a7acf24a8ca4f3a1c288bbfeb351dd078" id="r_a7acf24a8ca4f3a1c288bbfeb351dd078"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1Money.html">Money</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7acf24a8ca4f3a1c288bbfeb351dd078">lowest_cash_</a></td></tr>
 <tr class="memdesc:a7acf24a8ca4f3a1c288bbfeb351dd078"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lowest cash an execution left, if it went below zero.  <br /></td></tr>
+<tr class="memitem:ae802d6f7d0a555e2049670576d94f7dd" id="r_ae802d6f7d0a555e2049670576d94f7dd"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#ae802d6f7d0a555e2049670576d94f7dd">other_currency_executions_</a> {0}</td></tr>
+<tr class="memdesc:ae802d6f7d0a555e2049670576d94f7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executions in a currency other than the equity curve's (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#ab4530985b149ff0cd8a75d9e6399969f" title="The accounting currency; the equity curve is in this currency only.">ReplayConfig::currency_</a></span>).  <br /></td></tr>
 <tr class="memitem:a941d01fce3e932322850a4e845154e0a" id="r_a941d01fce3e932322850a4e845154e0a"><td class="memItemLeft">std::optional&lt; std::chrono::system_clock::time_point &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a941d01fce3e932322850a4e845154e0a">lowest_cash_at_</a></td></tr>
 <tr class="memdesc:a941d01fce3e932322850a4e845154e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the lowest cash was reached.  <br /></td></tr>
 <tr class="memitem:ac9423d701a97c92a5915bb4b15bbfef8" id="r_ac9423d701a97c92a5915bb4b15bbfef8"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1SellTax.html">SellTax</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac9423d701a97c92a5915bb4b15bbfef8">sell_tax_</a></td></tr>
@@ -343,7 +345,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">DAY</span> orders withdrawn unfilled when their session ended, as they would expire live. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00186">186</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00195">195</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +490,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>When the lowest cash was reached. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00182">182</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00191">191</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,6 +510,25 @@ Static Public Attributes</h2></td></tr>
 <p>A universe built from a broker's current listings omits instruments delisted during the period, which tends to flatter the result. The engine cannot see how the universe was chosen, so this is a proxy that is also set for a hand-picked universe with no such problem. Figures are still computed. </p>
 
 <p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00073">73</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae802d6f7d0a555e2049670576d94f7dd" name="ae802d6f7d0a555e2049670576d94f7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae802d6f7d0a555e2049670576d94f7dd">&#9670;&#160;</a></span>other_currency_executions_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t algotradelib::backtest::ReportCaveats::other_currency_executions_ {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Executions in a currency other than the equity curve's (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#ab4530985b149ff0cd8a75d9e6399969f" title="The accounting currency; the equity curve is in this currency only.">ReplayConfig::currency_</a></span>). </p>
+<p>The curve and every figure measured from it leave these out, and so does the overdraft check above. When this is nonzero and every execution is one of them, <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html#a3a69398f1d645faf248f74d094c633f0" title="The total return over the replay, as a fraction; math::undefined() when the opening equity is zero or...">Report::total_return_</a></span>, <span class="tt">sharpe_</span>, <span class="tt">annualized_sharpe_</span>, <span class="tt">sortino_</span> and <span class="tt">max_drawdown_</span> are <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">math::missing()</a></span>: the curve then holds only the opening cash, which would read as a flat result. The opening and closing equity stay the curve's. </p>
+
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00189">189</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -563,7 +584,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>The sale tax given to the fill model; absent if none was modelled. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00184">184</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00193">193</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>

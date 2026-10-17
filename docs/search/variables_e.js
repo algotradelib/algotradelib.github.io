@@ -31,10 +31,11 @@ var searchData=
   ['original_5forder_5f_28',['original_order_',['../structalgotradelib_1_1kis_1_1KisOpenOrder.html#a1cb64863b7c1a1ca68d050e27f29bb01',1,'algotradelib::kis::KisOpenOrder']]],
   ['original_5forder_5fnumber_5f_29',['original_order_number_',['../structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrder.html#ad4aab0d339eff3be82c8c8359b1a2e03',1,'algotradelib::kiwoom::KiwoomOpenOrder']]],
   ['other_5f_30',['other_',['../structalgotradelib_1_1MarketSegment.html#a3a0326fc3177a231a2665215c56dd43e',1,'algotradelib::MarketSegment::other_'],['../structalgotradelib_1_1CommissionRate.html#afebfc7b42a1713cb83b489d3c8819d7a',1,'algotradelib::CommissionRate::other_']]],
-  ['outcome_5f_31',['outcome_',['../structalgotradelib_1_1runner_1_1JournalEntry.html#a18a07c5febeb19ab93915300318127c2',1,'algotradelib::runner::JournalEntry']]],
-  ['overbought_5f_32',['overbought_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold_1_1Params.html#a21c38a39fe812c6275e768e0f28c3cf2',1,'algotradelib::strategy::vanilla::RsiThreshold::Params']]],
-  ['overdrawn_5fbars_5f_33',['overdrawn_bars_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb',1,'algotradelib::backtest::ReplayResult::overdrawn_bars_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#aa802cd063d042839baece078365a6911',1,'algotradelib::backtest::ReportCaveats::overdrawn_bars_']]],
-  ['oversold_5f_34',['oversold_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold_1_1Params.html#ab2fab2d55a7fc0e7b5e9d685892552bd',1,'algotradelib::strategy::vanilla::RsiThreshold::Params']]],
-  ['owed_5forder_5flimit_5f_35',['owed_order_limit_',['../structlive__program_1_1Settings.html#ac87e9b434a22c4f35c217a50c055eb2b',1,'live_program::Settings']]],
-  ['owed_5fstop_5f_36',['owed_stop_',['../structalgotradelib_1_1runner_1_1LoopReport.html#a368d4810952c4e08bfce3be4b4a56593',1,'algotradelib::runner::LoopReport']]]
+  ['other_5fcurrency_5fexecutions_5f_31',['other_currency_executions_',['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#ae802d6f7d0a555e2049670576d94f7dd',1,'algotradelib::backtest::ReportCaveats']]],
+  ['outcome_5f_32',['outcome_',['../structalgotradelib_1_1runner_1_1JournalEntry.html#a18a07c5febeb19ab93915300318127c2',1,'algotradelib::runner::JournalEntry']]],
+  ['overbought_5f_33',['overbought_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold_1_1Params.html#a21c38a39fe812c6275e768e0f28c3cf2',1,'algotradelib::strategy::vanilla::RsiThreshold::Params']]],
+  ['overdrawn_5fbars_5f_34',['overdrawn_bars_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb',1,'algotradelib::backtest::ReplayResult::overdrawn_bars_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#aa802cd063d042839baece078365a6911',1,'algotradelib::backtest::ReportCaveats::overdrawn_bars_']]],
+  ['oversold_5f_35',['oversold_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold_1_1Params.html#ab2fab2d55a7fc0e7b5e9d685892552bd',1,'algotradelib::strategy::vanilla::RsiThreshold::Params']]],
+  ['owed_5forder_5flimit_5f_36',['owed_order_limit_',['../structlive__program_1_1Settings.html#ac87e9b434a22c4f35c217a50c055eb2b',1,'live_program::Settings']]],
+  ['owed_5fstop_5f_37',['owed_stop_',['../structalgotradelib_1_1runner_1_1LoopReport.html#a368d4810952c4e08bfce3be4b4a56593',1,'algotradelib::runner::LoopReport']]]
 ];

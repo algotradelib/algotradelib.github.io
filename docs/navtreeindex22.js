@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html":[2,0,0,10,0,0,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html#a28b04a70130da94295912da4a2dace0f":[1,0,0,10,1,0,0,0],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html#a28b04a70130da94295912da4a2dace0f":[2,0,0,10,0,0,0,0],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html#a66eeeb38cf5ea1d88212a5a2f67dbb58":[1,0,0,10,1,0,0,1],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html#a66eeeb38cf5ea1d88212a5a2f67dbb58":[2,0,0,10,0,0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "time__index_8hpp_source.html":[3,0,0,0,0,9],
 "timed__liquidation_8hpp_source.html":[3,0,0,0,8,0,5],
 "tossinvest_2auth_8hpp_source.html":[3,0,0,0,2,2,0],
-"tossinvest_2client_8hpp_source.html":[3,0,0,0,2,2,1],
-"tossinvest_2config_8hpp_source.html":[3,0,0,0,2,2,2],
-"tossinvest_2network_8hpp_source.html":[3,0,0,0,2,2,3]
+"tossinvest_2client_8hpp_source.html":[3,0,0,0,2,2,1]
 };

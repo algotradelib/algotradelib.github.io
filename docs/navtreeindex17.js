@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"structalgotradelib_1_1kis_1_1KisOpenOrderPage.html#adbd310f75453d206c1d09bafeac1a06d":[2,0,0,4,9,1],
+"structalgotradelib_1_1kis_1_1KisOrderAck.html":[1,0,0,4,10],
 "structalgotradelib_1_1kis_1_1KisOrderAck.html":[2,0,0,4,10],
 "structalgotradelib_1_1kis_1_1KisOrderAck.html#a16ff42e424fab5adbddff228c9c7121b":[1,0,0,4,10,1],
 "structalgotradelib_1_1kis_1_1KisOrderAck.html#a16ff42e424fab5adbddff228c9c7121b":[2,0,0,4,10,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "structalgotradelib_1_1network_1_1HttpClientOptions.html#ae5e6044f5c88b18851c323d8f3ca00c7":[2,0,0,8,5,1],
 "structalgotradelib_1_1network_1_1HttpRequest.html":[1,0,0,8,6],
 "structalgotradelib_1_1network_1_1HttpRequest.html":[2,0,0,8,6],
-"structalgotradelib_1_1network_1_1HttpRequest.html#a1a0fa8d788ec44e15782d2333145475f":[1,0,0,8,6,1],
-"structalgotradelib_1_1network_1_1HttpRequest.html#a1a0fa8d788ec44e15782d2333145475f":[2,0,0,8,6,1],
-"structalgotradelib_1_1network_1_1HttpRequest.html#a41a863ba3ca8d3831ba181e5fae5f422":[1,0,0,8,6,4]
+"structalgotradelib_1_1network_1_1HttpRequest.html#a1a0fa8d788ec44e15782d2333145475f":[1,0,0,8,6,1]
 };

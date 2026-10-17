@@ -16,6 +16,7 @@ var structalgotradelib_1_1backtest_1_1ReportCaveats =
     [ "lowest_cash_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a7acf24a8ca4f3a1c288bbfeb351dd078", null ],
     [ "lowest_cash_at_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a941d01fce3e932322850a4e845154e0a", null ],
     [ "multiple_instruments_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a2a2a340ac78c6f3eb5c56b7411e6e660", null ],
+    [ "other_currency_executions_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#ae802d6f7d0a555e2049670576d94f7dd", null ],
     [ "overdrawn_bars_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#aa802cd063d042839baece078365a6911", null ],
     [ "quotes_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a08413c2db76aa957b84d25328a5cf224", null ],
     [ "sell_tax_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#ac9423d701a97c92a5915bb4b15bbfef8", null ],

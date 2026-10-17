@@ -152,7 +152,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>An order's type, price, trigger, time in force and session, as an amendment states them. </p>
 <p>In an amendment, an unset time in force or session keeps the order's own. An unset trigger keeps the resting trigger only when both the new and the resting type are <span class="tt">STOP_LIMIT</span>; turning a stop into a plain <span class="tt">LIMIT</span> drops its trigger. To change only the price, use <span class="tt"><a class="el" href="namespacealgotradelib.html#a24c87efb9eb718374da8177f305f000e" title="Makes an instruction changing only a working order&#39;s price.">reprice</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01977">1977</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01979">1979</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aab32f68e507bc81e1dea141b24d02213" name="aab32f68e507bc81e1dea141b24d02213"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab32f68e507bc81e1dea141b24d02213">&#9670;&#160;</a></span>OrderShape()</h2>
@@ -208,7 +208,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01989">1989</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01991">1991</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,9 +227,9 @@ Public Attributes</h2></td></tr>
 
 <p>The price, for a basis that takes one. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02005">2005</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02007">2007</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02160">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02183">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01989">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02143">algotradelib::resting_shape()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01991">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02145">algotradelib::resting_shape()</a>.</p>
 
 </div>
 </div>
@@ -248,9 +248,9 @@ Public Attributes</h2></td></tr>
 <p>The session; unset means "keep the resting order's". </p>
 <p>A set value is a deliberate change: made where the broker can make it, refused where it cannot (Toss cannot move an order between sessions). </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02028">2028</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02030">2030</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02160">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02183">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01989">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02143">algotradelib::resting_shape()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01991">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02145">algotradelib::resting_shape()</a>.</p>
 
 </div>
 </div>
@@ -269,9 +269,9 @@ Public Attributes</h2></td></tr>
 <p>The time in force; unset means "keep the resting order's". </p>
 <p>A set value is a deliberate change: made where the broker can make it, refused where it cannot (Toss cannot change it on a modify). </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02021">2021</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02023">2023</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02160">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02183">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01989">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02143">algotradelib::resting_shape()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01991">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02145">algotradelib::resting_shape()</a>.</p>
 
 </div>
 </div>
@@ -290,9 +290,9 @@ Public Attributes</h2></td></tr>
 <p>The trigger price, for <span class="tt">STOP_LIMIT</span>. </p>
 <p>On an amendment, unset keeps the resting stop's trigger, but only when both the new and the resting shape are <span class="tt">STOP_LIMIT</span> (see <span class="tt"><a class="el" href="namespacealgotradelib.html#ae8cb581fc9d42e32c7e570348103c447" title="Returns the trigger price an amendment leaves the order with.">amended_trigger_price</a></span>); changing into a stop needs a trigger stated. A trigger set on a type that takes none is refused. On an <span class="tt"><a class="el" href="structalgotradelib_1_1OrderRequest.html" title="An order to place, in broker-neutral form.">OrderRequest</a></span>, a stop-limit without one is refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02014">2014</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02016">2016</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02069">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02160">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02183">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01989">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02143">algotradelib::resting_shape()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02071">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01991">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02145">algotradelib::resting_shape()</a>.</p>
 
 </div>
 </div>
@@ -310,9 +310,9 @@ Public Attributes</h2></td></tr>
 
 <p>The price basis. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02003">2003</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02005">2005</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02069">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02160">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02183">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01989">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02143">algotradelib::resting_shape()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02071">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, <a class="el" href="types_8hpp_source.html#l01991">OrderShape()</a>, and <a class="el" href="types_8hpp_source.html#l02145">algotradelib::resting_shape()</a>.</p>
 
 </div>
 </div>

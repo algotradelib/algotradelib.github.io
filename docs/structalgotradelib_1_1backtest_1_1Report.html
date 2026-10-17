@@ -144,7 +144,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4dd4da0d6a16499a26f49930888361a5" id="r_a4dd4da0d6a16499a26f49930888361a5"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4dd4da0d6a16499a26f49930888361a5">closing_equity_</a></td></tr>
 <tr class="memdesc:a4dd4da0d6a16499a26f49930888361a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equity at the last recorded point.  <br /></td></tr>
 <tr class="memitem:a3a69398f1d645faf248f74d094c633f0" id="r_a3a69398f1d645faf248f74d094c633f0"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3a69398f1d645faf248f74d094c633f0">total_return_</a> {0}</td></tr>
-<tr class="memdesc:a3a69398f1d645faf248f74d094c633f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total return over the replay, as a fraction; <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> when the opening equity is zero or negative (a replay may start with negative cash).  <br /></td></tr>
+<tr class="memdesc:a3a69398f1d645faf248f74d094c633f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total return over the replay, as a fraction; <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> when the opening equity is zero or negative (a replay may start with negative cash), <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">math::missing()</a></span> when every execution was in another currency than the curve's (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#ae802d6f7d0a555e2049670576d94f7dd" title="Executions in a currency other than the equity curve&#39;s (ReplayConfig::currency_).">ReportCaveats::other_currency_executions_</a></span>).  <br /></td></tr>
 <tr class="memitem:af28bc302def829d0c9b58a1eaf2128b9" id="r_af28bc302def829d0c9b58a1eaf2128b9"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#af28bc302def829d0c9b58a1eaf2128b9">sharpe_</a> {0}</td></tr>
 <tr class="memdesc:af28bc302def829d0c9b58a1eaf2128b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The per-period Sharpe ratio; see <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#af24e9e7b0236d8585417e404de6f7c98" title="Computes the per-period Sharpe ratio, (mean(returns) - risk_free) / stdev(returns).">analytics::sharpe</a></span>.  <br /></td></tr>
 <tr class="memitem:a7e4bb3d226b08f6f7c3f2a4fe7e080fa" id="r_a7e4bb3d226b08f6f7c3f2a4fe7e080fa"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7e4bb3d226b08f6f7c3f2a4fe7e080fa">annualized_sharpe_</a> {0}</td></tr>
@@ -186,7 +186,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The summary of a replay; read <span class="tt"><a class="el" href="#a0d486030112b4ac09ffb8c92fec1edbe" title="Why the replay stopped early, if it did; read this before any figure.">halted_</a></span> and <span class="tt"><a class="el" href="#af9c1ddde755d938febaa91ed67ec29f2" title="What this run assumed and did not model.">caveats_</a></span> before the figures. </p>
 <p>Unobserved figures follow the <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html" title="Returns, rolling statistics, indicators and performance metrics over numeric series.">analytics</a></span> conventions (<span class="tt">missing()</span>, <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00194">194</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00203">203</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a7a67858d4dac09d6d783a04dede0ad8a" name="a7a67858d4dac09d6d783a04dede0ad8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a67858d4dac09d6d783a04dede0ad8a">&#9670;&#160;</a></span>aborted_</h2>
@@ -202,7 +202,7 @@ Public Attributes</h2></td></tr>
 
 <p>Orders cleared from the queue by a halt (unlike <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a4a93222705ae293b07f3b88bf24e317d" title="Orders still queued, unfilled, when the replay ended.">ReportCaveats::unfilled_</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00288">288</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00298">298</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -221,7 +221,7 @@ Public Attributes</h2></td></tr>
 <p>The annualized Sharpe ratio; <span class="tt">missing()</span> unless a period count was given to <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>. </p>
 <p>With a period count, undefined whenever <span class="tt"><a class="el" href="#af28bc302def829d0c9b58a1eaf2128b9" title="The per-period Sharpe ratio; see analytics::sharpe.">sharpe_</a></span> is. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00222">222</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00232">232</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -239,7 +239,7 @@ Public Attributes</h2></td></tr>
 
 <p>The bars replayed. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00196">196</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00205">205</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +257,7 @@ Public Attributes</h2></td></tr>
 
 <p>What this run assumed and did not model. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00291">291</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00301">301</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +275,7 @@ Public Attributes</h2></td></tr>
 
 <p>Equity at the last recorded point. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00203">203</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00212">212</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Public Attributes</h2></td></tr>
 
 <p>Commission paid per currency. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00248">248</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00258">258</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +312,7 @@ Public Attributes</h2></td></tr>
 <p>Commission paid. </p>
 <p>Includes the institution fee for executions charged a combined rate (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a22f641ebb09cd7031ee2e4843e172a89" title="How many executions were charged a single combined rate (no institution fee split).">ReportCaveats::inclusive_commission_executions_</a></span>). Absent when nothing executed, when the executions span currencies (see <span class="tt"><a class="el" href="#a5fc8ba00d4c4ddacf3866cd80ccfbc99" title="Commission paid per currency.">commission_by_currency_</a></span>), or when a sum did not fit. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00246">246</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00256">256</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +330,7 @@ Public Attributes</h2></td></tr>
 
 <p>The executions. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00198">198</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00207">207</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +349,7 @@ Public Attributes</h2></td></tr>
 <p>Why the replay stopped early, if it did; read this before any figure. </p>
 <p>Set when an execution could not be costed, the ledger could not record one, or positions could not be marked at a bar's close (<span class="tt">mark_not_representable</span>). The figures cover the bars up to that point; the halting bar is counted in <span class="tt"><a class="el" href="#aa0b6cde32e2f4f9d2375f3f8dadb796c" title="The bars replayed.">bars_</a></span>, and fills settled on it before the refusal are included. Nothing ran after the refusal, and <span class="tt">on_stop</span> was not called. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00286">286</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00296">296</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -368,7 +368,7 @@ Public Attributes</h2></td></tr>
 <p>Institution fees per currency. </p>
 <p>Partial when <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a22f641ebb09cd7031ee2e4843e172a89" title="How many executions were charged a single combined rate (no institution fee split).">ReportCaveats::inclusive_commission_executions_</a></span> is nonzero: it covers only the executions whose rate split the fee. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00262">262</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00272">272</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ Public Attributes</h2></td></tr>
 <p>Institution fees (유관기관제비용) paid. </p>
 <p>Absent unless every execution's rate split the fee out; also under the same currency rule as <span class="tt"><a class="el" href="#abb4ef94d2349d0e565ff7e54f3c8d416" title="Commission paid.">commission_paid_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00255">255</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00265">265</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ Public Attributes</h2></td></tr>
 
 <p>The worst peak-to-trough decline of equity, as a non-negative fraction. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00230">230</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00240">240</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -423,7 +423,7 @@ Public Attributes</h2></td></tr>
 
 <p>Equity at the first recorded point. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00201">201</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00210">210</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -441,7 +441,7 @@ Public Attributes</h2></td></tr>
 
 <p>Instructions a risk guard refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00276">276</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00286">286</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -459,7 +459,7 @@ Public Attributes</h2></td></tr>
 
 <p>Instructions not placed: reconciliation could not build them, or the replay cannot model them (<span class="tt">BINDING_REFUSED</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00274">274</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00284">284</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -478,7 +478,7 @@ Public Attributes</h2></td></tr>
 <p>The per-period Sharpe ratio; see <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#af24e9e7b0236d8585417e404de6f7c98" title="Computes the per-period Sharpe ratio, (mean(returns) - risk_free) / stdev(returns).">analytics::sharpe</a></span>. </p>
 <p><span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> when equity was zero or negative at any point but the last: the periods that follow have no return, and a ratio over the rest would describe a run that did not happen. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00216">216</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00226">226</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +496,7 @@ Public Attributes</h2></td></tr>
 
 <p>Slippage given up per currency. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00271">271</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00281">281</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +515,7 @@ Public Attributes</h2></td></tr>
 <p>Slippage given up, in money. </p>
 <p>Absent when nothing executed, the executions span currencies, or a sum did not fit; see <span class="tt"><a class="el" href="#ab0a64acba798b3882d2bfd5ba18a8977" title="Slippage given up per currency.">slippage_by_currency_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00269">269</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00279">279</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -534,7 +534,7 @@ Public Attributes</h2></td></tr>
 <p>The per-period Sortino ratio; see <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#aaee174047c611c00d176217a1ff63d4d" title="Computes the per-period Sortino ratio, (mean(returns) - target) / downside_deviation.">analytics::sortino</a></span>. </p>
 <p><span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> when equity was zero or negative at any point but the last, as <span class="tt"><a class="el" href="#af28bc302def829d0c9b58a1eaf2128b9" title="The per-period Sharpe ratio; see analytics::sharpe.">sharpe_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00228">228</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00238">238</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -552,7 +552,7 @@ Public Attributes</h2></td></tr>
 
 <p>Sale tax paid per currency, over executions in the taxed market. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00301">301</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00311">311</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -571,7 +571,7 @@ Public Attributes</h2></td></tr>
 <p>Sale tax paid. </p>
 <p>Absent when no tax was modelled (which is not a tax of zero), nothing executed in the taxed market, the executions in the taxed market span currencies, or a sum did not fit. Untaxed executions in other currencies do not affect it. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00299">299</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00309">309</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -587,9 +587,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The total return over the replay, as a fraction; <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> when the opening equity is zero or negative (a replay may start with negative cash). </p>
+<p>The total return over the replay, as a fraction; <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> when the opening equity is zero or negative (a replay may start with negative cash), <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">math::missing()</a></span> when every execution was in another currency than the curve's (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#ae802d6f7d0a555e2049670576d94f7dd" title="Executions in a currency other than the equity curve&#39;s (ReplayConfig::currency_).">ReportCaveats::other_currency_executions_</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00208">208</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00218">218</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -608,7 +608,7 @@ Public Attributes</h2></td></tr>
 <p>One-way turnover summed over the replay, as a fraction of equity. </p>
 <p><span class="tt">missing()</span> when any execution was in a currency other than the equity curve's (whatever the opening equity), and otherwise <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> when the opening equity is zero or negative. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00237">237</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00247">247</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>

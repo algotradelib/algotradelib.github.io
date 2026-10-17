@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"structalgotradelib_1_1strategy_1_1NoCaps.html#a1e730008d3fc877585ca71d24bf20f53":[2,0,0,10,10,11],
+"structalgotradelib_1_1strategy_1_1NoCaps.html#a1fa1afff98a4b291ccb13c61fc7094b8":[1,0,0,10,11,10],
 "structalgotradelib_1_1strategy_1_1NoCaps.html#a1fa1afff98a4b291ccb13c61fc7094b8":[2,0,0,10,10,10],
 "structalgotradelib_1_1strategy_1_1NoCaps.html#a21d74d492db9bf8c3e18bbbc72af7d09":[1,0,0,10,11,17],
 "structalgotradelib_1_1strategy_1_1NoCaps.html#a21d74d492db9bf8c3e18bbbc72af7d09":[2,0,0,10,10,17],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html#a85245572acff20b671b7b5d4241d164d":[2,0,0,10,0,0,2],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html#ac2d331812647390d36545e24bdfee1ad":[1,0,0,10,1,0,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html#ac2d331812647390d36545e24bdfee1ad":[2,0,0,10,0,0,3],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html":[1,0,0,10,1,0,0],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html":[2,0,0,10,0,0,0],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html#a28b04a70130da94295912da4a2dace0f":[1,0,0,10,1,0,0,0]
+"structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html":[1,0,0,10,1,0,0]
 };

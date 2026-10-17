@@ -178,7 +178,8 @@ Credentials from files</h2>
 <div class="fragment"><div class="line">cmake --build build --target example-tossinvest-account</div>
 <div class="line">./build/bin/example-tossinvest-account</div>
 <div class="line">./build/bin/example-tossinvest-account 123456</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
+</div><!-- fragment --><p>A Toss key holds one access token at a time: issuing a token revokes the one issued before it. Two programs running with the same key therefore revoke each other's token. When Toss refuses a token (HTTP 401), the request fails, and <span class="tt">TossClient</span> asks for a new token on the next request. The refused request is not sent again.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
 Order clients</h1>
 <p>Both brokers expose order placement, modification, cancellation, and order inquiry through matching async and blocking entry points.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
@@ -230,7 +231,7 @@ Stop-limit orders</h2>
 <p>A broker whose <span class="tt">BrokerCaps::has_trigger_price</span> is false, Toss included, never receives a trigger on a placement or a modification: the session refuses it as <span class="tt">unsupported_trigger_price</span>. The session never refuses a cancellation for carrying one, and <span class="tt">cancel_all</span> restates the resting trigger; Kiwoom alone refuses a cancellation that states a <em>different</em> trigger, because <span class="tt">kt10003</span> cannot change one on the way out.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
 Not supported yet</h2>
-<p>Toss amount-based order <em>placement</em>, which is also how Toss buys a fraction — an amount-based order is read back with its amount, and placing one is outstanding. A fractional quantity is placed only where Toss accepts one: a US market sell, to six decimal places, during the regular session until an hour before the close. Toss conditional orders. KIS credit, reserved and overseas orders. KIS's 시간외 단일가 (<span class="tt">07</span>): the inquiry publishes it, the order sheet does not. KIS history older than three months, and real-time execution notifications.</p>
+<p>Toss amount-based order <em>placement</em>, which is also how Toss buys a fraction — an amount-based order is read back with its amount (<span class="tt">OrderSnapshot::order_amount_</span>, rounded half to even to 18 significant digits when Toss states more than a <span class="tt">Decimal64</span> holds), and placing one is outstanding. A fractional quantity is placed only where Toss accepts one: a US market sell, to six decimal places, during the regular session until an hour before the close. Toss conditional orders. KIS credit, reserved and overseas orders. KIS's 시간외 단일가 (<span class="tt">07</span>): the inquiry publishes it, the order sheet does not. KIS history older than three months, and real-time execution notifications.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
 Where to go next</h1>
 <p>The <a class="el" href="broker-port.html#md_doxygen_2vignettes_2the-broker-port" title="doxygen/vignettes/the-broker-port.md">broker port</a> is the layer above these clients, and is what strategy-side code should be written against. <a class="el" href="binding-a-broker.html#md_doxygen_2vignettes_2binding-a-broker" title="doxygen/vignettes/binding-a-broker.md">Binding a broker</a> is the operator's view of putting one behind a running strategy. </p>
