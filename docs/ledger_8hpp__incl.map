@@ -1,40 +1,42 @@
 <map id="algotradelib/src/backtest/ledger.hpp" name="algotradelib/src/backtest/ledger.hpp">
-<area shape="rect" id="Node000001" title="The replay ledger: positions, cash and realized profit a backtest keeps, in exact decimals." alt="" coords="352,5,535,45"/>
-<area shape="rect" id="Node000002" href="$event_8hpp.html" title="The events a runner delivers to a strategy&#39;s handlers, and the market phase." alt="" coords="307,93,465,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="432,47,405,84,401,80,427,44"/>
+<area shape="rect" id="Node000001" title="The replay ledger: positions, cash and realized profit a backtest keeps, in exact decimals." alt="" coords="395,5,577,45"/>
+<area shape="rect" id="Node000002" href="$event_8hpp.html" title="The events a runner delivers to a strategy&#39;s handlers, and the market phase." alt="" coords="350,93,507,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="474,47,447,84,443,80,470,44"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="184,167,316,192"/>
-<area shape="poly" id="edge21_Node000001_Node000003" title=" " alt="" coords="380,48,336,67,297,95,275,124,260,155,256,153,270,122,293,91,334,63,377,43"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="417,167,491,192"/>
-<area shape="poly" id="edge22_Node000001_Node000006" title=" " alt="" coords="458,44,470,67,479,93,479,126,469,155,464,154,474,125,474,94,465,69,453,47"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="5,167,68,192"/>
-<area shape="poly" id="edge25_Node000001_Node000009" title=" " alt="" coords="352,32,266,38,175,50,96,68,67,81,47,95,39,108,34,122,34,153,29,153,29,122,34,106,43,92,64,76,94,63,174,44,265,33,352,27"/>
-<area shape="rect" id="Node000010" href="$portfolio_8hpp_source.html" title=" " alt="" coords="57,93,232,119"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="372,48,202,92,201,87,371,43"/>
-<area shape="rect" id="Node000011" href="$cost_8hpp.html" title="Trading costs for a backtest: commission (CommissionModel, CommissionPolicy), slippage (SlippageModel..." alt="" coords="539,93,617,119"/>
-<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="477,43,548,84,545,89,474,48"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="689,167,787,192"/>
-<area shape="poly" id="edge23_Node000001_Node000012" title=" " alt="" coords="512,43,571,64,630,91,678,123,717,155,713,159,674,127,627,96,569,68,510,48"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="811,167,871,192"/>
-<area shape="poly" id="edge24_Node000001_Node000013" title=" " alt="" coords="518,43,591,64,668,91,745,125,809,158,807,162,742,129,666,96,590,69,517,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,121,285,163,283,158,363,116"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="93,167,159,192"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="345,121,173,168,172,163,344,116"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="598,167,665,192"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="426,116,586,162,584,167,425,121"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="399,117,435,155,431,158,395,121"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="340,167,392,192"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="385,120,375,154,370,153,380,118"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="515,167,574,192"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="413,116,507,159,505,163,410,121"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="322,121,82,169,81,164,321,116"/>
-<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="163,116,223,157,220,161,160,121"/>
-<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="144,120,135,154,130,153,139,118"/>
-<area shape="poly" id="edge12_Node000010_Node000006" title=" " alt="" coords="195,116,404,164,403,169,194,121"/>
-<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="129,121,67,161,64,157,126,116"/>
-<area shape="poly" id="edge15_Node000011_Node000003" title=" " alt="" coords="540,118,317,166,316,161,539,113"/>
-<area shape="poly" id="edge16_Node000011_Node000005" title=" " alt="" coords="589,117,617,154,612,157,585,121"/>
-<area shape="poly" id="edge17_Node000011_Node000006" title=" " alt="" coords="559,121,487,162,485,157,557,116"/>
-<area shape="poly" id="edge18_Node000011_Node000008" title=" " alt="" coords="575,120,558,155,553,153,570,118"/>
-<area shape="poly" id="edge19_Node000011_Node000012" title=" " alt="" coords="605,116,700,159,698,163,603,121"/>
-<area shape="poly" id="edge20_Node000011_Node000013" title=" " alt="" coords="617,115,798,164,797,169,616,120"/>
+<area shape="poly" id="edge22_Node000001_Node000003" title=" " alt="" coords="434,48,387,69,340,96,302,126,271,158,267,154,298,122,336,91,384,64,432,43"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="498,167,573,192"/>
+<area shape="poly" id="edge23_Node000001_Node000007" title=" " alt="" coords="500,45,522,92,535,152,530,154,517,94,495,47"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="5,167,68,192"/>
+<area shape="poly" id="edge26_Node000001_Node000010" title=" " alt="" coords="395,36,311,44,221,57,142,74,111,84,89,96,75,108,63,123,47,155,42,153,59,120,71,104,86,91,109,79,141,69,220,51,310,39,394,30"/>
+<area shape="rect" id="Node000011" href="$portfolio_8hpp_source.html" title=" " alt="" coords="100,93,275,119"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="415,48,245,92,243,87,414,43"/>
+<area shape="rect" id="Node000012" href="$cost_8hpp.html" title="Trading costs for a backtest: commission (CommissionModel, CommissionPolicy), slippage (SlippageModel..." alt="" coords="591,93,669,119"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="522,43,598,84,596,89,519,48"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="771,167,868,192"/>
+<area shape="poly" id="edge24_Node000001_Node000013" title=" " alt="" coords="553,43,616,64,682,91,743,124,793,157,791,161,740,129,680,96,614,69,551,48"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="892,167,952,192"/>
+<area shape="poly" id="edge25_Node000001_Node000014" title=" " alt="" coords="563,43,641,64,724,91,812,125,887,158,885,163,810,130,722,96,640,69,561,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="401,121,293,164,291,159,399,116"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="341,167,397,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="421,121,389,158,385,154,417,117"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="93,167,159,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="378,121,173,169,172,164,377,116"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="597,167,663,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="462,116,585,159,584,165,460,121"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="447,116,508,157,505,161,444,121"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="421,167,473,192"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="434,118,443,153,438,154,429,120"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="687,167,746,192"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="479,116,674,164,673,169,477,121"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="351,121,229,141,82,169,81,164,228,136,350,116"/>
+<area shape="poly" id="edge11_Node000011_Node000003" title=" " alt="" coords="200,117,233,154,229,158,196,121"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="179,121,147,158,143,154,175,117"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="247,116,485,164,486,164,485,169,484,169,246,121"/>
+<area shape="poly" id="edge14_Node000011_Node000010" title=" " alt="" coords="164,121,75,163,73,158,162,116"/>
+<area shape="poly" id="edge16_Node000012_Node000003" title=" " alt="" coords="592,117,325,167,324,162,591,112"/>
+<area shape="poly" id="edge17_Node000012_Node000006" title=" " alt="" coords="633,119,633,153,627,153,627,119"/>
+<area shape="poly" id="edge18_Node000012_Node000007" title=" " alt="" coords="616,121,563,160,560,156,613,117"/>
+<area shape="poly" id="edge19_Node000012_Node000009" title=" " alt="" coords="646,117,694,156,690,160,642,121"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="661,116,776,159,775,164,659,121"/>
+<area shape="poly" id="edge21_Node000012_Node000014" title=" " alt="" coords="669,113,879,164,878,169,668,119"/>
 </map>

@@ -226,7 +226,7 @@ template&lt;typename Strategy, typename Session, typename Journal, typename Cloc
 <div class="line">  <span class="keyword">typename</span> Session::BrokerTag,</div>
 <div class="line">  <a class="code hl_class" href="classalgotradelib_1_1runner_1_1JournalingExecutor.html">runner::JournalingExecutor&lt;SessionExecutor&lt;Session&gt;</a>, Journal, Clock&gt;</div>
 <div class="line">&gt;</div>
-<div class="ttc" id="aclassalgotradelib_1_1runner_1_1JournalingExecutor_html"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1JournalingExecutor.html">algotradelib::runner::JournalingExecutor</a></div><div class="ttdoc">An executor wrapper that records each instruction in a journal before sending it.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00536">journal.hpp:536</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1runner_1_1JournalingExecutor_html"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1JournalingExecutor.html">algotradelib::runner::JournalingExecutor</a></div><div class="ttdoc">An executor wrapper that records each instruction in a journal before sending it.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00695">journal.hpp:695</a></div></div>
 </div><!-- fragment -->
 <p>The runner type <span class="tt"><a class="el" href="#a3ce65f98a5517b9dfdb8502d798508d7" title="Binds a strategy to a broker session, recording every instruction in a journal before it is sent.">bind_journaled</a></span> returns: the same pipeline, journaling before it sends. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -262,7 +262,7 @@ template&lt;typename Strategy, typename Session&gt; </div>
 <div class="line">  <span class="keyword">typename</span> Session::BrokerTag,</div>
 <div class="line">  <a class="code hl_class" href="classalgotradelib_1_1runner_1_1RecordingExecutor.html">runner::RecordingExecutor&lt;typename Session::BrokerTag&gt;</a></div>
 <div class="line">&gt;</div>
-<div class="ttc" id="aclassalgotradelib_1_1runner_1_1RecordingExecutor_html"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1RecordingExecutor.html">algotradelib::runner::RecordingExecutor</a></div><div class="ttdoc">An executor that sends nothing and records what it was given (the dry run&#39;s default).</div><div class="ttdef"><b>Definition</b> <a href="execution_8hpp_source.html#l00488">execution.hpp:488</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1runner_1_1RecordingExecutor_html"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1RecordingExecutor.html">algotradelib::runner::RecordingExecutor</a></div><div class="ttdoc">An executor that sends nothing and records what it was given (the dry run&#39;s default).</div><div class="ttdef"><b>Definition</b> <a href="execution_8hpp_source.html#l00612">execution.hpp:612</a></div></div>
 </div><!-- fragment -->
 <p>The runner type <span class="tt"><a class="el" href="#a4277e01edb971953e079b47f1e587440" title="Binds a strategy for observation: the session&#39;s capabilities and broker tag, and nothing to send thro...">bind_observer</a></span> returns: the same capabilities and tag, sending nowhere. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>

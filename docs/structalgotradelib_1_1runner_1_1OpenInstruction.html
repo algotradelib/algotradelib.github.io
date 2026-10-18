@@ -150,7 +150,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>One instruction of unknown outcome, and the span in which it may have reached the broker. </p>
 <p>Either a <span class="tt">PENDING</span> line with no answer (the span's end is unknown), or one answered <span class="tt">INDETERMINATE</span> (the two lines bracket the send exactly). </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00351">351</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00510">510</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a966316552e8ee2cbe474241930afc920" name="a966316552e8ee2cbe474241930afc920"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a966316552e8ee2cbe474241930afc920">&#9670;&#160;</a></span>answered_</h2>
@@ -166,9 +166,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether an <span class="tt">INDETERMINATE</span> line answered it. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00362">362</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00521">521</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00378">algotradelib::runner::unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00537">algotradelib::runner::unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -186,9 +186,9 @@ Public Attributes</h2></td></tr>
 
 <p>When the send was answered: by an <span class="tt">INDETERMINATE</span> line in <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#abe75759c1f7351fcc6b793f2beac3198" title="Lists the instructions whose outcome is unknown, in the order they were opened.">unresolved_instructions</a></span>, by any answer in <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a311ea75eeaeb237f2905eedd3ed3ba55" title="Returns the placements a journal records an order id for, each with the span of its send.">recorded_placements</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00360">360</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00519">519</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00151">algotradelib::runner::instruction_sent_by()</a>, and <a class="el" href="journal_8hpp_source.html#l00378">algotradelib::runner::unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00151">algotradelib::runner::instruction_sent_by()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">algotradelib::runner::unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -206,9 +206,9 @@ Public Attributes</h2></td></tr>
 
 <p>What the journal says went wrong. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00364">364</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00523">523</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00433">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01245">algotradelib::runner::recover_into()</a>, and <a class="el" href="journal_8hpp_source.html#l00378">algotradelib::runner::unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00592">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01291">algotradelib::runner::recover_into()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">algotradelib::runner::unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -226,9 +226,9 @@ Public Attributes</h2></td></tr>
 
 <p>The instruction, as its first line recorded it (its <span class="tt">order_id_</span> may come from a later line). </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00353">353</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00512">512</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01031">algotradelib::runner::any_placement()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00998">algotradelib::runner::decide_nothing()</a>, <a class="el" href="journal_8hpp_source.html#l00433">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00541">algotradelib::runner::recorded_owner()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::recorded_placements()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01245">algotradelib::runner::recover_into()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00855">algotradelib::runner::resolution_entry()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00288">algotradelib::runner::route_evidence()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00319">algotradelib::runner::row_corresponds()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00374">algotradelib::runner::row_might_correspond()</a>, and <a class="el" href="journal_8hpp_source.html#l00378">algotradelib::runner::unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01077">algotradelib::runner::any_placement()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01044">algotradelib::runner::decide_nothing()</a>, <a class="el" href="journal_8hpp_source.html#l00592">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00588">algotradelib::runner::recorded_owner()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00535">algotradelib::runner::recorded_placements()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01291">algotradelib::runner::recover_into()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00901">algotradelib::runner::resolution_entry()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00337">algotradelib::runner::route_evidence()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00368">algotradelib::runner::row_corresponds()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00423">algotradelib::runner::row_might_correspond()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">algotradelib::runner::unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -246,9 +246,9 @@ Public Attributes</h2></td></tr>
 
 <p>When the send began. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00355">355</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00514">514</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01184">algotradelib::runner::history_range_for()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00151">algotradelib::runner::instruction_sent_by()</a>, <a class="el" href="journal_8hpp_source.html#l00433">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::recorded_placements()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00263">algotradelib::runner::time_evidence()</a>, and <a class="el" href="journal_8hpp_source.html#l00378">algotradelib::runner::unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01230">algotradelib::runner::history_range_for()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00151">algotradelib::runner::instruction_sent_by()</a>, <a class="el" href="journal_8hpp_source.html#l00592">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00535">algotradelib::runner::recorded_placements()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00312">algotradelib::runner::time_evidence()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">algotradelib::runner::unresolved_instructions()</a>.</p>
 
 </div>
 </div>

@@ -5,6 +5,7 @@ var classalgotradelib_1_1backtest_1_1NextBarFillModel =
     [ "commission", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a09410f6da32b620fac7857bc8fb37d0d", null ],
     [ "decide", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a5d44bc0415ddeb1302ec9d75b4ee6151", null ],
     [ "limit_price", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#aeb771c4675fcfdbf9175ecd96874e452", null ],
+    [ "limit_priced", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#aecce6069b9d2aebb8687783c883564d1", null ],
     [ "rests_unfilled", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#ae149f9190db239ccd789a7f23bf68af7", null ],
     [ "sell_tax", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a6a80ebd2b6271b092c69192290920823", null ],
     [ "slippage", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#afe6184b725200162c30cbe7f0df6152f", null ],

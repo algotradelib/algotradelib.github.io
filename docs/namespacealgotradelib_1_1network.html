@@ -201,7 +201,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abbef45142e4c629274d3d8f94b8dadb8" id="r_abbef45142e4c629274d3d8f94b8dadb8"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abbef45142e4c629274d3d8f94b8dadb8">rate_limit_group_count</a> = 5</td></tr>
+<tr class="memitem:a7c168ac063af20e85ccdeec25f9bbacb" id="r_a7c168ac063af20e85ccdeec25f9bbacb"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#a083ad43ca671110d78741e3c5b113940">RateLimitGroup</a>, 5 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7c168ac063af20e85ccdeec25f9bbacb">all_rate_limit_groups</a></td></tr>
+<tr class="memdesc:a7c168ac063af20e85ccdeec25f9bbacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#a083ad43ca671110d78741e3c5b113940" title="The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds ...">RateLimitGroup</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:abbef45142e4c629274d3d8f94b8dadb8" id="r_abbef45142e4c629274d3d8f94b8dadb8"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abbef45142e4c629274d3d8f94b8dadb8">rate_limit_group_count</a> = all_rate_limit_groups.size()</td></tr>
 <tr class="memdesc:abbef45142e4c629274d3d8f94b8dadb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of traffic classes.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -239,7 +241,7 @@ Variables</h2></td></tr>
 
 <p>A rate-limit bucket on the steady clock. </p>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00317">317</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00341">341</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
 </div>
 </div>
@@ -296,7 +298,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00023">23</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00026">26</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,9 +415,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An index below <span class="tt"><a class="el" href="#abbef45142e4c629274d3d8f94b8dadb8" title="The number of traffic classes.">rate_limit_group_count</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00090">90</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00107">107</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00352">algotradelib::network::RateLimitStats::group()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00361">algotradelib::network::RateLimitStats::group()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00090">rate_limit_group_index()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00376">algotradelib::network::RateLimitStats::group()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00385">algotradelib::network::RateLimitStats::group()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00107">rate_limit_group_index()</a>.</p>
 
 </div>
 </div>
@@ -449,11 +451,11 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a083ad43ca671110d78741e3c5b113940" title="The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds ...">RateLimitGroup</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00066">66</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00078">78</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00066">rate_limit_group_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00078">rate_limit_group_name()</a>.</p>
 
 </div>
 </div>
@@ -490,9 +492,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The priority; larger is served first. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00045">45</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00057">57</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00045">rate_limit_priority()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00057">rate_limit_priority()</a>.</p>
 
 </div>
 </div>
@@ -619,13 +621,51 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">burst_</span> for <span class="tt">TRADING</span> and <span class="tt">AUTH</span>; otherwise <span class="tt">burst_ - trading_reserve_</span>, at least 1. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00121">121</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00138">138</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00403">algotradelib::network::RateLimitController::acquire()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00394">algotradelib::network::RateLimitController::delay_until()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00121">usable_burst()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00427">algotradelib::network::RateLimitController::acquire()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00418">algotradelib::network::RateLimitController::delay_until()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00138">usable_burst()</a>.</p>
 
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a7c168ac063af20e85ccdeec25f9bbacb" name="a7c168ac063af20e85ccdeec25f9bbacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c168ac063af20e85ccdeec25f9bbacb">&#9670;&#160;</a></span>all_rate_limit_groups</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#a083ad43ca671110d78741e3c5b113940">RateLimitGroup</a>, 5&gt; algotradelib::network::all_rate_limit_groups</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d">RateLimitGroup::TRADING</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced">RateLimitGroup::AUTH</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6">RateLimitGroup::ACCOUNT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c">RateLimitGroup::MARKET_DATA</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f">RateLimitGroup::REFERENCE</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c">algotradelib::network::RateLimitGroup::MARKET_DATA</a></div><div class="ttdeci">@ MARKET_DATA</div><div class="ttdoc">Quotes, bars, order book and trades.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00034">rate_limit.hpp:34</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6">algotradelib::network::RateLimitGroup::ACCOUNT</a></div><div class="ttdeci">@ ACCOUNT</div><div class="ttdoc">Holdings, working orders, order history and buying power.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00032">rate_limit.hpp:32</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d">algotradelib::network::RateLimitGroup::TRADING</a></div><div class="ttdeci">@ TRADING</div><div class="ttdoc">Order placement, amendment and cancellation.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00028">rate_limit.hpp:28</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f">algotradelib::network::RateLimitGroup::REFERENCE</a></div><div class="ttdeci">@ REFERENCE</div><div class="ttdoc">Instrument reference data and trading calendars.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00036">rate_limit.hpp:36</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced">algotradelib::network::RateLimitGroup::AUTH</a></div><div class="ttdeci">@ AUTH</div><div class="ttdoc">Access-token issue and refresh.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00030">rate_limit.hpp:30</a></div></div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#a083ad43ca671110d78741e3c5b113940" title="The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds ...">RateLimitGroup</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00040">40</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+
+</div>
+</div>
 <a id="abbef45142e4c629274d3d8f94b8dadb8" name="abbef45142e4c629274d3d8f94b8dadb8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbef45142e4c629274d3d8f94b8dadb8">&#9670;&#160;</a></span>rate_limit_group_count</h2>
 
@@ -636,7 +676,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t algotradelib::network::rate_limit_group_count = 5</td>
+          <td class="memname">std::size_t algotradelib::network::rate_limit_group_count = all_rate_limit_groups.size()</td>
         </tr>
       </table>
   </td>
@@ -648,7 +688,7 @@ Variables</h2></td></tr>
 
 <p>The number of traffic classes. </p>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00083">83</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00100">100</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
 </div>
 </div>

@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
 <p>The rate limit counts what was recorded with <span class="tt"><a class="el" href="#a180aca7b518a84c6ea0960a2392c6c68" title="Records that a request was sent, for the rate limit.">note_sent</a></span>. The runner records every placement or cancellation that was sent or may have been sent: accepted, rejected by the broker, or of unknown outcome. A request refused before sending (by this guard, the binding or the adapter) is not recorded, so it uses no budget.</p>
 <dl class="section note"><dt>Note</dt><dd>Not thread-safe; one guard belongs to one runner. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00678">678</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00706">706</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5bfbbcead4b71e31b167bc1737079df2" name="a5bfbbcead4b71e31b167bc1737079df2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bfbbcead4b71e31b167bc1737079df2">&#9670;&#160;</a></span>RiskGuard()</h2>
@@ -208,7 +208,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00684">684</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00712">712</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -239,9 +239,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns the hold that stops placements, the most fundamental first. </p>
 <dl class="section return"><dt>Returns</dt><dd>The first held reason in <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span> order, or <span class="tt">std::nullopt</span> if none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00776">776</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00804">804</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00899">evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">evaluate()</a>.</p>
 
 </div>
 </div>
@@ -277,9 +277,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The first held reason that stops <span class="tt">klass</span>, or <span class="tt">std::nullopt</span> if none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00785">785</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00813">813</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00776">blocking_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00804">blocking_reason()</a>.</p>
 
 </div>
 </div>
@@ -335,7 +335,7 @@ template&lt;typename Broker&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Why the order is refused, or <span class="tt">std::nullopt</span> if it is permitted. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#af5bf29b25d94666402eedff4da58018e" title="Checks one planned order, and reports whether only the closing exception admitted it.">evaluate</a>, which also reports whether the order was admitted by the closing exception. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00877">877</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00905">905</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -391,9 +391,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The decision. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00899">899</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00927">927</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00877">check()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00905">check()</a>.</p>
 
 </div>
 </div>
@@ -428,7 +428,7 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00860">860</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00888">888</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -458,7 +458,7 @@ template&lt;typename Broker&gt; </div>
 <p>Takes the operator's hold (<span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#aff76e0ec02bd1189fad25036355a2752a986496ca5b23669b8661171566a167c3" title="A person stopped trading with RiskGuard::halt(); only RiskGuard::resume() clears it.">HaltReason::OPERATOR</a></span>): no order or cancellation is sent until <span class="tt"><a class="el" href="#a6bfd79ecdbb68172b49d805ea5e7f56b" title="Releases the operator&#39;s hold; other holds, if any, still stop trading.">resume()</a></span>. </p>
 <p>This only stops sending ("quiesce"): working orders and positions are left as they are. To also cancel working orders or close positions, use <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677" title="What an operator asks for when stopping a running loop.">runner::StopIntent</a></span> with <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">runner::PollingLoop</a></span>, or a strategy such as <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1vanilla_1_1TimedLiquidation.html" title="Flattens every position when the market enters a phase it should not hold through.">vanilla::TimedLiquidation</a></span>. The hold is in memory; <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1FileStopChannel.html" title="A control file an operator writes to stop a running loop with a given intent.">runner::FileStopChannel</a></span> and <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1SignalStop.html" title="Routes SIGINT and SIGTERM to a StopSource as a quiesce, and ignores SIGHUP where it exists (POSIX); o...">runner::SignalStop</a></span> stop a running process from outside. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00718">718</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00746">746</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -493,9 +493,9 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00738">738</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00766">766</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00738">halt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00766">halt()</a>.</p>
 
 </div>
 </div>
@@ -536,7 +536,7 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00729">729</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00757">757</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +566,7 @@ template&lt;typename Broker&gt; </div>
 <p>Tests whether any hold is in force. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if at least one hold is held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00756">756</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00784">784</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -602,7 +602,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it is held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00770">770</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00798">798</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -632,7 +632,7 @@ template&lt;typename Broker&gt; </div>
 <p>Returns every hold in force. </p>
 <dl class="section return"><dt>Returns</dt><dd>The held reasons, most fundamental first. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00808">808</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00836">836</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -662,9 +662,9 @@ template&lt;typename Broker&gt; </div>
 <p>Returns the limits. </p>
 <dl class="section return"><dt>Returns</dt><dd>The limits in force. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00690">690</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00718">718</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00684">RiskGuard()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00712">RiskGuard()</a>.</p>
 
 </div>
 </div>
@@ -700,7 +700,7 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00826">826</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00854">854</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +736,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#ae7ebe64324f594d53b35de6496000819" title="The market phases in which a position may be opened or increased; absent means any.">RiskLimits::permitted_phases_</a></span> is absent or contains <span class="tt">phase</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00697">697</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00725">725</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -772,9 +772,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00846">846</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00874">874</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00899">evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">evaluate()</a>.</p>
 
 </div>
 </div>
@@ -803,9 +803,9 @@ template&lt;typename Broker&gt; </div>
 
 <p>Releases the operator's hold; other holds, if any, still stop trading. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00741">741</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00769">769</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00741">resume()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00769">resume()</a>.</p>
 
 </div>
 </div>
@@ -840,7 +840,7 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00747">747</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00775">775</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -871,7 +871,7 @@ template&lt;typename Broker&gt; </div>
 <p>Unlike <span class="tt"><a class="el" href="#a059c6ac4703c5849bf34027905fe852f" title="Returns how many orders were sent within RiskLimits::rate_window_ before an instant.">recent_orders</a></span>, it never decreases, so a caller can difference it across a call to learn whether anything was sent in between.</p>
 <dl class="section return"><dt>Returns</dt><dd>The total count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00839">839</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00867">867</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>

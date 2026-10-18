@@ -177,7 +177,7 @@ Namespaces</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The backtest engine: <span class="tt">Backtester</span> replays bars (and quotes) through the same <span class="tt">Runner</span> a live session uses. </p>
-<p>An order decided on bar <em>n</em> is queued and filled against bar <em>n+1</em> or later, never the bar it was decided on. Nothing assumes a bar is a day: the same engine replays minute and daily bars. </p>
+<p>An order decided on bar <em>n</em> is queued and filled against bar <em>n+1</em> or later, never the bar it was decided on. Nothing assumes a bar is a day: the same engine replays intraday and daily bars. </p>
 
 <p class="definition">Definition in file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div></div><!-- contents -->

@@ -7,6 +7,7 @@ var classalgotradelib_1_1backtest_1_1QueueingExecutor =
     [ "deciding_at", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a0245a37392a001497723893e7833afb3", null ],
     [ "find", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a9cb76251fae0be8b65f62c35beec8a9e", null ],
     [ "last_ref", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a2db1a4671fa24ff023c40e818461ee1c", null ],
+    [ "models_time_in_force", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a1b38ade8d136a3ba486cddf75af0508c", null ],
     [ "open_bar", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#acb9fff17fc5147274ea304597ba2b669", null ],
     [ "place", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#ab8eec746d4ee345671591b49eac5084c", null ],
     [ "queued", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a0f89dd39fdccbb144a21221a6f38a60c", null ],

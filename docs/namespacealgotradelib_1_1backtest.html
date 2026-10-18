@@ -178,7 +178,7 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:acd73673d1e6bfa8aedfc949137724705" id="r_acd73673d1e6bfa8aedfc949137724705"><td class="memItemLeft">std::optional&lt; std::chrono::seconds &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acd73673d1e6bfa8aedfc949137724705">interval_duration</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval)</td></tr>
-<tr class="memdesc:acd73673d1e6bfa8aedfc949137724705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed duration of an interval.  <br /></td></tr>
+<tr class="memdesc:acd73673d1e6bfa8aedfc949137724705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed duration of an interval (<span class="tt"><a class="el" href="namespacealgotradelib.html#a17f3163b5d9df8ecc71ea5f3c2ce7d77" title="Returns an interval&#39;s fixed length, for an intraday interval.">bar_interval_length</a></span>).  <br /></td></tr>
 <tr class="memitem:a7f25da0c437c8ae30b84192f617a2077" id="r_a7f25da0c437c8ae30b84192f617a2077"><td class="memItemLeft">std::optional&lt; <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7f25da0c437c8ae30b84192f617a2077">periods_per_year</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, const <a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">strategy::SessionWindow</a> &amp;session, <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> trading_days)</td></tr>
 <tr class="memdesc:a7f25da0c437c8ae30b84192f617a2077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many bars of an interval a year contains, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#ab19fa55f5c2131a1fc28ab652b43d0e1" title="Annualizes a per-period ratio by multiplying it by sqrt(periods_per_year).">analytics::annualize_ratio</a></span>.  <br /></td></tr>
 <tr class="memitem:a163a37b1cd1c3f7fbc9f2e50d654e5ab" id="r_a163a37b1cd1c3f7fbc9f2e50d654e5ab"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1CommissionModel.html">CommissionModel</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a163a37b1cd1c3f7fbc9f2e50d654e5ab">commission_model_from</a> (const <a class="el" href="structalgotradelib_1_1CommissionSchedule.html">CommissionSchedule</a> &amp;schedule, <a class="el" href="namespacealgotradelib.html#a9ac772587aa2f4d74513bfcb82bd6fe9">Country</a> country, const <a class="el" href="structalgotradelib_1_1Date.html">Date</a> &amp;date)</td></tr>
@@ -298,18 +298,18 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the fixed duration of an interval. </p>
+<p>Returns the fixed duration of an interval (<span class="tt"><a class="el" href="namespacealgotradelib.html#a17f3163b5d9df8ecc71ea5f3c2ce7d77" title="Returns an interval&#39;s fixed length, for an intraday interval.">bar_interval_length</a></span>). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interval</td><td>The interval. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>60 seconds for <span class="tt">ONE_MINUTE</span>; <span class="tt">std::nullopt</span> for a day or longer, which has no fixed trading duration. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The length of an intraday interval; <span class="tt">std::nullopt</span> for a day or longer, which has no fixed trading duration. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00030">30</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00156">algotradelib::backtest::ReplayClock::contiguous()</a>, <a class="el" href="backtest_2clock_8hpp_source.html#l00030">interval_duration()</a>, and <a class="el" href="backtest_2clock_8hpp_source.html#l00056">periods_per_year()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00148">algotradelib::backtest::ReplayClock::contiguous()</a>, <a class="el" href="backtest_2clock_8hpp_source.html#l00030">interval_duration()</a>, and <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>.</p>
 
 </div>
 </div>
@@ -384,20 +384,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns how many bars of an interval a year contains, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#ab19fa55f5c2131a1fc28ab652b43d0e1" title="Annualizes a per-period ratio by multiplying it by sqrt(periods_per_year).">analytics::annualize_ratio</a></span>. </p>
-<p>Daily bars: <span class="tt">trading_days</span>. Minute bars: session minutes per day times <span class="tt">trading_days</span> (KRX's 390-minute session and 245 days give 95,550).</p>
+<p>Daily bars: <span class="tt">trading_days</span>. Intraday bars: the bars a session holds, times <span class="tt">trading_days</span>. A session that is not a whole number of bars ends with a shorter one, which counts: KRX's 390-minute session holds 390 one-minute bars (95,550 a year over 245 days) and 7 hourly ones, the last of them 30 minutes.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interval</td><td>The bar interval. </td></tr>
-    <tr><td class="paramname">session</td><td>The session window (used for minute bars). </td></tr>
+    <tr><td class="paramname">session</td><td>The session window (used for intraday bars). </td></tr>
     <tr><td class="paramname">trading_days</td><td>Trading days per year, such as about 245 for KRX or 252 for US markets. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The count, or <span class="tt">std::nullopt</span> for weekly, monthly or yearly bars, a non-positive <span class="tt">trading_days</span>, or (for minute bars) a session whose close is not after its open. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The count, or <span class="tt">std::nullopt</span> for weekly, monthly or yearly bars, a non-positive <span class="tt">trading_days</span>, or (for intraday bars) a session whose close is not after its open. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00056">56</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00047">47</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00056">periods_per_year()</a>, and <a class="el" href="report_8hpp_source.html#l00326">summarize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>, and <a class="el" href="report_8hpp_source.html#l00326">summarize()</a>.</p>
 
 </div>
 </div>

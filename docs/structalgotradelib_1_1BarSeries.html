@@ -161,7 +161,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The bars of one instrument and interval, oldest first. </p>
 <p>Adapters reverse the brokers' newest-first order, so bars are ascending in time. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00089">89</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00151">151</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a14b10ac655d7cce2b14b278d4e0a3e5c" name="a14b10ac655d7cce2b14b278d4e0a3e5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14b10ac655d7cce2b14b278d4e0a3e5c">&#9670;&#160;</a></span>ascending()</h2>
@@ -189,7 +189,7 @@ Public Attributes</h2></td></tr>
 <p>Tests whether the bars are strictly ascending in time. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if each timestamp is later than the one before. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00120">120</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00182">182</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -208,7 +208,7 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the prices are adjusted for corporate actions. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00099">99</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00161">161</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,9 +227,9 @@ Public Attributes</h2></td></tr>
 <p>The bars, oldest first. </p>
 <p>There can be fewer than <span class="tt"><a class="el" href="structalgotradelib_1_1BarQuery.html#a908df933456a0721f5b24f2cae36b8d7" title="How many bars to return in total, across pages.">BarQuery::count_</a></span>: paging stops on an empty page or when the page budget is spent. Use the size. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00106">106</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00168">168</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00120">ascending()</a>, and <a class="el" href="frame_8hpp_source.html#l00212">algotradelib::analytics::from_bars()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00182">ascending()</a>, and <a class="el" href="frame_8hpp_source.html#l00228">algotradelib::analytics::from_bars()</a>.</p>
 
 </div>
 </div>
@@ -247,7 +247,7 @@ Public Attributes</h2></td></tr>
 
 <p>The currency of the prices. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00097">97</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00159">159</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -265,9 +265,9 @@ Public Attributes</h2></td></tr>
 
 <p>The instrument. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00091">91</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00153">153</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00212">algotradelib::analytics::from_bars()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00228">algotradelib::analytics::from_bars()</a>.</p>
 
 </div>
 </div>
@@ -285,7 +285,7 @@ Public Attributes</h2></td></tr>
 
 <p>The period each bar covers. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00093">93</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00155">155</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -304,7 +304,7 @@ Public Attributes</h2></td></tr>
 <p>A cursor to continue from, if the broker has more. </p>
 <p>A short series may still carry one; an empty or exhausted one carries none. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00112">112</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00174">174</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -322,7 +322,7 @@ Public Attributes</h2></td></tr>
 
 <p>When the series was received, on this machine's clock. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00114">114</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00176">176</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -340,7 +340,7 @@ Public Attributes</h2></td></tr>
 
 <p>Which edge of its period each bar's timestamp marks. </p>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00095">95</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00157">157</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>

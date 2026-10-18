@@ -148,6 +148,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aecce6069b9d2aebb8687783c883564d1" id="r_aecce6069b9d2aebb8687783c883564d1"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#aecce6069b9d2aebb8687783c883564d1">limit_priced</a> (<a class="el" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbce">OrderType</a> type) noexcept</td></tr>
+<tr class="memdesc:aecce6069b9d2aebb8687783c883564d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether the model prices an order type against its limit (a limit order, and a stop-limit once released).  <br /></td></tr>
 <tr class="memitem:ae149f9190db239ccd789a7f23bf68af7" id="r_ae149f9190db239ccd789a7f23bf68af7"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ae149f9190db239ccd789a7f23bf68af7">rests_unfilled</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1PlannedOrder.html">strategy::PlannedOrder</a> &amp;order) noexcept</td></tr>
 <tr class="memdesc:ae149f9190db239ccd789a7f23bf68af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether an order that did not fill stays queued for a later bar of its session.  <br /></td></tr>
 </table>
@@ -351,7 +353,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The decision. A stop-limit order not yet released without both a trigger and a limit price neither trades nor rests (a released stop must still have its limit price). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00191">191</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00220">220</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
 </div>
 </div>
@@ -384,6 +386,44 @@ Static Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00116">116</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00076">NextBarFillModel()</a>, and <a class="el" href="fill_8hpp_source.html#l00091">NextBarFillModel()</a>.</p>
+
+</div>
+</div>
+<a id="aecce6069b9d2aebb8687783c883564d1" name="aecce6069b9d2aebb8687783c883564d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecce6069b9d2aebb8687783c883564d1">&#9670;&#160;</a></span>limit_priced()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool algotradelib::backtest::NextBarFillModel::limit_priced </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbce">OrderType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether the model prices an order type against its limit (a limit order, and a stop-limit once released). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The order type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">LIMIT</span> and <span class="tt">STOP_LIMIT</span>; the model fills every other type it accepts at the open. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00151">151</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">decide()</a>, and <a class="el" href="fill_8hpp_source.html#l00178">rests_unfilled()</a>.</p>
 
 </div>
 </div>
@@ -420,9 +460,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it rests. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00155">155</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00178">178</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">decide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">decide()</a>.</p>
 
 </div>
 </div>

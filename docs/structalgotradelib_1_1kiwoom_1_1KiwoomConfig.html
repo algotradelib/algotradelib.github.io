@@ -208,7 +208,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>Kiwoom credentials (app key and secret key), demo or real account, the market-data tape, and the holdings settings an account must state before trading. </p>
 <p>Load with <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a2c0bfa081b4a52d8f79b5772c4ceca96">from_env()</a></span> (<span class="tt">KIWOOM_APP_KEY</span>, <span class="tt">KIWOOM_SECRET_KEY</span>, <span class="tt">KIWOOM_DEMO</span>) or <span class="tt">from_json(filename)</span>. Holdings cannot be read until <span class="tt"><a class="el" href="#ae40058d6aa110aa6c5479c972c39619e" title="The venue holdings requests (kt00018) name: Venue::KRX or Venue::NXT. No default: holdings requests a...">holdings_venue_</a></span> is set. Orders cannot be placed or amended, and the session (so a runner) reads no holdings, until <span class="tt"><a class="el" href="#a52f50f807e1b1d4281a73fbc7a4b820d" title="Your assertion of what holdings_venue_ means for the positions listed. No default: until it is set,...">holdings_position_scope_</a></span> is set; a checked sell also needs <span class="tt"><a class="el" href="#a91c89a3450017a56addfb574a5ce43c4" title="Your assertion of what a holdings row&#39;s tradable quantity covers; separate from the position scope,...">holdings_sellable_scope_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00135">135</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00154">154</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="adbb9e353eee32010b21ff948a9642f77" name="adbb9e353eee32010b21ff948a9642f77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbb9e353eee32010b21ff948a9642f77">&#9670;&#160;</a></span>demo_from_env()</h2>
@@ -242,9 +242,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00249">249</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00268">268</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00190">from_env_impl()</a>, and <a class="el" href="kiwoom__credentials_8hpp_source.html#l00126">kiwoom_credentials::load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00209">from_env_impl()</a>, and <a class="el" href="kiwoom__credentials_8hpp_source.html#l00126">kiwoom_credentials::load()</a>.</p>
 
 </div>
 </div>
@@ -291,9 +291,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00270">270</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00289">289</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00214">from_json_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00233">from_json_impl()</a>.</p>
 
 </div>
 </div>
@@ -328,7 +328,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00190">190</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00209">209</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +370,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00214">214</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00233">233</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -400,7 +400,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The JSON field Kiwoom expects the application key under. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"appkey"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00288">288</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00307">307</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +430,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The REST host for the selected environment. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"mockapi.kiwoom.com"</span> (demo) or <span class="tt">"api.kiwoom.com"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00300">300</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00319">319</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The REST port, which is the same for both environments. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"443"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00308">308</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00327">327</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -490,7 +490,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The JSON field Kiwoom expects the application secret under. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"secretkey"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00294">294</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00313">313</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -526,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The suffixed symbol. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00329">329</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00348">348</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +556,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The WebSocket host for the selected environment. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"mockapi.kiwoom.com"</span> (demo) or <span class="tt">"api.kiwoom.com"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00314">314</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00333">333</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -586,7 +586,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The WebSocket port, which is the same for both environments. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"10000"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00322">322</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00341">341</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -606,7 +606,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Your assertion of what <span class="tt"><a class="el" href="#ae40058d6aa110aa6c5479c972c39619e" title="The venue holdings requests (kt00018) name: Venue::KRX or Venue::NXT. No default: holdings requests a...">holdings_venue_</a></span> means for the positions listed. <b>No default: until it is set, every new order and amendment is refused and the session reads no holdings</b> (cancellations, including <span class="tt"><a class="el" href="namespacealgotradelib.html#a78dae62707e84d61c38c2f32a5b2e4d4" title="Makes an instruction cancelling part of an order.">cancel_quantity()</a></span>, still go). </p>
 <p>Kiwoom does not document it, and two reads cannot settle it (the account can change between them). A wrong assertion undercounts the account: a buy can pass a ceiling already reached, and a sell can be refused or sized too small. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00174">174</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00193">193</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00997">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::holdings()</a>, and <a class="el" href="kiwoom_2traits_8hpp_source.html#l00751">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::holdings()</a>.</p>
 
@@ -627,7 +627,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Your assertion of what a holdings row's tradable quantity covers; separate from the position scope, since Kiwoom documents neither. </p>
 <p><span class="tt">UNSPECIFIED</span> (the default) leaves the sellable basis unestablished, so <span class="tt">RiskGuard</span> refuses a checked sell. <span class="tt">WHOLE_HOLDING</span> supplies the coverage; resting sells are deducted either way. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00183">183</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00202">202</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -646,7 +646,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The venue holdings requests (<span class="tt">kt00018</span>) name: <span class="tt">Venue::KRX</span> or <span class="tt">Venue::NXT</span>. <b>No default: holdings requests are refused until it is set.</b>. </p>
 <p><span class="tt">kt00018</span> has no all-venue value, and the library does not request both and merge them: if the venue only selects the valuation price, merging would double every position. If instead it filters positions, one venue's request omits what is held on the other, so a position ceiling would see too little. Which it is, Kiwoom does not document; see <span class="tt"><a class="el" href="#a52f50f807e1b1d4281a73fbc7a4b820d" title="Your assertion of what holdings_venue_ means for the positions listed. No default: until it is set,...">holdings_position_scope_</a></span>. <span class="tt">Venue::COMBINED</span> is refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00163">163</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00182">182</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -665,9 +665,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Whether to use Kiwoom's demo (모의투자) endpoints; <b><span class="tt">true</span> unless stated otherwise</b>. </p>
 <p>Real trading must be stated: <span class="tt">KIWOOM_DEMO=0</span>, <span class="tt">"demo": false</span> in the credential file, or <span class="tt"><a class="el" href="#a756f219592fd8c0eb339a6bbfff681f9" title="Whether to use Kiwoom&#39;s demo (모의투자) endpoints; true unless stated otherwise.">is_demo_</a> = false</span>. Real-account keys sent to the demo endpoints are refused at the first token request, so a forgotten setting fails rather than trades. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00143">143</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00162">162</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00190">from_env_impl()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00214">from_json_impl()</a>, <a class="el" href="kiwoom__credentials_8hpp_source.html#l00126">kiwoom_credentials::load()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00300">rest_host()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00314">ws_host()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00209">from_env_impl()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00233">from_json_impl()</a>, <a class="el" href="kiwoom__credentials_8hpp_source.html#l00126">kiwoom_credentials::load()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00319">rest_host()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00333">ws_host()</a>.</p>
 
 </div>
 </div>
@@ -686,9 +686,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Which venue's prices every Kiwoom market-data request reads (quotes, depth, trades, price bands, bars); KRX and NXT combined by default. </p>
 <p>It does not change the instrument's identity or where orders go. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00151">151</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00170">170</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00329">tape_symbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00348">tape_symbol()</a>.</p>
 
 </div>
 </div>

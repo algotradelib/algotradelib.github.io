@@ -28,7 +28,8 @@ var namespacealgotradelib_1_1kis =
     [ "kis_rate_limit_layer", "namespacealgotradelib_1_1kis.html#a3602c755430f920929fda291e0de616c", null ],
     [ "market_division_code", "namespacealgotradelib_1_1kis.html#a04043cfb30f3863c3d3919c1497da4a5", null ],
     [ "parse_expiry", "namespacealgotradelib_1_1kis.html#ab729dc7da383bb9479c5502db156b61b", null ],
+    [ "publishes_bar_interval", "namespacealgotradelib_1_1kis.html#af8d51718dea257229dd217e26efc8ee0", null ],
     [ "today_in_seoul", "namespacealgotradelib_1_1kis.html#aa2a1a824e5366578d9a76540c6af5f7f", null ],
-    [ "unsupported_bar_interval", "namespacealgotradelib_1_1kis.html#a855e1691ff0c7462f698268b796eeda5", null ],
+    [ "unsupported_bar_interval", "namespacealgotradelib_1_1kis.html#af9a1a2d31a08d6ad90defd63e0e37276", null ],
     [ "unsupported_client_order_id", "namespacealgotradelib_1_1kis.html#adbe7479366fa26fdf6012f5392893712", null ]
 ];

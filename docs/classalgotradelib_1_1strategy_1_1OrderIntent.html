@@ -165,7 +165,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>One order a strategy asks the runner to place. </p>
 <p>Make one with <span class="tt"><a class="el" href="#af292de3d1cb9a40705dd870d2e3f402e" title="Makes a limit order.">limit</a></span>, <span class="tt"><a class="el" href="#ade48d3ba127c28eff909e503a1e98f76" title="Makes a market order, which carries no price.">market</a></span> or <span class="tt"><a class="el" href="#acd1b9ca330dc5794212e799d8e816587" title="Makes a stop-limit order: a limit order the broker releases when the trigger price is reached.">stop_limit</a></span>; add a tag with <span class="tt"><a class="el" href="#a38ea8c5a9a8cb92226a0177e445bdc5a" title="Returns a copy with a tag.">with_tag</a></span> and an idempotency key with <span class="tt"><a class="el" href="#aa82b604f0fd048056b37549d2fd13957" title="Returns a copy with a broker idempotency key.">with_client_order_id</a></span>. Submit it with <span class="tt">ctx.submit(intent)</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00233">233</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00249">249</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8cf7b43ecabda5193ab7cd1fb0bc77b8" name="a8cf7b43ecabda5193ab7cd1fb0bc77b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8cf7b43ecabda5193ab7cd1fb0bc77b8">&#9670;&#160;</a></span>client_order_id()</h2>
@@ -193,7 +193,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the idempotency key. </p>
 <dl class="section return"><dt>Returns</dt><dd>The key set with <span class="tt"><a class="el" href="#aa82b604f0fd048056b37549d2fd13957" title="Returns a copy with a broker idempotency key.">with_client_order_id</a></span>, or <span class="tt">std::nullopt</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00400">400</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00416">416</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
@@ -225,9 +225,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the instrument to trade. </p>
 <dl class="section return"><dt>Returns</dt><dd>The instrument. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00352">352</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00368">368</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00245">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00306">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00278">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00261">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00322">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00294">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -257,7 +257,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the limit price. </p>
 <dl class="section return"><dt>Returns</dt><dd>The price for a limit or stop-limit order; <span class="tt">std::nullopt</span> for a market order. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00382">382</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00398">398</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 </div>
 </div>
@@ -316,9 +316,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The intent. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00245">245</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00261">261</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00245">limit()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00278">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00261">limit()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00294">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The intent. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00306">306</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00322">322</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="sizing_8hpp_source.html#l00150">algotradelib::strategy::vanilla::EqualWeightRebalance::on_phase()</a>.</p>
 
@@ -403,9 +403,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the side. </p>
 <dl class="section return"><dt>Returns</dt><dd>Buy or sell. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00358">358</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00374">374</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00245">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00306">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00278">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00261">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00322">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00294">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +435,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns how much to trade. </p>
 <dl class="section return"><dt>Returns</dt><dd>The size. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00376">376</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00392">392</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00245">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00306">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00278">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00261">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00322">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00294">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The intent. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00278">278</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00294">294</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 </div>
 </div>
@@ -533,9 +533,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the tag. </p>
 <dl class="section return"><dt>Returns</dt><dd>The label set with <span class="tt"><a class="el" href="#a38ea8c5a9a8cb92226a0177e445bdc5a" title="Returns a copy with a tag.">with_tag</a></span>, or an empty string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00394">394</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00410">410</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>, and <a class="el" href="intent_8hpp_source.html#l00327">with_tag()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>, and <a class="el" href="intent_8hpp_source.html#l00343">with_tag()</a>.</p>
 
 </div>
 </div>
@@ -565,9 +565,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns how long the order stays valid. </p>
 <dl class="section return"><dt>Returns</dt><dd>The time in force. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00370">370</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00386">386</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00245">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00306">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00278">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00261">limit()</a>, <a class="el" href="intent_8hpp_source.html#l00322">market()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00294">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -597,9 +597,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the trigger price. </p>
 <dl class="section return"><dt>Returns</dt><dd>The trigger for a stop-limit order; <span class="tt">std::nullopt</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00388">388</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00404">404</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00278">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, <a class="el" href="intent_8hpp_source.html#l00294">stop_limit()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -629,7 +629,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the order type. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">LIMIT</span>, <span class="tt">MARKET</span> or <span class="tt">STOP_LIMIT</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00364">364</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00380">380</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 </div>
 </div>
@@ -666,7 +666,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The copy carrying <span class="tt">key</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00342">342</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00358">358</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 </div>
 </div>
@@ -702,7 +702,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The tagged copy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00327">327</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00343">343</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 </div>
 </div>

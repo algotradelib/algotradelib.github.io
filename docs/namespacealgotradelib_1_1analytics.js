@@ -69,5 +69,6 @@ var namespacealgotradelib_1_1analytics =
     [ "wma", "namespacealgotradelib_1_1analytics.html#a18f8f4ca04fe6f3ad9cc69946c1ee153", null ],
     [ "zscore", "namespacealgotradelib_1_1analytics.html#a237ffb991d597894121c788821d9a9b4", null ],
     [ "zscore", "namespacealgotradelib_1_1analytics.html#a3be8c6075fe7f979722b4fcb11a8cef3", null ],
+    [ "all_bar_fields", "namespacealgotradelib_1_1analytics.html#a02acb721b7cac344528419551c1c74a1", null ],
     [ "bar_field_count", "namespacealgotradelib_1_1analytics.html#aa9b64127b8c9f0d01c99f29abe7efde7", null ]
 ];

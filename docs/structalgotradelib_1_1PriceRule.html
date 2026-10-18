@@ -137,6 +137,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9ddccf645dea179b99c81e09cf9ab426" id="r_a9ddccf645dea179b99c81e09cf9ab426"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a9ddccf645dea179b99c81e09cf9ab426">grid_known</a> () const noexcept</td></tr>
+<tr class="memdesc:a9ddccf645dea179b99c81e09cf9ab426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether the rule says anything about the grid: a stated one, or none at all.  <br /></td></tr>
 <tr class="memitem:a00b46c7ee4959c8a48b455b6c988f810" id="r_a00b46c7ee4959c8a48b455b6c988f810"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a00b46c7ee4959c8a48b455b6c988f810">tick_at</a> (const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;price) const</td></tr>
 <tr class="memdesc:a00b46c7ee4959c8a48b455b6c988f810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the tick size at a price.  <br /></td></tr>
 <tr class="memitem:a4368b3055fec11581766b2b3a070e1cb" id="r_a4368b3055fec11581766b2b3a070e1cb"><td class="memItemLeft">std::optional&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4368b3055fec11581766b2b3a070e1cb">on_tick</a> (const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;price) const</td></tr>
@@ -203,6 +205,38 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a9ddccf645dea179b99c81e09cf9ab426" name="a9ddccf645dea179b99c81e09cf9ab426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ddccf645dea179b99c81e09cf9ab426">&#9670;&#160;</a></span>grid_known()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::PriceRule::grid_known </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether the rule says anything about the grid: a stated one, or none at all. </p>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> for <span class="tt">UNKNOWN</span>. A <span class="tt">STATED</span> and an <span class="tt">UNCONSTRAINED</span> rule are both read from <span class="tt"><a class="el" href="#a4aa52490cbe08dd9ff701a48d381a86d" title="The bands, ascending by from_; empty unless kind_ is STATED.">bands_</a></span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00175">175</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00210">on_tick()</a>, and <a class="el" href="instrument_8hpp_source.html#l00237">round_to_tick()</a>.</p>
+
+</div>
+</div>
 <a id="a5a791a8c9e6878491beb87472cb42597" name="a5a791a8c9e6878491beb87472cb42597"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a791a8c9e6878491beb87472cb42597">&#9670;&#160;</a></span>krx_equity()</h2>
 
@@ -229,9 +263,9 @@ Public Attributes</h2></td></tr>
 <p>Returns the KRX cash-equity tick table (January 2023 revision). </p>
 <dl class="section return"><dt>Returns</dt><dd>The rule. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00251">251</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00266">266</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00318">algotradelib::price_rule_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00333">algotradelib::price_rule_for()</a>.</p>
 
 </div>
 </div>
@@ -267,7 +301,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">std::nullopt</span> if the grid is unknown (kind <span class="tt">UNKNOWN</span>) or the remainder does not fit a <span class="tt"><a class="el" href="classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^-scale.">Decimal64</a></span>; <span class="tt">true</span> if <span class="tt">price</span> is on its band's tick, or there is no band at <span class="tt">price</span> (an unconstrained rule); otherwise <span class="tt">false</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00195">195</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00210">210</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00039">algotradelib::strategy::Price::checked()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>.</p>
 
@@ -311,7 +345,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The rounded price (unchanged if already on the grid or there is no band at <span class="tt">price</span>), or <span class="tt">std::nullopt</span> if the grid is unknown or the arithmetic does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00222">222</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00237">237</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="conversion_8hpp_source.html#l00099">algotradelib::analytics::round_scalar_to_tick()</a>, and <a class="el" href="intent_8hpp_source.html#l00057">algotradelib::strategy::Price::rounded()</a>.</p>
 
@@ -349,9 +383,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The tick of the band containing <span class="tt">price</span>, or <span class="tt">std::nullopt</span> if there are no bands or <span class="tt">price</span> is below the first. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00177">177</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00192">192</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="instrument_8hpp_source.html#l00195">on_tick()</a>, and <a class="el" href="instrument_8hpp_source.html#l00222">round_to_tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="instrument_8hpp_source.html#l00210">on_tick()</a>, and <a class="el" href="instrument_8hpp_source.html#l00237">round_to_tick()</a>.</p>
 
 </div>
 </div>
@@ -381,9 +415,9 @@ Public Attributes</h2></td></tr>
 <p>Returns a rule with no grid, for a market quoted in free decimals. </p>
 <dl class="section return"><dt>Returns</dt><dd>The rule, of kind <span class="tt">UNCONSTRAINED</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00271">271</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00286">286</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00318">algotradelib::price_rule_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00333">algotradelib::price_rule_for()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +453,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The rule, of kind <span class="tt">UNKNOWN</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00283">283</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00298">298</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00318">algotradelib::price_rule_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00333">algotradelib::price_rule_for()</a>.</p>
 
 </div>
 </div>
@@ -442,7 +476,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00167">167</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00251">krx_equity()</a>, and <a class="el" href="instrument_8hpp_source.html#l00177">tick_at()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00266">krx_equity()</a>, and <a class="el" href="instrument_8hpp_source.html#l00192">tick_at()</a>.</p>
 
 </div>
 </div>
@@ -462,7 +496,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00165">165</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00251">krx_equity()</a>, <a class="el" href="instrument_8hpp_source.html#l00195">on_tick()</a>, <a class="el" href="instrument_8hpp_source.html#l00222">round_to_tick()</a>, <a class="el" href="instrument_8hpp_source.html#l00271">unconstrained()</a>, and <a class="el" href="instrument_8hpp_source.html#l00283">unknown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00175">grid_known()</a>, <a class="el" href="instrument_8hpp_source.html#l00266">krx_equity()</a>, <a class="el" href="instrument_8hpp_source.html#l00286">unconstrained()</a>, and <a class="el" href="instrument_8hpp_source.html#l00298">unknown()</a>.</p>
 
 </div>
 </div>
@@ -482,7 +516,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00169">169</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00251">krx_equity()</a>, <a class="el" href="instrument_8hpp_source.html#l00271">unconstrained()</a>, and <a class="el" href="instrument_8hpp_source.html#l00283">unknown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00266">krx_equity()</a>, <a class="el" href="instrument_8hpp_source.html#l00286">unconstrained()</a>, and <a class="el" href="instrument_8hpp_source.html#l00298">unknown()</a>.</p>
 
 </div>
 </div>

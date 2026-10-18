@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('event_8hpp.htm
 <p>The events a runner delivers to a strategy's handlers, and the market phase.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;algotradelib/core&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
@@ -183,10 +184,17 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a5e4df3e7b24619eacad1c8ca26b67b77" id="r_a5e4df3e7b24619eacad1c8ca26b67b77"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy.html#a5e4df3e7b24619eacad1c8ca26b67b77">algotradelib::strategy::market_phase_name</a> (<a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a> phase) noexcept</td></tr>
 <tr class="memdesc:a5e4df3e7b24619eacad1c8ca26b67b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase name for a phase, such as <span class="tt">"pre_open"</span>, for logs and display.  <br /></td></tr>
+<tr class="memitem:aab148d4132b0eb543fba8d22e27042a9" id="r_aab148d4132b0eb543fba8d22e27042a9"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy.html#aab148d4132b0eb543fba8d22e27042a9">algotradelib::strategy::market_phase_session_ended</a> (<a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a> phase) noexcept</td></tr>
+<tr class="memdesc:aab148d4132b0eb543fba8d22e27042a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a phase means the day's session is over (or never opened), so a day order no longer works.  <br /></td></tr>
 <tr class="memitem:a6038c598825a5d7af21cae316410b12a" id="r_a6038c598825a5d7af21cae316410b12a"><td class="memItemLeft">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy.html#a6038c598825a5d7af21cae316410b12a">algotradelib::strategy::bar_period_end</a> (const <a class="el" href="structalgotradelib_1_1Bar.html">Bar</a> &amp;bar, <a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, <a class="el" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bd">BarStamp</a> stamp)</td></tr>
 <tr class="memdesc:a6038c598825a5d7af21cae316410b12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the instant a bar's period ended.  <br /></td></tr>
 <tr class="memitem:a260ce20a00a13c5a743bd4c749e54d19" id="r_a260ce20a00a13c5a743bd4c749e54d19"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">BarEvent</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a> (<a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> instrument, <a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, <a class="el" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bd">BarStamp</a> stamp, <a class="el" href="structalgotradelib_1_1Bar.html">Bar</a> bar)</td></tr>
 <tr class="memdesc:a260ce20a00a13c5a743bd4c749e54d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a bar event, computing its <span class="tt">period_end_</span> with <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a6038c598825a5d7af21cae316410b12a" title="Computes the instant a bar&#39;s period ended.">bar_period_end</a></span>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a372aca5260b4331d2ee74dc5d335fb03" id="r_a372aca5260b4331d2ee74dc5d335fb03"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a>, 5 &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy.html#a372aca5260b4331d2ee74dc5d335fb03">algotradelib::strategy::all_market_phases</a></td></tr>
+<tr class="memdesc:a372aca5260b4331d2ee74dc5d335fb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>, in declaration order.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The events a runner delivers to a strategy's handlers, and the market phase. </p>

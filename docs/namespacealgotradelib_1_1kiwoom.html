@@ -227,16 +227,18 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae670fd18a2ac106a80462bcf4c14d856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the side from Kiwoom's free-text <span class="tt">io_tp_nm</span> (such as <span class="tt">+매수</span>, <span class="tt">현금매도</span>, <span class="tt">매수정정</span>), by whether it contains 매수 or 매도.  <br /></td></tr>
 <tr class="memitem:ab88f6c8637b0f14fb4bfa704ffddf553" id="r_ab88f6c8637b0f14fb4bfa704ffddf553"><td class="memItemLeft"><a class="el" href="namespacealgotradelib.html#a1ed2d4b30116f2717c1210b808f45058">OrderStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab88f6c8637b0f14fb4bfa704ffddf553">normalized_order_status</a> (std::string_view text) noexcept</td></tr>
 <tr class="memdesc:ab88f6c8637b0f14fb4bfa704ffddf553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an order status from Kiwoom's Korean word.  <br /></td></tr>
-<tr class="memitem:adab5d4b7237dc9254acdf62a5ccf7216" id="r_adab5d4b7237dc9254acdf62a5ccf7216"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#adab5d4b7237dc9254acdf62a5ccf7216">chart_api_id</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval) noexcept</td></tr>
-<tr class="memdesc:adab5d4b7237dc9254acdf62a5ccf7216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <span class="tt">api-id</span> of the chart endpoint for a bar interval.  <br /></td></tr>
-<tr class="memitem:a8b23305c12c6e2b51c8869eab6e2c23d" id="r_a8b23305c12c6e2b51c8869eab6e2c23d"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a8b23305c12c6e2b51c8869eab6e2c23d">chart_rows_field</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval) noexcept</td></tr>
-<tr class="memdesc:a8b23305c12c6e2b51c8869eab6e2c23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the array field a bar interval's chart endpoint returns its rows in.  <br /></td></tr>
+<tr class="memitem:accb85f5f6ae37d637cf9af638f1fcfa9" id="r_accb85f5f6ae37d637cf9af638f1fcfa9"><td class="memItemLeft">constexpr const char *&#160;</td><td class="memItemRight"><a class="el" href="#accb85f5f6ae37d637cf9af638f1fcfa9">chart_api_id</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval) noexcept</td></tr>
+<tr class="memdesc:accb85f5f6ae37d637cf9af638f1fcfa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <span class="tt">api-id</span> of the chart endpoint for a bar interval.  <br /></td></tr>
+<tr class="memitem:a4d35449100bce7688f23435faaf5aeb6" id="r_a4d35449100bce7688f23435faaf5aeb6"><td class="memItemLeft">constexpr const char *&#160;</td><td class="memItemRight"><a class="el" href="#a4d35449100bce7688f23435faaf5aeb6">chart_rows_field</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval) noexcept</td></tr>
+<tr class="memdesc:a4d35449100bce7688f23435faaf5aeb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the array field a bar interval's chart endpoint returns its rows in.  <br /></td></tr>
 <tr class="memitem:a1ba774cd44665198701115ab6e96642c" id="r_a1ba774cd44665198701115ab6e96642c"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1ba774cd44665198701115ab6e96642c">unsupported_bar_interval</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval)</td></tr>
-<tr class="memdesc:a1ba774cd44665198701115ab6e96642c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refuses a bar interval Kiwoom has no chart endpoint for (none today).  <br /></td></tr>
+<tr class="memdesc:a1ba774cd44665198701115ab6e96642c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refuses a bar interval this client requests no chart for (<span class="tt"><a class="el" href="#accb85f5f6ae37d637cf9af638f1fcfa9" title="Returns the api-id of the chart endpoint for a bar interval.">chart_api_id</a></span>).  <br /></td></tr>
 <tr class="memitem:a0cadbd4e4ed078d2fc6f2566ed09cea5" id="r_a0cadbd4e4ed078d2fc6f2566ed09cea5"><td class="memItemLeft">constexpr const char *&#160;</td><td class="memItemRight"><a class="el" href="#a0cadbd4e4ed078d2fc6f2566ed09cea5">tape_suffix</a> (<a class="el" href="#a1476aa7a976b83d95727aee083da2ca1">MarketTape</a> tape) noexcept</td></tr>
 <tr class="memdesc:a0cadbd4e4ed078d2fc6f2566ed09cea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbol suffix for a tape.  <br /></td></tr>
 <tr class="memitem:a35706ff25ce9f83a33a61d896cad267d" id="r_a35706ff25ce9f83a33a61d896cad267d"><td class="memItemLeft">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight"><a class="el" href="#a35706ff25ce9f83a33a61d896cad267d">parse_compact_expiry</a> (std::string_view text)</td></tr>
 <tr class="memdesc:a35706ff25ce9f83a33a61d896cad267d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads Kiwoom's token expiry, <span class="tt">yyyyMMddHHmmss</span> in Korean time.  <br /></td></tr>
+<tr class="memitem:aa9c287f239a7504b963a8eabc4d96126" id="r_aa9c287f239a7504b963a8eabc4d96126"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#aa9c287f239a7504b963a8eabc4d96126">kiwoom_position_scope_asserted</a> (<a class="el" href="#ac5942d4344ec00dd8ae58a7183dfd0b1">KiwoomPositionScope</a> scope) noexcept</td></tr>
+<tr class="memdesc:aa9c287f239a7504b963a8eabc4d96126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a holdings scope states what Kiwoom's holdings figure covers, so holdings may be read and orders checked against them.  <br /></td></tr>
 <tr class="memitem:a23c389081617120ad0f5a1745ee1a36c" id="r_a23c389081617120ad0f5a1745ee1a36c"><td class="memItemLeft"><a class="el" href="#a3245c956be782384ff1486f70c3b9618">KiwoomRateLimitLayer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a23c389081617120ad0f5a1745ee1a36c">kiwoom_rate_limit_layer</a> (std::string_view code) noexcept</td></tr>
 <tr class="memdesc:a23c389081617120ad0f5a1745ee1a36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classifies a Kiwoom return code as a rate-limit refusal.  <br /></td></tr>
 <tr class="memitem:aba66ebbb22ef7fae217e84c0ad982fcc" id="r_aba66ebbb22ef7fae217e84c0ad982fcc"><td class="memItemLeft"><a class="el" href="namespacealgotradelib.html#a42bd74ca6739874d057d515b40a6e6d6">ErrorCategory</a>&#160;</td><td class="memItemRight"><a class="el" href="#aba66ebbb22ef7fae217e84c0ad982fcc">kiwoom_error_category</a> (std::string_view code) noexcept</td></tr>
@@ -408,7 +410,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00119">119</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00138">138</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -448,8 +450,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="adab5d4b7237dc9254acdf62a5ccf7216" name="adab5d4b7237dc9254acdf62a5ccf7216"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adab5d4b7237dc9254acdf62a5ccf7216">&#9670;&#160;</a></span>chart_api_id()</h2>
+<a id="accb85f5f6ae37d637cf9af638f1fcfa9" name="accb85f5f6ae37d637cf9af638f1fcfa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb85f5f6ae37d637cf9af638f1fcfa9">&#9670;&#160;</a></span>chart_api_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +468,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -478,16 +480,16 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The id, or null if Kiwoom has none (every interval has one today). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The id, or null where this client requests none: 5, 15, 30 and 60 minutes, which Kiwoom serves through <span class="tt">ka10080</span>'s <span class="tt">tic_scope</span> but whose row stamps are not established yet. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00744">744</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00745">745</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l00744">chart_api_id()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00786">unsupported_bar_interval()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l00745">chart_api_id()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00797">unsupported_bar_interval()</a>.</p>
 
 </div>
 </div>
-<a id="a8b23305c12c6e2b51c8869eab6e2c23d" name="a8b23305c12c6e2b51c8869eab6e2c23d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b23305c12c6e2b51c8869eab6e2c23d">&#9670;&#160;</a></span>chart_rows_field()</h2>
+<a id="a4d35449100bce7688f23435faaf5aeb6" name="a4d35449100bce7688f23435faaf5aeb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d35449100bce7688f23435faaf5aeb6">&#9670;&#160;</a></span>chart_rows_field()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -504,7 +506,7 @@ Variables</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -516,11 +518,11 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The field name, or null if Kiwoom has no endpoint for it. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The field name, or null where <span class="tt"><a class="el" href="#accb85f5f6ae37d637cf9af638f1fcfa9" title="Returns the api-id of the chart endpoint for a bar interval.">chart_api_id</a></span> names no endpoint. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00765">765</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00771">771</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l00765">chart_rows_field()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00786">unsupported_bar_interval()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l00771">chart_rows_field()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00797">unsupported_bar_interval()</a>.</p>
 
 </div>
 </div>
@@ -724,6 +726,45 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="errors_8hpp_source.html#l00062">62</a> of file <a class="el" href="errors_8hpp_source.html">errors.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="errors_8hpp_source.html#l00097">kiwoom_declared_error()</a>, and <a class="el" href="errors_8hpp_source.html#l00062">kiwoom_error_category()</a>.</p>
+
+</div>
+</div>
+<a id="aa9c287f239a7504b963a8eabc4d96126" name="aa9c287f239a7504b963a8eabc4d96126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c287f239a7504b963a8eabc4d96126">&#9670;&#160;</a></span>kiwoom_position_scope_asserted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::kiwoom::kiwoom_position_scope_asserted </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac5942d4344ec00dd8ae58a7183dfd0b1">KiwoomPositionScope</a></td>          <td class="paramname"><span class="paramname"><em>scope</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a holdings scope states what Kiwoom's holdings figure covers, so holdings may be read and orders checked against them. </p>
+<p>It is the operator's assertion, not a fact the library checked.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope</td><td>The scope. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> for <span class="tt">UNSPECIFIED</span>; <span class="tt">true</span> for <span class="tt">VALUATION_ONLY</span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00124">124</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00997">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::holdings()</a>, <a class="el" href="kiwoom_2traits_8hpp_source.html#l00751">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::holdings()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00124">kiwoom_position_scope_asserted()</a>.</p>
 
 </div>
 </div>
@@ -1108,7 +1149,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00065">65</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00350">algotradelib::kiwoom::KiwoomRest::from_json_impl()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00065">parse_compact_expiry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00369">algotradelib::kiwoom::KiwoomRest::from_json_impl()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00065">parse_compact_expiry()</a>.</p>
 
 </div>
 </div>
@@ -1222,7 +1263,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00047">47</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00047">tape_suffix()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00329">algotradelib::kiwoom::KiwoomConfig::tape_symbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00047">tape_suffix()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00348">algotradelib::kiwoom::KiwoomConfig::tape_symbol()</a>.</p>
 
 </div>
 </div>
@@ -1314,7 +1355,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Refuses a bar interval Kiwoom has no chart endpoint for (none today). </p>
+<p>Refuses a bar interval this client requests no chart for (<span class="tt"><a class="el" href="#accb85f5f6ae37d637cf9af638f1fcfa9" title="Returns the api-id of the chart endpoint for a bar interval.">chart_api_id</a></span>). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interval</td><td>The interval. </td></tr>
@@ -1323,9 +1364,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An <span class="tt">INVALID_ARGUMENT</span> error (not sent), or <span class="tt">std::nullopt</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00786">786</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00797">797</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l00786">unsupported_bar_interval()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l00797">unsupported_bar_interval()</a>.</p>
 
 </div>
 </div>
@@ -1449,22 +1490,22 @@ Variables</h2></td></tr>
 <div class="line">  {<span class="stringliteral">&quot;28&quot;</span>, <span class="stringliteral">&quot;스톱지정가&quot;</span>,     <span class="keyword">nullptr</span>,       <a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6">OrderType::STOP_LIMIT</a>,        <a class="code hl_enumvalue" href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4">TimeInForce::DAY</a>,                 <a class="code hl_enumvalue" href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9">OrderSession::REGULAR</a>,             <span class="keyword">true</span>},</div>
 <div class="line">  {<span class="keyword">nullptr</span>, <span class="stringliteral">&quot;시간외단일가&quot;</span>, <span class="keyword">nullptr</span>,      <a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">OrderType::LIMIT</a>,             <a class="code hl_enumvalue" href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4">TimeInForce::DAY</a>,                 <a class="code hl_enumvalue" href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5">OrderSession::AFTER_HOURS_AUCTION</a>, <span class="keyword">false</span>},</div>
 <div class="line">}}</div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">algotradelib::OrderType::LIMIT</a></div><div class="ttdeci">@ LIMIT</div><div class="ttdoc">지정가: fills at the stated price or better.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01613">types.hpp:1613</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea7fdfd5c352b3f4e8e90e6b87a86ef390"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea7fdfd5c352b3f4e8e90e6b87a86ef390">algotradelib::OrderType::BEST_LIMIT</a></div><div class="ttdeci">@ BEST_LIMIT</div><div class="ttdoc">최유리지정가: priced at the best quote on the opposite side.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01619">types.hpp:1619</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea85b7ecd22407f523e3b8e6567f4ad260"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea85b7ecd22407f523e3b8e6567f4ad260">algotradelib::OrderType::PRIMARY_LIMIT</a></div><div class="ttdeci">@ PRIMARY_LIMIT</div><div class="ttdoc">최우선지정가: priced at the best quote on the order&#39;s own side.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01621">types.hpp:1621</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaa460067d0f461d25b49707733b06d27e"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceaa460067d0f461d25b49707733b06d27e">algotradelib::OrderType::CONDITIONAL_LIMIT</a></div><div class="ttdeci">@ CONDITIONAL_LIMIT</div><div class="ttdoc">조건부지정가: a limit that becomes a market order at the close.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01617">types.hpp:1617</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceacd0cac6d6a99a7ddc9f0930d0b029672"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceacd0cac6d6a99a7ddc9f0930d0b029672">algotradelib::OrderType::MID_PRICE</a></div><div class="ttdeci">@ MID_PRICE</div><div class="ttdoc">중간가: priced at the midpoint of the spread.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01623">types.hpp:1623</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6">algotradelib::OrderType::STOP_LIMIT</a></div><div class="ttdeci">@ STOP_LIMIT</div><div class="ttdoc">스톱지정가: a limit released when a trigger price is reached.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01625">types.hpp:1625</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaedbd340d5a948f52adb85b7aa4e3b47a"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceaedbd340d5a948f52adb85b7aa4e3b47a">algotradelib::OrderType::CLOSING_PRICE</a></div><div class="ttdeci">@ CLOSING_PRICE</div><div class="ttdoc">시간외종가: priced at a session&#39;s closing price.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01627">types.hpp:1627</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaffb8d99dc885d37eec36c5497244cba8"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceaffb8d99dc885d37eec36c5497244cba8">algotradelib::OrderType::MARKET</a></div><div class="ttdeci">@ MARKET</div><div class="ttdoc">시장가: fills at whatever the book offers.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01615">types.hpp:1615</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea5c619bb2cf0b8ec27982e4c1137ff5a9"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5ea5c619bb2cf0b8ec27982e4c1137ff5a9">algotradelib::OrderSession::AFTER_HOURS</a></div><div class="ttdeci">@ AFTER_HOURS</div><div class="ttdoc">After the close, at that session&#39;s close (장후 시간외).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01688">types.hpp:1688</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9">algotradelib::OrderSession::REGULAR</a></div><div class="ttdeci">@ REGULAR</div><div class="ttdoc">The continuous regular session.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01680">types.hpp:1680</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5">algotradelib::OrderSession::AFTER_HOURS_AUCTION</a></div><div class="ttdeci">@ AFTER_HOURS_AUCTION</div><div class="ttdoc">The after-hours single-price auction (시간외 단일가).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01690">types.hpp:1690</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eaf1cf8f0f60db87f162bb83d57ea89949"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5eaf1cf8f0f60db87f162bb83d57ea89949">algotradelib::OrderSession::PRE_MARKET</a></div><div class="ttdeci">@ PRE_MARKET</div><div class="ttdoc">Before the open, at the previous session&#39;s close (장전 시간외).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01686">types.hpp:1686</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eaf3ea15f01999fd6406ecf9096b25cdbc"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5eaf3ea15f01999fd6406ecf9096b25cdbc">algotradelib::OrderSession::GTP</a></div><div class="ttdeci">@ GTP</div><div class="ttdoc">NXT&#39;s GTP session.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01694">types.hpp:1694</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a5391ae427dc0ea14dda406b7ef10b3b4"><div class="ttname"><a href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a5391ae427dc0ea14dda406b7ef10b3b4">algotradelib::TimeInForce::FILL_OR_KILL</a></div><div class="ttdeci">@ FILL_OR_KILL</div><div class="ttdoc">Fills entirely and immediately, or not at all.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01669">types.hpp:1669</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4"><div class="ttname"><a href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4">algotradelib::TimeInForce::DAY</a></div><div class="ttdeci">@ DAY</div><div class="ttdoc">Rests until the session ends; an unfilled remainder is cancelled then.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01665">types.hpp:1665</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a623f31e0edb052f302774f306f5ddb1b"><div class="ttname"><a href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a623f31e0edb052f302774f306f5ddb1b">algotradelib::TimeInForce::IMMEDIATE_OR_CANCEL</a></div><div class="ttdeci">@ IMMEDIATE_OR_CANCEL</div><div class="ttdoc">Fills what it can immediately and cancels the remainder.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01667">types.hpp:1667</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">algotradelib::OrderType::LIMIT</a></div><div class="ttdeci">@ LIMIT</div><div class="ttdoc">지정가: fills at the stated price or better.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01710">types.hpp:1710</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea7fdfd5c352b3f4e8e90e6b87a86ef390"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea7fdfd5c352b3f4e8e90e6b87a86ef390">algotradelib::OrderType::BEST_LIMIT</a></div><div class="ttdeci">@ BEST_LIMIT</div><div class="ttdoc">최유리지정가: priced at the best quote on the opposite side.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01716">types.hpp:1716</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea85b7ecd22407f523e3b8e6567f4ad260"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea85b7ecd22407f523e3b8e6567f4ad260">algotradelib::OrderType::PRIMARY_LIMIT</a></div><div class="ttdeci">@ PRIMARY_LIMIT</div><div class="ttdoc">최우선지정가: priced at the best quote on the order&#39;s own side.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01718">types.hpp:1718</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaa460067d0f461d25b49707733b06d27e"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceaa460067d0f461d25b49707733b06d27e">algotradelib::OrderType::CONDITIONAL_LIMIT</a></div><div class="ttdeci">@ CONDITIONAL_LIMIT</div><div class="ttdoc">조건부지정가: a limit that becomes a market order at the close.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01714">types.hpp:1714</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceacd0cac6d6a99a7ddc9f0930d0b029672"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceacd0cac6d6a99a7ddc9f0930d0b029672">algotradelib::OrderType::MID_PRICE</a></div><div class="ttdeci">@ MID_PRICE</div><div class="ttdoc">중간가: priced at the midpoint of the spread.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01720">types.hpp:1720</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6">algotradelib::OrderType::STOP_LIMIT</a></div><div class="ttdeci">@ STOP_LIMIT</div><div class="ttdoc">스톱지정가: a limit released when a trigger price is reached.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01722">types.hpp:1722</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaedbd340d5a948f52adb85b7aa4e3b47a"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceaedbd340d5a948f52adb85b7aa4e3b47a">algotradelib::OrderType::CLOSING_PRICE</a></div><div class="ttdeci">@ CLOSING_PRICE</div><div class="ttdoc">시간외종가: priced at a session&#39;s closing price.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01724">types.hpp:1724</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaffb8d99dc885d37eec36c5497244cba8"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbceaffb8d99dc885d37eec36c5497244cba8">algotradelib::OrderType::MARKET</a></div><div class="ttdeci">@ MARKET</div><div class="ttdoc">시장가: fills at whatever the book offers.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01712">types.hpp:1712</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea5c619bb2cf0b8ec27982e4c1137ff5a9"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5ea5c619bb2cf0b8ec27982e4c1137ff5a9">algotradelib::OrderSession::AFTER_HOURS</a></div><div class="ttdeci">@ AFTER_HOURS</div><div class="ttdoc">After the close, at that session&#39;s close (장후 시간외).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01850">types.hpp:1850</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9">algotradelib::OrderSession::REGULAR</a></div><div class="ttdeci">@ REGULAR</div><div class="ttdoc">The continuous regular session.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01842">types.hpp:1842</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5">algotradelib::OrderSession::AFTER_HOURS_AUCTION</a></div><div class="ttdeci">@ AFTER_HOURS_AUCTION</div><div class="ttdoc">The after-hours single-price auction (시간외 단일가).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01852">types.hpp:1852</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eaf1cf8f0f60db87f162bb83d57ea89949"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5eaf1cf8f0f60db87f162bb83d57ea89949">algotradelib::OrderSession::PRE_MARKET</a></div><div class="ttdeci">@ PRE_MARKET</div><div class="ttdoc">Before the open, at the previous session&#39;s close (장전 시간외).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01848">types.hpp:1848</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eaf3ea15f01999fd6406ecf9096b25cdbc"><div class="ttname"><a href="namespacealgotradelib.html#a9fc162948f78288f2fbe4f0ed8e1de5eaf3ea15f01999fd6406ecf9096b25cdbc">algotradelib::OrderSession::GTP</a></div><div class="ttdeci">@ GTP</div><div class="ttdoc">NXT&#39;s GTP session.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01856">types.hpp:1856</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a5391ae427dc0ea14dda406b7ef10b3b4"><div class="ttname"><a href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a5391ae427dc0ea14dda406b7ef10b3b4">algotradelib::TimeInForce::FILL_OR_KILL</a></div><div class="ttdeci">@ FILL_OR_KILL</div><div class="ttdoc">Fills entirely and immediately, or not at all.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01804">types.hpp:1804</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4"><div class="ttname"><a href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4">algotradelib::TimeInForce::DAY</a></div><div class="ttdeci">@ DAY</div><div class="ttdoc">Rests until the session ends; an unfilled remainder is cancelled then.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01800">types.hpp:1800</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a623f31e0edb052f302774f306f5ddb1b"><div class="ttname"><a href="namespacealgotradelib.html#ae154d19ecf2e6ae8ad52a6a12bc22877a623f31e0edb052f302774f306f5ddb1b">algotradelib::TimeInForce::IMMEDIATE_OR_CANCEL</a></div><div class="ttdeci">@ IMMEDIATE_OR_CANCEL</div><div class="ttdoc">Fills what it can immediately and cancels the remainder.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01802">types.hpp:1802</a></div></div>
 </div><!-- fragment -->
 <p>Kiwoom's order-type (<span class="tt">trde_tp</span>) table, from its API specification. </p>
 <p><span class="tt">시간외단일가</span> (after-hours single price) has no request code: it can be read, not placed. Kiwoom publishes no per-venue restriction, so a venue-specific refusal comes from Kiwoom with its own code. </p>

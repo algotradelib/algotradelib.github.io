@@ -288,10 +288,14 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a5e4df3e7b24619eacad1c8ca26b67b77" id="r_a5e4df3e7b24619eacad1c8ca26b67b77"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a5e4df3e7b24619eacad1c8ca26b67b77">market_phase_name</a> (<a class="el" href="#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a> phase) noexcept</td></tr>
 <tr class="memdesc:a5e4df3e7b24619eacad1c8ca26b67b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase name for a phase, such as <span class="tt">"pre_open"</span>, for logs and display.  <br /></td></tr>
+<tr class="memitem:aab148d4132b0eb543fba8d22e27042a9" id="r_aab148d4132b0eb543fba8d22e27042a9"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#aab148d4132b0eb543fba8d22e27042a9">market_phase_session_ended</a> (<a class="el" href="#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a> phase) noexcept</td></tr>
+<tr class="memdesc:aab148d4132b0eb543fba8d22e27042a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a phase means the day's session is over (or never opened), so a day order no longer works.  <br /></td></tr>
 <tr class="memitem:a6038c598825a5d7af21cae316410b12a" id="r_a6038c598825a5d7af21cae316410b12a"><td class="memItemLeft">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight"><a class="el" href="#a6038c598825a5d7af21cae316410b12a">bar_period_end</a> (const <a class="el" href="structalgotradelib_1_1Bar.html">Bar</a> &amp;bar, <a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, <a class="el" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bd">BarStamp</a> stamp)</td></tr>
 <tr class="memdesc:a6038c598825a5d7af21cae316410b12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the instant a bar's period ended.  <br /></td></tr>
 <tr class="memitem:a260ce20a00a13c5a743bd4c749e54d19" id="r_a260ce20a00a13c5a743bd4c749e54d19"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">BarEvent</a>&#160;</td><td class="memItemRight"><a class="el" href="#a260ce20a00a13c5a743bd4c749e54d19">make_bar_event</a> (<a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> instrument, <a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, <a class="el" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bd">BarStamp</a> stamp, <a class="el" href="structalgotradelib_1_1Bar.html">Bar</a> bar)</td></tr>
 <tr class="memdesc:a260ce20a00a13c5a743bd4c749e54d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a bar event, computing its <span class="tt">period_end_</span> with <span class="tt"><a class="el" href="#a6038c598825a5d7af21cae316410b12a" title="Computes the instant a bar&#39;s period ended.">bar_period_end</a></span>.  <br /></td></tr>
+<tr class="memitem:ac097cc56d34112816ead3a1c0e755977" id="r_ac097cc56d34112816ead3a1c0e755977"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#ac097cc56d34112816ead3a1c0e755977">size_kind_is_target</a> (<a class="el" href="#ad706c8d4f2f53a5249d5968937ddf10b">SizeKind</a> kind) noexcept</td></tr>
+<tr class="memdesc:ac097cc56d34112816ead3a1c0e755977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a size states a holding to reach (a target), rather than an amount to trade.  <br /></td></tr>
 <tr class="memitem:a91995669e8d9df29185503ac1b714d90" id="r_a91995669e8d9df29185503ac1b714d90"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a91995669e8d9df29185503ac1b714d90">order_is_open</a> (<a class="el" href="namespacealgotradelib.html#a1ed2d4b30116f2717c1210b808f45058">OrderStatus</a> status)</td></tr>
 <tr class="memdesc:a91995669e8d9df29185503ac1b714d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether an order in a given status may still trade.  <br /></td></tr>
 <tr class="memitem:a7441fcdd2f2661fa34ae88bea734b3c7" id="r_a7441fcdd2f2661fa34ae88bea734b3c7"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a7441fcdd2f2661fa34ae88bea734b3c7">reject_reason_name</a> (<a class="el" href="#aae377ebdae21b45a09b6e1132773163f">RejectReason</a> reason) noexcept</td></tr>
@@ -323,7 +327,11 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a632a39df2a6691e73477d12ef4bd4c5e" id="r_a632a39df2a6691e73477d12ef4bd4c5e"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a632a39df2a6691e73477d12ef4bd4c5e">halt_reason_count</a> = 8</td></tr>
+<tr class="memitem:a372aca5260b4331d2ee74dc5d335fb03" id="r_a372aca5260b4331d2ee74dc5d335fb03"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a>, 5 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a372aca5260b4331d2ee74dc5d335fb03">all_market_phases</a></td></tr>
+<tr class="memdesc:a372aca5260b4331d2ee74dc5d335fb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:afb533691e7f20b50ff3673a599b6078d" id="r_afb533691e7f20b50ff3673a599b6078d"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#aff76e0ec02bd1189fad25036355a2752">HaltReason</a>, 8 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afb533691e7f20b50ff3673a599b6078d">all_halt_reasons</a></td></tr>
+<tr class="memdesc:afb533691e7f20b50ff3673a599b6078d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:a632a39df2a6691e73477d12ef4bd4c5e" id="r_a632a39df2a6691e73477d12ef4bd4c5e"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a632a39df2a6691e73477d12ef4bd4c5e">halt_reason_count</a> = all_halt_reasons.size()</td></tr>
 <tr class="memdesc:a632a39df2a6691e73477d12ef4bd4c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span> values.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -395,7 +403,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00381">381</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00401">401</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -447,7 +455,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00156">156</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00176">176</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -531,7 +539,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00079">79</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00091">91</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,7 +578,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00029">29</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00030">30</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -747,11 +755,11 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><span class="tt">bar.timestamp_</span> for a <span class="tt">CLOSE</span>-stamped bar; for an <span class="tt">OPEN</span>-stamped bar, the timestamp plus one interval. A month counts as 31 days and a year as 366, so for those intervals the result is an upper bound, not the exact end. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">bar.timestamp_</span> for a <span class="tt">CLOSE</span>-stamped bar; for an <span class="tt">OPEN</span>-stamped bar, the timestamp plus one interval. A month counts as 31 days and a year as 366, so for those intervals the result is an upper bound, not the exact end. So is an intraday bar cut short by the session's close (KRX's 15:00 hourly bar ends at 15:30, not 16:00): late, never early. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00197">197</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00232">232</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00197">bar_period_end()</a>, and <a class="el" href="event_8hpp_source.html#l00230">make_bar_event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00232">bar_period_end()</a>, and <a class="el" href="event_8hpp_source.html#l00273">make_bar_event()</a>.</p>
 
 </div>
 </div>
@@ -796,9 +804,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether the order closes toward flat, or <span class="tt">std::nullopt</span> if that cannot be established (arithmetic that does not fit, or a working order filled beyond its quantity); treat <span class="tt">std::nullopt</span> as <span class="tt">false</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00591">591</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00619">619</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">closes_toward_flat()</a>, and <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">closes_toward_flat()</a>, and <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -834,9 +842,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00196">196</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00216">216</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00196">guard_reason_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00216">guard_reason_name()</a>.</p>
 
 </div>
 </div>
@@ -878,9 +886,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">reason</span> stops <span class="tt">klass</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00102">102</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00114">114</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00785">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l00102">halt_blocks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00813">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l00114">halt_blocks()</a>.</p>
 
 </div>
 </div>
@@ -914,11 +922,11 @@ template&lt;typename Broker&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00129">129</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00144">144</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00129">halt_reason_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00144">halt_reason_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>.</p>
 
 </div>
 </div>
@@ -1009,9 +1017,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The event. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00230">230</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00273">273</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00230">make_bar_event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00273">make_bar_event()</a>.</p>
 
 </div>
 </div>
@@ -1045,11 +1053,49 @@ template&lt;typename Broker&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00047">47</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00057">57</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00047">market_phase_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00057">market_phase_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>.</p>
+
+</div>
+</div>
+<a id="aab148d4132b0eb543fba8d22e27042a9" name="aab148d4132b0eb543fba8d22e27042a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab148d4132b0eb543fba8d22e27042a9">&#9670;&#160;</a></span>market_phase_session_ended()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::strategy::market_phase_session_ended </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a></td>          <td class="paramname"><span class="paramname"><em>phase</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a phase means the day's session is over (or never opened), so a day order no longer works. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phase</td><td>The phase. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CLOSED</span> and <span class="tt">POST_CLOSE</span>; <span class="tt">false</span> for <span class="tt">UNKNOWN</span>, <span class="tt">PRE_OPEN</span> and <span class="tt">OPEN</span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00079">79</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01677">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00079">market_phase_session_ended()</a>.</p>
 
 </div>
 </div>
@@ -1087,7 +1133,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00020">20</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00591">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01121">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00020">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00412">projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01118">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00020">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00432">projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
 
 </div>
 </div>
@@ -1153,9 +1199,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The exposure, or <span class="tt">std::nullopt</span> if it cannot be computed exactly: an instrument missing from <span class="tt">basis</span> or listed twice, a mark or price that is not positive, a working order filled beyond its quantity, or arithmetic that does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00412">412</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00432">432</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, and <a class="el" href="risk_8hpp_source.html#l00412">projected_gross_exposure()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, and <a class="el" href="risk_8hpp_source.html#l00432">projected_gross_exposure()</a>.</p>
 
 </div>
 </div>
@@ -1345,6 +1391,44 @@ template&lt;typename Broker&gt; </div>
 
 </div>
 </div>
+<a id="ac097cc56d34112816ead3a1c0e755977" name="ac097cc56d34112816ead3a1c0e755977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac097cc56d34112816ead3a1c0e755977">&#9670;&#160;</a></span>size_kind_is_target()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::strategy::size_kind_is_target </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad706c8d4f2f53a5249d5968937ddf10b">SizeKind</a></td>          <td class="paramname"><span class="paramname"><em>kind</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a size states a holding to reach (a target), rather than an amount to trade. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kind</td><td>The kind. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">TARGET_WEIGHT</span>; <span class="tt">false</span> for <span class="tt">QUANTITY</span> and <span class="tt">NOTIONAL</span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00120">120</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01197">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, and <a class="el" href="intent_8hpp_source.html#l00120">size_kind_is_target()</a>.</p>
+
+</div>
+</div>
 <a id="a9f7ac198bfabe7c175a24def662c1618" name="a9f7ac198bfabe7c175a24def662c1618"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f7ac198bfabe7c175a24def662c1618">&#9670;&#160;</a></span>weight_target()</h2>
 
@@ -1396,6 +1480,88 @@ template&lt;typename Broker&gt; </div>
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="afb533691e7f20b50ff3673a599b6078d" name="afb533691e7f20b50ff3673a599b6078d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb533691e7f20b50ff3673a599b6078d">&#9670;&#160;</a></span>all_halt_reasons</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#aff76e0ec02bd1189fad25036355a2752">HaltReason</a>, 8&gt; algotradelib::strategy::all_halt_reasons</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752a986496ca5b23669b8661171566a167c3">HaltReason::OPERATOR</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752a0a7253e3bb64d5d84d1ded4d45582839">HaltReason::LOCAL_FAILURE</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752af6cdb3c6710b50ec65ee07f740847e10">HaltReason::STOPPING</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752a4c5f36b83e772a0359c29945bc588736">HaltReason::ORDER_LIST_UNREAD</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752a2e258ec19f84ad5d7d3763911c56a075">HaltReason::PORTFOLIO_ABSENT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752aac301c8088ae5ae2b2edddba510bb765">HaltReason::PORTFOLIO_STALE</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a">HaltReason::BUYING_POWER_UNREAD</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790">HaltReason::POLL_FAILING</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a">algotradelib::strategy::HaltReason::BUYING_POWER_UNREAD</a></div><div class="ttdeci">@ BUYING_POWER_UNREAD</div><div class="ttdoc">A buying-power limit is enforced, but there is no current reading to check it against.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00066">risk.hpp:66</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a0a7253e3bb64d5d84d1ded4d45582839"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a0a7253e3bb64d5d84d1ded4d45582839">algotradelib::strategy::HaltReason::LOCAL_FAILURE</a></div><div class="ttdeci">@ LOCAL_FAILURE</div><div class="ttdoc">Local machinery failed, such as the order journal not being writable; nothing is sent.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00039">risk.hpp:39</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a2e258ec19f84ad5d7d3763911c56a075"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a2e258ec19f84ad5d7d3763911c56a075">algotradelib::strategy::HaltReason::PORTFOLIO_ABSENT</a></div><div class="ttdeci">@ PORTFOLIO_ABSENT</div><div class="ttdoc">No holdings snapshot has been read yet, so what the account holds is unknown.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00054">risk.hpp:54</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a4c5f36b83e772a0359c29945bc588736"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a4c5f36b83e772a0359c29945bc588736">algotradelib::strategy::HaltReason::ORDER_LIST_UNREAD</a></div><div class="ttdeci">@ ORDER_LIST_UNREAD</div><div class="ttdoc">The broker&#39;s order list has not been read since this process started.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00048">risk.hpp:48</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a986496ca5b23669b8661171566a167c3"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a986496ca5b23669b8661171566a167c3">algotradelib::strategy::HaltReason::OPERATOR</a></div><div class="ttdeci">@ OPERATOR</div><div class="ttdoc">A person stopped trading with RiskGuard::halt(); only RiskGuard::resume() clears it.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00031">risk.hpp:31</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752aac301c8088ae5ae2b2edddba510bb765"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752aac301c8088ae5ae2b2edddba510bb765">algotradelib::strategy::HaltReason::PORTFOLIO_STALE</a></div><div class="ttdeci">@ PORTFOLIO_STALE</div><div class="ttdoc">The holdings snapshot is older than the configured maximum age.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00060">risk.hpp:60</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790">algotradelib::strategy::HaltReason::POLL_FAILING</a></div><div class="ttdeci">@ POLL_FAILING</div><div class="ttdoc">A poll kept failing and the loop gave up, as opposed to STOPPING on request.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00068">risk.hpp:68</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752af6cdb3c6710b50ec65ee07f740847e10"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752af6cdb3c6710b50ec65ee07f740847e10">algotradelib::strategy::HaltReason::STOPPING</a></div><div class="ttdeci">@ STOPPING</div><div class="ttdoc">A stop was requested and the run is shutting down.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00041">risk.hpp:41</a></div></div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00072">72</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a372aca5260b4331d2ee74dc5d335fb03" name="a372aca5260b4331d2ee74dc5d335fb03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372aca5260b4331d2ee74dc5d335fb03">&#9670;&#160;</a></span>all_market_phases</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a>, 5&gt; algotradelib::strategy::all_market_phases</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3">MarketPhase::UNKNOWN</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d">MarketPhase::CLOSED</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2">MarketPhase::PRE_OPEN</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">MarketPhase::OPEN</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">MarketPhase::POST_CLOSE</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d">algotradelib::strategy::MarketPhase::CLOSED</a></div><div class="ttdeci">@ CLOSED</div><div class="ttdoc">A date the market does not trade.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00034">event.hpp:34</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2">algotradelib::strategy::MarketPhase::PRE_OPEN</a></div><div class="ttdeci">@ PRE_OPEN</div><div class="ttdoc">A trading day, before the session opens.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00036">event.hpp:36</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3">algotradelib::strategy::MarketPhase::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdoc">The calendar does not cover this date; nothing is known about it.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00032">event.hpp:32</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">algotradelib::strategy::MarketPhase::POST_CLOSE</a></div><div class="ttdeci">@ POST_CLOSE</div><div class="ttdoc">A trading day, after the session closed.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00040">event.hpp:40</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">algotradelib::strategy::MarketPhase::OPEN</a></div><div class="ttdeci">@ OPEN</div><div class="ttdoc">Inside the session.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00038">event.hpp:38</a></div></div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00044">44</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a632a39df2a6691e73477d12ef4bd4c5e" name="a632a39df2a6691e73477d12ef4bd4c5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a632a39df2a6691e73477d12ef4bd4c5e">&#9670;&#160;</a></span>halt_reason_count</h2>
 
@@ -1406,7 +1572,7 @@ template&lt;typename Broker&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t algotradelib::strategy::halt_reason_count = 8</td>
+          <td class="memname">std::size_t algotradelib::strategy::halt_reason_count = all_halt_reasons.size()</td>
         </tr>
       </table>
   </td>
@@ -1418,9 +1584,9 @@ template&lt;typename Broker&gt; </div>
 
 <p>The number of <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span> values. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00072">72</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00084">84</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00785">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l00808">algotradelib::strategy::RiskGuard::holds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00813">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l00836">algotradelib::strategy::RiskGuard::holds()</a>.</p>
 
 </div>
 </div>

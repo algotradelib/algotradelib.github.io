@@ -176,7 +176,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>One journal line: an instruction and what was known about it when the line was written. </p>
 <p>Every line repeats the whole instruction, so an answering line is readable on its own (with <span class="tt">tail</span>) and survives the loss of its <span class="tt">PENDING</span> line. <span class="tt"><a class="el" href="#a07bb55de1fc9d1c710bbfc48dbfb2bd8" title="When the line was written (for PENDING, before the request went out).">recorded_at_</a></span> is the executor's clock (this machine's, unless one was injected), not the broker's. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00210">210</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00360">360</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a9fda4f2b63c77dd671eaeea9b6e19b59" name="a9fda4f2b63c77dd671eaeea9b6e19b59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fda4f2b63c77dd671eaeea9b6e19b59">&#9670;&#160;</a></span>action_</h2>
@@ -192,9 +192,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the instruction is a placement or a cancellation. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00218">218</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00368">368</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01031">algotradelib::runner::any_placement()</a>, <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00436">algotradelib::runner::unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01077">algotradelib::runner::any_placement()</a>, <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -213,9 +213,9 @@ Public Attributes</h2></td></tr>
 <p>On a serialized runner's placement, the instrument's net holding the order was decided against; on a <span class="tt">CONFIRMED</span> line, the holding afterwards, where holdings showed it. </p>
 <p>Empty on every line of an overlapping (or older) runner, which is how recovery tells them apart. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00253">253</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00403">403</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, and <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, and <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -233,9 +233,9 @@ Public Attributes</h2></td></tr>
 
 <p>Why an answering line says what it says, for the operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00260">260</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00410">410</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00720">algotradelib::runner::unattributable_journal_entry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00632">algotradelib::runner::unattributable_journal_entry()</a>.</p>
 
 </div>
 </div>
@@ -254,9 +254,9 @@ Public Attributes</h2></td></tr>
 <p>Links an answering line to its <span class="tt">PENDING</span> line. </p>
 <p>Generated locally; it is not an idempotency key and no broker has seen it. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00216">216</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00366">366</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00998">algotradelib::runner::decide_nothing()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00541">algotradelib::runner::recorded_owner()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00720">algotradelib::runner::unattributable_journal_entry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01044">algotradelib::runner::decide_nothing()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00588">algotradelib::runner::recorded_owner()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00632">algotradelib::runner::unattributable_journal_entry()</a>.</p>
 
 </div>
 </div>
@@ -274,9 +274,9 @@ Public Attributes</h2></td></tr>
 
 <p>The instrument (identity; the routing venue is <span class="tt"><a class="el" href="#a6227a75c6436050b4152cb9aa84a684c" title="The venue the order actually goes to, as the binding resolves it.">venue_</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00224">224</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00374">374</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00998">algotradelib::runner::decide_nothing()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01245">algotradelib::runner::recover_into()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01044">algotradelib::runner::decide_nothing()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01291">algotradelib::runner::recover_into()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -294,9 +294,9 @@ Public Attributes</h2></td></tr>
 
 <p>The broker's order id, if known: from the start on a <span class="tt">CANCEL</span> line, and only on an answering line for a <span class="tt">PLACE</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00258">258</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00408">408</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::recorded_placements()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00436">algotradelib::runner::unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00535">algotradelib::runner::recorded_placements()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -314,9 +314,9 @@ Public Attributes</h2></td></tr>
 
 <p>What the line says about the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00220">220</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00370">370</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00855">algotradelib::runner::resolution_entry()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00720">algotradelib::runner::unattributable_journal_entry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00901">algotradelib::runner::resolution_entry()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00632">algotradelib::runner::unattributable_journal_entry()</a>.</p>
 
 </div>
 </div>
@@ -334,9 +334,9 @@ Public Attributes</h2></td></tr>
 
 <p>The price, if the order has one. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00244">244</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00394">394</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00436">algotradelib::runner::unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -354,9 +354,9 @@ Public Attributes</h2></td></tr>
 
 <p>The quantity, which recovery matches against. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00242">242</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00392">392</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -374,9 +374,9 @@ Public Attributes</h2></td></tr>
 
 <p>When the line was written (for <span class="tt">PENDING</span>, before the request went out). </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00222">222</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00372">372</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="journal_8hpp_source.html#l00664">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::record()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="journal_8hpp_source.html#l00823">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::record()</a>.</p>
 
 </div>
 </div>
@@ -395,9 +395,9 @@ Public Attributes</h2></td></tr>
 <p>Whether only an operator may resolve this instruction. </p>
 <p>Set on an instruction recovered from a damaged line, whose matching fields are missing; a sweep never resolves it. Written to the file, so it survives repair. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00267">267</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00417">417</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01031">algotradelib::runner::any_placement()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00720">algotradelib::runner::unattributable_journal_entry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01077">algotradelib::runner::any_placement()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00632">algotradelib::runner::unattributable_journal_entry()</a>.</p>
 
 </div>
 </div>
@@ -416,9 +416,9 @@ Public Attributes</h2></td></tr>
 <p>The broker and account the instruction belongs to, such as <span class="tt">"kis:live:12345678-01"</span>. </p>
 <p>Opaque to the library; it keeps one account's instruction from being matched against another account's orders. Stamped by the journal. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00274">274</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00424">424</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01332">algotradelib::runner::FileJournal::append()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01244">algotradelib::runner::FileJournal::append()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>.</p>
 
 </div>
 </div>
@@ -436,9 +436,9 @@ Public Attributes</h2></td></tr>
 
 <p>The session. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00232">232</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00382">382</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -456,9 +456,9 @@ Public Attributes</h2></td></tr>
 
 <p>The side. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00226">226</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00376">376</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -476,9 +476,9 @@ Public Attributes</h2></td></tr>
 
 <p>The time in force. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00230">230</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00380">380</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -496,9 +496,9 @@ Public Attributes</h2></td></tr>
 
 <p>The trigger price of a stop-limit order; empty otherwise (and on lines that predate it). </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00246">246</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00396">396</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00436">algotradelib::runner::unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -516,9 +516,9 @@ Public Attributes</h2></td></tr>
 
 <p>The order type; recovery matches on type, time in force and session together. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00228">228</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00378">378</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00680">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00436">algotradelib::runner::unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -537,9 +537,9 @@ Public Attributes</h2></td></tr>
 <p>The venue the order actually goes to, as the binding resolves it. </p>
 <p><span class="tt">UNSPECIFIED</span> is a recorded fact (no venue was asked for, as always at Toss). Empty means the route cannot be known from the line (an older line, an unrecognized value, or a damaged line); recovery then reports a lookalike row as ambiguous rather than matching it. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00240">240</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00390">390</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00740">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00611">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00288">algotradelib::runner::route_evidence()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00958">algotradelib::runner::salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00652">algotradelib::runner::journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00337">algotradelib::runner::route_evidence()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00870">algotradelib::runner::salvage_journal_line()</a>.</p>
 
 </div>
 </div>

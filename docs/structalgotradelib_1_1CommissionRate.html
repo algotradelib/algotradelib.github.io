@@ -167,7 +167,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>One commission rate, the market and venue it applies to, and the dates it applies on. </p>
 <p>Rates are fractions of traded value (<span class="tt">0.00015</span>, not <span class="tt">0.015</span>). An absent date bound is open-ended in that direction; a bound that was present but unreadable sets <span class="tt"><a class="el" href="#af32050754d718ecced6f6717ab06d1f2" title="Whether the source stated a start date that could not be read (so from_ is empty).">from_unreadable_</a></span> or <span class="tt"><a class="el" href="#a3346d4496025475e980ba394c6cfe311" title="Whether the source stated an end date that could not be read (so until_ is empty).">until_unreadable_</a></span>, and then <span class="tt"><a class="el" href="#a64cfb67dd7cb2780831d73b325425765" title="Tests whether the rate applies on a date.">applies_on</a></span> answers <span class="tt">UNREADABLE</span> rather than treating the row as open-ended. No per-order minimum or transaction tax is modelled here; a backtest states a sale tax with <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a45e7927a04aa1f3d339af0535f0074bd" title="Returns a copy of this model that charges a tax on sales.">backtest::NextBarFillModel::with_sell_tax</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01368">1368</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01449">1449</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a64cfb67dd7cb2780831d73b325425765" name="a64cfb67dd7cb2780831d73b325425765"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64cfb67dd7cb2780831d73b325425765">&#9670;&#160;</a></span>applies_on()</h2>
@@ -201,7 +201,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">NO</span> if a readable bound excludes the date (even when the other bound is unreadable), <span class="tt">UNREADABLE</span> if not excluded but a bound could not be read, and <span class="tt">YES</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01429">1429</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01510">1510</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -237,9 +237,9 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">date</span> is before <span class="tt"><a class="el" href="#aa528d04134eeee8350796cd024543b1b" title="The first date the rate applies on; empty is open-ended unless from_unreadable_ is set.">from_</a></span> or after <span class="tt"><a class="el" href="#ac964fc3f6b50c4edf90618a27844c4d2" title="The last date the rate applies on; empty is open-ended unless until_unreadable_ is set.">until_</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01444">1444</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01525">1525</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01429">applies_on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01510">applies_on()</a>.</p>
 
 </div>
 </div>
@@ -269,7 +269,7 @@ Public Attributes</h2></td></tr>
 <p>Tests whether the rate's market is a normalized <span class="tt"><a class="el" href="namespacealgotradelib.html#a9ac772587aa2f4d74513bfcb82bd6fe9" title="A country (market) the library supports.">Country</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt"><a class="el" href="#afebfc7b42a1713cb83b489d3c8819d7a" title="The broker&#39;s market code, when the library does not normalize that market.">other_</a></span> is empty, so <span class="tt"><a class="el" href="#a5b748b9c535a249b0b6142bc6f4ab0c4" title="The market the rate applies to; meaningless when other_ is set.">country_</a></span> names the market. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01420">1420</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01501">1501</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ Public Attributes</h2></td></tr>
 
 <p>The market the rate applies to; meaningless when <span class="tt"><a class="el" href="#afebfc7b42a1713cb83b489d3c8819d7a" title="The broker&#39;s market code, when the library does not normalize that market.">other_</a></span> is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01370">1370</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01451">1451</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -306,9 +306,9 @@ Public Attributes</h2></td></tr>
 
 <p>The first date the rate applies on; empty is open-ended unless <span class="tt"><a class="el" href="#af32050754d718ecced6f6717ab06d1f2" title="Whether the source stated a start date that could not be read (so from_ is empty).">from_unreadable_</a></span> is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01398">1398</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01479">1479</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01444">excluded_on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01525">excluded_on()</a>.</p>
 
 </div>
 </div>
@@ -327,9 +327,9 @@ Public Attributes</h2></td></tr>
 <p>Whether the source stated a start date that could not be read (so <span class="tt"><a class="el" href="#aa528d04134eeee8350796cd024543b1b" title="The first date the rate applies on; empty is open-ended unless from_unreadable_ is set.">from_</a></span> is empty). </p>
 <p>The row is kept, but <span class="tt"><a class="el" href="#a64cfb67dd7cb2780831d73b325425765" title="Tests whether the rate applies on a date.">applies_on</a></span> answers <span class="tt">UNREADABLE</span> for any date the readable bounds do not exclude. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01407">1407</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01488">1488</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01429">applies_on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01510">applies_on()</a>.</p>
 
 </div>
 </div>
@@ -348,7 +348,7 @@ Public Attributes</h2></td></tr>
 <p>The institution fee (유관기관제비용), as a fraction of traded value, if stated separately. </p>
 <p>Empty means the source gave one combined rate and said nothing about its parts (every Toss row); a report then treats <span class="tt"><a class="el" href="#aefa38d76d3ac330d1d70950baf9d16d1" title="The broker&#39;s commission, as a fraction of traded value (0.00015, not 0.015).">rate_</a></span> as inclusive. A present zero is a stated zero; a positive value is charged in addition to <span class="tt"><a class="el" href="#aefa38d76d3ac330d1d70950baf9d16d1" title="The broker&#39;s commission, as a fraction of traded value (0.00015, not 0.015).">rate_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01394">1394</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01475">1475</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,9 +367,9 @@ Public Attributes</h2></td></tr>
 <p>The broker's market code, when the library does not normalize that market. </p>
 <p>Empty for a normalized market. A broker row whose market code cannot be stored here is skipped and counted in <span class="tt"><a class="el" href="structalgotradelib_1_1CommissionSchedule.html#a76e0a4b3b1b5dc322bacd4b0b3891db8" title="How many broker rows were skipped because their market code could not be stored.">CommissionSchedule::dropped_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01377">1377</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01458">1458</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01420">normalized()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01501">normalized()</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ Public Attributes</h2></td></tr>
 
 <p>The broker's commission, as a fraction of traded value (<span class="tt">0.00015</span>, not <span class="tt">0.015</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01386">1386</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01467">1467</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -405,9 +405,9 @@ Public Attributes</h2></td></tr>
 
 <p>The last date the rate applies on; empty is open-ended unless <span class="tt"><a class="el" href="#a3346d4496025475e980ba394c6cfe311" title="Whether the source stated an end date that could not be read (so until_ is empty).">until_unreadable_</a></span> is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01400">1400</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01481">1481</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01444">excluded_on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01525">excluded_on()</a>.</p>
 
 </div>
 </div>
@@ -426,9 +426,9 @@ Public Attributes</h2></td></tr>
 <p>Whether the source stated an end date that could not be read (so <span class="tt"><a class="el" href="#ac964fc3f6b50c4edf90618a27844c4d2" title="The last date the rate applies on; empty is open-ended unless until_unreadable_ is set.">until_</a></span> is empty). </p>
 <p>The row is kept, but <span class="tt"><a class="el" href="#a64cfb67dd7cb2780831d73b325425765" title="Tests whether the rate applies on a date.">applies_on</a></span> answers <span class="tt">UNREADABLE</span> for any date the readable bounds do not exclude. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01414">1414</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01495">1495</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01429">applies_on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01510">applies_on()</a>.</p>
 
 </div>
 </div>
@@ -447,7 +447,7 @@ Public Attributes</h2></td></tr>
 <p>The venue the rate applies to. </p>
 <p><span class="tt"><a class="el" href="classalgotradelib_1_1VenueKey.html#a52ae393f8ff33520ca0627e7a2caf416" title="Returns the key for any venue.">VenueKey::any()</a></span> on every rate a broker publishes; no broker publishes per-venue rates, so a caller states KRX and NXT rates from the fee page. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01384">1384</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01465">1465</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>

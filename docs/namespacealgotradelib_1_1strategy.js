@@ -115,12 +115,16 @@ var namespacealgotradelib_1_1strategy =
     [ "is_stop_order", "namespacealgotradelib_1_1strategy.html#ac721589ebf85b2415505c8f7079ff1ff", null ],
     [ "make_bar_event", "namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19", null ],
     [ "market_phase_name", "namespacealgotradelib_1_1strategy.html#a5e4df3e7b24619eacad1c8ca26b67b77", null ],
+    [ "market_phase_session_ended", "namespacealgotradelib_1_1strategy.html#aab148d4132b0eb543fba8d22e27042a9", null ],
     [ "order_is_open", "namespacealgotradelib_1_1strategy.html#a91995669e8d9df29185503ac1b714d90", null ],
     [ "projected_gross_exposure", "namespacealgotradelib_1_1strategy.html#a856e034baa4972b2c7f9de0be810aa33", null ],
     [ "reconcile", "namespacealgotradelib_1_1strategy.html#a9269739d3a462a0538e773f73c8cb022", null ],
     [ "reconcile", "namespacealgotradelib_1_1strategy.html#ae6d4fd3d585a72c2c9481f8edb658904", null ],
     [ "reject_reason_name", "namespacealgotradelib_1_1strategy.html#a7441fcdd2f2661fa34ae88bea734b3c7", null ],
     [ "sellable_convention_name", "namespacealgotradelib_1_1strategy.html#ab4a5367235531e59a372e4a9ef737ec2", null ],
+    [ "size_kind_is_target", "namespacealgotradelib_1_1strategy.html#ac097cc56d34112816ead3a1c0e755977", null ],
     [ "weight_target", "namespacealgotradelib_1_1strategy.html#a9f7ac198bfabe7c175a24def662c1618", null ],
+    [ "all_halt_reasons", "namespacealgotradelib_1_1strategy.html#afb533691e7f20b50ff3673a599b6078d", null ],
+    [ "all_market_phases", "namespacealgotradelib_1_1strategy.html#a372aca5260b4331d2ee74dc5d335fb03", null ],
     [ "halt_reason_count", "namespacealgotradelib_1_1strategy.html#a632a39df2a6691e73477d12ef4bd4c5e", null ]
 ];

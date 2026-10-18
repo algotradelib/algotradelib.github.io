@@ -152,7 +152,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>A modification or cancellation of a working order. </p>
 <p>Build one from a <span class="tt"><a class="el" href="structalgotradelib_1_1WorkingOrder.html" title="An order still open to modification or cancellation.">WorkingOrder</a></span> with <span class="tt"><a class="el" href="namespacealgotradelib.html#a58f170e6b14a137997b351017e9a8f75" title="Makes an instruction cancelling all that remains of an order.">cancel_all</a></span>, <span class="tt"><a class="el" href="namespacealgotradelib.html#a78dae62707e84d61c38c2f32a5b2e4d4" title="Makes an instruction cancelling part of an order.">cancel_quantity</a></span>, <span class="tt"><a class="el" href="namespacealgotradelib.html#abbbdfc8d57f6d397cba4eb5fd4c46490" title="Makes an instruction changing a working order to a new shape.">replace_with</a></span> or <span class="tt"><a class="el" href="namespacealgotradelib.html#a24c87efb9eb718374da8177f305f000e" title="Makes an instruction changing only a working order&#39;s price.">reprice</a></span>, which fill in what the bound broker needs. <span class="tt"><a class="el" href="#aca106c727f494297a53d36a35d2c72d8" title="Whether the whole remaining quantity is affected, rather than quantity_.">all_remaining_</a></span> is never inferred. A broker that needs a quantity (KIS, even to cancel everything) refuses an instruction without one. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02040">2040</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02240">2240</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="aca106c727f494297a53d36a35d2c72d8" name="aca106c727f494297a53d36a35d2c72d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca106c727f494297a53d36a35d2c72d8">&#9670;&#160;</a></span>all_remaining_</h2>
@@ -168,9 +168,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the whole remaining quantity is affected, rather than <span class="tt"><a class="el" href="#a7c935c62fe0cf57267612edffaf2c857" title="The quantity affected; never substituted if a broker needs one and it is missing.">quantity_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02052">2052</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02252">2252</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02214">algotradelib::replace_with()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02362">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02385">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02414">algotradelib::replace_with()</a>.</p>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ Public Attributes</h2></td></tr>
 
 <p>Confirms a high-value amendment, where the broker asks for that confirmation. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02054">2054</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02254">2254</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -206,9 +206,9 @@ Public Attributes</h2></td></tr>
 
 <p>The quantity affected; never substituted if a broker needs one and it is missing. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02050">2050</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02250">2250</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02214">algotradelib::replace_with()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02362">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02385">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02414">algotradelib::replace_with()</a>.</p>
 
 </div>
 </div>
@@ -227,9 +227,9 @@ Public Attributes</h2></td></tr>
 <p>The shape the order has now, or unset if unknown. </p>
 <p>An adapter compares it with <span class="tt"><a class="el" href="#aa8cd36eab76cb82c5aae245463570180" title="The shape the order should have afterwards.">shape_</a></span> to tell a change from a keep. One that cannot verify a change it cannot send refuses before any I/O. The helper functions fill it in. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02061">2061</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02261">2261</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02071">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02214">algotradelib::replace_with()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02271">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02362">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02385">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02414">algotradelib::replace_with()</a>.</p>
 
 </div>
 </div>
@@ -247,9 +247,9 @@ Public Attributes</h2></td></tr>
 
 <p>The shape the order should have afterwards. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02042">2042</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02242">2242</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02071">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02214">algotradelib::replace_with()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02271">algotradelib::amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l02362">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02385">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02414">algotradelib::replace_with()</a>.</p>
 
 </div>
 </div>
@@ -268,9 +268,9 @@ Public Attributes</h2></td></tr>
 <p>The venue the order rests at, for a broker whose amendment needs it (KIS). </p>
 <p>The helper functions copy it from the working order; <span class="tt">UNSPECIFIED</span> takes the broker's default. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02048">2048</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02248">2248</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02162">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02185">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02214">algotradelib::replace_with()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02362">algotradelib::cancel_all()</a>, <a class="el" href="types_8hpp_source.html#l02385">algotradelib::cancel_quantity()</a>, and <a class="el" href="types_8hpp_source.html#l02414">algotradelib::replace_with()</a>.</p>
 
 </div>
 </div>

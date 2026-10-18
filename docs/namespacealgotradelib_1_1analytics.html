@@ -277,7 +277,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa9b64127b8c9f0d01c99f29abe7efde7" id="r_aa9b64127b8c9f0d01c99f29abe7efde7"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#aa9b64127b8c9f0d01c99f29abe7efde7">bar_field_count</a> = 6</td></tr>
+<tr class="memitem:a02acb721b7cac344528419551c1c74a1" id="r_a02acb721b7cac344528419551c1c74a1"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2">BarField</a>, 6 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a02acb721b7cac344528419551c1c74a1">all_bar_fields</a></td></tr>
+<tr class="memdesc:a02acb721b7cac344528419551c1c74a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2" title="A bar field, used as a column of a SeriesFrame.">BarField</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:aa9b64127b8c9f0d01c99f29abe7efde7" id="r_aa9b64127b8c9f0d01c99f29abe7efde7"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#aa9b64127b8c9f0d01c99f29abe7efde7">bar_field_count</a> = all_bar_fields.size()</td></tr>
 <tr class="memdesc:aa9b64127b8c9f0d01c99f29abe7efde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of <span class="tt"><a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2" title="A bar field, used as a column of a SeriesFrame.">BarField</a></span> values, and so of columns in a <span class="tt"><a class="el" href="classalgotradelib_1_1analytics_1_1SeriesFrame.html" title="One instrument&#39;s bars as numeric columns: one row per bar, one column per BarField.">SeriesFrame</a></span>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -364,7 +366,7 @@ Variables</h2></td></tr>
 
 <p>A bar field, used as a column of a <span class="tt"><a class="el" href="classalgotradelib_1_1analytics_1_1SeriesFrame.html" title="One instrument&#39;s bars as numeric columns: one row per bar, one column per BarField.">SeriesFrame</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00020">20</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00021">21</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
 </div>
 </div>
@@ -628,9 +630,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Its column index, from <span class="tt">0</span> to <span class="tt"><a class="el" href="#aa9b64127b8c9f0d01c99f29abe7efde7" title="The number of BarField values, and so of columns in a SeriesFrame.">bar_field_count</a> - 1</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00037">37</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00048">48</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00164">algotradelib::analytics::SeriesFrame::at()</a>, <a class="el" href="frame_8hpp_source.html#l00037">bar_field_index()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00189">algotradelib::analytics::SeriesBuffer::column()</a>, <a class="el" href="frame_8hpp_source.html#l00122">algotradelib::analytics::SeriesFrame::column()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="frame_8hpp_source.html#l00181">algotradelib::analytics::SeriesFrame::set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00180">algotradelib::analytics::SeriesFrame::at()</a>, <a class="el" href="frame_8hpp_source.html#l00048">bar_field_index()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00189">algotradelib::analytics::SeriesBuffer::column()</a>, <a class="el" href="frame_8hpp_source.html#l00138">algotradelib::analytics::SeriesFrame::column()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="frame_8hpp_source.html#l00197">algotradelib::analytics::SeriesFrame::set()</a>.</p>
 
 </div>
 </div>
@@ -664,11 +666,11 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2" title="A bar field, used as a column of a SeriesFrame.">BarField</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00046">46</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00057">57</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00046">bar_field_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00057">bar_field_name()</a>.</p>
 
 </div>
 </div>
@@ -1170,9 +1172,9 @@ level = ema_step(level, close, alpha);   // once per bar
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00212">212</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00228">228</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00212">from_bars()</a>, and <a class="el" href="panel_8hpp_source.html#l00171">algotradelib::analytics::Panel::from_bars()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00228">from_bars()</a>, and <a class="el" href="panel_8hpp_source.html#l00171">algotradelib::analytics::Panel::from_bars()</a>.</p>
 
 </div>
 </div>
@@ -2589,7 +2591,7 @@ level = ema_step(level, close, alpha);   // once per bar
 
 <p class="definition">Definition at line <a class="el" href="conversion_8hpp_source.html#l00037">37</a> of file <a class="el" href="conversion_8hpp_source.html">conversion.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00212">from_bars()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="conversion_8hpp_source.html#l00037">to_scalar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00228">from_bars()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="conversion_8hpp_source.html#l00037">to_scalar()</a>.</p>
 
 </div>
 </div>
@@ -2899,6 +2901,40 @@ level = ema_step(level, close, alpha);   // once per bar
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a02acb721b7cac344528419551c1c74a1" name="a02acb721b7cac344528419551c1c74a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02acb721b7cac344528419551c1c74a1">&#9670;&#160;</a></span>all_bar_fields</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2">BarField</a>, 6&gt; algotradelib::analytics::all_bar_fields</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  BarField::OPEN,</div>
+<div class="line">  BarField::HIGH,</div>
+<div class="line">  BarField::LOW,</div>
+<div class="line">  BarField::CLOSE,</div>
+<div class="line">  BarField::VOLUME,</div>
+<div class="line">  BarField::TRADED_VALUE,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2" title="A bar field, used as a column of a SeriesFrame.">BarField</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00031">31</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
+
+</div>
+</div>
 <a id="aa9b64127b8c9f0d01c99f29abe7efde7" name="aa9b64127b8c9f0d01c99f29abe7efde7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9b64127b8c9f0d01c99f29abe7efde7">&#9670;&#160;</a></span>bar_field_count</h2>
 
@@ -2909,7 +2945,7 @@ level = ema_step(level, close, alpha);   // once per bar
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t algotradelib::analytics::bar_field_count = 6</td>
+          <td class="memname">std::size_t algotradelib::analytics::bar_field_count = all_bar_fields.size()</td>
         </tr>
       </table>
   </td>
@@ -2921,9 +2957,9 @@ level = ema_step(level, close, alpha);   // once per bar
 
 <p>The number of <span class="tt"><a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2" title="A bar field, used as a column of a SeriesFrame.">BarField</a></span> values, and so of columns in a <span class="tt"><a class="el" href="classalgotradelib_1_1analytics_1_1SeriesFrame.html" title="One instrument&#39;s bars as numeric columns: one row per bar, one column per BarField.">SeriesFrame</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00030">30</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00041">41</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00103">algotradelib::analytics::SeriesFrame::columns()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="series__buffer_8hpp_source.html#l00042">algotradelib::analytics::SeriesBuffer::SeriesBuffer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00119">algotradelib::analytics::SeriesFrame::columns()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="series__buffer_8hpp_source.html#l00042">algotradelib::analytics::SeriesBuffer::SeriesBuffer()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX5 =
 {
+"classalgotradelib_1_1runner_1_1ManualSource.html#ad91dfa6dea3ed91ef2bfb43b4c0dbada":[2,0,0,9,20,5],
+"classalgotradelib_1_1runner_1_1ManualSource.html#ae1974a0daf75b9ac5766c7a8fe5b7322":[1,0,0,9,20,7],
+"classalgotradelib_1_1runner_1_1ManualSource.html#ae1974a0daf75b9ac5766c7a8fe5b7322":[2,0,0,9,20,7],
+"classalgotradelib_1_1runner_1_1ManualSource.html#ae44ac41c63844eaf988d81315746cbc1":[1,0,0,9,20,1],
 "classalgotradelib_1_1runner_1_1ManualSource.html#ae44ac41c63844eaf988d81315746cbc1":[2,0,0,9,20,1],
 "classalgotradelib_1_1runner_1_1ManualSource.html#aff232a4cc6798f654e87c325b345d10f":[1,0,0,9,20,0],
 "classalgotradelib_1_1runner_1_1ManualSource.html#aff232a4cc6798f654e87c325b345d10f":[2,0,0,9,20,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX5 =
 "classalgotradelib_1_1runner_1_1Runner.html#a9d5cbf433a7332442b5fc971f6f29d55":[2,0,0,9,37,83],
 "classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08":[1,0,0,9,37,1],
 "classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08":[2,0,0,9,37,1],
-"classalgotradelib_1_1runner_1_1Runner.html#aa04899ccd7a5b21a5adadd08603a5024":[1,0,0,9,37,43],
-"classalgotradelib_1_1runner_1_1Runner.html#aa04899ccd7a5b21a5adadd08603a5024":[2,0,0,9,37,43],
-"classalgotradelib_1_1runner_1_1Runner.html#aa5ce9952307cb427dddb906d925f2d84":[1,0,0,9,37,75],
-"classalgotradelib_1_1runner_1_1Runner.html#aa5ce9952307cb427dddb906d925f2d84":[2,0,0,9,37,75],
-"classalgotradelib_1_1runner_1_1Runner.html#aa75264569eaa48592145cf76aa1882f0":[1,0,0,9,37,30]
+"classalgotradelib_1_1runner_1_1Runner.html#aa04899ccd7a5b21a5adadd08603a5024":[1,0,0,9,37,43]
 };

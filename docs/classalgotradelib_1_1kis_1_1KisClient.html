@@ -231,7 +231,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>The asynchronous KIS REST client: market data, account inquiries and orders for domestic stocks. </p>
 <p>It requests an access token when first needed and shares one refresh among concurrent requests. Sends <span class="tt">custtype P</span>. KIS's field reference reads <span class="tt">B : 법인 / P : 개인</span>, and its token guide (접근토큰발급) groups 일반개인고객 and 일반법인고객 under the one-day client-credentials token, apart from 제휴법인 (a three-month token by authorization code, and <span class="tt">personalseckey</span>, 제휴사 회원 관리를 위한 고객식별키). The partner-corporation flow (<span class="tt">custtype B</span>) is not supported. Create it with <span class="tt">std::make_shared</span>. Each completion runs on the handler's associated executor, or on the client's strand if it has none. A blocking wrapper is <span class="tt"><a class="el" href="classalgotradelib_1_1kis_1_1KisBlockingClient.html" title="A blocking KIS client: each call runs a KisClient request on a private event loop and returns its res...">KisBlockingClient</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00289">289</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00324">324</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a8b56e827350818616b6fc1147957be37" name="a8b56e827350818616b6fc1147957be37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b56e827350818616b6fc1147957be37">&#9670;&#160;</a></span>BarsHandler</h2>
@@ -247,7 +247,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#aebde776953cd986d31a73b089c0b99d8" title="Requests bars, reading KIS pages until count_ bars are collected.">async_bars</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00295">295</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00330">330</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#ad7c18074a235a2d11bcd613a173d414e" title="Requests the account&#39;s buying power (the account-level amount, in won).">async_buying_power</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00315">315</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00350">350</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +283,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#a38a6a12fecfdc4219dcbebcb26b3b437" title="Requests the trading calendar from a date on, and caches it for the client&#39;s life.">async_calendar</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00307">307</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00342">342</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -301,7 +301,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#ae7d7a2ab2388e3047729bca7cf9720a1" title="Requests the order book (ten levels a side).">async_depth</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00298">298</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00333">333</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +319,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#a8f582c88b14e2afe9ac5ce1213d0ea24" title="Requests the account&#39;s holdings.">async_holdings</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00313">313</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00348">348</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#ac763e5347ea611c958a32c86c59db36a" title="Requests an instrument&#39;s reference data.">async_instrument</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00310">310</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00345">345</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +355,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#a9d37e6770eee74342097baa730eb6746" title="Requests every order that can still be amended or cancelled.">async_open_orders</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00321">321</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00356">356</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +373,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of the order requests. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00318">318</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00353">353</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +391,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#a948f6f8b42a6748d3cecf7a039e904eb" title="Requests the orders placed over a date range, with their fills.">async_order_history</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00324">324</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00359">359</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -409,7 +409,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#ae50be96804f233ad41dc86a45c6d1ccf" title="Requests an instrument&#39;s price band for today (from its current-price inquiry).">async_price_limits</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00301">301</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00336">336</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,7 +427,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#a12bcabc1f1ad1d98a9df6c186a6e37c2" title="Requests a quote.">async_quote</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00292">292</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00327">327</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +445,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of a token refresh (internal). </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00327">327</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00362">362</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -463,7 +463,7 @@ Friends</h2></td></tr>
 
 <p>The completion handler type of <span class="tt"><a class="el" href="#a8096286f6ac9afcd16e183d3ac043253" title="Requests an instrument&#39;s recent trades.">async_trades</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00304">304</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00339">339</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -516,7 +516,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00336">336</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00371">371</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> (nothing adopted) if the token is empty or expires within five minutes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00833">833</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00868">868</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -605,7 +605,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00369">369</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00404">404</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00528">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::bars()</a>.</p>
 
@@ -662,7 +662,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00555">555</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00590">590</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00555">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::buying_power()</a>.</p>
 
@@ -720,7 +720,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00420">420</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00455">455</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00473">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::calendar()</a>.</p>
 
@@ -779,7 +779,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00702">702</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00737">737</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00615">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::cancel_order()</a>.</p>
 
@@ -830,7 +830,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00508">508</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00543">543</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00515">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::depth()</a>.</p>
 
@@ -881,7 +881,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00579">579</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00614">614</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00568">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::holdings()</a>.</p>
 
@@ -932,7 +932,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00392">392</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00427">427</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00459">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::instrument()</a>.</p>
 
@@ -984,7 +984,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00742">742</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00777">777</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00633">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::working_orders()</a>.</p>
 
@@ -1042,7 +1042,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00770">770</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00805">805</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00647">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::order_history()</a>.</p>
 
@@ -1101,7 +1101,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00621">621</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00656">656</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00582">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::place_order()</a>.</p>
 
@@ -1152,7 +1152,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00443">443</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00478">478</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00488">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::price_limits()</a>.</p>
 
@@ -1203,7 +1203,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00531">531</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00566">566</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00541">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::quote()</a>.</p>
 
@@ -1261,7 +1261,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00657">657</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00692">692</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00596">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::replace_order()</a>.</p>
 
@@ -1318,7 +1318,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00474">474</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00509">509</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00502">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::trades()</a>.</p>
 
@@ -1349,7 +1349,7 @@ template&lt;typename CompletionToken&gt; </div>
 
 <p>Closes the client for good: pending requests, and later ones that would send, complete with <span class="tt">CANCELLED</span>. A request already being sent has <span class="tt">reached_broker_</span> set and an unknown outcome. A later calendar request the cache covers is still answered, and a request refused before sending is still refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00847">847</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00882">882</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -1380,7 +1380,7 @@ template&lt;typename CompletionToken&gt; </div>
 <p>Read them on the client's strand or while no request is in progress (between calls on the blocking client).</p>
 <dl class="section return"><dt>Returns</dt><dd>The statistics, or null if the client has no rate-limit budget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00802">802</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00837">837</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00446">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::rate_limit_stats()</a>.</p>
 
@@ -1414,9 +1414,9 @@ template&lt;typename CompletionToken&gt; </div>
 <p>Read it on the client's strand or before any request; on the blocking client, between calls.</p>
 <dl class="section return"><dt>Returns</dt><dd>The token, empty until a request has obtained one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00818">818</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00853">853</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l00833">adopt_token()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00369">async_bars()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00555">async_buying_power()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00420">async_calendar()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00702">async_cancel_order()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00508">async_depth()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00579">async_holdings()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00392">async_instrument()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00742">async_open_orders()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00770">async_order_history()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00621">async_place_order()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00443">async_price_limits()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00531">async_quote()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00657">async_replace_order()</a>, and <a class="el" href="kis_2client_8hpp_source.html#l00474">async_trades()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l00868">adopt_token()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00404">async_bars()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00590">async_buying_power()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00455">async_calendar()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00737">async_cancel_order()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00543">async_depth()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00614">async_holdings()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00427">async_instrument()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00777">async_open_orders()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00805">async_order_history()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00656">async_place_order()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00478">async_price_limits()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00566">async_quote()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00692">async_replace_order()</a>, and <a class="el" href="kis_2client_8hpp_source.html#l00509">async_trades()</a>.</p>
 
 </div>
 </div>
@@ -1441,7 +1441,7 @@ template&lt;typename CompletionToken&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00850">850</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l00885">885</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>

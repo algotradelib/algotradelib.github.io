@@ -33,5 +33,6 @@ var namespacealgotradelib_1_1network =
     [ "shutdown_ssl_stream", "namespacealgotradelib_1_1network.html#a7034ecd750c3f7f76570acfc2b488ae9", null ],
     [ "transport_error", "namespacealgotradelib_1_1network.html#a430c9c3332bda042ce8377d013be9b05", null ],
     [ "usable_burst", "namespacealgotradelib_1_1network.html#a3acbcbad72597790e84e409ed51ff185", null ],
+    [ "all_rate_limit_groups", "namespacealgotradelib_1_1network.html#a7c168ac063af20e85ccdeec25f9bbacb", null ],
     [ "rate_limit_group_count", "namespacealgotradelib_1_1network.html#abbef45142e4c629274d3d8f94b8dadb8", null ]
 ];

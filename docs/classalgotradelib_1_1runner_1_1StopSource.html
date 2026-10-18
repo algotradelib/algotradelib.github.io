@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A stop request the loop polls; safe to set from a signal handler. </p>
 <p>Two requests keep the stronger intent: a <span class="tt">FLATTEN</span> followed by a routine <span class="tt">SIGTERM</span> stays a <span class="tt">FLATTEN</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00097">97</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00158">158</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ab0e1abf0f047d2d2820fff8a4af8268d" name="ab0e1abf0f047d2d2820fff8a4af8268d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0e1abf0f047d2d2820fff8a4af8268d">&#9670;&#160;</a></span>clear()</h2>
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Clears the request (for tests, or a supervisor deliberately resuming); the loop never does. </p>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00138">138</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00200">200</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,9 +199,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns the requested intent. </p>
 <dl class="section return"><dt>Returns</dt><dd>The intent, or <span class="tt">std::nullopt</span> if no stop has been requested. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00129">129</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00191">191</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00106">request()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00167">request()</a>.</p>
 
 </div>
 </div>
@@ -237,7 +237,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00106">106</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00167">167</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +267,7 @@ Public Member Functions</h2></td></tr>
 <p>Tests whether a stop has been requested. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> once <span class="tt"><a class="el" href="#ab4836a499156f1afbd7a8cbfc17e711d" title="Requests a stop, keeping whichever of this and an earlier intent is stronger.">request</a></span> has been called (until <span class="tt"><a class="el" href="#ab0e1abf0f047d2d2820fff8a4af8268d" title="Clears the request (for tests, or a supervisor deliberately resuming); the loop never does.">clear</a></span>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00121">121</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00183">183</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
 </div>
 </div>

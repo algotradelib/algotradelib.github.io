@@ -308,6 +308,11 @@ Enumerations</h2></td></tr>
 , <b>ONE_MONTH</b>
 , <br />
 &#160;&#160;<b>ONE_YEAR</b>
+, <a class="el" href="#ad822be21460535bed6354950db4e7dc4a0cf459333080acbf409155b1440745be">FIVE_MINUTES</a>
+, <a class="el" href="#ad822be21460535bed6354950db4e7dc4a9a30940ccbf9e813c96bcbd9547ae63e">FIFTEEN_MINUTES</a>
+, <a class="el" href="#ad822be21460535bed6354950db4e7dc4a87435f46fb04b44a62551b360e799f71">THIRTY_MINUTES</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad822be21460535bed6354950db4e7dc4aad5c4a6fa6075f48c570ef94622af14d">ONE_HOUR</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ad822be21460535bed6354950db4e7dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period one bar covers.  <a href="#ad822be21460535bed6354950db4e7dc4">More...</a><br /></td></tr>
@@ -359,7 +364,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ae2d6f37a7311b1956dac26c57b416067" id="r_ae2d6f37a7311b1956dac26c57b416067"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ae2d6f37a7311b1956dac26c57b416067">OrderSide</a> { <b>BUY</b>
 , <b>SELL</b>
  }</td></tr>
-<tr class="memdesc:ae2d6f37a7311b1956dac26c57b416067"><td class="mdescLeft">&#160;</td><td class="mdescRight">The side of an order.  <a href="#ae2d6f37a7311b1956dac26c57b416067">More...</a><br /></td></tr>
+<tr class="memdesc:ae2d6f37a7311b1956dac26c57b416067"><td class="mdescLeft">&#160;</td><td class="mdescRight">The side of an order: its economic direction, buy or sell.  <a href="#ae2d6f37a7311b1956dac26c57b416067">More...</a><br /></td></tr>
 <tr class="memitem:a431efa8049bf5c7f539e97b34e8bcbce" id="r_a431efa8049bf5c7f539e97b34e8bcbce"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbce">OrderType</a> { <br />
 &#160;&#160;<b>UNKNOWN</b>
 , <a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">LIMIT</a>
@@ -432,12 +437,23 @@ Functions</h2></td></tr>
 <tr class="memitem:a135a215fd865ef03ad860bfc8ef484af" id="r_a135a215fd865ef03ad860bfc8ef484af"><td class="memTemplParams" colspan="2">template&lt;typename Client&gt; </td></tr>
 <tr class="memitem:a135a215fd865ef03ad860bfc8ef484af template"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; std::vector&lt; <a class="el" href="structalgotradelib_1_1AccountInfo.html">AccountInfo</a>&lt; Client &gt; &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a135a215fd865ef03ad860bfc8ef484af">list_accounts</a> (Client &amp;client)</td></tr>
 <tr class="memdesc:a135a215fd865ef03ad860bfc8ef484af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists a broker's accounts with a blocking client, before a session exists; requires <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerCaps.html" title="What one broker client implements, as compile-time constants.">BrokerCaps</a>&lt;Client&gt;::has_account_discovery</span>.  <br /></td></tr>
+<tr class="memitem:a33578d53c14c1cdf3c62eb42a2780996" id="r_a33578d53c14c1cdf3c62eb42a2780996"><td class="memTemplParams" colspan="2">template&lt;typename Enum, std::size_t N, typename IsEnumerator&gt; </td></tr>
+<tr class="memitem:a33578d53c14c1cdf3c62eb42a2780996 template"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a33578d53c14c1cdf3c62eb42a2780996">lists_every_value</a> (const std::array&lt; Enum, N &gt; &amp;values, IsEnumerator is_enumerator) noexcept</td></tr>
+<tr class="memdesc:a33578d53c14c1cdf3c62eb42a2780996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a list holds every value of an enum exactly once, in any order.  <br /></td></tr>
+<tr class="memitem:a63b37645941fcce71f845d9be1729465" id="r_a63b37645941fcce71f845d9be1729465"><td class="memTemplParams" colspan="2">template&lt;typename Enum, std::size_t N, typename IsEnumerator&gt; </td></tr>
+<tr class="memitem:a63b37645941fcce71f845d9be1729465 template"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a63b37645941fcce71f845d9be1729465">lists_every_value</a> (const Enum(&amp;values)[N], IsEnumerator is_enumerator) noexcept</td></tr>
+<tr class="memdesc:a63b37645941fcce71f845d9be1729465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a list holds every value of an enum exactly once, in any order.  <br /></td></tr>
+<tr class="memitem:a2f3a0ff1cadb951cb32b04bd03402fe6" id="r_a2f3a0ff1cadb951cb32b04bd03402fe6"><td class="memTemplParams" colspan="2">template&lt;typename Enum, std::size_t N, typename Name&gt; </td></tr>
+<tr class="memitem:a2f3a0ff1cadb951cb32b04bd03402fe6 template"><td class="memItemLeft">constexpr std::optional&lt; Enum &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2f3a0ff1cadb951cb32b04bd03402fe6">value_named</a> (const std::array&lt; Enum, N &gt; &amp;values, Name name, std::string_view text) noexcept</td></tr>
+<tr class="memdesc:a2f3a0ff1cadb951cb32b04bd03402fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of a list whose name is <span class="tt">text</span>, so a parser reads exactly what its writer writes.  <br /></td></tr>
 <tr class="memitem:a1b193a1f1359c9e8eb19f0c16d5dc5a4" id="r_a1b193a1f1359c9e8eb19f0c16d5dc5a4"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1MarketSegment.html">MarketSegment</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1b193a1f1359c9e8eb19f0c16d5dc5a4">market_segment</a> (std::string_view code)</td></tr>
 <tr class="memdesc:a1b193a1f1359c9e8eb19f0c16d5dc5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps a broker's segment code to a <span class="tt"><a class="el" href="structalgotradelib_1_1MarketSegment.html" title="The market segment an instrument is listed on, such as KOSPI or NASDAQ.">MarketSegment</a></span>.  <br /></td></tr>
 <tr class="memitem:a09ce0eadd0acd91e2651e07c2ea6fdfb" id="r_a09ce0eadd0acd91e2651e07c2ea6fdfb"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&#160;</td><td class="memItemRight"><a class="el" href="#a09ce0eadd0acd91e2651e07c2ea6fdfb">price_rule_for</a> (<a class="el" href="#a9ac772587aa2f4d74513bfcb82bd6fe9">Country</a> country, <a class="el" href="#a1caf6f2514c249110053aeed85321c26">SecurityType</a> type)</td></tr>
 <tr class="memdesc:a09ce0eadd0acd91e2651e07c2ea6fdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the library's price grid for a kind of security in a country.  <br /></td></tr>
 <tr class="memitem:a5feb23ca6c60765410a886bc5fa01baf" id="r_a5feb23ca6c60765410a886bc5fa01baf"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a5feb23ca6c60765410a886bc5fa01baf">bar_interval_name</a> (<a class="el" href="#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval) noexcept</td></tr>
-<tr class="memdesc:a5feb23ca6c60765410a886bc5fa01baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a short name for an interval, such as <span class="tt">"1m"</span> or <span class="tt">"1d"</span>.  <br /></td></tr>
+<tr class="memdesc:a5feb23ca6c60765410a886bc5fa01baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a short name for an interval, such as <span class="tt">"1m"</span>, <span class="tt">"5m"</span>, <span class="tt">"1h"</span> or <span class="tt">"1d"</span>.  <br /></td></tr>
+<tr class="memitem:a17f3163b5d9df8ecc71ea5f3c2ce7d77" id="r_a17f3163b5d9df8ecc71ea5f3c2ce7d77"><td class="memItemLeft">constexpr std::optional&lt; std::chrono::seconds &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a17f3163b5d9df8ecc71ea5f3c2ce7d77">bar_interval_length</a> (<a class="el" href="#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval) noexcept</td></tr>
+<tr class="memdesc:a17f3163b5d9df8ecc71ea5f3c2ce7d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an interval's fixed length, for an intraday interval.  <br /></td></tr>
 <tr class="memitem:afc31101e8069a02ac84ee2fe155767d0" id="r_afc31101e8069a02ac84ee2fe155767d0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc31101e8069a02ac84ee2fe155767d0">order_depth</a> (<a class="el" href="structalgotradelib_1_1DepthSnapshot.html">DepthSnapshot</a> &amp;book)</td></tr>
 <tr class="memdesc:afc31101e8069a02ac84ee2fe155767d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts a book's levels best first: bids descending, asks ascending.  <br /></td></tr>
 <tr class="memitem:aa49b19dede2f29ad86b989492cebb3fa" id="r_aa49b19dede2f29ad86b989492cebb3fa"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#aa49b19dede2f29ad86b989492cebb3fa">venue_name</a> (<a class="el" href="#ac78f755f933a0a9a9f38040d8e56828d">Venue</a> venue) noexcept</td></tr>
@@ -458,6 +474,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2285697be11ed4e47c8bf56ccc6ef424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds down to a multiple of a step (toward negative infinity).  <br /></td></tr>
 <tr class="memitem:ace991d9e44e819f903e27056d3f1affe" id="r_ace991d9e44e819f903e27056d3f1affe"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ace991d9e44e819f903e27056d3f1affe">decimal_less</a> (const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;lhs, const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;rhs)</td></tr>
 <tr class="memdesc:ace991d9e44e819f903e27056d3f1affe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two decimals numerically, whatever their scales.  <br /></td></tr>
+<tr class="memitem:a89dc21954c13b11e8531839278d0df33" id="r_a89dc21954c13b11e8531839278d0df33"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a89dc21954c13b11e8531839278d0df33">error_category_is_rate_limit</a> (<a class="el" href="#a42bd74ca6739874d057d515b40a6e6d6">ErrorCategory</a> category) noexcept</td></tr>
+<tr class="memdesc:a89dc21954c13b11e8531839278d0df33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether an error of this category is a broker asking the caller to slow down, so the request may be tried again later and the pacer should hold.  <br /></td></tr>
 <tr class="memitem:a5e754a54c39a925d38f93ad5fcc62481" id="r_a5e754a54c39a925d38f93ad5fcc62481"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a5e754a54c39a925d38f93ad5fcc62481">sellable_coverage_name</a> (<a class="el" href="structalgotradelib_1_1SellableBasis.html#ac0fcaee4889db5950920bea85e880aac">SellableBasis::Coverage</a> coverage) noexcept</td></tr>
 <tr class="memdesc:a5e754a54c39a925d38f93ad5fcc62481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase name for a coverage, such as <span class="tt">"whole_holding"</span>, for logs.  <br /></td></tr>
 <tr class="memitem:a99f99977efa836f9c5fc15e779567d5c" id="r_a99f99977efa836f9c5fc15e779567d5c"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a99f99977efa836f9c5fc15e779567d5c">sellable_resting_name</a> (<a class="el" href="structalgotradelib_1_1SellableBasis.html#ad1c1c9552a211c457b821eb57cb6deae">SellableBasis::RestingTreatment</a> treatment) noexcept</td></tr>
@@ -470,12 +488,20 @@ Functions</h2></td></tr>
 <tr class="memdesc:adc00701f34eddadb68c0adf22704eaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a date exists in the Gregorian calendar, in years 1 to 9999.  <br /></td></tr>
 <tr class="memitem:acb1bdb317e47ebf5db6d010bff0818b4" id="r_acb1bdb317e47ebf5db6d010bff0818b4"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#acb1bdb317e47ebf5db6d010bff0818b4">venue_key_kind_name</a> (<a class="el" href="#a29a4ebe76d0ef6a8f4041a623e0e6e91">VenueKeyKind</a> kind) noexcept</td></tr>
 <tr class="memdesc:acb1bdb317e47ebf5db6d010bff0818b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase name for a key kind, such as <span class="tt">"raw"</span>, for reports.  <br /></td></tr>
+<tr class="memitem:aa050426106a5d5f6136ba01a636fe3e6" id="r_aa050426106a5d5f6136ba01a636fe3e6"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#aa050426106a5d5f6136ba01a636fe3e6">commission_origin_is_broker</a> (<a class="el" href="#a2c629c60e8ee023bdd31bbc8b58a63d0">CommissionOrigin</a> origin) noexcept</td></tr>
+<tr class="memdesc:aa050426106a5d5f6136ba01a636fe3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether commission rates of this origin came from the broker.  <br /></td></tr>
+<tr class="memitem:a32b5107350c20fa608e39e43cb3372d5" id="r_a32b5107350c20fa608e39e43cb3372d5"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a32b5107350c20fa608e39e43cb3372d5">commission_origin_names_tariff</a> (<a class="el" href="#a2c629c60e8ee023bdd31bbc8b58a63d0">CommissionOrigin</a> origin) noexcept</td></tr>
+<tr class="memdesc:a32b5107350c20fa608e39e43cb3372d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a schedule of this origin must name the tariff it was read from.  <br /></td></tr>
 <tr class="memitem:a41b171db7438275bd345e67030353dcc" id="r_a41b171db7438275bd345e67030353dcc"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a41b171db7438275bd345e67030353dcc">commission_origin_name</a> (<a class="el" href="#a2c629c60e8ee023bdd31bbc8b58a63d0">CommissionOrigin</a> origin) noexcept</td></tr>
 <tr class="memdesc:a41b171db7438275bd345e67030353dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase name for an origin, such as <span class="tt">"caller_stated"</span>, for reports.  <br /></td></tr>
 <tr class="memitem:a5543ab0ac210eeba3659be9077ed9296" id="r_a5543ab0ac210eeba3659be9077ed9296"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a5543ab0ac210eeba3659be9077ed9296">carries_caller_price</a> (<a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbce">OrderType</a> type) noexcept</td></tr>
 <tr class="memdesc:a5543ab0ac210eeba3659be9077ed9296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether an order type takes a price from the caller.  <br /></td></tr>
 <tr class="memitem:a4f8909d02379bac5e9737d072aa7f1e1" id="r_a4f8909d02379bac5e9737d072aa7f1e1"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a4f8909d02379bac5e9737d072aa7f1e1">carries_trigger_price</a> (<a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbce">OrderType</a> type) noexcept</td></tr>
 <tr class="memdesc:a4f8909d02379bac5e9737d072aa7f1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether an order type takes a trigger price.  <br /></td></tr>
+<tr class="memitem:ac4c49dc46d35b5db6bad0cb90f439424" id="r_ac4c49dc46d35b5db6bad0cb90f439424"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#ac4c49dc46d35b5db6bad0cb90f439424">time_in_force_expires_at_close</a> (<a class="el" href="#ae154d19ecf2e6ae8ad52a6a12bc22877">TimeInForce</a> condition) noexcept</td></tr>
+<tr class="memdesc:ac4c49dc46d35b5db6bad0cb90f439424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether an order with this condition expires at the session's close, so its filled quantity is final once the session has ended.  <br /></td></tr>
+<tr class="memitem:a60f5c9615a6d0424898778bbec9bedfc" id="r_a60f5c9615a6d0424898778bbec9bedfc"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a60f5c9615a6d0424898778bbec9bedfc">order_status_cancel_pending</a> (<a class="el" href="#a1ed2d4b30116f2717c1210b808f45058">OrderStatus</a> status) noexcept</td></tr>
+<tr class="memdesc:a60f5c9615a6d0424898778bbec9bedfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a cancellation of an order in this status is already on its way, so asking again can only be refused.  <br /></td></tr>
 <tr class="memitem:ae8cb581fc9d42e32c7e570348103c447" id="r_ae8cb581fc9d42e32c7e570348103c447"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae8cb581fc9d42e32c7e570348103c447">amended_trigger_price</a> (const <a class="el" href="structalgotradelib_1_1AmendInstruction.html">AmendInstruction</a> &amp;instruction)</td></tr>
 <tr class="memdesc:ae8cb581fc9d42e32c7e570348103c447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the trigger price an amendment leaves the order with.  <br /></td></tr>
 <tr class="memitem:afd278b715ef040458d306305652e2aec" id="r_afd278b715ef040458d306305652e2aec"><td class="memTemplParams" colspan="2">template&lt;typename Broker&gt; </td></tr>
@@ -497,6 +523,23 @@ Functions</h2></td></tr>
 <tr class="memdesc:af4b441ce3e349ea7e5bd7e5c80eea53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an instant as an ISO 8601 timestamp in UTC, such as <span class="tt">2026-10-06T00:30:00Z</span>.  <br /></td></tr>
 <tr class="memitem:a2f95c828e6b0e38b35ee39ac792b5978" id="r_a2f95c828e6b0e38b35ee39ac792b5978"><td class="memItemLeft">std::optional&lt; std::chrono::system_clock::time_point &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2f95c828e6b0e38b35ee39ac792b5978">parse_iso8601_timestamp</a> (std::string_view value)</td></tr>
 <tr class="memdesc:a2f95c828e6b0e38b35ee39ac792b5978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses an ISO 8601 timestamp, <span class="tt">YYYY-MM-DDTHH:MM:SS[.fraction]</span> followed by <span class="tt">Z</span> or a <span class="tt">+hh:mm</span>/<span class="tt">-hh:mm</span> offset.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a85e9374870c97bff686ceb49c57f98a7" id="r_a85e9374870c97bff686ceb49c57f98a7"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#ad822be21460535bed6354950db4e7dc4">BarInterval</a>, 9 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a85e9374870c97bff686ceb49c57f98a7">all_bar_intervals</a></td></tr>
+<tr class="memdesc:a85e9374870c97bff686ceb49c57f98a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#ad822be21460535bed6354950db4e7dc4" title="The period one bar covers.">BarInterval</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:afc1c52a4ff48a22103c77ab744d53dd0" id="r_afc1c52a4ff48a22103c77ab744d53dd0"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#a9ac772587aa2f4d74513bfcb82bd6fe9">Country</a>, 2 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afc1c52a4ff48a22103c77ab744d53dd0">all_countries</a> {Country::KR, Country::US}</td></tr>
+<tr class="memdesc:afc1c52a4ff48a22103c77ab744d53dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#a9ac772587aa2f4d74513bfcb82bd6fe9" title="A country (market) the library supports.">Country</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:a2bf2e6f5bea43948325db73914e16bb9" id="r_a2bf2e6f5bea43948325db73914e16bb9"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#ac78f755f933a0a9a9f38040d8e56828d">Venue</a>, 4 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2bf2e6f5bea43948325db73914e16bb9">all_venues</a> {Venue::UNSPECIFIED, Venue::KRX, Venue::NXT, Venue::COMBINED}</td></tr>
+<tr class="memdesc:a2bf2e6f5bea43948325db73914e16bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#ac78f755f933a0a9a9f38040d8e56828d" title="A trading venue: an exchange, or the combined view across exchanges.">Venue</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:abb26206f7f47d73b0f4476af6af4537b" id="r_abb26206f7f47d73b0f4476af6af4537b"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#ae2d6f37a7311b1956dac26c57b416067">OrderSide</a>, 2 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abb26206f7f47d73b0f4476af6af4537b">all_order_sides</a> {OrderSide::BUY, OrderSide::SELL}</td></tr>
+<tr class="memdesc:abb26206f7f47d73b0f4476af6af4537b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#ae2d6f37a7311b1956dac26c57b416067" title="The side of an order: its economic direction, buy or sell.">OrderSide</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:a5c2ce28eb39f75faf5244d4116906130" id="r_a5c2ce28eb39f75faf5244d4116906130"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbce">OrderType</a>, 9 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5c2ce28eb39f75faf5244d4116906130">all_order_types</a></td></tr>
+<tr class="memdesc:a5c2ce28eb39f75faf5244d4116906130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbce" title="How an order&#39;s price is decided (its price basis).">OrderType</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:ac93e69b5506de70260d7db470aec4210" id="r_ac93e69b5506de70260d7db470aec4210"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#ae154d19ecf2e6ae8ad52a6a12bc22877">TimeInForce</a>, 4 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac93e69b5506de70260d7db470aec4210">all_times_in_force</a></td></tr>
+<tr class="memdesc:ac93e69b5506de70260d7db470aec4210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#ae154d19ecf2e6ae8ad52a6a12bc22877" title="How long an order stays valid and what happens to an unfilled remainder.">TimeInForce</a></span>, in declaration order.  <br /></td></tr>
+<tr class="memitem:ac2fb45599649c51c7117ddcefa3f60c7" id="r_ac2fb45599649c51c7117ddcefa3f60c7"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="#a9fc162948f78288f2fbe4f0ed8e1de5e">OrderSession</a>, 9 &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac2fb45599649c51c7117ddcefa3f60c7">all_order_sessions</a></td></tr>
+<tr class="memdesc:ac2fb45599649c51c7117ddcefa3f60c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every <span class="tt"><a class="el" href="#a9fc162948f78288f2fbe4f0ed8e1de5e" title="The trading session an order is submitted into.">OrderSession</a></span>, in declaration order.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The library: broker-neutral types (<span class="tt">core</span>), and the modules below. </p>
@@ -543,8 +586,18 @@ Functions</h2></td></tr>
 
 <p>The period one bar covers. </p>
 <p>Only periods a broker publishes; an interval a broker does not publish is refused, not built by aggregating shorter bars. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad822be21460535bed6354950db4e7dc4a0cf459333080acbf409155b1440745be" name="ad822be21460535bed6354950db4e7dc4a0cf459333080acbf409155b1440745be"></a>FIVE_MINUTES&#160;</td><td class="fielddoc"><p>Five minutes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad822be21460535bed6354950db4e7dc4a9a30940ccbf9e813c96bcbd9547ae63e" name="ad822be21460535bed6354950db4e7dc4a9a30940ccbf9e813c96bcbd9547ae63e"></a>FIFTEEN_MINUTES&#160;</td><td class="fielddoc"><p>Fifteen minutes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad822be21460535bed6354950db4e7dc4a87435f46fb04b44a62551b360e799f71" name="ad822be21460535bed6354950db4e7dc4a87435f46fb04b44a62551b360e799f71"></a>THIRTY_MINUTES&#160;</td><td class="fielddoc"><p>Thirty minutes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad822be21460535bed6354950db4e7dc4aad5c4a6fa6075f48c570ef94622af14d" name="ad822be21460535bed6354950db4e7dc4aad5c4a6fa6075f48c570ef94622af14d"></a>ONE_HOUR&#160;</td><td class="fielddoc"><p>Sixty minutes. </p>
+</td></tr>
+</table>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00019">19</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00020">20</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +630,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00055">55</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00117">117</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +662,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01323">1323</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01374">1374</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -636,7 +689,7 @@ Functions</h2></td></tr>
 <p>A country (market) the library supports. </p>
 <p>Adding a country requires its broker mappings; an unknown wire value is never mapped onto one of these. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00028">28</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00030">30</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -670,7 +723,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00437">437</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00459">459</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -714,7 +767,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00674">674</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00687">687</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -785,7 +838,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01677">1677</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01839">1839</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -809,9 +862,10 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The side of an order. </p>
+<p>The side of an order: its economic direction, buy or sell. </p>
+<p>Closed at two values. A short sale is a sell and a cover is a buy; a mark that says which (short, short-exempt, cover only) is a separate fact this library does not carry yet. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01597">1597</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01683">1683</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +892,7 @@ Functions</h2></td></tr>
 <p>Where an order stands in its lifecycle. </p>
 <p><span class="tt">CANCEL_REJECTED</span>, <span class="tt">REPLACE_REJECTED</span> and <span class="tt">REPLACED</span> describe a cancel or modify instruction, which brokers list as rows of their own. <span class="tt">UNKNOWN</span> is a status the library does not recognize; one such row does not fail a listing. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01704">1704</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01879">1879</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -883,7 +937,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01610">1610</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01707">1707</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -918,7 +972,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01346">1346</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01427">1427</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -979,7 +1033,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01041">1041</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01092">1092</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1068,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01662">1662</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01797">1797</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1041,7 +1095,7 @@ Functions</h2></td></tr>
 <p>A trading venue: an exchange, or the combined view across exchanges. </p>
 <p><span class="tt">UNSPECIFIED</span> leaves routing to the broker's default. Broker wire codes stay in the adapters. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00038">38</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00043">43</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1129,7 @@ Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01177">1177</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01228">1228</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1112,9 +1166,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The trigger <span class="tt">shape_</span> states; otherwise the resting order's trigger if both shapes are <span class="tt">STOP_LIMIT</span>; otherwise <span class="tt">std::nullopt</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02071">2071</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02271">2271</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02071">amended_trigger_price()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02271">amended_trigger_price()</a>.</p>
 
 </div>
 </div>
@@ -1202,6 +1256,44 @@ template&lt;typename Client, typename CompletionToken&gt; </div>
 
 </div>
 </div>
+<a id="a17f3163b5d9df8ecc71ea5f3c2ce7d77" name="a17f3163b5d9df8ecc71ea5f3c2ce7d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17f3163b5d9df8ecc71ea5f3c2ce7d77">&#9670;&#160;</a></span>bar_interval_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; std::chrono::seconds &gt; algotradelib::bar_interval_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad822be21460535bed6354950db4e7dc4">BarInterval</a></td>          <td class="paramname"><span class="paramname"><em>interval</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an interval's fixed length, for an intraday interval. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interval</td><td>The interval. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>60, 300, 900, 1800 or 3600 seconds; <span class="tt">std::nullopt</span> for a day or longer, which has no fixed trading length (a trading day is not 24 hours, and a month has no fixed length). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00084">84</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00084">bar_interval_length()</a>, and <a class="el" href="backtest_2clock_8hpp_source.html#l00030">algotradelib::backtest::interval_duration()</a>.</p>
+
+</div>
+</div>
 <a id="a5feb23ca6c60765410a886bc5fa01baf" name="a5feb23ca6c60765410a886bc5fa01baf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5feb23ca6c60765410a886bc5fa01baf">&#9670;&#160;</a></span>bar_interval_name()</h2>
 
@@ -1225,18 +1317,18 @@ template&lt;typename Client, typename CompletionToken&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a short name for an interval, such as <span class="tt">"1m"</span> or <span class="tt">"1d"</span>. </p>
+<p>Returns a short name for an interval, such as <span class="tt">"1m"</span>, <span class="tt">"5m"</span>, <span class="tt">"1h"</span> or <span class="tt">"1d"</span>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interval</td><td>The interval. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#ad822be21460535bed6354950db4e7dc4" title="The period one bar covers.">BarInterval</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00032">32</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00054">54</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00032">bar_interval_name()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00786">algotradelib::kiwoom::unsupported_bar_interval()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00054">bar_interval_name()</a>, <a class="el" href="kis_2client_8hpp_source.html#l00299">algotradelib::kis::unsupported_bar_interval()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00797">algotradelib::kiwoom::unsupported_bar_interval()</a>.</p>
 
 </div>
 </div>
@@ -1280,9 +1372,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The instruction, carrying the order's shape, venue and amendable quantity. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02162">2162</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02362">2362</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00160">algotradelib::live::SessionExecutor&lt; Session &gt;::cancel()</a>, and <a class="el" href="types_8hpp_source.html#l02162">cancel_all()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00160">algotradelib::live::SessionExecutor&lt; Session &gt;::cancel()</a>, and <a class="el" href="types_8hpp_source.html#l02362">cancel_all()</a>.</p>
 
 </div>
 </div>
@@ -1331,9 +1423,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The instruction. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02185">2185</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02385">2385</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02185">cancel_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02385">cancel_quantity()</a>.</p>
 
 </div>
 </div>
@@ -1370,9 +1462,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">LIMIT</span>, <span class="tt">CONDITIONAL_LIMIT</span> and <span class="tt">STOP_LIMIT</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01638">1638</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01748">1748</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01638">carries_caller_price()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00436">algotradelib::runner::unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01748">carries_caller_price()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -1409,9 +1501,47 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">STOP_LIMIT</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01652">1652</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01774">1774</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02071">amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l01652">carries_trigger_price()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l00241">algotradelib::kiwoom::invalid_trigger()</a>, <a class="el" href="reconcile_8hpp_source.html#l00457">algotradelib::strategy::is_stop_order()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00436">algotradelib::runner::unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02271">amended_trigger_price()</a>, <a class="el" href="types_8hpp_source.html#l01774">carries_trigger_price()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l00241">algotradelib::kiwoom::invalid_trigger()</a>, <a class="el" href="reconcile_8hpp_source.html#l00457">algotradelib::strategy::is_stop_order()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">algotradelib::runner::unresolvable_reason()</a>.</p>
+
+</div>
+</div>
+<a id="aa050426106a5d5f6136ba01a636fe3e6" name="aa050426106a5d5f6136ba01a636fe3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa050426106a5d5f6136ba01a636fe3e6">&#9670;&#160;</a></span>commission_origin_is_broker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::commission_origin_is_broker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a2c629c60e8ee023bdd31bbc8b58a63d0">CommissionOrigin</a></td>          <td class="paramname"><span class="paramname"><em>origin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether commission rates of this origin came from the broker. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>The origin. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">BROKER_PUBLISHED</span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01386">1386</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00094">algotradelib::backtest::commission_model_from()</a>, and <a class="el" href="types_8hpp_source.html#l01386">commission_origin_is_broker()</a>.</p>
 
 </div>
 </div>
@@ -1447,9 +1577,47 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01335">1335</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01416">1416</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01335">commission_origin_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01416">commission_origin_name()</a>.</p>
+
+</div>
+</div>
+<a id="a32b5107350c20fa608e39e43cb3372d5" name="a32b5107350c20fa608e39e43cb3372d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b5107350c20fa608e39e43cb3372d5">&#9670;&#160;</a></span>commission_origin_names_tariff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::commission_origin_names_tariff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a2c629c60e8ee023bdd31bbc8b58a63d0">CommissionOrigin</a></td>          <td class="paramname"><span class="paramname"><em>origin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a schedule of this origin must name the tariff it was read from. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>The origin. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CALLER_STATED</span>: nothing else says which channel's published table it is. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01401">1401</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01401">commission_origin_names_tariff()</a>, and <a class="el" href="cost_8hpp_source.html#l00211">algotradelib::backtest::CommissionPolicy::scheduled()</a>.</p>
 
 </div>
 </div>
@@ -1486,9 +1654,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The date. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01135">1135</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01186">1186</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01135">date_from_epoch_days()</a>, and <a class="el" href="event_8hpp_source.html#l00128">algotradelib::strategy::SessionWindow::local_date()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01186">date_from_epoch_days()</a>, and <a class="el" href="event_8hpp_source.html#l00162">algotradelib::strategy::SessionWindow::local_date()</a>.</p>
 
 </div>
 </div>
@@ -1529,9 +1697,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The normalized sum, or <span class="tt">std::nullopt</span> if it, or either operand rescaled to the larger scale, does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00496">496</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00509">509</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00373">algotradelib::runner::ChargedCosts::add()</a>, <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="types_8hpp_source.html#l00496">decimal_add()</a>, <a class="el" href="ledger_8hpp_source.html#l00367">algotradelib::backtest::ReplayLedger::equity_in()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="market__data_8hpp_source.html#l00194">algotradelib::DepthSnapshot::mid()</a>, <a class="el" href="portfolio_8hpp_source.html#l00140">algotradelib::strategy::Portfolio&lt; Broker &gt;::net_quantity_of()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>, <a class="el" href="instrument_8hpp_source.html#l00222">algotradelib::PriceRule::round_to_tick()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00386">algotradelib::runner::ChargedCosts::add()</a>, <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00619">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="types_8hpp_source.html#l00509">decimal_add()</a>, <a class="el" href="ledger_8hpp_source.html#l00367">algotradelib::backtest::ReplayLedger::equity_in()</a>, <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="market__data_8hpp_source.html#l00256">algotradelib::DepthSnapshot::mid()</a>, <a class="el" href="portfolio_8hpp_source.html#l00140">algotradelib::strategy::Portfolio&lt; Broker &gt;::net_quantity_of()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>, <a class="el" href="instrument_8hpp_source.html#l00237">algotradelib::PriceRule::round_to_tick()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
 
 </div>
 </div>
@@ -1579,9 +1747,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The normalized quotient, or <span class="tt">std::nullopt</span> if <span class="tt">rhs</span> is zero, or the rescaled operands or the dividend multiplied by <span class="tt">10^scale</span> do not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00589">589</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00602">602</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="types_8hpp_source.html#l00589">decimal_divide()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00150">algotradelib::strategy::vanilla::EqualWeightRebalance::on_phase()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="types_8hpp_source.html#l00602">decimal_divide()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00150">algotradelib::strategy::vanilla::EqualWeightRebalance::on_phase()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -1623,9 +1791,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The largest multiple of <span class="tt">step</span> not above <span class="tt">value</span>, or <span class="tt">std::nullopt</span> if <span class="tt">step</span> is not positive, the operands rescaled to a common scale do not fit, or the result does not fit (a negative <span class="tt">value</span> near the smallest <span class="tt">int64</span> coefficient). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00626">626</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00639">639</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, and <a class="el" href="types_8hpp_source.html#l00626">decimal_floor_to_multiple()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, and <a class="el" href="types_8hpp_source.html#l00639">decimal_floor_to_multiple()</a>.</p>
 
 </div>
 </div>
@@ -1661,9 +1829,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The normalized half, or <span class="tt">std::nullopt</span> if it does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00536">536</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00549">549</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00536">decimal_halve()</a>, and <a class="el" href="market__data_8hpp_source.html#l00194">algotradelib::DepthSnapshot::mid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00549">decimal_halve()</a>, and <a class="el" href="market__data_8hpp_source.html#l00256">algotradelib::DepthSnapshot::mid()</a>.</p>
 
 </div>
 </div>
@@ -1704,9 +1872,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">lhs &lt; rhs</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00652">652</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00665">665</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01121">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00652">decimal_less()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="market__data_8hpp_source.html#l00212">order_depth()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>, <a class="el" href="portfolio_8hpp_source.html#l00209">algotradelib::strategy::Portfolio&lt; Broker &gt;::sellable_reading_for()</a>, <a class="el" href="instrument_8hpp_source.html#l00177">algotradelib::PriceRule::tick_at()</a>, <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>, <a class="el" href="fill_8hpp_source.html#l00130">algotradelib::backtest::NextBarFillModel::with_sell_tax()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00619">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01118">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00665">decimal_less()</a>, <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="market__data_8hpp_source.html#l00274">order_depth()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>, <a class="el" href="portfolio_8hpp_source.html#l00209">algotradelib::strategy::Portfolio&lt; Broker &gt;::sellable_reading_for()</a>, <a class="el" href="instrument_8hpp_source.html#l00192">algotradelib::PriceRule::tick_at()</a>, <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>, <a class="el" href="fill_8hpp_source.html#l00130">algotradelib::backtest::NextBarFillModel::with_sell_tax()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
 
 </div>
 </div>
@@ -1747,9 +1915,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The normalized product, or <span class="tt">std::nullopt</span> if the product of the coefficients or the sum of the scales does not fit (checked before trailing zeros are removed). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00558">558</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00571">571</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00558">decimal_multiply()</a>, <a class="el" href="ledger_8hpp_source.html#l00367">algotradelib::backtest::ReplayLedger::equity_in()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="ledger_8hpp_source.html#l00298">algotradelib::backtest::ReplayLedger::mark()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00571">decimal_multiply()</a>, <a class="el" href="ledger_8hpp_source.html#l00367">algotradelib::backtest::ReplayLedger::equity_in()</a>, <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="ledger_8hpp_source.html#l00298">algotradelib::backtest::ReplayLedger::mark()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00710">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00862">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -1785,9 +1953,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The same number at the smallest scale that represents it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00442">442</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00455">455</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00496">decimal_add()</a>, <a class="el" href="types_8hpp_source.html#l00589">decimal_divide()</a>, <a class="el" href="types_8hpp_source.html#l00626">decimal_floor_to_multiple()</a>, <a class="el" href="types_8hpp_source.html#l00536">decimal_halve()</a>, <a class="el" href="types_8hpp_source.html#l00558">decimal_multiply()</a>, <a class="el" href="types_8hpp_source.html#l00442">decimal_normalized()</a>, <a class="el" href="types_8hpp_source.html#l00517">decimal_subtract()</a>, and <a class="el" href="instrument_8hpp_source.html#l00222">algotradelib::PriceRule::round_to_tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00509">decimal_add()</a>, <a class="el" href="types_8hpp_source.html#l00602">decimal_divide()</a>, <a class="el" href="types_8hpp_source.html#l00639">decimal_floor_to_multiple()</a>, <a class="el" href="types_8hpp_source.html#l00549">decimal_halve()</a>, <a class="el" href="types_8hpp_source.html#l00571">decimal_multiply()</a>, <a class="el" href="types_8hpp_source.html#l00455">decimal_normalized()</a>, <a class="el" href="types_8hpp_source.html#l00530">decimal_subtract()</a>, and <a class="el" href="instrument_8hpp_source.html#l00237">algotradelib::PriceRule::round_to_tick()</a>.</p>
 
 </div>
 </div>
@@ -1828,9 +1996,47 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The normalized difference, or <span class="tt">std::nullopt</span> if it, or either operand rescaled to the larger scale, does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00517">517</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00530">530</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00591">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00191">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00517">decimal_subtract()</a>, <a class="el" href="risk_8hpp_source.html#l00899">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="risk_8hpp_source.html#l00412">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>, <a class="el" href="runner_8hpp_source.html#l01200">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, <a class="el" href="instrument_8hpp_source.html#l00222">algotradelib::PriceRule::round_to_tick()</a>, <a class="el" href="loop_8hpp_source.html#l00435">algotradelib::runner::ChargedCosts::since()</a>, <a class="el" href="market__data_8hpp_source.html#l00178">algotradelib::DepthSnapshot::spread()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00619">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00530">decimal_subtract()</a>, <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>, <a class="el" href="runner_8hpp_source.html#l01197">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, <a class="el" href="instrument_8hpp_source.html#l00237">algotradelib::PriceRule::round_to_tick()</a>, <a class="el" href="loop_8hpp_source.html#l00448">algotradelib::runner::ChargedCosts::since()</a>, <a class="el" href="market__data_8hpp_source.html#l00240">algotradelib::DepthSnapshot::spread()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
+
+</div>
+</div>
+<a id="a89dc21954c13b11e8531839278d0df33" name="a89dc21954c13b11e8531839278d0df33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89dc21954c13b11e8531839278d0df33">&#9670;&#160;</a></span>error_category_is_rate_limit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::error_category_is_rate_limit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a42bd74ca6739874d057d515b40a6e6d6">ErrorCategory</a></td>          <td class="paramname"><span class="paramname"><em>category</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether an error of this category is a broker asking the caller to slow down, so the request may be tried again later and the pacer should hold. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>The category. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">RATE_LIMIT</span> only. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00722">722</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00190">algotradelib::runner::broker_rate_limited()</a>, <a class="el" href="types_8hpp_source.html#l00722">error_category_is_rate_limit()</a>, and <a class="el" href="session__source_8hpp_source.html#l00034">algotradelib::live::poll_outcome_of()</a>.</p>
 
 </div>
 </div>
@@ -1866,9 +2072,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The text. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02253">2253</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02453">2453</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02253">format_iso8601_utc()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00645">algotradelib::runner::journal_entry_to_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02453">format_iso8601_utc()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00557">algotradelib::runner::journal_entry_to_line()</a>.</p>
 
 </div>
 </div>
@@ -1904,9 +2110,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if valid. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01161">1161</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01212">1212</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01161">is_valid_date()</a>, and <a class="el" href="types_8hpp_source.html#l02278">parse_iso8601_timestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01212">is_valid_date()</a>, and <a class="el" href="types_8hpp_source.html#l02478">parse_iso8601_timestamp()</a>.</p>
 
 </div>
 </div>
@@ -2024,6 +2230,118 @@ template&lt;typename Client&gt; </div>
 
 </div>
 </div>
+<a id="a63b37645941fcce71f845d9be1729465" name="a63b37645941fcce71f845d9be1729465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b37645941fcce71f845d9be1729465">&#9670;&#160;</a></span>lists_every_value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Enum, std::size_t N, typename IsEnumerator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::lists_every_value </td>
+          <td>(</td>
+          <td class="paramtype">const Enum(&amp;)</td>          <td class="paramname"><span class="paramname"><em>values</em></span>[N], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IsEnumerator</td>          <td class="paramname"><span class="paramname"><em>is_enumerator</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a list holds every value of an enum exactly once, in any order. </p>
+<p>The same check for a built-in array, such as <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a83a408937aeb3dfebceb85876482a96a" title="Every poll kind, in the order an iteration polls them.">runner::all_poll_kinds</a></span>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Enum</td><td>The enum. </td></tr>
+    <tr><td class="paramname">N</td><td>The list's length. </td></tr>
+    <tr><td class="paramname">IsEnumerator</td><td>A callable taking an <span class="tt">Enum</span> and returning <span class="tt">bool</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The list. </td></tr>
+    <tr><td class="paramname">is_enumerator</td><td>Whether a value is one of the enum's. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">values</span> lists each of the enum's values once. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="enum__values_8hpp_source.html#l00107">107</a> of file <a class="el" href="enum__values_8hpp_source.html">enum_values.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a33578d53c14c1cdf3c62eb42a2780996" name="a33578d53c14c1cdf3c62eb42a2780996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33578d53c14c1cdf3c62eb42a2780996">&#9670;&#160;</a></span>lists_every_value() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Enum, std::size_t N, typename IsEnumerator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::lists_every_value </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; Enum, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IsEnumerator</td>          <td class="paramname"><span class="paramname"><em>is_enumerator</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a list holds every value of an enum exactly once, in any order. </p>
+<p>The enum must be scoped (<span class="tt">enum class</span>), and its values <span class="tt">0</span> to <span class="tt">N - 1</span>: no enumerator may state its own value. Then <span class="tt">N</span> distinct enumerators below <span class="tt">N</span> are all of them, and <span class="tt">N</span> itself must not be one, or the enum is longer than the list (unless <span class="tt">N</span> values already fill the underlying type).</p>
+<p>Use it in a <span class="tt">static_assert</span> beside the list. Pass a test that is <span class="tt">true</span> exactly for the enum's values, such as the enum's name function, whose <span class="tt">switch</span> has a case for each value and returns <span class="tt">""</span> after it:</p>
+<div class="fragment"><div class="line"><span class="keyword">static_assert</span>(<a class="code hl_function" href="#a33578d53c14c1cdf3c62eb42a2780996">lists_every_value</a>(<a class="code hl_variable" href="#a2bf2e6f5bea43948325db73914e16bb9">all_venues</a>, [](<a class="code hl_enumeration" href="#ac78f755f933a0a9a9f38040d8e56828d">Venue</a> venue) { <span class="keywordflow">return</span> !<a class="code hl_function" href="#aa49b19dede2f29ad86b989492cebb3fa">venue_name</a>(venue).empty(); }));</div>
+<div class="ttc" id="anamespacealgotradelib_html_a2bf2e6f5bea43948325db73914e16bb9"><div class="ttname"><a href="#a2bf2e6f5bea43948325db73914e16bb9">algotradelib::all_venues</a></div><div class="ttdeci">constexpr std::array&lt; Venue, 4 &gt; all_venues</div><div class="ttdoc">Every Venue, in declaration order.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00051">types.hpp:51</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a33578d53c14c1cdf3c62eb42a2780996"><div class="ttname"><a href="#a33578d53c14c1cdf3c62eb42a2780996">algotradelib::lists_every_value</a></div><div class="ttdeci">constexpr bool lists_every_value(const std::array&lt; Enum, N &gt; &amp;values, IsEnumerator is_enumerator) noexcept</div><div class="ttdoc">Tests whether a list holds every value of an enum exactly once, in any order.</div><div class="ttdef"><b>Definition</b> <a href="enum__values_8hpp_source.html#l00086">enum_values.hpp:86</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_aa49b19dede2f29ad86b989492cebb3fa"><div class="ttname"><a href="#aa49b19dede2f29ad86b989492cebb3fa">algotradelib::venue_name</a></div><div class="ttdeci">constexpr std::string_view venue_name(Venue venue) noexcept</div><div class="ttdoc">Returns a display name for a venue, such as &quot;KRX&quot;.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00058">types.hpp:58</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ac78f755f933a0a9a9f38040d8e56828d"><div class="ttname"><a href="#ac78f755f933a0a9a9f38040d8e56828d">algotradelib::Venue</a></div><div class="ttdeci">Venue</div><div class="ttdoc">A trading venue: an exchange, or the combined view across exchanges.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Enum</td><td>The enum. </td></tr>
+    <tr><td class="paramname">N</td><td>The list's length. </td></tr>
+    <tr><td class="paramname">IsEnumerator</td><td>A callable taking an <span class="tt">Enum</span> and returning <span class="tt">bool</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The list. </td></tr>
+    <tr><td class="paramname">is_enumerator</td><td>Whether a value is one of the enum's. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">values</span> lists each of the enum's values once. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="enum__values_8hpp_source.html#l00086">86</a> of file <a class="el" href="enum__values_8hpp_source.html">enum_values.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="enum__values_8hpp_source.html#l00107">lists_every_value()</a>, and <a class="el" href="enum__values_8hpp_source.html#l00086">lists_every_value()</a>.</p>
+
+</div>
+</div>
 <a id="a1b193a1f1359c9e8eb19f0c16d5dc5a4" name="a1b193a1f1359c9e8eb19f0c16d5dc5a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b193a1f1359c9e8eb19f0c16d5dc5a4">&#9670;&#160;</a></span>market_segment()</h2>
 
@@ -2093,9 +2411,47 @@ template&lt;typename Client&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00212">212</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00274">274</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00212">order_depth()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00274">order_depth()</a>.</p>
+
+</div>
+</div>
+<a id="a60f5c9615a6d0424898778bbec9bedfc" name="a60f5c9615a6d0424898778bbec9bedfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f5c9615a6d0424898778bbec9bedfc">&#9670;&#160;</a></span>order_status_cancel_pending()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::order_status_cancel_pending </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a1ed2d4b30116f2717c1210b808f45058">OrderStatus</a></td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a cancellation of an order in this status is already on its way, so asking again can only be refused. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>The status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">PENDING_CANCEL</span> only. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01899">1899</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01899">order_status_cancel_pending()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -2132,9 +2488,9 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The instant, or <span class="tt">std::nullopt</span> if the text is not exactly that form (a non-digit in the fraction, an offset outside <span class="tt">-23:59</span>..<span class="tt">+23:59</span>, or anything after the zone included), or the date or time is invalid. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02278">2278</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02478">2478</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02278">parse_iso8601_timestamp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02478">parse_iso8601_timestamp()</a>.</p>
 
 </div>
 </div>
@@ -2166,7 +2522,7 @@ template&lt;typename Client&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the library's price grid for a kind of security in a country. </p>
-<p>KRX stocks, foreign stocks, depositary receipts, infrastructure funds and REITs get the equity table; ETFs, ETNs, warrants and unknown types get an <span class="tt">UNKNOWN</span> rule; other countries are unconstrained.</p>
+<p>KRX stocks, foreign stocks, depositary receipts, infrastructure funds and REITs get the equity table; ETFs, ETNs, warrants and unknown types get an <span class="tt">UNKNOWN</span> rule. US listings are unconstrained, whatever their type.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">country</td><td>The listing country. </td></tr>
@@ -2176,9 +2532,9 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The rule. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00318">318</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00333">333</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00318">price_rule_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00333">price_rule_for()</a>.</p>
 
 </div>
 </div>
@@ -2274,9 +2630,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The instruction. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02214">2214</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02414">2414</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02214">replace_with()</a>, and <a class="el" href="types_8hpp_source.html#l02238">reprice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02414">replace_with()</a>, and <a class="el" href="types_8hpp_source.html#l02438">reprice()</a>.</p>
 
 </div>
 </div>
@@ -2331,9 +2687,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The instruction. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02238">2238</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02438">2438</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02238">reprice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02438">reprice()</a>.</p>
 
 </div>
 </div>
@@ -2377,9 +2733,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Its type, price, trigger, time in force and session. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02145">2145</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02345">2345</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02214">replace_with()</a>, <a class="el" href="types_8hpp_source.html#l02238">reprice()</a>, and <a class="el" href="types_8hpp_source.html#l02145">resting_shape()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l02414">replace_with()</a>, <a class="el" href="types_8hpp_source.html#l02438">reprice()</a>, and <a class="el" href="types_8hpp_source.html#l02345">resting_shape()</a>.</p>
 
 </div>
 </div>
@@ -2415,9 +2771,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00936">936</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00987">987</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00936">sellable_coverage_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00987">sellable_coverage_name()</a>.</p>
 
 </div>
 </div>
@@ -2453,9 +2809,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00954">954</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01005">1005</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00954">sellable_resting_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01005">sellable_resting_name()</a>.</p>
 
 </div>
 </div>
@@ -2491,9 +2847,106 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01055">1055</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01106">1106</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01055">sellable_source_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01106">sellable_source_name()</a>.</p>
+
+</div>
+</div>
+<a id="ac4c49dc46d35b5db6bad0cb90f439424" name="ac4c49dc46d35b5db6bad0cb90f439424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c49dc46d35b5db6bad0cb90f439424">&#9670;&#160;</a></span>time_in_force_expires_at_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::time_in_force_expires_at_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae154d19ecf2e6ae8ad52a6a12bc22877">TimeInForce</a></td>          <td class="paramname"><span class="paramname"><em>condition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether an order with this condition expires at the session's close, so its filled quantity is final once the session has ended. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">condition</td><td>The condition. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">DAY</span>; <span class="tt">false</span> for <span class="tt">IMMEDIATE_OR_CANCEL</span> and <span class="tt">FILL_OR_KILL</span> (never resting) and for <span class="tt">UNKNOWN</span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01822">1822</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01677">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="types_8hpp_source.html#l01822">time_in_force_expires_at_close()</a>.</p>
+
+</div>
+</div>
+<a id="a2f3a0ff1cadb951cb32b04bd03402fe6" name="a2f3a0ff1cadb951cb32b04bd03402fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3a0ff1cadb951cb32b04bd03402fe6">&#9670;&#160;</a></span>value_named()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Enum, std::size_t N, typename Name&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; Enum &gt; algotradelib::value_named </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; Enum, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Name</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>text</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value of a list whose name is <span class="tt">text</span>, so a parser reads exactly what its writer writes. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Enum</td><td>The enum. </td></tr>
+    <tr><td class="paramname">N</td><td>The list's length. </td></tr>
+    <tr><td class="paramname">Name</td><td>A callable taking an <span class="tt">Enum</span> and returning something comparable with <span class="tt">std::string_view</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>Every value of the enum, such as <span class="tt"><a class="el" href="#a2bf2e6f5bea43948325db73914e16bb9" title="Every Venue, in declaration order.">all_venues</a></span>. </td></tr>
+    <tr><td class="paramname">name</td><td>The name function the writer uses. </td></tr>
+    <tr><td class="paramname">text</td><td>The text to read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value named <span class="tt">text</span>, or <span class="tt">std::nullopt</span> if none is, and always for an empty <span class="tt">text</span> (what a name function returns for a value that is not an enumerator). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="enum__values_8hpp_source.html#l00129">129</a> of file <a class="el" href="enum__values_8hpp_source.html">enum_values.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00082">algotradelib::runner::journal_action_from()</a>, <a class="el" href="journal_8hpp_source.html#l00178">algotradelib::runner::journal_outcome_from()</a>, <a class="el" href="stop_8hpp_source.html#l00083">algotradelib::runner::stop_intent_from()</a>, and <a class="el" href="enum__values_8hpp_source.html#l00129">value_named()</a>.</p>
 
 </div>
 </div>
@@ -2529,9 +2982,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01310">1310</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01361">1361</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01310">venue_key_kind_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01361">venue_key_kind_name()</a>.</p>
 
 </div>
 </div>
@@ -2565,11 +3018,256 @@ template&lt;typename Broker&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#ac78f755f933a0a9a9f38040d8e56828d" title="A trading venue: an exchange, or the combined view across exchanges.">Venue</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00050">50</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00058">58</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00050">venue_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00058">venue_name()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a85e9374870c97bff686ceb49c57f98a7" name="a85e9374870c97bff686ceb49c57f98a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e9374870c97bff686ceb49c57f98a7">&#9670;&#160;</a></span>all_bar_intervals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#ad822be21460535bed6354950db4e7dc4">BarInterval</a>, 9&gt; algotradelib::all_bar_intervals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  BarInterval::ONE_MINUTE,</div>
+<div class="line">  BarInterval::ONE_DAY,</div>
+<div class="line">  BarInterval::ONE_WEEK,</div>
+<div class="line">  BarInterval::ONE_MONTH,</div>
+<div class="line">  BarInterval::ONE_YEAR,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#ad822be21460535bed6354950db4e7dc4a0cf459333080acbf409155b1440745be">BarInterval::FIVE_MINUTES</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#ad822be21460535bed6354950db4e7dc4a9a30940ccbf9e813c96bcbd9547ae63e">BarInterval::FIFTEEN_MINUTES</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#ad822be21460535bed6354950db4e7dc4a87435f46fb04b44a62551b360e799f71">BarInterval::THIRTY_MINUTES</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#ad822be21460535bed6354950db4e7dc4aad5c4a6fa6075f48c570ef94622af14d">BarInterval::ONE_HOUR</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacealgotradelib_html_ad822be21460535bed6354950db4e7dc4a0cf459333080acbf409155b1440745be"><div class="ttname"><a href="#ad822be21460535bed6354950db4e7dc4a0cf459333080acbf409155b1440745be">algotradelib::BarInterval::FIVE_MINUTES</a></div><div class="ttdeci">@ FIVE_MINUTES</div><div class="ttdoc">Five minutes.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00027">market_data.hpp:27</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ad822be21460535bed6354950db4e7dc4a87435f46fb04b44a62551b360e799f71"><div class="ttname"><a href="#ad822be21460535bed6354950db4e7dc4a87435f46fb04b44a62551b360e799f71">algotradelib::BarInterval::THIRTY_MINUTES</a></div><div class="ttdeci">@ THIRTY_MINUTES</div><div class="ttdoc">Thirty minutes.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00031">market_data.hpp:31</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ad822be21460535bed6354950db4e7dc4a9a30940ccbf9e813c96bcbd9547ae63e"><div class="ttname"><a href="#ad822be21460535bed6354950db4e7dc4a9a30940ccbf9e813c96bcbd9547ae63e">algotradelib::BarInterval::FIFTEEN_MINUTES</a></div><div class="ttdeci">@ FIFTEEN_MINUTES</div><div class="ttdoc">Fifteen minutes.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00029">market_data.hpp:29</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ad822be21460535bed6354950db4e7dc4aad5c4a6fa6075f48c570ef94622af14d"><div class="ttname"><a href="#ad822be21460535bed6354950db4e7dc4aad5c4a6fa6075f48c570ef94622af14d">algotradelib::BarInterval::ONE_HOUR</a></div><div class="ttdeci">@ ONE_HOUR</div><div class="ttdoc">Sixty minutes.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00033">market_data.hpp:33</a></div></div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#ad822be21460535bed6354950db4e7dc4" title="The period one bar covers.">BarInterval</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00037">37</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afc1c52a4ff48a22103c77ab744d53dd0" name="afc1c52a4ff48a22103c77ab744d53dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1c52a4ff48a22103c77ab744d53dd0">&#9670;&#160;</a></span>all_countries</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#a9ac772587aa2f4d74513bfcb82bd6fe9">Country</a>, 2&gt; algotradelib::all_countries {Country::KR, Country::US}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Every <span class="tt"><a class="el" href="#a9ac772587aa2f4d74513bfcb82bd6fe9" title="A country (market) the library supports.">Country</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00036">36</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2fb45599649c51c7117ddcefa3f60c7" name="ac2fb45599649c51c7117ddcefa3f60c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fb45599649c51c7117ddcefa3f60c7">&#9670;&#160;</a></span>all_order_sessions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#a9fc162948f78288f2fbe4f0ed8e1de5e">OrderSession</a>, 9&gt; algotradelib::all_order_sessions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  OrderSession::UNKNOWN,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9">OrderSession::REGULAR</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5ea2e42a640be4ef0236d0dfe2c3ada880d">OrderSession::OPENING_AUCTION</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5ea70d9a9da51881fcc9236ff20e8b3a1fa">OrderSession::CLOSING_AUCTION</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5eaf1cf8f0f60db87f162bb83d57ea89949">OrderSession::PRE_MARKET</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5ea5c619bb2cf0b8ec27982e4c1137ff5a9">OrderSession::AFTER_HOURS</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5">OrderSession::AFTER_HOURS_AUCTION</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5eabfbae9cc80927232fc35495cd0b9c1a9">OrderSession::AFTER_MARKET</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a9fc162948f78288f2fbe4f0ed8e1de5eaf3ea15f01999fd6406ecf9096b25cdbc">OrderSession::GTP</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea2e42a640be4ef0236d0dfe2c3ada880d"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5ea2e42a640be4ef0236d0dfe2c3ada880d">algotradelib::OrderSession::OPENING_AUCTION</a></div><div class="ttdeci">@ OPENING_AUCTION</div><div class="ttdoc">The opening single-price auction (시가단일가; Toss OPG).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01844">types.hpp:1844</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea5c619bb2cf0b8ec27982e4c1137ff5a9"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5ea5c619bb2cf0b8ec27982e4c1137ff5a9">algotradelib::OrderSession::AFTER_HOURS</a></div><div class="ttdeci">@ AFTER_HOURS</div><div class="ttdoc">After the close, at that session&#39;s close (장후 시간외).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01850">types.hpp:1850</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea70d9a9da51881fcc9236ff20e8b3a1fa"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5ea70d9a9da51881fcc9236ff20e8b3a1fa">algotradelib::OrderSession::CLOSING_AUCTION</a></div><div class="ttdeci">@ CLOSING_AUCTION</div><div class="ttdoc">The closing auction (Toss CLS, a US limit-on-close).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01846">types.hpp:1846</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5ea820ead78f0fa32544c7ba38fe7ff53d9">algotradelib::OrderSession::REGULAR</a></div><div class="ttdeci">@ REGULAR</div><div class="ttdoc">The continuous regular session.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01842">types.hpp:1842</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eabfbae9cc80927232fc35495cd0b9c1a9"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5eabfbae9cc80927232fc35495cd0b9c1a9">algotradelib::OrderSession::AFTER_MARKET</a></div><div class="ttdeci">@ AFTER_MARKET</div><div class="ttdoc">KRX&#39;s after-market session (애프터마켓).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01854">types.hpp:1854</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5eadba7b3136a304491c02e8f18495437e5">algotradelib::OrderSession::AFTER_HOURS_AUCTION</a></div><div class="ttdeci">@ AFTER_HOURS_AUCTION</div><div class="ttdoc">The after-hours single-price auction (시간외 단일가).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01852">types.hpp:1852</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eaf1cf8f0f60db87f162bb83d57ea89949"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5eaf1cf8f0f60db87f162bb83d57ea89949">algotradelib::OrderSession::PRE_MARKET</a></div><div class="ttdeci">@ PRE_MARKET</div><div class="ttdoc">Before the open, at the previous session&#39;s close (장전 시간외).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01848">types.hpp:1848</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a9fc162948f78288f2fbe4f0ed8e1de5eaf3ea15f01999fd6406ecf9096b25cdbc"><div class="ttname"><a href="#a9fc162948f78288f2fbe4f0ed8e1de5eaf3ea15f01999fd6406ecf9096b25cdbc">algotradelib::OrderSession::GTP</a></div><div class="ttdeci">@ GTP</div><div class="ttdoc">NXT&#39;s GTP session.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01856">types.hpp:1856</a></div></div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#a9fc162948f78288f2fbe4f0ed8e1de5e" title="The trading session an order is submitted into.">OrderSession</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01860">1860</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abb26206f7f47d73b0f4476af6af4537b" name="abb26206f7f47d73b0f4476af6af4537b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb26206f7f47d73b0f4476af6af4537b">&#9670;&#160;</a></span>all_order_sides</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#ae2d6f37a7311b1956dac26c57b416067">OrderSide</a>, 2&gt; algotradelib::all_order_sides {OrderSide::BUY, OrderSide::SELL}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Every <span class="tt"><a class="el" href="#ae2d6f37a7311b1956dac26c57b416067" title="The side of an order: its economic direction, buy or sell.">OrderSide</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01689">1689</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5c2ce28eb39f75faf5244d4116906130" name="a5c2ce28eb39f75faf5244d4116906130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c2ce28eb39f75faf5244d4116906130">&#9670;&#160;</a></span>all_order_types</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbce">OrderType</a>, 9&gt; algotradelib::all_order_types</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  OrderType::UNKNOWN,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">OrderType::LIMIT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbceaffb8d99dc885d37eec36c5497244cba8">OrderType::MARKET</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbceaa460067d0f461d25b49707733b06d27e">OrderType::CONDITIONAL_LIMIT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbcea7fdfd5c352b3f4e8e90e6b87a86ef390">OrderType::BEST_LIMIT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbcea85b7ecd22407f523e3b8e6567f4ad260">OrderType::PRIMARY_LIMIT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbceacd0cac6d6a99a7ddc9f0930d0b029672">OrderType::MID_PRICE</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6">OrderType::STOP_LIMIT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#a431efa8049bf5c7f539e97b34e8bcbceaedbd340d5a948f52adb85b7aa4e3b47a">OrderType::CLOSING_PRICE</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">algotradelib::OrderType::LIMIT</a></div><div class="ttdeci">@ LIMIT</div><div class="ttdoc">지정가: fills at the stated price or better.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01710">types.hpp:1710</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea7fdfd5c352b3f4e8e90e6b87a86ef390"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbcea7fdfd5c352b3f4e8e90e6b87a86ef390">algotradelib::OrderType::BEST_LIMIT</a></div><div class="ttdeci">@ BEST_LIMIT</div><div class="ttdoc">최유리지정가: priced at the best quote on the opposite side.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01716">types.hpp:1716</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea85b7ecd22407f523e3b8e6567f4ad260"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbcea85b7ecd22407f523e3b8e6567f4ad260">algotradelib::OrderType::PRIMARY_LIMIT</a></div><div class="ttdeci">@ PRIMARY_LIMIT</div><div class="ttdoc">최우선지정가: priced at the best quote on the order&#39;s own side.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01718">types.hpp:1718</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaa460067d0f461d25b49707733b06d27e"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbceaa460067d0f461d25b49707733b06d27e">algotradelib::OrderType::CONDITIONAL_LIMIT</a></div><div class="ttdeci">@ CONDITIONAL_LIMIT</div><div class="ttdoc">조건부지정가: a limit that becomes a market order at the close.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01714">types.hpp:1714</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceacd0cac6d6a99a7ddc9f0930d0b029672"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbceacd0cac6d6a99a7ddc9f0930d0b029672">algotradelib::OrderType::MID_PRICE</a></div><div class="ttdeci">@ MID_PRICE</div><div class="ttdoc">중간가: priced at the midpoint of the spread.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01720">types.hpp:1720</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbcead0accbbf57627cf21325b732eb98fde6">algotradelib::OrderType::STOP_LIMIT</a></div><div class="ttdeci">@ STOP_LIMIT</div><div class="ttdoc">스톱지정가: a limit released when a trigger price is reached.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01722">types.hpp:1722</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaedbd340d5a948f52adb85b7aa4e3b47a"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbceaedbd340d5a948f52adb85b7aa4e3b47a">algotradelib::OrderType::CLOSING_PRICE</a></div><div class="ttdeci">@ CLOSING_PRICE</div><div class="ttdoc">시간외종가: priced at a session&#39;s closing price.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01724">types.hpp:1724</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbceaffb8d99dc885d37eec36c5497244cba8"><div class="ttname"><a href="#a431efa8049bf5c7f539e97b34e8bcbceaffb8d99dc885d37eec36c5497244cba8">algotradelib::OrderType::MARKET</a></div><div class="ttdeci">@ MARKET</div><div class="ttdoc">시장가: fills at whatever the book offers.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01712">types.hpp:1712</a></div></div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#a431efa8049bf5c7f539e97b34e8bcbce" title="How an order&#39;s price is decided (its price basis).">OrderType</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01728">1728</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac93e69b5506de70260d7db470aec4210" name="ac93e69b5506de70260d7db470aec4210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93e69b5506de70260d7db470aec4210">&#9670;&#160;</a></span>all_times_in_force</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#ae154d19ecf2e6ae8ad52a6a12bc22877">TimeInForce</a>, 4&gt; algotradelib::all_times_in_force</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">  TimeInForce::UNKNOWN,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4">TimeInForce::DAY</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#ae154d19ecf2e6ae8ad52a6a12bc22877a623f31e0edb052f302774f306f5ddb1b">TimeInForce::IMMEDIATE_OR_CANCEL</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="#ae154d19ecf2e6ae8ad52a6a12bc22877a5391ae427dc0ea14dda406b7ef10b3b4">TimeInForce::FILL_OR_KILL</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a5391ae427dc0ea14dda406b7ef10b3b4"><div class="ttname"><a href="#ae154d19ecf2e6ae8ad52a6a12bc22877a5391ae427dc0ea14dda406b7ef10b3b4">algotradelib::TimeInForce::FILL_OR_KILL</a></div><div class="ttdeci">@ FILL_OR_KILL</div><div class="ttdoc">Fills entirely and immediately, or not at all.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01804">types.hpp:1804</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4"><div class="ttname"><a href="#ae154d19ecf2e6ae8ad52a6a12bc22877a5b1d59b5451c06afb65ab1bc2713cfb4">algotradelib::TimeInForce::DAY</a></div><div class="ttdeci">@ DAY</div><div class="ttdoc">Rests until the session ends; an unfilled remainder is cancelled then.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01800">types.hpp:1800</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ae154d19ecf2e6ae8ad52a6a12bc22877a623f31e0edb052f302774f306f5ddb1b"><div class="ttname"><a href="#ae154d19ecf2e6ae8ad52a6a12bc22877a623f31e0edb052f302774f306f5ddb1b">algotradelib::TimeInForce::IMMEDIATE_OR_CANCEL</a></div><div class="ttdeci">@ IMMEDIATE_OR_CANCEL</div><div class="ttdoc">Fills what it can immediately and cancels the remainder.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01802">types.hpp:1802</a></div></div>
+</div><!-- fragment -->
+<p>Every <span class="tt"><a class="el" href="#ae154d19ecf2e6ae8ad52a6a12bc22877" title="How long an order stays valid and what happens to an unfilled remainder.">TimeInForce</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01808">1808</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2bf2e6f5bea43948325db73914e16bb9" name="a2bf2e6f5bea43948325db73914e16bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf2e6f5bea43948325db73914e16bb9">&#9670;&#160;</a></span>all_venues</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="#ac78f755f933a0a9a9f38040d8e56828d">Venue</a>, 4&gt; algotradelib::all_venues {Venue::UNSPECIFIED, Venue::KRX, Venue::NXT, Venue::COMBINED}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Every <span class="tt"><a class="el" href="#ac78f755f933a0a9a9f38040d8e56828d" title="A trading venue: an exchange, or the combined view across exchanges.">Venue</a></span>, in declaration order. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00051">51</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>

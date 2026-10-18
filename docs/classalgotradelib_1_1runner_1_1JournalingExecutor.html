@@ -191,7 +191,7 @@ class algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;</d
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00536">536</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00695">695</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afe6e2a9af0450f0eb3fd7a224341f3d2" name="afe6e2a9af0450f0eb3fd7a224341f3d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe6e2a9af0450f0eb3fd7a224341f3d2">&#9670;&#160;</a></span>JournalingExecutor()</h2>
@@ -237,7 +237,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00547">547</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00706">706</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +284,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's outcome, or <span class="tt">UNAVAILABLE</span> if the <span class="tt">PENDING</span> line could not be written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00680">680</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00839">839</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -322,9 +322,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The venue. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00593">593</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00752">752</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00611">place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00770">place()</a>.</p>
 
 </div>
 </div>
@@ -356,9 +356,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the wrapped executor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00713">713</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00872">872</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00547">JournalingExecutor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00706">JournalingExecutor()</a>.</p>
 
 </div>
 </div>
@@ -390,7 +390,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the wrapped executor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00718">718</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00877">877</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -422,9 +422,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the journal. </p>
 <dl class="section return"><dt>Returns</dt><dd>The journal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00724">724</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00883">883</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00547">JournalingExecutor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00706">JournalingExecutor()</a>.</p>
 
 </div>
 </div>
@@ -456,7 +456,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns how many journal writes have failed; <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">Runner</a></span> compares it with the count it last acknowledged to tell a new failure from an old one. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00743">743</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00902">902</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +488,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the answering line last written (or attempted) for a placement the wrapped executor was asked to place, sent or refused before sending. </p>
 <dl class="section return"><dt>Returns</dt><dd>The line, or <span class="tt">std::nullopt</span> before any placement was asked for. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00653">653</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00812">812</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,9 +528,9 @@ template&lt;typename Executor = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The error, if the wrapped executor reports one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00773">773</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00932">932</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00773">last_error()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00932">last_error()</a>.</p>
 
 </div>
 </div>
@@ -562,7 +562,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the first journal failure's description. </p>
 <dl class="section return"><dt>Returns</dt><dd>The description, or empty if no write has failed; never cleared. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00730">730</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00889">889</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -602,9 +602,9 @@ template&lt;typename Executor = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The reference, if the wrapped executor reports one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00763">763</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00922">922</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00763">last_ref()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00922">last_ref()</a>.</p>
 
 </div>
 </div>
@@ -642,9 +642,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's outcome, or <span class="tt">UNAVAILABLE</span> if the <span class="tt">PENDING</span> line could not be written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00602">602</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00761">761</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00602">place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00761">place()</a>.</p>
 
 </div>
 </div>
@@ -687,7 +687,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's outcome, or <span class="tt">UNAVAILABLE</span> if the <span class="tt">PENDING</span> line could not be written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00611">611</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00770">770</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -726,7 +726,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether it was written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00664">664</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00823">823</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -772,7 +772,7 @@ template&lt;typename Executor = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The venue it routes to. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00752">752</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00911">911</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -823,9 +823,9 @@ template&lt;typename E = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's <span class="tt">effective_route</span> for the order's venue. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00575">575</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00734">734</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00593">effective_route_of()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00752">effective_route_of()</a>.</p>
 
 </div>
 </div>
@@ -867,7 +867,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">order.venue_</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00586">586</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00745">745</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -905,7 +905,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00562">562</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00721">721</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -937,7 +937,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns how many instructions were not sent because their <span class="tt">PENDING</span> line could not be written. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00736">736</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00895">895</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +966,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 
 <p>Whether the wrapped executor reaches a broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00539">539</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00698">698</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>

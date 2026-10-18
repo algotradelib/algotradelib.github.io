@@ -144,7 +144,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a13241a87dea5b430cad3f846b1bfad1d" id="r_a13241a87dea5b430cad3f846b1bfad1d"><td class="memItemLeft">std::optional&lt; std::chrono::system_clock::time_point &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a13241a87dea5b430cad3f846b1bfad1d">decided_at_</a></td></tr>
 <tr class="memdesc:a13241a87dea5b430cad3f846b1bfad1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the strategy decided the order, if known.  <br /></td></tr>
 <tr class="memitem:a516f7e0ed22a231cd06143fc2b0f3256" id="r_a516f7e0ed22a231cd06143fc2b0f3256"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a516f7e0ed22a231cd06143fc2b0f3256">decision_is_exact_</a> {true}</td></tr>
-<tr class="memdesc:a516f7e0ed22a231cd06143fc2b0f3256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether <span class="tt"><a class="el" href="#a13241a87dea5b430cad3f846b1bfad1d" title="When the strategy decided the order, if known.">decided_at_</a></span> is exact, or only an upper bound (the nominal period end of an open-stamped daily or longer bar).  <br /></td></tr>
+<tr class="memdesc:a516f7e0ed22a231cd06143fc2b0f3256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether <span class="tt"><a class="el" href="#a13241a87dea5b430cad3f846b1bfad1d" title="When the strategy decided the order, if known.">decided_at_</a></span> is enforced strictly, or only a nominal upper bound (the period end of an open-stamped daily or longer bar).  <br /></td></tr>
 <tr class="memitem:a41db251f5e34e117ed1467de86a97738" id="r_a41db251f5e34e117ed1467de86a97738"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a41db251f5e34e117ed1467de86a97738">released_</a> {false}</td></tr>
 <tr class="memdesc:a41db251f5e34e117ed1467de86a97738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a stop-limit order has been released, so it now rests as its limit.  <br /></td></tr>
 <tr class="memitem:a183504256cf2b6401a456a3e7eb81d5b" id="r_a183504256cf2b6401a456a3e7eb81d5b"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1Date.html">Date</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a183504256cf2b6401a456a3e7eb81d5b">session_</a></td></tr>
@@ -180,7 +180,7 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00045">45</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00100">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00103">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -199,11 +199,11 @@ template&lt;typename BrokerTag&gt; </div>
 </div><div class="memdoc">
 
 <p>When the strategy decided the order, if known. </p>
-<p>Where the engine knows when a bar's period began and this instant is exact, the order may fill only against a bar whose period began at or after it (so a decision at 10:30 is not filled at that day's 09:00 open). A nominal instant (<span class="tt"><a class="el" href="#a516f7e0ed22a231cd06143fc2b0f3256" title="Whether decided_at_ is exact, or only an upper bound (the nominal period end of an open-stamped daily...">decision_is_exact_</a></span> false) is an upper bound: a start at or after it still proves the order came first, while an earlier start is allowed and counted in <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#a52409541c53241a038c4efd3f1fdc411" title="How many fill decisions could not be checked for causality; see ReportCaveats::unchecked_fill_causali...">ReplayResult::unchecked_fill_causality_</a></span>. Empty (an order placed by a caller driving the executor directly) is always eligible. </p>
+<p>Where the engine knows when a bar's period began and this instant is exact, the order may fill only against a bar whose period began at or after it (so a decision at 10:30 is not filled at that day's 09:00 open). A nominal instant (<span class="tt"><a class="el" href="#a516f7e0ed22a231cd06143fc2b0f3256" title="Whether decided_at_ is enforced strictly, or only a nominal upper bound (the period end of an open-st...">decision_is_exact_</a></span> false) is an upper bound: a start at or after it still proves the order came first, while an earlier start is allowed and counted in <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#a52409541c53241a038c4efd3f1fdc411" title="How many fill decisions could not be checked for causality; see ReportCaveats::unchecked_fill_causali...">ReplayResult::unchecked_fill_causality_</a></span>. Empty (an order placed by a caller driving the executor directly) is always eligible. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00056">56</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00100">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00103">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -221,11 +221,12 @@ template&lt;typename BrokerTag&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Whether <span class="tt"><a class="el" href="#a13241a87dea5b430cad3f846b1bfad1d" title="When the strategy decided the order, if known.">decided_at_</a></span> is exact, or only an upper bound (the nominal period end of an open-stamped daily or longer bar). </p>
+<p>Whether <span class="tt"><a class="el" href="#a13241a87dea5b430cad3f846b1bfad1d" title="When the strategy decided the order, if known.">decided_at_</a></span> is enforced strictly, or only a nominal upper bound (the period end of an open-stamped daily or longer bar). </p>
+<p>Strict for every intraday bar, including a session's last one cut short by the close, whose derived end is late rather than exact: a late bound defers a fill and never credits an earlier price. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00061">61</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00064">64</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00100">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00103">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -247,7 +248,7 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00041">41</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00100">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00103">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -269,7 +270,7 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00043">43</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00100">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00103">algotradelib::backtest::QueueingExecutor&lt; Tag &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -290,7 +291,7 @@ template&lt;typename BrokerTag&gt; </div>
 <p>Whether a stop-limit order has been released, so it now rests as its limit. </p>
 <p>The order itself (and the strategy's working row) still reads as a stop, as a live listing does. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00067">67</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00070">70</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +311,7 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p>The market-local date of the session a <span class="tt">DAY</span> order lives in, once known (the date of the first bar it could trade against); <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html" title="Replays bars (and quotes) through one strategy, with a ledger and a fill model.">Backtester</a></span> withdraws it when that session ends. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00072">72</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00075">75</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

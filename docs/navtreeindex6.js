@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"classalgotradelib_1_1runner_1_1Runner.html#aa04899ccd7a5b21a5adadd08603a5024":[2,0,0,9,37,43],
+"classalgotradelib_1_1runner_1_1Runner.html#aa5ce9952307cb427dddb906d925f2d84":[1,0,0,9,37,75],
+"classalgotradelib_1_1runner_1_1Runner.html#aa5ce9952307cb427dddb906d925f2d84":[2,0,0,9,37,75],
+"classalgotradelib_1_1runner_1_1Runner.html#aa75264569eaa48592145cf76aa1882f0":[1,0,0,9,37,30],
 "classalgotradelib_1_1runner_1_1Runner.html#aa75264569eaa48592145cf76aa1882f0":[2,0,0,9,37,30],
 "classalgotradelib_1_1runner_1_1Runner.html#aa7e8a38106a29b3f2b598e1ffa360cb5":[1,0,0,9,37,74],
 "classalgotradelib_1_1runner_1_1Runner.html#aa7e8a38106a29b3f2b598e1ffa360cb5":[2,0,0,9,37,74],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a5b5d382afcfe1048121f05f6a1e174e8":[2,0,0,10,23,3],
 "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a712e58f844d31e9264c0813d220607e5":[1,0,0,10,24,4],
 "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a712e58f844d31e9264c0813d220607e5":[2,0,0,10,23,4],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#ab87f758ab443cdd439ade7859aa8ae37":[1,0,0,10,24,2],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#ab87f758ab443cdd439ade7859aa8ae37":[2,0,0,10,23,2],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#acdd1ca5e2d31578333242f89556b5d4a":[1,0,0,10,24,1],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#acdd1ca5e2d31578333242f89556b5d4a":[2,0,0,10,23,1],
-"classalgotradelib_1_1strategy_1_1SizeSpec.html":[1,0,0,10,27]
+"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#ab87f758ab443cdd439ade7859aa8ae37":[1,0,0,10,24,2]
 };

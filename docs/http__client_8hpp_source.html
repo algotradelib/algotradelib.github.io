@@ -610,288 +610,299 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('http__client_8
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
 <div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  <span class="comment">// Returns whether the front request has already been committed to the wire.</span></div>
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>  <span class="keywordtype">bool</span> front_in_flight() const noexcept {</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>    <span class="keywordflow">return</span> state_ == State::WRITING || state_ == State::READING;</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>  }</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span> </div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  <span class="keywordtype">void</span> pump() {</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>    <span class="keywordflow">if</span> (stopped_ || queue_.empty()) {</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>    }</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    <span class="keywordflow">if</span> (state_ == State::DISCONNECTED) {</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>      start_resolve();</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>    <span class="keywordflow">switch</span> (state_) {</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>      <span class="keywordflow">case</span> State::WRITING:</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>      <span class="keywordflow">case</span> State::READING:</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>      <span class="keywordflow">case</span> State::DISCONNECTED:</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>      <span class="keywordflow">case</span> State::RESOLVING:</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      <span class="keywordflow">case</span> State::CONNECTING:</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>      <span class="keywordflow">case</span> State::HANDSHAKING:</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>      <span class="keywordflow">case</span> State::READY:</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    }</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <span class="keywordflow">if</span> (state_ != State::READY) {</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    }</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    <span class="comment">// A request that is never replayed is not written into a connection the server may have closed</span></div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    <span class="comment">// while it sat idle; see `HttpClientOptions::unreplayed_idle_limit_`. Before admission, so the</span></div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    <span class="comment">// reconnect spends no rate-limit slot of its own.</span></div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <span class="keywordflow">if</span> (queue_.front().request_.method_ != http::verb::get &amp;&amp; !queue_.front().refreshed_ &amp;&amp; idle_since_ &amp;&amp;</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>        std::chrono::steady_clock::now() - *idle_since_ &gt; options_.unreplayed_idle_limit_) {</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>      queue_.front().refreshed_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>      disconnect();</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>      <span class="comment">// The handshake is not admission delay; the wait, if any, is measured again from here.</span></div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>      queue_.front().waiting_since_.reset();</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>      start_resolve();</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>    }</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>    <span class="keywordflow">if</span> (!limiter_) {</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>      start_write();</div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>    }</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span> </div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>    <span class="comment">// Admission is evaluated for whichever request is at the front *now*, so a</span></div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>    <span class="comment">// trading request that arrives while a polling request is waiting is</span></div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    <span class="comment">// reconsidered immediately rather than inheriting the wait it did not earn.</span></div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>    <span class="keyword">const</span> <span class="keyword">auto</span> group = queue_.front().request_.group_;</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>    <span class="keyword">const</span> <span class="keyword">auto</span> delay = limiter_-&gt;delay_until(group);</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    <span class="keywordflow">if</span> (delay &gt; RateLimitController::Duration::zero()) {</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>      <span class="comment">// Waiting longer than the operation&#39;s own deadline would queue a request</span></div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>      <span class="comment">// only to time it out on the wire. Failing now says the same thing sooner,</span></div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>      <span class="comment">// and says it before the request is sent rather than after.</span></div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>      <span class="keywordflow">if</span> (delay &gt; std::chrono::duration_cast&lt;RateLimitController::Duration&gt;(options_.timeout_)) {</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>        limiter_-&gt;record_shed(group);</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>        <span class="keyword">auto</span> pending = std::move(queue_.front());</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        queue_.pop_front();</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        BrokerError error;</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>        error.category_ = <a class="code hl_enumvalue" href="namespacealgotradelib.html#a42bd74ca6739874d057d515b40a6e6d6a9f935beb31030ad0d4d26126c0f39bf2">ErrorCategory::CANCELLED</a>;</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>        <span class="comment">// Ordinarily nothing was sent -- admission is evaluated only while the connection is</span></div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>        <span class="comment">// `READY`, never while the front request is in flight. A GET being replayed is the</span></div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>        <span class="comment">// exception: it is admitted again, and its first attempt did reach the wire.</span></div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>        error.reached_broker_ = pending.sent_;</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        error.broker_code_ = <span class="stringliteral">&quot;admission_deadline&quot;</span>;</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>        error.message_ = <span class="stringliteral">&quot;request would wait for rate-limit admission beyond its deadline&quot;</span>;</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>        complete(std::move(pending.handler_), Result&lt;HttpResponse&gt;(std::move(error)));</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>        pump();</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>      }</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>      <span class="keywordflow">if</span> (!queue_.front().waiting_since_) {</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        queue_.front().waiting_since_ = std::chrono::steady_clock::now();</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>      }</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>      admission_timer_.expires_after(delay);</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>      admission_timer_.async_wait([self = shared_from_this()](beast::error_code ec) {</div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        <span class="keywordflow">if</span> (ec) {</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        }</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>        self-&gt;pump();</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>      });</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    }</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span> </div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span>&amp; waiting_since = queue_.front().waiting_since_) {</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>      limiter_-&gt;record_delay(</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>        group,</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>        std::chrono::duration_cast&lt;RateLimitController::Duration&gt;(</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>          std::chrono::steady_clock::now() - *waiting_since</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>        )</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>      );</div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>      waiting_since.reset();</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>    }</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>    admission_timer_.cancel();</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>    limiter_-&gt;acquire(group);</div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    start_write();</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>  }</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span> </div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>  <span class="keywordtype">void</span> start_resolve() {</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>    stream_ = std::make_unique&lt;beast::ssl_stream&lt;beast::tcp_stream&gt;&gt;(strand_, context_);</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    state_ = State::RESOLVING;</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>    resolve_timed_out_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    resolve_timer_.expires_after(options_.timeout_);</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    resolve_timer_.async_wait([self = shared_from_this()](beast::error_code ec) {</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>      <span class="keywordflow">if</span> (!ec &amp;&amp; self-&gt;state_ == State::RESOLVING) {</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>        self-&gt;resolve_timed_out_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>        self-&gt;resolver_.cancel();</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>      }</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    });</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    resolver_.async_resolve(</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>      host_,</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>      port_,</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>      [self = shared_from_this()](beast::error_code ec, tcp::resolver::results_type endpoints) {</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>        self-&gt;resolve_timer_.cancel();</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>        <span class="comment">// `close()` completes every queued request and releases the stream, so a</span></div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>        <span class="comment">// continuation that arrives afterwards has nothing left to advance.</span></div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || !self-&gt;stream_) {</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>        }</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>        <span class="keywordflow">if</span> (ec) {</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>          <span class="keywordflow">if</span> (self-&gt;resolve_timed_out_) {</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            ec = beast::error_code(net::error::timed_out);</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>          }</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>          self-&gt;fail(<span class="stringliteral">&quot;resolve&quot;</span>, ec);</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>        }</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>        self-&gt;state_ = State::CONNECTING;</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>        beast::get_lowest_layer(*self-&gt;stream_).expires_after(self-&gt;options_.timeout_);</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>        beast::get_lowest_layer(*self-&gt;stream_)</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>          .async_connect(</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>            endpoints,</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>            [self](beast::error_code connect_ec, tcp::resolver::results_type::endpoint_type) {</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>              <span class="keywordflow">if</span> (self-&gt;stopped_ || !self-&gt;stream_) {</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>              }</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>              <span class="keywordflow">if</span> (connect_ec) {</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>                self-&gt;fail(<span class="stringliteral">&quot;connect&quot;</span>, connect_ec);</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>              }</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>              self-&gt;start_handshake();</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>            }</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>          );</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>      }</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>    );</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>  }</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span> </div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>  <span class="keywordtype">void</span> start_handshake() {</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    <span class="keywordflow">if</span> (!SSL_set_tlsext_host_name(stream_-&gt;native_handle(), host_.c_str())) {</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>      fail(</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>        <span class="stringliteral">&quot;sni&quot;</span>,</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>        beast::error_code(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(::ERR_get_error()), net::error::get_ssl_category())</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>      );</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    }</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    stream_-&gt;set_verify_callback(ssl::host_name_verification(host_));</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>    state_ = State::HANDSHAKING;</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>    beast::get_lowest_layer(*stream_).expires_after(options_.timeout_);</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>    stream_-&gt;async_handshake(</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>      ssl::stream_base::client, [self = shared_from_this()](beast::error_code ec) {</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || !self-&gt;stream_) {</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>        }</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>        <span class="keywordflow">if</span> (ec) {</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>          self-&gt;fail(<span class="stringliteral">&quot;tls_handshake&quot;</span>, ec);</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        }</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>        self-&gt;state_ = State::READY;</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>        <span class="comment">// The idle clock starts here too: a request can wait for admission on a connection that has</span></div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>        <span class="comment">// carried nothing yet, and the server&#39;s idle timeout runs all the same.</span></div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        self-&gt;idle_since_ = std::chrono::steady_clock::now();</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>        self-&gt;pump();</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>      }</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    );</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>  }</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span> </div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>  <span class="keywordtype">void</span> start_write() {</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    <span class="comment">// Marked here, which is the only moment this can be said truthfully: everything before is</span></div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>    <span class="comment">// resolving, connecting and handshaking, none of which puts the request anywhere.</span></div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    queue_.front().sent_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; request_value = queue_.front().request_;</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>    active_request_.emplace(request_value.method_, request_value.target_, request_value.version_);</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    active_request_-&gt;set(http::field::host, host_header());</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    active_request_-&gt;set(http::field::user_agent, <span class="stringliteral">&quot;algotradelib&quot;</span>);</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    active_request_-&gt;keep_alive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; header : request_value.headers_) {</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>      active_request_-&gt;set(header.first, header.second);</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>    }</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    active_request_-&gt;body() = request_value.body_;</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    <span class="keywordflow">if</span> (!request_value.body_.empty()) {</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>      active_request_-&gt;prepare_payload();</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    }</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span> </div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>    state_ = State::WRITING;</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    beast::get_lowest_layer(*stream_).expires_after(options_.timeout_);</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    http::async_write(</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>      *stream_, *active_request_, [self = shared_from_this()](beast::error_code ec, std::size_t) {</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || self-&gt;queue_.empty()) {</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>        }</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>        <span class="keywordflow">if</span> (ec) {</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>          self-&gt;fail(<span class="stringliteral">&quot;write&quot;</span>, ec);</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>        }</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        self-&gt;start_read();</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>      }</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    );</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>  }</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span> </div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>  <span class="keywordtype">void</span> start_read() {</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    parser_.emplace();</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>    parser_-&gt;body_limit(options_.body_limit_);</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>    state_ = State::READING;</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>    beast::get_lowest_layer(*stream_).expires_after(options_.timeout_);</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    http::async_read(</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>      *stream_, buffer_, *parser_, [self = shared_from_this()](beast::error_code ec, std::size_t) {</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || self-&gt;queue_.empty()) {</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>        }</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>        <span class="keywordflow">if</span> (ec) {</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>          self-&gt;fail(<span class="stringliteral">&quot;read&quot;</span>, ec);</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>          <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>        }</div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>        <span class="keyword">auto</span> response = self-&gt;parser_-&gt;release();</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> keep_alive = response.keep_alive() &amp;&amp; !response.need_eof();</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>        self-&gt;parser_.reset();</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>        self-&gt;active_request_.reset();</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>        <span class="keyword">auto</span> pending = std::move(self-&gt;queue_.front());</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>        self-&gt;queue_.pop_front();</div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>        <span class="keywordflow">if</span> (keep_alive) {</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>          self-&gt;state_ = State::READY;</div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>          self-&gt;idle_since_ = std::chrono::steady_clock::now();</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>          self-&gt;disconnect();</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>        }</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>        self-&gt;complete(std::move(pending.handler_), Result&lt;HttpResponse&gt;(std::move(response)));</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>        self-&gt;pump();</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>      }</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    );</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>  }</div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span> </div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>  <span class="keywordtype">void</span> fail(<span class="keyword">const</span> <span class="keywordtype">char</span>* stage, beast::error_code ec) {</div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>    <span class="comment">// **Asked of the request, not of the connection** (`sent_` is kept on each pending request), for</span></div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>    <span class="comment">// the reason `close()` gives: `disconnect()` resets the connection&#39;s state, and asking it afterwards</span></div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    <span class="comment">// would answer &quot;not in flight&quot; for every failure -- including one that happened halfway through</span></div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>    <span class="comment">// writing an order. This is the same question from the other</span></div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>    <span class="comment">// side: a resolve, connect, or handshake failure happens *before* `start_write()`, so an order</span></div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>    <span class="comment">// has certainly not been sent, and reporting it as indeterminate spends a rate-limit slot and</span></div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>    <span class="comment">// withholds the instrument to reconcile an order that does not exist.</span></div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>    disconnect();</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>    <span class="keywordflow">if</span> (queue_.empty()) {</div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>    }</div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    <span class="keyword">auto</span>&amp; pending = queue_.front();</div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>    <span class="keywordflow">if</span> (</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>      pending.request_.method_ == http::verb::get &amp;&amp; !pending.retried_ &amp;&amp;</div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>      ec != net::error::operation_aborted</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>    ) {</div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>      pending.retried_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>      pump();</div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>    }</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    <span class="keyword">auto</span> completed = std::move(pending);</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>    queue_.pop_front();</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>    <span class="keyword">auto</span> error = <a class="code hl_function" href="namespacealgotradelib_1_1network.html#a430c9c3332bda042ce8377d013be9b05">transport_error</a>(stage, ec);</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>    error.reached_broker_ = completed.sent_;</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>    complete(std::move(completed.handler_), Result&lt;HttpResponse&gt;(std::move(error)));</div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>    pump();</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>  }</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span> </div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>  <span class="keywordtype">void</span> disconnect() noexcept {</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>    resolve_timer_.cancel();</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>    <span class="keywordflow">if</span> (stream_) {</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>      <a class="code hl_function" href="namespacealgotradelib_1_1network.html#a89ab64ee4c611c19a0d43fe6f3167e28">close_ssl_stream</a>(*stream_);</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>      stream_.reset();</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    }</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    buffer_.consume(buffer_.size());</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    parser_.reset();</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    active_request_.reset();</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    state_ = State::DISCONNECTED;</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    idle_since_.reset();</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  }</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>  std::string host_header()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="namespacealgotradelib_1_1network.html#ad3e40597b613a8ad74c2f3a5b4c7d53d">make_host_header</a>(host_, port_); }</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span> </div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>  <span class="keywordtype">void</span> complete(<a class="code hl_typedef" href="classalgotradelib_1_1network_1_1AsyncHttpClient.html#a5e58cdbd8f0df74d099ec8031dc5e552">CompletionHandler</a> handler, Result&lt;HttpResponse&gt; result) {</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    <span class="keyword">auto</span> executor = net::get_associated_executor(handler, strand_);</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    net::dispatch(executor, [handler = std::move(handler), result = std::move(result)]() <span class="keyword">mutable</span> {</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>      std::move(handler)(std::move(result));</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    });</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>  }</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>};</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>  }</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span> </div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>  <span class="keywordtype">void</span> pump() {</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    <span class="keywordflow">if</span> (stopped_ || queue_.empty()) {</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    }</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    <span class="keywordflow">if</span> (state_ == State::DISCONNECTED) {</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>      start_resolve();</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    }</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>    <span class="keywordflow">if</span> (state_ != State::READY) {</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>    }</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>    <span class="comment">// A request that is never replayed is not written into a connection the server may have closed</span></div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>    <span class="comment">// while it sat idle; see `HttpClientOptions::unreplayed_idle_limit_`. Before admission, so the</span></div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>    <span class="comment">// reconnect spends no rate-limit slot of its own.</span></div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    <span class="keywordflow">if</span> (queue_.front().request_.method_ != http::verb::get &amp;&amp; !queue_.front().refreshed_ &amp;&amp; idle_since_ &amp;&amp;</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>        std::chrono::steady_clock::now() - *idle_since_ &gt; options_.unreplayed_idle_limit_) {</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>      queue_.front().refreshed_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>      disconnect();</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>      <span class="comment">// The handshake is not admission delay; the wait, if any, is measured again from here.</span></div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>      queue_.front().waiting_since_.reset();</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>      start_resolve();</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    }</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    <span class="keywordflow">if</span> (!limiter_) {</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>      start_write();</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    }</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span> </div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    <span class="comment">// Admission is evaluated for whichever request is at the front *now*, so a</span></div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>    <span class="comment">// trading request that arrives while a polling request is waiting is</span></div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>    <span class="comment">// reconsidered immediately rather than inheriting the wait it did not earn.</span></div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>    <span class="keyword">const</span> <span class="keyword">auto</span> group = queue_.front().request_.group_;</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>    <span class="keyword">const</span> <span class="keyword">auto</span> delay = limiter_-&gt;delay_until(group);</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>    <span class="keywordflow">if</span> (delay &gt; RateLimitController::Duration::zero()) {</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>      <span class="comment">// Waiting longer than the operation&#39;s own deadline would queue a request</span></div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>      <span class="comment">// only to time it out on the wire. Failing now says the same thing sooner,</span></div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>      <span class="comment">// and says it before the request is sent rather than after.</span></div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>      <span class="keywordflow">if</span> (delay &gt; std::chrono::duration_cast&lt;RateLimitController::Duration&gt;(options_.timeout_)) {</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>        limiter_-&gt;record_shed(group);</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>        <span class="keyword">auto</span> pending = std::move(queue_.front());</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>        queue_.pop_front();</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        BrokerError error;</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>        error.category_ = <a class="code hl_enumvalue" href="namespacealgotradelib.html#a42bd74ca6739874d057d515b40a6e6d6a9f935beb31030ad0d4d26126c0f39bf2">ErrorCategory::CANCELLED</a>;</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        <span class="comment">// Ordinarily nothing was sent -- admission is evaluated only while the connection is</span></div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        <span class="comment">// `READY`, never while the front request is in flight. A GET being replayed is the</span></div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>        <span class="comment">// exception: it is admitted again, and its first attempt did reach the wire.</span></div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>        error.reached_broker_ = pending.sent_;</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        error.broker_code_ = <span class="stringliteral">&quot;admission_deadline&quot;</span>;</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        error.message_ = <span class="stringliteral">&quot;request would wait for rate-limit admission beyond its deadline&quot;</span>;</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>        complete(std::move(pending.handler_), Result&lt;HttpResponse&gt;(std::move(error)));</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>        pump();</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>      }</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>      <span class="keywordflow">if</span> (!queue_.front().waiting_since_) {</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>        queue_.front().waiting_since_ = std::chrono::steady_clock::now();</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>      }</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>      admission_timer_.expires_after(delay);</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>      admission_timer_.async_wait([self = shared_from_this()](beast::error_code ec) {</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>        <span class="keywordflow">if</span> (ec) {</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>        }</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>        self-&gt;pump();</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>      });</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>    }</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span> </div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span>&amp; waiting_since = queue_.front().waiting_since_) {</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>      limiter_-&gt;record_delay(</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>        group,</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>        std::chrono::duration_cast&lt;RateLimitController::Duration&gt;(</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>          std::chrono::steady_clock::now() - *waiting_since</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>        )</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>      );</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>      waiting_since.reset();</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    }</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    admission_timer_.cancel();</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    limiter_-&gt;acquire(group);</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    start_write();</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>  }</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span> </div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>  <span class="keywordtype">void</span> start_resolve() {</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    stream_ = std::make_unique&lt;beast::ssl_stream&lt;beast::tcp_stream&gt;&gt;(strand_, context_);</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>    state_ = State::RESOLVING;</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    resolve_timed_out_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>    resolve_timer_.expires_after(options_.timeout_);</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>    resolve_timer_.async_wait([self = shared_from_this()](beast::error_code ec) {</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>      <span class="keywordflow">if</span> (!ec &amp;&amp; self-&gt;state_ == State::RESOLVING) {</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>        self-&gt;resolve_timed_out_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>        self-&gt;resolver_.cancel();</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>      }</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    });</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    resolver_.async_resolve(</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>      host_,</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>      port_,</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>      [self = shared_from_this()](beast::error_code ec, tcp::resolver::results_type endpoints) {</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>        self-&gt;resolve_timer_.cancel();</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>        <span class="comment">// `close()` completes every queued request and releases the stream, so a</span></div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>        <span class="comment">// continuation that arrives afterwards has nothing left to advance.</span></div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || !self-&gt;stream_) {</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>        }</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>        <span class="keywordflow">if</span> (ec) {</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>          <span class="keywordflow">if</span> (self-&gt;resolve_timed_out_) {</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>            ec = beast::error_code(net::error::timed_out);</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>          }</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>          self-&gt;fail(<span class="stringliteral">&quot;resolve&quot;</span>, ec);</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>        }</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>        self-&gt;state_ = State::CONNECTING;</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>        beast::get_lowest_layer(*self-&gt;stream_).expires_after(self-&gt;options_.timeout_);</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>        beast::get_lowest_layer(*self-&gt;stream_)</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>          .async_connect(</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>            endpoints,</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>            [self](beast::error_code connect_ec, tcp::resolver::results_type::endpoint_type) {</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>              <span class="keywordflow">if</span> (self-&gt;stopped_ || !self-&gt;stream_) {</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>              }</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>              <span class="keywordflow">if</span> (connect_ec) {</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>                self-&gt;fail(<span class="stringliteral">&quot;connect&quot;</span>, connect_ec);</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>              }</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>              self-&gt;start_handshake();</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>            }</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>          );</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>      }</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    );</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>  }</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span> </div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>  <span class="keywordtype">void</span> start_handshake() {</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    <span class="keywordflow">if</span> (!SSL_set_tlsext_host_name(stream_-&gt;native_handle(), host_.c_str())) {</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>      fail(</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>        <span class="stringliteral">&quot;sni&quot;</span>,</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>        beast::error_code(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(::ERR_get_error()), net::error::get_ssl_category())</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>      );</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>    }</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    stream_-&gt;set_verify_callback(ssl::host_name_verification(host_));</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    state_ = State::HANDSHAKING;</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    beast::get_lowest_layer(*stream_).expires_after(options_.timeout_);</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    stream_-&gt;async_handshake(</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>      ssl::stream_base::client, [self = shared_from_this()](beast::error_code ec) {</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || !self-&gt;stream_) {</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>        }</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        <span class="keywordflow">if</span> (ec) {</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>          self-&gt;fail(<span class="stringliteral">&quot;tls_handshake&quot;</span>, ec);</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        }</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        self-&gt;state_ = State::READY;</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        <span class="comment">// The idle clock starts here too: a request can wait for admission on a connection that has</span></div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        <span class="comment">// carried nothing yet, and the server&#39;s idle timeout runs all the same.</span></div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        self-&gt;idle_since_ = std::chrono::steady_clock::now();</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>        self-&gt;pump();</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>      }</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    );</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>  }</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span> </div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>  <span class="keywordtype">void</span> start_write() {</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    <span class="comment">// Marked here, which is the only moment this can be said truthfully: everything before is</span></div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>    <span class="comment">// resolving, connecting and handshaking, none of which puts the request anywhere.</span></div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    queue_.front().sent_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; request_value = queue_.front().request_;</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    active_request_.emplace(request_value.method_, request_value.target_, request_value.version_);</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>    active_request_-&gt;set(http::field::host, host_header());</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    active_request_-&gt;set(http::field::user_agent, <span class="stringliteral">&quot;algotradelib&quot;</span>);</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    active_request_-&gt;keep_alive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; header : request_value.headers_) {</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>      active_request_-&gt;set(header.first, header.second);</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    }</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    active_request_-&gt;body() = request_value.body_;</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    <span class="keywordflow">if</span> (!request_value.body_.empty()) {</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>      active_request_-&gt;prepare_payload();</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    }</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span> </div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    state_ = State::WRITING;</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    beast::get_lowest_layer(*stream_).expires_after(options_.timeout_);</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    http::async_write(</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>      *stream_, *active_request_, [self = shared_from_this()](beast::error_code ec, std::size_t) {</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || self-&gt;queue_.empty()) {</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>        }</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>        <span class="keywordflow">if</span> (ec) {</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>          self-&gt;fail(<span class="stringliteral">&quot;write&quot;</span>, ec);</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>        }</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>        self-&gt;start_read();</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>      }</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    );</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>  }</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span> </div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>  <span class="keywordtype">void</span> start_read() {</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    parser_.emplace();</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>    parser_-&gt;body_limit(options_.body_limit_);</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    state_ = State::READING;</div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>    beast::get_lowest_layer(*stream_).expires_after(options_.timeout_);</div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    http::async_read(</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>      *stream_, buffer_, *parser_, [self = shared_from_this()](beast::error_code ec, std::size_t) {</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>        <span class="keywordflow">if</span> (self-&gt;stopped_ || self-&gt;queue_.empty()) {</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>        }</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>        <span class="keywordflow">if</span> (ec) {</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>          self-&gt;fail(<span class="stringliteral">&quot;read&quot;</span>, ec);</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>        }</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>        <span class="keyword">auto</span> response = self-&gt;parser_-&gt;release();</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> keep_alive = response.keep_alive() &amp;&amp; !response.need_eof();</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>        self-&gt;parser_.reset();</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>        self-&gt;active_request_.reset();</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>        <span class="keyword">auto</span> pending = std::move(self-&gt;queue_.front());</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>        self-&gt;queue_.pop_front();</div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>        <span class="keywordflow">if</span> (keep_alive) {</div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>          self-&gt;state_ = State::READY;</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>          self-&gt;idle_since_ = std::chrono::steady_clock::now();</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>          self-&gt;disconnect();</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>        }</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>        self-&gt;complete(std::move(pending.handler_), Result&lt;HttpResponse&gt;(std::move(response)));</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>        self-&gt;pump();</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>      }</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>    );</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>  }</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span> </div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>  <span class="keywordtype">void</span> fail(<span class="keyword">const</span> <span class="keywordtype">char</span>* stage, beast::error_code ec) {</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    <span class="comment">// **Asked of the request, not of the connection** (`sent_` is kept on each pending request), for</span></div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>    <span class="comment">// the reason `close()` gives: `disconnect()` resets the connection&#39;s state, and asking it afterwards</span></div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    <span class="comment">// would answer &quot;not in flight&quot; for every failure -- including one that happened halfway through</span></div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    <span class="comment">// writing an order. This is the same question from the other</span></div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>    <span class="comment">// side: a resolve, connect, or handshake failure happens *before* `start_write()`, so an order</span></div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>    <span class="comment">// has certainly not been sent, and reporting it as indeterminate spends a rate-limit slot and</span></div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <span class="comment">// withholds the instrument to reconcile an order that does not exist.</span></div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>    disconnect();</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>    <span class="keywordflow">if</span> (queue_.empty()) {</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>    }</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>    <span class="keyword">auto</span>&amp; pending = queue_.front();</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>    <span class="keywordflow">if</span> (</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>      pending.request_.method_ == http::verb::get &amp;&amp; !pending.retried_ &amp;&amp;</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>      ec != net::error::operation_aborted</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    ) {</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>      pending.retried_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>      pump();</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>    }</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>    <span class="keyword">auto</span> completed = std::move(pending);</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    queue_.pop_front();</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    <span class="keyword">auto</span> error = <a class="code hl_function" href="namespacealgotradelib_1_1network.html#a430c9c3332bda042ce8377d013be9b05">transport_error</a>(stage, ec);</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    error.reached_broker_ = completed.sent_;</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    complete(std::move(completed.handler_), Result&lt;HttpResponse&gt;(std::move(error)));</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    pump();</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>  }</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span> </div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  <span class="keywordtype">void</span> disconnect() noexcept {</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>    resolve_timer_.cancel();</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <span class="keywordflow">if</span> (stream_) {</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>      <a class="code hl_function" href="namespacealgotradelib_1_1network.html#a89ab64ee4c611c19a0d43fe6f3167e28">close_ssl_stream</a>(*stream_);</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>      stream_.reset();</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    }</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    buffer_.consume(buffer_.size());</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    parser_.reset();</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    active_request_.reset();</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    state_ = State::DISCONNECTED;</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    idle_since_.reset();</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>  }</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span> </div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>  std::string host_header()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="namespacealgotradelib_1_1network.html#ad3e40597b613a8ad74c2f3a5b4c7d53d">make_host_header</a>(host_, port_); }</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span> </div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>  <span class="keywordtype">void</span> complete(<a class="code hl_typedef" href="classalgotradelib_1_1network_1_1AsyncHttpClient.html#a5e58cdbd8f0df74d099ec8031dc5e552">CompletionHandler</a> handler, Result&lt;HttpResponse&gt; result) {</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>    <span class="keyword">auto</span> executor = net::get_associated_executor(handler, strand_);</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    net::dispatch(executor, [handler = std::move(handler), result = std::move(result)]() <span class="keyword">mutable</span> {</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>      std::move(handler)(std::move(result));</div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    });</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  }</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>};</div>
 </div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span> </div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>} <span class="comment">// namespace network</span></div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span> </div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>} <span class="comment">// namespace network</span></div>
 </div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>} <span class="comment">// namespace algotradelib</span></div>
-<div class="ttc" id="aclassalgotradelib_1_1Result_html"><div class="ttname"><a href="classalgotradelib_1_1Result.html">algotradelib::Result</a></div><div class="ttdoc">Either a value or a BrokerError.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00763">types.hpp:763</a></div></div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="ttc" id="aclassalgotradelib_1_1Result_html"><div class="ttname"><a href="classalgotradelib_1_1Result.html">algotradelib::Result</a></div><div class="ttdoc">Either a value or a BrokerError.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00797">types.hpp:797</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1network_1_1AsyncHttpClient_html_a0d635d352bad1f751991424af9bba908"><div class="ttname"><a href="classalgotradelib_1_1network_1_1AsyncHttpClient.html#a0d635d352bad1f751991424af9bba908">algotradelib::network::AsyncHttpClient::async_request</a></div><div class="ttdeci">auto async_request(HttpRequest request_value, CompletionToken &amp;&amp;token)</div><div class="ttdoc">Queues a request; completes with the response (any status) or an error.</div><div class="ttdef"><b>Definition</b> <a href="#l00446">http_client.hpp:446</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1network_1_1AsyncHttpClient_html_a1d4e6fe6be6d6789c6c2e5b9c2e35fcd"><div class="ttname"><a href="classalgotradelib_1_1network_1_1AsyncHttpClient.html#a1d4e6fe6be6d6789c6c2e5b9c2e35fcd">algotradelib::network::AsyncHttpClient::AsyncHttpClient</a></div><div class="ttdeci">AsyncHttpClient(net::any_io_executor executor, ssl::context &amp;context, std::string host, std::string port, HttpClientOptions options={})</div><div class="ttdoc">Constructs a client; it connects on the first request.</div><div class="ttdef"><b>Definition</b> <a href="#l00383">http_client.hpp:383</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1network_1_1AsyncHttpClient_html_a293321412663d5164a9f1801e6b4b9e9"><div class="ttname"><a href="classalgotradelib_1_1network_1_1AsyncHttpClient.html#a293321412663d5164a9f1801e6b4b9e9">algotradelib::network::AsyncHttpClient::rate_limits</a></div><div class="ttdeci">RateLimitController * rate_limits() noexcept</div><div class="ttdoc">Returns the connection&#39;s rate limiter.</div><div class="ttdef"><b>Definition</b> <a href="#l00406">http_client.hpp:406</a></div></div>
@@ -904,25 +915,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('http__client_8
 <div class="ttc" id="aclassalgotradelib_1_1network_1_1HttpClient_html_a9a05af31cf69b2043d566a9520e4d5e9"><div class="ttname"><a href="classalgotradelib_1_1network_1_1HttpClient.html#a9a05af31cf69b2043d566a9520e4d5e9">algotradelib::network::HttpClient::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Closes the connection; the next request opens a new one.</div><div class="ttdef"><b>Definition</b> <a href="#l00294">http_client.hpp:294</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1network_1_1HttpClient_html_ad391463fc69a8dbb0d4292d730210561"><div class="ttname"><a href="classalgotradelib_1_1network_1_1HttpClient.html#ad391463fc69a8dbb0d4292d730210561">algotradelib::network::HttpClient::post</a></div><div class="ttdeci">HttpResponse post(const std::string &amp;target, const std::string &amp;body, const std::map&lt; std::string, std::string &gt; &amp;headers={})</div><div class="ttdoc">Sends a POST request and waits for the response; never retried.</div><div class="ttdef"><b>Definition</b> <a href="#l00216">http_client.hpp:216</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1network_1_1HttpClient_html_ad94f7814ed06c87da9382da8f59e0823"><div class="ttname"><a href="classalgotradelib_1_1network_1_1HttpClient.html#ad94f7814ed06c87da9382da8f59e0823">algotradelib::network::HttpClient::request</a></div><div class="ttdeci">HttpResponse request(http::verb method, const std::string &amp;target, const std::string &amp;body={}, const std::map&lt; std::string, std::string &gt; &amp;headers={})</div><div class="ttdoc">Sends a request and waits for the response; a GET that fails is sent once more.</div><div class="ttdef"><b>Definition</b> <a href="#l00233">http_client.hpp:233</a></div></div>
-<div class="ttc" id="aclassalgotradelib_1_1network_1_1RateLimitController_html"><div class="ttname"><a href="classalgotradelib_1_1network_1_1RateLimitController.html">algotradelib::network::RateLimitController</a></div><div class="ttdoc">The rate limiter of one connection (one app key): a RateLimitBucket on the steady clock,...</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00373">rate_limit.hpp:373</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1network_1_1RateLimitController_html"><div class="ttname"><a href="classalgotradelib_1_1network_1_1RateLimitController.html">algotradelib::network::RateLimitController</a></div><div class="ttdoc">The rate limiter of one connection (one app key): a RateLimitBucket on the steady clock,...</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00397">rate_limit.hpp:397</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1network_html"><div class="ttname"><a href="namespacealgotradelib_1_1network.html">algotradelib::network</a></div><div class="ttdoc">HTTP and WebSocket transport, OAuth tokens, and request pacing.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">http_client.hpp:45</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940">algotradelib::network::RateLimitGroup</a></div><div class="ttdeci">RateLimitGroup</div><div class="ttdoc">The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds ...</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00023">rate_limit.hpp:23</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f">algotradelib::network::RateLimitGroup::REFERENCE</a></div><div class="ttdeci">@ REFERENCE</div><div class="ttdoc">Instrument reference data and trading calendars.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00033">rate_limit.hpp:33</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a367cb5eea53458acd032fc4ddb8dd12b"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a367cb5eea53458acd032fc4ddb8dd12b">algotradelib::network::rate_limit_priority</a></div><div class="ttdeci">constexpr int rate_limit_priority(RateLimitGroup group) noexcept</div><div class="ttdoc">Returns a traffic class&#39;s queue priority.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00045">rate_limit.hpp:45</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940">algotradelib::network::RateLimitGroup</a></div><div class="ttdeci">RateLimitGroup</div><div class="ttdoc">The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds ...</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00026">rate_limit.hpp:26</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f">algotradelib::network::RateLimitGroup::REFERENCE</a></div><div class="ttdeci">@ REFERENCE</div><div class="ttdoc">Instrument reference data and trading calendars.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00036">rate_limit.hpp:36</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a367cb5eea53458acd032fc4ddb8dd12b"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a367cb5eea53458acd032fc4ddb8dd12b">algotradelib::network::rate_limit_priority</a></div><div class="ttdeci">constexpr int rate_limit_priority(RateLimitGroup group) noexcept</div><div class="ttdoc">Returns a traffic class&#39;s queue priority.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00057">rate_limit.hpp:57</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1network_html_a430c9c3332bda042ce8377d013be9b05"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a430c9c3332bda042ce8377d013be9b05">algotradelib::network::transport_error</a></div><div class="ttdeci">BrokerError transport_error(std::string stage, beast::error_code ec)</div><div class="ttdoc">Converts a transport error into a BrokerError.</div><div class="ttdef"><b>Definition</b> <a href="#l00117">http_client.hpp:117</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1network_html_a7034ecd750c3f7f76570acfc2b488ae9"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a7034ecd750c3f7f76570acfc2b488ae9">algotradelib::network::shutdown_ssl_stream</a></div><div class="ttdeci">void shutdown_ssl_stream(beast::ssl_stream&lt; beast::tcp_stream &gt; &amp;stream, std::chrono::seconds timeout) noexcept</div><div class="ttdoc">Shuts a TLS stream down (best effort) and closes its socket.</div><div class="ttdef"><b>Definition</b> <a href="#l00146">http_client.hpp:146</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1network_html_a89ab64ee4c611c19a0d43fe6f3167e28"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#a89ab64ee4c611c19a0d43fe6f3167e28">algotradelib::network::close_ssl_stream</a></div><div class="ttdeci">void close_ssl_stream(beast::ssl_stream&lt; beast::tcp_stream &gt; &amp;stream) noexcept</div><div class="ttdoc">Cancels a TLS stream&#39;s operations and closes its socket, without waiting for the TLS shutdown.</div><div class="ttdef"><b>Definition</b> <a href="#l00159">http_client.hpp:159</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1network_html_ad3e40597b613a8ad74c2f3a5b4c7d53d"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#ad3e40597b613a8ad74c2f3a5b4c7d53d">algotradelib::network::make_host_header</a></div><div class="ttdeci">std::string make_host_header(const std::string &amp;host, const std::string &amp;port)</div><div class="ttdoc">Builds an HTTP Host header value.</div><div class="ttdef"><b>Definition</b> <a href="#l00133">http_client.hpp:133</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1network_html_aead0772bd97b56e17efebc83ccea172b"><div class="ttname"><a href="namespacealgotradelib_1_1network.html#aead0772bd97b56e17efebc83ccea172b">algotradelib::network::HttpResponse</a></div><div class="ttdeci">http::response&lt; http::string_body &gt; HttpResponse</div><div class="ttdoc">The HTTP response type the transport clients return.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">http_client.hpp:48</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html"><div class="ttname"><a href="namespacealgotradelib.html">algotradelib</a></div><div class="ttdoc">The library: broker-neutral types (core), and the modules below.</div><div class="ttdef"><b>Definition</b> <a href="conversion_8hpp_source.html#l00013">conversion.hpp:13</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a42bd74ca6739874d057d515b40a6e6d6a9f935beb31030ad0d4d26126c0f39bf2"><div class="ttname"><a href="namespacealgotradelib.html#a42bd74ca6739874d057d515b40a6e6d6a9f935beb31030ad0d4d26126c0f39bf2">algotradelib::ErrorCategory::CANCELLED</a></div><div class="ttdeci">@ CANCELLED</div><div class="ttdoc">The operation was cancelled, such as by closing the client or a local deadline.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00676">types.hpp:676</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a42bd74ca6739874d057d515b40a6e6d6ad0225a30587585d811a81f04d503e637"><div class="ttname"><a href="namespacealgotradelib.html#a42bd74ca6739874d057d515b40a6e6d6ad0225a30587585d811a81f04d503e637">algotradelib::ErrorCategory::TRANSPORT</a></div><div class="ttdeci">@ TRANSPORT</div><div class="ttdoc">The connection failed (DNS, connect, TLS, write or read).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00678">types.hpp:678</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a42bd74ca6739874d057d515b40a6e6d6a9f935beb31030ad0d4d26126c0f39bf2"><div class="ttname"><a href="namespacealgotradelib.html#a42bd74ca6739874d057d515b40a6e6d6a9f935beb31030ad0d4d26126c0f39bf2">algotradelib::ErrorCategory::CANCELLED</a></div><div class="ttdeci">@ CANCELLED</div><div class="ttdoc">The operation was cancelled, such as by closing the client or a local deadline.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00689">types.hpp:689</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a42bd74ca6739874d057d515b40a6e6d6ad0225a30587585d811a81f04d503e637"><div class="ttname"><a href="namespacealgotradelib.html#a42bd74ca6739874d057d515b40a6e6d6ad0225a30587585d811a81f04d503e637">algotradelib::ErrorCategory::TRANSPORT</a></div><div class="ttdeci">@ TRANSPORT</div><div class="ttdoc">The connection failed (DNS, connect, TLS, write or read).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00691">types.hpp:691</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_ad4cc4cfbaae4e7d14288fd523c8a73e3"><div class="ttname"><a href="namespacealgotradelib.html#ad4cc4cfbaae4e7d14288fd523c8a73e3">algotradelib::tcp</a></div><div class="ttdeci">net::ip::tcp tcp</div><div class="ttdoc">Short for boost::asio::ip::tcp.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">http_client.hpp:43</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1BrokerError_html"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html">algotradelib::BrokerError</a></div><div class="ttdoc">The error a broker or transport operation returns.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00708">types.hpp:708</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_a335cd4caaccda2f043e104afdb455cde"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#a335cd4caaccda2f043e104afdb455cde">algotradelib::BrokerError::message_</a></div><div class="ttdeci">std::string message_</div><div class="ttdoc">A human-readable description, for logs; do not parse it.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00738">types.hpp:738</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_a5f424b9ecf0d553b4ca5a5638798b711"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#a5f424b9ecf0d553b4ca5a5638798b711">algotradelib::BrokerError::category_</a></div><div class="ttdeci">ErrorCategory category_</div><div class="ttdoc">The kind of failure; the field to branch on.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00710">types.hpp:710</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_a6b7151878fd6189540a6225c4d49557b"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#a6b7151878fd6189540a6225c4d49557b">algotradelib::BrokerError::broker_code_</a></div><div class="ttdeci">std::string broker_code_</div><div class="ttdoc">The broker&#39;s own error code, verbatim (for example KIS&#39;s EGW00201).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00727">types.hpp:727</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_af95e300c32dbafe752bed7c7ea0a23ac"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#af95e300c32dbafe752bed7c7ea0a23ac">algotradelib::BrokerError::reached_broker_</a></div><div class="ttdeci">bool reached_broker_</div><div class="ttdoc">Whether a request was sent before this error.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00719">types.hpp:719</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1BrokerError_html"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html">algotradelib::BrokerError</a></div><div class="ttdoc">The error a broker or transport operation returns.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00742">types.hpp:742</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_a335cd4caaccda2f043e104afdb455cde"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#a335cd4caaccda2f043e104afdb455cde">algotradelib::BrokerError::message_</a></div><div class="ttdeci">std::string message_</div><div class="ttdoc">A human-readable description, for logs; do not parse it.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00772">types.hpp:772</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_a5f424b9ecf0d553b4ca5a5638798b711"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#a5f424b9ecf0d553b4ca5a5638798b711">algotradelib::BrokerError::category_</a></div><div class="ttdeci">ErrorCategory category_</div><div class="ttdoc">The kind of failure; the field to branch on.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00744">types.hpp:744</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_a6b7151878fd6189540a6225c4d49557b"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#a6b7151878fd6189540a6225c4d49557b">algotradelib::BrokerError::broker_code_</a></div><div class="ttdeci">std::string broker_code_</div><div class="ttdoc">The broker&#39;s own error code, verbatim (for example KIS&#39;s EGW00201).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00761">types.hpp:761</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1BrokerError_html_af95e300c32dbafe752bed7c7ea0a23ac"><div class="ttname"><a href="structalgotradelib_1_1BrokerError.html#af95e300c32dbafe752bed7c7ea0a23ac">algotradelib::BrokerError::reached_broker_</a></div><div class="ttdeci">bool reached_broker_</div><div class="ttdoc">Whether a request was sent before this error.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00753">types.hpp:753</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1network_1_1HttpClientOptions_html"><div class="ttname"><a href="structalgotradelib_1_1network_1_1HttpClientOptions.html">algotradelib::network::HttpClientOptions</a></div><div class="ttdoc">Deadlines, size limits and pacing for an HTTP client.</div><div class="ttdef"><b>Definition</b> <a href="#l00077">http_client.hpp:77</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1network_1_1HttpClientOptions_html_a0904c7210dc2a1b643aa5bc57d3c4ceb"><div class="ttname"><a href="structalgotradelib_1_1network_1_1HttpClientOptions.html#a0904c7210dc2a1b643aa5bc57d3c4ceb">algotradelib::network::HttpClientOptions::rate_limit_</a></div><div class="ttdeci">std::optional&lt; RateLimitBudget &gt; rate_limit_</div><div class="ttdoc">The rate-limit budget that paces this connection&#39;s requests, or empty (the default) for no pacing (As...</div><div class="ttdef"><b>Definition</b> <a href="#l00095">http_client.hpp:95</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1network_1_1HttpClientOptions_html_a3d18dba7ebb53627fa910510786a01b3"><div class="ttname"><a href="structalgotradelib_1_1network_1_1HttpClientOptions.html#a3d18dba7ebb53627fa910510786a01b3">algotradelib::network::HttpClientOptions::timeout_</a></div><div class="ttdeci">std::chrono::seconds timeout_</div><div class="ttdoc">The deadline for each of DNS lookup, connect, TLS handshake, write and read, in AsyncHttpClient; Http...</div><div class="ttdef"><b>Definition</b> <a href="#l00082">http_client.hpp:82</a></div></div>
