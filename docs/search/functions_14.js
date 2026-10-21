@@ -19,7 +19,8 @@ var searchData=
   ['unsupported_5fbar_5finterval_16',['unsupported_bar_interval',['../namespacealgotradelib_1_1kis.html#af9a1a2d31a08d6ad90defd63e0e37276',1,'algotradelib::kis::unsupported_bar_interval()'],['../namespacealgotradelib_1_1kiwoom.html#a1ba774cd44665198701115ab6e96642c',1,'algotradelib::kiwoom::unsupported_bar_interval()'],['../namespacealgotradelib_1_1tossinvest.html#a07b1a043df66497ab9bc3a48a8405315',1,'algotradelib::tossinvest::unsupported_bar_interval()']]],
   ['unsupported_5fclient_5forder_5fid_17',['unsupported_client_order_id',['../namespacealgotradelib_1_1kis.html#adbe7479366fa26fdf6012f5392893712',1,'algotradelib::kis::unsupported_client_order_id()'],['../namespacealgotradelib_1_1kiwoom.html#a9b63f9b51cf8298033974fdcd5ceec39',1,'algotradelib::kiwoom::unsupported_client_order_id()']]],
   ['untracked_5frows_18',['untracked_rows',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#a21456ef66c94dcf98bb5020ceef3eed0',1,'algotradelib::runner::OrderUpdateWatch']]],
-  ['updated_19',['updated',['../structalgotradelib_1_1runner_1_1IterationReport.html#a2b5fc30a64932dd8fc11e1bb856739f7',1,'algotradelib::runner::IterationReport']]],
-  ['usable_5fburst_20',['usable_burst',['../namespacealgotradelib_1_1network.html#a3acbcbad72597790e84e409ed51ff185',1,'algotradelib::network']]],
-  ['usd_21',['usd',['../classalgotradelib_1_1Currency.html#a13193725796b2649f3789b616fa6d53b',1,'algotradelib::Currency']]]
+  ['update_19',['update',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#ab0f5d98e8efc47fae3eedf0e92c98e37',1,'algotradelib::backtest::ReplayLedger']]],
+  ['updated_20',['updated',['../structalgotradelib_1_1runner_1_1IterationReport.html#a2b5fc30a64932dd8fc11e1bb856739f7',1,'algotradelib::runner::IterationReport']]],
+  ['usable_5fburst_21',['usable_burst',['../namespacealgotradelib_1_1network.html#a3acbcbad72597790e84e409ed51ff185',1,'algotradelib::network']]],
+  ['usd_22',['usd',['../classalgotradelib_1_1Currency.html#a13193725796b2649f3789b616fa6d53b',1,'algotradelib::Currency']]]
 ];

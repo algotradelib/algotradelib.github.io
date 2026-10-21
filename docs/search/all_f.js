@@ -68,11 +68,12 @@ var searchData=
   ['loop_20needs_20to_20know_20it_65',['The market phase, and what the loop needs to know it',['../running-a-strategy-live.html#autotoc_md94',1,'']]],
   ['loop_5fabandoned_66',['LOOP_ABANDONED',['../live__program_8hpp.html#a884423a0df4c098aaafd7db2b7f1d66ea08e9e99d525ccf84cb8315a14e786892',1,'live_program']]],
   ['loopreport_67',['LoopReport',['../structalgotradelib_1_1runner_1_1LoopReport.html',1,'algotradelib::runner']]],
-  ['lot_5fsize_5f_68',['lot_size_',['../structalgotradelib_1_1Instrument.html#a86dc03c515f5d1f7fb58d8e813918e98',1,'algotradelib::Instrument']]],
-  ['low_69',['low',['../classalgotradelib_1_1analytics_1_1SeriesFrame.html#ad47bed820d7d200292473b59dfbec7b4',1,'algotradelib::analytics::SeriesFrame']]],
-  ['low_5f_70',['low_',['../structalgotradelib_1_1Bar.html#ae5a3ceae02c7fa770de9948f1e85a2af',1,'algotradelib::Bar']]],
-  ['lower_71',['LOWER',['../namespacealgotradelib_1_1math.html#a849d2fa6aae00cb1d9ef8edbc9651a35',1,'algotradelib::math']]],
-  ['lower_5f_72',['lower_',['../structalgotradelib_1_1analytics_1_1BollingerBands.html#a969be8439f8810335249fb9da06cdfd2',1,'algotradelib::analytics::BollingerBands::lower_'],['../structalgotradelib_1_1PriceLimits.html#a01e98cf37f8c9a622989b5df7d1cf2f6',1,'algotradelib::PriceLimits::lower_']]],
-  ['lowest_5fcash_5f_73',['lowest_cash_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#ae994c9bc49c1816bbb1ac87369c63357',1,'algotradelib::backtest::ReplayResult::lowest_cash_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a7acf24a8ca4f3a1c288bbfeb351dd078',1,'algotradelib::backtest::ReportCaveats::lowest_cash_']]],
-  ['lowest_5fcash_5fat_5f_74',['lowest_cash_at_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#af39742b969e23b48edc730587681061f',1,'algotradelib::backtest::ReplayResult::lowest_cash_at_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a941d01fce3e932322850a4e845154e0a',1,'algotradelib::backtest::ReportCaveats::lowest_cash_at_']]]
+  ['lot_5fof_68',['lot_of',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#a76b2cddc4a38cdec340a3080a00a37b6',1,'algotradelib::backtest::ReplayLedger']]],
+  ['lot_5fsize_5f_69',['lot_size_',['../structalgotradelib_1_1Instrument.html#a86dc03c515f5d1f7fb58d8e813918e98',1,'algotradelib::Instrument']]],
+  ['low_70',['low',['../classalgotradelib_1_1analytics_1_1SeriesFrame.html#ad47bed820d7d200292473b59dfbec7b4',1,'algotradelib::analytics::SeriesFrame']]],
+  ['low_5f_71',['low_',['../structalgotradelib_1_1Bar.html#ae5a3ceae02c7fa770de9948f1e85a2af',1,'algotradelib::Bar']]],
+  ['lower_72',['LOWER',['../namespacealgotradelib_1_1math.html#a849d2fa6aae00cb1d9ef8edbc9651a35',1,'algotradelib::math']]],
+  ['lower_5f_73',['lower_',['../structalgotradelib_1_1analytics_1_1BollingerBands.html#a969be8439f8810335249fb9da06cdfd2',1,'algotradelib::analytics::BollingerBands::lower_'],['../structalgotradelib_1_1PriceLimits.html#a01e98cf37f8c9a622989b5df7d1cf2f6',1,'algotradelib::PriceLimits::lower_']]],
+  ['lowest_5fcash_5f_74',['lowest_cash_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#ae994c9bc49c1816bbb1ac87369c63357',1,'algotradelib::backtest::ReplayResult::lowest_cash_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a7acf24a8ca4f3a1c288bbfeb351dd078',1,'algotradelib::backtest::ReportCaveats::lowest_cash_']]],
+  ['lowest_5fcash_5fat_5f_75',['lowest_cash_at_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#af39742b969e23b48edc730587681061f',1,'algotradelib::backtest::ReplayResult::lowest_cash_at_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a941d01fce3e932322850a4e845154e0a',1,'algotradelib::backtest::ReportCaveats::lowest_cash_at_']]]
 ];

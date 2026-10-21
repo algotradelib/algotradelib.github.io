@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structalgotrad
 </div><!--header-->
 <div class="contents">
 
-<p>One point on a replay's equity curve, recorded per bar.  
+<p>One point on a replay's equity curve: per period end, or per bar (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2" title="Which points a replay records on its equity curve (ReplayResult::equity_); see ReplayConfig::equity_c...">EquityCurve</a></span>).  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="engine_8hpp_source.html">algotradelib/src/backtest/engine.hpp</a>&gt;</code></p>
@@ -136,16 +136,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structalgotrad
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a788aebdebdcd7f2f7f40eff54598cbf6" id="r_a788aebdebdcd7f2f7f40eff54598cbf6"><td class="memItemLeft">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight"><a class="el" href="#a788aebdebdcd7f2f7f40eff54598cbf6">at_</a> {}</td></tr>
-<tr class="memdesc:a788aebdebdcd7f2f7f40eff54598cbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bar's period end.  <br /></td></tr>
+<tr class="memdesc:a788aebdebdcd7f2f7f40eff54598cbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period end of the bar it was recorded after.  <br /></td></tr>
 <tr class="memitem:a1764f84b6d0988f7904f4f8663bb21f6" id="r_a1764f84b6d0988f7904f4f8663bb21f6"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1764f84b6d0988f7904f4f8663bb21f6">equity_</a></td></tr>
-<tr class="memdesc:a1764f84b6d0988f7904f4f8663bb21f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cash plus positions marked at the bar's close, in the replay's currency.  <br /></td></tr>
+<tr class="memdesc:a1764f84b6d0988f7904f4f8663bb21f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cash plus positions marked at the latest closes, in the replay's currency.  <br /></td></tr>
 <tr class="memitem:a62543c716537a993a57eb1ada4b2c5fb" id="r_a62543c716537a993a57eb1ada4b2c5fb"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#a62543c716537a993a57eb1ada4b2c5fb">period_return_</a> {0}</td></tr>
 <tr class="memdesc:a62543c716537a993a57eb1ada4b2c5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The return since the previous point; <span class="tt">missing()</span> on the first point, after an unvalued bar, and after a point whose equity was zero or negative (a return on no capital is not defined).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>One point on a replay's equity curve, recorded per bar. </p>
+<div class="textblock"><p>One point on a replay's equity curve: per period end, or per bar (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2" title="Which points a replay records on its equity curve (ReplayResult::equity_); see ReplayConfig::equity_c...">EquityCurve</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00291">291</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00590">590</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a788aebdebdcd7f2f7f40eff54598cbf6" name="a788aebdebdcd7f2f7f40eff54598cbf6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a788aebdebdcd7f2f7f40eff54598cbf6">&#9670;&#160;</a></span>at_</h2>
@@ -159,9 +159,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The bar's period end. </p>
+<p>The period end of the bar it was recorded after. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00293">293</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00592">592</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -177,9 +177,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Cash plus positions marked at the bar's close, in the replay's currency. </p>
+<p>Cash plus positions marked at the latest closes, in the replay's currency. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00295">295</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00594">594</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ Public Attributes</h2></td></tr>
 <p>The return since the previous point; <span class="tt">missing()</span> on the first point, after an unvalued bar, and after a point whose equity was zero or negative (a return on no capital is not defined). </p>
 <p>A statistic over these returns skips the missing ones. <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> refuses its ratios for a run that reached non-positive equity before its last point; reducing a slice yourself, apply the same check to the equity each return is measured from. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00304">304</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00603">603</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

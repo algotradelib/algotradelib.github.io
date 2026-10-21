@@ -168,7 +168,7 @@ var searchData=
   ['applied_5frates_5f_165',['applied_rates_',['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#acdebe4197a9915680a2afc809d16476f',1,'algotradelib::backtest::ReportCaveats']]],
   ['appliedrate_166',['AppliedRate',['../structalgotradelib_1_1backtest_1_1AppliedRate.html',1,'algotradelib::backtest']]],
   ['applies_5fon_167',['applies_on',['../structalgotradelib_1_1CommissionRate.html#a64cfb67dd7cb2780831d73b325425765',1,'algotradelib::CommissionRate']]],
-  ['apply_168',['apply',['../structalgotradelib_1_1backtest_1_1SlippageModel.html#ad4ed4a4618e424b1361e151d2b4ea79d',1,'algotradelib::backtest::SlippageModel::apply()'],['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#ae9e1b7bca269ab37bd4a4fdab68b4106',1,'algotradelib::backtest::ReplayLedger::apply()']]],
+  ['apply_168',['apply',['../structalgotradelib_1_1backtest_1_1SlippageModel.html#ad4ed4a4618e424b1361e151d2b4ea79d',1,'algotradelib::backtest::SlippageModel::apply()'],['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#afa633a10913d45bff88f6d0191b8124e',1,'algotradelib::backtest::ReplayLedger::apply()']]],
   ['approval_5fkey_5f_169',['approval_key_',['../structalgotradelib_1_1kis_1_1KisWebsocket.html#ad4dbf4a178cd7cd023d651669fc055d8',1,'algotradelib::kis::KisWebsocket']]],
   ['architecture_170',['Architecture',['../architecture.html',1,'Architecture'],['../index.html#autotoc_md1',1,'Architecture']]],
   ['are_20not_20send_20failures_171',['Poll failures are not send failures',['../running-a-strategy-live.html#autotoc_md95',1,'']]],

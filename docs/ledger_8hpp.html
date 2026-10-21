@@ -130,7 +130,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('ledger_8hpp.ht
 <code>#include &lt;algotradelib/core&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -164,6 +168,13 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacealgotradelib"><td class="mdescLeft">&#160;</td><td class="mdescRight">The library: broker-neutral types (<span class="tt">core</span>), and the modules below. <br /></td></tr>
 <tr class="memitem:algotradelib_3A_3Abacktest" id="r_algotradelib_3A_3Abacktest"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html">algotradelib::backtest</a></td></tr>
 <tr class="memdesc:namespacealgotradelib_1_1backtest"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replays a strategy over stored bars: fill and cost models, the replay ledger, and the report. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a8d358a3a982cb4529f94d41572de0279" id="r_a8d358a3a982cb4529f94d41572de0279"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279">algotradelib::backtest::ExecutionHistory</a> { <a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279a60cba2874369bd3790e14ea5f8a7bc58">algotradelib::backtest::KEEP</a>
+, <a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693">algotradelib::backtest::NONE</a>
+ }</td></tr>
+<tr class="memdesc:a8d358a3a982cb4529f94d41572de0279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1ReplayLedger.html" title="Positions, cash and realized profit, updated by each execution of a replay.">ReplayLedger</a></span> keeps the executions it applies.  <a href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The replay ledger: positions, cash and realized profit a backtest keeps, in exact decimals. </p>

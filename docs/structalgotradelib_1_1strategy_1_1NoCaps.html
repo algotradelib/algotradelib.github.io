@@ -199,7 +199,7 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock"><p>A capability set in which the broker implements nothing optional. </p>
 <p>Inherit it in a test's capability set and override only what differs. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00360">360</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00403">403</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8676248c8f59ff4b569e8fcb4f318068" name="a8676248c8f59ff4b569e8fcb4f318068"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8676248c8f59ff4b569e8fcb4f318068">&#9670;&#160;</a></span>supports_interval()</h2>
@@ -227,7 +227,7 @@ Static Public Attributes</h2></td></tr>
 <p>Tests whether the broker serves bars of an interval (the unnamed argument). </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> for every interval. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00419">419</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00462">462</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether the client is a market-data source that takes no orders (built on <span class="tt"><a class="el" href="structalgotradelib_1_1DataOnlyTraits.html" title="A base for the BrokerTraits of a market-data client that cannot trade.">DataOnlyTraits</a></span>).    </p>
 <p>Binding such a client as the trading session of <span class="tt"><a class="el" href="classalgotradelib_1_1live_1_1SessionExecutor.html" title="The executor that sends a runner&#39;s orders and cancellations through a broker session.">live::SessionExecutor</a></span> or <span class="tt"><a class="el" href="classalgotradelib_1_1live_1_1SessionSource.html" title="The source a runner::PollingLoop polls: reads a broker session and feeds bars, quotes,...">live::SessionSource</a></span> does not compile. Calling <span class="tt">place</span> or <span class="tt">holdings</span> on its session directly fails at run time.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00368">368</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00411">411</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -281,7 +281,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker lists the selectable accounts.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00362">362</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00405">405</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +307,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker reports the quantity still amendable on an open order.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00374">374</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00417">417</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -333,7 +333,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker quotes several instruments in one request.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00394">394</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00437">437</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -360,7 +360,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether one reference-data request can cover several instruments.    </p>
 <p>Toss takes up to 200 symbols; KIS one. The port asks for one; use <span class="tt">session.client()</span> for more.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00398">398</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00441">441</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +386,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker reports buying power.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00406">406</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00449">449</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +413,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether the broker can also say how many shares are affordable.    </p>
 <p><span class="tt">true</span> for Kiwoom (per margin tier), <span class="tt">false</span> for Toss and KIS. The port returns only the amount; reach the quantity through <span class="tt">session.client()</span>.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00408">408</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00451">451</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +439,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker publishes the trading calendar.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00400">400</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00443">443</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +466,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether one calendar request covers a span of dates.    </p>
 <p>KIS answers from a base date onward; Toss answers the requested day and the trading day either side.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00402">402</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00445">445</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -492,7 +492,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker publishes intraday session hours (only Toss); the library does not expose them yet.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00404">404</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00447">447</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +518,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker accepts an idempotency key (<span class="tt"><a class="el" href="structalgotradelib_1_1OrderRequest.html#a12d658528ceca58fcf0862d8206d8f2b" title="An idempotency key, if the broker offers one; never generated by the library.">OrderRequest::client_order_id_</a></span>).    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00364">364</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00407">407</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker publishes the account's commission rates.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00410">410</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00453">453</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,7 +570,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker publishes the order book (<span class="tt">depth</span>).    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00388">388</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00431">431</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -597,7 +597,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether an order-history answer can carry a cursor to the next page.    </p>
 <p>When <span class="tt">false</span>, the adapter returns the whole history in one answer.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00382">382</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00425">425</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -624,7 +624,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether an order-history inquiry accepts a row limit (<span class="tt"><a class="el" href="structalgotradelib_1_1OrderHistoryQuery.html#a7b57cde192e18978773e68ddb5af68fb" title="The most rows to return, where the broker supports a limit.">OrderHistoryQuery::limit_</a></span>).    </p>
 <p><span class="tt">false</span> for KIS, which refuses a query with a limit (<span class="tt">INVALID_ARGUMENT</span>, before any I/O).    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00384">384</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00427">427</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -650,7 +650,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether an order-history inquiry can filter by symbol.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00386">386</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00429">429</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -676,7 +676,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker can look up one order by its id.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00376">376</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00419">419</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -702,7 +702,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker can cancel part of an order.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00378">378</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00421">421</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -728,7 +728,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker publishes the day's price limits.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00390">390</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00433">433</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -754,7 +754,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker publishes instrument reference data.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00396">396</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00439">439</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -780,7 +780,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker publishes recent trades.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00392">392</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00435">435</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -807,7 +807,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether the adapter sends trigger prices (stop-limit orders).    </p>
 <p>When <span class="tt">false</span>, <span class="tt"><a class="el" href="classalgotradelib_1_1BrokerSession.html" title="An asynchronous broker client bound to one account, with broker-neutral operations.">BrokerSession</a></span> refuses a placement or modification carrying a trigger (<span class="tt">unsupported_trigger_price</span>) before the adapter runs; cancellations are unaffected. <span class="tt">true</span> for KIS and Kiwoom, <span class="tt">false</span> for Toss.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00366">366</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00409">409</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -833,7 +833,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether the broker lists the orders still open to amendment. A listing shows only what the broker's API lists (at Toss, not orders of types placed outside it).    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00370">370</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00413">413</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -859,7 +859,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Whether an order-history inquiry needs a date range (<span class="tt"><a class="el" href="structalgotradelib_1_1OrderHistoryQuery.html#ad8d3309ae91cb732a65947cf495d3950" title="The first date to include; required where BrokerCaps::history_requires_range.">OrderHistoryQuery::from_</a></span>).    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00380">380</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00423">423</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -885,7 +885,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Unestablished, since there is no inquiry. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00414">414</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00457">457</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -911,7 +911,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>No sellable-quantity figure is available. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00412">412</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00455">455</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -938,7 +938,7 @@ Static Public Attributes</h2></td></tr>
 <p>Whether the working-order listing can show a terminal status (filled, cancelled, ...).    </p>
 <p><span class="tt">false</span> for KIS, Toss and Kiwoom: their listings show only open orders. Then an order that leaves the listing has no terminal <span class="tt">on_order_update</span>; read its outcome from holdings or an order inquiry instead of waiting for one. <span class="tt">false</span> here when <span class="tt"><a class="el" href="#ac1a70c9970d12fb3ab4fcb9bb6080ee0" title="Whether the broker lists the orders still open to amendment. A listing shows only what the broker&#39;s A...">has_working_orders</a></span> is <span class="tt">false</span>.    </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00372">372</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00415">415</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>

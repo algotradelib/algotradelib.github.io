@@ -140,7 +140,7 @@ Classes</h2></td></tr>
 <tr class="memitem:CommissionPolicy" id="r_CommissionPolicy"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1backtest_1_1CommissionPolicy.html">CommissionPolicy</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">How a backtest charges commission: one stated model, or a schedule resolved per execution.  <a href="classalgotradelib_1_1backtest_1_1CommissionPolicy.html#details">More...</a><br /></td></tr>
 <tr class="memitem:EquityPoint" id="r_EquityPoint"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1EquityPoint.html">EquityPoint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One point on a replay's equity curve, recorded per bar.  <a href="structalgotradelib_1_1backtest_1_1EquityPoint.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One point on a replay's equity curve: per period end, or per bar (<span class="tt"><a class="el" href="#a5ae8ac3ad807ec038186d36b1d1e60c2" title="Which points a replay records on its equity curve (ReplayResult::equity_); see ReplayConfig::equity_c...">EquityCurve</a></span>).  <a href="structalgotradelib_1_1backtest_1_1EquityPoint.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Execution" id="r_Execution"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One execution a backtest produced, and what it cost.  <a href="structalgotradelib_1_1backtest_1_1Execution.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FillDecision" id="r_FillDecision"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1FillDecision.html">FillDecision</a></td></tr>
@@ -174,6 +174,15 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a6091b7a3a9ee16fea01f3e814e6ea581a1e5b220a23cc0269942441fbf35b2eb6">AT_OPEN_IF_BETTER</a>
  }</td></tr>
 <tr class="memdesc:a6091b7a3a9ee16fea01f3e814e6ea581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which price a backtest credits a limit order that fills.  <a href="#a6091b7a3a9ee16fea01f3e814e6ea581">More...</a><br /></td></tr>
+<tr class="memitem:a5ae8ac3ad807ec038186d36b1d1e60c2" id="r_a5ae8ac3ad807ec038186d36b1d1e60c2"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a5ae8ac3ad807ec038186d36b1d1e60c2">EquityCurve</a> { <a class="el" href="#a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96">PER_PERIOD</a>
+, <a class="el" href="#a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23">PER_BAR</a>
+, <a class="el" href="#a5ae8ac3ad807ec038186d36b1d1e60c2ab50339a10e1de285ac99d4c3990b8693">NONE</a>
+ }</td></tr>
+<tr class="memdesc:a5ae8ac3ad807ec038186d36b1d1e60c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which points a replay records on its equity curve (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#af42c0b72cc2819675d1aad1e93203396" title="The equity curve, in order: one point per period end, or per bar, or none (ReplayConfig::equity_curve...">ReplayResult::equity_</a></span>); see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a3c979493ca8c7d9940223b5ae3e26220" title="Which points the equity curve records: one per period end (the default), one per bar,...">ReplayConfig::equity_curve_</a></span>.  <a href="#a5ae8ac3ad807ec038186d36b1d1e60c2">More...</a><br /></td></tr>
+<tr class="memitem:a8d358a3a982cb4529f94d41572de0279" id="r_a8d358a3a982cb4529f94d41572de0279"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a8d358a3a982cb4529f94d41572de0279">ExecutionHistory</a> { <a class="el" href="#a8d358a3a982cb4529f94d41572de0279a60cba2874369bd3790e14ea5f8a7bc58">KEEP</a>
+, <a class="el" href="#a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693">NONE</a>
+ }</td></tr>
+<tr class="memdesc:a8d358a3a982cb4529f94d41572de0279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1ReplayLedger.html" title="Positions, cash and realized profit, updated by each execution of a replay.">ReplayLedger</a></span> keeps the executions it applies.  <a href="#a8d358a3a982cb4529f94d41572de0279">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -191,6 +200,74 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Replays a strategy over stored bars: fill and cost models, the replay ledger, and the report. </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a5ae8ac3ad807ec038186d36b1d1e60c2" name="a5ae8ac3ad807ec038186d36b1d1e60c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae8ac3ad807ec038186d36b1d1e60c2">&#9670;&#160;</a></span>EquityCurve</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a5ae8ac3ad807ec038186d36b1d1e60c2">algotradelib::backtest::EquityCurve</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Which points a replay records on its equity curve (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#af42c0b72cc2819675d1aad1e93203396" title="The equity curve, in order: one point per period end, or per bar, or none (ReplayConfig::equity_curve...">ReplayResult::equity_</a></span>); see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a3c979493ca8c7d9940223b5ae3e26220" title="Which points the equity curve records: one per period end (the default), one per bar,...">ReplayConfig::equity_curve_</a></span>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96" name="a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96"></a>PER_PERIOD&#160;</td><td class="fielddoc"><p>One point per period end, after the last bar of that period: one a day for daily bars, however many instruments trade. A ratio over the curve (<span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>) is then per period. </p>
+<p>Precisely, one point for each run of consecutive bars sharing a period end, after the run's last bar: a replay fed in period-end order (every <span class="tt">on_bars</span> replay, and an <span class="tt">on_bar</span> replay of one interval and one stamp convention) gets one per period; bars whose period ends interleave (mixed intervals, or open- and close-stamped bars) get a point at each change, so none is lost. The last period's point is recorded by <span class="tt">finish</span>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23" name="a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23"></a>PER_BAR&#160;</td><td class="fielddoc"><p>One point per bar fed. A replay of many instruments records one per instrument per period, all at the same instant, and a ratio over them is per bar, not per period. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5ae8ac3ad807ec038186d36b1d1e60c2ab50339a10e1de285ac99d4c3990b8693" name="a5ae8ac3ad807ec038186d36b1d1e60c2ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>No points, for a run that does not read the curve; <span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> then reports no ratio. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00568">568</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8d358a3a982cb4529f94d41572de0279" name="a8d358a3a982cb4529f94d41572de0279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d358a3a982cb4529f94d41572de0279">&#9670;&#160;</a></span>ExecutionHistory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a8d358a3a982cb4529f94d41572de0279">algotradelib::backtest::ExecutionHistory</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether a <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1ReplayLedger.html" title="Positions, cash and realized profit, updated by each execution of a replay.">ReplayLedger</a></span> keeps the executions it applies. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8d358a3a982cb4529f94d41572de0279a60cba2874369bd3790e14ea5f8a7bc58" name="a8d358a3a982cb4529f94d41572de0279a60cba2874369bd3790e14ea5f8a7bc58"></a>KEEP&#160;</td><td class="fielddoc"><p>Keep every execution, readable through <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1ReplayLedger.html#a7ac5537ee18ff03be7308ef0eeef9cf4" title="Returns every execution applied.">ReplayLedger::executions()</a></span>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693" name="a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>Keep none, for an owner that records them itself (a <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html" title="Replays bars (and quotes) through one strategy, with a ledger and a fill model.">Backtester</a></span>, in <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#a8373e9d7fb1cbcdadfbf501be67652f2" title="Every execution, in order.">ReplayResult::executions_</a></span>). </p>
+<p>Positions, cash, realized profit and equity are the same as with <span class="tt">KEEP</span>. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00063">63</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a6091b7a3a9ee16fea01f3e814e6ea581" name="a6091b7a3a9ee16fea01f3e814e6ea581"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6091b7a3a9ee16fea01f3e814e6ea581">&#9670;&#160;</a></span>LimitFillPrice</h2>
 
@@ -309,7 +386,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00030">30</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00148">algotradelib::backtest::ReplayClock::contiguous()</a>, <a class="el" href="backtest_2clock_8hpp_source.html#l00030">interval_duration()</a>, and <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00162">algotradelib::backtest::ReplayClock::contiguous()</a>, <a class="el" href="backtest_2clock_8hpp_source.html#l00030">interval_duration()</a>, and <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +474,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00047">47</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>, and <a class="el" href="report_8hpp_source.html#l00326">summarize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>, and <a class="el" href="report_8hpp_source.html#l00327">summarize()</a>.</p>
 
 </div>
 </div>
@@ -456,9 +533,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00326">326</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00327">327</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00326">summarize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00327">summarize()</a>.</p>
 
 </div>
 </div>

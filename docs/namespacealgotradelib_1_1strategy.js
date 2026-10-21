@@ -25,6 +25,7 @@ var namespacealgotradelib_1_1strategy =
     [ "Plan", "structalgotradelib_1_1strategy_1_1Plan.html", "structalgotradelib_1_1strategy_1_1Plan" ],
     [ "PlannedOrder", "structalgotradelib_1_1strategy_1_1PlannedOrder.html", "structalgotradelib_1_1strategy_1_1PlannedOrder" ],
     [ "Portfolio", "structalgotradelib_1_1strategy_1_1Portfolio.html", "structalgotradelib_1_1strategy_1_1Portfolio" ],
+    [ "PortfolioRows", "classalgotradelib_1_1strategy_1_1PortfolioRows.html", "classalgotradelib_1_1strategy_1_1PortfolioRows" ],
     [ "Price", "classalgotradelib_1_1strategy_1_1Price.html", "classalgotradelib_1_1strategy_1_1Price" ],
     [ "ProbeBroker", "structalgotradelib_1_1strategy_1_1ProbeBroker.html", "structalgotradelib_1_1strategy_1_1ProbeBroker" ],
     [ "ProbeContextT", "classalgotradelib_1_1strategy_1_1ProbeContextT.html", "classalgotradelib_1_1strategy_1_1ProbeContextT" ],

@@ -1,3 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structalgotradelib_1_1backtest_1_1SellTax.html" title="A tax on sales, stated by the caller; see NextBarFillModel::with_sell_tax." alt="" coords="5,5,169,45"/>
+<area shape="rect" id="Node000000" href="$structalgotradelib_1_1backtest_1_1ReplayResult.html" title="Everything a replay produced; summarize turns it into a Report." alt="" coords="5,5,169,45"/>
 </map>

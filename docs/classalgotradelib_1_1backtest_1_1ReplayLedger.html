@@ -129,15 +129,15 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classalgotrade
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab6c8323a584bbbd4eccb6b74c7685c16" id="r_ab6c8323a584bbbd4eccb6b74c7685c16"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> (<a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> cash, <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> currency)</td></tr>
-<tr class="memdesc:ab6c8323a584bbbd4eccb6b74c7685c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ledger holding only cash.  <br /></td></tr>
+<tr class="memitem:a891572e1d344349aea4cc5701a7340d4" id="r_a891572e1d344349aea4cc5701a7340d4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> (<a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> cash, <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> currency, <a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279">ExecutionHistory</a> history=<a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279a60cba2874369bd3790e14ea5f8a7bc58">ExecutionHistory::KEEP</a>)</td></tr>
+<tr class="memdesc:a891572e1d344349aea4cc5701a7340d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ledger holding only cash.  <br /></td></tr>
 <tr class="memitem:a455d84db2248481ef8588b8acdac7b6a" id="r_a455d84db2248481ef8588b8acdac7b6a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a455d84db2248481ef8588b8acdac7b6a">ReplayLedger</a> (const ReplayLedger &amp;other)=default</td></tr>
 <tr class="memdesc:a455d84db2248481ef8588b8acdac7b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a ledger.  <br /></td></tr>
-<tr class="memitem:a016196ae89428f52e2e33e8941928527" id="r_a016196ae89428f52e2e33e8941928527"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a016196ae89428f52e2e33e8941928527">ReplayLedger</a> (ReplayLedger &amp;&amp;other)=default</td></tr>
-<tr class="memdesc:a016196ae89428f52e2e33e8941928527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves a ledger.  <br /></td></tr>
-<tr class="memitem:a66b71dfbb5f9477cd603e0b1136e2052" id="r_a66b71dfbb5f9477cd603e0b1136e2052"><td class="memItemLeft"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a66b71dfbb5f9477cd603e0b1136e2052">operator=</a> (<a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memitem:a6798ed1cfbee3fc61c6eaeb2853c66ef" id="r_a6798ed1cfbee3fc61c6eaeb2853c66ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6798ed1cfbee3fc61c6eaeb2853c66ef">ReplayLedger</a> (ReplayLedger &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a6798ed1cfbee3fc61c6eaeb2853c66ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves a ledger.  <br /></td></tr>
+<tr class="memitem:a66b71dfbb5f9477cd603e0b1136e2052" id="r_a66b71dfbb5f9477cd603e0b1136e2052"><td class="memItemLeft"><a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a66b71dfbb5f9477cd603e0b1136e2052">operator=</a> (<a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="memdesc:a66b71dfbb5f9477cd603e0b1136e2052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this ledger with a move of another; moving a ledger into itself leaves it unchanged.  <br /></td></tr>
-<tr class="memitem:aa577f71d2f45fdcf197cce0bacfcb4ce" id="r_aa577f71d2f45fdcf197cce0bacfcb4ce"><td class="memItemLeft"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa577f71d2f45fdcf197cce0bacfcb4ce">operator=</a> (const <a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;other)</td></tr>
+<tr class="memitem:aa577f71d2f45fdcf197cce0bacfcb4ce" id="r_aa577f71d2f45fdcf197cce0bacfcb4ce"><td class="memItemLeft"><a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa577f71d2f45fdcf197cce0bacfcb4ce">operator=</a> (const <a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp;other)</td></tr>
 <tr class="memdesc:aa577f71d2f45fdcf197cce0bacfcb4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this ledger with a copy of another, entirely or not at all.  <br /></td></tr>
 <tr class="memitem:aff2834cbc52eabaafa51fb24485fb5e2" id="r_aff2834cbc52eabaafa51fb24485fb5e2"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aff2834cbc52eabaafa51fb24485fb5e2">cash_in</a> (const <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> &amp;currency) const</td></tr>
 <tr class="memdesc:aff2834cbc52eabaafa51fb24485fb5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cash held in a currency.  <br /></td></tr>
@@ -149,15 +149,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad382f1b3b189b18442a1225a1356f1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the profit realized by closing positions, in a currency (fees excluded).  <br /></td></tr>
 <tr class="memitem:a920322a6237d15ff15b1c978967be420" id="r_a920322a6237d15ff15b1c978967be420"><td class="memItemLeft">const std::vector&lt; <a class="el" href="structalgotradelib_1_1HoldingPosition.html">HoldingPosition</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a920322a6237d15ff15b1c978967be420">positions</a> () const noexcept</td></tr>
 <tr class="memdesc:a920322a6237d15ff15b1c978967be420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns every position, including ones that went flat.  <br /></td></tr>
-<tr class="memitem:aa6690fbe20a1123119687fc30acffab2" id="r_aa6690fbe20a1123119687fc30acffab2"><td class="memItemLeft">const std::vector&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa6690fbe20a1123119687fc30acffab2">executions</a> () const noexcept</td></tr>
-<tr class="memdesc:aa6690fbe20a1123119687fc30acffab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns every execution applied.  <br /></td></tr>
-<tr class="memitem:ae9e1b7bca269ab37bd4a4fdab68b4106" id="r_ae9e1b7bca269ab37bd4a4fdab68b4106"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae9e1b7bca269ab37bd4a4fdab68b4106">apply</a> (const <a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a> &amp;execution, const <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> &amp;currency)</td></tr>
-<tr class="memdesc:ae9e1b7bca269ab37bd4a4fdab68b4106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies one execution to the position, cash and realized profit.  <br /></td></tr>
+<tr class="memitem:a6ef9152bfa9e70b42e43fe1c5ea27522" id="r_a6ef9152bfa9e70b42e43fe1c5ea27522"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279">ExecutionHistory</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6ef9152bfa9e70b42e43fe1c5ea27522">history</a> () const noexcept</td></tr>
+<tr class="memdesc:a6ef9152bfa9e70b42e43fe1c5ea27522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the ledger keeps the executions it applies.  <br /></td></tr>
+<tr class="memitem:a7ac5537ee18ff03be7308ef0eeef9cf4" id="r_a7ac5537ee18ff03be7308ef0eeef9cf4"><td class="memItemLeft">const std::vector&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7ac5537ee18ff03be7308ef0eeef9cf4">executions</a> () const</td></tr>
+<tr class="memdesc:a7ac5537ee18ff03be7308ef0eeef9cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns every execution applied.  <br /></td></tr>
+<tr class="memitem:a5e9720b4cbe9b83765aae97d4aacc139" id="r_a5e9720b4cbe9b83765aae97d4aacc139"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5e9720b4cbe9b83765aae97d4aacc139">equity</a> () const</td></tr>
+<tr class="memdesc:a5e9720b4cbe9b83765aae97d4aacc139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns total equity in the ledger's own currency (the constructor's), as <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span> would.  <br /></td></tr>
+<tr class="memitem:afa633a10913d45bff88f6d0191b8124e" id="r_afa633a10913d45bff88f6d0191b8124e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afa633a10913d45bff88f6d0191b8124e">apply</a> (const <a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a> &amp;execution_in, const <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> &amp;currency_in)</td></tr>
+<tr class="memdesc:afa633a10913d45bff88f6d0191b8124e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies one execution to the position, cash and realized profit.  <br /></td></tr>
 <tr class="memitem:ac1486c555aac77cfa001b2b387a46c2b" id="r_ac1486c555aac77cfa001b2b387a46c2b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac1486c555aac77cfa001b2b387a46c2b">mark</a> (const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;instrument, const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;price)</td></tr>
 <tr class="memdesc:ac1486c555aac77cfa001b2b387a46c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks positions in an instrument to a price, updating their market value.  <br /></td></tr>
+<tr class="memitem:a76b2cddc4a38cdec340a3080a00a37b6" id="r_a76b2cddc4a38cdec340a3080a00a37b6"><td class="memItemLeft">std::optional&lt; std::size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a76b2cddc4a38cdec340a3080a00a37b6">lot_of</a> (const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;instrument) const</td></tr>
+<tr class="memdesc:a76b2cddc4a38cdec340a3080a00a37b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns where an instrument's lot is in <span class="tt"><a class="el" href="#a920322a6237d15ff15b1c978967be420" title="Returns every position, including ones that went flat.">positions()</a></span>, if a fill ever opened one.  <br /></td></tr>
+<tr class="memitem:a5dbe514ba69368445da469e43393df50" id="r_a5dbe514ba69368445da469e43393df50"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5dbe514ba69368445da469e43393df50">mark_lot</a> (std::size_t lot, const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;price)</td></tr>
+<tr class="memdesc:a5dbe514ba69368445da469e43393df50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the lot at a place <span class="tt"><a class="el" href="#a76b2cddc4a38cdec340a3080a00a37b6" title="Returns where an instrument&#39;s lot is in positions(), if a fill ever opened one.">lot_of</a></span> returned to a price, as <span class="tt"><a class="el" href="#ac1486c555aac77cfa001b2b387a46c2b" title="Marks positions in an instrument to a price, updating their market value.">mark</a></span> does for its instrument.  <br /></td></tr>
 <tr class="memitem:ad959d2663ae192356e4fc4069cbf5531" id="r_ad959d2663ae192356e4fc4069cbf5531"><td class="memTemplParams" colspan="2">template&lt;typename BrokerTag&gt; </td></tr>
 <tr class="memitem:ad959d2663ae192356e4fc4069cbf5531 template"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1strategy_1_1Portfolio.html">strategy::Portfolio</a>&lt; BrokerTag &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531">snapshot</a> (std::chrono::system_clock::time_point as_of) const</td></tr>
 <tr class="memdesc:ad959d2663ae192356e4fc4069cbf5531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the portfolio a strategy sees.  <br /></td></tr>
+<tr class="memitem:ab0f5d98e8efc47fae3eedf0e92c98e37" id="r_ab0f5d98e8efc47fae3eedf0e92c98e37"><td class="memTemplParams" colspan="2">template&lt;typename BrokerTag&gt; </td></tr>
+<tr class="memitem:ab0f5d98e8efc47fae3eedf0e92c98e37 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab0f5d98e8efc47fae3eedf0e92c98e37">update</a> (<a class="el" href="structalgotradelib_1_1strategy_1_1Portfolio.html">strategy::Portfolio</a>&lt; BrokerTag &gt; &amp;portfolio, std::chrono::system_clock::time_point as_of)</td></tr>
+<tr class="memdesc:ab0f5d98e8efc47fae3eedf0e92c98e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings a portfolio built by <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span> up to date, changing only what changed since.  <br /></td></tr>
+<tr class="memitem:a2f3719402636ecc845b18d2deabadf5e" id="r_a2f3719402636ecc845b18d2deabadf5e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2f3719402636ecc845b18d2deabadf5e">clear_changed</a> () noexcept</td></tr>
+<tr class="memdesc:a2f3719402636ecc845b18d2deabadf5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forgets which lots changed, after a <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span> that already shows them.  <br /></td></tr>
 <tr class="memitem:a92546364ee4e4abc8d702d720fa86281" id="r_a92546364ee4e4abc8d702d720fa86281"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281">equity_in</a> (const <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> &amp;currency) const</td></tr>
 <tr class="memdesc:a92546364ee4e4abc8d702d720fa86281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns total equity in a currency: cash plus positions at their last marks.  <br /></td></tr>
 </table>
@@ -165,10 +178,10 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Positions, cash and realized profit, updated by each execution of a replay. </p>
 <p>Cash and profit are kept per currency and never converted. </p>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00063">63</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00079">79</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab6c8323a584bbbd4eccb6b74c7685c16" name="ab6c8323a584bbbd4eccb6b74c7685c16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6c8323a584bbbd4eccb6b74c7685c16">&#9670;&#160;</a></span>ReplayLedger() <span class="overload">[1/3]</span></h2>
+<a id="a891572e1d344349aea4cc5701a7340d4" name="a891572e1d344349aea4cc5701a7340d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a891572e1d344349aea4cc5701a7340d4">&#9670;&#160;</a></span>ReplayLedger() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +197,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classalgotradelib_1_1Currency.html">Currency</a></td>          <td class="paramname"><span class="paramname"><em>currency</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classalgotradelib_1_1Currency.html">Currency</a></td>          <td class="paramname"><span class="paramname"><em>currency</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279">ExecutionHistory</a></td>          <td class="paramname"><span class="paramname"><em>history</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279a60cba2874369bd3790e14ea5f8a7bc58">ExecutionHistory::KEEP</a></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -199,13 +217,14 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">cash</td><td>The starting cash. </td></tr>
     <tr><td class="paramname">currency</td><td>Its currency. </td></tr>
+    <tr><td class="paramname">history</td><td>Whether to keep the executions applied (<span class="tt"><a class="el" href="#a7ac5537ee18ff03be7308ef0eeef9cf4" title="Returns every execution applied.">executions()</a></span>). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00070">70</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00087">87</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00110">operator=()</a>, <a class="el" href="ledger_8hpp_source.html#l00091">operator=()</a>, <a class="el" href="#a455d84db2248481ef8588b8acdac7b6a">ReplayLedger()</a>, and <a class="el" href="#a016196ae89428f52e2e33e8941928527">ReplayLedger()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00150">operator=()</a>, <a class="el" href="ledger_8hpp_source.html#l00124">operator=()</a>, <a class="el" href="#a455d84db2248481ef8588b8acdac7b6a">ReplayLedger()</a>, and <a class="el" href="ledger_8hpp_source.html#l00103">ReplayLedger()</a>.</p>
 
 </div>
 </div>
@@ -242,8 +261,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a016196ae89428f52e2e33e8941928527" name="a016196ae89428f52e2e33e8941928527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a016196ae89428f52e2e33e8941928527">&#9670;&#160;</a></span>ReplayLedger() <span class="overload">[3/3]</span></h2>
+<a id="a6798ed1cfbee3fc61c6eaeb2853c66ef" name="a6798ed1cfbee3fc61c6eaeb2853c66ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6798ed1cfbee3fc61c6eaeb2853c66ef">&#9670;&#160;</a></span>ReplayLedger() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +279,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -273,11 +292,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00103">103</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ae9e1b7bca269ab37bd4a4fdab68b4106" name="ae9e1b7bca269ab37bd4a4fdab68b4106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9e1b7bca269ab37bd4a4fdab68b4106">&#9670;&#160;</a></span>apply()</h2>
+<a id="afa633a10913d45bff88f6d0191b8124e" name="afa633a10913d45bff88f6d0191b8124e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa633a10913d45bff88f6d0191b8124e">&#9670;&#160;</a></span>apply()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,12 +309,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool algotradelib::backtest::ReplayLedger::apply </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>execution</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>execution_in</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>currency</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>currency_in</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -307,15 +328,20 @@ Public Member Functions</h2></td></tr>
 <p>A trade through flat (selling 150 from a long of 100) closes the old position, realizing its profit against the old average, and opens the remainder at the new price. Commission, institution fee and tax are deducted from cash.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">execution</td><td>The execution. </td></tr>
-    <tr><td class="paramname">currency</td><td>The instrument's currency. </td></tr>
+    <tr><td class="paramname">execution_in</td><td>The execution; it may be one of <span class="tt"><a class="el" href="#a7ac5537ee18ff03be7308ef0eeef9cf4" title="Returns every execution applied.">executions()</a></span>. Kept (copied) only with <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279a60cba2874369bd3790e14ea5f8a7bc58" title="Keep every execution, readable through ReplayLedger::executions().">ExecutionHistory::KEEP</a></span>. </td></tr>
+    <tr><td class="paramname">currency_in</td><td>The instrument's currency. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span>, with the ledger unchanged, if the arithmetic does not fit, or if <span class="tt">currency</span> differs from the currency of a non-flat position in the instrument; <span class="tt">true</span> otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If an allocation throws partway, the ledger can be left partly updated. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span>, with the ledger unchanged, if the arithmetic does not fit, or if <span class="tt">currency_in</span> differs from the currency of a non-flat position in the instrument; <span class="tt">true</span> otherwise. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>If an allocation fails; the ledger is then unchanged. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00199">199</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00276">276</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +377,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The average price, or <span class="tt">std::nullopt</span> if flat or never held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00149">149</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00189">189</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,9 +413,71 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount, or <span class="tt">std::nullopt</span> if none is held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00123">123</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00163">163</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00199">apply()</a>, and <a class="el" href="ledger_8hpp_source.html#l00424">equity_in()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">apply()</a>, <a class="el" href="ledger_8hpp_source.html#l00251">equity()</a>, and <a class="el" href="ledger_8hpp_source.html#l00618">equity_in()</a>.</p>
+
+</div>
+</div>
+<a id="a2f3719402636ecc845b18d2deabadf5e" name="a2f3719402636ecc845b18d2deabadf5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3719402636ecc845b18d2deabadf5e">&#9670;&#160;</a></span>clear_changed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void algotradelib::backtest::ReplayLedger::clear_changed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forgets which lots changed, after a <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span> that already shows them. </p>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00603">603</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00562">update()</a>.</p>
+
+</div>
+</div>
+<a id="a5e9720b4cbe9b83765aae97d4aacc139" name="a5e9720b4cbe9b83765aae97d4aacc139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9720b4cbe9b83765aae97d4aacc139">&#9670;&#160;</a></span>equity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; algotradelib::backtest::ReplayLedger::equity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns total equity in the ledger's own currency (the constructor's), as <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span> would. </p>
+<p>The same value, digit for digit and in the same representation, as <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span> for that currency, without adding up every position: the ledger keeps a running total. It uses it only while the magnitudes of the cash and of every position it counts, added up and written at the largest scale among them, fit &ndash; which guarantees that <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span>'s own additions, in any order, cannot overflow &ndash; and otherwise calls <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The equity, or <span class="tt">std::nullopt</span> if the arithmetic does not fit. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00251">251</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -426,12 +514,14 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The equity, or <span class="tt">std::nullopt</span> if the arithmetic does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00424">424</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00618">618</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00251">equity()</a>.</p>
 
 </div>
 </div>
-<a id="aa6690fbe20a1123119687fc30acffab2" name="aa6690fbe20a1123119687fc30acffab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6690fbe20a1123119687fc30acffab2">&#9670;&#160;</a></span>executions()</h2>
+<a id="a7ac5537ee18ff03be7308ef0eeef9cf4" name="a7ac5537ee18ff03be7308ef0eeef9cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac5537ee18ff03be7308ef0eeef9cf4">&#9670;&#160;</a></span>executions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -448,15 +538,90 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns every execution applied. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executions, oldest first. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>If the ledger keeps none (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693" title="Keep none, for an owner that records them itself (a Backtester, in ReplayResult::executions_).">ExecutionHistory::NONE</a></span>, as a <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html" title="Replays bars (and quotes) through one strategy, with a ledger and a fill model.">Backtester</a></span>'s does: its executions are in <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#a8373e9d7fb1cbcdadfbf501be67652f2" title="Every execution, in order.">ReplayResult::executions_</a></span>). </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00184">184</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00232">232</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6ef9152bfa9e70b42e43fe1c5ea27522" name="a6ef9152bfa9e70b42e43fe1c5ea27522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef9152bfa9e70b42e43fe1c5ea27522">&#9670;&#160;</a></span>history()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279">ExecutionHistory</a> algotradelib::backtest::ReplayLedger::history </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the ledger keeps the executions it applies. </p>
+<dl class="section return"><dt>Returns</dt><dd>The setting it was constructed with. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00224">224</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00087">ReplayLedger()</a>.</p>
+
+</div>
+</div>
+<a id="a76b2cddc4a38cdec340a3080a00a37b6" name="a76b2cddc4a38cdec340a3080a00a37b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b2cddc4a38cdec340a3080a00a37b6">&#9670;&#160;</a></span>lot_of()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; std::size_t &gt; algotradelib::backtest::ReplayLedger::lot_of </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>instrument</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns where an instrument's lot is in <span class="tt"><a class="el" href="#a920322a6237d15ff15b1c978967be420" title="Returns every position, including ones that went flat.">positions()</a></span>, if a fill ever opened one. </p>
+<p>A lot keeps its place for the ledger's life (lots are never removed or reordered), so a caller marking the same instrument every bar can look it up once and use <span class="tt"><a class="el" href="#a5dbe514ba69368445da469e43393df50" title="Marks the lot at a place lot_of returned to a price, as mark does for its instrument.">mark_lot</a></span>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instrument</td><td>The instrument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Its place, or <span class="tt">std::nullopt</span> if no fill opened a lot in it. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00477">477</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -497,7 +662,50 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if a position's value does not fit (that position keeps its old mark and value; <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html" title="Replays bars (and quotes) through one strategy, with a ledger and a fill model.">Backtester</a></span> halts the replay with <span class="tt">mark_not_representable</span>); <span class="tt">true</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00355">355</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00462">462</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5dbe514ba69368445da469e43393df50" name="a5dbe514ba69368445da469e43393df50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dbe514ba69368445da469e43393df50">&#9670;&#160;</a></span>mark_lot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::backtest::ReplayLedger::mark_lot </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>lot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>price</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Marks the lot at a place <span class="tt"><a class="el" href="#a76b2cddc4a38cdec340a3080a00a37b6" title="Returns where an instrument&#39;s lot is in positions(), if a fill ever opened one.">lot_of</a></span> returned to a price, as <span class="tt"><a class="el" href="#ac1486c555aac77cfa001b2b387a46c2b" title="Marks positions in an instrument to a price, updating their market value.">mark</a></span> does for its instrument. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lot</td><td>The lot's place in <span class="tt"><a class="el" href="#a920322a6237d15ff15b1c978967be420" title="Returns every position, including ones that went flat.">positions()</a></span>. </td></tr>
+    <tr><td class="paramname">price</td><td>The new mark. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>As <span class="tt"><a class="el" href="#ac1486c555aac77cfa001b2b387a46c2b" title="Marks positions in an instrument to a price, updating their market value.">mark</a></span>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00485">485</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00462">mark()</a>.</p>
 
 </div>
 </div>
@@ -511,9 +719,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp; algotradelib::backtest::ReplayLedger::operator= </td>
+          <td class="memname"><a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp; algotradelib::backtest::ReplayLedger::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -539,7 +747,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00110">110</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00150">150</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -553,9 +761,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp; algotradelib::backtest::ReplayLedger::operator= </td>
+          <td class="memname"><a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp; algotradelib::backtest::ReplayLedger::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a891572e1d344349aea4cc5701a7340d4">ReplayLedger</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -575,7 +783,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This ledger. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00091">91</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00124">124</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -606,7 +814,7 @@ Public Member Functions</h2></td></tr>
 <p>Of the money fields only <span class="tt">market_value_</span> (quantity times last mark) is filled; <span class="tt">purchase_value_</span>, <span class="tt">unrealized_profit_loss_</span> and <span class="tt">unrealized_return_</span> stay at their defaults.</p>
 <dl class="section return"><dt>Returns</dt><dd>The positions. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00178">178</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00218">218</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +850,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The quantity (zero if the position went flat), or <span class="tt">std::nullopt</span> if never held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00137">137</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00177">177</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -678,9 +886,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount; zero if none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00161">161</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00201">201</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00199">apply()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">apply()</a>.</p>
 
 </div>
 </div>
@@ -725,7 +933,63 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The portfolio. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00389">389</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00517">517</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab0f5d98e8efc47fae3eedf0e92c98e37" name="ab0f5d98e8efc47fae3eedf0e92c98e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f5d98e8efc47fae3eedf0e92c98e37">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BrokerTag&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void algotradelib::backtest::ReplayLedger::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structalgotradelib_1_1strategy_1_1Portfolio.html">strategy::Portfolio</a>&lt; BrokerTag &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>portfolio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::chrono::system_clock::time_point</td>          <td class="paramname"><span class="paramname"><em>as_of</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Brings a portfolio built by <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span> up to date, changing only what changed since. </p>
+<p>Afterwards its positions, sellable basis, cash, buying power and <span class="tt">as_of_</span> are what <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span> would return now; its working orders and everything else are left alone. Only the lots that <span class="tt"><a class="el" href="#afa633a10913d45bff88f6d0191b8124e" title="Applies one execution to the position, cash and realized profit.">apply</a></span> or <span class="tt"><a class="el" href="#ac1486c555aac77cfa001b2b387a46c2b" title="Marks positions in an instrument to a price, updating their market value.">mark</a></span> changed since <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span>, <span class="tt"><a class="el" href="#a2f3719402636ecc845b18d2deabadf5e" title="Forgets which lots changed, after a snapshot that already shows them.">clear_changed</a></span> or the last <span class="tt"><a class="el" href="#ab0f5d98e8efc47fae3eedf0e92c98e37" title="Brings a portfolio built by snapshot up to date, changing only what changed since.">update</a></span> are rewritten, plus any opened since, so a bar that marked one lot rewrites one row.</p>
+<p>The portfolio must be one this ledger's <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span> built, whose positions only <span class="tt"><a class="el" href="#ab0f5d98e8efc47fae3eedf0e92c98e37" title="Brings a portfolio built by snapshot up to date, changing only what changed since.">update</a></span> has changed since; anything else written to them stays.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BrokerTag</td><td>The order-reference tag of the portfolio. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">portfolio</td><td>The portfolio to update. </td></tr>
+    <tr><td class="paramname">as_of</td><td>The time, for <span class="tt">as_of_</span> and the buying-power stamps. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>If a row, the cash or the buying power cannot be copied; the ledger still lists every changed lot, so a later <span class="tt"><a class="el" href="#ab0f5d98e8efc47fae3eedf0e92c98e37" title="Brings a portfolio built by snapshot up to date, changing only what changed since.">update</a></span> completes it. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00562">562</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>

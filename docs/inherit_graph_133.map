@@ -1,3 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structalgotradelib_1_1runner_1_1DryRunReport.html" title="What one runner pass decided and did, sorted by outcome (returned by Runner::feed)." alt="" coords="5,5,220,45"/>
+<area shape="rect" id="Node000000" href="$classalgotradelib_1_1runner_1_1ClockReference.html" title="A clock that reads another one, so that two holders (a loop and its journal) read one time." alt="" coords="5,5,204,45"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title=" " alt="" coords="5,5,167,60"/>
-<area shape="rect" id="Node000001" href="$structalgotradelib_1_1kis_1_1KisConfig.html" title="KIS credentials (app key and secret), demo or real account, and the market&#45;data tape." alt="" coords="215,13,349,53"/>
-<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="181,30,215,30,215,35,181,35"/>
+<area shape="rect" id="Node000000" href="$structalgotradelib_1_1network_1_1AuthBody.html" title=" " alt="" coords="5,5,185,45"/>
+<area shape="rect" id="Node000001" href="$structalgotradelib_1_1tossinvest_1_1TossRest.html" title="A Toss REST access token and its expiry." alt="" coords="233,5,408,45"/>
+<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="200,23,233,23,233,28,200,28"/>
 </map>

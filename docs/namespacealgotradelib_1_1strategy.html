@@ -162,6 +162,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One order the runner is to place.  <a href="structalgotradelib_1_1strategy_1_1PlannedOrder.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Portfolio" id="r_Portfolio"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1Portfolio.html">Portfolio</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What the account holds and which orders are still working, as a strategy sees it.  <a href="structalgotradelib_1_1strategy_1_1Portfolio.html#details">More...</a><br /></td></tr>
+<tr class="memitem:PortfolioRows" id="r_PortfolioRows"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1strategy_1_1PortfolioRows.html">PortfolioRows</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where each instrument's rows are in one portfolio: its position rows and its working rows, in order.  <a href="classalgotradelib_1_1strategy_1_1PortfolioRows.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Price" id="r_Price"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1strategy_1_1Price.html">Price</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A price known to be on its instrument's tick grid.  <a href="classalgotradelib_1_1strategy_1_1Price.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ProbeBroker" id="r_ProbeBroker"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1ProbeBroker.html">ProbeBroker</a></td></tr>
@@ -351,7 +353,7 @@ Variables</h2></td></tr>
 
 <p>A probe context whose broker implements everything optional. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00654">654</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00697">697</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +371,7 @@ Variables</h2></td></tr>
 
 <p>A probe context whose broker implements nothing optional. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00651">651</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00694">694</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -962,9 +964,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for a stop order. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00457">457</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00549">549</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00457">is_stop_order()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00549">is_stop_order()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00581">reconcile()</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1097,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00080">80</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01677">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00080">market_phase_session_ended()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01681">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00080">market_phase_session_ended()</a>.</p>
 
 </div>
 </div>
@@ -1131,9 +1133,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">PENDING</span>, <span class="tt">PENDING_CANCEL</span>, <span class="tt">PENDING_REPLACE</span>, <span class="tt">PARTIAL_FILLED</span> and <span class="tt">UNKNOWN</span> (an unrecognized state is assumed to be still working); <span class="tt">false</span> for the terminal statuses. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00020">20</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00022">22</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01118">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00020">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00432">projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">algotradelib::strategy::Portfolio&lt; Broker &gt;::working_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01132">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00022">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00432">projected_gross_exposure()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00581">reconcile()</a>.</p>
 
 </div>
 </div>
@@ -1250,7 +1252,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A plan with one placement, or one <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1Rejection.html" title="One instruction that was not placed, and why.">Rejection</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00710">710</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00804">804</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
 </div>
 </div>
@@ -1309,9 +1311,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The plan. A refusal for any reason other than <span class="tt">STOP_ORDER_RESTING</span> clears the cancellations and placements and carries one <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1Rejection.html" title="One instruction that was not placed, and why.">Rejection</a></span>; with <span class="tt">STOP_ORDER_RESTING</span> the cancellations stay, and the caller should send them. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00489">489</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00581">581</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00710">reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00804">reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00581">reconcile()</a>.</p>
 
 </div>
 </div>
@@ -1425,7 +1427,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00120">120</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01197">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, and <a class="el" href="intent_8hpp_source.html#l00120">size_kind_is_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01211">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, and <a class="el" href="intent_8hpp_source.html#l00120">size_kind_is_target()</a>.</p>
 
 </div>
 </div>
@@ -1473,9 +1475,9 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00862">862</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile_8hpp_source.html#l00956">956</a> of file <a class="el" href="reconcile_8hpp_source.html">reconcile.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00862">weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00956">weight_target()</a>.</p>
 
 </div>
 </div>

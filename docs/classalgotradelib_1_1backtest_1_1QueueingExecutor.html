@@ -133,16 +133,35 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classalgotrade
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classalgotradelib_1_1backtest_1_1QueueingExecutor__inherit__graph.svg" width="254" height="162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:Queue" id="r_Queue"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html">Queue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every outstanding order, oldest first: a view over the queue, valid until the queue changes.  <a href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae4acf38a569fc4059b5c5f2c85f81596" id="r_ae4acf38a569fc4059b5c5f2c85f81596"><td class="memItemLeft"><a id="ae4acf38a569fc4059b5c5f2c85f81596" name="ae4acf38a569fc4059b5c5f2c85f81596"></a>
+&#160;</td><td class="memItemRight"><b>QueueingExecutor</b> ()=default</td></tr>
+<tr class="memdesc:ae4acf38a569fc4059b5c5f2c85f81596"><td class="mdescLeft">&#160;</td><td class="mdescRight">An executor with nothing queued. <br /></td></tr>
+<tr class="memitem:a2c35fd06f1b26424c0721f8d398e73a0" id="r_a2c35fd06f1b26424c0721f8d398e73a0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2c35fd06f1b26424c0721f8d398e73a0">QueueingExecutor</a> (const QueueingExecutor &amp;other)=default</td></tr>
+<tr class="memdesc:a2c35fd06f1b26424c0721f8d398e73a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies an executor and its queue.  <br /></td></tr>
+<tr class="memitem:a7e083e123e7fce4d9cae554216c01578" id="r_a7e083e123e7fce4d9cae554216c01578"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7e083e123e7fce4d9cae554216c01578">QueueingExecutor</a> (QueueingExecutor &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a7e083e123e7fce4d9cae554216c01578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves an executor; the source is left with nothing queued.  <br /></td></tr>
+<tr class="memitem:a6eeb7d2f65629d1d86a343a9713ad389" id="r_a6eeb7d2f65629d1d86a343a9713ad389"><td class="memItemLeft"><a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6eeb7d2f65629d1d86a343a9713ad389">operator=</a> (<a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a6eeb7d2f65629d1d86a343a9713ad389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this executor with a move of another, which is left with nothing queued.  <br /></td></tr>
+<tr class="memitem:adc63582f2f35847ba577068565ea558f" id="r_adc63582f2f35847ba577068565ea558f"><td class="memItemLeft"><a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adc63582f2f35847ba577068565ea558f">operator=</a> (const <a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;other)</td></tr>
+<tr class="memdesc:adc63582f2f35847ba577068565ea558f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this executor with a copy of another, entirely or not at all.  <br /></td></tr>
 <tr class="memitem:ab8eec746d4ee345671591b49eac5084c" id="r_ab8eec746d4ee345671591b49eac5084c"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218ccc">runner::SendOutcome</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab8eec746d4ee345671591b49eac5084c">place</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1PlannedOrder.html">strategy::PlannedOrder</a> &amp;order)</td></tr>
 <tr class="memdesc:ab8eec746d4ee345671591b49eac5084c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accepts and queues an order, issuing it a reference.  <br /></td></tr>
 <tr class="memitem:a5e96246d9eabf743edd7f6b778e7f528" id="r_a5e96246d9eabf743edd7f6b778e7f528"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218ccc">runner::SendOutcome</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528">cancel</a> (const <a class="el" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder</a>&lt; BrokerTag &gt; &amp;working)</td></tr>
 <tr class="memdesc:a5e96246d9eabf743edd7f6b778e7f528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Withdraws the order a working row names, matched by reference.  <br /></td></tr>
 <tr class="memitem:a2db1a4671fa24ff023c40e818461ee1c" id="r_a2db1a4671fa24ff023c40e818461ee1c"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1OrderRef.html">OrderRef</a>&lt; BrokerTag &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2db1a4671fa24ff023c40e818461ee1c">last_ref</a> () const</td></tr>
 <tr class="memdesc:a2db1a4671fa24ff023c40e818461ee1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference issued to the most recently accepted order.  <br /></td></tr>
-<tr class="memitem:a0f89dd39fdccbb144a21221a6f38a60c" id="r_a0f89dd39fdccbb144a21221a6f38a60c"><td class="memItemLeft">const std::vector&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1QueuedOrder.html">QueuedOrder</a>&lt; BrokerTag &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0f89dd39fdccbb144a21221a6f38a60c">queued</a> () const noexcept</td></tr>
-<tr class="memdesc:a0f89dd39fdccbb144a21221a6f38a60c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns every outstanding order.  <br /></td></tr>
+<tr class="memitem:a573dec487b596e5d2dc8cdb2f706b7f7" id="r_a573dec487b596e5d2dc8cdb2f706b7f7"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html">Queue</a>&#160;</td><td class="memItemRight"><a class="el" href="#a573dec487b596e5d2dc8cdb2f706b7f7">queued</a> () const noexcept</td></tr>
+<tr class="memdesc:a573dec487b596e5d2dc8cdb2f706b7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns every outstanding order, oldest first.  <br /></td></tr>
+<tr class="memitem:a7e64ce9bc6f7d8e752ad6d5c46f01a2b" id="r_a7e64ce9bc6f7d8e752ad6d5c46f01a2b"><td class="memTemplParams" colspan="2">template&lt;typename Each&gt; </td></tr>
+<tr class="memitem:a7e64ce9bc6f7d8e752ad6d5c46f01a2b template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7e64ce9bc6f7d8e752ad6d5c46f01a2b">for_each_queued_in</a> (const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;instrument, Each &amp;&amp;each) const</td></tr>
+<tr class="memdesc:a7e64ce9bc6f7d8e752ad6d5c46f01a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">each</span> with every outstanding order in one instrument, oldest first.  <br /></td></tr>
 <tr class="memitem:a9cb76251fae0be8b65f62c35beec8a9e" id="r_a9cb76251fae0be8b65f62c35beec8a9e"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1backtest_1_1QueuedOrder.html">QueuedOrder</a>&lt; BrokerTag &gt; *&#160;</td><td class="memItemRight"><a class="el" href="#a9cb76251fae0be8b65f62c35beec8a9e">find</a> (const <a class="el" href="structalgotradelib_1_1OrderRef.html">OrderRef</a>&lt; BrokerTag &gt; &amp;ref) const</td></tr>
 <tr class="memdesc:a9cb76251fae0be8b65f62c35beec8a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an outstanding order.  <br /></td></tr>
 <tr class="memitem:a8757ad137ccf06bceca46b9f063bb61d" id="r_a8757ad137ccf06bceca46b9f063bb61d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8757ad137ccf06bceca46b9f063bb61d">assign_session</a> (const <a class="el" href="structalgotradelib_1_1OrderRef.html">OrderRef</a>&lt; BrokerTag &gt; &amp;ref, <a class="el" href="structalgotradelib_1_1Date.html">Date</a> session)</td></tr>
@@ -155,6 +174,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acb9fff17fc5147274ea304597ba2b669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the next bar; orders accepted from now on cannot fill against it.  <br /></td></tr>
 <tr class="memitem:a52e3e28ff43ff9e0acb24b9980c348f1" id="r_a52e3e28ff43ff9e0acb24b9980c348f1"><td class="memItemLeft">std::uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a52e3e28ff43ff9e0acb24b9980c348f1">bar</a> () const noexcept</td></tr>
 <tr class="memdesc:a52e3e28ff43ff9e0acb24b9980c348f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bar being replayed.  <br /></td></tr>
+<tr class="memitem:a16729c5545e3a15736f4c27567f91221" id="r_a16729c5545e3a15736f4c27567f91221"><td class="memItemLeft">std::uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a16729c5545e3a15736f4c27567f91221">changes</a> () const noexcept</td></tr>
+<tr class="memdesc:a16729c5545e3a15736f4c27567f91221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many times the queue gained or lost an order (<span class="tt"><a class="el" href="#ab8eec746d4ee345671591b49eac5084c" title="Accepts and queues an order, issuing it a reference.">place</a></span>, <span class="tt"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528" title="Withdraws the order a working row names, matched by reference.">cancel</a></span>, <span class="tt"><a class="el" href="#acaca4d47f4c63c910c9bc945c59bee2d" title="Removes an order from the queue.">withdraw</a></span>).  <br /></td></tr>
 <tr class="memitem:a0245a37392a001497723893e7833afb3" id="r_a0245a37392a001497723893e7833afb3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0245a37392a001497723893e7833afb3">deciding_at</a> (std::chrono::system_clock::time_point at, bool exact=true)</td></tr>
 <tr class="memdesc:a0245a37392a001497723893e7833afb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the decision instant stamped on orders accepted from now on.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -173,7 +194,7 @@ Static Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename BrokerTag&gt;<br />
 class algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;</div><p>The replay's executor: accepts orders and holds them until they fill or are withdrawn. </p>
-<p><span class="tt"><a class="el" href="#a0f89dd39fdccbb144a21221a6f38a60c" title="Returns every outstanding order.">queued()</a></span> is always the complete set of outstanding orders; the engine shows them to the strategy as working orders.</p>
+<p><span class="tt"><a class="el" href="#a573dec487b596e5d2dc8cdb2f706b7f7" title="Returns every outstanding order, oldest first.">queued()</a></span> is always the complete set of outstanding orders; the engine shows them to the strategy as working orders.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">BrokerTag</td><td>The order-reference tag. </td></tr>
@@ -181,8 +202,81 @@ class algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;</div><p>The re
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00087">87</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00091">91</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2c35fd06f1b26424c0721f8d398e73a0" name="a2c35fd06f1b26424c0721f8d398e73a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c35fd06f1b26424c0721f8d398e73a0">&#9670;&#160;</a></span>QueueingExecutor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BrokerTag&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::QueueingExecutor </td>
+          <td>(</td>
+          <td class="paramtype">const QueueingExecutor&lt; BrokerTag &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copies an executor and its queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The executor to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7e083e123e7fce4d9cae554216c01578" name="a7e083e123e7fce4d9cae554216c01578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e083e123e7fce4d9cae554216c01578">&#9670;&#160;</a></span>QueueingExecutor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BrokerTag&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::QueueingExecutor </td>
+          <td>(</td>
+          <td class="paramtype">QueueingExecutor&lt; BrokerTag &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves an executor; the source is left with nothing queued. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The executor to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00108">108</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8757ad137ccf06bceca46b9f063bb61d" name="a8757ad137ccf06bceca46b9f063bb61d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8757ad137ccf06bceca46b9f063bb61d">&#9670;&#160;</a></span>assign_session()</h2>
 
@@ -221,7 +315,7 @@ template&lt;typename BrokerTag&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00221">221</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00421">421</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +347,7 @@ template&lt;typename BrokerTag&gt; </div>
 <p>Returns the bar being replayed. </p>
 <dl class="section return"><dt>Returns</dt><dd>The bar number, counting from one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00269">269</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00476">476</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +386,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the replay can model it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00129">129</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00208">208</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +424,40 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ACCEPTED</span> if it was queued; <span class="tt">REJECTED</span> if nothing matches (it filled or was already withdrawn). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00180">180</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00259">259</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a16729c5545e3a15736f4c27567f91221" name="a16729c5545e3a15736f4c27567f91221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16729c5545e3a15736f4c27567f91221">&#9670;&#160;</a></span>changes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BrokerTag&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint64_t <a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::changes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns how many times the queue gained or lost an order (<span class="tt"><a class="el" href="#ab8eec746d4ee345671591b49eac5084c" title="Accepts and queues an order, issuing it a reference.">place</a></span>, <span class="tt"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528" title="Withdraws the order a working row names, matched by reference.">cancel</a></span>, <span class="tt"><a class="el" href="#acaca4d47f4c63c910c9bc945c59bee2d" title="Removes an order from the queue.">withdraw</a></span>). </p>
+<p>Releasing a stop and dating an order's session change neither its working row nor the count.</p>
+<dl class="section return"><dt>Returns</dt><dd>The count since construction. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00485">485</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -372,7 +499,7 @@ template&lt;typename BrokerTag&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00276">276</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00492">492</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -410,7 +537,52 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer into the queue (valid until the queue changes), or <span class="tt">nullptr</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00207">207</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00411">411</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7e64ce9bc6f7d8e752ad6d5c46f01a2b" name="a7e64ce9bc6f7d8e752ad6d5c46f01a2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e64ce9bc6f7d8e752ad6d5c46f01a2b">&#9670;&#160;</a></span>for_each_queued_in()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BrokerTag&gt; </div>
+<div class="memtemplate">
+template&lt;typename Each&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::for_each_queued_in </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>instrument</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Each &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>each</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls <span class="tt">each</span> with every outstanding order in one instrument, oldest first. </p>
+<p>Visits only that instrument's orders, however many others are queued. <span class="tt">each</span> must not change the queue.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instrument</td><td>The instrument. </td></tr>
+    <tr><td class="paramname">each</td><td>Called as <span class="tt">each(const <a class="el" href="structalgotradelib_1_1backtest_1_1QueuedOrder.html" title="One order a replay accepted and has not yet filled or withdrawn.">QueuedOrder</a>&amp;)</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00396">396</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -442,7 +614,7 @@ template&lt;typename BrokerTag&gt; </div>
 <p>Returns the reference issued to the most recently accepted order. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reference, or <span class="tt">std::nullopt</span> before any. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00194">194</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00267">267</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -481,7 +653,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for every condition today. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00163">163</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00242">242</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +684,89 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p>Starts the next bar; orders accepted from now on cannot fill against it. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00263">263</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00470">470</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adc63582f2f35847ba577068565ea558f" name="adc63582f2f35847ba577068565ea558f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc63582f2f35847ba577068565ea558f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BrokerTag&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp; <a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a>&lt; BrokerTag &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Replaces this executor with a copy of another, entirely or not at all. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The executor to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This executor. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>If the copy cannot be made; this executor is then unchanged. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00149">149</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6eeb7d2f65629d1d86a343a9713ad389" name="a6eeb7d2f65629d1d86a343a9713ad389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eeb7d2f65629d1d86a343a9713ad389">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BrokerTag&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp; <a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a>&lt; BrokerTag &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Replaces this executor with a move of another, which is left with nothing queued. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The executor to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This executor. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00126">126</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -551,12 +805,12 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ACCEPTED</span>, or <span class="tt">REFUSED_LOCALLY</span> for an order the replay cannot price from bars (see <span class="tt"><a class="el" href="#a993360c23266d62016fb09ae48cc11e3" title="Tests whether a replay can price an order from bars.">can_model</a></span>); a refused order is reported as a <span class="tt">BINDING_REFUSED</span> rejection (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#a700ec8831500785ed4a708e1ddc2fecb" title="Instructions not placed: reconciliation could not build them, or the replay cannot model them (BINDIN...">ReplayResult::rejected_</a></span>, the pass's <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html#a6a5da131da67c3722a9f2a4478544053" title="Instructions not placed: reconciliation could not build them, or the replay cannot model them (BINDIN...">Report::rejected_</a></span>), as a live binding's refusal is; the strategy is not told. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00103">103</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00171">171</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a0f89dd39fdccbb144a21221a6f38a60c" name="a0f89dd39fdccbb144a21221a6f38a60c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f89dd39fdccbb144a21221a6f38a60c">&#9670;&#160;</a></span>queued()</h2>
+<a id="a573dec487b596e5d2dc8cdb2f706b7f7" name="a573dec487b596e5d2dc8cdb2f706b7f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573dec487b596e5d2dc8cdb2f706b7f7">&#9670;&#160;</a></span>queued()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -567,7 +821,7 @@ template&lt;typename BrokerTag&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1QueuedOrder.html">QueuedOrder</a>&lt; BrokerTag &gt; &gt; &amp; <a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::queued </td>
+          <td class="memname"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html">Queue</a> <a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor</a>&lt; BrokerTag &gt;::queued </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -580,10 +834,10 @@ template&lt;typename BrokerTag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns every outstanding order. </p>
-<dl class="section return"><dt>Returns</dt><dd>The orders, oldest first. </dd></dl>
+<p>Returns every outstanding order, oldest first. </p>
+<dl class="section return"><dt>Returns</dt><dd>A view of the orders; valid until the queue changes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00200">200</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00385">385</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +875,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it was queued. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00250">250</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00458">458</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +913,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it was queued. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00235">235</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00432">432</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -688,7 +942,7 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p><span class="tt">false</span>: a replay reaches no broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00091">91</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00159">159</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

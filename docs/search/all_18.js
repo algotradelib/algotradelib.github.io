@@ -62,13 +62,14 @@ var searchData=
   ['untracked_5frows_59',['untracked_rows',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#a21456ef66c94dcf98bb5020ceef3eed0',1,'algotradelib::runner::OrderUpdateWatch']]],
   ['unvalued_5fbars_5f_60',['unvalued_bars_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#a33d9b018911470bdac0df7ef8a973ee6',1,'algotradelib::backtest::ReplayResult::unvalued_bars_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#ac1e2707b3579a25cbfe5e9589c8de62a',1,'algotradelib::backtest::ReportCaveats::unvalued_bars_']]],
   ['up_61',['Warm-up',['../writing-a-strategy.html#autotoc_md118',1,'']]],
-  ['updated_62',['UPDATED',['../namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5',1,'algotradelib::runner']]],
-  ['updated_63',['updated',['../structalgotradelib_1_1runner_1_1IterationReport.html#a2b5fc30a64932dd8fc11e1bb856739f7',1,'algotradelib::runner::IterationReport']]],
-  ['upper_64',['UPPER',['../namespacealgotradelib_1_1math.html#ae41e9f1ac77ac442bda62501ad784a67',1,'algotradelib::math']]],
-  ['upper_5f_65',['upper_',['../structalgotradelib_1_1analytics_1_1BollingerBands.html#a547c0014d1dfdae68bff6f211903abf7',1,'algotradelib::analytics::BollingerBands::upper_'],['../structalgotradelib_1_1PriceLimits.html#abcfd43223abc343c639ca1f3d58d59b8',1,'algotradelib::PriceLimits::upper_']]],
-  ['usable_5fburst_66',['usable_burst',['../namespacealgotradelib_1_1network.html#a3acbcbad72597790e84e409ed51ff185',1,'algotradelib::network']]],
-  ['usd_67',['usd',['../classalgotradelib_1_1Currency.html#a13193725796b2649f3789b616fa6d53b',1,'algotradelib::Currency']]],
-  ['user_20guide_68',['User guide',['../guide.html',1,'']]],
-  ['using_20it_69',['Using it',['../index.html#autotoc_md8',1,'']]],
-  ['utc_5foffset_5f_70',['utc_offset_',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::strategy::SessionWindow']]]
+  ['update_62',['update',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#ab0f5d98e8efc47fae3eedf0e92c98e37',1,'algotradelib::backtest::ReplayLedger']]],
+  ['updated_63',['UPDATED',['../namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5',1,'algotradelib::runner']]],
+  ['updated_64',['updated',['../structalgotradelib_1_1runner_1_1IterationReport.html#a2b5fc30a64932dd8fc11e1bb856739f7',1,'algotradelib::runner::IterationReport']]],
+  ['upper_65',['UPPER',['../namespacealgotradelib_1_1math.html#ae41e9f1ac77ac442bda62501ad784a67',1,'algotradelib::math']]],
+  ['upper_5f_66',['upper_',['../structalgotradelib_1_1analytics_1_1BollingerBands.html#a547c0014d1dfdae68bff6f211903abf7',1,'algotradelib::analytics::BollingerBands::upper_'],['../structalgotradelib_1_1PriceLimits.html#abcfd43223abc343c639ca1f3d58d59b8',1,'algotradelib::PriceLimits::upper_']]],
+  ['usable_5fburst_67',['usable_burst',['../namespacealgotradelib_1_1network.html#a3acbcbad72597790e84e409ed51ff185',1,'algotradelib::network']]],
+  ['usd_68',['usd',['../classalgotradelib_1_1Currency.html#a13193725796b2649f3789b616fa6d53b',1,'algotradelib::Currency']]],
+  ['user_20guide_69',['User guide',['../guide.html',1,'']]],
+  ['using_20it_70',['Using it',['../index.html#autotoc_md8',1,'']]],
+  ['utc_5foffset_5f_71',['utc_offset_',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::strategy::SessionWindow']]]
 ];

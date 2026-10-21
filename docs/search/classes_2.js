@@ -16,9 +16,10 @@ var searchData=
   ['commissionpolicy_13',['CommissionPolicy',['../classalgotradelib_1_1backtest_1_1CommissionPolicy.html',1,'algotradelib::backtest']]],
   ['commissionrate_14',['CommissionRate',['../structalgotradelib_1_1CommissionRate.html',1,'algotradelib']]],
   ['commissionschedule_15',['CommissionSchedule',['../structalgotradelib_1_1CommissionSchedule.html',1,'algotradelib']]],
-  ['context_16',['Context',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
-  ['context_3c_20drytag_2c_20strategy_3a_3anocaps_20_3e_17',['Context&lt; DryTag, strategy::NoCaps &gt;',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
-  ['context_3c_20tag_2c_20strategy_3a_3anocaps_20_3e_18',['Context&lt; Tag, strategy::NoCaps &gt;',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
-  ['crossing_19',['Crossing',['../structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html',1,'algotradelib::strategy::vanilla']]],
-  ['currency_20',['Currency',['../classalgotradelib_1_1Currency.html',1,'algotradelib']]]
+  ['const_5fiterator_16',['const_iterator',['../classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue_1_1const__iterator.html',1,'algotradelib::backtest::QueueingExecutor::Queue']]],
+  ['context_17',['Context',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
+  ['context_3c_20drytag_2c_20strategy_3a_3anocaps_20_3e_18',['Context&lt; DryTag, strategy::NoCaps &gt;',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
+  ['context_3c_20tag_2c_20strategy_3a_3anocaps_20_3e_19',['Context&lt; Tag, strategy::NoCaps &gt;',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
+  ['crossing_20',['Crossing',['../structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html',1,'algotradelib::strategy::vanilla']]],
+  ['currency_21',['Currency',['../classalgotradelib_1_1Currency.html',1,'algotradelib']]]
 ];

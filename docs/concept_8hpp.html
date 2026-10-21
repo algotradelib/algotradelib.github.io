@@ -229,6 +229,7 @@ Functions</h2></td></tr>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_stop(Ctx&amp; ctx);</div>
 <div class="line">};</div>
 </div><!-- fragment --><p><span class="tt">on_bar</span> receives one bar at a time. A strategy that decides on several instruments together (a pair's hedge ratio, a ranking across a universe) declares instead <span class="tt">template &lt;class Ctx&gt; void on_bars(Ctx&amp; ctx, const BarSlice&amp; slice);</span>, called once per period end and interval with every instrument's bar for it, after all of them are cached. A strategy declares one of the two; declaring both does not compile, so neither runs in silence beside the other.</p>
+<p>With a linear algebra backend, a runner keeps each instrument's trailing bars for <span class="tt">ctx.bars()</span>. A strategy that never calls it, from any handler or anything a handler calls, may declare <span class="tt">static constexpr bool reads_bar_history = false;</span>: its runners, live and replay, then keep none, and <span class="tt">ctx.bars()</span> throws <span class="tt">std::logic_error</span>. Bars are still delivered, warm-up included, and a bar not later than its series' last is still refused. A derived strategy inherits the declaration; one that reads the history declares <span class="tt">true</span>. Without the declaration the history is kept.</p>
 <p>Because the handlers are templates, the same strategy runs under every runner: a dry run, a live session with any broker, and a backtest. Take the context by reference; a context cannot be copied, so a handler that takes it by value does not compile.</p>
 <dl class="section warning"><dt>Warning</dt><dd><span class="tt">on_fill</span> is called in a backtest but never by the shipped live loop; see <span class="tt">Fill</span>. </dd></dl>
 
@@ -256,7 +257,7 @@ Functions</h2></td></tr>
 <div class="line">  <a class="code hl_variable" href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">::algotradelib::strategy::StrategyConformance&lt;S, Ctx&gt;::value</a>,                         \</div>
 <div class="line">  <span class="stringliteral">&quot;Strategy does not satisfy the algotradelib strategy surface; see the messages above&quot;</span> \</div>
 <div class="line">)</div>
-<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00691">concept.hpp:691</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00737">concept.hpp:737</a></div></div>
 </div><!-- fragment -->
 <p>Asserts at compile time that <span class="tt">S</span> is a strategy a runner with context <span class="tt">Ctx</span> can drive. </p>
 <p>Checks that:</p><ul>
@@ -275,7 +276,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Not detected: a handler that takes by value a copyable base class of the context. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00712">712</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00758">758</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +312,7 @@ Functions</h2></td></tr>
 <p>Handlers are optional, so something has to decide whether to call one, and this is it: a declared name is called, and a call that does not compile is the compiler's error at the call (see <span class="tt">dispatch</span>). The name is what the author wrote; asking instead whether a particular call compiles would read a handler with a wrong parameter as absent and skip it in silence. Looking NAME up in a class that derives from <span class="tt">S</span> and from one declaring <span class="tt">int NAME</span> is ambiguous exactly when <span class="tt">S</span> declares it, which works for a member template, where <span class="tt">&amp;S::NAME</span> cannot name one.</p>
 <p><b>A <span class="tt">final</span> class cannot be derived from</b>, and a non-class type has no members, so neither can be looked into; <span class="tt">dispatch</span> and <span class="tt">StrategyConformance</span> refuse both rather than read them as declaring nothing. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00068">68</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00075">75</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>

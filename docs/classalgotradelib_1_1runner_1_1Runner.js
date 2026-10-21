@@ -102,5 +102,6 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "journals_to_a_broker", "classalgotradelib_1_1runner_1_1Runner.html#a1696453a3bd5830cfb37c83ea08fd0c9", null ],
     [ "keeps_sent_orders_until_listed", "classalgotradelib_1_1runner_1_1Runner.html#ae668d14d931ae5161cd54fe2b8238b18", null ],
     [ "on_fill_never_fires", "classalgotradelib_1_1runner_1_1Runner.html#a1cd4fdfee878b67f6bb50a449f45e678", null ],
+    [ "records_bar_history", "classalgotradelib_1_1runner_1_1Runner.html#abc303e6ed583197c1b422bb3c095f589", null ],
     [ "takes_bar_slices", "classalgotradelib_1_1runner_1_1Runner.html#a76eee3bb2ff0f70afe7df9ac1f96fc92", null ]
 ];

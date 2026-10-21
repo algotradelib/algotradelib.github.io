@@ -193,7 +193,7 @@ struct algotradelib::strategy::Portfolio&lt; Broker &gt;</div><p>What the accoun
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00050">50</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00082">82</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a3f537fca9e4c614d6c1b6e23d37a28bb" name="a3f537fca9e4c614d6c1b6e23d37a28bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f537fca9e4c614d6c1b6e23d37a28bb">&#9670;&#160;</a></span>buying_power_in()</h2>
@@ -230,7 +230,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount, or <span class="tt">std::nullopt</span> if unknown (not read, or the broker refused), which is not the same as zero. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00270">270</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00283">283</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
@@ -270,7 +270,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount, or <span class="tt">std::nullopt</span> if none is recorded (always, live). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00252">252</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00265">265</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +308,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer into <span class="tt"><a class="el" href="#a1c36c7bd2f875d05393065fde7471f57" title="Orders still outstanding at the broker.">working_</a></span>, or <span class="tt">nullptr</span> if no working order has that reference. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00304">304</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00317">317</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +341,7 @@ template&lt;typename Broker&gt; </div>
 <p>Then a resting buy that filled between the two reads appears in neither, and the portfolio under-counts the position. The runner withholds a plan sized against such a portfolio (<span class="tt">WithheldPlanReason::PORTFOLIO_SUPERSEDED</span>).</p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if both are stamped and the listing arrived after the holdings. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00101">101</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00133">133</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
 </div>
 </div>
@@ -380,9 +380,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The sum, which is zero when no row matches; <span class="tt">std::nullopt</span> only if the sum overflowed (a broken snapshot, which must not be treated as flat). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00140">140</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00172">172</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">algotradelib::strategy::closes_toward_flat()</a>, and <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -421,7 +421,7 @@ template&lt;typename Broker&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The first matching row's quantity, or <span class="tt">std::nullopt</span> if no row matches. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>A holding can be split across rows. To size an order, or to ask whether anything is held, use <span class="tt"><a class="el" href="#a4d3c56d4bb47d36009f47bc4a630c3f8" title="Returns the net quantity held of an instrument, summed over every row.">net_quantity_of</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00122">122</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00154">154</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The first matching row's figure, or <span class="tt">std::nullopt</span> if the broker gave none or there is no position. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00290">290</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00303">303</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
 </div>
 </div>
@@ -499,7 +499,7 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The figure and its basis. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00209">209</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00222">222</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, and <a class="el" href="sellable__convention_8hpp_source.html#l00110">algotradelib::strategy::SellableConventionProbe&lt; Broker &gt;::observe()</a>.</p>
 
@@ -545,9 +545,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The remaining quantity, zero if there is none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00165">165</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00192">192</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -569,9 +569,9 @@ template&lt;typename Broker&gt; </div>
 <p>When the holdings were received, on this machine's clock. </p>
 <p>Brokers do not timestamp holdings, so this is when the reply arrived, not when the figures were true. Staleness checks measure against it. </p>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00084">84</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00116">116</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00101">listing_newer_than_holdings()</a>, and <a class="el" href="ledger_8hpp_source.html#l00389">algotradelib::backtest::ReplayLedger::snapshot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00133">listing_newer_than_holdings()</a>, <a class="el" href="ledger_8hpp_source.html#l00517">algotradelib::backtest::ReplayLedger::snapshot()</a>, and <a class="el" href="ledger_8hpp_source.html#l00562">algotradelib::backtest::ReplayLedger::update()</a>.</p>
 
 </div>
 </div>
@@ -592,9 +592,9 @@ template&lt;typename Broker&gt; </div>
 <p>What may be spent, per currency. </p>
 <p>Live, the broker's figure; in a backtest, the ledger's modelled cash (the backtest report says so). Empty means no figure was read, which is not the same as zero; see <span class="tt"><a class="el" href="structalgotradelib_1_1BuyingPower.html" title="What the broker says may be spent, in one currency.">BuyingPower</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00071">71</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00103">103</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00270">buying_power_in()</a>, and <a class="el" href="ledger_8hpp_source.html#l00389">algotradelib::backtest::ReplayLedger::snapshot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00283">buying_power_in()</a>, <a class="el" href="ledger_8hpp_source.html#l00517">algotradelib::backtest::ReplayLedger::snapshot()</a>, and <a class="el" href="ledger_8hpp_source.html#l00562">algotradelib::backtest::ReplayLedger::update()</a>.</p>
 
 </div>
 </div>
@@ -615,9 +615,9 @@ template&lt;typename Broker&gt; </div>
 <p>Cash per currency, in a backtest only. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Only the backtest ledger fills this; live it stays empty, so <span class="tt"><a class="el" href="#ac266bd31431563c54c0c48dd6d67749c" title="Returns the cash held in a currency (backtest only; see cash_).">cash_in</a></span> returns a number in a backtest and <span class="tt">std::nullopt</span> live for the same strategy. To size against money, read <span class="tt"><a class="el" href="#ab005d9ac52f23eaa8ace153e858d72f9" title="What may be spent, per currency.">buying_power_</a></span> instead. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00064">64</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00096">96</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00252">cash_in()</a>, and <a class="el" href="ledger_8hpp_source.html#l00389">algotradelib::backtest::ReplayLedger::snapshot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00265">cash_in()</a>, <a class="el" href="ledger_8hpp_source.html#l00517">algotradelib::backtest::ReplayLedger::snapshot()</a>, and <a class="el" href="ledger_8hpp_source.html#l00562">algotradelib::backtest::ReplayLedger::update()</a>.</p>
 
 </div>
 </div>
@@ -638,9 +638,9 @@ template&lt;typename Broker&gt; </div>
 <p>Every position row the broker reported. </p>
 <p>One instrument may appear in more than one row; size a holding with <span class="tt"><a class="el" href="#a4d3c56d4bb47d36009f47bc4a630c3f8" title="Returns the net quantity held of an instrument, summed over every row.">net_quantity_of</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00056">56</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00088">88</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00140">net_quantity_of()</a>, <a class="el" href="sellable__convention_8hpp_source.html#l00110">algotradelib::strategy::SellableConventionProbe&lt; Broker &gt;::observe()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="portfolio_8hpp_source.html#l00122">quantity_of()</a>, <a class="el" href="portfolio_8hpp_source.html#l00290">sellable_quantity_of()</a>, <a class="el" href="portfolio_8hpp_source.html#l00209">sellable_reading_for()</a>, and <a class="el" href="ledger_8hpp_source.html#l00389">algotradelib::backtest::ReplayLedger::snapshot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00172">net_quantity_of()</a>, <a class="el" href="sellable__convention_8hpp_source.html#l00110">algotradelib::strategy::SellableConventionProbe&lt; Broker &gt;::observe()</a>, <a class="el" href="portfolio_8hpp_source.html#l00351">algotradelib::strategy::PortfolioRows::PortfolioRows()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="portfolio_8hpp_source.html#l00154">quantity_of()</a>, <a class="el" href="portfolio_8hpp_source.html#l00303">sellable_quantity_of()</a>, <a class="el" href="portfolio_8hpp_source.html#l00222">sellable_reading_for()</a>, <a class="el" href="ledger_8hpp_source.html#l00517">algotradelib::backtest::ReplayLedger::snapshot()</a>, and <a class="el" href="ledger_8hpp_source.html#l00562">algotradelib::backtest::ReplayLedger::update()</a>.</p>
 
 </div>
 </div>
@@ -661,9 +661,9 @@ template&lt;typename Broker&gt; </div>
 <p>What the <span class="tt">sellable_quantity_</span> figures on <span class="tt"><a class="el" href="#ae9b4f557cb857493d1cf97e08e0a31ed" title="Every position row the broker reported.">positions_</a></span> cover. </p>
 <p>Set by whatever filled the positions. <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1RiskGuard.html" title="Checks planned orders against RiskLimits, holds trading stopped, and counts orders sent.">RiskGuard</a></span> refuses to measure a sell against a figure whose basis is unestablished, which is the default, so a hand-built portfolio refuses checked sells until this is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00112">112</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00144">144</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00209">sellable_reading_for()</a>, and <a class="el" href="ledger_8hpp_source.html#l00389">algotradelib::backtest::ReplayLedger::snapshot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00222">sellable_reading_for()</a>, <a class="el" href="ledger_8hpp_source.html#l00517">algotradelib::backtest::ReplayLedger::snapshot()</a>, and <a class="el" href="ledger_8hpp_source.html#l00562">algotradelib::backtest::ReplayLedger::update()</a>.</p>
 
 </div>
 </div>
@@ -684,9 +684,9 @@ template&lt;typename Broker&gt; </div>
 <p>Orders still outstanding at the broker. </p>
 <p>Use <span class="tt"><a class="el" href="#a752878bec483a24a72f0fdd69b2cf10f" title="Returns the quantity still to fill on open orders for an instrument and side.">working_quantity</a></span> to sum what is still to fill. </p>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00077">77</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00109">109</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="portfolio_8hpp_source.html#l00304">find_working()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00489">algotradelib::strategy::reconcile()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00165">working_quantity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00619">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="portfolio_8hpp_source.html#l00317">find_working()</a>, <a class="el" href="portfolio_8hpp_source.html#l00351">algotradelib::strategy::PortfolioRows::PortfolioRows()</a>, <a class="el" href="risk_8hpp_source.html#l00432">algotradelib::strategy::projected_gross_exposure()</a>, and <a class="el" href="portfolio_8hpp_source.html#l00192">working_quantity()</a>.</p>
 
 </div>
 </div>
@@ -707,9 +707,9 @@ template&lt;typename Broker&gt; </div>
 <p>When the working-order listing was received, on the same clock as <span class="tt"><a class="el" href="#ad1f049a2b1d849f470fd8f35170ef14c" title="When the holdings were received, on this machine&#39;s clock.">as_of_</a></span>. </p>
 <p>Set by a live source; the epoch (the default) means no stamped listing, as in a backtest. </p>
 
-<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00090">90</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00122">122</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00101">listing_newer_than_holdings()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="portfolio_8hpp_source.html#l00133">listing_newer_than_holdings()</a>.</p>
 
 </div>
 </div>

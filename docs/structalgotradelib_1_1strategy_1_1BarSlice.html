@@ -146,7 +146,7 @@ Public Attributes</h2></td></tr>
 <p>A runner calls <span class="tt">on_bars</span> once per period end and interval, after every bar of that period has been fed: cached (with a linear algebra backend, so <span class="tt">ctx.bars(id, interval_)</span> ends at <span class="tt"><a class="el" href="#a488487af58dfa58bb304cbb568690018" title="When the period ended, shared by every bar in bars_.">period_end_</a></span> for each instrument here), priced and clocked. An instrument with no bar for the period is absent; there is no deadline and no placeholder. Several intervals ending at the same instant give one slice each.</p>
 <p>The slice is valid only during the call. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00299">299</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00341">341</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aed8e11b57e8e17155c6bfa7150eda792" name="aed8e11b57e8e17155c6bfa7150eda792"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed8e11b57e8e17155c6bfa7150eda792">&#9670;&#160;</a></span>find()</h2>
@@ -172,6 +172,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Finds an instrument's bar. </p>
+<p>The slice a runner hands to <span class="tt">on_bars</span> finds it by hash; a copy, a move, or a slice built by its holder, by a scan.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>The instrument. </td></tr>
@@ -180,7 +181,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Its bar, or <span class="tt">nullptr</span> if it has none for this period. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00312">312</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00358">358</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,9 +200,9 @@ Public Attributes</h2></td></tr>
 
 <p>The bars, one per instrument, in the order they were fed. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00305">305</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00347">347</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00312">find()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00358">find()</a>.</p>
 
 </div>
 </div>
@@ -219,7 +220,7 @@ Public Attributes</h2></td></tr>
 
 <p>The period length every bar in <span class="tt"><a class="el" href="#af52e079b4ec9a59de14c12d1e26ff8fd" title="The bars, one per instrument, in the order they were fed.">bars_</a></span> covers. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00303">303</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00345">345</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -237,7 +238,7 @@ Public Attributes</h2></td></tr>
 
 <p>When the period ended, shared by every bar in <span class="tt"><a class="el" href="#af52e079b4ec9a59de14c12d1e26ff8fd" title="The bars, one per instrument, in the order they were fed.">bars_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00301">301</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00343">343</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>

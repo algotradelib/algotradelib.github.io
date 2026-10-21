@@ -9,6 +9,7 @@ var classalgotradelib_1_1runner_1_1Context =
     [ "calendar", "classalgotradelib_1_1runner_1_1Context.html#a357e44e54b4e71b5a52bb452b7fe40ba", null ],
     [ "cancel", "classalgotradelib_1_1runner_1_1Context.html#aa0884d4dc6c372d769003f10a84b8c86", null ],
     [ "drain", "classalgotradelib_1_1runner_1_1Context.html#acf03a51744333c26dabac2fca15e7d56", null ],
+    [ "find_instrument", "classalgotradelib_1_1runner_1_1Context.html#a68647478215386b5abcc0a11f3882731", null ],
     [ "instrument", "classalgotradelib_1_1runner_1_1Context.html#a38a964fd3f30ab0c2280d800e2961f63", null ],
     [ "last_price", "classalgotradelib_1_1runner_1_1Context.html#a11f88b92e9e718dd924929c1ebe5fa7c", null ],
     [ "log", "classalgotradelib_1_1runner_1_1Context.html#a409ea09c485666df3f5b01b56b44a59d", null ],

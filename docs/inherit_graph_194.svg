@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1strategy_1_1QuoteEvent.html" target="_top" xlink:title="A quote the runner has just read, delivered to on_quote.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1strategy_1_1PortfolioRows_1_1Rows.html" target="_top" xlink:title="Where one instrument&#39;s rows are.">
 <polygon fill="white" stroke="#666666" points="122,-30 0,-30 0,0 122,0 122,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::strategy</text>
-<text text-anchor="middle" x="61" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::QuoteEvent</text>
+<text text-anchor="middle" x="61" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::PortfolioRows::Rows</text>
 </a>
 </g>
 </g>

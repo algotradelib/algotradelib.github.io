@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1backtest_1_1CommissionModel.html" target="_top" xlink:title="A flat commission: a rate on traded value, with an optional per&#45;execution minimum.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1backtest_1_1CommissionCharge.html" target="_top" xlink:title="What one execution was charged: the broker&#39;s commission and the institution fee.">
 <polygon fill="white" stroke="#666666" points="123,-30 0,-30 0,0 123,0 123,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::backtest</text>
-<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::CommissionModel</text>
+<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::CommissionCharge</text>
 </a>
 </g>
 </g>

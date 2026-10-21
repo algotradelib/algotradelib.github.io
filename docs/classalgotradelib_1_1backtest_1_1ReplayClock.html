@@ -146,6 +146,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a047a55c4cc97bf067f7f1df8d31012a7" id="r_a047a55c4cc97bf067f7f1df8d31012a7"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a047a55c4cc97bf067f7f1df8d31012a7">contiguous</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">strategy::BarEvent</a> &amp;previous, const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">strategy::BarEvent</a> &amp;event)</td></tr>
 <tr class="memdesc:a047a55c4cc97bf067f7f1df8d31012a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a bar follows the previous one with no gap.  <br /></td></tr>
+<tr class="memitem:a7c7ff1f337171934fb22489d0a85e32a" id="r_a7c7ff1f337171934fb22489d0a85e32a"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a7c7ff1f337171934fb22489d0a85e32a">contiguous</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> previous_interval, std::chrono::system_clock::time_point previous_end, const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">strategy::BarEvent</a> &amp;event)</td></tr>
+<tr class="memdesc:a7c7ff1f337171934fb22489d0a85e32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">As <span class="tt">contiguous(previous, event)</span>, given only what it reads of the previous bar.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A backtest's clock: the current instant and market phase, moved by the replayed events. </p>
@@ -274,8 +276,55 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7c7ff1f337171934fb22489d0a85e32a" name="a7c7ff1f337171934fb22489d0a85e32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c7ff1f337171934fb22489d0a85e32a">&#9670;&#160;</a></span>contiguous() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::backtest::ReplayClock::contiguous </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a></td>          <td class="paramname"><span class="paramname"><em>previous_interval</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::chrono::system_clock::time_point</td>          <td class="paramname"><span class="paramname"><em>previous_end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">strategy::BarEvent</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>As <span class="tt">contiguous(previous, event)</span>, given only what it reads of the previous bar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">previous_interval</td><td>The previous bar's interval. </td></tr>
+    <tr><td class="paramname">previous_end</td><td>The previous bar's period end. </td></tr>
+    <tr><td class="paramname">event</td><td>The bar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the bar follows the previous one without a gap. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00162">162</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a047a55c4cc97bf067f7f1df8d31012a7" name="a047a55c4cc97bf067f7f1df8d31012a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a047a55c4cc97bf067f7f1df8d31012a7">&#9670;&#160;</a></span>contiguous()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a047a55c4cc97bf067f7f1df8d31012a7">&#9670;&#160;</a></span>contiguous() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +362,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00148">148</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00517">algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;::feed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00148">contiguous()</a>, and <a class="el" href="engine_8hpp_source.html#l00833">algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;::feed()</a>.</p>
 
 </div>
 </div>

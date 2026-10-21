@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1runner_1_1ChargedCosts.html" target="_top" xlink:title="Commission and tax the broker stated on the orders a loop happened to poll (Toss states them; KIS doe...">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1runner_1_1BarEvent.html" target="_top" xlink:title="One bar, delivered to on_bar.">
 <polygon fill="white" stroke="#666666" points="113,-30 0,-30 0,0 113,0 113,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::runner</text>
-<text text-anchor="middle" x="56.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::ChargedCosts</text>
+<text text-anchor="middle" x="56.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::BarEvent</text>
 </a>
 </g>
 </g>

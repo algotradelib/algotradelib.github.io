@@ -28,7 +28,7 @@ var searchData=
   ['any_5fplacement_25',['any_placement',['../namespacealgotradelib_1_1runner.html#a1931daae388f0dde909f7cf685a36b16',1,'algotradelib::runner']]],
   ['append_26',['append',['../classalgotradelib_1_1runner_1_1FileJournal.html#a36458d76e312e78ad44c6810cefbcb50',1,'algotradelib::runner::FileJournal::append()'],['../classalgotradelib_1_1runner_1_1MemoryJournal.html#a5bcc8706adb5ac02e5eb8c2d2a0ac66a',1,'algotradelib::runner::MemoryJournal::append()']]],
   ['applies_5fon_27',['applies_on',['../structalgotradelib_1_1CommissionRate.html#a64cfb67dd7cb2780831d73b325425765',1,'algotradelib::CommissionRate']]],
-  ['apply_28',['apply',['../structalgotradelib_1_1backtest_1_1SlippageModel.html#ad4ed4a4618e424b1361e151d2b4ea79d',1,'algotradelib::backtest::SlippageModel::apply()'],['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#ae9e1b7bca269ab37bd4a4fdab68b4106',1,'algotradelib::backtest::ReplayLedger::apply()']]],
+  ['apply_28',['apply',['../structalgotradelib_1_1backtest_1_1SlippageModel.html#ad4ed4a4618e424b1361e151d2b4ea79d',1,'algotradelib::backtest::SlippageModel::apply()'],['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#afa633a10913d45bff88f6d0191b8124e',1,'algotradelib::backtest::ReplayLedger::apply()']]],
   ['as_5fnotional_29',['as_notional',['../classalgotradelib_1_1strategy_1_1SizeSpec.html#ad4c3f2cf9391ab371e89ddcd95fa6258',1,'algotradelib::strategy::SizeSpec']]],
   ['as_5fquantity_30',['as_quantity',['../classalgotradelib_1_1strategy_1_1SizeSpec.html#a6eaa5fb8e55cad540743a7016bf42747',1,'algotradelib::strategy::SizeSpec']]],
   ['as_5ftarget_5fweight_31',['as_target_weight',['../classalgotradelib_1_1strategy_1_1SizeSpec.html#a1dcca06b08c166bcd3b98d90845d6583',1,'algotradelib::strategy::SizeSpec']]],

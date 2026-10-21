@@ -14,11 +14,12 @@ var searchData=
   ['portfolio_3c_20brokertag_20_3e_11',['Portfolio&lt; BrokerTag &gt;',['../structalgotradelib_1_1strategy_1_1Portfolio.html',1,'algotradelib::strategy']]],
   ['portfolio_3c_20drytag_20_3e_12',['Portfolio&lt; DryTag &gt;',['../structalgotradelib_1_1strategy_1_1Portfolio.html',1,'algotradelib::strategy']]],
   ['portfolio_3c_20tag_20_3e_13',['Portfolio&lt; Tag &gt;',['../structalgotradelib_1_1strategy_1_1Portfolio.html',1,'algotradelib::strategy']]],
-  ['price_14',['Price',['../classalgotradelib_1_1strategy_1_1Price.html',1,'algotradelib::strategy']]],
-  ['pricelimits_15',['PriceLimits',['../structalgotradelib_1_1PriceLimits.html',1,'algotradelib']]],
-  ['pricerule_16',['PriceRule',['../structalgotradelib_1_1PriceRule.html',1,'algotradelib']]],
-  ['probebroker_17',['ProbeBroker',['../structalgotradelib_1_1strategy_1_1ProbeBroker.html',1,'algotradelib::strategy']]],
-  ['probecontextt_18',['ProbeContextT',['../classalgotradelib_1_1strategy_1_1ProbeContextT.html',1,'algotradelib::strategy']]],
-  ['probecontextt_3c_20allcaps_20_3e_19',['ProbeContextT&lt; AllCaps &gt;',['../classalgotradelib_1_1strategy_1_1ProbeContextT.html',1,'algotradelib::strategy']]],
-  ['probecontextt_3c_20nocaps_20_3e_20',['ProbeContextT&lt; NoCaps &gt;',['../classalgotradelib_1_1strategy_1_1ProbeContextT.html',1,'algotradelib::strategy']]]
+  ['portfoliorows_14',['PortfolioRows',['../classalgotradelib_1_1strategy_1_1PortfolioRows.html',1,'algotradelib::strategy']]],
+  ['price_15',['Price',['../classalgotradelib_1_1strategy_1_1Price.html',1,'algotradelib::strategy']]],
+  ['pricelimits_16',['PriceLimits',['../structalgotradelib_1_1PriceLimits.html',1,'algotradelib']]],
+  ['pricerule_17',['PriceRule',['../structalgotradelib_1_1PriceRule.html',1,'algotradelib']]],
+  ['probebroker_18',['ProbeBroker',['../structalgotradelib_1_1strategy_1_1ProbeBroker.html',1,'algotradelib::strategy']]],
+  ['probecontextt_19',['ProbeContextT',['../classalgotradelib_1_1strategy_1_1ProbeContextT.html',1,'algotradelib::strategy']]],
+  ['probecontextt_3c_20allcaps_20_3e_20',['ProbeContextT&lt; AllCaps &gt;',['../classalgotradelib_1_1strategy_1_1ProbeContextT.html',1,'algotradelib::strategy']]],
+  ['probecontextt_3c_20nocaps_20_3e_21',['ProbeContextT&lt; NoCaps &gt;',['../classalgotradelib_1_1strategy_1_1ProbeContextT.html',1,'algotradelib::strategy']]]
 ];

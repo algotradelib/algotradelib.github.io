@@ -130,12 +130,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('engine_8hpp.ht
 <code>#include &quot;../runner/order_updates.hpp&quot;</code><br />
 <code>#include &quot;../runner/runner.hpp&quot;</code><br />
 <code>#include &lt;algotradelib/core&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;charconv&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" class="dynheader closed"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for engine.hpp:</div>
@@ -159,14 +163,20 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One order a replay accepted and has not yet filled or withdrawn.  <a href="structalgotradelib_1_1backtest_1_1QueuedOrder.html#details">More...</a><br /></td></tr>
 <tr class="memitem:algotradelib_3A_3Abacktest_3A_3AQueueingExecutor_3C_20BrokerTag_20_3E" id="r_algotradelib_3A_3Abacktest_3A_3AQueueingExecutor_3C_20BrokerTag_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html">algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The replay's executor: accepts orders and holds them until they fill or are withdrawn.  <a href="classalgotradelib_1_1backtest_1_1QueueingExecutor.html#details">More...</a><br /></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3AQueueingExecutor_3C_20BrokerTag_20_3E_3A_3AQueue" id="r_algotradelib_3A_3Abacktest_3A_3AQueueingExecutor_3C_20BrokerTag_20_3E_3A_3AQueue"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html">algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;::Queue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every outstanding order, oldest first: a view over the queue, valid until the queue changes.  <a href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html#details">More...</a><br /></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3AQueueingExecutor_3C_20BrokerTag_20_3E_3A_3AQueue_3A_3Aconst_5Fiterator" id="r_algotradelib_3A_3Abacktest_3A_3AQueueingExecutor_3C_20BrokerTag_20_3E_3A_3AQueue_3A_3Aconst_5Fiterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue_1_1const__iterator.html">algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;::Queue::const_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Walks the outstanding orders, oldest first.  <a href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue_1_1const__iterator.html#details">More...</a><br /></td></tr>
 <tr class="memitem:algotradelib_3A_3Abacktest_3A_3AEquityPoint" id="r_algotradelib_3A_3Abacktest_3A_3AEquityPoint"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1EquityPoint.html">algotradelib::backtest::EquityPoint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One point on a replay's equity curve, recorded per bar.  <a href="structalgotradelib_1_1backtest_1_1EquityPoint.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One point on a replay's equity curve: per period end, or per bar (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2" title="Which points a replay records on its equity curve (ReplayResult::equity_); see ReplayConfig::equity_c...">EquityCurve</a></span>).  <a href="structalgotradelib_1_1backtest_1_1EquityPoint.html#details">More...</a><br /></td></tr>
 <tr class="memitem:algotradelib_3A_3Abacktest_3A_3AReplayResult" id="r_algotradelib_3A_3Abacktest_3A_3AReplayResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">algotradelib::backtest::ReplayResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Everything a replay produced; <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> turns it into a <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html" title="The summary of a replay; read halted_ and caveats_ before the figures.">Report</a></span>.  <a href="structalgotradelib_1_1backtest_1_1ReplayResult.html#details">More...</a><br /></td></tr>
 <tr class="memitem:algotradelib_3A_3Abacktest_3A_3AReplayConfig" id="r_algotradelib_3A_3Abacktest_3A_3AReplayConfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html">algotradelib::backtest::ReplayConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A replay's settings, besides the strategy and the bars.  <a href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#details">More...</a><br /></td></tr>
 <tr class="memitem:algotradelib_3A_3Abacktest_3A_3ABacktester_3C_20Strategy_2C_20CapsType_20_3E" id="r_algotradelib_3A_3Abacktest_3A_3ABacktester_3C_20Strategy_2C_20CapsType_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html">algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replays bars (and quotes) through one strategy, with a ledger and a fill model.  <a href="classalgotradelib_1_1backtest_1_1Backtester.html#details">More...</a><br /></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3ABacktester_3C_20Strategy_2C_20CapsType_20_3E_3A_3AInstrumentSlot_3A_3AByInterval" id="r_algotradelib_3A_3Abacktest_3A_3ABacktester_3C_20Strategy_2C_20CapsType_20_3E_3A_3AInstrumentSlot_3A_3AByInterval"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html">algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;::InstrumentSlot::ByInterval</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What is kept per interval of the instrument.  <a href="structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -174,6 +184,14 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacealgotradelib"><td class="mdescLeft">&#160;</td><td class="mdescRight">The library: broker-neutral types (<span class="tt">core</span>), and the modules below. <br /></td></tr>
 <tr class="memitem:algotradelib_3A_3Abacktest" id="r_algotradelib_3A_3Abacktest"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html">algotradelib::backtest</a></td></tr>
 <tr class="memdesc:namespacealgotradelib_1_1backtest"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replays a strategy over stored bars: fill and cost models, the replay ledger, and the report. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a5ae8ac3ad807ec038186d36b1d1e60c2" id="r_a5ae8ac3ad807ec038186d36b1d1e60c2"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2">algotradelib::backtest::EquityCurve</a> { <a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96">algotradelib::backtest::PER_PERIOD</a>
+, <a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23">algotradelib::backtest::PER_BAR</a>
+, <a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2ab50339a10e1de285ac99d4c3990b8693">algotradelib::backtest::NONE</a>
+ }</td></tr>
+<tr class="memdesc:a5ae8ac3ad807ec038186d36b1d1e60c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which points a replay records on its equity curve (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#af42c0b72cc2819675d1aad1e93203396" title="The equity curve, in order: one point per period end, or per bar, or none (ReplayConfig::equity_curve...">ReplayResult::equity_</a></span>); see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a3c979493ca8c7d9940223b5ae3e26220" title="Which points the equity curve records: one per period end (the default), one per bar,...">ReplayConfig::equity_curve_</a></span>.  <a href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The backtest engine: <span class="tt">Backtester</span> replays bars (and quotes) through the same <span class="tt">Runner</span> a live session uses. </p>

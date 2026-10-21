@@ -146,14 +146,16 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ade8215df12bb493eb9dba669fe037700" id="r_ade8215df12bb493eb9dba669fe037700"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">strategy::SessionWindow</a>&#160;</td><td class="memItemRight"><a class="el" href="#ade8215df12bb493eb9dba669fe037700">session_</a> {<a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2">strategy::SessionWindow::krx</a>()}</td></tr>
 <tr class="memdesc:ade8215df12bb493eb9dba669fe037700"><td class="mdescLeft">&#160;</td><td class="mdescRight">The session window phases are derived from and <span class="tt">DAY</span> orders expire at; one for the whole replay.  <br /></td></tr>
 <tr class="memitem:abc96e62f4c4ec05da2bb0d2d7a95366c" id="r_abc96e62f4c4ec05da2bb0d2d7a95366c"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abc96e62f4c4ec05da2bb0d2d7a95366c">series_capacity_</a> {512}</td></tr>
-<tr class="memdesc:abc96e62f4c4ec05da2bb0d2d7a95366c"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many trailing bars the context caches per series, for indicators; must be positive.  <br /></td></tr>
+<tr class="memdesc:abc96e62f4c4ec05da2bb0d2d7a95366c"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many trailing bars the context caches per series, for indicators; must be positive. Unused for a strategy declaring <span class="tt">reads_bar_history = false</span>, which keeps none.  <br /></td></tr>
+<tr class="memitem:a3c979493ca8c7d9940223b5ae3e26220" id="r_a3c979493ca8c7d9940223b5ae3e26220"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2">EquityCurve</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3c979493ca8c7d9940223b5ae3e26220">equity_curve_</a> {<a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96">EquityCurve::PER_PERIOD</a>}</td></tr>
+<tr class="memdesc:a3c979493ca8c7d9940223b5ae3e26220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which points the equity curve records: one per period end (the default), one per bar, or none.  <br /></td></tr>
 <tr class="memitem:aace3b50bb7369dc3ff803080cfcd553c" id="r_aace3b50bb7369dc3ff803080cfcd553c"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1TradingCalendar.html">TradingCalendar</a>&#160;</td><td class="memItemRight"><a class="el" href="#aace3b50bb7369dc3ff803080cfcd553c">calendar_</a></td></tr>
 <tr class="memdesc:aace3b50bb7369dc3ff803080cfcd553c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The calendar <span class="tt">ctx.calendar()</span> returns, for a strategy asking about dates it has no bar for (such as whether tomorrow trades).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A replay's settings, besides the strategy and the bars. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00389">389</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00691">691</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="aace3b50bb7369dc3ff803080cfcd553c" name="aace3b50bb7369dc3ff803080cfcd553c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aace3b50bb7369dc3ff803080cfcd553c">&#9670;&#160;</a></span>calendar_</h2>
@@ -170,7 +172,7 @@ Public Attributes</h2></td></tr>
 <p>The calendar <span class="tt">ctx.calendar()</span> returns, for a strategy asking about dates it has no bar for (such as whether tomorrow trades). </p>
 <p>Empty by default. It does not change the phase of a fed bar, which comes from <span class="tt">feed</span>'s <span class="tt">trading_day</span> argument. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00415">415</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00726">726</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -188,7 +190,7 @@ Public Attributes</h2></td></tr>
 
 <p>The starting cash, in <span class="tt"><a class="el" href="#ab4530985b149ff0cd8a75d9e6399969f" title="The accounting currency; the equity curve is in this currency only.">currency_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00391">391</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00693">693</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -206,7 +208,26 @@ Public Attributes</h2></td></tr>
 
 <p>The accounting currency; the equity curve is in this currency only. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00393">393</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00695">695</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3c979493ca8c7d9940223b5ae3e26220" name="a3c979493ca8c7d9940223b5ae3e26220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c979493ca8c7d9940223b5ae3e26220">&#9670;&#160;</a></span>equity_curve_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2">EquityCurve</a> algotradelib::backtest::ReplayConfig::equity_curve_ {<a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96">EquityCurve::PER_PERIOD</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Which points the equity curve records: one per period end (the default), one per bar, or none. </p>
+<p>The bar counts (<span class="tt">overdrawn_bars_</span>, <span class="tt">unvalued_bars_</span>) are counted per bar whichever is chosen. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00718">718</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +245,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reference data for every instrument replayed; orders on an instrument without it are refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00395">395</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00697">697</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -242,7 +263,7 @@ Public Attributes</h2></td></tr>
 
 <p>The risk limits, applied as they are live. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00397">397</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00699">699</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -258,9 +279,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>How many trailing bars the context caches per series, for indicators; must be positive. </p>
+<p>How many trailing bars the context caches per series, for indicators; must be positive. Unused for a strategy declaring <span class="tt">reads_bar_history = false</span>, which keeps none. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00407">407</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00712">712</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -279,7 +300,7 @@ Public Attributes</h2></td></tr>
 <p>The session window phases are derived from and <span class="tt">DAY</span> orders expire at; one for the whole replay. </p>
 <p>Set it to the replayed market's session: US bars under the KRX default would expire orders at the KRX close. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00405">405</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00707">707</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

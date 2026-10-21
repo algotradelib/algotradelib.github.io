@@ -23,5 +23,6 @@ var searchData=
   ['brokertraits_3c_20tossinvest_3a_3atossblockingclient_20_3e_20',['BrokerTraits&lt; tossinvest::TossBlockingClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html',1,'algotradelib']]],
   ['brokertraits_3c_20tossinvest_3a_3atossclient_20_3e_21',['BrokerTraits&lt; tossinvest::TossClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html',1,'algotradelib']]],
   ['buyandhold_22',['BuyAndHold',['../structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html',1,'algotradelib::strategy::vanilla']]],
-  ['buyingpower_23',['BuyingPower',['../structalgotradelib_1_1BuyingPower.html',1,'algotradelib']]]
+  ['buyingpower_23',['BuyingPower',['../structalgotradelib_1_1BuyingPower.html',1,'algotradelib']]],
+  ['byinterval_24',['ByInterval',['../structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html',1,'algotradelib::backtest::Backtester::InstrumentSlot']]]
 ];

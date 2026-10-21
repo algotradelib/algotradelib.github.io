@@ -345,7 +345,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">DAY</span> orders withdrawn unfilled when their session ended, as they would expire live. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00195">195</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00196">196</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -363,7 +363,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>The first bar end at which cash was below zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00178">178</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00179">179</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -381,7 +381,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>The period end of the first unvalued bar, if any. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00149">149</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00150">150</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -454,7 +454,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Limit-type fills whose price was moved to stay within the bar's range and the limit (see <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a6091b7a3a9ee16fea01f3e814e6ea581ab93271a28df58ecbefb6683e648225f0" title="The default: fill at the limit, or at the bar&#39;s worst traded price when the whole bar was better than...">LimitFillPrice::AT_LIMIT</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00168">168</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00169">169</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -472,7 +472,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>The lowest cash an execution left, if it went below zero. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00180">180</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00181">181</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -490,7 +490,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>When the lowest cash was reached. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00191">191</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00192">192</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,7 +528,7 @@ Static Public Attributes</h2></td></tr>
 <p>Executions in a currency other than the equity curve's (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#ab4530985b149ff0cd8a75d9e6399969f" title="The accounting currency; the equity curve is in this currency only.">ReplayConfig::currency_</a></span>). </p>
 <p>The curve and every figure measured from it leave these out, and so does the overdraft check above. When this is nonzero and every execution is one of them, <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html#a3a69398f1d645faf248f74d094c633f0" title="The total return over the replay, as a fraction; math::undefined() when the opening equity is zero or...">Report::total_return_</a></span>, <span class="tt">sharpe_</span>, <span class="tt">annualized_sharpe_</span>, <span class="tt">sortino_</span> and <span class="tt">max_drawdown_</span> are <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">math::missing()</a></span>: the curve then holds only the opening cash, which would read as a flat result. The opening and closing equity stay the curve's. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00189">189</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00190">190</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -547,7 +547,7 @@ Static Public Attributes</h2></td></tr>
 <p>Bars that closed with cash below zero in the replay's currency: the replay borrowed, which the default limits allow. </p>
 <p>Figures measured over borrowed money are leveraged. Short sale proceeds count as cash, so leverage through shorts is not counted here. See <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb" title="Bars that closed with cash below zero in currency_ (counted per bar fed, so two instruments count bot...">ReplayResult::overdrawn_bars_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00176">176</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00177">177</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -584,7 +584,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>The sale tax given to the fill model; absent if none was modelled. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00193">193</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00194">194</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -666,7 +666,7 @@ Static Public Attributes</h2></td></tr>
 <p>Fills of stops released inside a bar, which assume the price moved continuously through the trigger. </p>
 <p>A price that jumped past both trigger and limit (a halt reopening, a thin book) would instead have left the stop resting. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00163">163</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00164">164</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +684,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>How many stop-limit orders a bar released, each using the assumed direction (a sell stop releases when the price falls to the trigger, a buy stop when it rises; brokers do not document it). </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00155">155</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00156">156</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>
@@ -739,9 +739,9 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Bars whose equity total could not be computed exactly (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#a33d9b018911470bdac0df7ef8a973ee6" title="Bars whose equity total did not fit an exact decimal, so they have no curve point.">ReplayResult::unvalued_bars_</a></span>). </p>
-<p>Each has no point on the equity curve and the point after it no return, so the return series is shorter than the bar count by at least this much. Weight-sized intents on such a bar are rejected for want of a portfolio value. </p>
+<p>Under <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23" title="One point per bar fed. A replay of many instruments records one per instrument per period,...">EquityCurve::PER_BAR</a></span> each has no point on the equity curve and the point after it no return, so the return series is shorter than the bar count by at least this much; per period, a period whose last bar is unvalued has no point, and the next point no return. Weight-sized intents on such a bar are rejected for want of a portfolio value. </p>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00147">147</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00148">148</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
 </div>
 </div>

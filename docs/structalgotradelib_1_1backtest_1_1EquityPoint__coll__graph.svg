@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="One point on a replay&#39;s equity curve, recorded per bar.">
+<g id="a_Node000001"><a xlink:title="One point on a replay&#39;s equity curve: per period end, or per bar (EquityCurve).">
 <polygon fill="#999999" stroke="#666666" points="128.5,-30 5.5,-30 5.5,0 128.5,0 128.5,-30"/>
 <text text-anchor="start" x="13.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::backtest</text>
 <text text-anchor="middle" x="67" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::EquityPoint</text>

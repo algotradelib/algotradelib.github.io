@@ -1,3 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classalgotradelib_1_1BlockingSession.html" title="A blocking broker client bound to one account, with the same broker operations as BrokerSession,..." alt="" coords="5,5,220,45"/>
+<area shape="rect" id="Node000000" href="$structalgotradelib_1_1Bar.html" title="One bar: the prices and volume of one period, as exact decimals." alt="" coords="5,5,136,31"/>
 </map>
