@@ -1,5 +1,13 @@
 var NAVTREEINDEX9 =
 {
+"namespacealgotradelib_1_1analytics.html#a12b8c1ca53ee5215eab439879f5e394e":[1,0,0,0,7],
+"namespacealgotradelib_1_1analytics.html#a13951169f813bdc7e6cc7291c8268ccb":[1,0,0,0,20],
+"namespacealgotradelib_1_1analytics.html#a184f1112fe1f411dc7f05d049a454e81":[1,0,0,0,21],
+"namespacealgotradelib_1_1analytics.html#a18f8f4ca04fe6f3ad9cc69946c1ee153":[1,0,0,0,59],
+"namespacealgotradelib_1_1analytics.html#a1939f6f853886d2c05bfba7875825e3d":[1,0,0,0,41],
+"namespacealgotradelib_1_1analytics.html#a19fc7f3d86cafd06105c227a9caed294":[1,0,0,0,31],
+"namespacealgotradelib_1_1analytics.html#a1b4736f6008b85783cacf0fe959dc228":[1,0,0,0,18],
+"namespacealgotradelib_1_1analytics.html#a206c5db02cd73a5b3ca0aee8bd0bfd8a":[1,0,0,0,25],
 "namespacealgotradelib_1_1analytics.html#a237ffb991d597894121c788821d9a9b4":[1,0,0,0,60],
 "namespacealgotradelib_1_1analytics.html#a2580f4fdae2f0d79527a122da204766e":[1,0,0,0,43],
 "namespacealgotradelib_1_1analytics.html#a2bb9eaaf3a5b0a287cf02dffc9e41bde":[1,0,0,0,32],
@@ -241,13 +249,5 @@ var NAVTREEINDEX9 =
 "namespacealgotradelib_1_1runner.html#a43af025ab97573c4b5223ac3677a70bfa10d1208b485425756fcc932229386b02":[1,0,0,9,63,0],
 "namespacealgotradelib_1_1runner.html#a43af025ab97573c4b5223ac3677a70bfa3466fab4975481651940ed328aa990e4":[1,0,0,9,63,1],
 "namespacealgotradelib_1_1runner.html#a43af025ab97573c4b5223ac3677a70bfa530cdbc1a6719fb4161814ac91a51dfc":[1,0,0,9,63,2],
-"namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860dda":[1,0,0,9,68],
-"namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f":[1,0,0,9,68,3],
-"namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc":[1,0,0,9,68,1],
-"namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419":[1,0,0,9,68,2],
-"namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5":[1,0,0,9,68,0],
-"namespacealgotradelib_1_1runner.html#a508a29cfaaabaf57dd770bc2fa001244":[1,0,0,9,104],
-"namespacealgotradelib_1_1runner.html#a530f271912ced67f8db7cbcfe6f6b8ff":[1,0,0,9,156],
-"namespacealgotradelib_1_1runner.html#a56b49211aa58bf796111252f03691ba5":[1,0,0,9,89],
-"namespacealgotradelib_1_1runner.html#a574acffc200f16ddf87157fe51c889a5":[1,0,0,9,105]
+"namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860dda":[1,0,0,9,68]
 };

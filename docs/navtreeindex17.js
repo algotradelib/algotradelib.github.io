@@ -1,5 +1,13 @@
 var NAVTREEINDEX17 =
 {
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a22a50054337b6b18f25cb638d511a5d7":[1,0,0,4,2,7],
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a22a50054337b6b18f25cb638d511a5d7":[2,0,0,4,2,7],
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a36af183c1d47c3dfd43423ba384218dc":[1,0,0,4,2,1],
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a36af183c1d47c3dfd43423ba384218dc":[2,0,0,4,2,1],
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a4acd1297fcce60bb209137587bc07145":[1,0,0,4,2,6],
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a4acd1297fcce60bb209137587bc07145":[2,0,0,4,2,6],
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a7e721c4bc73e278fa17fad6d565df776":[1,0,0,4,2,4],
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a7e721c4bc73e278fa17fad6d565df776":[2,0,0,4,2,4],
 "structalgotradelib_1_1kis_1_1KisAmendment.html#aa6dc32c4e7a7f8d795ff8aa7486cc417":[1,0,0,4,2,3],
 "structalgotradelib_1_1kis_1_1KisAmendment.html#aa6dc32c4e7a7f8d795ff8aa7486cc417":[2,0,0,4,2,3],
 "structalgotradelib_1_1kis_1_1KisAmendment.html#accc353c0375e1f72d53c64522a2cb85c":[1,0,0,4,2,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX17 =
 "structalgotradelib_1_1kiwoom_1_1KiwoomOrderShapeRow.html#ae39774f54fc6d63532b5ccf28cfd5577":[1,0,0,5,16,2],
 "structalgotradelib_1_1kiwoom_1_1KiwoomOrderShapeRow.html#ae39774f54fc6d63532b5ccf28cfd5577":[2,0,0,5,16,2],
 "structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html":[1,0,0,5,13],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html":[2,0,0,5,13],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a13bcb5dec16c9bc485709ca4c3e67031":[1,0,0,5,13,5],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a13bcb5dec16c9bc485709ca4c3e67031":[2,0,0,5,13,5],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a4094e0729a7e6e3a3bdabd1f6b548bd2":[1,0,0,5,13,4],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a4094e0729a7e6e3a3bdabd1f6b548bd2":[2,0,0,5,13,4],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a737561e1bfe7dbac8245d3f3c8065c72":[1,0,0,5,13,1],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a737561e1bfe7dbac8245d3f3c8065c72":[2,0,0,5,13,1],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a892703bc8611fb566c7b012a41007086":[1,0,0,5,13,6],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html#a892703bc8611fb566c7b012a41007086":[2,0,0,5,13,6]
+"structalgotradelib_1_1kiwoom_1_1KiwoomOrderableAmount.html":[2,0,0,5,13]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX6 =
 {
+"classalgotradelib_1_1runner_1_1Runner.html#a9c383390777bf03c293996c08e048ca0":[2,0,0,9,37,68],
+"classalgotradelib_1_1runner_1_1Runner.html#a9cf84e3414bf8602bb1b689d3b15838c":[1,0,0,9,37,85],
+"classalgotradelib_1_1runner_1_1Runner.html#a9cf84e3414bf8602bb1b689d3b15838c":[2,0,0,9,37,85],
+"classalgotradelib_1_1runner_1_1Runner.html#a9d5cbf433a7332442b5fc971f6f29d55":[1,0,0,9,37,83],
+"classalgotradelib_1_1runner_1_1Runner.html#a9d5cbf433a7332442b5fc971f6f29d55":[2,0,0,9,37,83],
+"classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08":[1,0,0,9,37,1],
+"classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08":[2,0,0,9,37,1],
+"classalgotradelib_1_1runner_1_1Runner.html#aa04899ccd7a5b21a5adadd08603a5024":[1,0,0,9,37,43],
 "classalgotradelib_1_1runner_1_1Runner.html#aa04899ccd7a5b21a5adadd08603a5024":[2,0,0,9,37,43],
 "classalgotradelib_1_1runner_1_1Runner.html#aa5ce9952307cb427dddb906d925f2d84":[1,0,0,9,37,75],
 "classalgotradelib_1_1runner_1_1Runner.html#aa5ce9952307cb427dddb906d925f2d84":[2,0,0,9,37,75],
@@ -241,13 +249,5 @@ var NAVTREEINDEX6 =
 "classalgotradelib_1_1strategy_1_1RiskGuard.html#af5bf29b25d94666402eedff4da58018e":[2,0,0,10,21,4],
 "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html":[1,0,0,10,24],
 "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html":[2,0,0,10,23],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a1b9288d0a0fc094634e23d15ca451583":[1,0,0,10,24,0],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a1b9288d0a0fc094634e23d15ca451583":[2,0,0,10,23,0],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a2067662381d3309b87109977eed7f33c":[1,0,0,10,24,5],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a2067662381d3309b87109977eed7f33c":[2,0,0,10,23,5],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a5b5d382afcfe1048121f05f6a1e174e8":[1,0,0,10,24,3],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a5b5d382afcfe1048121f05f6a1e174e8":[2,0,0,10,23,3],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a712e58f844d31e9264c0813d220607e5":[1,0,0,10,24,4],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a712e58f844d31e9264c0813d220607e5":[2,0,0,10,23,4],
-"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#ab87f758ab443cdd439ade7859aa8ae37":[1,0,0,10,24,2]
+"classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#a1b9288d0a0fc094634e23d15ca451583":[1,0,0,10,24,0]
 };

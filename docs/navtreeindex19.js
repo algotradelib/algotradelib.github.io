@@ -1,5 +1,13 @@
 var NAVTREEINDEX19 =
 {
+"structalgotradelib_1_1runner_1_1IterationReport.html#a07f4041c04a4d46acfa006725ef393ba":[1,0,0,9,13,5],
+"structalgotradelib_1_1runner_1_1IterationReport.html#a07f4041c04a4d46acfa006725ef393ba":[2,0,0,9,13,5],
+"structalgotradelib_1_1runner_1_1IterationReport.html#a17852547f1f544b9248cb200b9fc8f82":[1,0,0,9,13,4],
+"structalgotradelib_1_1runner_1_1IterationReport.html#a17852547f1f544b9248cb200b9fc8f82":[2,0,0,9,13,4],
+"structalgotradelib_1_1runner_1_1IterationReport.html#a2b5fc30a64932dd8fc11e1bb856739f7":[1,0,0,9,13,0],
+"structalgotradelib_1_1runner_1_1IterationReport.html#a2b5fc30a64932dd8fc11e1bb856739f7":[2,0,0,9,13,0],
+"structalgotradelib_1_1runner_1_1IterationReport.html#a491131388590a598f8ae38fed4b06020":[1,0,0,9,13,3],
+"structalgotradelib_1_1runner_1_1IterationReport.html#a491131388590a598f8ae38fed4b06020":[2,0,0,9,13,3],
 "structalgotradelib_1_1runner_1_1IterationReport.html#aae8fe19fff6920f161cdea64a7c55402":[1,0,0,9,13,2],
 "structalgotradelib_1_1runner_1_1IterationReport.html#aae8fe19fff6920f161cdea64a7c55402":[2,0,0,9,13,2],
 "structalgotradelib_1_1runner_1_1IterationReport.html#ad7e40b1a68a48210d8d993af465045f6":[1,0,0,9,13,6],
@@ -241,13 +249,5 @@ var NAVTREEINDEX19 =
 "structalgotradelib_1_1runner_1_1PollSchedule.html#a29d237a367372251d25d1dce9aff455c":[1,0,0,9,29,3],
 "structalgotradelib_1_1runner_1_1PollSchedule.html#a29d237a367372251d25d1dce9aff455c":[2,0,0,9,29,3],
 "structalgotradelib_1_1runner_1_1PollSchedule.html#a40a8015ee0e5259716824f6669e2b29b":[1,0,0,9,29,4],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a40a8015ee0e5259716824f6669e2b29b":[2,0,0,9,29,4],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a4e2ae61b48691dbdaa662c34fc069836":[1,0,0,9,29,7],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a4e2ae61b48691dbdaa662c34fc069836":[2,0,0,9,29,7],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a879dc2dfa2d7c8293faf546df50bdbcd":[1,0,0,9,29,5],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a879dc2dfa2d7c8293faf546df50bdbcd":[2,0,0,9,29,5],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a8adf32f21946d894090299057a39a892":[1,0,0,9,29,1],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a8adf32f21946d894090299057a39a892":[2,0,0,9,29,1],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a9f6e565645309dcdf9ad661fd5ab9615":[1,0,0,9,29,8],
-"structalgotradelib_1_1runner_1_1PollSchedule.html#a9f6e565645309dcdf9ad661fd5ab9615":[2,0,0,9,29,8]
+"structalgotradelib_1_1runner_1_1PollSchedule.html#a40a8015ee0e5259716824f6669e2b29b":[2,0,0,9,29,4]
 };

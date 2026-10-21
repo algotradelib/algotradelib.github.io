@@ -1,5 +1,13 @@
 var NAVTREEINDEX12 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a243bf5af8f1e6a7f679971422d493900":[1,0,0,22,8],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a243bf5af8f1e6a7f679971422d493900":[2,0,0,22,8],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a29c0130b3a924fb81d6183041966f992":[1,0,0,22,4],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a29c0130b3a924fb81d6183041966f992":[2,0,0,22,4],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3070005d1700d24c3e4dc3d4edfcd8fa":[1,0,0,22,3],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3070005d1700d24c3e4dc3d4edfcd8fa":[2,0,0,22,3],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3683662a0266ba93974d76f8a5919d07":[1,0,0,22,20],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3683662a0266ba93974d76f8a5919d07":[2,0,0,22,20],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3d5994e3af1e57ae74d08d987cfb3463":[1,0,0,22,5],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3d5994e3af1e57ae74d08d987cfb3463":[2,0,0,22,5],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a455600041d0199d2ac6f55137434a5a1":[1,0,0,22,10],
@@ -241,13 +249,5 @@ var NAVTREEINDEX12 =
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a7c46211c905adeaa5ec00ec46d24116b":[1,0,0,26,26],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a7c46211c905adeaa5ec00ec46d24116b":[2,0,0,26,26],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a94dac13878dfa64dbeb979c5a33e500e":[1,0,0,26,5],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a94dac13878dfa64dbeb979c5a33e500e":[2,0,0,26,5],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a961b54e48be2eb2947e882ff3718347e":[1,0,0,26,2],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a961b54e48be2eb2947e882ff3718347e":[2,0,0,26,2],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aa2fbeecbad9bf21cd8f9f1a6e2a35307":[1,0,0,26,9],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aa2fbeecbad9bf21cd8f9f1a6e2a35307":[2,0,0,26,9],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aab7b5a7b77e2275dfe52bd2a27858d8b":[1,0,0,26,28],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aab7b5a7b77e2275dfe52bd2a27858d8b":[2,0,0,26,28],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aadd0b1278d62bb4592951ac35489f974":[1,0,0,26,18],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aadd0b1278d62bb4592951ac35489f974":[2,0,0,26,18]
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a94dac13878dfa64dbeb979c5a33e500e":[2,0,0,26,5]
 };

@@ -131,6 +131,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classalgotrade
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6c8323a584bbbd4eccb6b74c7685c16" id="r_ab6c8323a584bbbd4eccb6b74c7685c16"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> (<a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> cash, <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> currency)</td></tr>
 <tr class="memdesc:ab6c8323a584bbbd4eccb6b74c7685c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ledger holding only cash.  <br /></td></tr>
+<tr class="memitem:a455d84db2248481ef8588b8acdac7b6a" id="r_a455d84db2248481ef8588b8acdac7b6a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a455d84db2248481ef8588b8acdac7b6a">ReplayLedger</a> (const ReplayLedger &amp;other)=default</td></tr>
+<tr class="memdesc:a455d84db2248481ef8588b8acdac7b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a ledger.  <br /></td></tr>
+<tr class="memitem:a016196ae89428f52e2e33e8941928527" id="r_a016196ae89428f52e2e33e8941928527"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a016196ae89428f52e2e33e8941928527">ReplayLedger</a> (ReplayLedger &amp;&amp;other)=default</td></tr>
+<tr class="memdesc:a016196ae89428f52e2e33e8941928527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves a ledger.  <br /></td></tr>
+<tr class="memitem:a66b71dfbb5f9477cd603e0b1136e2052" id="r_a66b71dfbb5f9477cd603e0b1136e2052"><td class="memItemLeft"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a66b71dfbb5f9477cd603e0b1136e2052">operator=</a> (<a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a66b71dfbb5f9477cd603e0b1136e2052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this ledger with a move of another; moving a ledger into itself leaves it unchanged.  <br /></td></tr>
+<tr class="memitem:aa577f71d2f45fdcf197cce0bacfcb4ce" id="r_aa577f71d2f45fdcf197cce0bacfcb4ce"><td class="memItemLeft"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa577f71d2f45fdcf197cce0bacfcb4ce">operator=</a> (const <a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;other)</td></tr>
+<tr class="memdesc:aa577f71d2f45fdcf197cce0bacfcb4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this ledger with a copy of another, entirely or not at all.  <br /></td></tr>
 <tr class="memitem:aff2834cbc52eabaafa51fb24485fb5e2" id="r_aff2834cbc52eabaafa51fb24485fb5e2"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aff2834cbc52eabaafa51fb24485fb5e2">cash_in</a> (const <a class="el" href="classalgotradelib_1_1Currency.html">Currency</a> &amp;currency) const</td></tr>
 <tr class="memdesc:aff2834cbc52eabaafa51fb24485fb5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cash held in a currency.  <br /></td></tr>
 <tr class="memitem:a714a2e2626f1858aad2b80d683b754c8" id="r_a714a2e2626f1858aad2b80d683b754c8"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a714a2e2626f1858aad2b80d683b754c8">quantity_of</a> (const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;instrument) const</td></tr>
@@ -157,10 +165,10 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Positions, cash and realized profit, updated by each execution of a replay. </p>
 <p>Cash and profit are kept per currency and never converted. </p>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00061">61</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00062">62</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab6c8323a584bbbd4eccb6b74c7685c16" name="ab6c8323a584bbbd4eccb6b74c7685c16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6c8323a584bbbd4eccb6b74c7685c16">&#9670;&#160;</a></span>ReplayLedger()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c8323a584bbbd4eccb6b74c7685c16">&#9670;&#160;</a></span>ReplayLedger() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +203,75 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00068">68</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00069">69</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00108">operator=()</a>, <a class="el" href="ledger_8hpp_source.html#l00090">operator=()</a>, <a class="el" href="#a455d84db2248481ef8588b8acdac7b6a">ReplayLedger()</a>, and <a class="el" href="#a016196ae89428f52e2e33e8941928527">ReplayLedger()</a>.</p>
+
+</div>
+</div>
+<a id="a455d84db2248481ef8588b8acdac7b6a" name="a455d84db2248481ef8588b8acdac7b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455d84db2248481ef8588b8acdac7b6a">&#9670;&#160;</a></span>ReplayLedger() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">algotradelib::backtest::ReplayLedger::ReplayLedger </td>
+          <td>(</td>
+          <td class="paramtype">const ReplayLedger &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copies a ledger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The ledger to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a016196ae89428f52e2e33e8941928527" name="a016196ae89428f52e2e33e8941928527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016196ae89428f52e2e33e8941928527">&#9670;&#160;</a></span>ReplayLedger() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">algotradelib::backtest::ReplayLedger::ReplayLedger </td>
+          <td>(</td>
+          <td class="paramtype">ReplayLedger &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves a ledger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The ledger to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -239,7 +315,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span>, with the ledger unchanged, if the arithmetic does not fit, or if <span class="tt">currency</span> differs from the currency of a non-flat position in the instrument; <span class="tt">true</span> otherwise. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>If an allocation throws partway, the ledger can be left partly updated. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00157">157</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00197">197</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +351,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The average price, or <span class="tt">std::nullopt</span> if flat or never held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00105">105</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00147">147</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,9 +387,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount, or <span class="tt">std::nullopt</span> if none is held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00077">77</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00121">121</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">apply()</a>, and <a class="el" href="ledger_8hpp_source.html#l00367">equity_in()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00197">apply()</a>, and <a class="el" href="ledger_8hpp_source.html#l00407">equity_in()</a>.</p>
 
 </div>
 </div>
@@ -350,7 +426,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The equity, or <span class="tt">std::nullopt</span> if the arithmetic does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00367">367</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00407">407</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -380,7 +456,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns every execution applied. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executions, oldest first. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00142">142</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00182">182</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +497,85 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if a position's value does not fit (that position keeps its old mark and value; <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html" title="Replays bars (and quotes) through one strategy, with a ledger and a fill model.">Backtester</a></span> halts the replay with <span class="tt">mark_not_representable</span>); <span class="tt">true</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00298">298</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00338">338</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa577f71d2f45fdcf197cce0bacfcb4ce" name="aa577f71d2f45fdcf197cce0bacfcb4ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa577f71d2f45fdcf197cce0bacfcb4ce">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp; algotradelib::backtest::ReplayLedger::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Replaces this ledger with a copy of another, entirely or not at all. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The ledger to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This ledger. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>If the copy cannot be made; this ledger is then unchanged. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00108">108</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a66b71dfbb5f9477cd603e0b1136e2052" name="a66b71dfbb5f9477cd603e0b1136e2052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66b71dfbb5f9477cd603e0b1136e2052">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp; algotradelib::backtest::ReplayLedger::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ab6c8323a584bbbd4eccb6b74c7685c16">ReplayLedger</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Replaces this ledger with a move of another; moving a ledger into itself leaves it unchanged. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The ledger to move from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This ledger. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00090">90</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -452,7 +606,7 @@ Public Member Functions</h2></td></tr>
 <p>Of the money fields only <span class="tt">market_value_</span> (quantity times last mark) is filled; <span class="tt">purchase_value_</span>, <span class="tt">unrealized_profit_loss_</span> and <span class="tt">unrealized_return_</span> stay at their defaults.</p>
 <dl class="section return"><dt>Returns</dt><dd>The positions. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00136">136</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00176">176</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +642,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The quantity (zero if the position went flat), or <span class="tt">std::nullopt</span> if never held. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00091">91</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00135">135</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -524,9 +678,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amount; zero if none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00119">119</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00159">159</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00157">apply()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00197">apply()</a>.</p>
 
 </div>
 </div>
@@ -571,7 +725,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The portfolio. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00332">332</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00372">372</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,13 @@
 var NAVTREEINDEX21 =
 {
+"structalgotradelib_1_1strategy_1_1CancelIntent.html#aedb701a1d695b3c2c1a86575d879d9bc":[1,0,0,10,5,1],
+"structalgotradelib_1_1strategy_1_1CancelIntent.html#aedb701a1d695b3c2c1a86575d879d9bc":[2,0,0,10,4,1],
+"structalgotradelib_1_1strategy_1_1Fill.html":[1,0,0,10,6],
+"structalgotradelib_1_1strategy_1_1Fill.html":[2,0,0,10,5],
+"structalgotradelib_1_1strategy_1_1Fill.html#a0874318925b56cbc41cc43b1e5f01c45":[1,0,0,10,6,0],
+"structalgotradelib_1_1strategy_1_1Fill.html#a0874318925b56cbc41cc43b1e5f01c45":[2,0,0,10,5,0],
+"structalgotradelib_1_1strategy_1_1Fill.html#a2c0787bcd3c5e2f511fc21b0f2ba00ae":[1,0,0,10,6,1],
+"structalgotradelib_1_1strategy_1_1Fill.html#a2c0787bcd3c5e2f511fc21b0f2ba00ae":[2,0,0,10,5,1],
 "structalgotradelib_1_1strategy_1_1Fill.html#a4604c0b692bf24afd834da9cf3f9e111":[1,0,0,10,6,6],
 "structalgotradelib_1_1strategy_1_1Fill.html#a4604c0b692bf24afd834da9cf3f9e111":[2,0,0,10,5,6],
 "structalgotradelib_1_1strategy_1_1Fill.html#a5d3f2ddd7dd4bf08c6e8802c9a8c3245":[1,0,0,10,6,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX21 =
 "structalgotradelib_1_1strategy_1_1RiskLimits.html#ae2fe5f164574e0cebe9c853a17105983":[1,0,0,10,23,8],
 "structalgotradelib_1_1strategy_1_1RiskLimits.html#ae2fe5f164574e0cebe9c853a17105983":[2,0,0,10,22,8],
 "structalgotradelib_1_1strategy_1_1RiskLimits.html#ae7ebe64324f594d53b35de6496000819":[1,0,0,10,23,6],
-"structalgotradelib_1_1strategy_1_1RiskLimits.html#ae7ebe64324f594d53b35de6496000819":[2,0,0,10,22,6],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html":[1,0,0,10,25],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html":[2,0,0,10,24],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a082428be1f1b89872d4322af86cb02db":[1,0,0,10,25,0],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a082428be1f1b89872d4322af86cb02db":[2,0,0,10,24,0],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a42ea8916967edf6b043a8c4bf96b6358":[1,0,0,10,25,2],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a42ea8916967edf6b043a8c4bf96b6358":[2,0,0,10,24,2],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a4a407d7c84133939da3bc62d2049df10":[1,0,0,10,25,1],
-"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a4a407d7c84133939da3bc62d2049df10":[2,0,0,10,24,1]
+"structalgotradelib_1_1strategy_1_1RiskLimits.html#ae7ebe64324f594d53b35de6496000819":[2,0,0,10,22,6]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX3 =
 {
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a040196782399d008ab4c8e5b7e6e55d2":[2,0,0,5,6,9],
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a1885a7d9f7653f7f5bbb4762e1bd4ba0":[1,0,0,5,6,18],
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a1885a7d9f7653f7f5bbb4762e1bd4ba0":[2,0,0,5,6,18],
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a1975a2dc595024349330f86f288752f0":[1,0,0,5,6,3],
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a1975a2dc595024349330f86f288752f0":[2,0,0,5,6,3],
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a19a5dc35fd759d8cd3d1a4ee8e4ba92c":[1,0,0,5,6,21],
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a19a5dc35fd759d8cd3d1a4ee8e4ba92c":[2,0,0,5,6,21],
+"classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a1cffbd988935520e98be5d51a8c90e93":[1,0,0,5,6,4],
 "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a1cffbd988935520e98be5d51a8c90e93":[2,0,0,5,6,4],
 "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a36d2d5bccbc6a3eec0effcde7234a7fb":[1,0,0,5,6,24],
 "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a36d2d5bccbc6a3eec0effcde7234a7fb":[2,0,0,5,6,24],
@@ -241,13 +249,5 @@ var NAVTREEINDEX3 =
 "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a13f1e2345e69d100e30df84c5a20f1c2":[2,0,0,8,11,18],
 "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1436cc3ec0605413c6c48c3dcb5f8e16":[1,0,0,8,11,22],
 "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1436cc3ec0605413c6c48c3dcb5f8e16":[2,0,0,8,11,22],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a198784600c71e27d393b59c96017f410":[1,0,0,8,11,2],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a198784600c71e27d393b59c96017f410":[2,0,0,8,11,2],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1ab8d5372a6114321fe220597d2e8ded":[1,0,0,8,11,6],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1ab8d5372a6114321fe220597d2e8ded":[2,0,0,8,11,6],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1cd3bbec0e26c9ced8a6d5ae0a3a1b39":[1,0,0,8,11,9],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1cd3bbec0e26c9ced8a6d5ae0a3a1b39":[2,0,0,8,11,9],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2a9915ee3e237be7ba4b7a2e49a3cc27":[1,0,0,8,11,13],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2a9915ee3e237be7ba4b7a2e49a3cc27":[2,0,0,8,11,13],
-"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2df28e91642049999fec96d707bdf333":[1,0,0,8,11,20]
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a198784600c71e27d393b59c96017f410":[1,0,0,8,11,2]
 };

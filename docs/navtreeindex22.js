@@ -1,5 +1,13 @@
 var NAVTREEINDEX22 =
 {
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html":[1,0,0,10,25],
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html":[2,0,0,10,24],
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a082428be1f1b89872d4322af86cb02db":[1,0,0,10,25,0],
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a082428be1f1b89872d4322af86cb02db":[2,0,0,10,24,0],
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a42ea8916967edf6b043a8c4bf96b6358":[1,0,0,10,25,2],
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a42ea8916967edf6b043a8c4bf96b6358":[2,0,0,10,24,2],
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a4a407d7c84133939da3bc62d2049df10":[1,0,0,10,25,1],
+"structalgotradelib_1_1strategy_1_1SellableEvidence.html#a4a407d7c84133939da3bc62d2049df10":[2,0,0,10,24,1],
 "structalgotradelib_1_1strategy_1_1SellableEvidence.html#a6abde354be8a78dea44f2a05223783c3":[1,0,0,10,25,3],
 "structalgotradelib_1_1strategy_1_1SellableEvidence.html#a6abde354be8a78dea44f2a05223783c3":[2,0,0,10,24,3],
 "structalgotradelib_1_1strategy_1_1SessionWindow.html":[1,0,0,10,26],
@@ -241,13 +249,5 @@ var NAVTREEINDEX22 =
 "structalgotradelib_1_1tossinvest_1_1TossAccount.html#a00738042a50ac4ab1c14ec9a5c664214":[1,0,0,11,1,2],
 "structalgotradelib_1_1tossinvest_1_1TossAccount.html#a00738042a50ac4ab1c14ec9a5c664214":[2,0,0,11,1,2],
 "structalgotradelib_1_1tossinvest_1_1TossAccount.html#a137f5b19e889345307ded0d153879c5d":[1,0,0,11,1,1],
-"structalgotradelib_1_1tossinvest_1_1TossAccount.html#a137f5b19e889345307ded0d153879c5d":[2,0,0,11,1,1],
-"structalgotradelib_1_1tossinvest_1_1TossAccount.html#aff7d233234441a374d3851da58f13ac7":[1,0,0,11,1,0],
-"structalgotradelib_1_1tossinvest_1_1TossAccount.html#aff7d233234441a374d3851da58f13ac7":[2,0,0,11,1,0],
-"structalgotradelib_1_1tossinvest_1_1TossAmendment.html":[1,0,0,11,2],
-"structalgotradelib_1_1tossinvest_1_1TossAmendment.html":[2,0,0,11,2],
-"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a0f0636904744d3efc486261a42999aa3":[1,0,0,11,2,1],
-"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a0f0636904744d3efc486261a42999aa3":[2,0,0,11,2,1],
-"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a1d96166c18d0ce0c5cd5ee57ea902b9e":[1,0,0,11,2,0],
-"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a1d96166c18d0ce0c5cd5ee57ea902b9e":[2,0,0,11,2,0]
+"structalgotradelib_1_1tossinvest_1_1TossAccount.html#a137f5b19e889345307ded0d153879c5d":[2,0,0,11,1,1]
 };

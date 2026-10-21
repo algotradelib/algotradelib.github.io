@@ -1,5 +1,13 @@
 var NAVTREEINDEX23 =
 {
+"structalgotradelib_1_1tossinvest_1_1TossAccount.html#aff7d233234441a374d3851da58f13ac7":[1,0,0,11,1,0],
+"structalgotradelib_1_1tossinvest_1_1TossAccount.html#aff7d233234441a374d3851da58f13ac7":[2,0,0,11,1,0],
+"structalgotradelib_1_1tossinvest_1_1TossAmendment.html":[1,0,0,11,2],
+"structalgotradelib_1_1tossinvest_1_1TossAmendment.html":[2,0,0,11,2],
+"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a0f0636904744d3efc486261a42999aa3":[1,0,0,11,2,1],
+"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a0f0636904744d3efc486261a42999aa3":[2,0,0,11,2,1],
+"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a1d96166c18d0ce0c5cd5ee57ea902b9e":[1,0,0,11,2,0],
+"structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a1d96166c18d0ce0c5cd5ee57ea902b9e":[2,0,0,11,2,0],
 "structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a68902ed4f0052b19c62cfdebb73dde44":[1,0,0,11,2,2],
 "structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a68902ed4f0052b19c62cfdebb73dde44":[2,0,0,11,2,2],
 "structalgotradelib_1_1tossinvest_1_1TossAmendment.html#a6b26f97b58cb2f5c0f9dec858ec6dd52":[1,0,0,11,2,3],

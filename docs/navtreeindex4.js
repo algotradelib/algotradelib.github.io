@@ -1,5 +1,13 @@
 var NAVTREEINDEX4 =
 {
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a198784600c71e27d393b59c96017f410":[2,0,0,8,11,2],
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1ab8d5372a6114321fe220597d2e8ded":[1,0,0,8,11,6],
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1ab8d5372a6114321fe220597d2e8ded":[2,0,0,8,11,6],
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1cd3bbec0e26c9ced8a6d5ae0a3a1b39":[1,0,0,8,11,9],
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a1cd3bbec0e26c9ced8a6d5ae0a3a1b39":[2,0,0,8,11,9],
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2a9915ee3e237be7ba4b7a2e49a3cc27":[1,0,0,8,11,13],
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2a9915ee3e237be7ba4b7a2e49a3cc27":[2,0,0,8,11,13],
+"classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2df28e91642049999fec96d707bdf333":[1,0,0,8,11,20],
 "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a2df28e91642049999fec96d707bdf333":[2,0,0,8,11,20],
 "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a323d83de1ffd1ee9f29b559f242fd05a":[1,0,0,8,11,5],
 "classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a323d83de1ffd1ee9f29b559f242fd05a":[2,0,0,8,11,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX4 =
 "classalgotradelib_1_1runner_1_1ManualSource.html#a229f34d584d6e1421da53006d6ea2028":[2,0,0,9,20,4],
 "classalgotradelib_1_1runner_1_1ManualSource.html#a57fccb0a864e725f0f7d6fa69f42f567":[1,0,0,9,20,3],
 "classalgotradelib_1_1runner_1_1ManualSource.html#a57fccb0a864e725f0f7d6fa69f42f567":[2,0,0,9,20,3],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a5bf93b602485c83144282a9515dcb234":[1,0,0,9,20,10],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a5bf93b602485c83144282a9515dcb234":[2,0,0,9,20,10],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a6f36526c74a56c19204604d83dc5c932":[1,0,0,9,20,6],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a6f36526c74a56c19204604d83dc5c932":[2,0,0,9,20,6],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a81cc75e1c26a0c28f800ba6f1795197c":[1,0,0,9,20,9],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a81cc75e1c26a0c28f800ba6f1795197c":[2,0,0,9,20,9],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a8fd5b91e00de4421f778457975036930":[1,0,0,9,20,8],
-"classalgotradelib_1_1runner_1_1ManualSource.html#a8fd5b91e00de4421f778457975036930":[2,0,0,9,20,8],
-"classalgotradelib_1_1runner_1_1ManualSource.html#ad91dfa6dea3ed91ef2bfb43b4c0dbada":[1,0,0,9,20,5]
+"classalgotradelib_1_1runner_1_1ManualSource.html#a5bf93b602485c83144282a9515dcb234":[1,0,0,9,20,10]
 };

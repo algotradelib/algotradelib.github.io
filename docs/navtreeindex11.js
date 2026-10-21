@@ -1,5 +1,13 @@
 var NAVTREEINDEX11 =
 {
+"namespacemembers_h.html":[1,1,0,7],
+"namespacemembers_i.html":[1,1,0,8],
+"namespacemembers_j.html":[1,1,0,9],
+"namespacemembers_k.html":[1,1,0,10],
+"namespacemembers_l.html":[1,1,0,11],
+"namespacemembers_m.html":[1,1,0,12],
+"namespacemembers_n.html":[1,1,0,13],
+"namespacemembers_o.html":[1,1,0,14],
 "namespacemembers_p.html":[1,1,0,15],
 "namespacemembers_q.html":[1,1,0,16],
 "namespacemembers_r.html":[1,1,0,17],
@@ -241,13 +249,5 @@ var NAVTREEINDEX11 =
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a06f6948cbc07f3a74300bd8155dfdc2a":[1,0,0,22,0],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a06f6948cbc07f3a74300bd8155dfdc2a":[2,0,0,22,0],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a236cf16c197312b498cbbc6044fd5acf":[1,0,0,22,12],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a236cf16c197312b498cbbc6044fd5acf":[2,0,0,22,12],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a243bf5af8f1e6a7f679971422d493900":[1,0,0,22,8],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a243bf5af8f1e6a7f679971422d493900":[2,0,0,22,8],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a29c0130b3a924fb81d6183041966f992":[1,0,0,22,4],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a29c0130b3a924fb81d6183041966f992":[2,0,0,22,4],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3070005d1700d24c3e4dc3d4edfcd8fa":[1,0,0,22,3],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3070005d1700d24c3e4dc3d4edfcd8fa":[2,0,0,22,3],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3683662a0266ba93974d76f8a5919d07":[1,0,0,22,20],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a3683662a0266ba93974d76f8a5919d07":[2,0,0,22,20]
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#a236cf16c197312b498cbbc6044fd5acf":[2,0,0,22,12]
 };

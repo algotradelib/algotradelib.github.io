@@ -1,5 +1,13 @@
 var NAVTREEINDEX14 =
 {
+"structalgotradelib_1_1HoldingPosition.html#a82527c02af0838b8784bb4ec9ffa2be8":[1,0,0,38,0],
+"structalgotradelib_1_1HoldingPosition.html#a82527c02af0838b8784bb4ec9ffa2be8":[2,0,0,38,0],
+"structalgotradelib_1_1HoldingPosition.html#a8e228ed4c8bbd8bc80e661c5eb2d01e1":[1,0,0,38,8],
+"structalgotradelib_1_1HoldingPosition.html#a8e228ed4c8bbd8bc80e661c5eb2d01e1":[2,0,0,38,8],
+"structalgotradelib_1_1HoldingPosition.html#ab4b820053177b9d936faefb6df5a19c1":[1,0,0,38,10],
+"structalgotradelib_1_1HoldingPosition.html#ab4b820053177b9d936faefb6df5a19c1":[2,0,0,38,10],
+"structalgotradelib_1_1HoldingPosition.html#ac283bbc0604a2a3a25ebf1425e676369":[1,0,0,38,6],
+"structalgotradelib_1_1HoldingPosition.html#ac283bbc0604a2a3a25ebf1425e676369":[2,0,0,38,6],
 "structalgotradelib_1_1HoldingPosition.html#ac394e05eb8b7d7a146ff57538ea849e7":[1,0,0,38,1],
 "structalgotradelib_1_1HoldingPosition.html#ac394e05eb8b7d7a146ff57538ea849e7":[2,0,0,38,1],
 "structalgotradelib_1_1HoldingPosition.html#af202196613a9e6bac2ff08ba35d7f044":[1,0,0,38,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX14 =
 "structalgotradelib_1_1PriceLimits.html":[1,0,0,54],
 "structalgotradelib_1_1PriceLimits.html":[2,0,0,54],
 "structalgotradelib_1_1PriceLimits.html#a01e98cf37f8c9a622989b5df7d1cf2f6":[1,0,0,54,2],
-"structalgotradelib_1_1PriceLimits.html#a01e98cf37f8c9a622989b5df7d1cf2f6":[2,0,0,54,2],
-"structalgotradelib_1_1PriceLimits.html#a7f04b8c72eed8f5a4fe8fe8440f9558c":[1,0,0,54,1],
-"structalgotradelib_1_1PriceLimits.html#a7f04b8c72eed8f5a4fe8fe8440f9558c":[2,0,0,54,1],
-"structalgotradelib_1_1PriceLimits.html#abcfd43223abc343c639ca1f3d58d59b8":[1,0,0,54,3],
-"structalgotradelib_1_1PriceLimits.html#abcfd43223abc343c639ca1f3d58d59b8":[2,0,0,54,3],
-"structalgotradelib_1_1PriceLimits.html#aeae3447de42a7b8dc4ecc08cb1a49ed1":[1,0,0,54,0],
-"structalgotradelib_1_1PriceLimits.html#aeae3447de42a7b8dc4ecc08cb1a49ed1":[2,0,0,54,0],
-"structalgotradelib_1_1PriceRule.html":[1,0,0,55],
-"structalgotradelib_1_1PriceRule.html":[2,0,0,55]
+"structalgotradelib_1_1PriceLimits.html#a01e98cf37f8c9a622989b5df7d1cf2f6":[2,0,0,54,2]
 };

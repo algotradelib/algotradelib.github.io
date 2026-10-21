@@ -1,5 +1,13 @@
 var NAVTREEINDEX15 =
 {
+"structalgotradelib_1_1PriceLimits.html#a7f04b8c72eed8f5a4fe8fe8440f9558c":[1,0,0,54,1],
+"structalgotradelib_1_1PriceLimits.html#a7f04b8c72eed8f5a4fe8fe8440f9558c":[2,0,0,54,1],
+"structalgotradelib_1_1PriceLimits.html#abcfd43223abc343c639ca1f3d58d59b8":[1,0,0,54,3],
+"structalgotradelib_1_1PriceLimits.html#abcfd43223abc343c639ca1f3d58d59b8":[2,0,0,54,3],
+"structalgotradelib_1_1PriceLimits.html#aeae3447de42a7b8dc4ecc08cb1a49ed1":[1,0,0,54,0],
+"structalgotradelib_1_1PriceLimits.html#aeae3447de42a7b8dc4ecc08cb1a49ed1":[2,0,0,54,0],
+"structalgotradelib_1_1PriceRule.html":[1,0,0,55],
+"structalgotradelib_1_1PriceRule.html":[2,0,0,55],
 "structalgotradelib_1_1PriceRule.html#a00b46c7ee4959c8a48b455b6c988f810":[1,0,0,55,5],
 "structalgotradelib_1_1PriceRule.html#a00b46c7ee4959c8a48b455b6c988f810":[2,0,0,55,5],
 "structalgotradelib_1_1PriceRule.html#a060035c08ed5e5b6a36e85484587da44":[1,0,0,55,10],
@@ -241,13 +249,5 @@ var NAVTREEINDEX15 =
 "structalgotradelib_1_1backtest_1_1FillDecision.html#a6d302c3623e96f65ceba4b13a15502b7":[1,0,0,1,8,4],
 "structalgotradelib_1_1backtest_1_1FillDecision.html#a6d302c3623e96f65ceba4b13a15502b7":[2,0,0,1,8,4],
 "structalgotradelib_1_1backtest_1_1FillDecision.html#a82c6a5ba6faa6ddcaea29183e8d82592":[1,0,0,1,8,2],
-"structalgotradelib_1_1backtest_1_1FillDecision.html#a82c6a5ba6faa6ddcaea29183e8d82592":[2,0,0,1,8,2],
-"structalgotradelib_1_1backtest_1_1FillDecision.html#ab863c3215f67df06c8ec03ab068257c7":[1,0,0,1,8,3],
-"structalgotradelib_1_1backtest_1_1FillDecision.html#ab863c3215f67df06c8ec03ab068257c7":[2,0,0,1,8,3],
-"structalgotradelib_1_1backtest_1_1QueuedOrder.html":[1,0,0,1,10],
-"structalgotradelib_1_1backtest_1_1QueuedOrder.html":[2,0,0,1,10],
-"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a13241a87dea5b430cad3f846b1bfad1d":[1,0,0,1,10,1],
-"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a13241a87dea5b430cad3f846b1bfad1d":[2,0,0,1,10,1],
-"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a183504256cf2b6401a456a3e7eb81d5b":[1,0,0,1,10,6],
-"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a183504256cf2b6401a456a3e7eb81d5b":[2,0,0,1,10,6]
+"structalgotradelib_1_1backtest_1_1FillDecision.html#a82c6a5ba6faa6ddcaea29183e8d82592":[2,0,0,1,8,2]
 };

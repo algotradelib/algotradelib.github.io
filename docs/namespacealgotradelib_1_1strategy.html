@@ -578,7 +578,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00030">30</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00031">31</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -757,9 +757,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">bar.timestamp_</span> for a <span class="tt">CLOSE</span>-stamped bar; for an <span class="tt">OPEN</span>-stamped bar, the timestamp plus one interval. A month counts as 31 days and a year as 366, so for those intervals the result is an upper bound, not the exact end. So is an intraday bar cut short by the session's close (KRX's 15:00 hourly bar ends at 15:30, not 16:00): late, never early. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00232">232</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00233">233</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00232">bar_period_end()</a>, and <a class="el" href="event_8hpp_source.html#l00273">make_bar_event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00233">bar_period_end()</a>, and <a class="el" href="event_8hpp_source.html#l00274">make_bar_event()</a>.</p>
 
 </div>
 </div>
@@ -1017,9 +1017,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The event. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00273">273</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00274">274</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00273">make_bar_event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00274">make_bar_event()</a>.</p>
 
 </div>
 </div>
@@ -1055,9 +1055,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00057">57</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00058">58</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00057">market_phase_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00058">market_phase_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>.</p>
 
 </div>
 </div>
@@ -1093,9 +1093,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CLOSED</span> and <span class="tt">POST_CLOSE</span>; <span class="tt">false</span> for <span class="tt">UNKNOWN</span>, <span class="tt">PRE_OPEN</span> and <span class="tt">OPEN</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00079">79</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00080">80</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01677">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00079">market_phase_session_ended()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01677">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00080">market_phase_session_ended()</a>.</p>
 
 </div>
 </div>
@@ -1550,15 +1550,15 @@ template&lt;typename Broker&gt; </div>
 <div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">MarketPhase::OPEN</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">MarketPhase::POST_CLOSE</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d">algotradelib::strategy::MarketPhase::CLOSED</a></div><div class="ttdeci">@ CLOSED</div><div class="ttdoc">A date the market does not trade.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00034">event.hpp:34</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2">algotradelib::strategy::MarketPhase::PRE_OPEN</a></div><div class="ttdeci">@ PRE_OPEN</div><div class="ttdoc">A trading day, before the session opens.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00036">event.hpp:36</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3">algotradelib::strategy::MarketPhase::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdoc">The calendar does not cover this date; nothing is known about it.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00032">event.hpp:32</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">algotradelib::strategy::MarketPhase::POST_CLOSE</a></div><div class="ttdeci">@ POST_CLOSE</div><div class="ttdoc">A trading day, after the session closed.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00040">event.hpp:40</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">algotradelib::strategy::MarketPhase::OPEN</a></div><div class="ttdeci">@ OPEN</div><div class="ttdoc">Inside the session.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00038">event.hpp:38</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d">algotradelib::strategy::MarketPhase::CLOSED</a></div><div class="ttdeci">@ CLOSED</div><div class="ttdoc">A date the market does not trade.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00035">event.hpp:35</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2">algotradelib::strategy::MarketPhase::PRE_OPEN</a></div><div class="ttdeci">@ PRE_OPEN</div><div class="ttdoc">A trading day, before the session opens.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00037">event.hpp:37</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3">algotradelib::strategy::MarketPhase::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdoc">The calendar does not cover this date; nothing is known about it.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00033">event.hpp:33</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">algotradelib::strategy::MarketPhase::POST_CLOSE</a></div><div class="ttdeci">@ POST_CLOSE</div><div class="ttdoc">A trading day, after the session closed.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00041">event.hpp:41</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">algotradelib::strategy::MarketPhase::OPEN</a></div><div class="ttdeci">@ OPEN</div><div class="ttdoc">Inside the session.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00039">event.hpp:39</a></div></div>
 </div><!-- fragment -->
 <p>Every <span class="tt"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>, in declaration order. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00044">44</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00045">45</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>

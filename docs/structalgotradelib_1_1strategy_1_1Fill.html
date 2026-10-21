@@ -155,7 +155,7 @@ Public Attributes</h2></td></tr>
 <p>Each execution is its own event, so a partial fill arrives as several; <span class="tt"><a class="el" href="#afd28d452792c8916d71cfe404760ea17" title="The quantity of this execution, not the order&#39;s running total.">quantity_</a></span> is this execution's quantity, and the order's running total is in the portfolio. <span class="tt"><a class="el" href="#a95292fea2cc9b48513b5a27a8ed4080f" title="The broker&#39;s order id.">order_id_</a></span> names the order by the broker's id where the source states one; a replay's fills leave it empty, and live, <span class="tt">on_fill</span> does not fire (<span class="tt">Runner::on_fill_never_fires</span>). Look orders up in <span class="tt">ctx.portfolio()</span>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>A backtest delivers fills, but the shipped live loop never does: no broker inquiry produces a <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1Fill.html" title="One execution of an order the strategy placed, delivered to on_fill.">Fill</a></span>. A strategy that reacts to fills in <span class="tt">on_fill</span> (for example, to set a stop) does nothing live. Live, executions show up through <span class="tt">on_order_update</span> and the portfolio. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00407">407</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00495">495</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a0874318925b56cbc41cc43b1e5f01c45" name="a0874318925b56cbc41cc43b1e5f01c45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0874318925b56cbc41cc43b1e5f01c45">&#9670;&#160;</a></span>at_</h2>
@@ -171,7 +171,7 @@ Public Attributes</h2></td></tr>
 
 <p>When the execution happened. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00421">421</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00509">509</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
@@ -191,7 +191,7 @@ Public Attributes</h2></td></tr>
 
 <p>The instrument traded. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00411">411</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00499">499</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
@@ -211,7 +211,7 @@ Public Attributes</h2></td></tr>
 
 <p>The broker's order id. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00409">409</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00497">497</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -229,7 +229,7 @@ Public Attributes</h2></td></tr>
 
 <p>The execution price. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00417">417</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00505">505</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
@@ -249,7 +249,7 @@ Public Attributes</h2></td></tr>
 
 <p>The quantity of this execution, not the order's running total. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00415">415</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00503">503</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
@@ -269,7 +269,7 @@ Public Attributes</h2></td></tr>
 
 <p>The side of the order. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00413">413</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00501">501</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
@@ -289,7 +289,7 @@ Public Attributes</h2></td></tr>
 
 <p>The tag of the intent that produced the order. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00419">419</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00507">507</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 

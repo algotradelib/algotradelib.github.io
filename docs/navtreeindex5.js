@@ -1,5 +1,13 @@
 var NAVTREEINDEX5 =
 {
+"classalgotradelib_1_1runner_1_1ManualSource.html#a5bf93b602485c83144282a9515dcb234":[2,0,0,9,20,10],
+"classalgotradelib_1_1runner_1_1ManualSource.html#a6f36526c74a56c19204604d83dc5c932":[1,0,0,9,20,6],
+"classalgotradelib_1_1runner_1_1ManualSource.html#a6f36526c74a56c19204604d83dc5c932":[2,0,0,9,20,6],
+"classalgotradelib_1_1runner_1_1ManualSource.html#a81cc75e1c26a0c28f800ba6f1795197c":[1,0,0,9,20,9],
+"classalgotradelib_1_1runner_1_1ManualSource.html#a81cc75e1c26a0c28f800ba6f1795197c":[2,0,0,9,20,9],
+"classalgotradelib_1_1runner_1_1ManualSource.html#a8fd5b91e00de4421f778457975036930":[1,0,0,9,20,8],
+"classalgotradelib_1_1runner_1_1ManualSource.html#a8fd5b91e00de4421f778457975036930":[2,0,0,9,20,8],
+"classalgotradelib_1_1runner_1_1ManualSource.html#ad91dfa6dea3ed91ef2bfb43b4c0dbada":[1,0,0,9,20,5],
 "classalgotradelib_1_1runner_1_1ManualSource.html#ad91dfa6dea3ed91ef2bfb43b4c0dbada":[2,0,0,9,20,5],
 "classalgotradelib_1_1runner_1_1ManualSource.html#ae1974a0daf75b9ac5766c7a8fe5b7322":[1,0,0,9,20,7],
 "classalgotradelib_1_1runner_1_1ManualSource.html#ae1974a0daf75b9ac5766c7a8fe5b7322":[2,0,0,9,20,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX5 =
 "classalgotradelib_1_1runner_1_1Runner.html#a9a561e1ec4e84985d66faba0027048bc":[2,0,0,9,37,47],
 "classalgotradelib_1_1runner_1_1Runner.html#a9abacd5d45e5821f64d6ab80f0367ecb":[1,0,0,9,37,76],
 "classalgotradelib_1_1runner_1_1Runner.html#a9abacd5d45e5821f64d6ab80f0367ecb":[2,0,0,9,37,76],
-"classalgotradelib_1_1runner_1_1Runner.html#a9c383390777bf03c293996c08e048ca0":[1,0,0,9,37,68],
-"classalgotradelib_1_1runner_1_1Runner.html#a9c383390777bf03c293996c08e048ca0":[2,0,0,9,37,68],
-"classalgotradelib_1_1runner_1_1Runner.html#a9cf84e3414bf8602bb1b689d3b15838c":[1,0,0,9,37,85],
-"classalgotradelib_1_1runner_1_1Runner.html#a9cf84e3414bf8602bb1b689d3b15838c":[2,0,0,9,37,85],
-"classalgotradelib_1_1runner_1_1Runner.html#a9d5cbf433a7332442b5fc971f6f29d55":[1,0,0,9,37,83],
-"classalgotradelib_1_1runner_1_1Runner.html#a9d5cbf433a7332442b5fc971f6f29d55":[2,0,0,9,37,83],
-"classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08":[1,0,0,9,37,1],
-"classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08":[2,0,0,9,37,1],
-"classalgotradelib_1_1runner_1_1Runner.html#aa04899ccd7a5b21a5adadd08603a5024":[1,0,0,9,37,43]
+"classalgotradelib_1_1runner_1_1Runner.html#a9c383390777bf03c293996c08e048ca0":[1,0,0,9,37,68]
 };

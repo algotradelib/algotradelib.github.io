@@ -1,5 +1,13 @@
 var NAVTREEINDEX16 =
 {
+"structalgotradelib_1_1backtest_1_1FillDecision.html#ab863c3215f67df06c8ec03ab068257c7":[1,0,0,1,8,3],
+"structalgotradelib_1_1backtest_1_1FillDecision.html#ab863c3215f67df06c8ec03ab068257c7":[2,0,0,1,8,3],
+"structalgotradelib_1_1backtest_1_1QueuedOrder.html":[1,0,0,1,10],
+"structalgotradelib_1_1backtest_1_1QueuedOrder.html":[2,0,0,1,10],
+"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a13241a87dea5b430cad3f846b1bfad1d":[1,0,0,1,10,1],
+"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a13241a87dea5b430cad3f846b1bfad1d":[2,0,0,1,10,1],
+"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a183504256cf2b6401a456a3e7eb81d5b":[1,0,0,1,10,6],
+"structalgotradelib_1_1backtest_1_1QueuedOrder.html#a183504256cf2b6401a456a3e7eb81d5b":[2,0,0,1,10,6],
 "structalgotradelib_1_1backtest_1_1QueuedOrder.html#a41db251f5e34e117ed1467de86a97738":[1,0,0,1,10,5],
 "structalgotradelib_1_1backtest_1_1QueuedOrder.html#a41db251f5e34e117ed1467de86a97738":[2,0,0,1,10,5],
 "structalgotradelib_1_1backtest_1_1QueuedOrder.html#a516f7e0ed22a231cd06143fc2b0f3256":[1,0,0,1,10,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX16 =
 "structalgotradelib_1_1kis_1_1KisAmendment.html":[1,0,0,4,2],
 "structalgotradelib_1_1kis_1_1KisAmendment.html":[2,0,0,4,2],
 "structalgotradelib_1_1kis_1_1KisAmendment.html#a21efb740a58579978d25294cc3becfea":[1,0,0,4,2,0],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a21efb740a58579978d25294cc3becfea":[2,0,0,4,2,0],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a22a50054337b6b18f25cb638d511a5d7":[1,0,0,4,2,7],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a22a50054337b6b18f25cb638d511a5d7":[2,0,0,4,2,7],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a36af183c1d47c3dfd43423ba384218dc":[1,0,0,4,2,1],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a36af183c1d47c3dfd43423ba384218dc":[2,0,0,4,2,1],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a4acd1297fcce60bb209137587bc07145":[1,0,0,4,2,6],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a4acd1297fcce60bb209137587bc07145":[2,0,0,4,2,6],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a7e721c4bc73e278fa17fad6d565df776":[1,0,0,4,2,4],
-"structalgotradelib_1_1kis_1_1KisAmendment.html#a7e721c4bc73e278fa17fad6d565df776":[2,0,0,4,2,4]
+"structalgotradelib_1_1kis_1_1KisAmendment.html#a21efb740a58579978d25294cc3becfea":[2,0,0,4,2,0]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX13 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a961b54e48be2eb2947e882ff3718347e":[1,0,0,26,2],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#a961b54e48be2eb2947e882ff3718347e":[2,0,0,26,2],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aa2fbeecbad9bf21cd8f9f1a6e2a35307":[1,0,0,26,9],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aa2fbeecbad9bf21cd8f9f1a6e2a35307":[2,0,0,26,9],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aab7b5a7b77e2275dfe52bd2a27858d8b":[1,0,0,26,28],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aab7b5a7b77e2275dfe52bd2a27858d8b":[2,0,0,26,28],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aadd0b1278d62bb4592951ac35489f974":[1,0,0,26,18],
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aadd0b1278d62bb4592951ac35489f974":[2,0,0,26,18],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#ab374e2bda65d553e9b8125ca1901feba":[1,0,0,26,3],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#ab374e2bda65d553e9b8125ca1901feba":[2,0,0,26,3],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#ab5c45703dc1ef9e626de83b336eae527":[1,0,0,26,21],
@@ -241,13 +249,5 @@ var NAVTREEINDEX13 =
 "structalgotradelib_1_1HoldingPosition.html#a705b37fcab36cfd3bbdad4bbeeebd1ab":[1,0,0,38,9],
 "structalgotradelib_1_1HoldingPosition.html#a705b37fcab36cfd3bbdad4bbeeebd1ab":[2,0,0,38,9],
 "structalgotradelib_1_1HoldingPosition.html#a72f850778dc8bf050f392118fbf56b84":[1,0,0,38,5],
-"structalgotradelib_1_1HoldingPosition.html#a72f850778dc8bf050f392118fbf56b84":[2,0,0,38,5],
-"structalgotradelib_1_1HoldingPosition.html#a82527c02af0838b8784bb4ec9ffa2be8":[1,0,0,38,0],
-"structalgotradelib_1_1HoldingPosition.html#a82527c02af0838b8784bb4ec9ffa2be8":[2,0,0,38,0],
-"structalgotradelib_1_1HoldingPosition.html#a8e228ed4c8bbd8bc80e661c5eb2d01e1":[1,0,0,38,8],
-"structalgotradelib_1_1HoldingPosition.html#a8e228ed4c8bbd8bc80e661c5eb2d01e1":[2,0,0,38,8],
-"structalgotradelib_1_1HoldingPosition.html#ab4b820053177b9d936faefb6df5a19c1":[1,0,0,38,10],
-"structalgotradelib_1_1HoldingPosition.html#ab4b820053177b9d936faefb6df5a19c1":[2,0,0,38,10],
-"structalgotradelib_1_1HoldingPosition.html#ac283bbc0604a2a3a25ebf1425e676369":[1,0,0,38,6],
-"structalgotradelib_1_1HoldingPosition.html#ac283bbc0604a2a3a25ebf1425e676369":[2,0,0,38,6]
+"structalgotradelib_1_1HoldingPosition.html#a72f850778dc8bf050f392118fbf56b84":[2,0,0,38,5]
 };
