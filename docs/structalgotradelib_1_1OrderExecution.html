@@ -155,7 +155,7 @@ Public Attributes</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Test whether an order filled with <span class="tt"><a class="el" href="#a100fdef8584c517c0eb7bbb638b1fdb1" title="The quantity filled so far; zero if nothing has filled. Always present.">filled_quantity_</a></span>, never with whether an amount is present: KIS reports a zero <span class="tt"><a class="el" href="#a4011f1fbfa43c3836df0be5a843baca1" title="The value of the fills, as the broker computed it.">filled_amount_</a></span> on unfilled orders, and Toss leaves amounts empty when the broker sent <span class="tt">null</span>.</dd></dl>
 <p>At Toss, an amount sent as <span class="tt">null</span> is empty, but a missing field fails the listing as a protocol error. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02098">2098</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02101">2101</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a1062559611891527a7c4aeef1ce77e70" name="a1062559611891527a7c4aeef1ce77e70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1062559611891527a7c4aeef1ce77e70">&#9670;&#160;</a></span>average_filled_price_</h2>
@@ -172,7 +172,7 @@ Public Attributes</h2></td></tr>
 <p>The average fill price, only where the broker supplies it. </p>
 <p>KIS's real-server open-order listing never sets it, even on a partly filled order; on a demo account, where the listing is built from the day's history, it is set once something has filled. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02107">2107</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02110">2110</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -190,7 +190,7 @@ Public Attributes</h2></td></tr>
 
 <p>Commission charged so far, if the broker reports it per order. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02115">2115</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02118">2118</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ Public Attributes</h2></td></tr>
 <p>The value of the fills, as the broker computed it. </p>
 <p>Present on every KIS row, and zero when nothing has filled; empty at Toss when not reported. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02113">2113</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02116">2116</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ Public Attributes</h2></td></tr>
 
 <p>When the most recent fill happened, if the broker timestamps it. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02119">2119</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02122">2122</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ Public Attributes</h2></td></tr>
 
 <p>The quantity filled so far; zero if nothing has filled. Always present. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02100">2100</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02103">2103</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ Public Attributes</h2></td></tr>
 
 <p>The settlement date the broker stated. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02121">2121</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02124">2124</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -281,7 +281,7 @@ Public Attributes</h2></td></tr>
 
 <p>Transaction tax charged so far, if the broker reports it per order. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02117">2117</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02120">2120</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>

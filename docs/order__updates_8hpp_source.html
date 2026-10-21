@@ -202,81 +202,110 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('order__updates
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  std::vector&lt;OrderSnapshot&gt; observe(</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">const</span> std::vector&lt;WorkingOrder&lt;Broker&gt;&gt;&amp; rows, <span class="keywordtype">bool</span> report</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  ) {</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    std::vector&lt;Tracked&gt; next;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    next.reserve(rows.size());</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">// Where each reference sits, in this listing (`next`) and in the previous one (`tracked_`), so a</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">// long listing is read once and not once per row. Both are looked up and never iterated: the</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// order of `next`, and so of the updates, is the listing&#39;s. Built here from the vectors each</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// time, so nothing has to be kept in step with `tracked_`; a reference maps to the first entry</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">// that has it, which is the one a scan would find.</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    std::unordered_map&lt;OrderRef&lt;Broker&gt;, std::size_t&gt; built;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    built.reserve(rows.size());</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    std::unordered_map&lt;OrderRef&lt;Broker&gt;, std::size_t&gt; held_at;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    held_at.reserve(tracked_.size());</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">for</span> (std::size_t at = 0; at &lt; tracked_.size(); ++at) {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      held_at.emplace(tracked_[at].ref_, at);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; row : rows) {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="comment">// This library&#39;s own arithmetic rather than something a broker stated, and the contract is</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <span class="comment">// about what a broker stated. Neither caller passes one today.</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <span class="keywordflow">if</span> (row.reserved_) {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      }</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <span class="keywordflow">if</span> (row.ref_.primary_.empty() &amp;&amp; row.ref_.secondary_.empty()) {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        ++untracked_;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      <span class="keyword">const</span> <span class="keyword">auto</span> [at, first] = built.try_emplace(row.ref_, next.size());</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      <span class="keywordflow">if</span> (first) {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        next.push_back(Tracked{row.ref_, row.order_, <span class="keyword">false</span>});</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>      }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      <span class="comment">// One reference, one entry: a duplicated row must not become two events (and two orders).</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      <span class="keyword">auto</span>&amp; already = next[at-&gt;second];</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="keywordflow">if</span> (!order_update_detail::same_observable_state(already.last_, row.order_)) {</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="comment">// Two readings that disagree: report neither, and count it.</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        already.contradicted_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      }</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    std::vector&lt;OrderSnapshot&gt; updates;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : next) {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <span class="keywordflow">if</span> (entry.contradicted_) {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        ++contradicted_;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      <span class="keyword">const</span> <span class="keyword">auto</span> found = held_at.find(entry.ref_);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      <span class="keyword">const</span> Tracked* held = found == held_at.end() ? nullptr : &amp;tracked_[found-&gt;second];</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> differs =</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        held == <span class="keyword">nullptr</span> || !order_update_detail::same_observable_state(held-&gt;last_, entry.last_);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      <span class="keywordflow">if</span> (report &amp;&amp; differs) {</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        updates.push_back(entry.last_);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      }</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="comment">// A contradicted order keeps no baseline, because there is no reading of it this listing could</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="comment">// settle on. The next listing that states it once reports it afresh.</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    next.erase(</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      std::remove_if(</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        next.begin(),</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        next.end(),</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        [](<span class="keyword">const</span> Tracked&amp; entry) { return entry.contradicted_; }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      ),</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      next.end()</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    );</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    tracked_ = std::move(next);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordflow">return</span> updates;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  }</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  std::vector&lt;Tracked&gt; tracked_;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  std::size_t untracked_{0};</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  std::size_t contradicted_{0};</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>};</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// The listing&#39;s first `same` rows are the first `same` tracked orders again (see `unchanged_prefix`).</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">const</span> std::size_t same = unchanged_prefix(rows);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">if</span> (same == rows.size() &amp;&amp; same == tracked_.size()) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    std::vector&lt;Tracked&gt; next;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    next.reserve(rows.size());</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">// Where each reference sits, in this listing (`next`) and in the previous one (`tracked_`), so a</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="comment">// long listing is read once and not once per row. Both are looked up and never iterated: the</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">// order of `next`, and so of the updates, is the listing&#39;s. Built here from the vectors each</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="comment">// time, so nothing has to be kept in step with `tracked_`; a reference maps to the first entry</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="comment">// that has it, which is the one a scan would find.</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">// The first `same` rows become `next[0..same)`, each with the reference of `tracked_` at the same</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">// place: they are neither reserved nor without a reference, and tracked references are distinct.</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="comment">// A later row with one of those references is their duplicate in `built`, never a new entry, so</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">// no new entry can match `tracked_[0..same)` and `held_at` leaves them out.</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    std::unordered_map&lt;OrderRef&lt;Broker&gt;, std::size_t&gt; built;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    built.reserve(rows.size());</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    std::unordered_map&lt;OrderRef&lt;Broker&gt;, std::size_t&gt; held_at;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    held_at.reserve(tracked_.size() - same);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordflow">for</span> (std::size_t at = same; at &lt; tracked_.size(); ++at) {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      held_at.emplace(tracked_[at].ref_, at);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; row : rows) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      <span class="comment">// This library&#39;s own arithmetic rather than something a broker stated, and the contract is</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      <span class="comment">// about what a broker stated. Neither caller passes one today.</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>      <span class="keywordflow">if</span> (row.reserved_) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>      }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      <span class="keywordflow">if</span> (row.ref_.primary_.empty() &amp;&amp; row.ref_.secondary_.empty()) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        ++untracked_;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <span class="keyword">const</span> <span class="keyword">auto</span> [at, first] = built.try_emplace(row.ref_, next.size());</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      <span class="keywordflow">if</span> (first) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        next.push_back(Tracked{row.ref_, row.order_, <span class="keyword">false</span>});</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <span class="comment">// One reference, one entry: a duplicated row must not become two events (and two orders).</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      <span class="keyword">auto</span>&amp; already = next[at-&gt;second];</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      <span class="keywordflow">if</span> (!order_update_detail::same_observable_state(already.last_, row.order_)) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="comment">// Two readings that disagree: report neither, and count it.</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        already.contradicted_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    std::vector&lt;OrderSnapshot&gt; updates;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">for</span> (std::size_t at = 0; at &lt; next.size(); ++at) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry = next[at];</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      <span class="keywordflow">if</span> (entry.contradicted_) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        ++contradicted_;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      <span class="keywordflow">if</span> (at &lt; same) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="comment">// Tracked at this place, in the same observable state: nothing to report.</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      }</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keyword">const</span> <span class="keyword">auto</span> found = held_at.find(entry.ref_);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <span class="keyword">const</span> Tracked* held = found == held_at.end() ? nullptr : &amp;tracked_[found-&gt;second];</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> differs =</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        held == <span class="keyword">nullptr</span> || !order_update_detail::same_observable_state(held-&gt;last_, entry.last_);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      <span class="keywordflow">if</span> (report &amp;&amp; differs) {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        updates.push_back(entry.last_);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    }</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">// A contradicted order keeps no baseline, because there is no reading of it this listing could</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="comment">// settle on. The next listing that states it once reports it afresh.</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    next.erase(</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      std::remove_if(</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        next.begin(),</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        next.end(),</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        [](<span class="keyword">const</span> Tracked&amp; entry) { return entry.contradicted_; }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      ),</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      next.end()</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    );</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    tracked_ = std::move(next);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">return</span> updates;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="comment">// How many leading rows are the tracked orders at the same places again: not reserved, the same reference,</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <span class="comment">// the same observable state. When that is every row and every tracked order, the full pass would report</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="comment">// nothing and count nothing, and `observe` returns at once; the tracked snapshots are then kept rather than</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <span class="comment">// replaced, since they differ only in fields `same_observable_state` ignores and are only ever compared.</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  std::size_t unchanged_prefix(<span class="keyword">const</span> std::vector&lt;WorkingOrder&lt;Broker&gt;&gt;&amp; rows)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">const</span> std::size_t limit = std::min(rows.size(), tracked_.size());</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    std::size_t at = 0;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">while</span> (at &lt; limit &amp;&amp; !rows[at].reserved_ &amp;&amp; rows[at].ref_ == tracked_[at].ref_ &amp;&amp;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>           order_update_detail::same_observable_state(tracked_[at].last_, rows[at].order_)) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      ++at;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">return</span> at;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  std::vector&lt;Tracked&gt; tracked_;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  std::size_t untracked_{0};</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  std::size_t contradicted_{0};</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>};</div>
 </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>} <span class="comment">// namespace runner</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>} <span class="comment">// namespace runner</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>} <span class="comment">// namespace algotradelib</span></div>
 <div class="ttc" id="aclassalgotradelib_1_1runner_1_1OrderUpdateWatch_html"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1OrderUpdateWatch.html">algotradelib::runner::OrderUpdateWatch</a></div><div class="ttdoc">Turns successive working-order listings into order updates: the rows that changed since the previous ...</div><div class="ttdef"><b>Definition</b> <a href="#l00097">order_updates.hpp:97</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1runner_1_1OrderUpdateWatch_html_a14d19202da89d2de30d18c147db54c84"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#a14d19202da89d2de30d18c147db54c84">algotradelib::runner::OrderUpdateWatch::contradicted_rows</a></div><div class="ttdeci">std::size_t contradicted_rows() const noexcept</div><div class="ttdoc">Returns how many times a listing stated one order twice with disagreeing readings (and so it was not ...</div><div class="ttdef"><b>Definition</b> <a href="#l00141">order_updates.hpp:141</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1runner_1_1OrderUpdateWatch_html_a21456ef66c94dcf98bb5020ceef3eed0"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#a21456ef66c94dcf98bb5020ceef3eed0">algotradelib::runner::OrderUpdateWatch::untracked_rows</a></div><div class="ttdeci">std::size_t untracked_rows() const noexcept</div><div class="ttdoc">Returns how many rows had an empty reference, and so were never reported.</div><div class="ttdef"><b>Definition</b> <a href="#l00127">order_updates.hpp:127</a></div></div>
@@ -285,10 +314,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('order__updates
 <div class="ttc" id="aclassalgotradelib_1_1runner_1_1OrderUpdateWatch_html_af6938d6a6b6fc9645461d06debc00be4"><div class="ttname"><a href="classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#af6938d6a6b6fc9645461d06debc00be4">algotradelib::runner::OrderUpdateWatch::tracked_orders</a></div><div class="ttdeci">std::size_t tracked_orders() const noexcept</div><div class="ttdoc">Returns how many orders the watch is tracking.</div><div class="ttdef"><b>Definition</b> <a href="#l00134">order_updates.hpp:134</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1runner_html"><div class="ttname"><a href="namespacealgotradelib_1_1runner.html">algotradelib::runner</a></div><div class="ttdoc">Runs a strategy: the runner, the polling loop, the order journal, and stopping.</div><div class="ttdef"><b>Definition</b> <a href="runner_2clock_8hpp_source.html#l00007">clock.hpp:7</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html"><div class="ttname"><a href="namespacealgotradelib.html">algotradelib</a></div><div class="ttdoc">The library: broker-neutral types (core), and the modules below.</div><div class="ttdef"><b>Definition</b> <a href="conversion_8hpp_source.html#l00013">conversion.hpp:13</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_ace991d9e44e819f903e27056d3f1affe"><div class="ttname"><a href="namespacealgotradelib.html#ace991d9e44e819f903e27056d3f1affe">algotradelib::decimal_less</a></div><div class="ttdeci">bool decimal_less(const Decimal64 &amp;lhs, const Decimal64 &amp;rhs)</div><div class="ttdoc">Compares two decimals numerically, whatever their scales.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00782">types.hpp:782</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1OrderRef_html"><div class="ttname"><a href="structalgotradelib_1_1OrderRef.html">algotradelib::OrderRef</a></div><div class="ttdoc">A broker&#39;s reference to one order, used to amend or cancel it.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l02228">types.hpp:2228</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1OrderSnapshot_html"><div class="ttname"><a href="structalgotradelib_1_1OrderSnapshot.html">algotradelib::OrderSnapshot</a></div><div class="ttdoc">The state of one order, as a broker listing reported it.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l02125">types.hpp:2125</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1WorkingOrder_html"><div class="ttname"><a href="structalgotradelib_1_1WorkingOrder.html">algotradelib::WorkingOrder</a></div><div class="ttdoc">An order still open to modification or cancellation.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l02407">types.hpp:2407</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_ace991d9e44e819f903e27056d3f1affe"><div class="ttname"><a href="namespacealgotradelib.html#ace991d9e44e819f903e27056d3f1affe">algotradelib::decimal_less</a></div><div class="ttdeci">bool decimal_less(const Decimal64 &amp;lhs, const Decimal64 &amp;rhs)</div><div class="ttdoc">Compares two decimals numerically, whatever their scales.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00785">types.hpp:785</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1OrderRef_html"><div class="ttname"><a href="structalgotradelib_1_1OrderRef.html">algotradelib::OrderRef</a></div><div class="ttdoc">A broker&#39;s reference to one order, used to amend or cancel it.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l02231">types.hpp:2231</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1OrderSnapshot_html"><div class="ttname"><a href="structalgotradelib_1_1OrderSnapshot.html">algotradelib::OrderSnapshot</a></div><div class="ttdoc">The state of one order, as a broker listing reported it.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l02128">types.hpp:2128</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1WorkingOrder_html"><div class="ttname"><a href="structalgotradelib_1_1WorkingOrder.html">algotradelib::WorkingOrder</a></div><div class="ttdoc">An order still open to modification or cancellation.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l02410">types.hpp:2410</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

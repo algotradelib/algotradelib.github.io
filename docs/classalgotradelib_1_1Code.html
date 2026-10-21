@@ -174,7 +174,7 @@ class algotradelib::Code&lt; N &gt;</div><p>A short uppercase code (letters, dig
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00248">248</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00251">251</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a881d660072820aa95d1fada91fe2fe8b" name="a881d660072820aa95d1fada91fe2fe8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a881d660072820aa95d1fada91fe2fe8b">&#9670;&#160;</a></span>Code() <span class="overload">[1/2]</span></h2>
@@ -203,7 +203,7 @@ template&lt;std::size_t N&gt; </div>
 
 <p>Constructs an empty code. </p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00343">operator!=</a>, <a class="el" href="types_8hpp_source.html#l00335">operator==</a>, and <a class="el" href="types_8hpp_source.html#l00280">try_make()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00346">operator!=</a>, <a class="el" href="types_8hpp_source.html#l00338">operator==</a>, and <a class="el" href="types_8hpp_source.html#l00283">try_make()</a>.</p>
 
 </div>
 </div>
@@ -246,7 +246,7 @@ template&lt;std::size_t N&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00259">259</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00262">262</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -279,7 +279,7 @@ template&lt;std::size_t N&gt; </div>
 <p>Returns the maximum number of characters. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">N</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00327">327</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00330">330</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,9 +311,9 @@ template&lt;std::size_t N&gt; </div>
 <p>Tests whether the code is empty. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it has no characters. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00315">315</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00318">318</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01618">algotradelib::CommissionRate::normalized()</a>, and <a class="el" href="instrument_8hpp_source.html#l00043">algotradelib::MarketSegment::str()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l01621">algotradelib::CommissionRate::normalized()</a>, and <a class="el" href="instrument_8hpp_source.html#l00043">algotradelib::MarketSegment::str()</a>.</p>
 
 </div>
 </div>
@@ -345,7 +345,7 @@ template&lt;std::size_t N&gt; </div>
 <p>Returns the number of characters. </p>
 <dl class="section return"><dt>Returns</dt><dd>The length, at most <span class="tt">N</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00321">321</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00324">324</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,7 +377,7 @@ template&lt;std::size_t N&gt; </div>
 <p>Returns the code as a string. </p>
 <dl class="section return"><dt>Returns</dt><dd>A copy of the characters. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00309">309</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00312">312</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00043">algotradelib::MarketSegment::str()</a>.</p>
 
@@ -417,9 +417,9 @@ template&lt;std::size_t N&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The code, or <span class="tt">std::nullopt</span> if <span class="tt">text</span> is too long or has any other character. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00280">280</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00283">283</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00088">algotradelib::market_segment()</a>, and <a class="el" href="types_8hpp_source.html#l01392">algotradelib::VenueKey::raw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00088">algotradelib::market_segment()</a>, and <a class="el" href="types_8hpp_source.html#l01395">algotradelib::VenueKey::raw()</a>.</p>
 
 </div>
 </div>
@@ -451,9 +451,9 @@ template&lt;std::size_t N&gt; </div>
 <p>Returns the code's characters. </p>
 <dl class="section return"><dt>Returns</dt><dd>A view of the code's own storage, valid while the code is alive. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00301">301</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00304">304</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00335">operator==</a>, and <a class="el" href="types_8hpp_source.html#l00309">str()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00338">operator==</a>, and <a class="el" href="types_8hpp_source.html#l00312">str()</a>.</p>
 
 </div>
 </div>
@@ -497,7 +497,7 @@ template&lt;std::size_t N&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if they differ. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00343">343</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00346">346</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -540,7 +540,7 @@ template&lt;std::size_t N&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if they are equal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00335">335</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00338">338</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
