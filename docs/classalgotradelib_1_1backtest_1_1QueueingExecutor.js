@@ -3,7 +3,7 @@ var classalgotradelib_1_1backtest_1_1QueueingExecutor =
     [ "Queue", "classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html", "classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue" ],
     [ "QueueingExecutor", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#ae4acf38a569fc4059b5c5f2c85f81596", null ],
     [ "QueueingExecutor", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a2c35fd06f1b26424c0721f8d398e73a0", null ],
-    [ "QueueingExecutor", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a7e083e123e7fce4d9cae554216c01578", null ],
+    [ "QueueingExecutor", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a875fc1af164045e8ed9a264daae66118", null ],
     [ "assign_session", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a8757ad137ccf06bceca46b9f063bb61d", null ],
     [ "bar", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a52e3e28ff43ff9e0acb24b9980c348f1", null ],
     [ "can_model", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a993360c23266d62016fb09ae48cc11e3", null ],

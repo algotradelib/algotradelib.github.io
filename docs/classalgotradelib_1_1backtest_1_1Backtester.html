@@ -165,8 +165,8 @@ class algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;</div><p>Rep
 <div class="line">}</div>
 <div class="line">replay.<a class="code hl_function" href="#aac085c0f5121c2a2a949abb953109e9a">finish</a>();</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> report = <a class="code hl_function" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762">backtest::summarize</a>(replay.result(), replay.fills());</div>
-<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html"><div class="ttname"><a href="classalgotradelib_1_1backtest_1_1Backtester.html">algotradelib::backtest::Backtester</a></div><div class="ttdoc">Replays bars (and quotes) through one strategy, with a ledger and a fill model.</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00748">engine.hpp:748</a></div></div>
-<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html_aac085c0f5121c2a2a949abb953109e9a"><div class="ttname"><a href="#aac085c0f5121c2a2a949abb953109e9a">algotradelib::backtest::Backtester::finish</a></div><div class="ttdeci">void finish()</div><div class="ttdoc">Ends the replay: calls on_stop (with the current portfolio, including orders from the last bar),...</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l01068">engine.hpp:1068</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html"><div class="ttname"><a href="classalgotradelib_1_1backtest_1_1Backtester.html">algotradelib::backtest::Backtester</a></div><div class="ttdoc">Replays bars (and quotes) through one strategy, with a ledger and a fill model.</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00757">engine.hpp:757</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html_aac085c0f5121c2a2a949abb953109e9a"><div class="ttname"><a href="#aac085c0f5121c2a2a949abb953109e9a">algotradelib::backtest::Backtester::finish</a></div><div class="ttdeci">void finish()</div><div class="ttdoc">Ends the replay: calls on_stop (with the current portfolio, including orders from the last bar),...</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l01077">engine.hpp:1077</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1backtest_html_a59999d704779dfc064e43ddab62a7762"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762">algotradelib::backtest::summarize</a></div><div class="ttdeci">Report summarize(const ReplayResult &amp;result, const NextBarFillModel &amp;fills, std::optional&lt; math::Scalar &gt; periods_per_year=std::nullopt, math::Scalar risk_free=math::Scalar{0})</div><div class="ttdoc">Summarizes a replay into a Report.</div><div class="ttdef"><b>Definition</b> <a href="report_8hpp_source.html#l00327">report.hpp:327</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00274">event.hpp:274</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d"><div class="ttname"><a href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">algotradelib::BarStamp::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">The timestamp is the instant the period ended.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00121">market_data.hpp:121</a></div></div>
@@ -178,7 +178,7 @@ class algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;</div><p>Rep
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00748">748</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00757">757</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a7dbed0a82a33668b40eaba6ccce8b2df" name="a7dbed0a82a33668b40eaba6ccce8b2df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7dbed0a82a33668b40eaba6ccce8b2df">&#9670;&#160;</a></span>Executor</h2>
@@ -196,7 +196,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 
 <p>The executor type. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00753">753</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00762">762</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 
 <p>The <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">runner::Runner</a></span> the replay drives, the same type a live session uses. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00755">755</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00764">764</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 
 <p>The order-reference tag. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00751">751</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00760">760</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -285,7 +285,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00763">763</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00772">772</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00833">833</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00842">842</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +386,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00992">992</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l01001">1001</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +418,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>Returns the fill model, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The fill model. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00800">800</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00809">809</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +451,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>For a strategy declaring <span class="tt">on_bars</span>, the last period's bars are delivered first.</p>
 <p>After a halt it does nothing; <span class="tt">on_stop</span> is not called. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l01068">1068</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l01077">1077</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +484,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>It keeps no executions (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693" title="Keep none, for an owner that records them itself (a Backtester, in ReplayResult::executions_).">ExecutionHistory::NONE</a></span>): they are in <span class="tt"><a class="el" href="#a5550e986a83ad759063d2e969e2404f5" title="Returns what the replay has produced so far.">result()</a>.executions_</span>, once.</p>
 <dl class="section return"><dt>Returns</dt><dd>The ledger. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00794">794</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00803">803</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -516,7 +516,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>Returns what the replay has produced so far. </p>
 <dl class="section return"><dt>Returns</dt><dd>The result. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00806">806</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00815">815</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -548,7 +548,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>Returns the strategy, to read the state it kept. </p>
 <dl class="section return"><dt>Returns</dt><dd>The strategy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00785">785</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00794">794</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

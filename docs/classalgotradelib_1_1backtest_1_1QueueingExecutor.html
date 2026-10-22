@@ -145,8 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae4acf38a569fc4059b5c5f2c85f81596"><td class="mdescLeft">&#160;</td><td class="mdescRight">An executor with nothing queued. <br /></td></tr>
 <tr class="memitem:a2c35fd06f1b26424c0721f8d398e73a0" id="r_a2c35fd06f1b26424c0721f8d398e73a0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2c35fd06f1b26424c0721f8d398e73a0">QueueingExecutor</a> (const QueueingExecutor &amp;other)=default</td></tr>
 <tr class="memdesc:a2c35fd06f1b26424c0721f8d398e73a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies an executor and its queue.  <br /></td></tr>
-<tr class="memitem:a7e083e123e7fce4d9cae554216c01578" id="r_a7e083e123e7fce4d9cae554216c01578"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7e083e123e7fce4d9cae554216c01578">QueueingExecutor</a> (QueueingExecutor &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:a7e083e123e7fce4d9cae554216c01578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves an executor; the source is left with nothing queued.  <br /></td></tr>
+<tr class="memitem:a875fc1af164045e8ed9a264daae66118" id="r_a875fc1af164045e8ed9a264daae66118"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a875fc1af164045e8ed9a264daae66118">QueueingExecutor</a> (QueueingExecutor &amp;&amp;other) noexcept(std::is_nothrow_move_constructible&lt; ByInstrument &gt;::value)</td></tr>
+<tr class="memdesc:a875fc1af164045e8ed9a264daae66118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves an executor; the source is left with nothing queued.  <br /></td></tr>
 <tr class="memitem:a6eeb7d2f65629d1d86a343a9713ad389" id="r_a6eeb7d2f65629d1d86a343a9713ad389"><td class="memItemLeft"><a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6eeb7d2f65629d1d86a343a9713ad389">operator=</a> (<a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="memdesc:a6eeb7d2f65629d1d86a343a9713ad389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this executor with a move of another, which is left with nothing queued.  <br /></td></tr>
 <tr class="memitem:adc63582f2f35847ba577068565ea558f" id="r_adc63582f2f35847ba577068565ea558f"><td class="memItemLeft"><a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adc63582f2f35847ba577068565ea558f">operator=</a> (const <a class="el" href="#ae4acf38a569fc4059b5c5f2c85f81596">QueueingExecutor</a> &amp;other)</td></tr>
@@ -202,7 +202,7 @@ class algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;</div><p>The re
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00091">91</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00092">92</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2c35fd06f1b26424c0721f8d398e73a0" name="a2c35fd06f1b26424c0721f8d398e73a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c35fd06f1b26424c0721f8d398e73a0">&#9670;&#160;</a></span>QueueingExecutor() <span class="overload">[1/2]</span></h2>
@@ -239,8 +239,8 @@ template&lt;typename BrokerTag&gt; </div>
 
 </div>
 </div>
-<a id="a7e083e123e7fce4d9cae554216c01578" name="a7e083e123e7fce4d9cae554216c01578"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e083e123e7fce4d9cae554216c01578">&#9670;&#160;</a></span>QueueingExecutor() <span class="overload">[2/2]</span></h2>
+<a id="a875fc1af164045e8ed9a264daae66118" name="a875fc1af164045e8ed9a264daae66118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875fc1af164045e8ed9a264daae66118">&#9670;&#160;</a></span>QueueingExecutor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,14 +265,21 @@ template&lt;typename BrokerTag&gt; </div>
 </div><div class="memdoc">
 
 <p>Moves an executor; the source is left with nothing queued. </p>
+<p><span class="tt">noexcept</span> exactly when the standard library moves an <span class="tt">std::unordered_map</span> without throwing (libc++ and libstdc++ do; Microsoft's allocates).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td>The executor to move from. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::bad_alloc</td><td>If the map cannot be moved; the source is then unchanged. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00108">108</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00117">117</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -315,7 +322,7 @@ template&lt;typename BrokerTag&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00421">421</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00430">430</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -347,7 +354,7 @@ template&lt;typename BrokerTag&gt; </div>
 <p>Returns the bar being replayed. </p>
 <dl class="section return"><dt>Returns</dt><dd>The bar number, counting from one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00476">476</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00485">485</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +393,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the replay can model it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00208">208</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00217">217</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -424,7 +431,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ACCEPTED</span> if it was queued; <span class="tt">REJECTED</span> if nothing matches (it filled or was already withdrawn). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00259">259</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00268">268</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +464,7 @@ template&lt;typename BrokerTag&gt; </div>
 <p>Releasing a stop and dating an order's session change neither its working row nor the count.</p>
 <dl class="section return"><dt>Returns</dt><dd>The count since construction. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00485">485</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00494">494</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -499,7 +506,7 @@ template&lt;typename BrokerTag&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00492">492</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00501">501</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -537,7 +544,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer into the queue (valid until the queue changes), or <span class="tt">nullptr</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00411">411</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00420">420</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +589,7 @@ template&lt;typename Each&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00396">396</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00405">405</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +621,7 @@ template&lt;typename BrokerTag&gt; </div>
 <p>Returns the reference issued to the most recently accepted order. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reference, or <span class="tt">std::nullopt</span> before any. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00267">267</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00276">276</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -653,7 +660,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for every condition today. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00242">242</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00251">251</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +691,7 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p>Starts the next bar; orders accepted from now on cannot fill against it. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00470">470</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00479">479</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -728,7 +735,7 @@ template&lt;typename BrokerTag&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00149">149</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00158">158</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -766,7 +773,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This executor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00126">126</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00135">135</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -805,7 +812,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ACCEPTED</span>, or <span class="tt">REFUSED_LOCALLY</span> for an order the replay cannot price from bars (see <span class="tt"><a class="el" href="#a993360c23266d62016fb09ae48cc11e3" title="Tests whether a replay can price an order from bars.">can_model</a></span>); a refused order is reported as a <span class="tt">BINDING_REFUSED</span> rejection (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html#a700ec8831500785ed4a708e1ddc2fecb" title="Instructions not placed: reconciliation could not build them, or the replay cannot model them (BINDIN...">ReplayResult::rejected_</a></span>, the pass's <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html#a6a5da131da67c3722a9f2a4478544053" title="Instructions not placed: reconciliation could not build them, or the replay cannot model them (BINDIN...">Report::rejected_</a></span>), as a live binding's refusal is; the strategy is not told. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00171">171</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00180">180</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -837,7 +844,7 @@ template&lt;typename BrokerTag&gt; </div>
 <p>Returns every outstanding order, oldest first. </p>
 <dl class="section return"><dt>Returns</dt><dd>A view of the orders; valid until the queue changes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00385">385</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00394">394</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -875,7 +882,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it was queued. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00458">458</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00467">467</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -913,7 +920,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it was queued. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00432">432</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00441">441</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -942,7 +949,7 @@ template&lt;typename BrokerTag&gt; </div>
 
 <p><span class="tt">false</span>: a replay reaches no broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00159">159</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00168">168</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
