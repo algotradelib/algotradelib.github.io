@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['ratelimitbucket_0',['RateLimitBucket',['../namespacealgotradelib_1_1network.html#af7e6ef5713b6a8d4e64496bed5189a6d',1,'algotradelib::network']]],
-  ['ref_1',['Ref',['../classalgotradelib_1_1BrokerSession.html#a22eefb0738515e9303953536a4d084eb',1,'algotradelib::BrokerSession::Ref'],['../classalgotradelib_1_1BlockingSession.html#a888eff11152d3ee3e525ea5e268695ba',1,'algotradelib::BlockingSession::Ref']]],
-  ['reference_2',['reference',['../classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue_1_1const__iterator.html#afb6218a6c3bb8fbdbec422718decf8a2',1,'algotradelib::backtest::QueueingExecutor::Queue::const_iterator']]],
-  ['report_3',['Report',['../classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08',1,'algotradelib::runner::Runner']]],
-  ['routeevidence_4',['RouteEvidence',['../namespacealgotradelib_1_1runner.html#aa91a1b779bdb2a53ed54486511a2a8ff',1,'algotradelib::runner']]],
-  ['runner_5',['Runner',['../classalgotradelib_1_1backtest_1_1Backtester.html#a89234ebc1ef951e3beb467c3001678db',1,'algotradelib::backtest::Backtester']]]
+  ['scalar_0',['Scalar',['../namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e',1,'algotradelib::math::Scalar'],['../namespacealgotradelib_1_1analytics.html#a12b8c1ca53ee5215eab439879f5e394e',1,'algotradelib::analytics::Scalar']]],
+  ['sellablequantityhandler_1',['SellableQuantityHandler',['../classalgotradelib_1_1tossinvest_1_1TossClient.html#ad9631b0dc45c2dcf4ae1dcf272abfde0',1,'algotradelib::tossinvest::TossClient']]],
+  ['seriesview_2',['SeriesView',['../namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96',1,'algotradelib::math']]]
 ];

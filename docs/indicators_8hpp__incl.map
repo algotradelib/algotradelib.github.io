@@ -1,6 +1,6 @@
 <map id="algotradelib/src/analytics/indicators.hpp" name="algotradelib/src/analytics/indicators.hpp">
-<area shape="rect" id="Node000001" title="Named technical indicators: z&#45;score, Bollinger bands, RSI, ATR, MACD, and trailing covariance,..." alt="" coords="364,5,551,45"/>
-<area shape="rect" id="Node000002" href="$rolling_8hpp.html" title="Trailing&#45;window statistics: sums, means, deviations, extremes and moving averages." alt="" coords="233,93,332,119"/>
+<area shape="rect" id="Node000001" title="Named technical indicators: the trailing z&#45;score and the relative strength index." alt="" coords="364,5,551,45"/>
+<area shape="rect" id="Node000002" href="$rolling_8hpp.html" title="Trailing&#45;window statistics: means, deviations, extremes and moving averages." alt="" coords="233,93,332,119"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,48,322,90,320,85,414,43"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="58,387,121,412"/>
 <area shape="poly" id="edge19_Node000001_Node000006" title=" " alt="" coords="364,41,252,61,136,90,85,109,44,130,17,153,10,165,8,178,8,254,14,290,29,323,49,352,70,375,65,379,45,355,25,326,9,291,3,254,3,178,5,163,13,150,41,125,83,104,134,85,251,56,363,36"/>

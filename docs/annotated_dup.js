@@ -2,8 +2,6 @@ var annotated_dup =
 [
     [ "algotradelib", "namespacealgotradelib.html", [
       [ "analytics", "namespacealgotradelib_1_1analytics.html", [
-        [ "BollingerBands", "structalgotradelib_1_1analytics_1_1BollingerBands.html", "structalgotradelib_1_1analytics_1_1BollingerBands" ],
-        [ "MacdLines", "structalgotradelib_1_1analytics_1_1MacdLines.html", "structalgotradelib_1_1analytics_1_1MacdLines" ],
         [ "MaxDrawdown", "structalgotradelib_1_1analytics_1_1MaxDrawdown.html", "structalgotradelib_1_1analytics_1_1MaxDrawdown" ],
         [ "Panel", "classalgotradelib_1_1analytics_1_1Panel.html", "classalgotradelib_1_1analytics_1_1Panel" ],
         [ "SeriesBuffer", "classalgotradelib_1_1analytics_1_1SeriesBuffer.html", "classalgotradelib_1_1analytics_1_1SeriesBuffer" ],

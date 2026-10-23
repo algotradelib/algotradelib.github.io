@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('metrics_8hpp.h
 </div><!--header-->
 <div class="contents">
 
-<p>Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization, turnover.  
+<p>Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="numeric_8hpp_source.html">./numeric.hpp</a>&quot;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
@@ -149,13 +149,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:algotradelib_3A_3Aanalytics" id="r_algotradelib_3A_3Aanalytics"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html">algotradelib::analytics</a></td></tr>
 <tr class="memdesc:namespacealgotradelib_1_1analytics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns, rolling statistics, indicators and performance metrics over numeric series. <br /></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a675051c289dd49c9f1fe728a39d7f706" id="r_a675051c289dd49c9f1fe728a39d7f706"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706">algotradelib::analytics::TurnoverStart</a> { <a class="el" href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706a89880219167364d5c5f98ee44aed7c82">algotradelib::analytics::FROM_CASH</a>
-, <a class="el" href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706ab85df04e922fe1dd3c1f0692faeaacef">algotradelib::analytics::SKIP</a>
- }</td></tr>
-<tr class="memdesc:a675051c289dd49c9f1fe728a39d7f706"><td class="mdescLeft">&#160;</td><td class="mdescRight">How turnover treats the first period.  <a href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706">More...</a><br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac722704ca00110ea27bd39822382ded7" id="r_ac722704ca00110ea27bd39822382ded7"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1analytics_1_1MaxDrawdown.html">MaxDrawdown</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#ac722704ca00110ea27bd39822382ded7">algotradelib::analytics::max_drawdown</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> levels)</td></tr>
@@ -166,13 +159,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:aaee174047c611c00d176217a1ff63d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the per-period Sortino ratio, <span class="tt">(mean(returns) - target) / downside_deviation</span>.  <br /></td></tr>
 <tr class="memitem:ab19fa55f5c2131a1fc28ab652b43d0e1" id="r_ab19fa55f5c2131a1fc28ab652b43d0e1"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#ab19fa55f5c2131a1fc28ab652b43d0e1">algotradelib::analytics::annualize_ratio</a> (<a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> ratio, <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> periods_per_year)</td></tr>
 <tr class="memdesc:ab19fa55f5c2131a1fc28ab652b43d0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Annualizes a per-period ratio by multiplying it by <span class="tt">sqrt(periods_per_year)</span>.  <br /></td></tr>
-<tr class="memitem:a2bb9eaaf3a5b0a287cf02dffc9e41bde" id="r_a2bb9eaaf3a5b0a287cf02dffc9e41bde"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#a2bb9eaaf3a5b0a287cf02dffc9e41bde">algotradelib::analytics::one_way_turnover</a> (<a class="el" href="namespacealgotradelib_1_1math.html#a8df2ab26b2071a0c2e70990753748210">math::MatrixView</a> weights, <a class="el" href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706">TurnoverStart</a> start=<a class="el" href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706a89880219167364d5c5f98ee44aed7c82">TurnoverStart::FROM_CASH</a>)</td></tr>
-<tr class="memdesc:a2bb9eaaf3a5b0a287cf02dffc9e41bde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the one-way turnover of each period, <span class="tt">0.5 * sum(|w[i] - w[i - 1]|)</span>.  <br /></td></tr>
-<tr class="memitem:abd8c85839d39f5875ba6f2e7408846b8" id="r_abd8c85839d39f5875ba6f2e7408846b8"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#abd8c85839d39f5875ba6f2e7408846b8">algotradelib::analytics::two_way_turnover</a> (<a class="el" href="namespacealgotradelib_1_1math.html#a8df2ab26b2071a0c2e70990753748210">math::MatrixView</a> weights, <a class="el" href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706">TurnoverStart</a> start=<a class="el" href="namespacealgotradelib_1_1analytics.html#a675051c289dd49c9f1fe728a39d7f706a89880219167364d5c5f98ee44aed7c82">TurnoverStart::FROM_CASH</a>)</td></tr>
-<tr class="memdesc:abd8c85839d39f5875ba6f2e7408846b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the two-way turnover of each period, <span class="tt">sum(|w[i] - w[i - 1]|)</span>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization, turnover. </p>
+<div class="textblock"><p>Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization. </p>
 <p>Each function states the convention it implements. Ratios are per period; annualize them explicitly with <span class="tt">annualize_ratio</span>. </p>
 
 <p class="definition">Definition in file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>

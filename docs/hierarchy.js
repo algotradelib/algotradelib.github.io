@@ -24,7 +24,6 @@ var hierarchy =
     [ "algotradelib::strategy::BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", null ],
     [ "algotradelib::network::BasicRateLimitBucket&lt; Clock &gt;", "classalgotradelib_1_1network_1_1BasicRateLimitBucket.html", null ],
     [ "algotradelib::BlockingSession&lt; Client &gt;", "classalgotradelib_1_1BlockingSession.html", null ],
-    [ "algotradelib::analytics::BollingerBands", "structalgotradelib_1_1analytics_1_1BollingerBands.html", null ],
     [ "std::bool_constant", null, [
       [ "algotradelib::runner::runner_keeps_sent_orders< Runner, std::void_t< decltype(Runner::keeps_sent_orders_until_listed)> >", "structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html", null ],
       [ "algotradelib::runner::source_provides_working_orders< Source, std::void_t< decltype(Source::provides_working_orders)> >", "structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html", null ]
@@ -165,7 +164,6 @@ var hierarchy =
     [ "algotradelib::runner::Context&lt; BrokerTag, CapsType &gt;::Log", "classalgotradelib_1_1runner_1_1Context_1_1Log.html", null ],
     [ "algotradelib::strategy::ProbeContextT&lt; CapsType &gt;::Log", "classalgotradelib_1_1strategy_1_1ProbeContextT_1_1Log.html", null ],
     [ "algotradelib::runner::LoopReport", "structalgotradelib_1_1runner_1_1LoopReport.html", null ],
-    [ "algotradelib::analytics::MacdLines", "structalgotradelib_1_1analytics_1_1MacdLines.html", null ],
     [ "algotradelib::runner::ManualClock", "classalgotradelib_1_1runner_1_1ManualClock.html", null ],
     [ "algotradelib::runner::ManualSource&lt; Runner &gt;", "classalgotradelib_1_1runner_1_1ManualSource.html", null ],
     [ "algotradelib::MarketSegment", "structalgotradelib_1_1MarketSegment.html", null ],

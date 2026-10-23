@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('returns_8hpp.h
 </div><!--header-->
 <div class="contents">
 
-<p>Simple, log and cumulative returns of a price series.  
+<p>Simple returns of a price series.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="numeric_8hpp_source.html">./numeric.hpp</a>&quot;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
@@ -146,13 +146,9 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ae513271d6929b08cab9a1b66ee56041c" id="r_ae513271d6929b08cab9a1b66ee56041c"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#ae513271d6929b08cab9a1b66ee56041c">algotradelib::analytics::returns</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> prices)</td></tr>
 <tr class="memdesc:ae513271d6929b08cab9a1b66ee56041c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes simple period returns, <span class="tt">p[i] / p[i - 1] - 1</span>.  <br /></td></tr>
-<tr class="memitem:abe8d7cb06e21d24506173da7d6d16553" id="r_abe8d7cb06e21d24506173da7d6d16553"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#abe8d7cb06e21d24506173da7d6d16553">algotradelib::analytics::log_returns</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> prices)</td></tr>
-<tr class="memdesc:abe8d7cb06e21d24506173da7d6d16553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes log (continuously compounded) returns, <span class="tt">log(p[i] / p[i - 1])</span>.  <br /></td></tr>
-<tr class="memitem:a184f1112fe1f411dc7f05d049a454e81" id="r_a184f1112fe1f411dc7f05d049a454e81"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1analytics.html#a184f1112fe1f411dc7f05d049a454e81">algotradelib::analytics::cumulative_returns</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> period_returns)</td></tr>
-<tr class="memdesc:a184f1112fe1f411dc7f05d049a454e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compounds simple period returns into the cumulative return, <span class="tt">prod(1 + r[0..i]) - 1</span>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simple, log and cumulative returns of a price series. </p>
+<div class="textblock"><p>Simple returns of a price series. </p>
 <p>Like every series function in <span class="tt">analytics</span>, each result is as long as its input (row <span class="tt">i</span> describes row <span class="tt">i</span>, so it shares the input's <span class="tt">TimeIndex</span>), and a value that cannot be computed is <span class="tt">missing()</span>, never zero. </p>
 
 <p class="definition">Definition in file <a class="el" href="returns_8hpp_source.html">returns.hpp</a>.</p>

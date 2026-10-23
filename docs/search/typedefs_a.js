@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['ldlt_0',['Ldlt',['../namespacealgotradelib_1_1math.html#a9198eb605c8cdd472ca24f9669a21d82',1,'algotradelib::math']]],
-  ['llt_1',['Llt',['../namespacealgotradelib_1_1math.html#abf37f726cc4e3c9b7ea52babeda2a1e6',1,'algotradelib::math']]]
+  ['matrix_0',['Matrix',['../namespacealgotradelib_1_1math.html#a487af88331f4b66531be576f0175399f',1,'algotradelib::math']]],
+  ['matrixview_1',['MatrixView',['../namespacealgotradelib_1_1math.html#a8df2ab26b2071a0c2e70990753748210',1,'algotradelib::math']]],
+  ['minimalcontext_2',['MinimalContext',['../namespacealgotradelib_1_1strategy.html#a2dbe0bb2bf68d1e254ef0bc044d5a399',1,'algotradelib::strategy']]],
+  ['mutableseriesview_3',['MutableSeriesView',['../namespacealgotradelib_1_1math.html#a406ddcb2d143120814cfac7fbd83971e',1,'algotradelib::math']]]
 ];

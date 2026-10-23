@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['scalar_0',['Scalar',['../namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e',1,'algotradelib::math::Scalar'],['../namespacealgotradelib_1_1analytics.html#a12b8c1ca53ee5215eab439879f5e394e',1,'algotradelib::analytics::Scalar']]],
-  ['selfadjointeigen_1',['SelfAdjointEigen',['../namespacealgotradelib_1_1math.html#a3540294bad452caa1c9189269f77bef3',1,'algotradelib::math']]],
-  ['sellablequantityhandler_2',['SellableQuantityHandler',['../classalgotradelib_1_1tossinvest_1_1TossClient.html#ad9631b0dc45c2dcf4ae1dcf272abfde0',1,'algotradelib::tossinvest::TossClient']]],
-  ['seriesview_3',['SeriesView',['../namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96',1,'algotradelib::math']]],
-  ['svd_4',['Svd',['../namespacealgotradelib_1_1math.html#a06768b04c93d70880b60aa30ed99113d',1,'algotradelib::math']]]
+  ['tag_0',['Tag',['../classalgotradelib_1_1backtest_1_1Backtester.html#afb00af4a116816e6fa52e13107d7ff60',1,'algotradelib::backtest::Backtester::Tag'],['../classalgotradelib_1_1runner_1_1Runner.html#a81b2c78d9771047b462b832fe1c92762',1,'algotradelib::runner::Runner::Tag']]],
+  ['tcp_1',['tcp',['../namespacealgotradelib.html#ad4cc4cfbaae4e7d14288fd523c8a73e3',1,'algotradelib']]],
+  ['timepoint_2',['TimePoint',['../classalgotradelib_1_1network_1_1BasicRateLimitBucket.html#a719f87b690ccb4bbdc9bb482162d697f',1,'algotradelib::network::BasicRateLimitBucket']]],
+  ['tokenhandler_3',['TokenHandler',['../classalgotradelib_1_1kis_1_1KisClient.html#a1d2f4d00d8a8254811b666aa7e5a1ba1',1,'algotradelib::kis::KisClient::TokenHandler'],['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a75e0b0e51f00583f5881d36b31b504d8',1,'algotradelib::kiwoom::KiwoomClient::TokenHandler'],['../classalgotradelib_1_1tossinvest_1_1TossClient.html#a0de998e666b5d977def25144b43d7c59',1,'algotradelib::tossinvest::TossClient::TokenHandler']]],
+  ['tosshttpclient_4',['TossHttpClient',['../namespacealgotradelib_1_1tossinvest.html#ad93650bcad1075b88b9a772083e69722',1,'algotradelib::tossinvest']]],
+  ['tradeshandler_5',['TradesHandler',['../classalgotradelib_1_1kis_1_1KisClient.html#ab48d245aa76db2dc47bbda5ec7eadf41',1,'algotradelib::kis::KisClient::TradesHandler'],['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a586401e614b491cc90e3becde8c368ac',1,'algotradelib::kiwoom::KiwoomClient::TradesHandler'],['../classalgotradelib_1_1tossinvest_1_1TossClient.html#afc44b2af03cbb980616ca52a1231ee07',1,'algotradelib::tossinvest::TossClient::TradesHandler']]],
+  ['traits_6',['Traits',['../structalgotradelib_1_1BrokerCaps.html#af9716c8575c74ee30cacd4cda2e03bd4',1,'algotradelib::BrokerCaps::Traits'],['../classalgotradelib_1_1BrokerSession.html#ae44046076c43555ed57f26a1dd3d74d9',1,'algotradelib::BrokerSession::Traits'],['../classalgotradelib_1_1BlockingSession.html#aa92433bbdcfdac68fe1fce27c85c6522',1,'algotradelib::BlockingSession::Traits']]]
 ];

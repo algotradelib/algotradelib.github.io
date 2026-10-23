@@ -6,7 +6,7 @@
 <!-- Title: algotradelib::runner::source_states_charged_costs&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().charged_costs())&gt; &gt; Pages: 1 -->
 <svg width="646pt" height="134pt"
  viewBox="0.00 0.00 646.00 133.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="page0,1_graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 129.6)">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 129.6)">
 <title>algotradelib::runner::source_states_charged_costs&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().charged_costs())&gt; &gt;</title>
 <!-- Node1 -->
 <g id="Node000001" class="node">

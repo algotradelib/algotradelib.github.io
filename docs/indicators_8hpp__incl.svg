@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Named technical indicators: z&#45;score, Bollinger bands, RSI, ATR, MACD, and trailing covariance,...">
+<g id="a_Node000001"><a xlink:title="Named technical indicators: the trailing z&#45;score and the relative strength index.">
 <polygon fill="#999999" stroke="#666666" points="409,-305 269,-305 269,-275 409,-275 409,-305"/>
 <text text-anchor="start" x="277" y="-293" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/analytics</text>
 <text text-anchor="middle" x="339" y="-282" font-family="Helvetica,sans-Serif" font-size="10.00">/indicators.hpp</text>
@@ -32,7 +32,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="rolling_8hpp.html" target="_top" xlink:title="Trailing&#45;window statistics: sums, means, deviations, extremes and moving averages.">
+<g id="a_Node000002"><a xlink:href="rolling_8hpp.html" target="_top" xlink:title="Trailing&#45;window statistics: means, deviations, extremes and moving averages.">
 <polygon fill="white" stroke="#666666" points="245,-239 171,-239 171,-220 245,-220 245,-239"/>
 <text text-anchor="middle" x="208" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">./rolling.hpp</text>
 </a>

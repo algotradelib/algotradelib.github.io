@@ -1,5 +1,5 @@
 <map id="algotradelib/src/analytics/metrics.hpp" name="algotradelib/src/analytics/metrics.hpp">
-<area shape="rect" id="Node000001" title="Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization, turnover." alt="" coords="219,5,406,45"/>
+<area shape="rect" id="Node000001" title="Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization." alt="" coords="219,5,406,45"/>
 <area shape="rect" id="Node000002" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="177,93,288,119"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="295,47,256,85,253,82,291,44"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="5,313,68,339"/>

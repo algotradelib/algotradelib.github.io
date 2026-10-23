@@ -176,7 +176,7 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="metrics_8hpp.html" target="_top" xlink:title="Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization, turnover.">
+<g id="a_Node000007"><a xlink:href="metrics_8hpp.html" target="_top" xlink:title="Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization.">
 <polygon fill="white" stroke="#666666" points="558,-162 418,-162 418,-132 558,-132 558,-162"/>
 <text text-anchor="start" x="426" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/analytics</text>
 <text text-anchor="middle" x="488" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">/metrics.hpp</text>
@@ -195,7 +195,7 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="returns_8hpp.html" target="_top" xlink:title="Simple, log and cumulative returns of a price series.">
+<g id="a_Node000008"><a xlink:href="returns_8hpp.html" target="_top" xlink:title="Simple returns of a price series.">
 <polygon fill="white" stroke="#666666" points="716,-162 576,-162 576,-132 716,-132 716,-162"/>
 <text text-anchor="start" x="584" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/analytics</text>
 <text text-anchor="middle" x="646" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">/returns.hpp</text>
@@ -214,7 +214,7 @@
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="rolling_8hpp.html" target="_top" xlink:title="Trailing&#45;window statistics: sums, means, deviations, extremes and moving averages.">
+<g id="a_Node000009"><a xlink:href="rolling_8hpp.html" target="_top" xlink:title="Trailing&#45;window statistics: means, deviations, extremes and moving averages.">
 <polygon fill="white" stroke="#666666" points="874,-162 734,-162 734,-132 874,-132 874,-162"/>
 <text text-anchor="start" x="742" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/analytics</text>
 <text text-anchor="middle" x="804" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">/rolling.hpp</text>
@@ -251,7 +251,7 @@
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="indicators_8hpp.html" target="_top" xlink:title="Named technical indicators: z&#45;score, Bollinger bands, RSI, ATR, MACD, and trailing covariance,...">
+<g id="a_Node000010"><a xlink:href="indicators_8hpp.html" target="_top" xlink:title="Named technical indicators: the trailing z&#45;score and the relative strength index.">
 <polygon fill="white" stroke="#666666" points="874,-96 734,-96 734,-66 874,-66 874,-96"/>
 <text text-anchor="start" x="742" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/analytics</text>
 <text text-anchor="middle" x="804" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">/indicators.hpp</text>

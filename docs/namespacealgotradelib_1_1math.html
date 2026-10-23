@@ -144,22 +144,6 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a8df2ab26b2071a0c2e70990753748210"><td class="mdescLeft">&#160;</td><td class="mdescRight">A read-only reference to a whole matrix.  <br /></td></tr>
 <tr class="memitem:a4f572d3e24fee3cb9c44f99a13415fca" id="r_a4f572d3e24fee3cb9c44f99a13415fca"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a4f572d3e24fee3cb9c44f99a13415fca">Index</a> = Eigen::Index</td></tr>
 <tr class="memdesc:a4f572d3e24fee3cb9c44f99a13415fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signed index type of rows and columns.  <br /></td></tr>
-<tr class="memitem:abf37f726cc4e3c9b7ea52babeda2a1e6" id="r_abf37f726cc4e3c9b7ea52babeda2a1e6"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#abf37f726cc4e3c9b7ea52babeda2a1e6">Llt</a> = Eigen::LLT&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:abf37f726cc4e3c9b7ea52babeda2a1e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cholesky decomposition of a symmetric positive-definite matrix. Check <span class="tt">info()</span>.  <br /></td></tr>
-<tr class="memitem:a9198eb605c8cdd472ca24f9669a21d82" id="r_a9198eb605c8cdd472ca24f9669a21d82"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a9198eb605c8cdd472ca24f9669a21d82">Ldlt</a> = Eigen::LDLT&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:a9198eb605c8cdd472ca24f9669a21d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pivoting Cholesky (LDLT) decomposition of a symmetric, possibly semi-definite matrix.  <br /></td></tr>
-<tr class="memitem:a079a591cf15ec7ecbcb3cb3be0696948" id="r_a079a591cf15ec7ecbcb3cb3be0696948"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a079a591cf15ec7ecbcb3cb3be0696948">HouseholderQr</a> = Eigen::HouseholderQR&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:a079a591cf15ec7ecbcb3cb3be0696948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Householder QR decomposition: the fastest QR, with no rank information.  <br /></td></tr>
-<tr class="memitem:ad8ee673137ec22be4d1d377ea7b3df6a" id="r_ad8ee673137ec22be4d1d377ea7b3df6a"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ad8ee673137ec22be4d1d377ea7b3df6a">ColPivQr</a> = Eigen::ColPivHouseholderQR&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:ad8ee673137ec22be4d1d377ea7b3df6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Column-pivoting Householder QR: a least-squares solution and a rank.  <br /></td></tr>
-<tr class="memitem:afc438eeda9acdf284ad9f43a07e13164" id="r_afc438eeda9acdf284ad9f43a07e13164"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#afc438eeda9acdf284ad9f43a07e13164">FullPivQr</a> = Eigen::FullPivHouseholderQR&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:afc438eeda9acdf284ad9f43a07e13164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full-pivoting Householder QR: slower than <span class="tt"><a class="el" href="#ad8ee673137ec22be4d1d377ea7b3df6a" title="Column-pivoting Householder QR: a least-squares solution and a rank.">ColPivQr</a></span>, with the most reliable rank.  <br /></td></tr>
-<tr class="memitem:ab929ecb64764ad3d37287a8abcead119" id="r_ab929ecb64764ad3d37287a8abcead119"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ab929ecb64764ad3d37287a8abcead119">FullPivLu</a> = Eigen::FullPivLU&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:ab929ecb64764ad3d37287a8abcead119"><td class="mdescLeft">&#160;</td><td class="mdescRight">LU decomposition with full pivoting, for a square system with no known structure.  <br /></td></tr>
-<tr class="memitem:a06768b04c93d70880b60aa30ed99113d" id="r_a06768b04c93d70880b60aa30ed99113d"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a06768b04c93d70880b60aa30ed99113d">Svd</a> = Eigen::BDCSVD&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:a06768b04c93d70880b60aa30ed99113d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide-and-conquer SVD: minimum-norm least-squares solutions and singular values.  <br /></td></tr>
-<tr class="memitem:a3540294bad452caa1c9189269f77bef3" id="r_a3540294bad452caa1c9189269f77bef3"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a3540294bad452caa1c9189269f77bef3">SelfAdjointEigen</a> = Eigen::SelfAdjointEigenSolver&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td></tr>
-<tr class="memdesc:a3540294bad452caa1c9189269f77bef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eigenvalues (ascending) and eigenvectors of a symmetric matrix. Check <span class="tt">info()</span>.  <br /></td></tr>
 <tr class="memitem:a12b8c1ca53ee5215eab439879f5e394e" id="r_a12b8c1ca53ee5215eab439879f5e394e"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> = double</td></tr>
 <tr class="memdesc:a12b8c1ca53ee5215eab439879f5e394e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The floating-point type the analytics and math layers compute in (<span class="tt">double</span>).  <br /></td></tr>
 </table><table class="memberdecls">
@@ -173,10 +157,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a010e581485da026600475308d51288eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a series into zero-filled values and a presence mask.  <br /></td></tr>
 <tr class="memitem:a721912adc1eeaa4f2083d6efe598f6fc" id="r_a721912adc1eeaa4f2083d6efe598f6fc"><td class="memItemLeft"><a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f">Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a721912adc1eeaa4f2083d6efe598f6fc">observed_or</a> (<a class="el" href="#ae4c8e078736dd52dd016c932bc975b96">SeriesView</a> values, <a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> filler)</td></tr>
 <tr class="memdesc:a721912adc1eeaa4f2083d6efe598f6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces every unobserved entry of a series.  <br /></td></tr>
-<tr class="memitem:a171219497bb0944696ffe9edbe8d8ed9" id="r_a171219497bb0944696ffe9edbe8d8ed9"><td class="memItemLeft"><a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f">Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a171219497bb0944696ffe9edbe8d8ed9">both_present</a> (const <a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f">Vector</a> &amp;left, const <a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f">Vector</a> &amp;right)</td></tr>
-<tr class="memdesc:a171219497bb0944696ffe9edbe8d8ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines two presence masks: <span class="tt">1</span> only where both series are observed.  <br /></td></tr>
-<tr class="memitem:a5719c96f3e317c76960f9ee27890d6f2" id="r_a5719c96f3e317c76960f9ee27890d6f2"><td class="memItemLeft"><a class="el" href="#a06768b04c93d70880b60aa30ed99113d">Svd</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5719c96f3e317c76960f9ee27890d6f2">thin_svd</a> (const <a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a> &amp;a)</td></tr>
-<tr class="memdesc:a5719c96f3e317c76960f9ee27890d6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a thin SVD, ready to <span class="tt">solve()</span>.  <br /></td></tr>
 <tr class="memitem:ac779beb008cac496403576f7f5caaaf1" id="r_ac779beb008cac496403576f7f5caaaf1"><td class="memItemLeft"><a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1">missing</a> ()</td></tr>
 <tr class="memdesc:ac779beb008cac496403576f7f5caaaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value that stands for "no observation" (a quiet <span class="tt">NaN</span>).  <br /></td></tr>
 <tr class="memitem:a19fc7f3d86cafd06105c227a9caed294" id="r_a19fc7f3d86cafd06105c227a9caed294"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a19fc7f3d86cafd06105c227a9caed294">observed</a> (<a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> value)</td></tr>
@@ -185,96 +165,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a50c8c89e41d0eb721cf3d9a58659d7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value that stands for "the data was there, but the statistic does not exist".  <br /></td></tr>
 <tr class="memitem:a113dc01ca9017f58f13b6b78193a8caa" id="r_a113dc01ca9017f58f13b6b78193a8caa"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a113dc01ca9017f58f13b6b78193a8caa">is_undefined</a> (<a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> value)</td></tr>
 <tr class="memdesc:a113dc01ca9017f58f13b6b78193a8caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a value is the <span class="tt"><a class="el" href="#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">undefined()</a></span> marker.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a849d2fa6aae00cb1d9ef8edbc9651a35" id="r_a849d2fa6aae00cb1d9ef8edbc9651a35"><td class="memItemLeft">constexpr unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a849d2fa6aae00cb1d9ef8edbc9651a35">LOWER</a> = Eigen::Lower</td></tr>
-<tr class="memdesc:a849d2fa6aae00cb1d9ef8edbc9651a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the lower triangle, as in <span class="tt">matrix.selfadjointView&lt;<a class="el" href="#a849d2fa6aae00cb1d9ef8edbc9651a35" title="Selects the lower triangle, as in matrix.selfadjointView&lt;math::LOWER&gt;().">math::LOWER</a>&gt;()</span>.  <br /></td></tr>
-<tr class="memitem:ae41e9f1ac77ac442bda62501ad784a67" id="r_ae41e9f1ac77ac442bda62501ad784a67"><td class="memItemLeft">constexpr unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ae41e9f1ac77ac442bda62501ad784a67">UPPER</a> = Eigen::Upper</td></tr>
-<tr class="memdesc:ae41e9f1ac77ac442bda62501ad784a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the upper triangle.  <br /></td></tr>
-<tr class="memitem:aacca09b2058e0888f5d631e62e204228" id="r_aacca09b2058e0888f5d631e62e204228"><td class="memItemLeft">constexpr unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#aacca09b2058e0888f5d631e62e204228">UNIT_LOWER</a> = Eigen::UnitLower</td></tr>
-<tr class="memdesc:aacca09b2058e0888f5d631e62e204228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the lower triangle with an implicit unit diagonal.  <br /></td></tr>
-<tr class="memitem:a9b80308bdb06f345808a970aff878ef9" id="r_a9b80308bdb06f345808a970aff878ef9"><td class="memItemLeft">constexpr unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a9b80308bdb06f345808a970aff878ef9">UNIT_UPPER</a> = Eigen::UnitUpper</td></tr>
-<tr class="memdesc:a9b80308bdb06f345808a970aff878ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the upper triangle with an implicit unit diagonal.  <br /></td></tr>
-<tr class="memitem:ac6d0dd4c473dea0cf03f8826f0d21f85" id="r_ac6d0dd4c473dea0cf03f8826f0d21f85"><td class="memItemLeft">constexpr auto&#160;</td><td class="memItemRight"><a class="el" href="#ac6d0dd4c473dea0cf03f8826f0d21f85">SUCCESS</a> = Eigen::Success</td></tr>
-<tr class="memdesc:ac6d0dd4c473dea0cf03f8826f0d21f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value a decomposition's <span class="tt">info()</span> returns on success.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The numeric vocabulary: <span class="tt"><a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e" title="The floating-point type the analytics and math layers compute in (double).">Scalar</a></span>, <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">missing()</a></span>, and the matrix and vector types. </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="ad8ee673137ec22be4d1d377ea7b3df6a" name="ad8ee673137ec22be4d1d377ea7b3df6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8ee673137ec22be4d1d377ea7b3df6a">&#9670;&#160;</a></span>ColPivQr</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#ad8ee673137ec22be4d1d377ea7b3df6a">algotradelib::math::ColPivQr</a> = Eigen::ColPivHouseholderQR&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Column-pivoting Householder QR: a least-squares solution and a rank. </p>
-<p>A good default for a regression on market data, where nearly collinear columns are common; check <span class="tt">rank()</span> against the number of columns. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00176">176</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ab929ecb64764ad3d37287a8abcead119" name="ab929ecb64764ad3d37287a8abcead119"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab929ecb64764ad3d37287a8abcead119">&#9670;&#160;</a></span>FullPivLu</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#ab929ecb64764ad3d37287a8abcead119">algotradelib::math::FullPivLu</a> = Eigen::FullPivLU&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>LU decomposition with full pivoting, for a square system with no known structure. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00182">182</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="afc438eeda9acdf284ad9f43a07e13164" name="afc438eeda9acdf284ad9f43a07e13164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc438eeda9acdf284ad9f43a07e13164">&#9670;&#160;</a></span>FullPivQr</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#afc438eeda9acdf284ad9f43a07e13164">algotradelib::math::FullPivQr</a> = Eigen::FullPivHouseholderQR&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Full-pivoting Householder QR: slower than <span class="tt"><a class="el" href="#ad8ee673137ec22be4d1d377ea7b3df6a" title="Column-pivoting Householder QR: a least-squares solution and a rank.">ColPivQr</a></span>, with the most reliable rank. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00179">179</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a079a591cf15ec7ecbcb3cb3be0696948" name="a079a591cf15ec7ecbcb3cb3be0696948"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a079a591cf15ec7ecbcb3cb3be0696948">&#9670;&#160;</a></span>HouseholderQr</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a079a591cf15ec7ecbcb3cb3be0696948">algotradelib::math::HouseholderQr</a> = Eigen::HouseholderQR&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Householder QR decomposition: the fastest QR, with no rank information. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00168">168</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a4f572d3e24fee3cb9c44f99a13415fca" name="a4f572d3e24fee3cb9c44f99a13415fca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f572d3e24fee3cb9c44f99a13415fca">&#9670;&#160;</a></span>Index</h2>
 
@@ -289,43 +183,7 @@ Variables</h2></td></tr>
 
 <p>The signed index type of rows and columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00065">65</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a9198eb605c8cdd472ca24f9669a21d82" name="a9198eb605c8cdd472ca24f9669a21d82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9198eb605c8cdd472ca24f9669a21d82">&#9670;&#160;</a></span>Ldlt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a9198eb605c8cdd472ca24f9669a21d82">algotradelib::math::Ldlt</a> = Eigen::LDLT&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pivoting Cholesky (LDLT) decomposition of a symmetric, possibly semi-definite matrix. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00165">165</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abf37f726cc4e3c9b7ea52babeda2a1e6" name="abf37f726cc4e3c9b7ea52babeda2a1e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf37f726cc4e3c9b7ea52babeda2a1e6">&#9670;&#160;</a></span>Llt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#abf37f726cc4e3c9b7ea52babeda2a1e6">algotradelib::math::Llt</a> = Eigen::LLT&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Cholesky decomposition of a symmetric positive-definite matrix. Check <span class="tt">info()</span>. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00162">162</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00047">47</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +202,7 @@ Variables</h2></td></tr>
 <p>A dense, column-major matrix of <span class="tt"><a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e" title="The floating-point type the analytics and math layers compute in (double).">Scalar</a></span>. </p>
 <p>Frames put time on the rows and one series per column, so a column binds to <span class="tt"><a class="el" href="#ae4c8e078736dd52dd016c932bc975b96" title="A read-only reference to one series.">SeriesView</a></span> without a copy. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00045">45</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00027">27</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
 </div>
 </div>
@@ -362,7 +220,7 @@ Variables</h2></td></tr>
 
 <p>A read-only reference to a whole matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00062">62</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00044">44</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
 </div>
 </div>
@@ -380,7 +238,7 @@ Variables</h2></td></tr>
 
 <p>A writable reference to one series, such as a <span class="tt"><a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f" title="A dense column vector of Scalar.">Vector</a></span> or a column of a <span class="tt"><a class="el" href="#a487af88331f4b66531be576f0175399f" title="A dense, column-major matrix of Scalar.">Matrix</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00059">59</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00041">41</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,24 +261,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3540294bad452caa1c9189269f77bef3" name="a3540294bad452caa1c9189269f77bef3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3540294bad452caa1c9189269f77bef3">&#9670;&#160;</a></span>SelfAdjointEigen</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a3540294bad452caa1c9189269f77bef3">algotradelib::math::SelfAdjointEigen</a> = Eigen::SelfAdjointEigenSolver&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Eigenvalues (ascending) and eigenvectors of a symmetric matrix. Check <span class="tt">info()</span>. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00211">211</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
 <a id="ae4c8e078736dd52dd016c932bc975b96" name="ae4c8e078736dd52dd016c932bc975b96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae4c8e078736dd52dd016c932bc975b96">&#9670;&#160;</a></span>SeriesView</h2>
 
@@ -436,26 +276,7 @@ Variables</h2></td></tr>
 <p>A read-only reference to one series. </p>
 <p>Binds without copying to a <span class="tt"><a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f" title="A dense column vector of Scalar.">Vector</a></span> or a column of a <span class="tt"><a class="el" href="#a487af88331f4b66531be576f0175399f" title="A dense, column-major matrix of Scalar.">Matrix</a></span>, and to an expression (which is evaluated into a temporary). Functions over one series take this type. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00056">56</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a06768b04c93d70880b60aa30ed99113d" name="a06768b04c93d70880b60aa30ed99113d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06768b04c93d70880b60aa30ed99113d">&#9670;&#160;</a></span>Svd</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a06768b04c93d70880b60aa30ed99113d">algotradelib::math::Svd</a> = Eigen::BDCSVD&lt;<a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Divide-and-conquer SVD: minimum-norm least-squares solutions and singular values. </p>
-<p>Construct it with <span class="tt"><a class="el" href="#a5719c96f3e317c76960f9ee27890d6f2" title="Computes a thin SVD, ready to solve().">thin_svd()</a></span>, which requests the thin factors <span class="tt">solve()</span> needs on every supported Eigen release. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00193">193</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00038">38</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
 </div>
 </div>
@@ -473,55 +294,11 @@ Variables</h2></td></tr>
 
 <p>A dense column vector of <span class="tt"><a class="el" href="#a12b8c1ca53ee5215eab439879f5e394e" title="The floating-point type the analytics and math layers compute in (double).">Scalar</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00048">48</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00030">30</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a171219497bb0944696ffe9edbe8d8ed9" name="a171219497bb0944696ffe9edbe8d8ed9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a171219497bb0944696ffe9edbe8d8ed9">&#9670;&#160;</a></span>both_present()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f">Vector</a> algotradelib::math::both_present </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f">Vector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#aabc11d522f83cde7f94a27adc0ddfb1f">Vector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Combines two presence masks: <span class="tt">1</span> only where both series are observed. </p>
-<p>Use it to restrict a co-moment (covariance, correlation) and both series' deviations to the same rows; otherwise a correlation can fall outside <span class="tt">[-1, 1]</span>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">left</td><td>The first series' <span class="tt"><a class="el" href="structalgotradelib_1_1math_1_1Observed.html#a4f3863397650d344e4554141c0e11217" title="1 where the input is observed and 0 where it is not.">Observed::present_</a></span>. </td></tr>
-    <tr><td class="paramname">right</td><td>The second series' <span class="tt"><a class="el" href="structalgotradelib_1_1math_1_1Observed.html#a4f3863397650d344e4554141c0e11217" title="1 where the input is observed and 0 where it is not.">Observed::present_</a></span>, of the same length. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The elementwise product of the two masks. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00144">144</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="eigen_8hpp_source.html#l00144">both_present()</a>.</p>
-
-</div>
-</div>
 <a id="a113dc01ca9017f58f13b6b78193a8caa" name="a113dc01ca9017f58f13b6b78193a8caa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a113dc01ca9017f58f13b6b78193a8caa">&#9670;&#160;</a></span>is_undefined()</h2>
 
@@ -590,7 +367,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="scalar_8hpp_source.html#l00028">28</a> of file <a class="el" href="scalar_8hpp_source.html">scalar.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="scalar_8hpp_source.html#l00028">missing()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, <a class="el" href="eigen_8hpp_source.html#l00073">unobserved()</a>, and <a class="el" href="eigen_8hpp_source.html#l00084">unobserved()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="scalar_8hpp_source.html#l00028">missing()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00147">algotradelib::analytics::SeriesBuffer::push()</a>, <a class="el" href="eigen_8hpp_source.html#l00055">unobserved()</a>, and <a class="el" href="eigen_8hpp_source.html#l00066">unobserved()</a>.</p>
 
 </div>
 </div>
@@ -669,9 +446,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A copy of <span class="tt">values</span> with each <span class="tt">NaN</span> replaced by <span class="tt">filler</span> (so it has no <span class="tt">NaN</span> unless <span class="tt">filler</span> is one). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00130">130</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00112">112</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="eigen_8hpp_source.html#l00130">observed_or()</a>, <a class="el" href="rolling_8hpp_source.html#l00295">algotradelib::analytics::rolling_max()</a>, and <a class="el" href="rolling_8hpp_source.html#l00252">algotradelib::analytics::rolling_min()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eigen_8hpp_source.html#l00112">observed_or()</a>, <a class="el" href="rolling_8hpp_source.html#l00256">algotradelib::analytics::rolling_max()</a>, and <a class="el" href="rolling_8hpp_source.html#l00213">algotradelib::analytics::rolling_min()</a>.</p>
 
 </div>
 </div>
@@ -707,47 +484,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The two parts; see <span class="tt"><a class="el" href="structalgotradelib_1_1math_1_1Observed.html" title="A series split into zero-filled values and a presence mask, for sums that skip gaps.">Observed</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00113">113</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00095">95</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="indicators_8hpp_source.html#l00224">algotradelib::analytics::bollinger()</a>, <a class="el" href="eigen_8hpp_source.html#l00113">observed_parts()</a>, <a class="el" href="rolling_8hpp_source.html#l00295">algotradelib::analytics::rolling_max()</a>, <a class="el" href="rolling_8hpp_source.html#l00169">algotradelib::analytics::rolling_mean()</a>, <a class="el" href="rolling_8hpp_source.html#l00252">algotradelib::analytics::rolling_min()</a>, <a class="el" href="rolling_8hpp_source.html#l00211">algotradelib::analytics::rolling_stdev()</a>, <a class="el" href="rolling_8hpp_source.html#l00128">algotradelib::analytics::rolling_sum()</a>, <a class="el" href="rolling_8hpp_source.html#l00364">algotradelib::analytics::wma()</a>, and <a class="el" href="indicators_8hpp_source.html#l00154">algotradelib::analytics::zscore()</a>.</p>
-
-</div>
-</div>
-<a id="a5719c96f3e317c76960f9ee27890d6f2" name="a5719c96f3e317c76960f9ee27890d6f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5719c96f3e317c76960f9ee27890d6f2">&#9670;&#160;</a></span>thin_svd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a06768b04c93d70880b60aa30ed99113d">Svd</a> algotradelib::math::thin_svd </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a487af88331f4b66531be576f0175399f">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes a thin SVD, ready to <span class="tt">solve()</span>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The matrix to decompose. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The decomposition of <span class="tt">a</span>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00202">202</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="eigen_8hpp_source.html#l00202">thin_svd()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="eigen_8hpp_source.html#l00095">observed_parts()</a>, <a class="el" href="rolling_8hpp_source.html#l00256">algotradelib::analytics::rolling_max()</a>, <a class="el" href="rolling_8hpp_source.html#l00130">algotradelib::analytics::rolling_mean()</a>, <a class="el" href="rolling_8hpp_source.html#l00213">algotradelib::analytics::rolling_min()</a>, <a class="el" href="rolling_8hpp_source.html#l00172">algotradelib::analytics::rolling_stdev()</a>, and <a class="el" href="indicators_8hpp_source.html#l00077">algotradelib::analytics::zscore()</a>.</p>
 
 </div>
 </div>
@@ -775,13 +514,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the value that stands for "the data was there, but the statistic does not exist". </p>
-<p>Examples: a z-score over a window with no dispersion, a correlation against a constant, a Sortino ratio over a series that never fell below its target. It differs from <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">missing()</a></span>, which means there was no data. Both are quiet <span class="tt">NaN</span>s, so <span class="tt"><a class="el" href="#a19fc7f3d86cafd06105c227a9caed294" title="Tests whether a value is an observation.">observed()</a></span> is <span class="tt">false</span> for both and reductions skip both; only <span class="tt"><a class="el" href="#a113dc01ca9017f58f13b6b78193a8caa" title="Tests whether a value is the undefined() marker.">is_undefined()</a></span> tells them apart.</p>
+<p>Examples: a z-score over a window with no dispersion, a Sortino ratio over a series that never fell below its target. It differs from <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">missing()</a></span>, which means there was no data. Both are quiet <span class="tt">NaN</span>s, so <span class="tt"><a class="el" href="#a19fc7f3d86cafd06105c227a9caed294" title="Tests whether a value is an observation.">observed()</a></span> is <span class="tt">false</span> for both and reductions skip both; only <span class="tt"><a class="el" href="#a113dc01ca9017f58f13b6b78193a8caa" title="Tests whether a value is the undefined() marker.">is_undefined()</a></span> tells them apart.</p>
 <dl class="section return"><dt>Returns</dt><dd>A quiet <span class="tt">NaN</span> with a payload that <span class="tt"><a class="el" href="#a113dc01ca9017f58f13b6b78193a8caa" title="Tests whether a value is the undefined() marker.">is_undefined()</a></span> recognizes.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Test <span class="tt"><a class="el" href="#a113dc01ca9017f58f13b6b78193a8caa" title="Tests whether a value is the undefined() marker.">is_undefined()</a></span> on a value a function returned (or one copied from a matrix). Arithmetic on it, such as <span class="tt"><a class="el" href="#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">undefined()</a> + 1.0</span>, yields a <span class="tt">NaN</span> that may no longer be recognized. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="scalar_8hpp_source.html#l00051">51</a> of file <a class="el" href="scalar_8hpp_source.html">scalar.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="indicators_8hpp_source.html#l00581">algotradelib::analytics::beta()</a>, <a class="el" href="metrics_8hpp_source.html#l00083">algotradelib::analytics::max_drawdown()</a>, <a class="el" href="indicators_8hpp_source.html#l00501">algotradelib::analytics::rolling_corr()</a>, <a class="el" href="scalar_8hpp_source.html#l00051">undefined()</a>, and <a class="el" href="indicators_8hpp_source.html#l00154">algotradelib::analytics::zscore()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00083">algotradelib::analytics::max_drawdown()</a>, <a class="el" href="scalar_8hpp_source.html#l00051">undefined()</a>, and <a class="el" href="indicators_8hpp_source.html#l00077">algotradelib::analytics::zscore()</a>.</p>
 
 </div>
 </div>
@@ -817,9 +556,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector of <span class="tt">count</span> unobserved values. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00073">73</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00055">55</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="signal_8hpp_source.html#l00082">algotradelib::strategy::vanilla::adjusted_ema()</a>, <a class="el" href="indicators_8hpp_source.html#l00581">algotradelib::analytics::beta()</a>, <a class="el" href="indicators_8hpp_source.html#l00224">algotradelib::analytics::bollinger()</a>, <a class="el" href="returns_8hpp_source.html#l00076">algotradelib::analytics::cumulative_returns()</a>, <a class="el" href="rolling_8hpp_source.html#l00484">algotradelib::analytics::ema()</a>, <a class="el" href="returns_8hpp_source.html#l00053">algotradelib::analytics::log_returns()</a>, <a class="el" href="indicators_8hpp_source.html#l00399">algotradelib::analytics::macd()</a>, <a class="el" href="metrics_8hpp_source.html#l00226">algotradelib::analytics::one_way_turnover()</a>, <a class="el" href="returns_8hpp_source.html#l00027">algotradelib::analytics::returns()</a>, <a class="el" href="indicators_8hpp_source.html#l00501">algotradelib::analytics::rolling_corr()</a>, <a class="el" href="indicators_8hpp_source.html#l00441">algotradelib::analytics::rolling_cov()</a>, <a class="el" href="rolling_8hpp_source.html#l00295">algotradelib::analytics::rolling_max()</a>, <a class="el" href="rolling_8hpp_source.html#l00169">algotradelib::analytics::rolling_mean()</a>, <a class="el" href="rolling_8hpp_source.html#l00252">algotradelib::analytics::rolling_min()</a>, <a class="el" href="rolling_8hpp_source.html#l00211">algotradelib::analytics::rolling_stdev()</a>, <a class="el" href="rolling_8hpp_source.html#l00128">algotradelib::analytics::rolling_sum()</a>, <a class="el" href="indicators_8hpp_source.html#l00279">algotradelib::analytics::rsi()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00042">algotradelib::analytics::SeriesBuffer::SeriesBuffer()</a>, <a class="el" href="indicators_8hpp_source.html#l00325">algotradelib::analytics::true_range()</a>, <a class="el" href="eigen_8hpp_source.html#l00073">unobserved()</a>, <a class="el" href="eigen_8hpp_source.html#l00084">unobserved()</a>, <a class="el" href="rolling_8hpp_source.html#l00364">algotradelib::analytics::wma()</a>, and <a class="el" href="indicators_8hpp_source.html#l00154">algotradelib::analytics::zscore()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="signal_8hpp_source.html#l00082">algotradelib::strategy::vanilla::adjusted_ema()</a>, <a class="el" href="rolling_8hpp_source.html#l00363">algotradelib::analytics::ema()</a>, <a class="el" href="returns_8hpp_source.html#l00027">algotradelib::analytics::returns()</a>, <a class="el" href="rolling_8hpp_source.html#l00256">algotradelib::analytics::rolling_max()</a>, <a class="el" href="rolling_8hpp_source.html#l00130">algotradelib::analytics::rolling_mean()</a>, <a class="el" href="rolling_8hpp_source.html#l00213">algotradelib::analytics::rolling_min()</a>, <a class="el" href="rolling_8hpp_source.html#l00172">algotradelib::analytics::rolling_stdev()</a>, <a class="el" href="indicators_8hpp_source.html#l00134">algotradelib::analytics::rsi()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00042">algotradelib::analytics::SeriesBuffer::SeriesBuffer()</a>, <a class="el" href="eigen_8hpp_source.html#l00055">unobserved()</a>, <a class="el" href="eigen_8hpp_source.html#l00066">unobserved()</a>, and <a class="el" href="indicators_8hpp_source.html#l00077">algotradelib::analytics::zscore()</a>.</p>
 
 </div>
 </div>
@@ -860,139 +599,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <span class="tt">rows</span> by <span class="tt">columns</span> matrix of unobserved values. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00084">84</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="a849d2fa6aae00cb1d9ef8edbc9651a35" name="a849d2fa6aae00cb1d9ef8edbc9651a35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a849d2fa6aae00cb1d9ef8edbc9651a35">&#9670;&#160;</a></span>LOWER</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int algotradelib::math::LOWER = Eigen::Lower</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Selects the lower triangle, as in <span class="tt">matrix.selfadjointView&lt;<a class="el" href="#a849d2fa6aae00cb1d9ef8edbc9651a35" title="Selects the lower triangle, as in matrix.selfadjointView&lt;math::LOWER&gt;().">math::LOWER</a>&gt;()</span>. </p>
-<p>A self-adjoint view tells a decomposition to read one triangle and assume the other. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00153">153</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ac6d0dd4c473dea0cf03f8826f0d21f85" name="ac6d0dd4c473dea0cf03f8826f0d21f85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6d0dd4c473dea0cf03f8826f0d21f85">&#9670;&#160;</a></span>SUCCESS</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto algotradelib::math::SUCCESS = Eigen::Success</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The value a decomposition's <span class="tt">info()</span> returns on success. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00214">214</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="aacca09b2058e0888f5d631e62e204228" name="aacca09b2058e0888f5d631e62e204228"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacca09b2058e0888f5d631e62e204228">&#9670;&#160;</a></span>UNIT_LOWER</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int algotradelib::math::UNIT_LOWER = Eigen::UnitLower</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Selects the lower triangle with an implicit unit diagonal. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00157">157</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a9b80308bdb06f345808a970aff878ef9" name="a9b80308bdb06f345808a970aff878ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b80308bdb06f345808a970aff878ef9">&#9670;&#160;</a></span>UNIT_UPPER</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int algotradelib::math::UNIT_UPPER = Eigen::UnitUpper</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Selects the upper triangle with an implicit unit diagonal. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00159">159</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ae41e9f1ac77ac442bda62501ad784a67" name="ae41e9f1ac77ac442bda62501ad784a67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41e9f1ac77ac442bda62501ad784a67">&#9670;&#160;</a></span>UPPER</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int algotradelib::math::UPPER = Eigen::Upper</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Selects the upper triangle. </p>
-
-<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00155">155</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eigen_8hpp_source.html#l00066">66</a> of file <a class="el" href="eigen_8hpp_source.html">eigen.hpp</a>.</p>
 
 </div>
 </div>

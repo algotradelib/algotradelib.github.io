@@ -1,5 +1,5 @@
 <map id="algotradelib/src/analytics/rolling.hpp" name="algotradelib/src/analytics/rolling.hpp">
-<area shape="rect" id="Node000001" title="Trailing&#45;window statistics: sums, means, deviations, extremes and moving averages." alt="" coords="226,5,413,45"/>
+<area shape="rect" id="Node000001" title="Trailing&#45;window statistics: means, deviations, extremes and moving averages." alt="" coords="226,5,413,45"/>
 <area shape="rect" id="Node000002" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="184,93,295,119"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="302,47,263,85,259,82,298,44"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="365,313,428,339"/>

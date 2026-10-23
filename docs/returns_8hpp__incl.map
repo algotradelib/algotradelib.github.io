@@ -1,5 +1,5 @@
 <map id="algotradelib/src/analytics/returns.hpp" name="algotradelib/src/analytics/returns.hpp">
-<area shape="rect" id="Node000001" title="Simple, log and cumulative returns of a price series." alt="" coords="261,5,447,45"/>
+<area shape="rect" id="Node000001" title="Simple returns of a price series." alt="" coords="261,5,447,45"/>
 <area shape="rect" id="Node000002" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="248,93,359,119"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="344,47,321,83,316,80,339,44"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="357,313,428,339"/>

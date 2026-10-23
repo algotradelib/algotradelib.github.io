@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1backtest_1_1Execution.html" target="_top" xlink:title="One execution a backtest produced, and what it cost.">
+<g id="a_Node000000"><a xlink:href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html" target="_top" xlink:title="The fill model: market orders at the next bar&#39;s open, limit orders when the next bar&#39;s range reaches ...">
 <polygon fill="white" stroke="#666666" points="123,-30 0,-30 0,0 123,0 123,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::backtest</text>
-<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::Execution</text>
+<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::NextBarFillModel</text>
 </a>
 </g>
 </g>

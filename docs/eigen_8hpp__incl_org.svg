@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="The math types and decompositions, implemented with Eigen.">
+<g id="a_Node000001"><a xlink:title="The math types, implemented with Eigen.">
 <polygon fill="#999999" stroke="#666666" points="188,-140 67,-140 67,-110 188,-110 188,-140"/>
 <text text-anchor="start" x="75" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/math</text>
 <text text-anchor="middle" x="127.5" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">/eigen.hpp</text>

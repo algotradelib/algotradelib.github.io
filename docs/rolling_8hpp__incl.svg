@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Trailing&#45;window statistics: sums, means, deviations, extremes and moving averages.">
+<g id="a_Node000001"><a xlink:title="Trailing&#45;window statistics: means, deviations, extremes and moving averages.">
 <polygon fill="#999999" stroke="#666666" points="305.5,-250 165.5,-250 165.5,-220 305.5,-220 305.5,-250"/>
 <text text-anchor="start" x="173.5" y="-238" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/analytics</text>
 <text text-anchor="middle" x="235.5" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">/rolling.hpp</text>

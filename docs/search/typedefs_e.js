@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['quotehandler_0',['QuoteHandler',['../classalgotradelib_1_1kis_1_1KisClient.html#a275451050828a2a5046489f8e2e1130f',1,'algotradelib::kis::KisClient::QuoteHandler'],['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#abaae986a34fe36616f2fb00e9193980a',1,'algotradelib::kiwoom::KiwoomClient::QuoteHandler'],['../classalgotradelib_1_1tossinvest_1_1TossClient.html#a99189a55691472eb96f79e6128738c57',1,'algotradelib::tossinvest::TossClient::QuoteHandler']]]
+  ['ratelimitbucket_0',['RateLimitBucket',['../namespacealgotradelib_1_1network.html#af7e6ef5713b6a8d4e64496bed5189a6d',1,'algotradelib::network']]],
+  ['ref_1',['Ref',['../classalgotradelib_1_1BrokerSession.html#a22eefb0738515e9303953536a4d084eb',1,'algotradelib::BrokerSession::Ref'],['../classalgotradelib_1_1BlockingSession.html#a888eff11152d3ee3e525ea5e268695ba',1,'algotradelib::BlockingSession::Ref']]],
+  ['reference_2',['reference',['../classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue_1_1const__iterator.html#afb6218a6c3bb8fbdbec422718decf8a2',1,'algotradelib::backtest::QueueingExecutor::Queue::const_iterator']]],
+  ['report_3',['Report',['../classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08',1,'algotradelib::runner::Runner']]],
+  ['routeevidence_4',['RouteEvidence',['../namespacealgotradelib_1_1runner.html#aa91a1b779bdb2a53ed54486511a2a8ff',1,'algotradelib::runner']]],
+  ['runner_5',['Runner',['../classalgotradelib_1_1backtest_1_1Backtester.html#a89234ebc1ef951e3beb467c3001678db',1,'algotradelib::backtest::Backtester']]]
 ];

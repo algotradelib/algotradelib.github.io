@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['tag_0',['Tag',['../classalgotradelib_1_1backtest_1_1Backtester.html#afb00af4a116816e6fa52e13107d7ff60',1,'algotradelib::backtest::Backtester::Tag'],['../classalgotradelib_1_1runner_1_1Runner.html#a81b2c78d9771047b462b832fe1c92762',1,'algotradelib::runner::Runner::Tag']]],
-  ['tcp_1',['tcp',['../namespacealgotradelib.html#ad4cc4cfbaae4e7d14288fd523c8a73e3',1,'algotradelib']]],
-  ['timepoint_2',['TimePoint',['../classalgotradelib_1_1network_1_1BasicRateLimitBucket.html#a719f87b690ccb4bbdc9bb482162d697f',1,'algotradelib::network::BasicRateLimitBucket']]],
-  ['tokenhandler_3',['TokenHandler',['../classalgotradelib_1_1kis_1_1KisClient.html#a1d2f4d00d8a8254811b666aa7e5a1ba1',1,'algotradelib::kis::KisClient::TokenHandler'],['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a75e0b0e51f00583f5881d36b31b504d8',1,'algotradelib::kiwoom::KiwoomClient::TokenHandler'],['../classalgotradelib_1_1tossinvest_1_1TossClient.html#a0de998e666b5d977def25144b43d7c59',1,'algotradelib::tossinvest::TossClient::TokenHandler']]],
-  ['tosshttpclient_4',['TossHttpClient',['../namespacealgotradelib_1_1tossinvest.html#ad93650bcad1075b88b9a772083e69722',1,'algotradelib::tossinvest']]],
-  ['tradeshandler_5',['TradesHandler',['../classalgotradelib_1_1kis_1_1KisClient.html#ab48d245aa76db2dc47bbda5ec7eadf41',1,'algotradelib::kis::KisClient::TradesHandler'],['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a586401e614b491cc90e3becde8c368ac',1,'algotradelib::kiwoom::KiwoomClient::TradesHandler'],['../classalgotradelib_1_1tossinvest_1_1TossClient.html#afc44b2af03cbb980616ca52a1231ee07',1,'algotradelib::tossinvest::TossClient::TradesHandler']]],
-  ['traits_6',['Traits',['../structalgotradelib_1_1BrokerCaps.html#af9716c8575c74ee30cacd4cda2e03bd4',1,'algotradelib::BrokerCaps::Traits'],['../classalgotradelib_1_1BrokerSession.html#ae44046076c43555ed57f26a1dd3d74d9',1,'algotradelib::BrokerSession::Traits'],['../classalgotradelib_1_1BlockingSession.html#aa92433bbdcfdac68fe1fce27c85c6522',1,'algotradelib::BlockingSession::Traits']]]
+  ['value_5ftype_0',['value_type',['../classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue_1_1const__iterator.html#ae374cfb7353cda489a8477ec5d661840',1,'algotradelib::backtest::QueueingExecutor::Queue::const_iterator']]],
+  ['vector_1',['Vector',['../namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f',1,'algotradelib::math']]]
 ];

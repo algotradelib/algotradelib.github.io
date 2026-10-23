@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1backtest_1_1ReplayConfig.html" target="_top" xlink:title="A replay&#39;s settings, besides the strategy and the bars.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1backtest_1_1ReplayResult.html" target="_top" xlink:title="Everything a replay produced; summarize turns it into a Report.">
 <polygon fill="white" stroke="#666666" points="123,-30 0,-30 0,0 123,0 123,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::backtest</text>
-<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::ReplayConfig</text>
+<text text-anchor="middle" x="61.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::ReplayResult</text>
 </a>
 </g>
 </g>

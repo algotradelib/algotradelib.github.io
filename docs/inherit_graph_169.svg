@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1runner_1_1SeriesKey.html" target="_top" xlink:title="Identifies one cached bar series: an instrument at one bar interval.">
+<g id="a_Node000000"><a xlink:href="classalgotradelib_1_1runner_1_1SteadyClock.html" target="_top" xlink:title="The real clock a live loop uses: wall&#45;clock time to stamp events, monotonic time to wait and to measu...">
 <polygon fill="white" stroke="#666666" points="113,-30 0,-30 0,0 113,0 113,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::runner</text>
-<text text-anchor="middle" x="56.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::SeriesKey</text>
+<text text-anchor="middle" x="56.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">::SteadyClock</text>
 </a>
 </g>
 </g>

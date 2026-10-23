@@ -65,9 +65,8 @@ var searchData=
   ['async_5fworking_5forders_62',['async_working_orders',['../classalgotradelib_1_1BrokerSession.html#a9f025e92c8b73e024c0b45c63db80be3',1,'algotradelib::BrokerSession']]],
   ['asynchttpclient_63',['AsyncHttpClient',['../classalgotradelib_1_1network_1_1AsyncHttpClient.html#a1d4e6fe6be6d6789c6c2e5b9c2e35fcd',1,'algotradelib::network::AsyncHttpClient']]],
   ['at_64',['at',['../classalgotradelib_1_1analytics_1_1SeriesFrame.html#a766cda40b63f3b7a8d2935956c1346fc',1,'algotradelib::analytics::SeriesFrame::at()'],['../classalgotradelib_1_1analytics_1_1Panel.html#a37e62650c7a361217a1687f26bbeb84b',1,'algotradelib::analytics::Panel::at()'],['../classalgotradelib_1_1analytics_1_1SeriesBuffer.html#aad46376269fe170603c024c8940f58a0',1,'algotradelib::analytics::SeriesBuffer::at()'],['../classalgotradelib_1_1analytics_1_1TimeIndex.html#afc508e601c66c587e385b02af5ec104b',1,'algotradelib::analytics::TimeIndex::at()']]],
-  ['atr_65',['atr',['../namespacealgotradelib_1_1analytics.html#aaa2831ed57f587c68d273f1699903052',1,'algotradelib::analytics']]],
-  ['attempted_66',['attempted',['../structalgotradelib_1_1runner_1_1LoopReport.html#adb2396b4e6fc5930e1a026ddeb7ac2ed',1,'algotradelib::runner::LoopReport']]],
-  ['attribute_5fevidence_67',['attribute_evidence',['../namespacealgotradelib_1_1runner.html#af54c956cb9b43dd48c95f76dbb781001',1,'algotradelib::runner']]],
-  ['available_68',['available',['../classalgotradelib_1_1network_1_1BasicRateLimitBucket.html#a2b89ca048014c1dd7e212913d1f8a94b',1,'algotradelib::network::BasicRateLimitBucket']]],
-  ['average_5fprice_5fof_69',['average_price_of',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#a8ee60aa88d1bbc46fd7e7520b9c46a89',1,'algotradelib::backtest::ReplayLedger']]]
+  ['attempted_65',['attempted',['../structalgotradelib_1_1runner_1_1LoopReport.html#adb2396b4e6fc5930e1a026ddeb7ac2ed',1,'algotradelib::runner::LoopReport']]],
+  ['attribute_5fevidence_66',['attribute_evidence',['../namespacealgotradelib_1_1runner.html#af54c956cb9b43dd48c95f76dbb781001',1,'algotradelib::runner']]],
+  ['available_67',['available',['../classalgotradelib_1_1network_1_1BasicRateLimitBucket.html#a2b89ca048014c1dd7e212913d1f8a94b',1,'algotradelib::network::BasicRateLimitBucket']]],
+  ['average_5fprice_5fof_68',['average_price_of',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#a8ee60aa88d1bbc46fd7e7520b9c46a89',1,'algotradelib::backtest::ReplayLedger']]]
 ];
