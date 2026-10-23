@@ -1,5 +1,13 @@
 var NAVTREEINDEX18 =
 {
+"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a378afe7e56cdfd7f2c3e4c8cef007966":[1,0,0,5,12,0],
+"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a378afe7e56cdfd7f2c3e4c8cef007966":[2,0,0,5,12,0],
+"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a4d40b8946fcf13d9f45994d2a85b2a52":[1,0,0,5,12,1],
+"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a4d40b8946fcf13d9f45994d2a85b2a52":[2,0,0,5,12,1],
+"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html":[1,0,0,5,14],
+"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html":[2,0,0,5,14],
+"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html#a9874a03264af36789e30ef973f16a156":[1,0,0,5,14,0],
+"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html#a9874a03264af36789e30ef973f16a156":[2,0,0,5,14,0],
 "structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html#ab6f4b975188661cb8289cff2a12d7031":[1,0,0,5,14,3],
 "structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html#ab6f4b975188661cb8289cff2a12d7031":[2,0,0,5,14,3],
 "structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html#ac7d9c6f3de408e033bd118710625767c":[1,0,0,5,14,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX18 =
 "structalgotradelib_1_1runner_1_1DryRunReport.html#a6e5e383b4c24cde4f924779c875fa018":[1,0,0,9,6,14],
 "structalgotradelib_1_1runner_1_1DryRunReport.html#a6e5e383b4c24cde4f924779c875fa018":[2,0,0,9,6,14],
 "structalgotradelib_1_1runner_1_1DryRunReport.html#a6fa118216259554e505e735b50f681ae":[1,0,0,9,6,7],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#a6fa118216259554e505e735b50f681ae":[2,0,0,9,6,7],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#a8c7e284fc25a51873ad4c854c14ad6d0":[1,0,0,9,6,10],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#a8c7e284fc25a51873ad4c854c14ad6d0":[2,0,0,9,6,10],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#aaa5f9fb36d71a300b7455d4abc05f6a8":[1,0,0,9,6,12],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#aaa5f9fb36d71a300b7455d4abc05f6a8":[2,0,0,9,6,12],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#ac745b29a98cad53ddc989376a8b64968":[1,0,0,9,6,8],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#ac745b29a98cad53ddc989376a8b64968":[2,0,0,9,6,8],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#adeaf70d71f1c808e5188a6db8c35e0bf":[1,0,0,9,6,3],
-"structalgotradelib_1_1runner_1_1DryRunReport.html#adeaf70d71f1c808e5188a6db8c35e0bf":[2,0,0,9,6,3]
+"structalgotradelib_1_1runner_1_1DryRunReport.html#a6fa118216259554e505e735b50f681ae":[2,0,0,9,6,7]
 };

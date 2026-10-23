@@ -1,5 +1,13 @@
 var NAVTREEINDEX17 =
 {
+"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a568b1568383f066a56c6cfcfb0fdee51":[1,0,0,2,1,1],
+"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a568b1568383f066a56c6cfcfb0fdee51":[2,0,0,2,1,1],
+"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#aa9bd1bec979b7f621bb5a584935cf2be":[1,0,0,2,1,0],
+"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#aa9bd1bec979b7f621bb5a584935cf2be":[2,0,0,2,1,0],
+"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#adcaacb874f82457c30ef1178f1dd1cc1":[1,0,0,2,1,3],
+"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#adcaacb874f82457c30ef1178f1dd1cc1":[2,0,0,2,1,3],
+"structalgotradelib_1_1conformance_1_1PlainCallback.html":[1,0,0,2,0],
+"structalgotradelib_1_1conformance_1_1PlainCallback.html":[2,0,0,2,0],
 "structalgotradelib_1_1conformance_1_1PlainCallback.html#aa026109d5c0352e362231c056efd6a7e":[1,0,0,2,0,0],
 "structalgotradelib_1_1conformance_1_1PlainCallback.html#aa026109d5c0352e362231c056efd6a7e":[2,0,0,2,0,0],
 "structalgotradelib_1_1data__only_1_1NoAccount.html":[1,0,0,3,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX17 =
 "structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrder.html#ad7fda5efb5fc9f12dd319b949d0912ef":[1,0,0,5,11,4],
 "structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrder.html#ad7fda5efb5fc9f12dd319b949d0912ef":[2,0,0,5,11,4],
 "structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html":[1,0,0,5,12],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html":[2,0,0,5,12],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a378afe7e56cdfd7f2c3e4c8cef007966":[1,0,0,5,12,0],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a378afe7e56cdfd7f2c3e4c8cef007966":[2,0,0,5,12,0],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a4d40b8946fcf13d9f45994d2a85b2a52":[1,0,0,5,12,1],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html#a4d40b8946fcf13d9f45994d2a85b2a52":[2,0,0,5,12,1],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html":[1,0,0,5,14],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html":[2,0,0,5,14],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html#a9874a03264af36789e30ef973f16a156":[1,0,0,5,14,0],
-"structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html#a9874a03264af36789e30ef973f16a156":[2,0,0,5,14,0]
+"structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrderPage.html":[2,0,0,5,12]
 };

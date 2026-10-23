@@ -1,5 +1,13 @@
 var NAVTREEINDEX10 =
 {
+"namespacealgotradelib_1_1network.html#a97049b2204eff6da5e12ffcec1c921b6":[1,0,0,8,17],
+"namespacealgotradelib_1_1network.html#aa4013419d865995b72fa61b0373d1b9d":[1,0,0,8,21],
+"namespacealgotradelib_1_1network.html#abbef45142e4c629274d3d8f94b8dadb8":[1,0,0,8,28],
+"namespacealgotradelib_1_1network.html#ad3e40597b613a8ad74c2f3a5b4c7d53d":[1,0,0,8,20],
+"namespacealgotradelib_1_1network.html#aead0772bd97b56e17efebc83ccea172b":[1,0,0,8,15],
+"namespacealgotradelib_1_1network.html#af7e6ef5713b6a8d4e64496bed5189a6d":[1,0,0,8,16],
+"namespacealgotradelib_1_1network.html#afddb9280cc63249a44e9fea1032111e2":[1,0,0,8,22],
+"namespacealgotradelib_1_1runner.html":[1,0,0,9],
 "namespacealgotradelib_1_1runner.html#a01e2e7f5af1bc68031fd3e2f534c72f6":[1,0,0,9,65],
 "namespacealgotradelib_1_1runner.html#a01e2e7f5af1bc68031fd3e2f534c72f6a0c5cfe2fb0fcdfbc406958f409f6cf4d":[1,0,0,9,65,2],
 "namespacealgotradelib_1_1runner.html#a01e2e7f5af1bc68031fd3e2f534c72f6a42ddb795b78f1b508dae792c2b100c2e":[1,0,0,9,65,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX10 =
 "namespacealgotradelib_1_1strategy_1_1dispatch.html#a1ad6a77a750832f4416311dc4baeabc8":[1,0,0,10,0,6],
 "namespacealgotradelib_1_1strategy_1_1dispatch.html#a1de504dc4ff9a2ce56060a8ce4ac727b":[1,0,0,10,0,7],
 "namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699":[1,0,0,10,0,0],
-"namespacealgotradelib_1_1strategy_1_1dispatch.html#a3cddb75a61a8dbcff13d06badba54d2e":[1,0,0,10,0,2],
-"namespacealgotradelib_1_1strategy_1_1dispatch.html#a72ced676025c7899eba75b9149c93e57":[1,0,0,10,0,3],
-"namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e":[1,0,0,10,0,1],
-"namespacealgotradelib_1_1strategy_1_1vanilla.html":[1,0,0,10,1],
-"namespacealgotradelib_1_1strategy_1_1vanilla.html#a424223bc95cfda5f57c23dba6b8c940f":[1,0,0,10,1,15],
-"namespacealgotradelib_1_1strategy_1_1vanilla.html#a439534283a4a8d758b4396603a882af8":[1,0,0,10,1,13],
-"namespacealgotradelib_1_1strategy_1_1vanilla.html#a47e9e97a0ed0895a77d79023e5e27185":[1,0,0,10,1,14],
-"namespacealgotradelib_1_1strategy_1_1vanilla.html#a663a1f5209f9b6e56e18f837c23ffc62":[1,0,0,10,1,11],
-"namespacealgotradelib_1_1strategy_1_1vanilla.html#a663a1f5209f9b6e56e18f837c23ffc62adcd5fc33e211f31cef0cd7cb36518d31":[1,0,0,10,1,11,1]
+"namespacealgotradelib_1_1strategy_1_1dispatch.html#a3cddb75a61a8dbcff13d06badba54d2e":[1,0,0,10,0,2]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX19 =
 {
+"structalgotradelib_1_1runner_1_1DryRunReport.html#a8c7e284fc25a51873ad4c854c14ad6d0":[1,0,0,9,6,10],
+"structalgotradelib_1_1runner_1_1DryRunReport.html#a8c7e284fc25a51873ad4c854c14ad6d0":[2,0,0,9,6,10],
+"structalgotradelib_1_1runner_1_1DryRunReport.html#aaa5f9fb36d71a300b7455d4abc05f6a8":[1,0,0,9,6,12],
+"structalgotradelib_1_1runner_1_1DryRunReport.html#aaa5f9fb36d71a300b7455d4abc05f6a8":[2,0,0,9,6,12],
+"structalgotradelib_1_1runner_1_1DryRunReport.html#ac745b29a98cad53ddc989376a8b64968":[1,0,0,9,6,8],
+"structalgotradelib_1_1runner_1_1DryRunReport.html#ac745b29a98cad53ddc989376a8b64968":[2,0,0,9,6,8],
+"structalgotradelib_1_1runner_1_1DryRunReport.html#adeaf70d71f1c808e5188a6db8c35e0bf":[1,0,0,9,6,3],
+"structalgotradelib_1_1runner_1_1DryRunReport.html#adeaf70d71f1c808e5188a6db8c35e0bf":[2,0,0,9,6,3],
 "structalgotradelib_1_1runner_1_1DryRunReport.html#aef670a3f19dc94f502620708d1121a11":[1,0,0,9,6,13],
 "structalgotradelib_1_1runner_1_1DryRunReport.html#aef670a3f19dc94f502620708d1121a11":[2,0,0,9,6,13],
 "structalgotradelib_1_1runner_1_1DryRunReport.html#af27e93ca6249cee93ae7410786592921":[1,0,0,9,6,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX19 =
 "structalgotradelib_1_1runner_1_1Obligation.html#a7ade27bb94d195eaebf48d3bd8fa1fd4":[1,0,0,9,23,6],
 "structalgotradelib_1_1runner_1_1Obligation.html#a7ade27bb94d195eaebf48d3bd8fa1fd4":[2,0,0,9,23,6],
 "structalgotradelib_1_1runner_1_1Obligation.html#a872be8a9d086e6f593d3b9628b0911c0":[1,0,0,9,23,4],
-"structalgotradelib_1_1runner_1_1Obligation.html#a872be8a9d086e6f593d3b9628b0911c0":[2,0,0,9,23,4],
-"structalgotradelib_1_1runner_1_1Obligation.html#a8eb3d6462e312fb4e0b6dc828b2e4abd":[1,0,0,9,23,0],
-"structalgotradelib_1_1runner_1_1Obligation.html#a8eb3d6462e312fb4e0b6dc828b2e4abd":[2,0,0,9,23,0],
-"structalgotradelib_1_1runner_1_1Obligation.html#af844941f2cf881bc235de6c4719b458e":[1,0,0,9,23,1],
-"structalgotradelib_1_1runner_1_1Obligation.html#af844941f2cf881bc235de6c4719b458e":[2,0,0,9,23,1],
-"structalgotradelib_1_1runner_1_1OpenInstruction.html":[1,0,0,9,24],
-"structalgotradelib_1_1runner_1_1OpenInstruction.html":[2,0,0,9,24],
-"structalgotradelib_1_1runner_1_1OpenInstruction.html#a1456bcdc5da1645840431bf18a3b3a56":[1,0,0,9,24,3],
-"structalgotradelib_1_1runner_1_1OpenInstruction.html#a1456bcdc5da1645840431bf18a3b3a56":[2,0,0,9,24,3]
+"structalgotradelib_1_1runner_1_1Obligation.html#a872be8a9d086e6f593d3b9628b0911c0":[2,0,0,9,23,4]
 };

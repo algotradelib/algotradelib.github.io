@@ -1,5 +1,13 @@
 var NAVTREEINDEX16 =
 {
+"structalgotradelib_1_1backtest_1_1EquityPoint.html":[1,0,0,1,6],
+"structalgotradelib_1_1backtest_1_1EquityPoint.html":[2,0,0,1,6],
+"structalgotradelib_1_1backtest_1_1EquityPoint.html#a1764f84b6d0988f7904f4f8663bb21f6":[1,0,0,1,6,1],
+"structalgotradelib_1_1backtest_1_1EquityPoint.html#a1764f84b6d0988f7904f4f8663bb21f6":[2,0,0,1,6,1],
+"structalgotradelib_1_1backtest_1_1EquityPoint.html#a62543c716537a993a57eb1ada4b2c5fb":[1,0,0,1,6,2],
+"structalgotradelib_1_1backtest_1_1EquityPoint.html#a62543c716537a993a57eb1ada4b2c5fb":[2,0,0,1,6,2],
+"structalgotradelib_1_1backtest_1_1EquityPoint.html#a788aebdebdcd7f2f7f40eff54598cbf6":[1,0,0,1,6,0],
+"structalgotradelib_1_1backtest_1_1EquityPoint.html#a788aebdebdcd7f2f7f40eff54598cbf6":[2,0,0,1,6,0],
 "structalgotradelib_1_1backtest_1_1Execution.html":[1,0,0,1,7],
 "structalgotradelib_1_1backtest_1_1Execution.html":[2,0,0,1,7],
 "structalgotradelib_1_1backtest_1_1Execution.html#a34ea02aaab9677aa09e23656d19e9db0":[1,0,0,1,7,4],
@@ -241,13 +249,5 @@ var NAVTREEINDEX16 =
 "structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html":[1,0,0,2,1],
 "structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html":[2,0,0,2,1],
 "structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a267a9612081bf9fddc0fa8a56e77b2a3":[1,0,0,2,1,2],
-"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a267a9612081bf9fddc0fa8a56e77b2a3":[2,0,0,2,1,2],
-"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a568b1568383f066a56c6cfcfb0fdee51":[1,0,0,2,1,1],
-"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a568b1568383f066a56c6cfcfb0fdee51":[2,0,0,2,1,1],
-"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#aa9bd1bec979b7f621bb5a584935cf2be":[1,0,0,2,1,0],
-"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#aa9bd1bec979b7f621bb5a584935cf2be":[2,0,0,2,1,0],
-"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#adcaacb874f82457c30ef1178f1dd1cc1":[1,0,0,2,1,3],
-"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#adcaacb874f82457c30ef1178f1dd1cc1":[2,0,0,2,1,3],
-"structalgotradelib_1_1conformance_1_1PlainCallback.html":[1,0,0,2,0],
-"structalgotradelib_1_1conformance_1_1PlainCallback.html":[2,0,0,2,0]
+"structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html#a267a9612081bf9fddc0fa8a56e77b2a3":[2,0,0,2,1,2]
 };

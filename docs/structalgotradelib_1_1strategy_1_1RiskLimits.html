@@ -152,7 +152,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The limits the operator sets for <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1RiskGuard.html" title="Checks planned orders against RiskLimits, holds trading stopped, and counts orders sent.">RiskGuard</a></span>. </p>
 <p>Every limit is optional and absent means unlimited, except <span class="tt"><a class="el" href="#ae7ebe64324f594d53b35de6496000819" title="The market phases in which a position may be opened or increased; absent means any.">permitted_phases_</a></span>, which by default permits opening positions only while the market is <span class="tt">OPEN</span>, and <span class="tt"><a class="el" href="#a0134a5cbaa1a04ead5b90fd739ea6edf" title="Whether to refuse a sell larger than the broker&#39;s sellable quantity.">enforce_sellable_quantity_</a></span>, which is on by default. Holds (halts) are not limits; they are taken on the guard itself. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00268">268</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00269">269</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a0af48d7dd5e99dc03fa0a217e977692f" name="a0af48d7dd5e99dc03fa0a217e977692f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0af48d7dd5e99dc03fa0a217e977692f">&#9670;&#160;</a></span>enforce_buying_power_</h2>
@@ -169,7 +169,7 @@ Public Attributes</h2></td></tr>
 <p>Whether to refuse a buy that costs more than the broker's buying power. </p>
 <p>Off by default. The figure is a reading: a fill since the broker answered can change it, so passing this check does not guarantee the broker accepts the order. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00315">315</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00316">316</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -189,7 +189,7 @@ Public Attributes</h2></td></tr>
 <p>On by default: a sell is refused if the broker gave no sellable figure (the held quantity is not assumed sellable) or the figure's basis is not established. So an account that cannot sell what it does not hold never sends a sale that would open a short: every shipped adapter places cash orders, and a target below zero is refused here before it is sent.</p>
 <p>Turn it off, where the replay or the dry run is configured, to simulate short positions; that models no borrow. Turning it off for a live account borrows nothing either: it only lets the sale reach the broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00308">308</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00309">309</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ Public Attributes</h2></td></tr>
 <p>Checked against the exposure if this order and every outstanding order filled, each valued at the highest price that could apply (see <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a856e034baa4972b2c7f9de0be810aa33" title="Computes the gross exposure in one currency if every outstanding order (and a candidate) filled.">projected_gross_exposure</a></span>). The ceiling applies to each currency separately; there is no account-wide converted cap.</p>
 <p>An order that does not raise this projection is permitted at any size, so an exit (a sell up to flat against a long) is allowed even when the account is over the ceiling. A sell that goes through flat into a short raises it and can be refused. To cap one order's size, use <span class="tt"><a class="el" href="#ab9fc3b4ca5baf8ae3a6e0ead2082886b" title="The largest value one order may have, in its own currency.">max_order_notional_</a></span>. An order that cannot be valued, or an incomplete <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1GuardInputs.html#ab3d2dcc31ead5cfc9c5cee17f38dcbce" title="The currency and mark of every instrument held or working, plus the order&#39;s.">GuardInputs::exposure_basis_</a></span>, is refused with <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badab8f593806ee7277ca27e51dfdd3216e2" title="A limit needed a value that is not known.">GuardReason::VALUE_NOT_KNOWN</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00291">291</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00292">292</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ Public Attributes</h2></td></tr>
 
 <p>The largest value one order may have, in its own currency. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00270">270</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00271">271</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ Public Attributes</h2></td></tr>
 
 <p>The most orders that may be sent within <span class="tt"><a class="el" href="#ae2fe5f164574e0cebe9c853a17105983" title="The window max_orders_per_window_ counts over.">rate_window_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00293">293</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00294">294</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Public Attributes</h2></td></tr>
 <p>The largest absolute position, in shares, any instrument may reach. </p>
 <p>Checked against the net held quantity (all rows) plus everything working on the order's side plus the order, as if all of it filled. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00277">277</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00278">278</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -288,7 +288,7 @@ Public Attributes</h2></td></tr>
 <p>The default permits only <span class="tt">OPEN</span>, so <span class="tt">UNKNOWN</span> (an uncovered calendar date) is refused.</p>
 <p>An order that only closes toward flat (it opposes the net held quantity and, with what is already working on the closing side, cannot carry it through flat) is permitted in any phase, so a flatten after the close can still be sent. The later checks (sellable, buying power, position and exposure ceilings) still apply to it, and the broker will likely reject it outside its session; <span class="tt"><a class="el" href="#a84877fc7becaa261f917482de4b49a40" title="The most orders that may be sent within rate_window_.">max_orders_per_window_</a></span> limits how often such an order is resent, and <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#aa7e8a38106a29b3f2b598e1ffa360cb5" title="Returns how many orders were sent in a market phase RiskLimits::permitted_phases_ does not permit,...">runner::Runner::sends_outside_permitted_phase</a></span> counts them. Cancellations are never checked against this. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00331">331</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00332">332</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -306,7 +306,7 @@ Public Attributes</h2></td></tr>
 
 <p>The instruments that may be traded; absent means any. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00317">317</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00318">318</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -324,7 +324,7 @@ Public Attributes</h2></td></tr>
 
 <p>The window <span class="tt"><a class="el" href="#a84877fc7becaa261f917482de4b49a40" title="The most orders that may be sent within rate_window_.">max_orders_per_window_</a></span> counts over. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00295">295</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00296">296</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,13 @@
 var NAVTREEINDEX21 =
 {
+"structalgotradelib_1_1strategy_1_1AllCaps.html#ad793f1888ecb9a56052770255abc27b5":[1,0,0,10,2,12],
+"structalgotradelib_1_1strategy_1_1AllCaps.html#ad793f1888ecb9a56052770255abc27b5":[2,0,0,10,1,12],
+"structalgotradelib_1_1strategy_1_1AllCaps.html#adfb8c48274b60efb9b4a2bf905475793":[1,0,0,10,2,20],
+"structalgotradelib_1_1strategy_1_1AllCaps.html#adfb8c48274b60efb9b4a2bf905475793":[2,0,0,10,1,20],
+"structalgotradelib_1_1strategy_1_1AllCaps.html#ae44a680005edda6e6a3cf5e5281a713a":[1,0,0,10,2,1],
+"structalgotradelib_1_1strategy_1_1AllCaps.html#ae44a680005edda6e6a3cf5e5281a713a":[2,0,0,10,1,1],
+"structalgotradelib_1_1strategy_1_1AllCaps.html#ae6f770f8557142cf3c1a5623a6007b9d":[1,0,0,10,2,7],
+"structalgotradelib_1_1strategy_1_1AllCaps.html#ae6f770f8557142cf3c1a5623a6007b9d":[2,0,0,10,1,7],
 "structalgotradelib_1_1strategy_1_1AllCaps.html#ae9c8435aca4776fb7e99e887e0edc647":[1,0,0,10,2,16],
 "structalgotradelib_1_1strategy_1_1AllCaps.html#ae9c8435aca4776fb7e99e887e0edc647":[2,0,0,10,1,16],
 "structalgotradelib_1_1strategy_1_1AllCaps.html#af7114ce4f195434c0c746d59d478328f":[1,0,0,10,2,14],
@@ -241,13 +249,5 @@ var NAVTREEINDEX21 =
 "structalgotradelib_1_1strategy_1_1QuoteEvent.html":[1,0,0,10,20],
 "structalgotradelib_1_1strategy_1_1QuoteEvent.html":[2,0,0,10,19],
 "structalgotradelib_1_1strategy_1_1QuoteEvent.html#accd0796287706f49da967282a1d2bd70":[1,0,0,10,20,0],
-"structalgotradelib_1_1strategy_1_1QuoteEvent.html#accd0796287706f49da967282a1d2bd70":[2,0,0,10,19,0],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html":[1,0,0,10,21],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html":[2,0,0,10,20],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a1e7958a78eef778b5901076b4306e60b":[1,0,0,10,21,3],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a1e7958a78eef778b5901076b4306e60b":[2,0,0,10,20,3],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a3e64c9a8e6466e51a96de8f66820785c":[1,0,0,10,21,6],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a3e64c9a8e6466e51a96de8f66820785c":[2,0,0,10,20,6],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a56af3aa90b936881105bf6ca5a053d5a":[1,0,0,10,21,4],
-"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a56af3aa90b936881105bf6ca5a053d5a":[2,0,0,10,20,4]
+"structalgotradelib_1_1strategy_1_1QuoteEvent.html#accd0796287706f49da967282a1d2bd70":[2,0,0,10,19,0]
 };

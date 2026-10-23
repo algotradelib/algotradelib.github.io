@@ -1,5 +1,13 @@
 var NAVTREEINDEX11 =
 {
+"namespacealgotradelib_1_1strategy_1_1dispatch.html#a72ced676025c7899eba75b9149c93e57":[1,0,0,10,0,3],
+"namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e":[1,0,0,10,0,1],
+"namespacealgotradelib_1_1strategy_1_1vanilla.html":[1,0,0,10,1],
+"namespacealgotradelib_1_1strategy_1_1vanilla.html#a424223bc95cfda5f57c23dba6b8c940f":[1,0,0,10,1,15],
+"namespacealgotradelib_1_1strategy_1_1vanilla.html#a439534283a4a8d758b4396603a882af8":[1,0,0,10,1,13],
+"namespacealgotradelib_1_1strategy_1_1vanilla.html#a47e9e97a0ed0895a77d79023e5e27185":[1,0,0,10,1,14],
+"namespacealgotradelib_1_1strategy_1_1vanilla.html#a663a1f5209f9b6e56e18f837c23ffc62":[1,0,0,10,1,11],
+"namespacealgotradelib_1_1strategy_1_1vanilla.html#a663a1f5209f9b6e56e18f837c23ffc62adcd5fc33e211f31cef0cd7cb36518d31":[1,0,0,10,1,11,1],
 "namespacealgotradelib_1_1strategy_1_1vanilla.html#a663a1f5209f9b6e56e18f837c23ffc62ae5564829e2f85f6a6873a9d5c4f26d09":[1,0,0,10,1,11,0],
 "namespacealgotradelib_1_1strategy_1_1vanilla.html#a6d7a33b1d935677f8737b9615852ac42":[1,0,0,10,1,12],
 "namespacealgotradelib_1_1tossinvest.html":[1,0,0,11],
@@ -241,13 +249,5 @@ var NAVTREEINDEX11 =
 "structalgotradelib_1_1BrokerCaps.html#a723a63645aa8bd815ae9d188df11bd50":[1,0,0,18,22],
 "structalgotradelib_1_1BrokerCaps.html#a723a63645aa8bd815ae9d188df11bd50":[2,0,0,18,22],
 "structalgotradelib_1_1BrokerCaps.html#a7cf07ee97d0e6199f49536de36c9e99d":[1,0,0,18,19],
-"structalgotradelib_1_1BrokerCaps.html#a7cf07ee97d0e6199f49536de36c9e99d":[2,0,0,18,19],
-"structalgotradelib_1_1BrokerCaps.html#a7d4f0e47e9624b4d023cd451b5e83d02":[1,0,0,18,7],
-"structalgotradelib_1_1BrokerCaps.html#a7d4f0e47e9624b4d023cd451b5e83d02":[2,0,0,18,7],
-"structalgotradelib_1_1BrokerCaps.html#a881a71ac7b72127d088830add726ca6d":[1,0,0,18,10],
-"structalgotradelib_1_1BrokerCaps.html#a881a71ac7b72127d088830add726ca6d":[2,0,0,18,10],
-"structalgotradelib_1_1BrokerCaps.html#a9d019b50d8c028c8a06296f18ee62f44":[1,0,0,18,18],
-"structalgotradelib_1_1BrokerCaps.html#a9d019b50d8c028c8a06296f18ee62f44":[2,0,0,18,18],
-"structalgotradelib_1_1BrokerCaps.html#aa276eed7d58c9663e1be02804885abe5":[1,0,0,18,1],
-"structalgotradelib_1_1BrokerCaps.html#aa276eed7d58c9663e1be02804885abe5":[2,0,0,18,1]
+"structalgotradelib_1_1BrokerCaps.html#a7cf07ee97d0e6199f49536de36c9e99d":[2,0,0,18,19]
 };

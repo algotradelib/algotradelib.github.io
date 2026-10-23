@@ -1,5 +1,13 @@
 var NAVTREEINDEX15 =
 {
+"structalgotradelib_1_1OrderShape.html#aff89ba6dbd87aaa880d9518bc52310c6":[1,0,0,51,6],
+"structalgotradelib_1_1OrderShape.html#aff89ba6dbd87aaa880d9518bc52310c6":[2,0,0,51,6],
+"structalgotradelib_1_1OrderSnapshot.html":[1,0,0,52],
+"structalgotradelib_1_1OrderSnapshot.html":[2,0,0,52],
+"structalgotradelib_1_1OrderSnapshot.html#a1ba106d9a8dca32b373d009eeb7fddc2":[1,0,0,52,18],
+"structalgotradelib_1_1OrderSnapshot.html#a1ba106d9a8dca32b373d009eeb7fddc2":[2,0,0,52,18],
+"structalgotradelib_1_1OrderSnapshot.html#a1d95520d5e1966bb4b267c1454b27575":[1,0,0,52,13],
+"structalgotradelib_1_1OrderSnapshot.html#a1d95520d5e1966bb4b267c1454b27575":[2,0,0,52,13],
 "structalgotradelib_1_1OrderSnapshot.html#a4605c4e16a53ab308396127e7144c011":[1,0,0,52,14],
 "structalgotradelib_1_1OrderSnapshot.html#a4605c4e16a53ab308396127e7144c011":[2,0,0,52,14],
 "structalgotradelib_1_1OrderSnapshot.html#a6a0502508b663a1b018567b1bb8db0ff":[1,0,0,52,11],
@@ -241,13 +249,5 @@ var NAVTREEINDEX15 =
 "structalgotradelib_1_1backtest_1_1CommissionModel.html#aea5851cf26ceaaf0ffc82f1b6a83e449":[1,0,0,1,4,3],
 "structalgotradelib_1_1backtest_1_1CommissionModel.html#aea5851cf26ceaaf0ffc82f1b6a83e449":[2,0,0,1,4,3],
 "structalgotradelib_1_1backtest_1_1CommissionModel.html#af2a9af98356e8c0ffce9da7dcf1db832":[1,0,0,1,4,0],
-"structalgotradelib_1_1backtest_1_1CommissionModel.html#af2a9af98356e8c0ffce9da7dcf1db832":[2,0,0,1,4,0],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html":[1,0,0,1,6],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html":[2,0,0,1,6],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html#a1764f84b6d0988f7904f4f8663bb21f6":[1,0,0,1,6,1],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html#a1764f84b6d0988f7904f4f8663bb21f6":[2,0,0,1,6,1],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html#a62543c716537a993a57eb1ada4b2c5fb":[1,0,0,1,6,2],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html#a62543c716537a993a57eb1ada4b2c5fb":[2,0,0,1,6,2],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html#a788aebdebdcd7f2f7f40eff54598cbf6":[1,0,0,1,6,0],
-"structalgotradelib_1_1backtest_1_1EquityPoint.html#a788aebdebdcd7f2f7f40eff54598cbf6":[2,0,0,1,6,0]
+"structalgotradelib_1_1backtest_1_1CommissionModel.html#af2a9af98356e8c0ffce9da7dcf1db832":[2,0,0,1,4,0]
 };

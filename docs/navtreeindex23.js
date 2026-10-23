@@ -1,5 +1,13 @@
 var NAVTREEINDEX23 =
 {
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#ab1ebf8f73c295b91baf76428bd960504":[1,0,0,10,1,9,3],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#ab1ebf8f73c295b91baf76428bd960504":[2,0,0,10,0,9,3],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html":[1,0,0,10,1,9,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html":[2,0,0,10,0,9,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a0a6b9eb1f1aa5e70e11f0d8e690db6c9":[1,0,0,10,1,9,0,2],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a0a6b9eb1f1aa5e70e11f0d8e690db6c9":[2,0,0,10,0,9,0,2],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a558e8cb5db9d9e7743469fa66cbf6bbc":[1,0,0,10,1,9,0,1],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a558e8cb5db9d9e7743469fa66cbf6bbc":[2,0,0,10,0,9,0,1],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a69a286b7fc9ef065d91c04b4eb690c1a":[1,0,0,10,1,9,0,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a69a286b7fc9ef065d91c04b4eb690c1a":[2,0,0,10,0,9,0,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#aad0949c46781994a5c8e278e824e14b9":[1,0,0,10,1,9,0,0],

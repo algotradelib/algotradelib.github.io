@@ -1,6 +1,8 @@
 var classalgotradelib_1_1strategy_1_1RiskGuard =
 [
     [ "RiskGuard", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a5bfbbcead4b71e31b167bc1737079df2", null ],
+    [ "RiskGuard", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a8ae8832ed76712c0ec06327a48b024f7", null ],
+    [ "RiskGuard", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a174ce6fda4e1d1311354f624815250e5", null ],
     [ "blocking_reason", "classalgotradelib_1_1strategy_1_1RiskGuard.html#af3b3fea73f17aeb84fbe6fe7e1bba259", null ],
     [ "blocking_reason_for", "classalgotradelib_1_1strategy_1_1RiskGuard.html#acb4bb5299862da27a00980cd0737ac10", null ],
     [ "check", "classalgotradelib_1_1strategy_1_1RiskGuard.html#ab0d1e430593b372f0f19438d0ba4ec34", null ],
@@ -14,6 +16,8 @@ var classalgotradelib_1_1strategy_1_1RiskGuard =
     [ "holds", "classalgotradelib_1_1strategy_1_1RiskGuard.html#aa982c918638ef2e982aff5659309467c", null ],
     [ "limits", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a1e0c05002bfc28a3ce93009c6e7198b2", null ],
     [ "note_sent", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a180aca7b518a84c6ea0960a2392c6c68", null ],
+    [ "operator=", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a063f92cb661993758469cf4cca2d7845", null ],
+    [ "operator=", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a9e69e9f38e83a7b3eecc1b2cbc809f74", null ],
     [ "permits_phase", "classalgotradelib_1_1strategy_1_1RiskGuard.html#aa4eb4e5dcf5e8652f8608c332672b827", null ],
     [ "recent_orders", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a059c6ac4703c5849bf34027905fe852f", null ],
     [ "resume", "classalgotradelib_1_1strategy_1_1RiskGuard.html#a6bfd79ecdbb68172b49d805ea5e7f56b", null ],

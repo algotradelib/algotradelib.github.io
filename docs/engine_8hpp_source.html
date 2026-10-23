@@ -1539,225 +1539,262 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('engine_8hpp_so
 <div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>    <span class="comment">// copy of every position. Afterwards the portfolio is what a fresh snapshot with a row per queued order</span></div>
 <div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>    <span class="comment">// would be. Built whole on the first install and after anything replaced the portfolio outright</span></div>
 <div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>    <span class="comment">// (`Context::set_portfolio`); otherwise the ledger rewrites the lots it changed and the cash, and the</span></div>
-<div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>    <span class="comment">// working rows are rebuilt when the queue gained or lost an order, a runner edited them in place</span></div>
-<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>    <span class="comment">// (`Runner::persist_reservation`), or reference data (a row&#39;s currency) changed. What was seen is</span></div>
-<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>    <span class="comment">// acknowledged only once everything is in, so the next install finishes what one that threw left undone.</span></div>
-<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>    <span class="keywordflow">if</span> (!installed_ || Access::replacements(context) != replacements_seen_) {</div>
-<div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>      <span class="keyword">auto</span> portfolio = ledger_.snapshot&lt;Tag&gt;(clock_.now());</div>
-<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span>      portfolio.working_.reserve(queued.size());</div>
-<div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
-<div class="line"><a id="l01829" name="l01829"></a><span class="lineno"> 1829</span>        portfolio.working_.push_back(working_row(entry));</div>
-<div class="line"><a id="l01830" name="l01830"></a><span class="lineno"> 1830</span>        commit_open_buy(portfolio, entry);</div>
-<div class="line"><a id="l01831" name="l01831"></a><span class="lineno"> 1831</span>      }</div>
-<div class="line"><a id="l01832" name="l01832"></a><span class="lineno"> 1832</span>      context.set_portfolio(std::move(portfolio));</div>
-<div class="line"><a id="l01833" name="l01833"></a><span class="lineno"> 1833</span>      ledger_.clear_changed();</div>
-<div class="line"><a id="l01834" name="l01834"></a><span class="lineno"> 1834</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"> 1835</span>      <span class="comment">// A runner&#39;s reservation follows an order the queue accepted, so today the queue&#39;s count moves with it;</span></div>
-<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>      <span class="comment">// the runner&#39;s own count is checked too, so a reservation written without a new order is not kept.</span></div>
-<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> rows_stale = runner_.executor().changes() != queue_seen_ ||</div>
-<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>        Access::runner_edits(context) != edits_seen_ ||</div>
-<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>        Access::reference_changes(context) != references_seen_;</div>
-<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>      <span class="keyword">auto</span>&amp; portfolio = Access::for_replay_sync(context);</div>
-<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>      ledger_.update(portfolio, clock_.now());</div>
-<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>      <span class="keywordflow">if</span> (rows_stale) {</div>
-<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>        portfolio.working_.clear();</div>
-<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
-<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>          portfolio.working_.push_back(working_row(entry));</div>
-<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>        }</div>
-<div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>      }</div>
-<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>      <span class="comment">// `update` set the buying power back to the cash, so every open buy is taken out again; a market</span></div>
-<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>      <span class="comment">// buy is valued at the last price, which moves.</span></div>
-<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>      <span class="keywordflow">if</span> (config_.limits_.enforce_buying_power_) {</div>
-<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
-<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>          commit_open_buy(portfolio, entry);</div>
-<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>        }</div>
-<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>      }</div>
-<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span>    }</div>
-<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>    installed_ = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span>    replacements_seen_ = Access::replacements(context);</div>
-<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>    edits_seen_ = Access::runner_edits(context);</div>
-<div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>    references_seen_ = Access::reference_changes(context);</div>
-<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>    queue_seen_ = runner_.executor().changes();</div>
-<div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span><span class="preprocessor">#if defined(ATL_REPLAY_CHECK_PORTFOLIO)</span></div>
-<div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span>    <span class="comment">// A test build&#39;s check (the tests define the macro as their comparison): the portfolio as kept against</span></div>
-<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>    <span class="comment">// the one the replay used to build from scratch, and the running equity against the full sum.</span></div>
-<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>    {</div>
-<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>      <span class="keyword">auto</span> fresh = ledger_.snapshot&lt;Tag&gt;(clock_.now());</div>
-<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
-<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>        fresh.working_.push_back(working_row(entry));</div>
-<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>        commit_open_buy(fresh, entry);</div>
-<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>      }</div>
-<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>      ATL_REPLAY_CHECK_PORTFOLIO(context.portfolio(), fresh, ledger_.equity(), ledger_.equity_in(config_.currency_));</div>
-<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>    }</div>
-<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>  }</div>
-<div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span> </div>
-<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span>  <span class="comment">// Returns the working-order row for an outstanding replay order.</span></div>
-<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>  <span class="comment">// `reserved_` stays false, unlike a runner&#39;s own reservation. The flag distinguishes this</span></div>
-<div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>  <span class="comment">// library&#39;s arithmetic from what a broker reported, and in a replay the engine *is* the broker:</span></div>
-<div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>  <span class="comment">// this row is the listing. The one consequence worth stating is that</span></div>
-<div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span>  <span class="comment">// `strategy::SellableConventionProbe`, which reads unreserved rows as evidence about a broker&#39;s</span></div>
-<div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span>  <span class="comment">// convention, will read these -- and a replay&#39;s sellable figure is a model that never moves, so</span></div>
-<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>  <span class="comment">// the probe reports what the simulator does rather than what a broker does.</span></div>
-<div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>  <a class="code hl_struct" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder&lt;Tag&gt;</a> working_row(<span class="keyword">const</span> QueuedOrder&lt;Tag&gt;&amp; entry)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span>    <a class="code hl_struct" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder&lt;Tag&gt;</a> row;</div>
-<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>    row.<a class="code hl_variable" href="structalgotradelib_1_1WorkingOrder.html#a136030ee0e55c49889e01ba651090f67">ref_</a> = entry.ref_;</div>
-<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>    <span class="comment">// **The replay is this order&#39;s broker, so it is the thing that issued the number.** A row left</span></div>
-<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>    <span class="comment">// with an empty `order_id_` is an order a reader cannot name, which a live row never is; the</span></div>
-<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>    <span class="comment">// reference&#39;s primary part is the only identifier a replay has, and it is already monotone and</span></div>
-<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>    <span class="comment">// stable for as long as the order is outstanding. Nothing in the library matched a replay</span></div>
-<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>    <span class="comment">// working row on this field while it was empty, so filling it changes no existing decision.</span></div>
-<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>    row.order_.order_id_ = entry.ref_.primary_;</div>
-<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>    row.order_.instrument_ = entry.order_.instrument_;</div>
-<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>    row.order_.side_ = entry.order_.side_;</div>
-<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>    row.order_.type_ = entry.order_.type_;</div>
-<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>    row.order_.time_in_force_ = entry.order_.time_in_force_;</div>
-<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>    row.order_.session_ = entry.order_.session_;</div>
-<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>    row.order_.venue_ = entry.order_.venue_;</div>
-<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span>    row.order_.price_ = entry.order_.price_;</div>
-<div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span>    <span class="comment">// A stop&#39;s trigger, as a live listing reports it -- released or not, since neither broker&#39;s</span></div>
-<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>    <span class="comment">// listing says which.</span></div>
-<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>    row.order_.trigger_price_ = entry.order_.trigger_price_;</div>
-<div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>    row.order_.quantity_ = entry.order_.quantity_;</div>
-<div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>    row.order_.currency_ = currency_for(entry.order_.instrument_);</div>
-<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>    <span class="comment">// Open, and nothing filled: a replay fills an order whole or not at all, so a row that exists</span></div>
-<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>    <span class="comment">// has traded nothing.</span></div>
-<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>    row.order_.status_ = OrderStatus::PENDING;</div>
-<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>    row.order_.execution_.filled_quantity_ = <a class="code hl_function" href="classalgotradelib_1_1Decimal64.html#ae1ac1381266a0fc492abcd63a6fc33ca">Decimal64::parse</a>(<span class="stringliteral">&quot;0&quot;</span>);</div>
-<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>    row.amendable_quantity_ = entry.order_.quantity_;</div>
-<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>    <span class="keywordflow">return</span> row;</div>
+<div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>    <span class="comment">// working rows are brought up to date when the queue gained or lost an order or a runner edited them in</span></div>
+<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>    <span class="comment">// place (`Runner::persist_reservation`), and rebuilt when reference data (a row&#39;s currency) changed. What was</span></div>
+<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>    <span class="comment">// seen is acknowledged only once everything is in, so the next install finishes what one that threw left</span></div>
+<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>    <span class="comment">// undone.</span></div>
+<div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>    <span class="keywordflow">if</span> (!installed_ || Access::replacements(context) != replacements_seen_) {</div>
+<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span>      <span class="keyword">auto</span> portfolio = ledger_.snapshot&lt;Tag&gt;(clock_.now());</div>
+<div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span>      portfolio.working_.reserve(queued.size());</div>
+<div class="line"><a id="l01829" name="l01829"></a><span class="lineno"> 1829</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
+<div class="line"><a id="l01830" name="l01830"></a><span class="lineno"> 1830</span>        portfolio.working_.push_back(working_row(entry));</div>
+<div class="line"><a id="l01831" name="l01831"></a><span class="lineno"> 1831</span>        commit_open_buy(portfolio, entry);</div>
+<div class="line"><a id="l01832" name="l01832"></a><span class="lineno"> 1832</span>      }</div>
+<div class="line"><a id="l01833" name="l01833"></a><span class="lineno"> 1833</span>      context.set_portfolio(std::move(portfolio));</div>
+<div class="line"><a id="l01834" name="l01834"></a><span class="lineno"> 1834</span>      ledger_.clear_changed();</div>
+<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"> 1835</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>      <span class="comment">// A runner&#39;s reservation follows an order the queue accepted, so today the queue&#39;s count moves with it;</span></div>
+<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>      <span class="comment">// the runner&#39;s own count is checked too, so a reservation written without a new order is not kept.</span></div>
+<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> rows_stale = runner_.executor().changes() != queue_seen_ ||</div>
+<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>        Access::runner_edits(context) != edits_seen_ ||</div>
+<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>        Access::reference_changes(context) != references_seen_;</div>
+<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>      <span class="keyword">auto</span>&amp; portfolio = Access::for_replay_sync(context);</div>
+<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>      ledger_.update(portfolio, clock_.now());</div>
+<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>      <span class="keywordflow">if</span> (rows_stale &amp;&amp; Access::reference_changes(context) != references_seen_) {</div>
+<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>        portfolio.working_.clear();</div>
+<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
+<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>          portfolio.working_.push_back(working_row(entry));</div>
+<div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>        }</div>
+<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rows_stale) {</div>
+<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>        refresh_rows(portfolio.working_, queued);</div>
+<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>      }</div>
+<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>      <span class="comment">// `update` set the buying power back to the cash, so every open buy is taken out again; a market</span></div>
+<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>      <span class="comment">// buy is valued at the last price, which moves.</span></div>
+<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>      <span class="keywordflow">if</span> (config_.limits_.enforce_buying_power_) {</div>
+<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
+<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span>          commit_open_buy(portfolio, entry);</div>
+<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>        }</div>
+<div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span>      }</div>
+<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>    }</div>
+<div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>    installed_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>    replacements_seen_ = Access::replacements(context);</div>
+<div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span>    edits_seen_ = Access::runner_edits(context);</div>
+<div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span>    references_seen_ = Access::reference_changes(context);</div>
+<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>    queue_seen_ = runner_.executor().changes();</div>
+<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span><span class="preprocessor">#if defined(ATL_REPLAY_CHECK_PORTFOLIO)</span></div>
+<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>    <span class="comment">// A test build&#39;s check (the tests define the macro as their comparison): the portfolio as kept against</span></div>
+<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>    <span class="comment">// the one the replay used to build from scratch, and the running equity against the full sum.</span></div>
+<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>    {</div>
+<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>      <span class="keyword">auto</span> fresh = ledger_.snapshot&lt;Tag&gt;(clock_.now());</div>
+<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : queued) {</div>
+<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>        fresh.working_.push_back(working_row(entry));</div>
+<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>        commit_open_buy(fresh, entry);</div>
+<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>      }</div>
+<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>      ATL_REPLAY_CHECK_PORTFOLIO(context.portfolio(), fresh, ledger_.equity(), ledger_.equity_in(config_.currency_));</div>
+<div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span>    }</div>
+<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>  }</div>
+<div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span> </div>
+<div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>  <span class="comment">// Brings the working rows up to date with the queue, in place, at the cost of what changed.</span></div>
+<div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span>  <span class="comment">// The queue keeps its order and takes a new order only at its end; the rows this replay built lead the list in</span></div>
+<div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span>  <span class="comment">// that order, and a runner&#39;s reservations (`reserved_`) follow them. So a row whose order is still queued is</span></div>
+<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>  <span class="comment">// kept, the others and the reservations are dropped, and rows are built only for the orders queued since. An</span></div>
+<div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>  <span class="comment">// install that threw partway left a prefix of this, which the next one completes the same way.</span></div>
+<div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Queue&gt;</div>
+<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>  <span class="keywordtype">void</span> refresh_rows(std::vector&lt;<a class="code hl_struct" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder&lt;Tag&gt;</a>&gt;&amp; rows, <span class="keyword">const</span> Queue&amp; queued)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>    std::size_t built = 0;</div>
+<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>    <span class="keywordflow">while</span> (built &lt; rows.size() &amp;&amp; !rows[built].reserved_) {</div>
+<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>      ++built;</div>
+<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>    }</div>
+<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>    std::size_t kept = 0;</div>
+<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>    std::size_t next = 0;</div>
+<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>    <span class="keyword">auto</span> entry = queued.begin();</div>
+<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>    <span class="keywordflow">for</span> (; entry != queued.end(); ++entry) {</div>
+<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>      <span class="keywordflow">while</span> (next &lt; built &amp;&amp; !(rows[next].ref_ == entry-&gt;ref_)) {</div>
+<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>        ++next;</div>
+<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>      }</div>
+<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>      <span class="keywordflow">if</span> (next == built) {</div>
+<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span>        <span class="keywordflow">break</span>;  <span class="comment">// this order has no row, so neither has any later one</span></div>
+<div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span>      }</div>
+<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>      <span class="keywordflow">if</span> (kept != next) {</div>
+<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>        rows[kept] = std::move(rows[next]);</div>
+<div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>      }</div>
+<div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>      ++kept;</div>
+<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>      ++next;</div>
+<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>    }</div>
+<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>    rows.erase(rows.begin() + <span class="keyword">static_cast&lt;</span>std::ptrdiff_t<span class="keyword">&gt;</span>(kept), rows.end());</div>
+<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>    <span class="keywordflow">for</span> (; entry != queued.end(); ++entry) {</div>
+<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>      rows.push_back(working_row(*entry));</div>
+<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>    }</div>
 <div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span>  }</div>
 <div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span> </div>
-<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>  <span class="comment">// Takes what an outstanding buy has committed out of the buying power the replay models.</span></div>
+<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>  <span class="comment">// Returns the working-order row for an outstanding replay order.</span></div>
 <div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>  <span class="comment">// **Rows alone do not fix `enforce_buying_power_`**, which reads the scalar and not the orders.</span></div>
-<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>  <span class="comment">// `ReplayLedger::snapshot` builds buying power from ledger cash, and that cash has not paid for</span></div>
-<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>  <span class="comment">// anything still resting -- so with a hundred of cash, a resting buy costing a hundred, and a</span></div>
-<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>  <span class="comment">// second buy costing a hundred in another instrument, the second passes and both can still fill.</span></div>
-<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>  <span class="comment">// Valued at the order&#39;s own price, else the last close, which is the same estimate the guard</span></div>
-<div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>  <span class="comment">// checked the order against — and it is an **estimate**, not a bound. A limit buy cannot fill</span></div>
-<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>  <span class="comment">// above its limit, so for those the commitment is at least the eventual spend before costs. A</span></div>
-<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>  <span class="comment">// market order has no stated price at all: it fills where the next bar opens, and slippage and</span></div>
-<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>  <span class="comment">// commission are both outside this figure, so the real spend can exceed what was committed. An</span></div>
-<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>  <span class="comment">// order that can be valued by neither route is left uncommitted rather than guessed at.</span></div>
-<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>  <span class="comment">// **Scoped to the limit, exactly as `Runner::reserve` is.**</span></div>
-<div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span>  <span class="comment">// `buying_power_in()` is a public figure a strategy is free to size its next order from, so</span></div>
-<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>  <span class="comment">// lowering it for a caller who never enabled the check would change how their strategy sizes --</span></div>
-<div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span>  <span class="comment">// a behaviour change well past enforcing a ceiling, and the reason the runner passes `spends`</span></div>
-<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span>  <span class="comment">// rather than always debiting. It also keeps `ReportCaveats::buying_power_is_ledger_cash` true</span></div>
-<div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span>  <span class="comment">// for every replay that does not ask for the check.</span></div>
-<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>  <span class="keywordtype">void</span> commit_open_buy(<a class="code hl_struct" href="structalgotradelib_1_1strategy_1_1Portfolio.html">strategy::Portfolio&lt;Tag&gt;</a>&amp; portfolio, <span class="keyword">const</span> QueuedOrder&lt;Tag&gt;&amp; entry)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span>    <span class="keywordflow">if</span> (!config_.limits_.enforce_buying_power_ || entry.order_.side_ != OrderSide::BUY) {</div>
-<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span>    }</div>
-<div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span>    <span class="keyword">const</span> <span class="keyword">auto</span> price = entry.order_.price_ ?</div>
-<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>      entry.order_.price_ :</div>
-<div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span>      runner_.context().last_price(entry.order_.instrument_);</div>
-<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span>    <span class="keywordflow">if</span> (!price) {</div>
-<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span>    }</div>
-<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>    <span class="keyword">const</span> <span class="keyword">auto</span> spent = <a class="code hl_function" href="namespacealgotradelib.html#ad1426bc3d102c70ed49d0b1f2404e7e3">decimal_multiply</a>(entry.order_.quantity_, *price);</div>
-<div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span>    <span class="keywordflow">if</span> (!spent) {</div>
-<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span>    }</div>
-<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>    <span class="keyword">const</span> <span class="keyword">auto</span> currency = currency_for(entry.order_.instrument_);</div>
-<div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; reading : portfolio.<a class="code hl_variable" href="structalgotradelib_1_1strategy_1_1Portfolio.html#ab005d9ac52f23eaa8ace153e858d72f9">buying_power_</a>) {</div>
-<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span>      <span class="keywordflow">if</span> (!(reading.cash_.currency_ == currency)) {</div>
-<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span>      }</div>
-<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span>      <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> left = <a class="code hl_function" href="namespacealgotradelib.html#abe3d9c4a1548c2630799f32df94b2b91">decimal_subtract</a>(reading.cash_.amount_, *spent)) {</div>
-<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span>        reading.cash_.amount_ = *left;</div>
-<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span>      }</div>
-<div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span>    }</div>
-<div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>  }</div>
-<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span> </div>
-<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>  <span class="comment">// Both read the reference data in place; use the result at once (`Context::find_instrument`).</span></div>
-<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>  <span class="keyword">const</span> <a class="code hl_class" href="classalgotradelib_1_1Currency.html">Currency</a>&amp; currency_for(<span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a>&amp; instrument)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* reference = runner_.context().find_instrument(instrument);</div>
-<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>    <span class="keywordflow">return</span> reference != <span class="keyword">nullptr</span> ? reference-&gt;currency_ : config_.currency_;</div>
-<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>  }</div>
-<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span> </div>
-<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&amp; rule_for(<span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a>&amp; instrument)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* reference = runner_.context().find_instrument(instrument);</div>
-<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>    <span class="keywordflow">return</span> reference != <span class="keyword">nullptr</span> ? reference-&gt;price_rule_ : unknown_rule_;</div>
-<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>  }</div>
-<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span> </div>
-<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>  <span class="comment">// Collects what a runner pass reported, so a replay ends with the whole picture.</span></div>
-<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Report&gt;</div>
-<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>  <span class="keywordtype">void</span> drain_reports(<span class="keyword">const</span> Report&amp; report) {</div>
-<div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span>    collect(report);</div>
-<div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>  }</div>
-<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span> </div>
-<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span>  <span class="comment">// Adds a pass&#39;s refusals to the result.</span></div>
-<div class="line"><a id="l01976" name="l01976"></a><span class="lineno"> 1976</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Report&gt;</div>
-<div class="line"><a id="l01977" name="l01977"></a><span class="lineno"> 1977</span>  <span class="keywordtype">void</span> collect(<span class="keyword">const</span> Report&amp; report) {</div>
-<div class="line"><a id="l01978" name="l01978"></a><span class="lineno"> 1978</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; rejection : report.rejected_) {</div>
-<div class="line"><a id="l01979" name="l01979"></a><span class="lineno"> 1979</span>      result_.rejected_.push_back(rejection);</div>
-<div class="line"><a id="l01980" name="l01980"></a><span class="lineno"> 1980</span>    }</div>
-<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"> 1981</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; refusal : report.refused_) {</div>
-<div class="line"><a id="l01982" name="l01982"></a><span class="lineno"> 1982</span>      result_.refused_.push_back(refusal);</div>
-<div class="line"><a id="l01983" name="l01983"></a><span class="lineno"> 1983</span>    }</div>
-<div class="line"><a id="l01984" name="l01984"></a><span class="lineno"> 1984</span>  }</div>
-<div class="line"><a id="l01985" name="l01985"></a><span class="lineno"> 1985</span> </div>
-<div class="line"><a id="l01986" name="l01986"></a><span class="lineno"> 1986</span>  <span class="comment">// Settles a target the runner deferred behind a stop, once this replay has withdrawn the stop and</span></div>
-<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>  <span class="comment">// the strategy has answered every update of the batch. Called only from `publish_order_updates`.</span></div>
-<div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span>  <span class="comment">//</span></div>
-<div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span>  <span class="comment">// **A replay&#39;s withdrawal is synchronous**: `QueueingExecutor::cancel` removes the stop from the</span></div>
-<div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span>  <span class="comment">// queue before the pass that asked for it returns. Waiting for the next bar&#39;s portfolio to show that</span></div>
-<div class="line"><a id="l01991" name="l01991"></a><span class="lineno"> 1991</span>  <span class="comment">// would place the flatten a bar late and fill it two bars late -- a delay the live path, whose</span></div>
-<div class="line"><a id="l01992" name="l01992"></a><span class="lineno"> 1992</span>  <span class="comment">// cancellation can be confirmed between bars, does not have. So after every pass the replay shows</span></div>
-<div class="line"><a id="l01993" name="l01993"></a><span class="lineno"> 1993</span>  <span class="comment">// the runner its book as it now stands and lets it release from that one snapshot: this ledger is the</span></div>
-<div class="line"><a id="l01994" name="l01994"></a><span class="lineno"> 1994</span>  <span class="comment">// broker, so the stop&#39;s absence and the holding after it are known together. See</span></div>
-<div class="line"><a id="l01995" name="l01995"></a><span class="lineno"> 1995</span>  <span class="comment">// `Runner::retry_deferred_on_one_snapshot`. An order placed here waits for the next bar like any</span></div>
-<div class="line"><a id="l01996" name="l01996"></a><span class="lineno"> 1996</span>  <span class="comment">// other, which is the lookahead rule.</span></div>
-<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>  <span class="keywordtype">void</span> settle_deferred() {</div>
-<div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span>    <span class="keywordflow">if</span> (runner_.deferred_targets().empty()) {</div>
-<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l02000" name="l02000"></a><span class="lineno"> 2000</span>    }</div>
-<div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>    install_portfolio();</div>
-<div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span>    collect(runner_.retry_deferred_on_one_snapshot());</div>
-<div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>  }</div>
-<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span> </div>
-<div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span>  ReplayConfig config_;</div>
-<div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span>  NextBarFillModel fills_;</div>
-<div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span>  ReplayLedger ledger_;</div>
-<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span>  ReplayClock clock_;</div>
-<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span>  Runner runner_;</div>
-<div class="line"><a id="l02010" name="l02010"></a><span class="lineno"> 2010</span>  <span class="comment">// Turns this replay&#39;s own working listing into `on_order_update` events; unused for a strategy without one.</span></div>
-<div class="line"><a id="l02011" name="l02011"></a><span class="lineno"> 2011</span>  <a class="code hl_class" href="classalgotradelib_1_1runner_1_1OrderUpdateWatch.html">runner::OrderUpdateWatch&lt;Tag&gt;</a> updates_;</div>
-<div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span>  ReplayResult result_;</div>
-<div class="line"><a id="l02013" name="l02013"></a><span class="lineno"> 2013</span>  <span class="comment">// Whether a bar since the last equity point went unvalued, so the next point carries no return.</span></div>
-<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>  <span class="keywordtype">bool</span> equity_gap_{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>  <span class="comment">// Each instrument&#39;s slot (`InstrumentSlot`), and the context&#39;s replacement count its pointers belong to.</span></div>
-<div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span>  std::unordered_map&lt;InstrumentId, InstrumentSlot, id_detail::InstrumentIdHash&gt; slots_;</div>
-<div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span>  std::uint64_t slots_context_{0};</div>
-<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>  <span class="comment">// Under `EquityCurve::PER_PERIOD`, the period end of the last bar marked, whose point is recorded when a bar of</span></div>
-<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span>  <span class="comment">// a different period end arrives or the replay finishes.</span></div>
-<div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span>  std::optional&lt;std::chrono::system_clock::time_point&gt; period_point_;</div>
-<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>  <span class="comment">// The rule for an instrument without reference data, kept so `rule_for` can return it by reference.</span></div>
-<div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span>  <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> unknown_rule_{<a class="code hl_function" href="structalgotradelib_1_1PriceRule.html#aa816bb3597d2f4d203e0ffc5583257dd">PriceRule::unknown</a>(<span class="stringliteral">&quot;no reference data supplied to the replay&quot;</span>)};</div>
-<div class="line"><a id="l02023" name="l02023"></a><span class="lineno"> 2023</span>  <span class="comment">// What `install_portfolio` last saw: whether it installed at all, the context&#39;s counts of replacements,</span></div>
-<div class="line"><a id="l02024" name="l02024"></a><span class="lineno"> 2024</span>  <span class="comment">// runner edits and reference-data changes, and the queue&#39;s count of changes.</span></div>
-<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span>  <span class="keywordtype">bool</span> installed_{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l02026" name="l02026"></a><span class="lineno"> 2026</span>  std::uint64_t replacements_seen_{0};</div>
-<div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span>  std::uint64_t edits_seen_{0};</div>
-<div class="line"><a id="l02028" name="l02028"></a><span class="lineno"> 2028</span>  std::uint64_t references_seen_{0};</div>
-<div class="line"><a id="l02029" name="l02029"></a><span class="lineno"> 2029</span>  std::uint64_t queue_seen_{0};</div>
-<div class="line"><a id="l02030" name="l02030"></a><span class="lineno"> 2030</span>  <span class="comment">// The interval and period end of the previous bar, which is all `ReplayClock::contiguous` reads of it.</span></div>
-<div class="line"><a id="l02031" name="l02031"></a><span class="lineno"> 2031</span>  std::optional&lt;std::pair&lt;BarInterval, std::chrono::system_clock::time_point&gt;&gt; previous_;</div>
-<div class="line"><a id="l02032" name="l02032"></a><span class="lineno"> 2032</span>  <span class="comment">// For a strategy declaring `on_bars`: the bars of the period not yet delivered, and the period end of</span></div>
-<div class="line"><a id="l02033" name="l02033"></a><span class="lineno"> 2033</span>  <span class="comment">// the last one delivered. A later bar may not join a delivered period, so nothing is decided twice.</span></div>
-<div class="line"><a id="l02034" name="l02034"></a><span class="lineno"> 2034</span>  strategy::slice_detail::Bucket pending_;</div>
-<div class="line"><a id="l02035" name="l02035"></a><span class="lineno"> 2035</span>  std::optional&lt;std::chrono::system_clock::time_point&gt; delivered_through_;</div>
-<div class="line"><a id="l02036" name="l02036"></a><span class="lineno"> 2036</span>};</div>
+<div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>  <span class="comment">// `reserved_` stays false, unlike a runner&#39;s own reservation. The flag distinguishes this</span></div>
+<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>  <span class="comment">// library&#39;s arithmetic from what a broker reported, and in a replay the engine *is* the broker:</span></div>
+<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>  <span class="comment">// this row is the listing. The one consequence worth stating is that</span></div>
+<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>  <span class="comment">// `strategy::SellableConventionProbe`, which reads unreserved rows as evidence about a broker&#39;s</span></div>
+<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>  <span class="comment">// convention, will read these -- and a replay&#39;s sellable figure is a model that never moves, so</span></div>
+<div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>  <span class="comment">// the probe reports what the simulator does rather than what a broker does.</span></div>
+<div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>  <a class="code hl_struct" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder&lt;Tag&gt;</a> working_row(<span class="keyword">const</span> QueuedOrder&lt;Tag&gt;&amp; entry)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>    <a class="code hl_struct" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder&lt;Tag&gt;</a> row;</div>
+<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>    row.<a class="code hl_variable" href="structalgotradelib_1_1WorkingOrder.html#a136030ee0e55c49889e01ba651090f67">ref_</a> = entry.ref_;</div>
+<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>    <span class="comment">// **The replay is this order&#39;s broker, so it is the thing that issued the number.** A row left</span></div>
+<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>    <span class="comment">// with an empty `order_id_` is an order a reader cannot name, which a live row never is; the</span></div>
+<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>    <span class="comment">// reference&#39;s primary part is the only identifier a replay has, and it is already monotone and</span></div>
+<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>    <span class="comment">// stable for as long as the order is outstanding. Nothing in the library matched a replay</span></div>
+<div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span>    <span class="comment">// working row on this field while it was empty, so filling it changes no existing decision.</span></div>
+<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>    row.order_.order_id_ = entry.ref_.primary_;</div>
+<div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span>    row.order_.instrument_ = entry.order_.instrument_;</div>
+<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span>    row.order_.side_ = entry.order_.side_;</div>
+<div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span>    row.order_.type_ = entry.order_.type_;</div>
+<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>    row.order_.time_in_force_ = entry.order_.time_in_force_;</div>
+<div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span>    row.order_.session_ = entry.order_.session_;</div>
+<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>    row.order_.venue_ = entry.order_.venue_;</div>
+<div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span>    row.order_.price_ = entry.order_.price_;</div>
+<div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span>    <span class="comment">// A stop&#39;s trigger, as a live listing reports it -- released or not, since neither broker&#39;s</span></div>
+<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>    <span class="comment">// listing says which.</span></div>
+<div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span>    row.order_.trigger_price_ = entry.order_.trigger_price_;</div>
+<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span>    row.order_.quantity_ = entry.order_.quantity_;</div>
+<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span>    row.order_.currency_ = currency_for(entry.order_.instrument_);</div>
+<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span>    <span class="comment">// Open, and nothing filled: a replay fills an order whole or not at all, so a row that exists</span></div>
+<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>    <span class="comment">// has traded nothing.</span></div>
+<div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span>    row.order_.status_ = OrderStatus::PENDING;</div>
+<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>    row.order_.execution_.filled_quantity_ = <a class="code hl_function" href="classalgotradelib_1_1Decimal64.html#ae1ac1381266a0fc492abcd63a6fc33ca">Decimal64::parse</a>(<span class="stringliteral">&quot;0&quot;</span>);</div>
+<div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span>    row.amendable_quantity_ = entry.order_.quantity_;</div>
+<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>    <span class="keywordflow">return</span> row;</div>
+<div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span>  }</div>
+<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span> </div>
+<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>  <span class="comment">// Takes what an outstanding buy has committed out of the buying power the replay models.</span></div>
+<div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span>  <span class="comment">// **Rows alone do not fix `enforce_buying_power_`**, which reads the scalar and not the orders.</span></div>
+<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span>  <span class="comment">// `ReplayLedger::snapshot` builds buying power from ledger cash, and that cash has not paid for</span></div>
+<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span>  <span class="comment">// anything still resting -- so with a hundred of cash, a resting buy costing a hundred, and a</span></div>
+<div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>  <span class="comment">// second buy costing a hundred in another instrument, the second passes and both can still fill.</span></div>
+<div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>  <span class="comment">// Valued at the order&#39;s own price, else the last close, which is the same estimate the guard</span></div>
+<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>  <span class="comment">// checked the order against — and it is an **estimate**, not a bound. A limit buy cannot fill</span></div>
+<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>  <span class="comment">// above its limit, so for those the commitment is at least the eventual spend before costs. A</span></div>
+<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>  <span class="comment">// market order has no stated price at all: it fills where the next bar opens, and slippage and</span></div>
+<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>  <span class="comment">// commission are both outside this figure, so the real spend can exceed what was committed. An</span></div>
+<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>  <span class="comment">// order that can be valued by neither route is left uncommitted rather than guessed at.</span></div>
+<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span>  <span class="comment">// **Scoped to the limit, exactly as `Runner::reserve` is.**</span></div>
+<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span>  <span class="comment">// `buying_power_in()` is a public figure a strategy is free to size its next order from, so</span></div>
+<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span>  <span class="comment">// lowering it for a caller who never enabled the check would change how their strategy sizes --</span></div>
+<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>  <span class="comment">// a behaviour change well past enforcing a ceiling, and the reason the runner passes `spends`</span></div>
+<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>  <span class="comment">// rather than always debiting. It also keeps `ReportCaveats::buying_power_is_ledger_cash` true</span></div>
+<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>  <span class="comment">// for every replay that does not ask for the check.</span></div>
+<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>  <span class="keywordtype">void</span> commit_open_buy(<a class="code hl_struct" href="structalgotradelib_1_1strategy_1_1Portfolio.html">strategy::Portfolio&lt;Tag&gt;</a>&amp; portfolio, <span class="keyword">const</span> QueuedOrder&lt;Tag&gt;&amp; entry)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>    <span class="keywordflow">if</span> (!config_.limits_.enforce_buying_power_ || entry.order_.side_ != OrderSide::BUY) {</div>
+<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span>    }</div>
+<div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>    <span class="keyword">const</span> <span class="keyword">auto</span> price = entry.order_.price_ ?</div>
+<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span>      entry.order_.price_ :</div>
+<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span>      runner_.context().last_price(entry.order_.instrument_);</div>
+<div class="line"><a id="l01976" name="l01976"></a><span class="lineno"> 1976</span>    <span class="keywordflow">if</span> (!price) {</div>
+<div class="line"><a id="l01977" name="l01977"></a><span class="lineno"> 1977</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01978" name="l01978"></a><span class="lineno"> 1978</span>    }</div>
+<div class="line"><a id="l01979" name="l01979"></a><span class="lineno"> 1979</span>    <span class="keyword">const</span> <span class="keyword">auto</span> spent = <a class="code hl_function" href="namespacealgotradelib.html#ad1426bc3d102c70ed49d0b1f2404e7e3">decimal_multiply</a>(entry.order_.quantity_, *price);</div>
+<div class="line"><a id="l01980" name="l01980"></a><span class="lineno"> 1980</span>    <span class="keywordflow">if</span> (!spent) {</div>
+<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"> 1981</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01982" name="l01982"></a><span class="lineno"> 1982</span>    }</div>
+<div class="line"><a id="l01983" name="l01983"></a><span class="lineno"> 1983</span>    <span class="keyword">const</span> <span class="keyword">auto</span> currency = currency_for(entry.order_.instrument_);</div>
+<div class="line"><a id="l01984" name="l01984"></a><span class="lineno"> 1984</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; reading : portfolio.<a class="code hl_variable" href="structalgotradelib_1_1strategy_1_1Portfolio.html#ab005d9ac52f23eaa8ace153e858d72f9">buying_power_</a>) {</div>
+<div class="line"><a id="l01985" name="l01985"></a><span class="lineno"> 1985</span>      <span class="keywordflow">if</span> (!(reading.cash_.currency_ == currency)) {</div>
+<div class="line"><a id="l01986" name="l01986"></a><span class="lineno"> 1986</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>      }</div>
+<div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span>      <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> left = <a class="code hl_function" href="namespacealgotradelib.html#abe3d9c4a1548c2630799f32df94b2b91">decimal_subtract</a>(reading.cash_.amount_, *spent)) {</div>
+<div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span>        reading.cash_.amount_ = *left;</div>
+<div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span>      }</div>
+<div class="line"><a id="l01991" name="l01991"></a><span class="lineno"> 1991</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01992" name="l01992"></a><span class="lineno"> 1992</span>    }</div>
+<div class="line"><a id="l01993" name="l01993"></a><span class="lineno"> 1993</span>  }</div>
+<div class="line"><a id="l01994" name="l01994"></a><span class="lineno"> 1994</span> </div>
+<div class="line"><a id="l01995" name="l01995"></a><span class="lineno"> 1995</span>  <span class="comment">// Both read the reference data in place; use the result at once (`Context::find_instrument`).</span></div>
+<div class="line"><a id="l01996" name="l01996"></a><span class="lineno"> 1996</span>  <span class="keyword">const</span> <a class="code hl_class" href="classalgotradelib_1_1Currency.html">Currency</a>&amp; currency_for(<span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a>&amp; instrument)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* reference = runner_.context().find_instrument(instrument);</div>
+<div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span>    <span class="keywordflow">return</span> reference != <span class="keyword">nullptr</span> ? reference-&gt;currency_ : config_.currency_;</div>
+<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span>  }</div>
+<div class="line"><a id="l02000" name="l02000"></a><span class="lineno"> 2000</span> </div>
+<div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&amp; rule_for(<span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a>&amp; instrument)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span>    <span class="keyword">const</span> <span class="keyword">auto</span>* reference = runner_.context().find_instrument(instrument);</div>
+<div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>    <span class="keywordflow">return</span> reference != <span class="keyword">nullptr</span> ? reference-&gt;price_rule_ : unknown_rule_;</div>
+<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>  }</div>
+<div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span> </div>
+<div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span>  <span class="comment">// Collects what a runner pass reported, so a replay ends with the whole picture.</span></div>
+<div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Report&gt;</div>
+<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span>  <span class="keywordtype">void</span> drain_reports(<span class="keyword">const</span> Report&amp; report) {</div>
+<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span>    collect(report);</div>
+<div class="line"><a id="l02010" name="l02010"></a><span class="lineno"> 2010</span>  }</div>
+<div class="line"><a id="l02011" name="l02011"></a><span class="lineno"> 2011</span> </div>
+<div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span>  <span class="comment">// Adds a pass&#39;s refusals to the result.</span></div>
+<div class="line"><a id="l02013" name="l02013"></a><span class="lineno"> 2013</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Report&gt;</div>
+<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>  <span class="keywordtype">void</span> collect(<span class="keyword">const</span> Report&amp; report) {</div>
+<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; rejection : report.rejected_) {</div>
+<div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span>      result_.rejected_.push_back(rejection);</div>
+<div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span>    }</div>
+<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; refusal : report.refused_) {</div>
+<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span>      result_.refused_.push_back(refusal);</div>
+<div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span>    }</div>
+<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>  }</div>
+<div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span> </div>
+<div class="line"><a id="l02023" name="l02023"></a><span class="lineno"> 2023</span>  <span class="comment">// Settles a target the runner deferred behind a stop, once this replay has withdrawn the stop and</span></div>
+<div class="line"><a id="l02024" name="l02024"></a><span class="lineno"> 2024</span>  <span class="comment">// the strategy has answered every update of the batch. Called only from `publish_order_updates`.</span></div>
+<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span>  <span class="comment">//</span></div>
+<div class="line"><a id="l02026" name="l02026"></a><span class="lineno"> 2026</span>  <span class="comment">// **A replay&#39;s withdrawal is synchronous**: `QueueingExecutor::cancel` removes the stop from the</span></div>
+<div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span>  <span class="comment">// queue before the pass that asked for it returns. Waiting for the next bar&#39;s portfolio to show that</span></div>
+<div class="line"><a id="l02028" name="l02028"></a><span class="lineno"> 2028</span>  <span class="comment">// would place the flatten a bar late and fill it two bars late -- a delay the live path, whose</span></div>
+<div class="line"><a id="l02029" name="l02029"></a><span class="lineno"> 2029</span>  <span class="comment">// cancellation can be confirmed between bars, does not have. So after every pass the replay shows</span></div>
+<div class="line"><a id="l02030" name="l02030"></a><span class="lineno"> 2030</span>  <span class="comment">// the runner its book as it now stands and lets it release from that one snapshot: this ledger is the</span></div>
+<div class="line"><a id="l02031" name="l02031"></a><span class="lineno"> 2031</span>  <span class="comment">// broker, so the stop&#39;s absence and the holding after it are known together. See</span></div>
+<div class="line"><a id="l02032" name="l02032"></a><span class="lineno"> 2032</span>  <span class="comment">// `Runner::retry_deferred_on_one_snapshot`. An order placed here waits for the next bar like any</span></div>
+<div class="line"><a id="l02033" name="l02033"></a><span class="lineno"> 2033</span>  <span class="comment">// other, which is the lookahead rule.</span></div>
+<div class="line"><a id="l02034" name="l02034"></a><span class="lineno"> 2034</span>  <span class="keywordtype">void</span> settle_deferred() {</div>
+<div class="line"><a id="l02035" name="l02035"></a><span class="lineno"> 2035</span>    <span class="keywordflow">if</span> (runner_.deferred_targets().empty()) {</div>
+<div class="line"><a id="l02036" name="l02036"></a><span class="lineno"> 2036</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l02037" name="l02037"></a><span class="lineno"> 2037</span>    }</div>
+<div class="line"><a id="l02038" name="l02038"></a><span class="lineno"> 2038</span>    install_portfolio();</div>
+<div class="line"><a id="l02039" name="l02039"></a><span class="lineno"> 2039</span>    collect(runner_.retry_deferred_on_one_snapshot());</div>
+<div class="line"><a id="l02040" name="l02040"></a><span class="lineno"> 2040</span>  }</div>
+<div class="line"><a id="l02041" name="l02041"></a><span class="lineno"> 2041</span> </div>
+<div class="line"><a id="l02042" name="l02042"></a><span class="lineno"> 2042</span>  ReplayConfig config_;</div>
+<div class="line"><a id="l02043" name="l02043"></a><span class="lineno"> 2043</span>  NextBarFillModel fills_;</div>
+<div class="line"><a id="l02044" name="l02044"></a><span class="lineno"> 2044</span>  ReplayLedger ledger_;</div>
+<div class="line"><a id="l02045" name="l02045"></a><span class="lineno"> 2045</span>  ReplayClock clock_;</div>
+<div class="line"><a id="l02046" name="l02046"></a><span class="lineno"> 2046</span>  Runner runner_;</div>
+<div class="line"><a id="l02047" name="l02047"></a><span class="lineno"> 2047</span>  <span class="comment">// Turns this replay&#39;s own working listing into `on_order_update` events; unused for a strategy without one.</span></div>
+<div class="line"><a id="l02048" name="l02048"></a><span class="lineno"> 2048</span>  <a class="code hl_class" href="classalgotradelib_1_1runner_1_1OrderUpdateWatch.html">runner::OrderUpdateWatch&lt;Tag&gt;</a> updates_;</div>
+<div class="line"><a id="l02049" name="l02049"></a><span class="lineno"> 2049</span>  ReplayResult result_;</div>
+<div class="line"><a id="l02050" name="l02050"></a><span class="lineno"> 2050</span>  <span class="comment">// Whether a bar since the last equity point went unvalued, so the next point carries no return.</span></div>
+<div class="line"><a id="l02051" name="l02051"></a><span class="lineno"> 2051</span>  <span class="keywordtype">bool</span> equity_gap_{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l02052" name="l02052"></a><span class="lineno"> 2052</span>  <span class="comment">// Each instrument&#39;s slot (`InstrumentSlot`), and the context&#39;s replacement count its pointers belong to.</span></div>
+<div class="line"><a id="l02053" name="l02053"></a><span class="lineno"> 2053</span>  std::unordered_map&lt;InstrumentId, InstrumentSlot, id_detail::InstrumentIdHash&gt; slots_;</div>
+<div class="line"><a id="l02054" name="l02054"></a><span class="lineno"> 2054</span>  std::uint64_t slots_context_{0};</div>
+<div class="line"><a id="l02055" name="l02055"></a><span class="lineno"> 2055</span>  <span class="comment">// Under `EquityCurve::PER_PERIOD`, the period end of the last bar marked, whose point is recorded when a bar of</span></div>
+<div class="line"><a id="l02056" name="l02056"></a><span class="lineno"> 2056</span>  <span class="comment">// a different period end arrives or the replay finishes.</span></div>
+<div class="line"><a id="l02057" name="l02057"></a><span class="lineno"> 2057</span>  std::optional&lt;std::chrono::system_clock::time_point&gt; period_point_;</div>
+<div class="line"><a id="l02058" name="l02058"></a><span class="lineno"> 2058</span>  <span class="comment">// The rule for an instrument without reference data, kept so `rule_for` can return it by reference.</span></div>
+<div class="line"><a id="l02059" name="l02059"></a><span class="lineno"> 2059</span>  <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> unknown_rule_{<a class="code hl_function" href="structalgotradelib_1_1PriceRule.html#aa816bb3597d2f4d203e0ffc5583257dd">PriceRule::unknown</a>(<span class="stringliteral">&quot;no reference data supplied to the replay&quot;</span>)};</div>
+<div class="line"><a id="l02060" name="l02060"></a><span class="lineno"> 2060</span>  <span class="comment">// What `install_portfolio` last saw: whether it installed at all, the context&#39;s counts of replacements,</span></div>
+<div class="line"><a id="l02061" name="l02061"></a><span class="lineno"> 2061</span>  <span class="comment">// runner edits and reference-data changes, and the queue&#39;s count of changes.</span></div>
+<div class="line"><a id="l02062" name="l02062"></a><span class="lineno"> 2062</span>  <span class="keywordtype">bool</span> installed_{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l02063" name="l02063"></a><span class="lineno"> 2063</span>  std::uint64_t replacements_seen_{0};</div>
+<div class="line"><a id="l02064" name="l02064"></a><span class="lineno"> 2064</span>  std::uint64_t edits_seen_{0};</div>
+<div class="line"><a id="l02065" name="l02065"></a><span class="lineno"> 2065</span>  std::uint64_t references_seen_{0};</div>
+<div class="line"><a id="l02066" name="l02066"></a><span class="lineno"> 2066</span>  std::uint64_t queue_seen_{0};</div>
+<div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span>  <span class="comment">// The interval and period end of the previous bar, which is all `ReplayClock::contiguous` reads of it.</span></div>
+<div class="line"><a id="l02068" name="l02068"></a><span class="lineno"> 2068</span>  std::optional&lt;std::pair&lt;BarInterval, std::chrono::system_clock::time_point&gt;&gt; previous_;</div>
+<div class="line"><a id="l02069" name="l02069"></a><span class="lineno"> 2069</span>  <span class="comment">// For a strategy declaring `on_bars`: the bars of the period not yet delivered, and the period end of</span></div>
+<div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span>  <span class="comment">// the last one delivered. A later bar may not join a delivered period, so nothing is decided twice.</span></div>
+<div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span>  strategy::slice_detail::Bucket pending_;</div>
+<div class="line"><a id="l02072" name="l02072"></a><span class="lineno"> 2072</span>  std::optional&lt;std::chrono::system_clock::time_point&gt; delivered_through_;</div>
+<div class="line"><a id="l02073" name="l02073"></a><span class="lineno"> 2073</span>};</div>
 </div>
-<div class="line"><a id="l02037" name="l02037"></a><span class="lineno"> 2037</span> </div>
-<div class="line"><a id="l02038" name="l02038"></a><span class="lineno"> 2038</span>} <span class="comment">// namespace backtest</span></div>
-<div class="line"><a id="l02039" name="l02039"></a><span class="lineno"> 2039</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="line"><a id="l02074" name="l02074"></a><span class="lineno"> 2074</span> </div>
+<div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span>} <span class="comment">// namespace backtest</span></div>
+<div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span>} <span class="comment">// namespace algotradelib</span></div>
 <div class="ttc" id="abacktest_2clock_8hpp_html"><div class="ttname"><a href="backtest_2clock_8hpp.html">clock.hpp</a></div><div class="ttdoc">Bar-interval arithmetic and the replay clock.</div></div>
 <div class="ttc" id="aclassalgotradelib_1_1Currency_html"><div class="ttname"><a href="classalgotradelib_1_1Currency.html">algotradelib::Currency</a></div><div class="ttdoc">A three-letter currency code, such as KRW or USD (ISO 4217 style).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00354">types.hpp:354</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1Decimal64_html"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html">algotradelib::Decimal64</a></div><div class="ttdoc">An exact signed decimal: an int64 coefficient times 10^-scale.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00417">types.hpp:417</a></div></div>
@@ -1945,7 +1982,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('engine_8hpp_so
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1Portfolio_html_ab005d9ac52f23eaa8ace153e858d72f9"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1Portfolio.html#ab005d9ac52f23eaa8ace153e858d72f9">algotradelib::strategy::Portfolio::buying_power_</a></div><div class="ttdeci">std::vector&lt; BuyingPower &gt; buying_power_</div><div class="ttdoc">What may be spent, per currency.</div><div class="ttdef"><b>Definition</b> <a href="portfolio_8hpp_source.html#l00103">portfolio.hpp:103</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1QuoteEvent_html"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1QuoteEvent.html">algotradelib::strategy::QuoteEvent</a></div><div class="ttdoc">A quote the runner has just read, delivered to on_quote.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00601">event.hpp:601</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1QuoteEvent_html_accd0796287706f49da967282a1d2bd70"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1QuoteEvent.html#accd0796287706f49da967282a1d2bd70">algotradelib::strategy::QuoteEvent::quote_</a></div><div class="ttdeci">QuoteSnapshot quote_</div><div class="ttdoc">The quote, as the broker reported it.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00603">event.hpp:603</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1strategy_1_1RiskLimits_html"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1RiskLimits.html">algotradelib::strategy::RiskLimits</a></div><div class="ttdoc">The limits the operator sets for RiskGuard.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00268">risk.hpp:268</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1strategy_1_1RiskLimits_html"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1RiskLimits.html">algotradelib::strategy::RiskLimits</a></div><div class="ttdoc">The limits the operator sets for RiskGuard.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00269">risk.hpp:269</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1SessionWindow_html"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1SessionWindow.html">algotradelib::strategy::SessionWindow</a></div><div class="ttdoc">The intraday session of a market, as the operator states it.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00107">event.hpp:107</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1SessionWindow_html_ac609cf8f0342b83d410c80f8140f42d2"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2">algotradelib::strategy::SessionWindow::krx</a></div><div class="ttdeci">static SessionWindow krx()</div><div class="ttdoc">Returns the KRX regular session, 09:00-15:30 KST.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00121">event.hpp:121</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

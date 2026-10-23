@@ -1,5 +1,13 @@
 var NAVTREEINDEX22 =
 {
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html":[1,0,0,10,21],
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html":[2,0,0,10,20],
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a1e7958a78eef778b5901076b4306e60b":[1,0,0,10,21,3],
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a1e7958a78eef778b5901076b4306e60b":[2,0,0,10,20,3],
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a3e64c9a8e6466e51a96de8f66820785c":[1,0,0,10,21,6],
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a3e64c9a8e6466e51a96de8f66820785c":[2,0,0,10,20,6],
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a56af3aa90b936881105bf6ca5a053d5a":[1,0,0,10,21,4],
+"structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a56af3aa90b936881105bf6ca5a053d5a":[2,0,0,10,20,4],
 "structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a5fbbfccd5b40b78daa81d7bff7353762":[1,0,0,10,21,1],
 "structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a5fbbfccd5b40b78daa81d7bff7353762":[2,0,0,10,20,1],
 "structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a9152242ec6d8a82a20c06cdae04e2af9":[1,0,0,10,21,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX22 =
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a1e7d9cbb257a8f9a37739de7fc182fb4":[1,0,0,10,1,9,2],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a1e7d9cbb257a8f9a37739de7fc182fb4":[2,0,0,10,0,9,2],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a90d7a2038a55492e3d054d088027c51a":[1,0,0,10,1,9,1],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a90d7a2038a55492e3d054d088027c51a":[2,0,0,10,0,9,1],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#ab1ebf8f73c295b91baf76428bd960504":[1,0,0,10,1,9,3],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#ab1ebf8f73c295b91baf76428bd960504":[2,0,0,10,0,9,3],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html":[1,0,0,10,1,9,0],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html":[2,0,0,10,0,9,0],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a0a6b9eb1f1aa5e70e11f0d8e690db6c9":[1,0,0,10,1,9,0,2],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a0a6b9eb1f1aa5e70e11f0d8e690db6c9":[2,0,0,10,0,9,0,2],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a558e8cb5db9d9e7743469fa66cbf6bbc":[1,0,0,10,1,9,0,1],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a558e8cb5db9d9e7743469fa66cbf6bbc":[2,0,0,10,0,9,0,1]
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a90d7a2038a55492e3d054d088027c51a":[2,0,0,10,0,9,1]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX14 =
 {
+"structalgotradelib_1_1DataOnlyTraits.html#aca0e3210994532f1d6f39c8a71d808a0":[1,0,0,33,1],
+"structalgotradelib_1_1DataOnlyTraits.html#aca0e3210994532f1d6f39c8a71d808a0":[2,0,0,33,1],
+"structalgotradelib_1_1DataOnlyTraits.html#ae78e8e44ce6f568c680396a4acdd547b":[1,0,0,33,15],
+"structalgotradelib_1_1DataOnlyTraits.html#ae78e8e44ce6f568c680396a4acdd547b":[2,0,0,33,15],
+"structalgotradelib_1_1Date.html":[1,0,0,34],
+"structalgotradelib_1_1Date.html":[2,0,0,34],
+"structalgotradelib_1_1Date.html#a27425be265a0cc57e4f731825154ec4d":[1,0,0,34,1],
+"structalgotradelib_1_1Date.html#a27425be265a0cc57e4f731825154ec4d":[2,0,0,34,1],
 "structalgotradelib_1_1Date.html#a611ba98c72bec2ae82bbf086b81563ef":[1,0,0,34,0],
 "structalgotradelib_1_1Date.html#a611ba98c72bec2ae82bbf086b81563ef":[2,0,0,34,0],
 "structalgotradelib_1_1Date.html#a6f7678b6c851df8d3d27ab20593804bd":[1,0,0,34,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX14 =
 "structalgotradelib_1_1OrderShape.html#aab32f68e507bc81e1dea141b24d02213":[1,0,0,51,1],
 "structalgotradelib_1_1OrderShape.html#aab32f68e507bc81e1dea141b24d02213":[2,0,0,51,1],
 "structalgotradelib_1_1OrderShape.html#aaddbc6c3e1784e3ae61d0f3649fd9880":[1,0,0,51,5],
-"structalgotradelib_1_1OrderShape.html#aaddbc6c3e1784e3ae61d0f3649fd9880":[2,0,0,51,5],
-"structalgotradelib_1_1OrderShape.html#aff89ba6dbd87aaa880d9518bc52310c6":[1,0,0,51,6],
-"structalgotradelib_1_1OrderShape.html#aff89ba6dbd87aaa880d9518bc52310c6":[2,0,0,51,6],
-"structalgotradelib_1_1OrderSnapshot.html":[1,0,0,52],
-"structalgotradelib_1_1OrderSnapshot.html":[2,0,0,52],
-"structalgotradelib_1_1OrderSnapshot.html#a1ba106d9a8dca32b373d009eeb7fddc2":[1,0,0,52,18],
-"structalgotradelib_1_1OrderSnapshot.html#a1ba106d9a8dca32b373d009eeb7fddc2":[2,0,0,52,18],
-"structalgotradelib_1_1OrderSnapshot.html#a1d95520d5e1966bb4b267c1454b27575":[1,0,0,52,13],
-"structalgotradelib_1_1OrderSnapshot.html#a1d95520d5e1966bb4b267c1454b27575":[2,0,0,52,13]
+"structalgotradelib_1_1OrderShape.html#aaddbc6c3e1784e3ae61d0f3649fd9880":[2,0,0,51,5]
 };

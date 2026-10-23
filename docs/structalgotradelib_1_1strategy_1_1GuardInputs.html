@@ -143,7 +143,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>What <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1RiskGuard.html#ab0d1e430593b372f0f19438d0ba4ec34" title="Checks one planned order against the limits and holds.">RiskGuard::check</a></span> needs besides the order and the portfolio. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00353">353</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00354">354</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="ab3d2dcc31ead5cfc9c5cee17f38dcbce" name="ab3d2dcc31ead5cfc9c5cee17f38dcbce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3d2dcc31ead5cfc9c5cee17f38dcbce">&#9670;&#160;</a></span>exposure_basis_</h2>
@@ -160,9 +160,9 @@ Public Attributes</h2></td></tr>
 <p>The currency and mark of every instrument held or working, plus the order's. </p>
 <p>Needed only by <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#a3c05391e9208cb10442385f8ef71e065" title="The largest gross exposure the portfolio may reach, in the order&#39;s currency.">RiskLimits::max_gross_exposure_</a></span>. A missing entry, or two entries for one instrument, refuses with <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badab8f593806ee7277ca27e51dfdd3216e2" title="A limit needed a value that is not known.">GuardReason::VALUE_NOT_KNOWN</a></span>. The runner fills it from reference data. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00367">367</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00368">368</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -180,9 +180,9 @@ Public Attributes</h2></td></tr>
 
 <p>The current instant; <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#ae2fe5f164574e0cebe9c853a17105983" title="The window max_orders_per_window_ counts over.">RiskLimits::rate_window_</a></span> counts back from it. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00355">355</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00356">356</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -201,9 +201,9 @@ Public Attributes</h2></td></tr>
 <p>The currency the order is priced in, from its reference data. </p>
 <p>Needed by the buying-power check (absent refuses with <span class="tt">INSUFFICIENT_BUYING_POWER</span>) and by the gross-exposure ceiling (absent refuses with <span class="tt">VALUE_NOT_KNOWN</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00374">374</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00375">375</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -221,9 +221,9 @@ Public Attributes</h2></td></tr>
 
 <p>The market phase the order would be sent in. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00357">357</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00358">358</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -241,9 +241,9 @@ Public Attributes</h2></td></tr>
 
 <p>A price to value a market order, which carries none. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00359">359</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00360">360</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00927">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
