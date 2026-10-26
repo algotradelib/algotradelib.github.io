@@ -179,7 +179,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The traffic class, for rate limiting and queue priority. </p>
-<p>The default, <span class="tt">REFERENCE</span>, has the lowest priority, so an unlabelled request never displaces an order. </p>
+<p>The default, <span class="tt">REFERENCE</span>, has the lowest priority, so an unlabelled request never displaces an order. Set <span class="tt">TRADING</span> on every order placement, amendment and cancellation, with or without a rate-limit budget: <span class="tt"><a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html#ac430426960e06a03684321e563decf9e" title="Whether AsyncHttpClient writes every order (RateLimitGroup::TRADING) on a connection no request has u...">HttpClientOptions::fresh_connection_for_orders_</a></span> applies to <span class="tt">TRADING</span> requests only. </p>
 
 <p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00073">73</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 

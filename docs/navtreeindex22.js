@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"structalgotradelib_1_1strategy_1_1QuoteEvent.html#accd0796287706f49da967282a1d2bd70":[1,0,0,10,20,0],
+"structalgotradelib_1_1strategy_1_1QuoteEvent.html#accd0796287706f49da967282a1d2bd70":[2,0,0,10,19,0],
 "structalgotradelib_1_1strategy_1_1ReconcileInputs.html":[1,0,0,10,21],
 "structalgotradelib_1_1strategy_1_1ReconcileInputs.html":[2,0,0,10,20],
 "structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a1e7958a78eef778b5901076b4306e60b":[1,0,0,10,21,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html":[1,0,0,10,1,9],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html":[2,0,0,10,0,9],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a1e7d9cbb257a8f9a37739de7fc182fb4":[1,0,0,10,1,9,2],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a1e7d9cbb257a8f9a37739de7fc182fb4":[2,0,0,10,0,9,2],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a90d7a2038a55492e3d054d088027c51a":[1,0,0,10,1,9,1],
-"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a90d7a2038a55492e3d054d088027c51a":[2,0,0,10,0,9,1]
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a1e7d9cbb257a8f9a37739de7fc182fb4":[2,0,0,10,0,9,2]
 };

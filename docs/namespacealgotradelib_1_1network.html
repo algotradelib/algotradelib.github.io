@@ -241,7 +241,7 @@ Variables</h2></td></tr>
 
 <p>A rate-limit bucket on the steady clock. </p>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00341">341</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00344">344</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Variables</h2></td></tr>
 
 <p>The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds a request sets it. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d" name="a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d"></a>TRADING&#160;</td><td class="fielddoc"><p>Order placement, amendment and cancellation. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d" name="a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d"></a>TRADING&#160;</td><td class="fielddoc"><p>Order placement, amendment and cancellation. <span class="tt"><a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html#ac430426960e06a03684321e563decf9e" title="Whether AsyncHttpClient writes every order (RateLimitGroup::TRADING) on a connection no request has u...">HttpClientOptions::fresh_connection_for_orders_</a></span> applies to these requests. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced" name="a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced"></a>AUTH&#160;</td><td class="fielddoc"><p>Access-token issue and refresh. </p>
 </td></tr>
@@ -334,9 +334,9 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00159">159</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00172">172</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00159">close_ssl_stream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00172">close_ssl_stream()</a>.</p>
 
 </div>
 </div>
@@ -377,9 +377,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">host</span>, with <span class="tt">:port</span> appended unless the port is <span class="tt">443</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00133">133</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00146">146</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00133">make_host_header()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00146">make_host_header()</a>.</p>
 
 </div>
 </div>
@@ -415,9 +415,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An index below <span class="tt"><a class="el" href="#abbef45142e4c629274d3d8f94b8dadb8" title="The number of traffic classes.">rate_limit_group_count</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00107">107</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00110">110</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00376">algotradelib::network::RateLimitStats::group()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00385">algotradelib::network::RateLimitStats::group()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00107">rate_limit_group_index()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00379">algotradelib::network::RateLimitStats::group()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00388">algotradelib::network::RateLimitStats::group()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00110">rate_limit_group_index()</a>.</p>
 
 </div>
 </div>
@@ -453,9 +453,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a083ad43ca671110d78741e3c5b113940" title="The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds ...">RateLimitGroup</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00078">78</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00081">81</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00078">rate_limit_group_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00081">rate_limit_group_name()</a>.</p>
 
 </div>
 </div>
@@ -492,9 +492,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The priority; larger is served first. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00057">57</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00060">60</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00057">rate_limit_priority()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00060">rate_limit_priority()</a>.</p>
 
 </div>
 </div>
@@ -535,9 +535,9 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00146">146</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00159">159</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00146">shutdown_ssl_stream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00159">shutdown_ssl_stream()</a>.</p>
 
 </div>
 </div>
@@ -578,9 +578,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <span class="tt">CANCELLED</span> error for an aborted operation, otherwise <span class="tt">TRANSPORT</span>. <span class="tt">reached_broker_</span> is left at its default; the caller sets it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00117">117</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00130">130</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00117">transport_error()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00130">transport_error()</a>.</p>
 
 </div>
 </div>
@@ -621,9 +621,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">burst_</span> for <span class="tt">TRADING</span> and <span class="tt">AUTH</span>; otherwise <span class="tt">burst_ - trading_reserve_</span>, at least 1. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00138">138</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00141">141</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00427">algotradelib::network::RateLimitController::acquire()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00418">algotradelib::network::RateLimitController::delay_until()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00138">usable_burst()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rate__limit_8hpp_source.html#l00430">algotradelib::network::RateLimitController::acquire()</a>, <a class="el" href="rate__limit_8hpp_source.html#l00421">algotradelib::network::RateLimitController::delay_until()</a>, and <a class="el" href="rate__limit_8hpp_source.html#l00141">usable_burst()</a>.</p>
 
 </div>
 </div>
@@ -654,15 +654,15 @@ Variables</h2></td></tr>
 <div class="line">  <a class="code hl_enumvalue" href="#a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c">RateLimitGroup::MARKET_DATA</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f">RateLimitGroup::REFERENCE</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c">algotradelib::network::RateLimitGroup::MARKET_DATA</a></div><div class="ttdeci">@ MARKET_DATA</div><div class="ttdoc">Quotes, bars, order book and trades.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00034">rate_limit.hpp:34</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6">algotradelib::network::RateLimitGroup::ACCOUNT</a></div><div class="ttdeci">@ ACCOUNT</div><div class="ttdoc">Holdings, working orders, order history and buying power.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00032">rate_limit.hpp:32</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d">algotradelib::network::RateLimitGroup::TRADING</a></div><div class="ttdeci">@ TRADING</div><div class="ttdoc">Order placement, amendment and cancellation.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00028">rate_limit.hpp:28</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f">algotradelib::network::RateLimitGroup::REFERENCE</a></div><div class="ttdeci">@ REFERENCE</div><div class="ttdoc">Instrument reference data and trading calendars.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00036">rate_limit.hpp:36</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced">algotradelib::network::RateLimitGroup::AUTH</a></div><div class="ttdeci">@ AUTH</div><div class="ttdoc">Access-token issue and refresh.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00030">rate_limit.hpp:30</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c">algotradelib::network::RateLimitGroup::MARKET_DATA</a></div><div class="ttdeci">@ MARKET_DATA</div><div class="ttdoc">Quotes, bars, order book and trades.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00037">rate_limit.hpp:37</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940ac40eb667c7e828cfdcfb437c5d221bf6">algotradelib::network::RateLimitGroup::ACCOUNT</a></div><div class="ttdeci">@ ACCOUNT</div><div class="ttdoc">Holdings, working orders, order history and buying power.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00035">rate_limit.hpp:35</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940ad7c793e2b6ed6f6009582011d7b2af8d">algotradelib::network::RateLimitGroup::TRADING</a></div><div class="ttdeci">@ TRADING</div><div class="ttdoc">Order placement, amendment and cancellation. HttpClientOptions::fresh_connection_for_orders_ applies ...</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00031">rate_limit.hpp:31</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f">algotradelib::network::RateLimitGroup::REFERENCE</a></div><div class="ttdeci">@ REFERENCE</div><div class="ttdoc">Instrument reference data and trading calendars.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00039">rate_limit.hpp:39</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1network_html_a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced"><div class="ttname"><a href="#a083ad43ca671110d78741e3c5b113940af458afcda462a9ed24f08634cb2ceced">algotradelib::network::RateLimitGroup::AUTH</a></div><div class="ttdeci">@ AUTH</div><div class="ttdoc">Access-token issue and refresh.</div><div class="ttdef"><b>Definition</b> <a href="rate__limit_8hpp_source.html#l00033">rate_limit.hpp:33</a></div></div>
 </div><!-- fragment -->
 <p>Every <span class="tt"><a class="el" href="#a083ad43ca671110d78741e3c5b113940" title="The traffic class of a request, for rate limiting and queue priority. The broker adapter that builds ...">RateLimitGroup</a></span>, in declaration order. </p>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00040">40</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00043">43</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
 </div>
 </div>
@@ -688,7 +688,7 @@ Variables</h2></td></tr>
 
 <p>The number of traffic classes. </p>
 
-<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00100">100</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rate__limit_8hpp_source.html#l00103">103</a> of file <a class="el" href="rate__limit_8hpp_source.html">rate_limit.hpp</a>.</p>
 
 </div>
 </div>

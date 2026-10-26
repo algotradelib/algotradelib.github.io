@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a90d7a2038a55492e3d054d088027c51a":[1,0,0,10,1,9,1],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#a90d7a2038a55492e3d054d088027c51a":[2,0,0,10,0,9,1],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#ab1ebf8f73c295b91baf76428bd960504":[1,0,0,10,1,9,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html#ab1ebf8f73c295b91baf76428bd960504":[2,0,0,10,0,9,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html":[1,0,0,10,1,9,0],
