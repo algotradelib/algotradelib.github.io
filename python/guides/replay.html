@@ -70,7 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../favicon.ico" rel="icon">
+<link href="../favicon/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,9 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1ba7710ca2f3616eabbbf13073e467e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f7e5c0768d8c985cb7846abaf85b063b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b07e113ff23f153c8d0400c5aab185d8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-f7e5c0768d8c985cb7846abaf85b063b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b916e68735d4e3a910eb4387cac20a3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,6 +112,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+<link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="manifest" href="../favicon/site.webmanifest">
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -299,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../logo.png" alt="" class="navbar-logo light-content">
-    <img src="../logo.png" alt="" class="navbar-logo dark-content">
+    <img src="../logo-dark.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">pyatl</span>
@@ -392,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><code>backtest()</code> replays history as it happened. To test a strategy on other sequences (windows of the history, or paths resampled from it), feed a <code>Replay</code> yourself. The bars still run through the C++ engine one at a time; in our measurements, feeding a sequence in blocks took no longer than one <code>backtest()</code> call over the same bars. Parallel runs belong in separate processes.</p>
-<div id="1a855983" class="cell" data-execution_count="1">
+<div id="989a5f46" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyatl</span>
@@ -434,7 +438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="rolling-windows" class="level2">
 <h2 class="anchored" data-anchor-id="rolling-windows">Rolling windows</h2>
 <p>Each window is its own run: a new strategy and a new <code>Replay</code> (one replay is one run and has no reset).</p>
-<div id="fd0df8a2" class="cell" data-execution_count="2">
+<div id="8fc17e73" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">500</span> <span class="op">-</span> <span class="dv">120</span> <span class="op">+</span> <span class="dv">1</span>, <span class="dv">60</span>):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    window <span class="op">=</span> {s: f.iloc[start:start <span class="op">+</span> <span class="dv">120</span>] <span class="cf">for</span> s, f <span class="kw">in</span> data.items()}</span>
@@ -512,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Give the path its own timeline.</strong> Drawn blocks come out of order and may repeat, while a replay needs time to move forward; the path’s bars are placed on new consecutive business days, and gaps and calendars then follow that timeline.</li>
 </ul>
 <p>Prices are rebuilt from the drawn daily returns, so blocks join without jumps.</p>
-<div id="711187fe" class="cell" data-execution_count="3">
+<div id="4820a917" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bootstrap_path(data, block, rng):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    days <span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(data.values())).index</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">all</span>(f.index.equals(days) <span class="cf">for</span> f <span class="kw">in</span> data.values()), <span class="st">"align every frame to the same dates"</span></span>
@@ -547,7 +551,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="feeding-a-generated-sequence-in-blocks" class="level2">
 <h2 class="anchored" data-anchor-id="feeding-a-generated-sequence-in-blocks">Feeding a generated sequence in blocks</h2>
 <p>When a path is generated as the run goes, <code>feed_bars</code> takes each block as columns, in the order you want them replayed.</p>
-<div id="7eb53076" class="cell" data-execution_count="4">
+<div id="e209b6e7" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>replay <span class="op">=</span> pyatl.Replay(Reversal(), symbols)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> bootstrap_path(data, <span class="dv">20</span>, np.random.default_rng(<span class="dv">5</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> pd.concat(path, names<span class="op">=</span>[<span class="st">"symbol"</span>, <span class="st">"time"</span>]).reset_index()</span>
