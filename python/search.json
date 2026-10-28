@@ -1,0 +1,233 @@
+[
+  {
+    "objectID": "reference/backtest.html",
+    "href": "reference/backtest.html",
+    "title": "backtest",
+    "section": "",
+    "text": "backtest(\n    strategy,\n    data,\n    *,\n    interval='1d',\n    stamp='open',\n    cash=100000000,\n    commission=0,\n    min_commission=0,\n    sell_tax=0,\n    slippage_ticks=0,\n    scale=4,\n)\nReplays data through strategy and returns the result.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nstrategy\nobject\nAn object with on_bar(ctx, bar) or on_bars(ctx, bars) (not both), and optionally on_stop(ctx). A target set at a bar’s close fills at the next bar’s open. on_start is refused: the library’s replay never calls it, so set up in __init__.\nrequired\n\n\ndata\nmapping of str to frame\nSymbol to bars. Each value is a pandas or polars DataFrame, or a mapping of arrays, with open (optional), high, low, close, volume, and the time as a time column or a pandas DatetimeIndex. The time must be datetime64 (naive is read as UTC); integers are refused rather than guessed (pd.to_datetime(df.ts, unit=\"s\")).\nrequired\n\n\ninterval\nstr\nThe bars’ interval, as the library names it (“1m”, “5m”, “15m”, “30m”, “1h”, “1d”, “1w”, “1mo”, “1y”).\n'1d'\n\n\nstamp\nstr\n“open” if a bar’s time is its period’s start, “close” if its end.\n'open'\n\n\ncash\n(int, str or Decimal)\nStarting cash, KRW.\n100000000\n\n\ncommission\n(float, str or Decimal)\nCommission rate on every fill (0.00015 is 0.015 %).\n0\n\n\nmin_commission\n(int, str or Decimal)\nMinimum commission per fill, KRW.\n0\n\n\nsell_tax\n(float, str or Decimal)\nSecurities transaction tax rate on sales.\n0\n\n\nslippage_ticks\nint\nPrice ticks against the order on each fill.\n0\n\n\nscale\nint\nDecimal places kept when prices and volumes are converted to exact decimals.\n4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nBacktestResult\nThe fills, the equity curve and the summary figures."
+  },
+  {
+    "objectID": "reference/backtest.html#parameters",
+    "href": "reference/backtest.html#parameters",
+    "title": "backtest",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nstrategy\nobject\nAn object with on_bar(ctx, bar) or on_bars(ctx, bars) (not both), and optionally on_stop(ctx). A target set at a bar’s close fills at the next bar’s open. on_start is refused: the library’s replay never calls it, so set up in __init__.\nrequired\n\n\ndata\nmapping of str to frame\nSymbol to bars. Each value is a pandas or polars DataFrame, or a mapping of arrays, with open (optional), high, low, close, volume, and the time as a time column or a pandas DatetimeIndex. The time must be datetime64 (naive is read as UTC); integers are refused rather than guessed (pd.to_datetime(df.ts, unit=\"s\")).\nrequired\n\n\ninterval\nstr\nThe bars’ interval, as the library names it (“1m”, “5m”, “15m”, “30m”, “1h”, “1d”, “1w”, “1mo”, “1y”).\n'1d'\n\n\nstamp\nstr\n“open” if a bar’s time is its period’s start, “close” if its end.\n'open'\n\n\ncash\n(int, str or Decimal)\nStarting cash, KRW.\n100000000\n\n\ncommission\n(float, str or Decimal)\nCommission rate on every fill (0.00015 is 0.015 %).\n0\n\n\nmin_commission\n(int, str or Decimal)\nMinimum commission per fill, KRW.\n0\n\n\nsell_tax\n(float, str or Decimal)\nSecurities transaction tax rate on sales.\n0\n\n\nslippage_ticks\nint\nPrice ticks against the order on each fill.\n0\n\n\nscale\nint\nDecimal places kept when prices and volumes are converted to exact decimals.\n4"
+  },
+  {
+    "objectID": "reference/backtest.html#returns",
+    "href": "reference/backtest.html#returns",
+    "title": "backtest",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nBacktestResult\nThe fills, the equity curve and the summary figures."
+  },
+  {
+    "objectID": "reference/Context.html",
+    "href": "reference/Context.html",
+    "title": "Context",
+    "section": "",
+    "text": "Context()\nThe running replay, as a strategy handler sees it.\nValid only inside the handler call that received it; afterwards every method raises RuntimeError.\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nnow\nint\nThe replay’s clock: the end of the period being handled, ns since the epoch (UTC).\n\n\n\n\n\n\n\n\n\nName\nDescription\n\n\n\n\ncash\nCash in the replay’s currency (KRW).\n\n\nposition\nThe net quantity held of a symbol.\n\n\ntarget\nHold a number of shares of a symbol.\n\n\n\n\n\nContext.cash()\nCash in the replay’s currency (KRW).\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat or None\nThe cash, or None if none is recorded.\n\n\n\n\n\n\n\nContext.position(symbol)\nThe net quantity held of a symbol.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nsymbol\nstr\nOne of the replay’s symbols.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat\nShares held, 0 when none.\n\n\n\n\n\n\n\nContext.target(symbol, quantity)\nHold a number of shares of a symbol.\nThe runner sends the orders the difference from the current position and working orders needs; a target set at a bar’s close fills at the next bar’s open.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nsymbol\nstr\nOne of the replay’s symbols.\nrequired\n\n\nquantity\nint\nThe shares to hold; 0 closes the position.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf the symbol is not one of the replay’s."
+  },
+  {
+    "objectID": "reference/Context.html#attributes",
+    "href": "reference/Context.html#attributes",
+    "title": "Context",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nnow\nint\nThe replay’s clock: the end of the period being handled, ns since the epoch (UTC)."
+  },
+  {
+    "objectID": "reference/Context.html#methods",
+    "href": "reference/Context.html#methods",
+    "title": "Context",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ncash\nCash in the replay’s currency (KRW).\n\n\nposition\nThe net quantity held of a symbol.\n\n\ntarget\nHold a number of shares of a symbol.\n\n\n\n\n\nContext.cash()\nCash in the replay’s currency (KRW).\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat or None\nThe cash, or None if none is recorded.\n\n\n\n\n\n\n\nContext.position(symbol)\nThe net quantity held of a symbol.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nsymbol\nstr\nOne of the replay’s symbols.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat\nShares held, 0 when none.\n\n\n\n\n\n\n\nContext.target(symbol, quantity)\nHold a number of shares of a symbol.\nThe runner sends the orders the difference from the current position and working orders needs; a target set at a bar’s close fills at the next bar’s open.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nsymbol\nstr\nOne of the replay’s symbols.\nrequired\n\n\nquantity\nint\nThe shares to hold; 0 closes the position.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nValueError\nIf the symbol is not one of the replay’s."
+  },
+  {
+    "objectID": "reference/Bar.html",
+    "href": "reference/Bar.html",
+    "title": "Bar",
+    "section": "",
+    "text": "Bar()\nOne bar, as a strategy handler receives it.\nThe replay reuses bar objects from call to call: keep the numbers, not the object.\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nsymbol\nstr\nThe symbol the bar is for.\n\n\ntime\nint\nThe period end, ns since the epoch (UTC).\n\n\nopen\nfloat\nThe open price; NaN when the source has no open.\n\n\nhigh, low, close\nfloat\nThe high, low and close prices.\n\n\nvolume\nfloat\nThe volume traded."
+  },
+  {
+    "objectID": "reference/Bar.html#attributes",
+    "href": "reference/Bar.html#attributes",
+    "title": "Bar",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nsymbol\nstr\nThe symbol the bar is for.\n\n\ntime\nint\nThe period end, ns since the epoch (UTC).\n\n\nopen\nfloat\nThe open price; NaN when the source has no open.\n\n\nhigh, low, close\nfloat\nThe high, low and close prices.\n\n\nvolume\nfloat\nThe volume traded."
+  },
+  {
+    "objectID": "guides/replay.html",
+    "href": "guides/replay.html",
+    "title": "Defining the replay sequence",
+    "section": "",
+    "text": "backtest() replays history as it happened. To test a strategy on other sequences (windows of the history, or paths resampled from it), feed a Replay yourself. The bars still run through the C++ engine one at a time; in our measurements, feeding a sequence in blocks took no longer than one backtest() call over the same bars. Parallel runs belong in separate processes.\nimport numpy as np\nimport pandas as pd\nimport pyatl\n\nrng = np.random.default_rng(11)\ndays = pd.bdate_range(\"2023-01-02\", periods=500)\nsymbols = [\"005930\", \"000660\", \"035420\"]\nreturns = rng.normal(0, 0.012, (len(days), len(symbols)))\ncloses = np.round(30_000 * np.exp(np.cumsum(returns, axis=0)), -1)\ndata = {}\nfor i, s in enumerate(symbols):\n    c = closes[:, i]\n    data[s] = pd.DataFrame(\n        {\"open\": c, \"high\": c, \"low\": c, \"close\": c, \"volume\": 1e6}, index=days\n    )\n\n\nclass Reversal:\n    \"\"\"Each day, holds 1,000,000 KRW of the symbol that fell most.\"\"\"\n\n    def __init__(self):\n        self.prev, self.held = {}, None\n\n    def on_bars(self, ctx, bars):\n        moves = []\n        for bar in bars:\n            if bar.symbol in self.prev:\n                change = bar.close / self.prev[bar.symbol] - 1\n                moves.append((change, bar.symbol, bar.close))\n            self.prev[bar.symbol] = bar.close\n        if not moves:\n            return\n        _, pick, price = min(moves)\n        if self.held and self.held != pick:\n            ctx.target(self.held, 0)\n        ctx.target(pick, int(1_000_000 // price))\n        self.held = pick"
+  },
+  {
+    "objectID": "guides/replay.html#rolling-windows",
+    "href": "guides/replay.html#rolling-windows",
+    "title": "Defining the replay sequence",
+    "section": "Rolling windows",
+    "text": "Rolling windows\nEach window is its own run: a new strategy and a new Replay (one replay is one run and has no reset).\n\nrows = []\nfor start in range(0, 500 - 120 + 1, 60):\n    window = {s: f.iloc[start:start + 120] for s, f in data.items()}\n    result = pyatl.backtest(Reversal(), window)\n    rows.append((window[symbols[0]].index[0].date(), result.total_return, result.sharpe))\npd.DataFrame(rows, columns=[\"start\", \"total_return\", \"sharpe\"])\n\n\n\n\n\n\n\n\nstart\ntotal_return\nsharpe\n\n\n\n\n0\n2023-01-02\n0.000687\n0.056063\n\n\n1\n2023-03-27\n0.000475\n0.033717\n\n\n2\n2023-06-19\n-0.000925\n-0.067102\n\n\n3\n2023-09-11\n-0.000768\n-0.054269\n\n\n4\n2023-12-04\n-0.000190\n-0.013216\n\n\n5\n2024-02-26\n-0.000977\n-0.067560\n\n\n6\n2024-05-20\n-0.000479\n-0.031506"
+  },
+  {
+    "objectID": "guides/replay.html#a-block-bootstrap-of-the-history",
+    "href": "guides/replay.html#a-block-bootstrap-of-the-history",
+    "title": "Defining the replay sequence",
+    "section": "A block bootstrap of the history",
+    "text": "A block bootstrap of the history\nResampling draws blocks of days and joins them into a new path. Two rules keep the path valid:\n\nDraw days, not symbols, so every symbol’s bars in a block come from the same days and the cross-section keeps its correlation. The helper below draws positions, so every frame must share the same dates in the same order (align real data to a common date index first); it checks this.\nGive the path its own timeline. Drawn blocks come out of order and may repeat, while a replay needs time to move forward; the path’s bars are placed on new consecutive business days, and gaps and calendars then follow that timeline.\n\nPrices are rebuilt from the drawn daily returns, so blocks join without jumps.\n\ndef bootstrap_path(data, block, rng):\n    days = next(iter(data.values())).index\n    assert all(f.index.equals(days) for f in data.values()), \"align every frame to the same dates\"\n    n = len(days)\n    ratio = {s: (f[\"close\"] / f[\"close\"].shift(1)).to_numpy()[1:] for s, f in data.items()}\n    # n prices give n - 1 daily ratios; a block may start at any ratio from 0 to n - 1 - block.\n    starts = rng.integers(0, n - block, size=(n - 1) // block)\n    picked = np.concatenate([np.arange(a, a + block) for a in starts])\n    timeline = pd.bdate_range(\"2030-01-01\", periods=len(picked) + 1)\n    path = {}\n    for s, f in data.items():\n        close = f[\"close\"].iloc[0] * np.concatenate([[1.0], np.cumprod(ratio[s][picked])])\n        close = np.round(close, -1)\n        path[s] = pd.DataFrame(\n            {\"open\": close, \"high\": close, \"low\": close, \"close\": close, \"volume\": 1e6},\n            index=timeline,\n        )\n    return path\n\n\nrng = np.random.default_rng(3)\nsharpes = [\n    pyatl.backtest(Reversal(), bootstrap_path(data, 20, rng)).sharpe for _ in range(50)\n]\nlow, mid, high = np.quantile(sharpes, [0.05, 0.5, 0.95])\nprint(f\"Sharpe over 50 paths: median {mid:.3f}, 5% {low:.3f}, 95% {high:.3f}\")\n\nSharpe over 50 paths: median -0.004, 5% -0.090, 95% 0.073"
+  },
+  {
+    "objectID": "guides/replay.html#feeding-a-generated-sequence-in-blocks",
+    "href": "guides/replay.html#feeding-a-generated-sequence-in-blocks",
+    "title": "Defining the replay sequence",
+    "section": "Feeding a generated sequence in blocks",
+    "text": "Feeding a generated sequence in blocks\nWhen a path is generated as the run goes, feed_bars takes each block as columns, in the order you want them replayed.\n\nreplay = pyatl.Replay(Reversal(), symbols)\npath = bootstrap_path(data, 20, np.random.default_rng(5))\ntable = pd.concat(path, names=[\"symbol\", \"time\"]).reset_index()\ntable[\"order\"] = table[\"symbol\"].map(symbols.index)  # ties follow the replay's symbols\ntable = table.sort_values([\"time\", \"order\"])\nfor _, block in table.groupby(table[\"time\"].dt.to_period(\"M\")):\n    replay.feed_bars(\n        block[\"symbol\"].to_numpy(), block[\"time\"].to_numpy(),\n        open=block[\"open\"], high=block[\"high\"], low=block[\"low\"],\n        close=block[\"close\"], volume=block[\"volume\"],\n    )\nprint(replay.finish().closing_equity)\n\n99760150"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "pyatl",
+    "section": "",
+    "text": "WarningAI-generated documentation\n\n\n\nThis documentation was generated with the assistance of AI and may contain inaccuracies.\nYou write the strategy in Python; the replay, the fills and the costs run in algotradelib’s C++ engine."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "pyatl",
+    "section": "Install",
+    "text": "Install\npyatl needs Python 3.12 or newer and an installed algotradelib; see its install guide. Then:\npip install git+https://github.com/algotradelib/pyatl.git\nIf algotradelib is installed under a prefix CMake does not search, set CMAKE_PREFIX_PATH to that prefix. pyatl.algotradelib_version tells which library version a build was made against. NumPy is its only Python dependency; the examples read data with pandas, installed separately (pip install pandas)."
+  },
+  {
+    "objectID": "index.html#where-to-go-next",
+    "href": "index.html#where-to-go-next",
+    "title": "pyatl",
+    "section": "Where to go next",
+    "text": "Where to go next\n\nGet started: a first backtest, its result, and a replay you feed yourself.\nReference: the functions and classes.\nDefining the replay sequence: rolling windows and resampled paths.\nMeasures of your own: computing what the result does not report.\nalgotradelib’s documentation: the C++ library underneath."
+  },
+  {
+    "objectID": "index.html#status",
+    "href": "index.html#status",
+    "title": "pyatl",
+    "section": "Status",
+    "text": "Status\nEarly. pyatl backtests Korean (KRX) stocks with target positions in whole shares. Other markets, limit orders and live trading are not supported yet."
+  },
+  {
+    "objectID": "get_started.html",
+    "href": "get_started.html",
+    "title": "Get started",
+    "section": "",
+    "text": "A strategy is any object with on_bar(ctx, bar) (one bar at a time) or on_bars(ctx, bars) (every symbol’s bar for a period at once), and optionally on_stop(ctx). ctx.target(symbol, quantity) states how many shares to hold; the order fills at the next bar’s open.\n\nimport numpy as np\nimport pandas as pd\nimport pyatl\n\nrng = np.random.default_rng(7)\ndays = pd.bdate_range(\"2024-01-02\", periods=250)\nclose = np.round(50_000 * np.exp(np.cumsum(rng.normal(0, 0.01, len(days)))), -2)\nframe = pd.DataFrame(\n    {\"open\": close, \"high\": close, \"low\": close, \"close\": close, \"volume\": 1_000_000.0},\n    index=days,\n)\n\n\nclass Crossover:\n    \"\"\"Holds 100 shares while the 5-day mean is above the 20-day mean.\"\"\"\n\n    def __init__(self, fast=5, slow=20):\n        self.fast, self.slow, self.closes = fast, slow, []\n\n    def on_bar(self, ctx, bar):\n        self.closes.append(bar.close)\n        if len(self.closes) &lt; self.slow:\n            return\n        fast = sum(self.closes[-self.fast:]) / self.fast\n        slow = sum(self.closes[-self.slow:]) / self.slow\n        ctx.target(bar.symbol, 100 if fast &gt; slow else 0)\n\n\nresult = pyatl.backtest(\n    Crossover(), {\"005930\": frame}, commission=0.00015, sell_tax=0.002\n)\nprint(f\"{result.bars} bars, {len(result.fills['time'])} fills\")\nprint(f\"equity {result.opening_equity} -&gt; {result.closing_equity}\")\nprint(f\"total return {result.total_return:.2%}\")\n\n250 bars, 10 fills\nequity 100000000 -&gt; 99884059\ntotal return -0.12%\n\n\nKeep the state a strategy needs in plain Python (lists, running sums); a window recomputed with pandas on every bar costs more than the replay itself."
+  },
+  {
+    "objectID": "get_started.html#a-first-backtest",
+    "href": "get_started.html#a-first-backtest",
+    "title": "Get started",
+    "section": "",
+    "text": "A strategy is any object with on_bar(ctx, bar) (one bar at a time) or on_bars(ctx, bars) (every symbol’s bar for a period at once), and optionally on_stop(ctx). ctx.target(symbol, quantity) states how many shares to hold; the order fills at the next bar’s open.\n\nimport numpy as np\nimport pandas as pd\nimport pyatl\n\nrng = np.random.default_rng(7)\ndays = pd.bdate_range(\"2024-01-02\", periods=250)\nclose = np.round(50_000 * np.exp(np.cumsum(rng.normal(0, 0.01, len(days)))), -2)\nframe = pd.DataFrame(\n    {\"open\": close, \"high\": close, \"low\": close, \"close\": close, \"volume\": 1_000_000.0},\n    index=days,\n)\n\n\nclass Crossover:\n    \"\"\"Holds 100 shares while the 5-day mean is above the 20-day mean.\"\"\"\n\n    def __init__(self, fast=5, slow=20):\n        self.fast, self.slow, self.closes = fast, slow, []\n\n    def on_bar(self, ctx, bar):\n        self.closes.append(bar.close)\n        if len(self.closes) &lt; self.slow:\n            return\n        fast = sum(self.closes[-self.fast:]) / self.fast\n        slow = sum(self.closes[-self.slow:]) / self.slow\n        ctx.target(bar.symbol, 100 if fast &gt; slow else 0)\n\n\nresult = pyatl.backtest(\n    Crossover(), {\"005930\": frame}, commission=0.00015, sell_tax=0.002\n)\nprint(f\"{result.bars} bars, {len(result.fills['time'])} fills\")\nprint(f\"equity {result.opening_equity} -&gt; {result.closing_equity}\")\nprint(f\"total return {result.total_return:.2%}\")\n\n250 bars, 10 fills\nequity 100000000 -&gt; 99884059\ntotal return -0.12%\n\n\nKeep the state a strategy needs in plain Python (lists, running sums); a window recomputed with pandas on every bar costs more than the replay itself."
+  },
+  {
+    "objectID": "get_started.html#the-result",
+    "href": "get_started.html#the-result",
+    "title": "Get started",
+    "section": "The result",
+    "text": "The result\nfills and equity are dicts of NumPy columns, so a table is one call away.\n\npd.DataFrame(result.fills).head()\n\n\n\n\n\n\n\n\ntime\nsymbol\nside\nquantity\nprice\ncommission\ntax\nslippage\n\n\n\n\n0\n1710374400000000000\n005930\nbuy\n100.0\n43000.0\n645.0\n0.0\n0.0\n\n\n1\n1712620800000000000\n005930\nsell\n100.0\n43200.0\n648.0\n8640.0\n0.0\n\n\n2\n1714176000000000000\n005930\nbuy\n100.0\n43200.0\n648.0\n0.0\n0.0\n\n\n3\n1714608000000000000\n005930\nsell\n100.0\n42600.0\n639.0\n8520.0\n0.0\n\n\n4\n1715299200000000000\n005930\nbuy\n100.0\n43400.0\n651.0\n0.0\n0.0\n\n\n\n\n\n\n\nThe summary holds the library’s figures and what did not go as asked:\n\nprint(f\"Sharpe {result.sharpe:.3f}, Sortino {result.sortino:.3f}\")\nprint(f\"max drawdown {result.max_drawdown:.2%}, turnover {result.turnover:.2f}\")\nprint(f\"commission {result.commission_paid:,.0f} KRW, tax {result.tax_paid:,.0f} KRW\")\nprint(f\"refused {len(result.refused['symbol'])}, unfilled {result.unfilled}\")\nprint(f\"unvalued bars {result.unvalued_bars}\")\n\nSharpe -0.024, Sortino -0.032\nmax drawdown 0.39%, turnover 0.40\ncommission 6,001 KRW, tax 39,940 KRW\nrefused 0, unfilled 0\nunvalued bars 0"
+  },
+  {
+    "objectID": "get_started.html#a-replay-you-feed-yourself",
+    "href": "get_started.html#a-replay-you-feed-yourself",
+    "title": "Get started",
+    "section": "A replay you feed yourself",
+    "text": "A replay you feed yourself\nbacktest() replays the bars you give it in time order. A Replay takes them in as many calls as you like, in the order you define, and is finished once.\n\nreplay = pyatl.Replay(\n    Crossover(), [\"005930\"], commission=0.00015, sell_tax=0.002\n)\nfor quarter in np.array_split(np.arange(len(frame)), 4):\n    replay.feed({\"005930\": frame.iloc[quarter]})\nsame = replay.finish()\nprint(same.closing_equity == result.closing_equity)\n\nTrue\n\n\nfeed_bars takes one long block (a symbol, a time and the prices per row), which is the fastest way to feed a sequence you generate. Each feed is checked before any of it runs: a symbol’s bars must move forward in time, and no bar may end before the bar fed before it."
+  },
+  {
+    "objectID": "guides/measures.html",
+    "href": "guides/measures.html",
+    "title": "Measures of your own",
+    "section": "",
+    "text": "BacktestResult reports the library’s figures, and carries the fills and the equity curve as NumPy columns, so any other measure is computed from them.\nimport numpy as np\nimport pandas as pd\nimport pyatl\n\nrng = np.random.default_rng(1)\ndays = pd.bdate_range(\"2024-01-02\", periods=500)\nclose = np.round(20_000 * np.exp(np.cumsum(rng.normal(0.0002, 0.012, len(days)))), -1)\nframe = pd.DataFrame(\n    {\"open\": close, \"high\": close, \"low\": close, \"close\": close, \"volume\": 1e6}, index=days\n)\n\n\nclass Momentum:\n    def __init__(self):\n        self.closes = []\n\n    def on_bar(self, ctx, bar):\n        self.closes.append(bar.close)\n        if len(self.closes) &gt; 20:\n            ctx.target(bar.symbol, 200 if bar.close &gt; self.closes[-21] else 0)\n\n\nresult = pyatl.backtest(\n    Momentum(), {\"005930\": frame}, commission=0.00015, sell_tax=0.002\n)"
+  },
+  {
+    "objectID": "guides/measures.html#the-librarys-figures-recomputed",
+    "href": "guides/measures.html#the-librarys-figures-recomputed",
+    "title": "Measures of your own",
+    "section": "The library’s figures, recomputed",
+    "text": "The library’s figures, recomputed\nresult.equity[\"period_return\"] is the series the library’s Sharpe and Sortino are computed from: each period’s return, computed exactly from decimal equity and rounded to eight places, NaN on the first point and wherever the library has no return (after a bar whose equity could not be valued, or after equity at or below zero). For a run like this one, a measure computed from it matches the library’s; one computed from the floating-point equity levels agrees to about four significant digits. If equity was at or below zero before the last point, the library reports no Sharpe or Sortino at all, while the remaining returns would still give a number: check np.isnan(result.sharpe) before comparing.\n\nequity = result.equity[\"equity\"]\nreturns = result.equity[\"period_return\"]\nvalid = returns[~np.isnan(returns)]\nfrom_levels = equity[1:] / equity[:-1] - 1\npeak = np.maximum.accumulate(equity)\nprint(f\"total return  library {result.total_return:.10f}  numpy {equity[-1] / equity[0] - 1:.10f}\")\nprint(f\"max drawdown  library {result.max_drawdown:.10f}  numpy {((peak - equity) / peak).max():.10f}\")\nprint(f\"sharpe        library {result.sharpe:.10f}  from period_return {valid.mean() / valid.std(ddof=1):.10f}\")\nprint(f\"              from the levels instead {from_levels.mean() / from_levels.std(ddof=1):.10f}\")\n\ntotal return  library -0.0019134200  numpy -0.0019134200\nmax drawdown  library 0.0092213438  numpy 0.0092213438\nsharpe        library -0.0153188045  from period_return -0.0153188045\n              from the levels instead -0.0153198587\n\n\nCheck result.unvalued_bars == 0 first: a bar whose equity could not be valued has no point in the curve, and a return computed between two exported points would span it."
+  },
+  {
+    "objectID": "guides/measures.html#measures-the-library-does-not-report",
+    "href": "guides/measures.html#measures-the-library-does-not-report",
+    "title": "Measures of your own",
+    "section": "Measures the library does not report",
+    "text": "Measures the library does not report\n\nyears = (result.equity[\"time\"][-1] - result.equity[\"time\"][0]) / (365.25 * 86400e9)\ncagr = (equity[-1] / equity[0]) ** (1 / years) - 1\nvar_95 = -np.quantile(valid, 0.05)\nfills = pd.DataFrame(result.fills)\ntrades = fills.groupby(\"side\")[\"quantity\"].sum()\nprint(f\"CAGR {cagr:.2%}, one-day VaR(95%) {var_95:.2%}\")\nprint(f\"shares bought {trades.get('buy', 0):.0f}\")\n\nCAGR -0.10%, one-day VaR(95%) 0.04%\nshares bought 6200\n\n\nCosts per fill are columns too: commission, tax (KRW) and slippage (the price per share given up, already in price)."
+  },
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Reference",
+    "section": "",
+    "text": "Replay bars through a Python strategy.\n\n\n\nbacktest\nReplays data through strategy and returns the result.\n\n\nReplay\nOne backtest that you feed yourself, in as many steps as you like, then finish once.\n\n\nBacktestResult\nWhat one replay produced.\n\n\n\n\n\n\nWhat a strategy handler receives.\n\n\n\nBar\nOne bar, as a strategy handler receives it.\n\n\nContext\nThe running replay, as a strategy handler sees it."
+  },
+  {
+    "objectID": "reference/index.html#backtest",
+    "href": "reference/index.html#backtest",
+    "title": "Reference",
+    "section": "",
+    "text": "Replay bars through a Python strategy.\n\n\n\nbacktest\nReplays data through strategy and returns the result.\n\n\nReplay\nOne backtest that you feed yourself, in as many steps as you like, then finish once.\n\n\nBacktestResult\nWhat one replay produced."
+  },
+  {
+    "objectID": "reference/index.html#strategy-interface",
+    "href": "reference/index.html#strategy-interface",
+    "title": "Reference",
+    "section": "",
+    "text": "What a strategy handler receives.\n\n\n\nBar\nOne bar, as a strategy handler receives it.\n\n\nContext\nThe running replay, as a strategy handler sees it."
+  },
+  {
+    "objectID": "reference/Replay.html",
+    "href": "reference/Replay.html",
+    "title": "Replay",
+    "section": "",
+    "text": "Replay(\n    strategy,\n    symbols,\n    *,\n    interval='1d',\n    stamp='open',\n    cash=100000000,\n    commission=0,\n    min_commission=0,\n    sell_tax=0,\n    slippage_ticks=0,\n    scale=4,\n)\nOne backtest that you feed yourself, in as many steps as you like, then finish once.\nbacktest() is a Replay fed once. Use a Replay when the sequence of bars is yours to define: a resampled path, a rolling window, bars generated as the run goes. The bars still run through the C++ engine one at a time; in our measurements, feeding a sequence in blocks took no longer than one backtest() call over the same bars.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nstrategy\nobject\nAn object with on_bar(ctx, bar) or on_bars(ctx, bars) (not both), and optionally on_stop(ctx). A target set at a bar’s close fills at the next bar’s open. on_start is refused: the library’s replay never calls it, so set up in __init__.\nrequired\n\n\nsymbols\nsequence of str\nEvery symbol the replay may receive. Their order breaks ties between bars of the same period.\nrequired\n\n\ninterval\nstr\nThe bars’ interval, as the library names it (“1m”, “5m”, “15m”, “30m”, “1h”, “1d”, “1w”, “1mo”, “1y”).\n'1d'\n\n\nstamp\nstr\n“open” if a bar’s time is its period’s start, “close” if its end.\n'open'\n\n\ncash\n(int, str or Decimal)\nStarting cash, KRW.\n100000000\n\n\ncommission\n(float, str or Decimal)\nCommission rate on every fill (0.00015 is 0.015 %).\n0\n\n\nmin_commission\n(int, str or Decimal)\nMinimum commission per fill, KRW.\n0\n\n\nsell_tax\n(float, str or Decimal)\nSecurities transaction tax rate on sales.\n0\n\n\nslippage_ticks\nint\nPrice ticks against the order on each fill.\n0\n\n\nscale\nint\nDecimal places kept when prices and volumes are converted to exact decimals.\n4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nsymbols\ntuple of str\nThe symbols the replay may receive, in the order that breaks ties.\n\n\n\n\n\n\nEvery feed is checked whole before its first bar reaches the engine: each symbol’s bars must come later than its previous one, and no bar may end before the bar fed before it. A refused feed raises ValueError and changes nothing. An exception raised by the strategy ends the replay: later calls raise RuntimeError. A strategy handler may not feed or finish its own replay.\n\n\n\n\n\n\nName\nDescription\n\n\n\n\nfeed\nFeeds whole series, one per symbol, merged by time.\n\n\nfeed_bars\nFeeds bars in the order given: the sequence you define.\n\n\nfinish\nEnds the replay: calls on_stop, fills nothing further, and returns the result.\n\n\n\n\n\nReplay.feed(data)\nFeeds whole series, one per symbol, merged by time.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndata\nmapping of str to frame\nSymbol to bars, as backtest() takes them: a pandas or polars DataFrame, or a mapping of arrays, with open (optional), high, low, close, volume, and the time as a time column or a pandas DatetimeIndex. A symbol’s rows may come in any order; two rows for the same period are refused.\nrequired\n\n\n\n\n\n\n\nReplay.feed_bars(symbol, time, *, high, low, close, volume, open=None)\nFeeds bars in the order given: the sequence you define.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nsymbol\narray of int or str\nEach bar’s symbol: an index into symbols, or the symbol itself.\nrequired\n\n\ntime\narray of datetime64\nEach bar’s time; naive is read as UTC, integers are refused.\nrequired\n\n\nhigh\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nlow\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nclose\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nvolume\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nopen\narray of float\nEach bar’s open; omitted or NaN where the source has none.\nNone\n\n\n\n\n\n\n\nReplay.finish()\nEnds the replay: calls on_stop, fills nothing further, and returns the result."
+  },
+  {
+    "objectID": "reference/Replay.html#parameters",
+    "href": "reference/Replay.html#parameters",
+    "title": "Replay",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\nstrategy\nobject\nAn object with on_bar(ctx, bar) or on_bars(ctx, bars) (not both), and optionally on_stop(ctx). A target set at a bar’s close fills at the next bar’s open. on_start is refused: the library’s replay never calls it, so set up in __init__.\nrequired\n\n\nsymbols\nsequence of str\nEvery symbol the replay may receive. Their order breaks ties between bars of the same period.\nrequired\n\n\ninterval\nstr\nThe bars’ interval, as the library names it (“1m”, “5m”, “15m”, “30m”, “1h”, “1d”, “1w”, “1mo”, “1y”).\n'1d'\n\n\nstamp\nstr\n“open” if a bar’s time is its period’s start, “close” if its end.\n'open'\n\n\ncash\n(int, str or Decimal)\nStarting cash, KRW.\n100000000\n\n\ncommission\n(float, str or Decimal)\nCommission rate on every fill (0.00015 is 0.015 %).\n0\n\n\nmin_commission\n(int, str or Decimal)\nMinimum commission per fill, KRW.\n0\n\n\nsell_tax\n(float, str or Decimal)\nSecurities transaction tax rate on sales.\n0\n\n\nslippage_ticks\nint\nPrice ticks against the order on each fill.\n0\n\n\nscale\nint\nDecimal places kept when prices and volumes are converted to exact decimals.\n4"
+  },
+  {
+    "objectID": "reference/Replay.html#attributes",
+    "href": "reference/Replay.html#attributes",
+    "title": "Replay",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nsymbols\ntuple of str\nThe symbols the replay may receive, in the order that breaks ties."
+  },
+  {
+    "objectID": "reference/Replay.html#notes",
+    "href": "reference/Replay.html#notes",
+    "title": "Replay",
+    "section": "",
+    "text": "Every feed is checked whole before its first bar reaches the engine: each symbol’s bars must come later than its previous one, and no bar may end before the bar fed before it. A refused feed raises ValueError and changes nothing. An exception raised by the strategy ends the replay: later calls raise RuntimeError. A strategy handler may not feed or finish its own replay."
+  },
+  {
+    "objectID": "reference/Replay.html#methods",
+    "href": "reference/Replay.html#methods",
+    "title": "Replay",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nfeed\nFeeds whole series, one per symbol, merged by time.\n\n\nfeed_bars\nFeeds bars in the order given: the sequence you define.\n\n\nfinish\nEnds the replay: calls on_stop, fills nothing further, and returns the result.\n\n\n\n\n\nReplay.feed(data)\nFeeds whole series, one per symbol, merged by time.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ndata\nmapping of str to frame\nSymbol to bars, as backtest() takes them: a pandas or polars DataFrame, or a mapping of arrays, with open (optional), high, low, close, volume, and the time as a time column or a pandas DatetimeIndex. A symbol’s rows may come in any order; two rows for the same period are refused.\nrequired\n\n\n\n\n\n\n\nReplay.feed_bars(symbol, time, *, high, low, close, volume, open=None)\nFeeds bars in the order given: the sequence you define.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nsymbol\narray of int or str\nEach bar’s symbol: an index into symbols, or the symbol itself.\nrequired\n\n\ntime\narray of datetime64\nEach bar’s time; naive is read as UTC, integers are refused.\nrequired\n\n\nhigh\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nlow\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nclose\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nvolume\narray of float\nEach bar’s prices and volume.\nrequired\n\n\nopen\narray of float\nEach bar’s open; omitted or NaN where the source has none.\nNone\n\n\n\n\n\n\n\nReplay.finish()\nEnds the replay: calls on_stop, fills nothing further, and returns the result."
+  },
+  {
+    "objectID": "reference/BacktestResult.html",
+    "href": "reference/BacktestResult.html",
+    "title": "BacktestResult",
+    "section": "",
+    "text": "BacktestResult(\n    bars,\n    fills,\n    equity,\n    opening_equity,\n    closing_equity,\n    halted,\n    total_return,\n    sharpe,\n    annualized_sharpe,\n    max_drawdown,\n    sortino,\n    turnover,\n    commission_paid,\n    tax_paid,\n    slippage_paid,\n    rejected,\n    refused,\n    unfilled,\n    gaps,\n    unvalued_bars,\n    lowest_cash,\n    aborted,\n    overdrawn_bars,\n    unchecked_fill_causality,\n)\nWhat one replay produced.\nfills, equity, rejected and refused are dicts of columns (pandas.DataFrame(result.fills) makes a table). Times are ns since the epoch (UTC). halted says why the replay stopped early, if it did; the figures then cover only what ran. Figures are NaN where the library has none.\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nbars\nint\nBars replayed.\n\n\nfills\ndict of str to array\nOne row per fill: time, symbol, side (“buy” or “sell”), quantity, price (slippage included), commission, tax (sale tax, KRW) and slippage (the price per share given up to slippage, already in price).\n\n\nequity\ndict of str to array\nThe equity curve: time, equity, and period_return, the library’s return since the previous point (rounded to eight places), the series its Sharpe and Sortino are computed from. A return is NaN on the first point, after an unvalued bar, after a point with equity at or below zero, and where the exact arithmetic fails; if equity was at or below zero before the last point, the library reports no Sharpe or Sortino at all.\n\n\nopening_equity, closing_equity\nstr\nEquity at the first and last point, as exact decimal text; empty when the curve has no point.\n\n\nhalted\nstr or None\nWhy the replay stopped early, or None.\n\n\ntotal_return, max_drawdown\nfloat\nThe return over the run and the largest fall from a peak, as fractions (0.05 is 5 %).\n\n\nsharpe, sortino\nfloat\nPer period of the equity curve (one bar’s interval), not annualized.\n\n\nannualized_sharpe\nfloat\nsharpe scaled to a year of KRX trading days.\n\n\nturnover\nfloat\nEverything traded (buys and sells, quantity x price) divided by the opening equity, over the whole run.\n\n\ncommission_paid, tax_paid, slippage_paid\nfloat\nCosts over the run, KRW; NaN where the library cannot state a total.\n\n\nrejected\ndict of str to list\nTargets the runner could not turn into an order: symbol and reason (the library’s name).\n\n\nrefused\ndict of str to list or array\nOrders the risk guard refused: symbol and reason (lists; the reason is the library’s name), and, as arrays, the limit exceeded and the value attempted, in the reason’s own unit (shares for quantity_not_sellable), NaN where the reason has none.\n\n\nunfilled\nint\nOrders still waiting when the replay ended.\n\n\ngaps\nint\nBars that did not follow the bar before them; nothing is interpolated across a gap.\n\n\nunvalued_bars\nint\nBars at which the equity could not be valued exactly (a total too large for an exact decimal); such a bar has no point in equity. The library’s own figures leave the next period’s return out; a return computed between two exported points would span the missing bar. Check it is 0 before computing measures from equity per period.\n\n\nlowest_cash\nfloat\nThe lowest cash (KRW) an execution left, if an execution took cash below zero; NaN otherwise, which includes a run that started below zero and executed nothing.\n\n\naborted\nint\nOrders cleared when the replay halted, apart from unfilled.\n\n\noverdrawn_bars\nint\nInput bars that ended with cash below zero (with several symbols, one per symbol’s bar).\n\n\nunchecked_fill_causality\nint\nDecisions to fill an order against a bar that the engine could not check were made before that bar (for example with weekly, monthly or yearly bars stamped at their close). Counted when the order is matched to the bar, before it is priced, so it is not a count of fills."
+  },
+  {
+    "objectID": "reference/BacktestResult.html#attributes",
+    "href": "reference/BacktestResult.html#attributes",
+    "title": "BacktestResult",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nbars\nint\nBars replayed.\n\n\nfills\ndict of str to array\nOne row per fill: time, symbol, side (“buy” or “sell”), quantity, price (slippage included), commission, tax (sale tax, KRW) and slippage (the price per share given up to slippage, already in price).\n\n\nequity\ndict of str to array\nThe equity curve: time, equity, and period_return, the library’s return since the previous point (rounded to eight places), the series its Sharpe and Sortino are computed from. A return is NaN on the first point, after an unvalued bar, after a point with equity at or below zero, and where the exact arithmetic fails; if equity was at or below zero before the last point, the library reports no Sharpe or Sortino at all.\n\n\nopening_equity, closing_equity\nstr\nEquity at the first and last point, as exact decimal text; empty when the curve has no point.\n\n\nhalted\nstr or None\nWhy the replay stopped early, or None.\n\n\ntotal_return, max_drawdown\nfloat\nThe return over the run and the largest fall from a peak, as fractions (0.05 is 5 %).\n\n\nsharpe, sortino\nfloat\nPer period of the equity curve (one bar’s interval), not annualized.\n\n\nannualized_sharpe\nfloat\nsharpe scaled to a year of KRX trading days.\n\n\nturnover\nfloat\nEverything traded (buys and sells, quantity x price) divided by the opening equity, over the whole run.\n\n\ncommission_paid, tax_paid, slippage_paid\nfloat\nCosts over the run, KRW; NaN where the library cannot state a total.\n\n\nrejected\ndict of str to list\nTargets the runner could not turn into an order: symbol and reason (the library’s name).\n\n\nrefused\ndict of str to list or array\nOrders the risk guard refused: symbol and reason (lists; the reason is the library’s name), and, as arrays, the limit exceeded and the value attempted, in the reason’s own unit (shares for quantity_not_sellable), NaN where the reason has none.\n\n\nunfilled\nint\nOrders still waiting when the replay ended.\n\n\ngaps\nint\nBars that did not follow the bar before them; nothing is interpolated across a gap.\n\n\nunvalued_bars\nint\nBars at which the equity could not be valued exactly (a total too large for an exact decimal); such a bar has no point in equity. The library’s own figures leave the next period’s return out; a return computed between two exported points would span the missing bar. Check it is 0 before computing measures from equity per period.\n\n\nlowest_cash\nfloat\nThe lowest cash (KRW) an execution left, if an execution took cash below zero; NaN otherwise, which includes a run that started below zero and executed nothing.\n\n\naborted\nint\nOrders cleared when the replay halted, apart from unfilled.\n\n\noverdrawn_bars\nint\nInput bars that ended with cash below zero (with several symbols, one per symbol’s bar).\n\n\nunchecked_fill_causality\nint\nDecisions to fill an order against a bar that the engine could not check were made before that bar (for example with weekly, monthly or yearly bars stamped at their close). Counted when the order is matched to the bar, before it is priced, so it is not a count of fills."
+  }
+]
