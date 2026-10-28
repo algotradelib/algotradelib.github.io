@@ -622,7 +622,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Which edge of its period a bar's timestamp marks. </p>
-<p>Brokers differ: Toss stamps a minute bar at its close (covering <span class="tt">[t - 1m, t)</span>) and a daily bar at local midnight, its open; KIS reports a daily bar by its trading date. Reading an open-stamped bar as close-stamped looks ahead by one bar. </p>
+<p>Brokers differ: Toss stamps a minute bar at its close (covering <span class="tt">[t - 1m, t)</span>) and a daily bar at local midnight, its open; KIS and Kiwoom stamp a minute bar at the start of its minute and a daily bar by its trading date, both opens. Reading an open-stamped bar as close-stamped looks ahead by one bar. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a11debdaf7ef5c03954d44c204afff5bdaa38bd5138bf35514df41a1795ebbf5c3" name="a11debdaf7ef5c03954d44c204afff5bdaa38bd5138bf35514df41a1795ebbf5c3"></a>OPEN&#160;</td><td class="fielddoc"><p>The timestamp is the first instant of the period. </p>
 </td></tr>
@@ -630,7 +630,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00117">117</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00118">118</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
 </div>
 </div>
@@ -1699,7 +1699,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00629">629</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00386">algotradelib::runner::ChargedCosts::add()</a>, <a class="el" href="ledger_8hpp_source.html#l00276">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00620">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="types_8hpp_source.html#l00629">decimal_add()</a>, <a class="el" href="ledger_8hpp_source.html#l00618">algotradelib::backtest::ReplayLedger::equity_in()</a>, <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="market__data_8hpp_source.html#l00256">algotradelib::DepthSnapshot::mid()</a>, <a class="el" href="risk_8hpp_source.html#l00433">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, and <a class="el" href="instrument_8hpp_source.html#l00237">algotradelib::PriceRule::round_to_tick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00386">algotradelib::runner::ChargedCosts::add()</a>, <a class="el" href="ledger_8hpp_source.html#l00276">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00620">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="types_8hpp_source.html#l00629">decimal_add()</a>, <a class="el" href="ledger_8hpp_source.html#l00618">algotradelib::backtest::ReplayLedger::equity_in()</a>, <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="market__data_8hpp_source.html#l00257">algotradelib::DepthSnapshot::mid()</a>, <a class="el" href="risk_8hpp_source.html#l00433">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, and <a class="el" href="instrument_8hpp_source.html#l00237">algotradelib::PriceRule::round_to_tick()</a>.</p>
 
 </div>
 </div>
@@ -1831,7 +1831,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00669">669</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00669">decimal_halve()</a>, and <a class="el" href="market__data_8hpp_source.html#l00256">algotradelib::DepthSnapshot::mid()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00669">decimal_halve()</a>, and <a class="el" href="market__data_8hpp_source.html#l00257">algotradelib::DepthSnapshot::mid()</a>.</p>
 
 </div>
 </div>
@@ -1874,7 +1874,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00785">785</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00620">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01132">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00785">decimal_less()</a>, <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="market__data_8hpp_source.html#l00274">order_depth()</a>, <a class="el" href="risk_8hpp_source.html#l00433">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, <a class="el" href="portfolio_8hpp_source.html#l00222">algotradelib::strategy::Portfolio&lt; Broker &gt;::sellable_reading_for()</a>, <a class="el" href="instrument_8hpp_source.html#l00192">algotradelib::PriceRule::tick_at()</a>, <a class="el" href="reconcile_8hpp_source.html#l00956">algotradelib::strategy::weight_target()</a>, and <a class="el" href="fill_8hpp_source.html#l00130">algotradelib::backtest::NextBarFillModel::with_sell_tax()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00620">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01132">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00785">decimal_less()</a>, <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="cost_8hpp_source.html#l00046">algotradelib::backtest::CommissionModel::on()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="market__data_8hpp_source.html#l00275">order_depth()</a>, <a class="el" href="risk_8hpp_source.html#l00433">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, <a class="el" href="portfolio_8hpp_source.html#l00222">algotradelib::strategy::Portfolio&lt; Broker &gt;::sellable_reading_for()</a>, <a class="el" href="instrument_8hpp_source.html#l00192">algotradelib::PriceRule::tick_at()</a>, <a class="el" href="reconcile_8hpp_source.html#l00956">algotradelib::strategy::weight_target()</a>, and <a class="el" href="fill_8hpp_source.html#l00130">algotradelib::backtest::NextBarFillModel::with_sell_tax()</a>.</p>
 
 </div>
 </div>
@@ -1998,7 +1998,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00650">650</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00620">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00650">decimal_subtract()</a>, <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="risk_8hpp_source.html#l00433">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, <a class="el" href="runner_8hpp_source.html#l01211">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, <a class="el" href="instrument_8hpp_source.html#l00237">algotradelib::PriceRule::round_to_tick()</a>, <a class="el" href="loop_8hpp_source.html#l00448">algotradelib::runner::ChargedCosts::since()</a>, and <a class="el" href="market__data_8hpp_source.html#l00240">algotradelib::DepthSnapshot::spread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">algotradelib::backtest::ReplayLedger::apply()</a>, <a class="el" href="cost_8hpp_source.html#l00444">algotradelib::backtest::SlippageModel::apply()</a>, <a class="el" href="risk_8hpp_source.html#l00620">algotradelib::strategy::closes_toward_flat()</a>, <a class="el" href="fill_8hpp_source.html#l00220">algotradelib::backtest::NextBarFillModel::decide()</a>, <a class="el" href="types_8hpp_source.html#l00650">decimal_subtract()</a>, <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>, <a class="el" href="risk_8hpp_source.html#l00433">algotradelib::strategy::projected_gross_exposure()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, <a class="el" href="runner_8hpp_source.html#l01211">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, <a class="el" href="instrument_8hpp_source.html#l00237">algotradelib::PriceRule::round_to_tick()</a>, <a class="el" href="loop_8hpp_source.html#l00448">algotradelib::runner::ChargedCosts::since()</a>, and <a class="el" href="market__data_8hpp_source.html#l00241">algotradelib::DepthSnapshot::spread()</a>.</p>
 
 </div>
 </div>
@@ -2411,9 +2411,9 @@ template&lt;typename Enum, std::size_t N, typename IsEnumerator&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00274">274</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market__data_8hpp_source.html#l00275">275</a> of file <a class="el" href="market__data_8hpp_source.html">market_data.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00274">order_depth()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="market__data_8hpp_source.html#l00275">order_depth()</a>.</p>
 
 </div>
 </div>

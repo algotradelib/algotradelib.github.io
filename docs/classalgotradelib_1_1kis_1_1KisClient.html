@@ -589,7 +589,7 @@ template&lt;typename CompletionToken&gt; </div>
 </div><div class="memdoc">
 
 <p>Requests bars, reading KIS pages until <span class="tt">count_</span> bars are collected. </p>
-<p>Minute bars are stamped at the close, other intervals at the open. Paging stops early after 50 pages, when a page returns no bars, or (for minutes) at the start of the trading day. A period page asks for a date window of 100 bars' worth of calendar days, so an empty one means KIS has no older bars or none in that window (a halt longer than the window). A series may therefore be shorter than <span class="tt">count_</span> for any interval; then, unless it is empty, <span class="tt">next_cursor_</span> is set to continue from, since an empty page does not prove the history exhausted.</p>
+<p>Every bar is stamped at its open: a minute bar at the start of its minute. Paging stops early after 50 pages, when a page returns no bars, or (for minutes) at the start of the trading day. A period page asks for a date window of 100 bars' worth of calendar days, so an empty one means KIS has no older bars or none in that window (a halt longer than the window). A series may therefore be shorter than <span class="tt">count_</span> for any interval; then, unless it is empty, <span class="tt">next_cursor_</span> is set to continue from, since an empty page does not prove the history exhausted.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">CompletionToken</td><td>An Asio completion token. </td></tr>
