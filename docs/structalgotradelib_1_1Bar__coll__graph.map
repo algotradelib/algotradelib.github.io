@@ -1,5 +1,5 @@
 <map id="algotradelib::Bar" name="algotradelib::Bar">
-<area shape="rect" id="Node000001" title="One bar: the prices and volume of one period, as exact decimals." alt="" coords="29,161,160,187"/>
-<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,184,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,44,97,161,92,161,92,44"/>
+<area shape="rect" id="Node000001" title="One bar: the prices and volume of one period, as exact decimals." alt="" coords="29,173,159,201"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,183,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,48,97,173,91,172,92,49"/>
 </map>

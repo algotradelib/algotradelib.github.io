@@ -1,10 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="6,5,199,45"/>
-<area shape="rect" id="Node000001" href="$structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html" title="The BlockingSession adapter for tossinvest::TossBlockingClient." alt="" coords="248,5,497,45"/>
-<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="213,23,248,23,248,28,213,28"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html" title="The BrokerSession adapter for tossinvest::TossClient." alt="" coords="276,69,469,109"/>
-<area shape="poly" id="edge16_Node000000_Node000003" title=" " alt="" coords="202,46,288,67,287,72,201,51"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,69,200,109"/>
-<area shape="poly" id="edge17_Node000002_Node000001" title=" " alt="" coords="201,63,287,43,288,48,202,69"/>
-<area shape="poly" id="edge18_Node000002_Node000003" title=" " alt="" coords="214,87,276,87,276,92,214,92"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="6,5,199,50"/>
+<area shape="rect" id="Node000001" href="$structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html" title="The BlockingSession adapter for tossinvest::TossBlockingClient." alt="" coords="248,5,496,50"/>
+<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="214,25,250,27,245,28,215,30"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html" title="The BrokerSession adapter for tossinvest::TossClient." alt="" coords="276,75,468,119"/>
+<area shape="poly" id="edge16_Node000000_Node000003" title=" " alt="" coords="207,52,285,74,280,75,207,57"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,75,200,119"/>
+<area shape="poly" id="edge17_Node000002_Node000001" title=" " alt="" coords="206,68,280,51,285,50,208,73"/>
+<area shape="poly" id="edge18_Node000002_Node000003" title=" " alt="" coords="215,94,278,97,273,97,215,100"/>
 </map>

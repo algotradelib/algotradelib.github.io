@@ -1,5 +1,5 @@
 <map id="algotradelib::live::SessionSource&lt; Session, Journal, MarketData &gt;::ObservedFigure" name="algotradelib::live::SessionSource&lt; Session, Journal, MarketData &gt;::ObservedFigure">
-<area shape="rect" id="Node000001" title="One charge figure of one order, and the filled quantity it was recorded at." alt="" coords="5,101,199,171"/>
-<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="13,5,191,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,44,105,101,99,101,99,44"/>
+<area shape="rect" id="Node000001" title="One charge figure of one order, and the filled quantity it was recorded at." alt="" coords="5,106,198,185"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="13,5,190,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,46,104,106,99,105,100,50"/>
 </map>

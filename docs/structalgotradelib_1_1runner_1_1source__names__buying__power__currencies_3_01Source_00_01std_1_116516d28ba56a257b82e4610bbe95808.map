@@ -1,10 +1,10 @@
 <map id="algotradelib::runner::source_names_buying_power_currencies&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().buying_power_currencies())&gt; &gt;" name="algotradelib::runner::source_names_buying_power_currencies&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().buying_power_currencies())&gt; &gt;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="629,64,872,163"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,35,124,61"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,30,230,15,349,4,413,3,478,6,543,13,606,27,646,41,683,61,680,66,644,46,605,32,542,18,478,11,413,8,349,9,231,20,137,35"/>
-<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1source__names__buying__power__currencies.html" title="Detects whether a source provides const std::vector&lt;Currency&gt;&amp; buying_power_currencies() const." alt="" coords="173,49,380,119"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="138,58,174,64,173,69,137,63"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="221,145,333,170"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="346,148,629,122,629,127,347,153"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="394,108,404,109,520,117,629,116,629,122,519,122,404,114,393,113"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="626,68,868,181"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,37,123,65"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,32,232,15,349,4,413,3,477,6,541,14,603,29,642,44,678,68,673,67,639,49,602,34,540,19,477,11,413,8,350,9,233,21,139,37"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1source__names__buying__power__currencies.html" title="Detects whether a source provides const std::vector&lt;Currency&gt;&amp; buying_power_currencies() const." alt="" coords="172,51,377,129"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="138,62,174,70,169,72,139,67"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="219,155,330,182"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="346,159,623,136,629,136,346,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="393,119,402,121,517,129,629,131,623,132,517,135,401,126,393,125"/>
 </map>

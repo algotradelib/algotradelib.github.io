@@ -1,5 +1,5 @@
 <map id="algotradelib::strategy::vanilla::TimedLiquidation" name="algotradelib::strategy::vanilla::TimedLiquidation">
-<area shape="rect" id="Node000001" title="Flattens every position when the market enters a phase it should not hold through." alt="" coords="5,131,200,171"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1TimedLiquidation_1_1Params.html" title="The strategy&#39;s settings." alt="" coords="5,5,200,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,74,105,130,100,130,100,74"/>
+<area shape="rect" id="Node000001" title="Flattens every position when the market enters a phase it should not hold through." alt="" coords="5,140,200,185"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1TimedLiquidation_1_1Params.html" title="The strategy&#39;s settings." alt="" coords="5,5,200,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,81,105,140,100,139,101,84"/>
 </map>

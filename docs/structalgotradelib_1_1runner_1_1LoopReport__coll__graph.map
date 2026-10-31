@@ -1,5 +1,5 @@
 <map id="algotradelib::runner::LoopReport" name="algotradelib::runner::LoopReport">
-<area shape="rect" id="Node000001" title="What a whole PollingLoop::run did, and why it ended." alt="" coords="5,116,156,156"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1runner_1_1ChargedCosts.html" title="Commission and tax the broker stated on the orders a loop happened to poll (Toss states them; KIS doe..." alt="" coords="5,5,156,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,59,83,116,78,116,78,59"/>
+<area shape="rect" id="Node000001" title="What a whole PollingLoop::run did, and why it ended." alt="" coords="5,123,155,168"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1runner_1_1ChargedCosts.html" title="Commission and tax the broker stated on the orders a loop happened to poll (Toss states them; KIS doe..." alt="" coords="5,5,155,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,64,83,123,77,122,78,68"/>
 </map>

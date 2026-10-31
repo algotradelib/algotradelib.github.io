@@ -1,7 +1,7 @@
 <map id="algotradelib::kiwoom::KiwoomOrderAck" name="algotradelib::kiwoom::KiwoomOrderAck">
-<area shape="rect" id="Node000001" title="Kiwoom&#39;s acknowledgement of an accepted order, amendment or cancellation." alt="" coords="103,116,263,156"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderAck.html" title="The broker&#39;s acknowledgement that it accepted an instruction." alt="" coords="5,13,173,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,47,169,114,165,118,106,50"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1kiwoom_1_1KiwoomOrderRef.html" title="A Kiwoom order&#39;s address: order number and symbol, both of which amendments and cancellations require..." alt="" coords="197,5,357,45"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,58,201,117,197,114,250,54"/>
+<area shape="rect" id="Node000001" title="Kiwoom&#39;s acknowledgement of an accepted order, amendment or cancellation." alt="" coords="103,123,262,168"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderAck.html" title="The broker&#39;s acknowledgement that it accepted an instruction." alt="" coords="5,14,173,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,51,168,122,162,123,107,56"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1kiwoom_1_1KiwoomOrderRef.html" title="A Kiwoom order&#39;s address: order number and symbol, both of which amendments and cancellations require..." alt="" coords="197,5,357,50"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,61,202,125,198,120,247,63"/>
 </map>

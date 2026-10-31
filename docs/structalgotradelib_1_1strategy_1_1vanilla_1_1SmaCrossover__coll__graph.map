@@ -1,11 +1,11 @@
 <map id="algotradelib::strategy::vanilla::SmaCrossover" name="algotradelib::strategy::vanilla::SmaCrossover">
-<area shape="rect" id="Node000001" title="MovingAverageCrossover with simple averages." alt="" coords="117,337,293,377"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover.html" title="Holds quantity_ shares while the fast moving average is above the slow one, and is flat otherwise." alt="" coords="81,227,329,267"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,281,207,337,202,337,202,281"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover_1_1Params.html" title="The strategy&#39;s settings." alt="" coords="81,101,329,156"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,170,207,226,202,226,202,170"/>
-<area shape="rect" id="Node000004" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="123,39,181,99,178,103,119,42"/>
-<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="291,43,232,103,228,99,287,39"/>
+<area shape="rect" id="Node000001" title="MovingAverageCrossover with simple averages." alt="" coords="117,358,292,403"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover.html" title="Holds quantity_ shares while the fast moving average is above the slow one, and is flat otherwise." alt="" coords="81,241,328,285"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,299,207,359,202,357,203,303"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover_1_1Params.html" title="The strategy&#39;s settings." alt="" coords="81,106,328,168"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="206,181,207,241,202,239,203,185"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="122,42,180,105,175,106,122,47"/>
+<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="220,5,397,33"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="285,46,234,107,230,104,289,42"/>
 </map>

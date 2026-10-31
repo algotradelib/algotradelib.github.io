@@ -1,7 +1,7 @@
 <map id="algotradelib::kiwoom::KiwoomAmendment" name="algotradelib::kiwoom::KiwoomAmendment">
-<area shape="rect" id="Node000001" title="An amendment or cancellation of a Kiwoom order." alt="" coords="100,116,263,156"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1kiwoom_1_1KiwoomOrderRef.html" title="A Kiwoom order&#39;s address: order number and symbol, both of which amendments and cancellations require..." alt="" coords="5,5,165,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,54,166,114,162,117,109,58"/>
-<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="189,13,368,38"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,50,200,118,196,114,257,46"/>
+<area shape="rect" id="Node000001" title="An amendment or cancellation of a Kiwoom order." alt="" coords="100,123,262,168"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1kiwoom_1_1KiwoomOrderRef.html" title="A Kiwoom order&#39;s address: order number and symbol, both of which amendments and cancellations require..." alt="" coords="5,5,165,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,60,166,122,160,123,111,64"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="188,14,366,42"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,52,201,125,197,121,254,54"/>
 </map>

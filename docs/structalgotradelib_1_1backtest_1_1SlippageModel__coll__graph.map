@@ -1,5 +1,5 @@
 <map id="algotradelib::backtest::SlippageModel" name="algotradelib::backtest::SlippageModel">
-<area shape="rect" id="Node000001" title="Slippage: how far a fill price moves against the order (a buy pays more, a sell gets less)." alt="" coords="13,101,177,141"/>
-<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,184,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,45,97,101,92,101,92,45"/>
+<area shape="rect" id="Node000001" title="Slippage: how far a fill price moves against the order (a buy pays more, a sell gets less)." alt="" coords="12,106,176,151"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,183,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,47,97,106,91,105,92,51"/>
 </map>

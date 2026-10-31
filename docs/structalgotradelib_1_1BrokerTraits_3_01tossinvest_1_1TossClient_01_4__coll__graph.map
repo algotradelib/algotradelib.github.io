@@ -1,9 +1,9 @@
 <map id="algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;" name="algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;">
-<area shape="rect" id="Node000001" title="The BrokerSession adapter for tossinvest::TossClient." alt="" coords="428,69,621,109"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,200,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,39,404,68,428,72,427,77,404,73,213,44"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="6,69,199,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,87,428,87,428,92,213,92"/>
-<area shape="rect" id="Node000004" href="$structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="10,133,195,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="209,141,304,130,404,115,443,107,444,112,404,120,304,135,210,146"/>
+<area shape="rect" id="Node000001" title="The BrokerSession adapter for tossinvest::TossClient." alt="" coords="427,75,619,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,200,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,43,428,79,424,83,215,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="6,75,199,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,94,428,95,424,99,214,100"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="10,144,195,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,153,304,141,402,125,434,120,439,119,403,130,305,146,211,158"/>
 </map>

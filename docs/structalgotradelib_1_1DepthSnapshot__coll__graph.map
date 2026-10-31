@@ -1,7 +1,7 @@
 <map id="algotradelib::DepthSnapshot" name="algotradelib::DepthSnapshot">
-<area shape="rect" id="Node000001" title="An instrument&#39;s order book: resting bids and offers." alt="" coords="99,101,305,127"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,38,191,99,188,103,122,42"/>
-<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="220,5,387,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,44,258,79,225,103,222,99,255,75,286,40"/>
+<area shape="rect" id="Node000001" title="An instrument&#39;s order book: resting bids and offers." alt="" coords="97,106,304,134"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,41,190,105,185,106,123,46"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="219,5,384,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="287,45,256,84,224,108,222,103,252,80,282,47"/>
 </map>

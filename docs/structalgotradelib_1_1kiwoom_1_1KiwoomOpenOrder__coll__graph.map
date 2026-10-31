@@ -1,20 +1,20 @@
 <map id="algotradelib::kiwoom::KiwoomOpenOrder" name="algotradelib::kiwoom::KiwoomOpenOrder">
-<area shape="rect" id="Node000001" title="One Kiwoom order that is still open to modification or cancellation." alt="" coords="1019,138,1179,178"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderSnapshot.html" title="The state of one order, as a broker listing reported it." alt="" coords="692,115,896,140"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="910,136,1019,147,1018,153,910,142"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="352,5,543,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="551,31,610,43,669,61,727,86,774,112,771,117,724,91,667,66,609,49,550,36"/>
-<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Code.html" title=" " alt="" coords="358,55,537,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="535,80,720,112,719,117,535,85"/>
-<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Code.html" title="A short uppercase code (letters, digits, _), stored inline without allocation." alt="" coords="5,55,187,80"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,65,357,65,357,70,200,70"/>
-<area shape="rect" id="Node000006" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="7,140,185,165"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="199,144,211,143,692,127,692,132,211,149,199,149"/>
-<area shape="rect" id="Node000008" href="$structalgotradelib_1_1OrderExecution.html" title="What has filled on one order, and what it cost." alt="" coords="344,176,551,201"/>
-<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="198,164,211,166,344,179,344,184,210,171,197,170"/>
-<area shape="rect" id="Node000007" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="364,225,531,251"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="544,247,576,245,608,240,639,229,666,213,676,200,678,184,680,167,690,151,710,138,713,142,694,155,685,169,683,185,681,202,670,217,641,234,609,245,577,250,544,252"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="564,186,616,179,667,166,679,159,691,150,727,138,729,143,693,155,682,163,669,171,617,185,565,191"/>
-<area shape="rect" id="Node000009" href="$structalgotradelib_1_1kiwoom_1_1KiwoomOrderRef.html" title="A Kiwoom order&#39;s address: order number and symbol, both of which amendments and cancellations require..." alt="" coords="714,165,874,205"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="888,185,994,179,1019,175,1020,181,995,185,888,190"/>
+<area shape="rect" id="Node000001" title="One Kiwoom order that is still open to modification or cancellation." alt="" coords="1013,144,1173,188"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderSnapshot.html" title="The state of one order, as a broker listing reported it." alt="" coords="688,120,891,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="907,144,1016,157,1010,158,907,149"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="350,5,540,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="555,32,611,45,665,62,722,89,770,120,765,119,720,94,663,67,609,50,555,38"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Code.html" title=" " alt="" coords="356,57,534,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="540,86,712,119,707,120,540,91"/>
+<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Code.html" title="A short uppercase code (letters, digits, _), stored inline without allocation." alt="" coords="5,57,186,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="201,69,357,69,353,73,202,74"/>
+<area shape="rect" id="Node000006" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="7,147,184,174"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="199,150,210,150,468,139,690,135,685,137,468,145,210,155,200,156"/>
+<area shape="rect" id="Node000008" href="$structalgotradelib_1_1OrderExecution.html" title="What has filled on one order, and what it cost." alt="" coords="342,181,548,209"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="199,174,210,175,344,188,339,190,209,180,200,179"/>
+<area shape="rect" id="Node000007" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="362,233,528,261"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="543,257,574,256,606,251,635,241,662,225,673,210,674,193,675,175,686,157,702,149,706,147,690,161,680,177,679,194,678,212,666,229,638,246,607,256,575,261,543,263"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="563,195,614,189,663,175,675,167,687,157,714,149,719,148,689,161,678,171,665,180,615,194,564,200"/>
+<area shape="rect" id="Node000009" href="$structalgotradelib_1_1kiwoom_1_1KiwoomOrderRef.html" title="A Kiwoom order&#39;s address: order number and symbol, both of which amendments and cancellations require..." alt="" coords="710,172,869,216"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="885,194,989,188,1011,187,1016,187,990,193,885,199"/>
 </map>

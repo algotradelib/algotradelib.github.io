@@ -1,36 +1,36 @@
 <map id="algotradelib/src/analytics/indicators.hpp" name="algotradelib/src/analytics/indicators.hpp">
-<area shape="rect" id="Node000001" title="Named technical indicators: the trailing z&#45;score and the relative strength index." alt="" coords="364,5,551,45"/>
-<area shape="rect" id="Node000002" href="$rolling_8hpp.html" title="Trailing&#45;window statistics: means, deviations, extremes and moving averages." alt="" coords="233,93,332,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,48,322,90,320,85,414,43"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="58,387,121,412"/>
-<area shape="poly" id="edge19_Node000001_Node000006" title=" " alt="" coords="364,41,252,61,136,90,85,109,44,130,17,153,10,165,8,178,8,254,14,290,29,323,49,352,70,375,65,379,45,355,25,326,9,291,3,254,3,178,5,163,13,150,41,125,83,104,134,85,251,56,363,36"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="442,387,513,412"/>
-<area shape="poly" id="edge20_Node000001_Node000007" title=" " alt="" coords="477,44,498,69,518,101,535,138,541,178,541,254,537,289,525,323,496,377,491,374,521,321,532,288,536,254,536,178,530,139,514,103,493,72,473,47"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="414,167,501,192"/>
-<area shape="poly" id="edge21_Node000001_Node000011" title=" " alt="" coords="460,46,460,153,455,153,455,46"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="576,93,661,119"/>
-<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="497,43,584,85,581,90,495,48"/>
-<area shape="rect" id="Node000003" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="227,167,338,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,119,285,153,280,153,280,119"/>
-<area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="234,109,195,113,153,122,114,140,98,153,83,168,70,192,62,219,59,247,59,276,69,330,82,373,77,374,64,331,54,276,53,247,57,218,65,190,79,165,94,149,112,136,152,117,194,108,233,104"/>
-<area shape="poly" id="edge14_Node000002_Node000007" title=" " alt="" coords="301,117,363,165,399,200,430,239,449,272,463,309,477,373,472,374,457,310,444,275,426,241,395,203,359,169,298,121"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="177,387,236,412"/>
-<area shape="poly" id="edge15_Node000002_Node000010" title=" " alt="" coords="264,121,238,141,217,168,207,194,200,222,195,279,198,332,204,373,199,374,192,332,189,279,195,221,202,193,212,165,234,137,260,117"/>
-<area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="312,116,417,159,415,164,310,121"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="93,167,152,192"/>
-<area shape="poly" id="edge17_Node000002_Node000012" title=" " alt="" coords="258,121,162,163,160,159,256,116"/>
-<area shape="rect" id="Node000004" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="246,240,389,265"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="291,191,308,226,303,229,286,194"/>
-<area shape="poly" id="edge10_Node000003_Node000006" title=" " alt="" coords="272,194,222,242,158,315,109,377,104,374,154,312,218,238,268,190"/>
-<area shape="poly" id="edge11_Node000003_Node000007" title=" " alt="" coords="320,190,362,209,402,238,419,263,438,299,470,373,465,375,433,301,414,265,398,242,359,213,318,195"/>
-<area shape="poly" id="edge12_Node000003_Node000010" title=" " alt="" coords="272,194,253,215,236,241,223,275,216,311,210,373,204,372,210,310,218,274,231,239,248,211,268,190"/>
-<area shape="rect" id="Node000005" href="$scalar_8hpp_source.html" title=" " alt="" coords="257,313,353,339"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="318,266,312,300,307,299,313,265"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="271,341,135,386,133,381,270,336"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="334,336,438,379,436,384,332,341"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="351,387,417,412"/>
-<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="320,337,363,376,359,379,316,341"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="260,387,327,412"/>
-<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="306,339,300,374,295,373,301,339"/>
-<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="291,341,235,381,232,376,288,337"/>
+<area shape="rect" id="Node000001" title="Named technical indicators: the trailing z&#45;score and the relative strength index." alt="" coords="361,5,546,50"/>
+<area shape="rect" id="Node000002" href="$rolling_8hpp.html" title="Trailing&#45;window statistics: means, deviations, extremes and moving averages." alt="" coords="232,98,330,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,52,324,93,321,89,410,49"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="60,401,122,428"/>
+<area shape="poly" id="edge19_Node000001_Node000006" title=" " alt="" coords="358,44,250,66,135,97,84,116,44,137,17,161,10,173,8,186,8,264,14,300,29,334,49,364,69,389,64,390,44,367,24,337,9,302,3,265,3,186,5,172,13,158,41,133,82,111,133,92,249,61,363,41"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="440,401,509,428"/>
+<area shape="poly" id="edge20_Node000001_Node000007" title=" " alt="" coords="473,48,494,75,514,108,530,146,536,186,536,265,532,300,521,333,493,390,490,386,516,331,527,298,531,264,531,186,525,147,510,110,490,78,472,53"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="411,174,496,201"/>
+<area shape="poly" id="edge21_Node000001_Node000011" title=" " alt="" coords="455,48,456,159,451,157,452,52"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="571,98,656,126"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="496,48,577,90,572,91,496,53"/>
+<area shape="rect" id="Node000003" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="226,174,336,201"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,124,284,159,279,157,280,129"/>
+<area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="230,114,194,119,153,129,114,147,98,160,83,175,69,200,61,227,58,256,59,285,68,341,82,386,77,386,63,342,54,286,53,256,56,226,65,198,79,172,94,156,111,143,151,124,193,114,234,111"/>
+<area shape="poly" id="edge14_Node000002_Node000007" title=" " alt="" coords="300,124,362,174,397,209,428,248,446,282,460,319,474,386,469,384,454,321,441,285,423,251,393,213,359,178,299,129"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="179,401,237,428"/>
+<area shape="poly" id="edge15_Node000002_Node000010" title=" " alt="" coords="258,128,237,148,217,175,207,202,200,230,195,289,198,343,204,387,199,385,193,343,190,289,195,229,202,200,212,172,233,144,262,124"/>
+<area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="312,124,411,166,406,168,312,129"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="94,174,152,201"/>
+<area shape="poly" id="edge17_Node000002_Node000012" title=" " alt="" coords="251,128,166,169,163,165,255,124"/>
+<area shape="rect" id="Node000004" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="245,249,387,277"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="288,199,306,236,301,235,287,204"/>
+<area shape="poly" id="edge10_Node000003_Node000006" title=" " alt="" coords="269,200,221,251,159,325,111,390,107,386,155,322,217,248,265,204"/>
+<area shape="poly" id="edge11_Node000003_Node000007" title=" " alt="" coords="321,199,363,219,401,248,417,272,436,309,467,387,462,385,431,311,413,275,397,251,360,223,321,205"/>
+<area shape="poly" id="edge12_Node000003_Node000010" title=" " alt="" coords="270,200,251,225,236,250,224,285,216,322,210,386,206,384,211,321,219,284,231,248,247,221,266,204"/>
+<area shape="rect" id="Node000005" href="$scalar_8hpp_source.html" title=" " alt="" coords="258,325,353,353"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="316,276,312,311,307,308,312,280"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="269,355,138,400,136,395,265,352"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="336,351,433,394,428,394,335,356"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="350,401,415,428"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="320,351,361,390,355,389,318,356"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="261,401,326,428"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="305,351,300,387,296,384,301,355"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="290,352,238,394,236,389,285,354"/>
 </map>

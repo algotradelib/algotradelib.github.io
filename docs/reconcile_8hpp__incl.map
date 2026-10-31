@@ -1,32 +1,32 @@
 <map id="algotradelib/src/strategy/reconcile.hpp" name="algotradelib/src/strategy/reconcile.hpp">
-<area shape="rect" id="Node000001" title="Reconciliation: turning a strategy&#39;s intents and targets into the orders and cancellations to send." alt="" coords="259,5,440,45"/>
-<area shape="rect" id="Node000002" href="$intent_8hpp.html" title="What a strategy asks the runner for: orders (OrderIntent), target positions (TargetPosition) and canc..." alt="" coords="204,93,300,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="327,48,279,87,275,82,324,43"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="283,167,415,192"/>
-<area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="352,46,352,153,347,153,347,46"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="440,167,515,192"/>
-<area shape="poly" id="edge15_Node000001_Node000004" title=" " alt="" coords="368,44,461,154,457,158,364,48"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="5,167,64,192"/>
-<area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="283,48,222,69,160,96,106,128,61,160,58,156,103,123,157,91,220,64,281,43"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="89,167,149,192"/>
-<area shape="poly" id="edge17_Node000001_Node000007" title=" " alt="" coords="289,48,240,68,194,95,161,125,136,157,132,153,157,122,190,91,238,63,287,43"/>
-<area shape="rect" id="Node000008" href="$portfolio_8hpp_source.html" title=" " alt="" coords="515,93,629,119"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="404,43,527,86,525,91,402,48"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="873,167,935,192"/>
-<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="441,43,642,91,761,126,860,160,858,165,759,132,641,96,440,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,117,324,156,321,160,266,121"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="289,116,429,160,427,165,287,121"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="173,167,259,192"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="248,120,230,156,226,153,244,118"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="218,121,78,167,76,162,216,116"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="232,121,154,162,151,158,229,116"/>
-<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="537,121,399,165,397,160,535,116"/>
-<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="558,121,505,160,502,156,555,117"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="539,167,605,192"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="575,119,575,153,569,153,569,119"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="630,167,701,192"/>
-<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="589,117,641,156,638,160,585,121"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="725,167,849,192"/>
-<area shape="poly" id="edge12_Node000008_Node000011" title=" " alt="" coords="607,116,740,160,738,165,606,121"/>
-<area shape="poly" id="edge13_Node000008_Node000012" title=" " alt="" coords="629,115,860,164,858,169,628,121"/>
+<area shape="rect" id="Node000001" title="Reconciliation: turning a strategy&#39;s intents and targets into the orders and cancellations to send." alt="" coords="255,5,435,50"/>
+<area shape="rect" id="Node000002" href="$intent_8hpp.html" title="What a strategy asks the runner for: orders (OrderIntent), target positions (TargetPosition) and canc..." alt="" coords="202,98,297,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="322,49,278,90,275,85,318,52"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="280,174,411,201"/>
+<area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="347,48,348,159,343,157,343,52"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="435,174,509,201"/>
+<area shape="poly" id="edge15_Node000001_Node000004" title=" " alt="" coords="364,48,455,162,449,161,361,53"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,174,64,201"/>
+<area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="270,52,216,74,158,100,106,133,63,166,60,162,103,128,156,96,214,69,275,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="88,174,147,201"/>
+<area shape="poly" id="edge17_Node000001_Node000007" title=" " alt="" coords="276,52,234,73,191,100,160,130,135,163,131,159,156,127,188,96,232,69,281,49"/>
+<area shape="rect" id="Node000008" href="$portfolio_8hpp_source.html" title=" " alt="" coords="509,98,621,126"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="404,48,519,92,513,93,403,53"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="863,174,926,201"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="436,46,634,95,751,132,851,170,846,169,749,137,632,101,436,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="267,124,319,164,313,164,265,129"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="289,124,422,169,417,170,289,129"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="170,174,256,201"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="245,125,228,161,224,158,240,128"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="212,129,80,174,78,169,210,124"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="228,126,155,168,153,163,223,127"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="528,126,400,171,398,166,523,127"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="551,125,501,166,499,162,546,127"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="532,174,598,201"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="567,124,567,160,563,156,563,128"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="622,174,692,201"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="582,124,632,165,627,163,581,129"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="716,174,839,201"/>
+<area shape="poly" id="edge12_Node000008_Node000011" title=" " alt="" coords="604,124,728,168,722,168,603,129"/>
+<area shape="poly" id="edge13_Node000008_Node000012" title=" " alt="" coords="622,121,851,173,846,173,621,127"/>
 </map>

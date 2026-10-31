@@ -1,7 +1,7 @@
 <map id="algotradelib::runner::runner_counts_kept_drops&lt; Runner, typename &gt;" name="algotradelib::runner::runner_counts_kept_drops&lt; Runner, typename &gt;">
-<area shape="rect" id="Node000001" title="Detects whether a runner reports kept_intents_dropped()." alt="" coords="173,61,388,115"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1runner__counts__kept__drops_3_01Runner_00_01std_1_1void__t_3_01d39a75f7f3706a263018f7dc31153d800.html" title=" " alt="" coords="624,39,817,137"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="402,85,624,85,624,91,402,91"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,75,124,101"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,85,173,85,173,91,138,91"/>
+<area shape="rect" id="Node000001" title="Detects whether a runner reports kept_intents_dropped()." alt="" coords="172,66,386,128"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1runner__counts__kept__drops_3_01Runner_00_01std_1_1void__t_3_01d39a75f7f3706a263018f7dc31153d800.html" title=" " alt="" coords="621,41,814,154"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="401,95,623,97,618,98,402,100"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,84,123,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,95,174,97,169,98,138,100"/>
 </map>

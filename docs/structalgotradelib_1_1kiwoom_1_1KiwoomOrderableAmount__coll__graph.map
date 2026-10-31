@@ -1,7 +1,7 @@
 <map id="algotradelib::kiwoom::KiwoomOrderableAmount" name="algotradelib::kiwoom::KiwoomOrderableAmount">
-<area shape="rect" id="Node000001" title="What may be ordered of one instrument, per margin tier (kt00010), reachable through session...." alt="" coords="94,141,293,181"/>
-<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,184,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,42,125,78,149,116,171,139,168,143,145,119,120,81,102,45"/>
-<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="209,5,375,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="292,45,284,82,265,119,236,143,233,139,261,116,279,80,287,44"/>
+<area shape="rect" id="Node000001" title="What may be ordered of one instrument, per margin tier (kt00010), reachable through session...." alt="" coords="93,151,290,195"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,183,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,44,124,84,148,125,169,150,164,150,144,128,119,87,103,49"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="207,5,373,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,47,282,88,263,128,236,153,234,148,259,125,277,87,286,51"/>
 </map>

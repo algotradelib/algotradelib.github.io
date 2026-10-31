@@ -1,7 +1,7 @@
 <map id="algotradelib::kis::KisOrderAck" name="algotradelib::kis::KisOrderAck">
-<area shape="rect" id="Node000001" title="KIS&#39;s acknowledgement of an accepted order, amendment or cancellation." alt="" coords="110,116,245,156"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderAck.html" title="The broker&#39;s acknowledgement that it accepted an instruction." alt="" coords="5,13,173,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,47,164,114,160,118,105,50"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1kis_1_1KisOrderRef.html" title="A KIS order&#39;s address: branch number and order number, both kept." alt="" coords="198,5,333,45"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,58,195,117,191,114,239,54"/>
+<area shape="rect" id="Node000001" title="KIS&#39;s acknowledgement of an accepted order, amendment or cancellation." alt="" coords="108,123,243,168"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderAck.html" title="The broker&#39;s acknowledgement that it accepted an instruction." alt="" coords="5,14,173,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,52,162,122,157,123,106,56"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1kis_1_1KisOrderRef.html" title="A KIS order&#39;s address: branch number and order number, both kept." alt="" coords="196,5,331,50"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,62,194,124,190,120,236,64"/>
 </map>

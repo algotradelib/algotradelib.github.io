@@ -1,7 +1,7 @@
 <map id="algotradelib::runner::runner_keeps_sent_orders&lt; Runner, typename &gt;" name="algotradelib::runner::runner_keeps_sent_orders&lt; Runner, typename &gt;">
-<area shape="rect" id="Node000001" title="Detects Runner::keeps_sent_orders_until_listed." alt="" coords="167,61,367,115"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html" title=" " alt="" coords="596,46,835,130"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="380,85,596,85,596,91,380,91"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,75,117,101"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,85,166,85,166,91,131,91"/>
+<area shape="rect" id="Node000001" title="Detects Runner::keeps_sent_orders_until_listed." alt="" coords="166,66,365,128"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html" title=" " alt="" coords="594,50,832,145"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="381,95,597,97,591,98,381,100"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,84,117,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,95,168,97,163,98,133,100"/>
 </map>

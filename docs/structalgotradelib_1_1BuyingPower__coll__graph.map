@@ -1,9 +1,9 @@
 <map id="algotradelib::BuyingPower" name="algotradelib::BuyingPower">
-<area shape="rect" id="Node000001" title="What the broker says may be spent, in one currency." alt="" coords="97,197,290,223"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1Money.html" title="An exact amount of money in one currency." alt="" coords="117,101,269,127"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,141,196,197,191,197,191,141"/>
-<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,184,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,38,183,99,179,103,115,42"/>
-<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="209,5,375,31"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="272,42,207,103,204,99,268,38"/>
+<area shape="rect" id="Node000001" title="What the broker says may be spent, in one currency." alt="" coords="95,207,288,234"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1Money.html" title="An exact amount of money in one currency." alt="" coords="116,106,267,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,148,194,207,189,205,189,151"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,5,183,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,42,181,105,176,106,117,47"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="207,5,373,33"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="269,42,206,107,203,103,265,45"/>
 </map>

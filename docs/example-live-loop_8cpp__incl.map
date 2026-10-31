@@ -1,15 +1,15 @@
 <map id="examples/example&#45;live&#45;loop.cpp" name="examples/example&#45;live&#45;loop.cpp">
-<area shape="rect" id="Node000001" title="A live runner loop with no broker, no credentials and no network." alt="" coords="343,5,519,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,152,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,48,144,93,143,88,346,43"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="177,93,325,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="389,48,291,90,289,85,386,43"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="349,93,416,119"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="421,47,399,83,395,80,417,44"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="440,93,520,119"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="445,44,468,80,463,83,440,47"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="544,93,603,119"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="466,43,542,84,539,89,464,48"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="627,93,690,119"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="486,43,615,87,613,92,484,48"/>
+<area shape="rect" id="Node000001" title="A live runner loop with no broker, no credentials and no network." alt="" coords="340,5,515,50"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,98,151,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,52,150,96,149,91,339,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="175,98,322,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="383,50,292,94,290,89,377,51"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="347,98,412,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="417,49,396,86,393,82,412,52"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="436,98,515,126"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="441,48,462,85,457,83,439,53"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="540,98,598,126"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="466,48,536,90,531,90,464,53"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="622,98,684,126"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="488,48,609,94,604,94,487,53"/>
 </map>

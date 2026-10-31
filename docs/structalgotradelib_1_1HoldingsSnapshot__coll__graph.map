@@ -1,5 +1,5 @@
 <map id="algotradelib::HoldingsSnapshot" name="algotradelib::HoldingsSnapshot">
-<area shape="rect" id="Node000001" title="An account&#39;s positions and per&#45;currency totals at one point in time." alt="" coords="5,101,231,127"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1SellableBasis.html" title="What a sellable quantity covers, and how RiskGuard must treat resting sells against it." alt="" coords="21,5,215,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,45,121,101,115,101,115,45"/>
+<area shape="rect" id="Node000001" title="An account&#39;s positions and per&#45;currency totals at one point in time." alt="" coords="5,106,230,134"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1SellableBasis.html" title="What a sellable quantity covers, and how RiskGuard must treat resting sells against it." alt="" coords="20,5,215,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,47,120,106,115,104,115,50"/>
 </map>

@@ -1,20 +1,20 @@
 <map id="algotradelib/src/analytics/numeric.hpp" name="algotradelib/src/analytics/numeric.hpp">
-<area shape="rect" id="Node000001" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="85,5,271,45"/>
-<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="161,93,304,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,44,219,80,215,84,189,47"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,240,68,265"/>
-<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="168,47,54,229,49,227,164,44"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="92,240,163,265"/>
-<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="171,46,151,94,137,165,131,226,126,226,132,165,146,93,166,44"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="369,240,427,265"/>
-<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="238,43,279,63,317,91,344,124,366,161,393,226,388,228,361,163,340,127,314,95,276,68,235,48"/>
-<area shape="rect" id="Node000003" href="$scalar_8hpp_source.html" title=" " alt="" coords="177,167,273,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,119,230,153,225,153,229,119"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="195,195,81,237,79,232,194,190"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="211,194,156,234,153,229,207,190"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="278,240,345,265"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="240,190,288,229,285,233,237,194"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="187,240,254,265"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="227,192,225,227,219,226,221,192"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="254,190,358,232,356,237,252,194"/>
+<area shape="rect" id="Node000001" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="82,5,268,50"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="159,98,301,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,48,215,85,210,85,189,53"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,249,68,277"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="165,52,54,237,50,234,160,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="91,249,160,277"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="166,48,150,99,136,172,130,235,125,233,131,171,145,97,163,53"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="363,249,422,277"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="238,48,279,68,314,96,341,129,362,167,388,235,383,234,357,169,336,132,311,100,276,73,239,53"/>
+<area shape="rect" id="Node000003" href="$scalar_8hpp_source.html" title=" " alt="" coords="174,174,270,201"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,124,227,159,223,157,227,128"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,204,83,246,81,241,188,199"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="207,201,156,242,154,237,202,203"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="274,249,340,277"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="238,199,283,239,278,239,236,204"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="185,249,250,277"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="223,200,222,235,217,232,219,204"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="253,199,351,243,346,243,252,204"/>
 </map>

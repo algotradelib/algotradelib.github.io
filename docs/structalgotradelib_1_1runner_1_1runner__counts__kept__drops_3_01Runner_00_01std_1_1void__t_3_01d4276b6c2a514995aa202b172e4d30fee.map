@@ -1,10 +1,10 @@
 <map id="algotradelib::runner::runner_counts_kept_drops&lt; Runner, std::void_t&lt; decltype(std::declval&lt; const Runner &amp; &gt;().kept_intents_dropped())&gt; &gt;" name="algotradelib::runner::runner_counts_kept_drops&lt; Runner, std::void_t&lt; decltype(std::declval&lt; const Runner &amp; &gt;().kept_intents_dropped())&gt; &gt;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="624,68,817,166"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,39,124,64"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,34,223,16,342,4,406,3,472,6,538,15,601,31,635,45,665,65,662,70,632,50,599,36,537,20,472,11,406,8,342,10,224,22,130,39"/>
-<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1runner__counts__kept__drops.html" title="Detects whether a runner reports kept_intents_dropped()." alt="" coords="173,60,388,115"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="138,61,174,67,173,73,137,67"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="225,148,337,174"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,152,624,124,624,129,351,157"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="402,112,412,113,522,120,624,119,624,125,522,125,412,118,401,117"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="621,72,814,185"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,42,123,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,35,227,17,344,4,408,3,473,7,537,16,598,33,631,49,662,73,657,72,629,53,596,38,536,21,472,12,408,8,345,10,228,22,134,40"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1runner__counts__kept__drops.html" title="Detects whether a runner reports kept_intents_dropped()." alt="" coords="172,63,386,125"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="137,66,174,74,169,76,138,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="224,159,335,187"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,163,618,138,623,138,350,168"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="402,123,411,125,519,132,623,134,618,135,519,138,410,130,402,129"/>
 </map>

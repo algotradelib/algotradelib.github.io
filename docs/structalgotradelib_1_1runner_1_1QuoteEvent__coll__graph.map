@@ -1,11 +1,11 @@
 <map id="algotradelib::runner::QuoteEvent" name="algotradelib::runner::QuoteEvent">
-<area shape="rect" id="Node000001" title="A quote the runner has just read, delivered to on_quote." alt="" coords="235,197,385,237"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1QuoteSnapshot.html" title="A quote: the last traded price of an instrument at a point in time." alt="" coords="207,101,413,127"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="313,141,313,197,307,197,307,141"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,35,219,75,279,99,277,104,217,80,133,39"/>
-<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="313,45,313,101,307,101,307,45"/>
-<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="424,5,591,31"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="475,40,395,80,340,104,338,99,393,75,473,35"/>
+<area shape="rect" id="Node000001" title="A quote the runner has just read, delivered to on_quote." alt="" coords="234,207,383,251"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1QuoteSnapshot.html" title="A quote: the last traded price of an instrument at a point in time." alt="" coords="205,106,412,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,148,311,207,306,205,307,151"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="137,38,218,80,276,105,271,106,216,84,136,43"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="220,5,397,33"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="310,47,311,106,306,104,307,51"/>
+<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="422,5,587,33"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="471,40,394,84,341,108,339,103,391,80,466,42"/>
 </map>

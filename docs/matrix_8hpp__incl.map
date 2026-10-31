@@ -1,15 +1,15 @@
 <map id="algotradelib/src/math/matrix.hpp" name="algotradelib/src/math/matrix.hpp">
-<area shape="rect" id="Node000001" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="140,5,301,45"/>
-<area shape="rect" id="Node000002" href="$scalar_8hpp_source.html" title=" " alt="" coords="173,93,269,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,46,223,79,218,79,218,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,68,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,121,81,164,79,159,190,116"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="92,167,163,192"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="207,121,155,160,152,156,204,117"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="187,167,254,192"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="223,119,223,153,218,153,218,119"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="278,167,345,192"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="237,117,287,156,284,160,234,121"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="369,167,427,192"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="250,116,358,159,356,164,248,121"/>
+<area shape="rect" id="Node000001" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="138,5,298,50"/>
+<area shape="rect" id="Node000002" href="$scalar_8hpp_source.html" title=" " alt="" coords="170,98,266,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,48,220,83,215,81,216,53"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,174,68,201"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,129,83,170,81,165,185,124"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="91,174,160,201"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="204,125,155,166,152,162,199,127"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="185,174,250,201"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="220,124,220,159,216,157,216,128"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="274,174,340,201"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="235,124,282,164,277,163,233,129"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="363,174,422,201"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="250,124,351,168,346,168,249,129"/>
 </map>

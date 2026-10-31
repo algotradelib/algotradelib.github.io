@@ -1,7 +1,7 @@
 <map id="algotradelib::runner::Context&lt; BrokerTag, CapsType &gt;" name="algotradelib::runner::Context&lt; BrokerTag, CapsType &gt;">
-<area shape="rect" id="Node000001" title="What a strategy&#39;s handlers receive as ctx: everything the strategy may read, and where it queues what..." alt="" coords="5,45,169,100"/>
-<area shape="rect" id="Node000002" href="$classalgotradelib_1_1runner_1_1Context.html" title=" " alt="" coords="409,5,589,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,60,193,59,408,38,408,44,194,65,183,66"/>
-<area shape="rect" id="Node000003" href="$classalgotradelib_1_1runner_1_1Context.html" title=" " alt="" coords="397,84,600,139"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,100,194,102,298,112,397,113,397,119,298,117,193,107,183,105"/>
+<area shape="rect" id="Node000001" title="What a strategy&#39;s handlers receive as ctx: everything the strategy may read, and where it queues what..." alt="" coords="5,48,169,110"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1runner_1_1Context.html" title=" " alt="" coords="407,5,586,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,66,408,43,406,48,185,71"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1runner_1_1Context.html" title=" " alt="" coords="396,91,598,152"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,112,193,117,244,124,297,128,398,130,392,130,296,133,244,130,192,122,173,117"/>
 </map>

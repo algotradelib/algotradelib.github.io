@@ -1,5 +1,5 @@
 <map id="algotradelib::AmendInstruction" name="algotradelib::AmendInstruction">
-<area shape="rect" id="Node000001" title="A modification or cancellation of a working order." alt="" coords="5,101,228,127"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderShape.html" title="An order&#39;s type, price, trigger, time in force and session, as an amendment states them." alt="" coords="25,5,209,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,45,119,101,114,101,114,45"/>
+<area shape="rect" id="Node000001" title="A modification or cancellation of a working order." alt="" coords="5,106,228,134"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1OrderShape.html" title="An order&#39;s type, price, trigger, time in force and session, as an amendment states them." alt="" coords="25,5,208,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,47,119,106,114,105,114,50"/>
 </map>

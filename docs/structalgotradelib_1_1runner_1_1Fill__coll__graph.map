@@ -1,7 +1,7 @@
 <map id="algotradelib::runner::Fill" name="algotradelib::runner::Fill">
-<area shape="rect" id="Node000001" title="One execution of an order the strategy placed, delivered to on_fill." alt="" coords="129,121,280,161"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,40,190,119,186,123,118,43"/>
-<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="221,5,399,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="299,44,282,71,260,99,233,123,230,119,256,96,278,68,295,41"/>
+<area shape="rect" id="Node000001" title="One execution of an order the strategy placed, delivered to on_fill." alt="" coords="130,128,279,173"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,5,196,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,43,190,127,185,129,119,48"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="220,5,397,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="298,45,282,77,261,106,236,130,233,125,257,103,278,74,294,49"/>
 </map>

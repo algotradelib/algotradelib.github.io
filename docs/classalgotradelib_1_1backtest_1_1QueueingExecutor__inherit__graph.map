@@ -1,5 +1,5 @@
 <map id="algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;" name="algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;">
-<area shape="rect" id="Node000001" title="The replay&#39;s executor: accepts orders and holds them until they fill or are withdrawn." alt="" coords="5,5,248,45"/>
-<area shape="rect" id="Node000002" href="$classalgotradelib_1_1backtest_1_1QueueingExecutor.html" title=" " alt="" coords="27,116,227,156"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,59,129,116,124,116,124,59"/>
+<area shape="rect" id="Node000001" title="The replay&#39;s executor: accepts orders and holds them until they fill or are withdrawn." alt="" coords="5,5,247,50"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1backtest_1_1QueueingExecutor.html" title=" " alt="" coords="26,123,226,168"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,64,129,123,123,122,124,68"/>
 </map>

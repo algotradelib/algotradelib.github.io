@@ -1,5 +1,5 @@
 <map id="algotradelib::strategy::vanilla::EqualWeightRebalance" name="algotradelib::strategy::vanilla::EqualWeightRebalance">
-<area shape="rect" id="Node000001" title="Holds an equal fraction of portfolio value in each instrument of a universe." alt="" coords="5,131,236,171"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1EqualWeightRebalance_1_1Params.html" title="The strategy&#39;s settings." alt="" coords="5,5,236,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,74,123,130,118,130,118,74"/>
+<area shape="rect" id="Node000001" title="Holds an equal fraction of portfolio value in each instrument of a universe." alt="" coords="5,140,236,185"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1vanilla_1_1EqualWeightRebalance_1_1Params.html" title="The strategy&#39;s settings." alt="" coords="5,5,236,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,81,123,140,118,139,119,84"/>
 </map>

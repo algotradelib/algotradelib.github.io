@@ -1,9 +1,9 @@
 <map id="algotradelib::strategy::BarEvent" name="algotradelib::strategy::BarEvent">
-<area shape="rect" id="Node000001" title="One bar, delivered to on_bar." alt="" coords="78,257,241,297"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,161,196,187"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,197,151,256,146,258,112,200"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1Bar.html" title="One bar: the prices and volume of one period, as exact decimals." alt="" coords="221,161,351,187"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="266,199,224,235,190,259,187,255,220,231,262,195"/>
-<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="197,5,375,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="289,44,289,161,283,161,283,44"/>
+<area shape="rect" id="Node000001" title="One bar, delivered to on_bar." alt="" coords="78,274,240,318"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="5,173,196,201"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,212,150,273,145,273,113,216"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1Bar.html" title="One bar: the prices and volume of one period, as exact decimals." alt="" coords="220,173,349,201"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,211,224,252,192,275,190,271,220,248,260,213"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="196,5,373,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="286,47,287,173,282,172,283,50"/>
 </map>

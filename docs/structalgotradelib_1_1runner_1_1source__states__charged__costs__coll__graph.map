@@ -1,5 +1,5 @@
 <map id="algotradelib::runner::source_states_charged_costs&lt; Source, typename &gt;" name="algotradelib::runner::source_states_charged_costs&lt; Source, typename &gt;">
-<area shape="rect" id="Node000001" title="Detects whether a source provides const ChargedCosts&amp; charged_costs() const, which LoopReport then re..." alt="" coords="5,79,216,133"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="51,5,170,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,44,113,79,108,79,108,44"/>
+<area shape="rect" id="Node000001" title="Detects whether a source provides const ChargedCosts&amp; charged_costs() const, which LoopReport then re..." alt="" coords="5,81,216,143"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="52,5,169,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,47,113,81,108,80,109,51"/>
 </map>

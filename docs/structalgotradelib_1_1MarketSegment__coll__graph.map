@@ -1,7 +1,7 @@
 <map id="algotradelib::MarketSegment" name="algotradelib::MarketSegment">
-<area shape="rect" id="Node000001" title="The market segment an instrument is listed on, such as KOSPI or NASDAQ." alt="" coords="5,212,216,237"/>
-<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Code.html" title=" " alt="" coords="40,101,181,141"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,155,113,212,108,212,108,155"/>
-<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Code.html" title="A short uppercase code (letters, digits, _), stored inline without allocation." alt="" coords="20,5,201,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,45,113,101,108,101,108,45"/>
+<area shape="rect" id="Node000001" title="The market segment an instrument is listed on, such as KOSPI or NASDAQ." alt="" coords="5,224,216,251"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1Code.html" title=" " alt="" coords="40,106,181,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,165,113,224,108,223,108,168"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Code.html" title="A short uppercase code (letters, digits, _), stored inline without allocation." alt="" coords="20,5,201,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,46,113,106,108,105,109,51"/>
 </map>

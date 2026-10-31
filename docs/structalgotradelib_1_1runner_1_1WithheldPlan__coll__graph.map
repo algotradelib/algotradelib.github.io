@@ -1,5 +1,5 @@
 <map id="algotradelib::runner::WithheldPlan&lt; BrokerTag &gt;" name="algotradelib::runner::WithheldPlan&lt; BrokerTag &gt;">
-<area shape="rect" id="Node000001" title="One reconciliation plan the runner held back, and what it would have done." alt="" coords="5,101,216,141"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="15,5,206,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,45,113,101,108,101,108,45"/>
+<area shape="rect" id="Node000001" title="One reconciliation plan the runner held back, and what it would have done." alt="" coords="5,106,215,151"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="15,5,205,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,47,113,106,107,105,108,51"/>
 </map>
