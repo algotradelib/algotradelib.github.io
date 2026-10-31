@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://algotradelib.github.io/python/reference/backtest.html</loc>
-    <lastmod>2026-10-28T01:33:07.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://algotradelib.github.io/python/reference/Context.html</loc>
-    <lastmod>2026-10-28T01:33:07.757Z</lastmod>
-  </url>
-  <url>
-    <loc>https://algotradelib.github.io/python/reference/Bar.html</loc>
-    <lastmod>2026-10-28T01:33:07.752Z</lastmod>
-  </url>
-  <url>
     <loc>https://algotradelib.github.io/python/guides/replay.html</loc>
-    <lastmod>2026-10-28T01:32:05.859Z</lastmod>
-  </url>
-  <url>
-    <loc>https://algotradelib.github.io/python/index.html</loc>
-    <lastmod>2026-10-28T01:32:05.859Z</lastmod>
+    <lastmod>2026-10-31T01:25:12.889Z</lastmod>
   </url>
   <url>
     <loc>https://algotradelib.github.io/python/get_started.html</loc>
-    <lastmod>2026-10-28T01:32:05.858Z</lastmod>
+    <lastmod>2026-10-31T01:25:12.888Z</lastmod>
   </url>
   <url>
-    <loc>https://algotradelib.github.io/python/guides/measures.html</loc>
-    <lastmod>2026-10-28T01:32:05.858Z</lastmod>
-  </url>
-  <url>
-    <loc>https://algotradelib.github.io/python/reference/index.html</loc>
-    <lastmod>2026-10-28T01:33:07.715Z</lastmod>
-  </url>
-  <url>
-    <loc>https://algotradelib.github.io/python/reference/Replay.html</loc>
-    <lastmod>2026-10-28T01:33:07.744Z</lastmod>
+    <loc>https://algotradelib.github.io/python/reference/Context.html</loc>
+    <lastmod>2026-10-31T01:26:11.725Z</lastmod>
   </url>
   <url>
     <loc>https://algotradelib.github.io/python/reference/BacktestResult.html</loc>
-    <lastmod>2026-10-28T01:33:07.750Z</lastmod>
+    <lastmod>2026-10-31T01:26:11.719Z</lastmod>
+  </url>
+  <url>
+    <loc>https://algotradelib.github.io/python/reference/index.html</loc>
+    <lastmod>2026-10-31T01:26:11.692Z</lastmod>
+  </url>
+  <url>
+    <loc>https://algotradelib.github.io/python/reference/Replay.html</loc>
+    <lastmod>2026-10-31T01:26:11.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://algotradelib.github.io/python/reference/Bar.html</loc>
+    <lastmod>2026-10-31T01:26:11.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://algotradelib.github.io/python/reference/backtest.html</loc>
+    <lastmod>2026-10-31T01:26:11.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://algotradelib.github.io/python/index.html</loc>
+    <lastmod>2026-10-31T01:25:12.889Z</lastmod>
+  </url>
+  <url>
+    <loc>https://algotradelib.github.io/python/guides/measures.html</loc>
+    <lastmod>2026-10-31T01:25:12.888Z</lastmod>
   </url>
 </urlset>

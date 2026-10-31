@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,14 +77,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1ba7710ca2f3616eabbbf13073e467e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-579bfee3d1502320e9912aa6354992ae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1ba7710ca2f3616eabbbf13073e467e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1cc9272cf21c7bd2f69b839853f6a6a2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-e6375ccb04588f3e5d5fd142c38d4064.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1cc9272cf21c7bd2f69b839853f6a6a2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-b916e68735d4e3a910eb4387cac20a3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44f20588b514943a95f59fed72c17cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-bef5e34ac137cb19408a0e238f0c8b0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-44f20588b514943a95f59fed72c17cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -398,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="a-first-backtest" class="level2">
 <h2 class="anchored" data-anchor-id="a-first-backtest">A first backtest</h2>
 <p>A strategy is any object with <code>on_bar(ctx, bar)</code> (one bar at a time) or <code>on_bars(ctx, bars)</code> (every symbol’s bar for a period at once), and optionally <code>on_stop(ctx)</code>. <code>ctx.target(symbol, quantity)</code> states how many shares to hold; the order fills at the next bar’s open.</p>
-<div id="3ad5262a" class="cell" data-execution_count="1">
+<div id="50734baf" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyatl</span>
@@ -444,7 +444,7 @@ total return -0.12%</code></pre>
 <section id="the-result" class="level2">
 <h2 class="anchored" data-anchor-id="the-result">The result</h2>
 <p><code>fills</code> and <code>equity</code> are dicts of NumPy columns, so a table is one call away.</p>
-<div id="94fe07d9" class="cell" data-execution_count="2">
+<div id="a8cc7388" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(result.fills).head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
@@ -527,7 +527,7 @@ total return -0.12%</code></pre>
 </div>
 </div>
 <p>The summary holds the library’s figures and what did not go as asked:</p>
-<div id="bb06e710" class="cell" data-execution_count="3">
+<div id="e3ff7381" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sharpe </span><span class="sc">{</span>result<span class="sc">.</span>sharpe<span class="sc">:.3f}</span><span class="ss">, Sortino </span><span class="sc">{</span>result<span class="sc">.</span>sortino<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"max drawdown </span><span class="sc">{</span>result<span class="sc">.</span>max_drawdown<span class="sc">:.2%}</span><span class="ss">, turnover </span><span class="sc">{</span>result<span class="sc">.</span>turnover<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"commission </span><span class="sc">{</span>result<span class="sc">.</span>commission_paid<span class="sc">:,.0f}</span><span class="ss"> KRW, tax </span><span class="sc">{</span>result<span class="sc">.</span>tax_paid<span class="sc">:,.0f}</span><span class="ss"> KRW"</span>)</span>
@@ -545,7 +545,7 @@ unvalued bars 0</code></pre>
 <section id="a-replay-you-feed-yourself" class="level2">
 <h2 class="anchored" data-anchor-id="a-replay-you-feed-yourself">A replay you feed yourself</h2>
 <p><code>backtest()</code> replays the bars you give it in time order. A <code>Replay</code> takes them in as many calls as you like, in the order you define, and is finished once.</p>
-<div id="0f78e905" class="cell" data-execution_count="4">
+<div id="a5cb3f33" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>replay <span class="op">=</span> pyatl.Replay(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    Crossover(), [<span class="st">"005930"</span>], commission<span class="op">=</span><span class="fl">0.00015</span>, sell_tax<span class="op">=</span><span class="fl">0.002</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>)</span>

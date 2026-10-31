@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,14 +77,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1ba7710ca2f3616eabbbf13073e467e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-579bfee3d1502320e9912aa6354992ae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1ba7710ca2f3616eabbbf13073e467e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1cc9272cf21c7bd2f69b839853f6a6a2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-e6375ccb04588f3e5d5fd142c38d4064.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1cc9272cf21c7bd2f69b839853f6a6a2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b916e68735d4e3a910eb4387cac20a3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-44f20588b514943a95f59fed72c17cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-bef5e34ac137cb19408a0e238f0c8b0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-44f20588b514943a95f59fed72c17cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -396,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><code>backtest()</code> replays history as it happened. To test a strategy on other sequences (windows of the history, or paths resampled from it), feed a <code>Replay</code> yourself. The bars still run through the C++ engine one at a time; in our measurements, feeding a sequence in blocks took no longer than one <code>backtest()</code> call over the same bars. Parallel runs belong in separate processes.</p>
-<div id="989a5f46" class="cell" data-execution_count="1">
+<div id="4c1e96a0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyatl</span>
@@ -438,7 +438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="rolling-windows" class="level2">
 <h2 class="anchored" data-anchor-id="rolling-windows">Rolling windows</h2>
 <p>Each window is its own run: a new strategy and a new <code>Replay</code> (one replay is one run and has no reset).</p>
-<div id="8fc17e73" class="cell" data-execution_count="2">
+<div id="a0b9a0a2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> start <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">500</span> <span class="op">-</span> <span class="dv">120</span> <span class="op">+</span> <span class="dv">1</span>, <span class="dv">60</span>):</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    window <span class="op">=</span> {s: f.iloc[start:start <span class="op">+</span> <span class="dv">120</span>] <span class="cf">for</span> s, f <span class="kw">in</span> data.items()}</span>
@@ -516,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Give the path its own timeline.</strong> Drawn blocks come out of order and may repeat, while a replay needs time to move forward; the path’s bars are placed on new consecutive business days, and gaps and calendars then follow that timeline.</li>
 </ul>
 <p>Prices are rebuilt from the drawn daily returns, so blocks join without jumps.</p>
-<div id="4820a917" class="cell" data-execution_count="3">
+<div id="3bd71d3a" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bootstrap_path(data, block, rng):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    days <span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(data.values())).index</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">all</span>(f.index.equals(days) <span class="cf">for</span> f <span class="kw">in</span> data.values()), <span class="st">"align every frame to the same dates"</span></span>
@@ -551,7 +551,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="feeding-a-generated-sequence-in-blocks" class="level2">
 <h2 class="anchored" data-anchor-id="feeding-a-generated-sequence-in-blocks">Feeding a generated sequence in blocks</h2>
 <p>When a path is generated as the run goes, <code>feed_bars</code> takes each block as columns, in the order you want them replayed.</p>
-<div id="e209b6e7" class="cell" data-execution_count="4">
+<div id="be1d8919" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>replay <span class="op">=</span> pyatl.Replay(Reversal(), symbols)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> bootstrap_path(data, <span class="dv">20</span>, np.random.default_rng(<span class="dv">5</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> pd.concat(path, names<span class="op">=</span>[<span class="st">"symbol"</span>, <span class="st">"time"</span>]).reset_index()</span>

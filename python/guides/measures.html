@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.10.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,14 +77,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1ba7710ca2f3616eabbbf13073e467e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-579bfee3d1502320e9912aa6354992ae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1ba7710ca2f3616eabbbf13073e467e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1cc9272cf21c7bd2f69b839853f6a6a2.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-e6375ccb04588f3e5d5fd142c38d4064.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1cc9272cf21c7bd2f69b839853f6a6a2.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b916e68735d4e3a910eb4387cac20a3b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d9a92175514fdd7c7247716818bd130a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-44f20588b514943a95f59fed72c17cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-bef5e34ac137cb19408a0e238f0c8b0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-44f20588b514943a95f59fed72c17cae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -392,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><code>BacktestResult</code> reports the library’s figures, and carries the fills and the equity curve as NumPy columns, so any other measure is computed from them.</p>
-<div id="0987bb28" class="cell" data-execution_count="1">
+<div id="2b1ad3f0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyatl</span>
@@ -422,7 +422,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-librarys-figures-recomputed" class="level2">
 <h2 class="anchored" data-anchor-id="the-librarys-figures-recomputed">The library’s figures, recomputed</h2>
 <p><code>result.equity["period_return"]</code> is the series the library’s Sharpe and Sortino are computed from: each period’s return, computed exactly from decimal equity and rounded to eight places, NaN on the first point and wherever the library has no return (after a bar whose equity could not be valued, or after equity at or below zero). For a run like this one, a measure computed from it matches the library’s; one computed from the floating-point equity levels agrees to about four significant digits. If equity was at or below zero before the last point, the library reports no Sharpe or Sortino at all, while the remaining returns would still give a number: check <code>np.isnan(result.sharpe)</code> before comparing.</p>
-<div id="e1d39681" class="cell" data-execution_count="2">
+<div id="92926d6c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>equity <span class="op">=</span> result.equity[<span class="st">"equity"</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>returns <span class="op">=</span> result.equity[<span class="st">"period_return"</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>valid <span class="op">=</span> returns[<span class="op">~</span>np.isnan(returns)]</span>
@@ -443,7 +443,7 @@ sharpe        library -0.0153188045  from period_return -0.0153188045
 </section>
 <section id="measures-the-library-does-not-report" class="level2">
 <h2 class="anchored" data-anchor-id="measures-the-library-does-not-report">Measures the library does not report</h2>
-<div id="cc2b38fb" class="cell" data-execution_count="3">
+<div id="563206b4" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> (result.equity[<span class="st">"time"</span>][<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> result.equity[<span class="st">"time"</span>][<span class="dv">0</span>]) <span class="op">/</span> (<span class="fl">365.25</span> <span class="op">*</span> <span class="fl">86400e9</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>cagr <span class="op">=</span> (equity[<span class="op">-</span><span class="dv">1</span>] <span class="op">/</span> equity[<span class="dv">0</span>]) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> years) <span class="op">-</span> <span class="dv">1</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>var_95 <span class="op">=</span> <span class="op">-</span>np.quantile(valid, <span class="fl">0.05</span>)</span>
