@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1kiwoom_1_1KiwoomOpenOrder.html" target="_top" xlink:title="One Kiwoom order that is still open to modification or cancellation.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1kiwoom_1_1KiwoomMarginTier.html" target="_top" xlink:title="One margin tier of Kiwoom&#39;s kt00010 answer: what may be ordered at that 증거금률.">
 <polygon fill="white" stroke="#666666" points="119.5,-33.5 0,-33.5 0,0 119.5,0 119.5,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::kiwoom</text>
-<text xml:space="preserve" text-anchor="middle" x="59.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::KiwoomOpenOrder</text>
+<text xml:space="preserve" text-anchor="middle" x="59.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::KiwoomMarginTier</text>
 </a>
 </g>
 </g>

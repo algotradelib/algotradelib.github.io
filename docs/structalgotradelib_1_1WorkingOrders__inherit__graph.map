@@ -1,5 +1,7 @@
 <map id="algotradelib::WorkingOrders&lt; Broker &gt;" name="algotradelib::WorkingOrders&lt; Broker &gt;">
-<area shape="rect" id="Node000001" title="The orders open to modification or cancellation at one point in time." alt="" coords="5,5,209,50"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1WorkingOrders.html" title=" " alt="" coords="5,123,209,168"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,64,110,123,104,122,105,68"/>
+<area shape="rect" id="Node000001" title="The orders open to modification or cancellation at one point in time." alt="" coords="5,40,209,85"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1WorkingOrders.html" title=" " alt="" coords="381,5,584,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,49,383,36,378,38,225,54"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1WorkingOrders.html" title=" " alt="" coords="381,75,584,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,77,233,78,383,92,378,93,232,83,224,82"/>
 </map>

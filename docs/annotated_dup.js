@@ -84,6 +84,15 @@ var annotated_dup =
       [ "math", "namespacealgotradelib_1_1math.html", [
         [ "Observed", "structalgotradelib_1_1math_1_1Observed.html", "structalgotradelib_1_1math_1_1Observed" ]
       ] ],
+      [ "mock", "namespacealgotradelib_1_1mock.html", [
+        [ "Broker", "structalgotradelib_1_1mock_1_1Broker.html", "structalgotradelib_1_1mock_1_1Broker" ],
+        [ "Market", "classalgotradelib_1_1mock_1_1Market.html", "classalgotradelib_1_1mock_1_1Market" ],
+        [ "MarketClock", "classalgotradelib_1_1mock_1_1MarketClock.html", "classalgotradelib_1_1mock_1_1MarketClock" ],
+        [ "MarketSettings", "structalgotradelib_1_1mock_1_1MarketSettings.html", "structalgotradelib_1_1mock_1_1MarketSettings" ],
+        [ "MockAccount", "structalgotradelib_1_1mock_1_1MockAccount.html", null ],
+        [ "MockAmendment", "structalgotradelib_1_1mock_1_1MockAmendment.html", "structalgotradelib_1_1mock_1_1MockAmendment" ],
+        [ "MockClient", "classalgotradelib_1_1mock_1_1MockClient.html", "classalgotradelib_1_1mock_1_1MockClient" ]
+      ] ],
       [ "network", "namespacealgotradelib_1_1network.html", [
         [ "AsyncHttpClient", "classalgotradelib_1_1network_1_1AsyncHttpClient.html", "classalgotradelib_1_1network_1_1AsyncHttpClient" ],
         [ "AuthBody", "structalgotradelib_1_1network_1_1AuthBody.html", "structalgotradelib_1_1network_1_1AuthBody" ],
@@ -231,6 +240,7 @@ var annotated_dup =
       [ "BrokerTraits&lt; kis::KisClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4" ],
       [ "BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4" ],
       [ "BrokerTraits&lt; kiwoom::KiwoomClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomClient_01_4" ],
+      [ "BrokerTraits&lt; mock::MockClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4" ],
       [ "BrokerTraits&lt; tossinvest::TossBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4" ],
       [ "BrokerTraits&lt; tossinvest::TossClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4" ],
       [ "BuyingPower", "structalgotradelib_1_1BuyingPower.html", "structalgotradelib_1_1BuyingPower" ],

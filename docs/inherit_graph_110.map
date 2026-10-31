@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structalgotradelib_1_1network_1_1RateLimitGroupStats.html" title="A rate limiter&#39;s counters for one traffic class." alt="" coords="5,5,170,50"/>
+<area shape="rect" id="Node000000" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title=" " alt="" coords="5,5,166,67"/>
+<area shape="rect" id="Node000001" href="$structalgotradelib_1_1kis_1_1KisConfig.html" title="KIS credentials (app key and secret), demo or real account, and the market&#45;data tape." alt="" coords="214,14,348,58"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="181,34,216,36,210,36,182,39"/>
 </map>

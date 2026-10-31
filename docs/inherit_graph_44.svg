@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1conformance_1_1PlainCallback.html" target="_top" xlink:title="A completion handler with no associated executor (a plain callback).">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html" target="_top" xlink:title="A plain callback that cannot be copied.">
 <polygon fill="white" stroke="#666666" points="144.25,-33.5 0,-33.5 0,0 144.25,0 144.25,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::conformance</text>
-<text xml:space="preserve" text-anchor="middle" x="72.12" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::PlainCallback</text>
+<text xml:space="preserve" text-anchor="middle" x="72.12" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::MoveOnlyCallback</text>
 </a>
 </g>
 </g>

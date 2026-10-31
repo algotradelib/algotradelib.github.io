@@ -12,6 +12,7 @@ var searchData=
   ['workingorder_3c_20tag_20_3e_9',['WorkingOrder&lt; Tag &gt;',['../structalgotradelib_1_1WorkingOrder.html',1,'algotradelib']]],
   ['workingorders_10',['WorkingOrders',['../structalgotradelib_1_1WorkingOrders.html',1,'algotradelib']]],
   ['workingorders_3c_20brokertag_20_3e_11',['WorkingOrders&lt; BrokerTag &gt;',['../structalgotradelib_1_1WorkingOrders.html',1,'algotradelib']]],
-  ['wssession_12',['WsSession',['../classalgotradelib_1_1network_1_1WsSession.html',1,'algotradelib::network']]],
-  ['wsssession_13',['WssSession',['../classalgotradelib_1_1network_1_1WssSession.html',1,'algotradelib::network']]]
+  ['workingorders_3c_20mock_3a_3abroker_20_3e_12',['WorkingOrders&lt; mock::Broker &gt;',['../structalgotradelib_1_1WorkingOrders.html',1,'algotradelib']]],
+  ['wssession_13',['WsSession',['../classalgotradelib_1_1network_1_1WsSession.html',1,'algotradelib::network']]],
+  ['wsssession_14',['WssSession',['../classalgotradelib_1_1network_1_1WssSession.html',1,'algotradelib::network']]]
 ];

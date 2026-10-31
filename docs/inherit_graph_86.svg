@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1kiwoom_1_1KiwoomOrderRef.html" target="_top" xlink:title="A Kiwoom order&#39;s address: order number and symbol, both of which amendments and cancellations require...">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1kiwoom_1_1KiwoomOrderAck.html" target="_top" xlink:title="Kiwoom&#39;s acknowledgement of an accepted order, amendment or cancellation.">
 <polygon fill="white" stroke="#666666" points="119.5,-33.5 0,-33.5 0,0 119.5,0 119.5,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::kiwoom</text>
-<text xml:space="preserve" text-anchor="middle" x="59.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::KiwoomOrderRef</text>
+<text xml:space="preserve" text-anchor="middle" x="59.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::KiwoomOrderAck</text>
 </a>
 </g>
 </g>

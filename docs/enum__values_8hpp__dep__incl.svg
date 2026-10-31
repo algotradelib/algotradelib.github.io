@@ -47,16 +47,16 @@
   </g>
 </defs>
 <script type="application/ecmascript" xlink:href="svg.min.js"/>
-<svg id="graph" class="graph" data-view-width="1597" data-view-height="389" data-section-id="dynsection-1">
+<svg id="graph" class="graph" data-view-width="1896" data-view-height="389" data-section-id="dynsection-1">
 <g id="viewport">
 <title>algotradelib/src/core/enum_values.hpp</title>
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="A compile&#45;time check that a list names every value of an enum, and a parser over the list.">
-<polygon fill="#999999" stroke="#666666" points="1091.75,-381 976,-381 976,-347.5 1091.75,-347.5 1091.75,-381"/>
-<text xml:space="preserve" text-anchor="start" x="984" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="1033.88" y="-354.75" font-family="Helvetica,sans-Serif" font-size="10.00">/enum_values.hpp</text>
+<polygon fill="#999999" stroke="#666666" points="1390.25,-381 1274.5,-381 1274.5,-347.5 1390.25,-347.5 1390.25,-381"/>
+<text xml:space="preserve" text-anchor="start" x="1282.5" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="1332.38" y="-354.75" font-family="Helvetica,sans-Serif" font-size="10.00">/enum_values.hpp</text>
 </a>
 </g>
 </g>
@@ -64,9 +64,9 @@
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="types_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="474.75,-311.5 359,-311.5 359,-278 474.75,-278 474.75,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="367" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="416.88" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/types.hpp</text>
+<polygon fill="white" stroke="#666666" points="726.25,-311.5 610.5,-311.5 610.5,-278 726.25,-278 726.25,-311.5"/>
+<text xml:space="preserve" text-anchor="start" x="618.5" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="668.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/types.hpp</text>
 </a>
 </g>
 </g>
@@ -74,46 +74,46 @@
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M964.46,-355.66C841.89,-342.25 589.3,-314.61 475.15,-302.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="963.73,-359.1 974.05,-356.7 964.49,-352.14 963.73,-359.1"/>
+<path fill="none" stroke="#63b8ff" d="M1262.93,-356.19C1131.44,-342.82 848.41,-314.05 726.35,-301.64"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1262.22,-359.64 1272.53,-357.17 1262.93,-352.67 1262.22,-359.64"/>
 </a>
 </g>
 </g>
-<!-- Node21 -->
-<g id="Node000021" class="node">
-<title>Node21</title>
-<g id="a_Node000021"><a xlink:href="rate__limit_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1101.12,-311.5 966.62,-311.5 966.62,-278 1101.12,-278 1101.12,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="974.62" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/network</text>
-<text xml:space="preserve" text-anchor="middle" x="1033.88" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/rate_limit.hpp</text>
+<!-- Node25 -->
+<g id="Node000025" class="node">
+<title>Node25</title>
+<g id="a_Node000025"><a xlink:href="rate__limit_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1399.62,-311.5 1265.12,-311.5 1265.12,-278 1399.62,-278 1399.62,-311.5"/>
+<text xml:space="preserve" text-anchor="start" x="1273.12" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/network</text>
+<text xml:space="preserve" text-anchor="middle" x="1332.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/rate_limit.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node21 -->
-<g id="edge30_Node000001_Node000021" class="edge">
-<title>Node1&#45;&gt;Node21</title>
-<g id="a_edge30_Node000001_Node000021"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1033.88,-335.81C1033.88,-327.59 1033.88,-318.84 1033.88,-311.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1030.38,-335.74 1033.88,-345.74 1037.38,-335.74 1030.38,-335.74"/>
+<!-- Node1&#45;&gt;Node25 -->
+<g id="edge37_Node000001_Node000025" class="edge">
+<title>Node1&#45;&gt;Node25</title>
+<g id="a_edge37_Node000001_Node000025"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1332.38,-335.81C1332.38,-327.59 1332.38,-318.84 1332.38,-311.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1328.88,-335.74 1332.38,-345.74 1335.88,-335.74 1328.88,-335.74"/>
 </a>
 </g>
 </g>
-<!-- Node24 -->
-<g id="Node000024" class="node">
-<title>Node24</title>
-<g id="a_Node000024"><a xlink:href="stop_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1445,-311.5 1318.75,-311.5 1318.75,-278 1445,-278 1445,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="1326.75" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
-<text xml:space="preserve" text-anchor="middle" x="1381.88" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/stop.hpp</text>
+<!-- Node28 -->
+<g id="Node000028" class="node">
+<title>Node28</title>
+<g id="a_Node000028"><a xlink:href="stop_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1743.5,-311.5 1617.25,-311.5 1617.25,-278 1743.5,-278 1743.5,-311.5"/>
+<text xml:space="preserve" text-anchor="start" x="1625.25" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
+<text xml:space="preserve" text-anchor="middle" x="1680.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/stop.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node24 -->
-<g id="edge35_Node000001_Node000024" class="edge">
-<title>Node1&#45;&gt;Node24</title>
-<g id="a_edge35_Node000001_Node000024"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1103.1,-349.82C1165.84,-337.65 1257.54,-319.87 1318.42,-308.06"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1102.76,-346.32 1093.61,-351.66 1104.09,-353.2 1102.76,-346.32"/>
+<!-- Node1&#45;&gt;Node28 -->
+<g id="edge42_Node000001_Node000028" class="edge">
+<title>Node1&#45;&gt;Node28</title>
+<g id="a_edge42_Node000001_Node000028"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1401.6,-349.82C1464.34,-337.65 1556.04,-319.87 1616.92,-308.06"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1401.26,-346.32 1392.11,-351.66 1402.59,-353.2 1401.26,-346.32"/>
 </a>
 </g>
 </g>
@@ -121,9 +121,9 @@
 <g id="Node000003" class="node">
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:href="kiwoom_2client_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="464.25,-172.5 333.5,-172.5 333.5,-139 464.25,-139 464.25,-172.5"/>
-<text xml:space="preserve" text-anchor="start" x="341.5" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
-<text xml:space="preserve" text-anchor="middle" x="398.88" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/client.hpp</text>
+<polygon fill="white" stroke="#666666" points="761.75,-172.5 631,-172.5 631,-139 761.75,-139 761.75,-172.5"/>
+<text xml:space="preserve" text-anchor="start" x="639" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="696.38" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/client.hpp</text>
 </a>
 </g>
 </g>
@@ -131,8 +131,8 @@
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M399.73,-268.04C395.3,-260.03 391.14,-250.95 388.88,-242 382.88,-218.31 388.67,-189.99 393.6,-172.69"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="396.67,-269.74 404.8,-276.54 402.68,-266.16 396.67,-269.74"/>
+<path fill="none" stroke="#63b8ff" d="M673.89,-266.75C679.63,-238.67 688.42,-195.67 693.13,-172.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="670.52,-265.79 671.94,-276.28 677.38,-267.19 670.52,-265.79"/>
 </a>
 </g>
 </g>
@@ -140,9 +140,9 @@
 <g id="Node000005" class="node">
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:href="kiwoom_2config_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="677.25,-242 546.5,-242 546.5,-208.5 677.25,-208.5 677.25,-242"/>
-<text xml:space="preserve" text-anchor="start" x="554.5" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
-<text xml:space="preserve" text-anchor="middle" x="611.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/config.hpp</text>
+<polygon fill="white" stroke="#666666" points="975.75,-242 845,-242 845,-208.5 975.75,-208.5 975.75,-242"/>
+<text xml:space="preserve" text-anchor="start" x="853" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="910.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/config.hpp</text>
 </a>
 </g>
 </g>
@@ -150,8 +150,8 @@
 <g id="edge4_Node000002_Node000005" class="edge">
 <title>Node2&#45;&gt;Node5</title>
 <g id="a_edge4_Node000002_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M474.37,-273.85C503.31,-263.83 537.94,-251.84 565.21,-242.4"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="473.32,-270.51 465.01,-277.09 475.61,-277.12 473.32,-270.51"/>
+<path fill="none" stroke="#63b8ff" d="M737.36,-274.51C773.75,-264.36 817.88,-252.05 852.46,-242.4"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="736.49,-271.12 727.8,-277.18 738.37,-277.86 736.49,-271.12"/>
 </a>
 </g>
 </g>
@@ -159,9 +159,9 @@
 <g id="Node000007" class="node">
 <title>Node7</title>
 <g id="a_Node000007"><a xlink:href="errors_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="528.25,-242 397.5,-242 397.5,-208.5 528.25,-208.5 528.25,-242"/>
-<text xml:space="preserve" text-anchor="start" x="405.5" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
-<text xml:space="preserve" text-anchor="middle" x="462.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/errors.hpp</text>
+<polygon fill="white" stroke="#666666" points="826.75,-242 696,-242 696,-208.5 826.75,-208.5 826.75,-242"/>
+<text xml:space="preserve" text-anchor="start" x="704" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="761.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/errors.hpp</text>
 </a>
 </g>
 </g>
@@ -169,18 +169,18 @@
 <g id="edge7_Node000002_Node000007" class="edge">
 <title>Node2&#45;&gt;Node7</title>
 <g id="a_edge7_Node000002_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M434.21,-268.31C440.2,-259.52 446.74,-249.93 452.05,-242.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="431.37,-266.27 428.63,-276.5 437.15,-270.21 431.37,-266.27"/>
+<path fill="none" stroke="#63b8ff" d="M699.49,-271.16C712.49,-261.73 727.3,-250.98 739.17,-242.37"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="697.68,-268.16 691.64,-276.86 701.79,-273.82 697.68,-268.16"/>
 </a>
 </g>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="broker__caps_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="120.75,-172.5 5,-172.5 5,-139 120.75,-139 120.75,-172.5"/>
-<text xml:space="preserve" text-anchor="start" x="13" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="62.88" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/broker_caps.hpp</text>
+<g id="a_Node000008"><a xlink:href="market_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="279.75,-172.5 149,-172.5 149,-139 279.75,-139 279.75,-172.5"/>
+<text xml:space="preserve" text-anchor="start" x="157" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="214.38" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/mock/market.hpp</text>
 </a>
 </g>
 </g>
@@ -188,103 +188,122 @@
 <g id="edge10_Node000002_Node000008" class="edge">
 <title>Node2&#45;&gt;Node8</title>
 <g id="a_edge10_Node000002_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M347.29,-294.47C250.65,-293.82 83.29,-286.13 44.88,-242 28.09,-222.72 41.31,-191.74 52.24,-172.91"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="347.19,-297.97 357.2,-294.51 347.22,-290.97 347.19,-297.97"/>
+<path fill="none" stroke="#63b8ff" d="M598.8,-290.92C476.82,-285.24 234.84,-270.49 209.38,-242 192.58,-223.21 200.3,-191.78 207.38,-172.79"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="598.56,-294.41 608.71,-291.37 598.88,-287.42 598.56,-294.41"/>
 </a>
 </g>
 </g>
-<!-- Node13 -->
-<g id="Node000013" class="node">
-<title>Node13</title>
-<g id="a_Node000013"><a xlink:href="calendar_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="255.75,-172.5 140,-172.5 140,-139 255.75,-139 255.75,-172.5"/>
-<text xml:space="preserve" text-anchor="start" x="148" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="197.88" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/calendar.hpp</text>
+<!-- Node12 -->
+<g id="Node000012" class="node">
+<title>Node12</title>
+<g id="a_Node000012"><a xlink:href="broker__caps_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="554.25,-172.5 438.5,-172.5 438.5,-139 554.25,-139 554.25,-172.5"/>
+<text xml:space="preserve" text-anchor="start" x="446.5" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="496.38" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/broker_caps.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node13 -->
-<g id="edge17_Node000002_Node000013" class="edge">
-<title>Node2&#45;&gt;Node13</title>
-<g id="a_edge17_Node000002_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M347.39,-283.63C297.13,-274.91 235.01,-260.76 216.88,-242 198.96,-223.47 196.46,-191.95 196.8,-172.87"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="346.63,-287.05 357.07,-285.27 347.79,-280.15 346.63,-287.05"/>
-</a>
-</g>
-</g>
-<!-- Node14 -->
-<g id="Node000014" class="node">
-<title>Node14</title>
-<g id="a_Node000014"><a xlink:href="data__only__traits_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="959.25,-242 840.5,-242 840.5,-208.5 959.25,-208.5 959.25,-242"/>
-<text xml:space="preserve" text-anchor="start" x="848.5" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="899.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/data_only_traits.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node14 -->
-<g id="edge19_Node000002_Node000014" class="edge">
-<title>Node2&#45;&gt;Node14</title>
-<g id="a_edge19_Node000002_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M486.33,-287.21C568.83,-278.95 710.45,-263.22 830.88,-242 833.9,-241.47 836.99,-240.89 840.11,-240.28"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="486.2,-283.71 476.59,-288.18 486.89,-290.67 486.2,-283.71"/>
-</a>
-</g>
-</g>
-<!-- Node15 -->
-<g id="Node000015" class="node">
-<title>Node15</title>
-<g id="a_Node000015"><a xlink:href="instrument_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="341.75,-242 226,-242 226,-208.5 341.75,-208.5 341.75,-242"/>
-<text xml:space="preserve" text-anchor="start" x="234" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="283.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/instrument.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node15 -->
-<g id="edge20_Node000002_Node000015" class="edge">
-<title>Node2&#45;&gt;Node15</title>
-<g id="a_edge20_Node000002_Node000015"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M374.99,-272.49C355.74,-262.72 333.28,-251.32 315.47,-242.29"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="373.17,-275.49 383.67,-276.9 376.34,-269.25 373.17,-275.49"/>
-</a>
-</g>
-</g>
-<!-- Node16 -->
-<g id="Node000016" class="node">
-<title>Node16</title>
-<g id="a_Node000016"><a xlink:href="market__data_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="169.75,-242 54,-242 54,-208.5 169.75,-208.5 169.75,-242"/>
-<text xml:space="preserve" text-anchor="start" x="62" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="111.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/market_data.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node16 -->
-<g id="edge23_Node000002_Node000016" class="edge">
-<title>Node2&#45;&gt;Node16</title>
-<g id="a_edge23_Node000002_Node000016"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M347.66,-278.43C294.04,-266.57 220.6,-250.31 170,-239.11"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="346.79,-281.82 357.31,-280.57 348.3,-274.99 346.79,-281.82"/>
+<!-- Node2&#45;&gt;Node12 -->
+<g id="edge14_Node000002_Node000012" class="edge">
+<title>Node2&#45;&gt;Node12</title>
+<g id="a_edge14_Node000002_Node000012"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M599.05,-285.58C569.38,-278.63 536.73,-265.77 515.38,-242 498.25,-222.94 495.45,-191.89 495.53,-172.99"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="598.25,-288.99 608.76,-287.66 599.71,-282.15 598.25,-288.99"/>
 </a>
 </g>
 </g>
 <!-- Node17 -->
 <g id="Node000017" class="node">
 <title>Node17</title>
-<g id="a_Node000017"><a xlink:href="order__updates_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="822,-242 695.75,-242 695.75,-208.5 822,-208.5 822,-242"/>
-<text xml:space="preserve" text-anchor="start" x="703.75" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
-<text xml:space="preserve" text-anchor="middle" x="758.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/order_updates.hpp</text>
+<g id="a_Node000017"><a xlink:href="calendar_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="334.25,-242 218.5,-242 218.5,-208.5 334.25,-208.5 334.25,-242"/>
+<text xml:space="preserve" text-anchor="start" x="226.5" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="276.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/calendar.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node17 -->
-<g id="edge26_Node000002_Node000017" class="edge">
+<g id="edge22_Node000002_Node000017" class="edge">
 <title>Node2&#45;&gt;Node17</title>
-<g id="a_edge26_Node000002_Node000017"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M486.43,-280.81C540.8,-270.59 618.23,-255.8 685.88,-242 689.05,-241.35 692.3,-240.68 695.59,-240"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="485.87,-277.36 476.68,-282.64 487.16,-284.24 485.87,-277.36"/>
+<g id="a_edge22_Node000002_Node000017"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M598.95,-284.19C532.97,-274.76 431.08,-259.27 343.38,-242 340.44,-241.42 337.45,-240.81 334.42,-240.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="598.14,-287.61 608.53,-285.56 599.12,-280.68 598.14,-287.61"/>
+</a>
+</g>
+</g>
+<!-- Node18 -->
+<g id="Node000018" class="node">
+<title>Node18</title>
+<g id="a_Node000018"><a xlink:href="data__only__traits_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1257.75,-242 1139,-242 1139,-208.5 1257.75,-208.5 1257.75,-242"/>
+<text xml:space="preserve" text-anchor="start" x="1147" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="1198.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/data_only_traits.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node18 -->
+<g id="edge25_Node000002_Node000018" class="edge">
+<title>Node2&#45;&gt;Node18</title>
+<g id="a_edge25_Node000002_Node000018"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M737.73,-288.42C828.24,-280.89 991.36,-265.42 1129.38,-242 1132.4,-241.49 1135.5,-240.92 1138.62,-240.32"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="737.71,-284.91 728.03,-289.21 738.29,-291.88 737.71,-284.91"/>
+</a>
+</g>
+</g>
+<!-- Node19 -->
+<g id="Node000019" class="node">
+<title>Node19</title>
+<g id="a_Node000019"><a xlink:href="instrument_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="640.25,-242 524.5,-242 524.5,-208.5 640.25,-208.5 640.25,-242"/>
+<text xml:space="preserve" text-anchor="start" x="532.5" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="582.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/instrument.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node19 -->
+<g id="edge26_Node000002_Node000019" class="edge">
+<title>Node2&#45;&gt;Node19</title>
+<g id="a_edge26_Node000002_Node000019"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M639.25,-270.89C627.31,-261.52 613.78,-250.9 602.91,-242.37"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="636.78,-273.4 646.8,-276.82 641.1,-267.89 636.78,-273.4"/>
+</a>
+</g>
+</g>
+<!-- Node20 -->
+<g id="Node000020" class="node">
+<title>Node20</title>
+<g id="a_Node000020"><a xlink:href="market__data_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="468.25,-242 352.5,-242 352.5,-208.5 468.25,-208.5 468.25,-242"/>
+<text xml:space="preserve" text-anchor="start" x="360.5" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="410.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/market_data.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node20 -->
+<g id="edge29_Node000002_Node000020" class="edge">
+<title>Node2&#45;&gt;Node20</title>
+<g id="a_edge29_Node000002_Node000020"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M599.19,-275.65C558.31,-264.95 507.14,-251.57 468.39,-241.43"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="598.13,-278.99 608.69,-278.13 599.9,-272.22 598.13,-278.99"/>
+</a>
+</g>
+</g>
+<!-- Node21 -->
+<g id="Node000021" class="node">
+<title>Node21</title>
+<g id="a_Node000021"><a xlink:href="order__updates_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1120.5,-242 994.25,-242 994.25,-208.5 1120.5,-208.5 1120.5,-242"/>
+<text xml:space="preserve" text-anchor="start" x="1002.25" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
+<text xml:space="preserve" text-anchor="middle" x="1057.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/order_updates.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node21 -->
+<g id="edge33_Node000002_Node000021" class="edge">
+<title>Node2&#45;&gt;Node21</title>
+<g id="a_edge33_Node000002_Node000021"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M737.66,-283.43C801.8,-273.63 899.75,-258.05 984.38,-242 987.56,-241.4 990.82,-240.76 994.11,-240.1"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="737.34,-279.94 727.98,-284.9 738.39,-286.86 737.34,-279.94"/>
 </a>
 </g>
 </g>
@@ -292,9 +311,9 @@
 <g id="Node000004" class="node">
 <title>Node4</title>
 <g id="a_Node000004"><a xlink:href="kiwoom_2traits_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="562.25,-33.5 431.5,-33.5 431.5,0 562.25,0 562.25,-33.5"/>
-<text xml:space="preserve" text-anchor="start" x="439.5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
-<text xml:space="preserve" text-anchor="middle" x="496.88" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/traits.hpp</text>
+<polygon fill="white" stroke="#666666" points="820.75,-33.5 690,-33.5 690,0 820.75,0 820.75,-33.5"/>
+<text xml:space="preserve" text-anchor="start" x="698" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="755.38" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/traits.hpp</text>
 </a>
 </g>
 </g>
@@ -302,8 +321,8 @@
 <g id="edge3_Node000003_Node000004" class="edge">
 <title>Node3&#45;&gt;Node4</title>
 <g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M416.86,-129.61C436.89,-101.6 468.67,-57.19 485.51,-33.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="414.16,-127.37 411.19,-137.54 419.85,-131.44 414.16,-127.37"/>
+<path fill="none" stroke="#63b8ff" d="M707.68,-128.5C719.76,-100.44 738.52,-56.88 748.54,-33.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="704.6,-126.81 703.86,-137.38 711.03,-129.58 704.6,-126.81"/>
 </a>
 </g>
 </g>
@@ -311,8 +330,8 @@
 <g id="edge6_Node000005_Node000003" class="edge">
 <title>Node5&#45;&gt;Node3</title>
 <g id="a_edge6_Node000005_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M549.91,-204.61C518.13,-194.54 479.89,-182.42 449.85,-172.9"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="548.82,-207.94 559.41,-207.62 550.94,-201.27 548.82,-207.94"/>
+<path fill="none" stroke="#63b8ff" d="M848.54,-204.74C816.52,-194.65 777.91,-182.47 747.59,-172.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="847.08,-207.96 857.67,-207.63 849.19,-201.28 847.08,-207.96"/>
 </a>
 </g>
 </g>
@@ -320,9 +339,9 @@
 <g id="Node000006" class="node">
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:href="kiwoom_2auth_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="656.25,-172.5 525.5,-172.5 525.5,-139 656.25,-139 656.25,-172.5"/>
-<text xml:space="preserve" text-anchor="start" x="533.5" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
-<text xml:space="preserve" text-anchor="middle" x="590.88" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/auth.hpp</text>
+<polygon fill="white" stroke="#666666" points="950.75,-172.5 820,-172.5 820,-139 950.75,-139 950.75,-172.5"/>
+<text xml:space="preserve" text-anchor="start" x="828" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="885.38" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kiwoom/auth.hpp</text>
 </a>
 </g>
 </g>
@@ -330,8 +349,8 @@
 <g id="edge5_Node000005_Node000006" class="edge">
 <title>Node5&#45;&gt;Node6</title>
 <g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M603.52,-197.39C600.91,-189 598.11,-180.01 595.82,-172.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="600.14,-198.3 606.45,-206.81 606.82,-196.22 600.14,-198.3"/>
+<path fill="none" stroke="#63b8ff" d="M900.53,-197.67C897.39,-189.2 894.02,-180.1 891.26,-172.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="897.17,-198.67 903.92,-206.83 903.73,-196.24 897.17,-198.67"/>
 </a>
 </g>
 </g>
@@ -339,8 +358,8 @@
 <g id="edge9_Node000007_Node000003" class="edge">
 <title>Node7&#45;&gt;Node3</title>
 <g id="a_edge9_Node000007_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M439.82,-199.94C431.21,-190.85 421.65,-180.77 413.93,-172.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="437.25,-202.31 446.67,-207.16 442.33,-197.49 437.25,-202.31"/>
+<path fill="none" stroke="#63b8ff" d="M738.24,-200.22C729.41,-191.06 719.58,-180.85 711.67,-172.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="735.46,-202.39 744.92,-207.16 740.51,-197.53 735.46,-202.39"/>
 </a>
 </g>
 </g>
@@ -348,18 +367,18 @@
 <g id="edge8_Node000007_Node000006" class="edge">
 <title>Node7&#45;&gt;Node6</title>
 <g id="a_edge8_Node000007_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M503.7,-202.72C522.11,-193.01 543.49,-181.74 560.47,-172.79"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="502.09,-199.62 494.87,-207.38 505.35,-205.81 502.09,-199.62"/>
+<path fill="none" stroke="#63b8ff" d="M801.17,-202.59C818.95,-192.91 839.55,-181.7 855.92,-172.79"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="799.52,-199.5 792.41,-207.36 802.86,-205.65 799.52,-199.5"/>
 </a>
 </g>
 </g>
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="broker__session_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="298.75,-103 183,-103 183,-69.5 298.75,-69.5 298.75,-103"/>
-<text xml:space="preserve" text-anchor="start" x="191" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="240.88" y="-76.75" font-family="Helvetica,sans-Serif" font-size="10.00">/broker_session.hpp</text>
+<g id="a_Node000009"><a xlink:href="mock_2client_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="279.75,-103 149,-103 149,-69.5 279.75,-69.5 279.75,-103"/>
+<text xml:space="preserve" text-anchor="start" x="157" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="214.38" y="-76.75" font-family="Helvetica,sans-Serif" font-size="10.00">/mock/client.hpp</text>
 </a>
 </g>
 </g>
@@ -367,46 +386,37 @@
 <g id="edge11_Node000008_Node000009" class="edge">
 <title>Node8&#45;&gt;Node9</title>
 <g id="a_edge11_Node000008_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M116.06,-134.58C142.33,-124.62 173.61,-112.76 198.28,-103.4"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="115.03,-131.23 106.93,-138.05 117.52,-137.77 115.03,-131.23"/>
+<path fill="none" stroke="#63b8ff" d="M214.38,-127.31C214.38,-119.09 214.38,-110.34 214.38,-103.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="210.88,-127.24 214.38,-137.24 217.88,-127.24 210.88,-127.24"/>
 </a>
 </g>
 </g>
-<!-- Node12 -->
-<g id="Node000012" class="node">
-<title>Node12</title>
-<g id="a_Node000012"><a xlink:href="broker__verbs_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="115.75,-33.5 0,-33.5 0,0 115.75,0 115.75,-33.5"/>
-<text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
-<text xml:space="preserve" text-anchor="middle" x="57.88" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/broker_verbs.hpp</text>
+<!-- Node11 -->
+<g id="Node000011" class="node">
+<title>Node11</title>
+<g id="a_Node000011"><a xlink:href="brokers_2mock_2clock_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="130.75,-103 0,-103 0,-69.5 130.75,-69.5 130.75,-103"/>
+<text xml:space="preserve" text-anchor="start" x="8" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="65.38" y="-76.75" font-family="Helvetica,sans-Serif" font-size="10.00">/mock/clock.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node12 -->
-<g id="edge16_Node000008_Node000012" class="edge">
-<title>Node8&#45;&gt;Node12</title>
-<g id="a_edge16_Node000008_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M61.88,-127.37C60.85,-99.29 59.29,-56.57 58.45,-33.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="58.37,-127.39 62.24,-137.25 65.37,-127.13 58.37,-127.39"/>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node4 -->
-<g id="edge13_Node000009_Node000004" class="edge">
-<title>Node9&#45;&gt;Node4</title>
-<g id="a_edge13_Node000009_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M310,-67.02C349.13,-56.71 397.65,-43.91 435.44,-33.95"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="309.21,-63.61 300.43,-69.55 310.99,-70.38 309.21,-63.61"/>
+<!-- Node8&#45;&gt;Node11 -->
+<g id="edge13_Node000008_Node000011" class="edge">
+<title>Node8&#45;&gt;Node11</title>
+<g id="a_edge13_Node000008_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M168.39,-133.92C146.7,-124.09 121.22,-112.55 101.03,-103.4"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="166.75,-137.02 177.31,-137.96 169.64,-130.64 166.75,-137.02"/>
 </a>
 </g>
 </g>
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="kis_2traits_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="413.25,-33.5 282.5,-33.5 282.5,0 413.25,0 413.25,-33.5"/>
-<text xml:space="preserve" text-anchor="start" x="290.5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
-<text xml:space="preserve" text-anchor="middle" x="347.88" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kis/traits.hpp</text>
+<g id="a_Node000010"><a xlink:href="mock_2traits_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="240.75,-33.5 110,-33.5 110,0 240.75,0 240.75,-33.5"/>
+<text xml:space="preserve" text-anchor="start" x="118" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="175.38" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/mock/traits.hpp</text>
 </a>
 </g>
 </g>
@@ -414,241 +424,334 @@
 <g id="edge12_Node000009_Node000010" class="edge">
 <title>Node9&#45;&gt;Node10</title>
 <g id="a_edge12_Node000009_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M276.08,-63.04C291.22,-53.49 308.59,-42.53 322.45,-33.79"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="274.37,-59.98 267.78,-68.27 278.11,-65.9 274.37,-59.98"/>
+<path fill="none" stroke="#63b8ff" d="M199.51,-59.53C194.48,-50.82 189.01,-41.35 184.55,-33.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="196.34,-61.04 204.38,-67.94 202.4,-57.53 196.34,-61.04"/>
 </a>
 </g>
 </g>
-<!-- Node11 -->
-<g id="Node000011" class="node">
-<title>Node11</title>
-<g id="a_Node000011"><a xlink:href="tossinvest_2traits_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="264.25,-33.5 133.5,-33.5 133.5,0 264.25,0 264.25,-33.5"/>
-<text xml:space="preserve" text-anchor="start" x="141.5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
-<text xml:space="preserve" text-anchor="middle" x="198.88" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/tossinvest/traits.hpp</text>
+<!-- Node13 -->
+<g id="Node000013" class="node">
+<title>Node13</title>
+<g id="a_Node000013"><a xlink:href="broker__session_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="554.25,-103 438.5,-103 438.5,-69.5 554.25,-69.5 554.25,-103"/>
+<text xml:space="preserve" text-anchor="start" x="446.5" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="496.38" y="-76.75" font-family="Helvetica,sans-Serif" font-size="10.00">/broker_session.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node11 -->
-<g id="edge14_Node000009_Node000011" class="edge">
-<title>Node9&#45;&gt;Node11</title>
-<g id="a_edge14_Node000009_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M224.87,-59.53C219.45,-50.82 213.56,-41.35 208.76,-33.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="221.87,-61.33 230.12,-67.97 227.81,-57.63 221.87,-61.33"/>
+<!-- Node12&#45;&gt;Node13 -->
+<g id="edge15_Node000012_Node000013" class="edge">
+<title>Node12&#45;&gt;Node13</title>
+<g id="a_edge15_Node000012_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M496.38,-127.31C496.38,-119.09 496.38,-110.34 496.38,-103.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="492.88,-127.24 496.38,-137.24 499.88,-127.24 492.88,-127.24"/>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node12 -->
-<g id="edge15_Node000009_Node000012" class="edge">
-<title>Node9&#45;&gt;Node12</title>
-<g id="a_edge15_Node000009_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M186.56,-65.22C159.47,-55.22 127.14,-43.3 101.67,-33.9"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="185.03,-68.38 195.62,-68.56 187.45,-61.81 185.03,-68.38"/>
+<!-- Node16 -->
+<g id="Node000016" class="node">
+<title>Node16</title>
+<g id="a_Node000016"><a xlink:href="broker__verbs_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="672.25,-33.5 556.5,-33.5 556.5,0 672.25,0 672.25,-33.5"/>
+<text xml:space="preserve" text-anchor="start" x="564.5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/core</text>
+<text xml:space="preserve" text-anchor="middle" x="614.38" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/broker_verbs.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node9 -->
-<g id="edge18_Node000013_Node000009" class="edge">
-<title>Node13&#45;&gt;Node9</title>
-<g id="a_edge18_Node000013_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M214.08,-129.31C219.68,-120.52 225.79,-110.93 230.76,-103.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="211.3,-127.16 208.88,-137.48 217.2,-130.92 211.3,-127.16"/>
+<!-- Node12&#45;&gt;Node16 -->
+<g id="edge21_Node000012_Node000016" class="edge">
+<title>Node12&#45;&gt;Node16</title>
+<g id="a_edge21_Node000012_Node000016"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M530.9,-131.96C542.03,-123.65 553.92,-113.65 563.38,-103 582.5,-81.46 598.38,-51.75 607.1,-33.69"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="529.08,-128.96 523.02,-137.65 533.18,-134.63 529.08,-128.96"/>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node3 -->
-<g id="edge21_Node000015_Node000003" class="edge">
-<title>Node15&#45;&gt;Node3</title>
-<g id="a_edge21_Node000015_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M321.24,-202.32C337.63,-192.7 356.51,-181.61 371.55,-172.79"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="319.58,-199.24 312.73,-207.32 323.12,-205.27 319.58,-199.24"/>
+<!-- Node13&#45;&gt;Node4 -->
+<g id="edge17_Node000013_Node000004" class="edge">
+<title>Node13&#45;&gt;Node4</title>
+<g id="a_edge17_Node000013_Node000004"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M565.45,-67.25C605.24,-56.88 654.84,-43.95 693.38,-33.91"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="564.76,-63.81 555.96,-69.72 566.52,-70.58 564.76,-63.81"/>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node9 -->
-<g id="edge22_Node000015_Node000009" class="edge">
-<title>Node15&#45;&gt;Node9</title>
-<g id="a_edge22_Node000015_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M279.34,-196.95C276.15,-180.02 271.3,-157.95 264.88,-139 260.68,-126.62 254.43,-113.25 249.36,-103.2"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="275.89,-197.54 281.1,-206.77 282.78,-196.31 275.89,-197.54"/>
+<!-- Node13&#45;&gt;Node10 -->
+<g id="edge18_Node000013_Node000010" class="edge">
+<title>Node13&#45;&gt;Node10</title>
+<g id="a_edge18_Node000013_Node000010"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M427.17,-70.7C372.01,-59.1 295.31,-42.97 241.09,-31.57"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="426.26,-74.08 436.76,-72.71 427.7,-67.23 426.26,-74.08"/>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node3 -->
-<g id="edge24_Node000016_Node000003" class="edge">
-<title>Node16&#45;&gt;Node3</title>
-<g id="a_edge24_Node000016_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M181.07,-207.97C227.27,-197.11 287.64,-182.91 333.11,-172.22"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="180.36,-204.55 171.43,-210.24 181.96,-211.36 180.36,-204.55"/>
+<!-- Node14 -->
+<g id="Node000014" class="node">
+<title>Node14</title>
+<g id="a_Node000014"><a xlink:href="kis_2traits_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="389.75,-33.5 259,-33.5 259,0 389.75,0 389.75,-33.5"/>
+<text xml:space="preserve" text-anchor="start" x="267" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="324.38" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/kis/traits.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node8 -->
-<g id="edge25_Node000016_Node000008" class="edge">
-<title>Node16&#45;&gt;Node8</title>
-<g id="a_edge25_Node000016_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M93.61,-199.09C87.18,-190.23 80.13,-180.52 74.4,-172.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="90.67,-200.99 99.37,-207.03 96.33,-196.88 90.67,-200.99"/>
+<!-- Node13&#45;&gt;Node14 -->
+<g id="edge16_Node000013_Node000014" class="edge">
+<title>Node13&#45;&gt;Node14</title>
+<g id="a_edge16_Node000013_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M444.65,-64.95C419.33,-55.01 389.27,-43.22 365.53,-33.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="443.18,-68.13 453.77,-68.53 445.74,-61.62 443.18,-68.13"/>
 </a>
 </g>
 </g>
-<!-- Node18 -->
-<g id="Node000018" class="node">
-<title>Node18</title>
-<g id="a_Node000018"><a xlink:href="engine_8hpp.html" target="_top" xlink:title="The backtest engine: Backtester replays bars (and quotes) through the same Runner a live session uses...">
-<polygon fill="white" stroke="#666666" points="1151.25,-172.5 1014.5,-172.5 1014.5,-139 1151.25,-139 1151.25,-172.5"/>
-<text xml:space="preserve" text-anchor="start" x="1022.5" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/backtest</text>
-<text xml:space="preserve" text-anchor="middle" x="1082.88" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/engine.hpp</text>
+<!-- Node15 -->
+<g id="Node000015" class="node">
+<title>Node15</title>
+<g id="a_Node000015"><a xlink:href="tossinvest_2traits_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="538.75,-33.5 408,-33.5 408,0 538.75,0 538.75,-33.5"/>
+<text xml:space="preserve" text-anchor="start" x="416" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/brokers</text>
+<text xml:space="preserve" text-anchor="middle" x="473.38" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">/tossinvest/traits.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node17&#45;&gt;Node18 -->
-<g id="edge27_Node000017_Node000018" class="edge">
-<title>Node17&#45;&gt;Node18</title>
-<g id="a_edge27_Node000017_Node000018"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M833.03,-208.27C900.55,-194.05 966.23,-180.54 1014.13,-170.75"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="832.72,-204.76 823.66,-210.24 834.16,-211.61 832.72,-204.76"/>
+<!-- Node13&#45;&gt;Node15 -->
+<g id="edge19_Node000013_Node000015" class="edge">
+<title>Node13&#45;&gt;Node15</title>
+<g id="a_edge19_Node000013_Node000015"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M487.22,-58.39C484.36,-50 481.3,-41.01 478.79,-33.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="483.9,-59.48 490.44,-67.82 490.52,-57.23 483.9,-59.48"/>
 </a>
 </g>
 </g>
-<!-- Node20 -->
-<g id="Node000020" class="node">
-<title>Node20</title>
-<g id="a_Node000020"><a xlink:href="session__source_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1361,-172.5 1246.75,-172.5 1246.75,-139 1361,-139 1361,-172.5"/>
-<text xml:space="preserve" text-anchor="start" x="1254.75" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/live</text>
-<text xml:space="preserve" text-anchor="middle" x="1303.88" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/session_source.hpp</text>
+<!-- Node13&#45;&gt;Node16 -->
+<g id="edge20_Node000013_Node000016" class="edge">
+<title>Node13&#45;&gt;Node16</title>
+<g id="a_edge20_Node000013_Node000016"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M534.24,-63.59C551.17,-53.91 570.76,-42.7 586.34,-33.79"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="532.9,-60.33 525.95,-68.33 536.37,-66.4 532.9,-60.33"/>
 </a>
 </g>
 </g>
-<!-- Node17&#45;&gt;Node20 -->
-<g id="edge29_Node000017_Node000020" class="edge">
-<title>Node17&#45;&gt;Node20</title>
-<g id="a_edge29_Node000017_Node000020"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M833.22,-208.79C888.93,-202.19 1133.73,-175.38 1246.65,-163.01"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="833.09,-205.28 823.61,-210 833.97,-212.22 833.09,-205.28"/>
+<!-- Node17&#45;&gt;Node8 -->
+<g id="edge23_Node000017_Node000008" class="edge">
+<title>Node17&#45;&gt;Node8</title>
+<g id="a_edge23_Node000017_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M254.05,-199.94C245.7,-190.85 236.44,-180.77 228.96,-172.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="251.32,-202.14 260.66,-207.14 256.47,-197.41 251.32,-202.14"/>
 </a>
 </g>
 </g>
-<!-- Node19 -->
-<g id="Node000019" class="node">
-<title>Node19</title>
-<g id="a_Node000019"><a xlink:href="report_8hpp.html" target="_top" xlink:title="The backtest report: performance figures, costs, and every assumption and limitation of the run as a ...">
-<polygon fill="white" stroke="#666666" points="1151.25,-103 1014.5,-103 1014.5,-69.5 1151.25,-69.5 1151.25,-103"/>
-<text xml:space="preserve" text-anchor="start" x="1022.5" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/backtest</text>
-<text xml:space="preserve" text-anchor="middle" x="1082.88" y="-76.75" font-family="Helvetica,sans-Serif" font-size="10.00">/report.hpp</text>
+<!-- Node17&#45;&gt;Node13 -->
+<g id="edge24_Node000017_Node000013" class="edge">
+<title>Node17&#45;&gt;Node13</title>
+<g id="a_edge24_Node000017_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M311.55,-202.35C355.9,-174.73 431.12,-127.89 470.53,-103.34"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="309.97,-199.21 303.33,-207.47 313.67,-205.15 309.97,-199.21"/>
 </a>
 </g>
 </g>
-<!-- Node18&#45;&gt;Node19 -->
-<g id="edge28_Node000018_Node000019" class="edge">
-<title>Node18&#45;&gt;Node19</title>
-<g id="a_edge28_Node000018_Node000019"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1082.88,-127.31C1082.88,-119.09 1082.88,-110.34 1082.88,-103.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1079.38,-127.24 1082.88,-137.24 1086.38,-127.24 1079.38,-127.24"/>
+<!-- Node19&#45;&gt;Node3 -->
+<g id="edge27_Node000019_Node000003" class="edge">
+<title>Node19&#45;&gt;Node3</title>
+<g id="a_edge27_Node000019_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M619.42,-202.32C635.66,-192.7 654.38,-181.61 669.29,-172.79"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="617.8,-199.2 610.98,-207.31 621.37,-205.23 617.8,-199.2"/>
 </a>
 </g>
 </g>
-<!-- Node21&#45;&gt;Node9 -->
-<g id="edge31_Node000021_Node000009" class="edge">
-<title>Node21&#45;&gt;Node9</title>
-<g id="a_edge31_Node000021_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1020.34,-267.86C1008.91,-248.57 990.76,-223.13 967.88,-208.5 856.49,-137.3 451.3,-102.05 299.14,-91.1"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1017.27,-269.54 1025.24,-276.52 1023.36,-266.09 1017.27,-269.54"/>
+<!-- Node19&#45;&gt;Node13 -->
+<g id="edge28_Node000019_Node000013" class="edge">
+<title>Node19&#45;&gt;Node13</title>
+<g id="a_edge28_Node000019_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M581.04,-196.97C579.09,-179.27 574.41,-156.36 563.38,-139 554.07,-124.36 539.11,-112.22 525.68,-103.39"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="577.54,-197.08 581.88,-206.74 584.51,-196.48 577.54,-197.08"/>
 </a>
 </g>
 </g>
-<!-- Node21&#45;&gt;Node14 -->
-<g id="edge32_Node000021_Node000014" class="edge">
-<title>Node21&#45;&gt;Node14</title>
-<g id="a_edge32_Node000021_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M991.68,-272.49C972.28,-262.72 949.65,-251.32 931.71,-242.29"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="989.92,-275.53 1000.43,-276.9 993.07,-269.28 989.92,-275.53"/>
+<!-- Node20&#45;&gt;Node3 -->
+<g id="edge30_Node000020_Node000003" class="edge">
+<title>Node20&#45;&gt;Node3</title>
+<g id="a_edge30_Node000020_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M479.66,-207.9C525.62,-197.05 585.55,-182.91 630.74,-172.24"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="479,-204.46 470.07,-210.16 480.61,-211.27 479,-204.46"/>
+</a>
+</g>
+</g>
+<!-- Node20&#45;&gt;Node8 -->
+<g id="edge31_Node000020_Node000008" class="edge">
+<title>Node20&#45;&gt;Node8</title>
+<g id="a_edge31_Node000020_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M352.59,-204.35C323.5,-194.33 288.69,-182.34 261.28,-172.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="351.4,-207.64 362,-207.59 353.68,-201.02 351.4,-207.64"/>
+</a>
+</g>
+</g>
+<!-- Node20&#45;&gt;Node12 -->
+<g id="edge32_Node000020_Node000012" class="edge">
+<title>Node20&#45;&gt;Node12</title>
+<g id="a_edge32_Node000020_Node000012"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M439.5,-201.39C451.44,-192.02 464.97,-181.4 475.84,-172.87"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="437.65,-198.39 431.95,-207.32 441.97,-203.9 437.65,-198.39"/>
 </a>
 </g>
 </g>
 <!-- Node22 -->
 <g id="Node000022" class="node">
 <title>Node22</title>
-<g id="a_Node000022"><a xlink:href="http__client_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1301.12,-242 1166.62,-242 1166.62,-208.5 1301.12,-208.5 1301.12,-242"/>
-<text xml:space="preserve" text-anchor="start" x="1174.62" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/network</text>
-<text xml:space="preserve" text-anchor="middle" x="1233.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/http_client.hpp</text>
+<g id="a_Node000022"><a xlink:href="engine_8hpp.html" target="_top" xlink:title="The backtest engine: Backtester replays bars (and quotes) through the same Runner a live session uses...">
+<polygon fill="white" stroke="#666666" points="1125.75,-172.5 989,-172.5 989,-139 1125.75,-139 1125.75,-172.5"/>
+<text xml:space="preserve" text-anchor="start" x="997" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/backtest</text>
+<text xml:space="preserve" text-anchor="middle" x="1057.38" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/engine.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node22 -->
-<g id="edge33_Node000021_Node000022" class="edge">
+<g id="edge34_Node000021_Node000022" class="edge">
 <title>Node21&#45;&gt;Node22</title>
-<g id="a_edge33_Node000021_Node000022"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1092.45,-273.98C1122.21,-263.94 1157.92,-251.88 1186.01,-242.4"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1091.57,-270.58 1083.21,-277.1 1093.81,-277.22 1091.57,-270.58"/>
+<g id="a_edge34_Node000021_Node000022"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1057.38,-196.81C1057.38,-188.59 1057.38,-179.84 1057.38,-172.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1053.88,-196.74 1057.38,-206.74 1060.88,-196.74 1053.88,-196.74"/>
+</a>
+</g>
+</g>
+<!-- Node24 -->
+<g id="Node000024" class="node">
+<title>Node24</title>
+<g id="a_Node000024"><a xlink:href="session__source_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1582.5,-172.5 1468.25,-172.5 1468.25,-139 1582.5,-139 1582.5,-172.5"/>
+<text xml:space="preserve" text-anchor="start" x="1476.25" y="-159" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/live</text>
+<text xml:space="preserve" text-anchor="middle" x="1525.38" y="-146.25" font-family="Helvetica,sans-Serif" font-size="10.00">/session_source.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node21&#45;&gt;Node24 -->
+<g id="edge36_Node000021_Node000024" class="edge">
+<title>Node21&#45;&gt;Node24</title>
+<g id="a_edge36_Node000021_Node000024"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1131.62,-208.38C1257.74,-186.89 1393.01,-170.97 1467.91,-162.78"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1131.37,-204.87 1122.11,-210.01 1132.56,-211.77 1131.37,-204.87"/>
 </a>
 </g>
 </g>
 <!-- Node23 -->
 <g id="Node000023" class="node">
 <title>Node23</title>
-<g id="a_Node000023"><a xlink:href="example-rate-limit-stats_8cpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1148.38,-242 1015.38,-242 1015.38,-208.5 1148.38,-208.5 1148.38,-242"/>
-<text xml:space="preserve" text-anchor="start" x="1023.38" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">examples/example&#45;rate</text>
-<text xml:space="preserve" text-anchor="middle" x="1081.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;limit&#45;stats.cpp</text>
+<g id="a_Node000023"><a xlink:href="report_8hpp.html" target="_top" xlink:title="The backtest report: performance figures, costs, and every assumption and limitation of the run as a ...">
+<polygon fill="white" stroke="#666666" points="1125.75,-103 989,-103 989,-69.5 1125.75,-69.5 1125.75,-103"/>
+<text xml:space="preserve" text-anchor="start" x="997" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/backtest</text>
+<text xml:space="preserve" text-anchor="middle" x="1057.38" y="-76.75" font-family="Helvetica,sans-Serif" font-size="10.00">/report.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node21&#45;&gt;Node23 -->
-<g id="edge34_Node000021_Node000023" class="edge">
-<title>Node21&#45;&gt;Node23</title>
-<g id="a_edge34_Node000021_Node000023"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1051.76,-268.59C1058.07,-259.73 1064.97,-250.02 1070.58,-242.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1049.07,-266.34 1046.13,-276.52 1054.78,-270.4 1049.07,-266.34"/>
+<!-- Node22&#45;&gt;Node23 -->
+<g id="edge35_Node000022_Node000023" class="edge">
+<title>Node22&#45;&gt;Node23</title>
+<g id="a_edge35_Node000022_Node000023"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1057.38,-127.31C1057.38,-119.09 1057.38,-110.34 1057.38,-103.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1053.88,-127.24 1057.38,-137.24 1060.88,-127.24 1053.88,-127.24"/>
 </a>
 </g>
 </g>
-<!-- Node25 -->
-<g id="Node000025" class="node">
-<title>Node25</title>
-<g id="a_Node000025"><a xlink:href="loop_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1445,-242 1318.75,-242 1318.75,-208.5 1445,-208.5 1445,-242"/>
-<text xml:space="preserve" text-anchor="start" x="1326.75" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
-<text xml:space="preserve" text-anchor="middle" x="1381.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/loop.hpp</text>
+<!-- Node25&#45;&gt;Node13 -->
+<g id="edge38_Node000025_Node000013" class="edge">
+<title>Node25&#45;&gt;Node13</title>
+<g id="a_edge38_Node000025_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1316.81,-268.16C1304.75,-249.86 1286.7,-225.56 1266.38,-208.5 1215.59,-165.87 1198.04,-157.5 1134.38,-139 1026.46,-107.64 690.84,-93.53 554.67,-88.99"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1313.72,-269.82 1322.06,-276.35 1319.61,-266.04 1313.72,-269.82"/>
 </a>
 </g>
 </g>
-<!-- Node24&#45;&gt;Node25 -->
-<g id="edge36_Node000024_Node000025" class="edge">
-<title>Node24&#45;&gt;Node25</title>
-<g id="a_edge36_Node000024_Node000025"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1381.88,-266.31C1381.88,-258.09 1381.88,-249.34 1381.88,-242.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1378.38,-266.24 1381.88,-276.24 1385.38,-266.24 1378.38,-266.24"/>
+<!-- Node25&#45;&gt;Node18 -->
+<g id="edge39_Node000025_Node000018" class="edge">
+<title>Node25&#45;&gt;Node18</title>
+<g id="a_edge39_Node000025_Node000018"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1290.18,-272.49C1270.78,-262.72 1248.15,-251.32 1230.21,-242.29"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1288.42,-275.53 1298.93,-276.9 1291.57,-269.28 1288.42,-275.53"/>
 </a>
 </g>
 </g>
 <!-- Node26 -->
 <g id="Node000026" class="node">
 <title>Node26</title>
-<g id="a_Node000026"><a xlink:href="signal__stop_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1589,-242 1462.75,-242 1462.75,-208.5 1589,-208.5 1589,-242"/>
-<text xml:space="preserve" text-anchor="start" x="1470.75" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
-<text xml:space="preserve" text-anchor="middle" x="1525.88" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/signal_stop.hpp</text>
+<g id="a_Node000026"><a xlink:href="http__client_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1447.62,-242 1313.12,-242 1313.12,-208.5 1447.62,-208.5 1447.62,-242"/>
+<text xml:space="preserve" text-anchor="start" x="1321.12" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/network</text>
+<text xml:space="preserve" text-anchor="middle" x="1380.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/http_client.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node24&#45;&gt;Node26 -->
-<g id="edge38_Node000024_Node000026" class="edge">
-<title>Node24&#45;&gt;Node26</title>
-<g id="a_edge38_Node000024_Node000026"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1426.65,-272.76C1447.62,-262.93 1472.21,-251.41 1491.66,-242.29"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1425.31,-269.53 1417.74,-276.94 1428.28,-275.86 1425.31,-269.53"/>
+<!-- Node25&#45;&gt;Node26 -->
+<g id="edge40_Node000025_Node000026" class="edge">
+<title>Node25&#45;&gt;Node26</title>
+<g id="a_edge40_Node000025_Node000026"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1350.26,-268.59C1356.57,-259.73 1363.47,-250.02 1369.08,-242.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1347.57,-266.34 1344.63,-276.52 1353.28,-270.4 1347.57,-266.34"/>
 </a>
 </g>
 </g>
-<!-- Node25&#45;&gt;Node20 -->
-<g id="edge37_Node000025_Node000020" class="edge">
-<title>Node25&#45;&gt;Node20</title>
-<g id="a_edge37_Node000025_Node000020"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1354.82,-200.84C1344.15,-191.6 1332.16,-181.23 1322.5,-172.87"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1352.39,-203.37 1362.25,-207.26 1356.97,-198.07 1352.39,-203.37"/>
+<!-- Node27 -->
+<g id="Node000027" class="node">
+<title>Node27</title>
+<g id="a_Node000027"><a xlink:href="example-rate-limit-stats_8cpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1598.88,-242 1465.88,-242 1465.88,-208.5 1598.88,-208.5 1598.88,-242"/>
+<text xml:space="preserve" text-anchor="start" x="1473.88" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">examples/example&#45;rate</text>
+<text xml:space="preserve" text-anchor="middle" x="1532.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;limit&#45;stats.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node25&#45;&gt;Node27 -->
+<g id="edge41_Node000025_Node000027" class="edge">
+<title>Node25&#45;&gt;Node27</title>
+<g id="a_edge41_Node000025_Node000027"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1390.95,-273.98C1420.71,-263.94 1456.42,-251.88 1484.51,-242.4"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1390.07,-270.58 1381.71,-277.1 1392.31,-277.22 1390.07,-270.58"/>
+</a>
+</g>
+</g>
+<!-- Node29 -->
+<g id="Node000029" class="node">
+<title>Node29</title>
+<g id="a_Node000029"><a xlink:href="loop_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1743.5,-242 1617.25,-242 1617.25,-208.5 1743.5,-208.5 1743.5,-242"/>
+<text xml:space="preserve" text-anchor="start" x="1625.25" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
+<text xml:space="preserve" text-anchor="middle" x="1680.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/loop.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node28&#45;&gt;Node29 -->
+<g id="edge43_Node000028_Node000029" class="edge">
+<title>Node28&#45;&gt;Node29</title>
+<g id="a_edge43_Node000028_Node000029"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1680.38,-266.31C1680.38,-258.09 1680.38,-249.34 1680.38,-242.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1676.88,-266.24 1680.38,-276.24 1683.88,-266.24 1676.88,-266.24"/>
+</a>
+</g>
+</g>
+<!-- Node30 -->
+<g id="Node000030" class="node">
+<title>Node30</title>
+<g id="a_Node000030"><a xlink:href="signal__stop_8hpp_source.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="1887.5,-242 1761.25,-242 1761.25,-208.5 1887.5,-208.5 1887.5,-242"/>
+<text xml:space="preserve" text-anchor="start" x="1769.25" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/runner</text>
+<text xml:space="preserve" text-anchor="middle" x="1824.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/signal_stop.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node28&#45;&gt;Node30 -->
+<g id="edge45_Node000028_Node000030" class="edge">
+<title>Node28&#45;&gt;Node30</title>
+<g id="a_edge45_Node000028_Node000030"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1725.15,-272.76C1746.12,-262.93 1770.71,-251.41 1790.16,-242.29"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1723.81,-269.53 1716.24,-276.94 1726.78,-275.86 1723.81,-269.53"/>
+</a>
+</g>
+</g>
+<!-- Node29&#45;&gt;Node24 -->
+<g id="edge44_Node000029_Node000024" class="edge">
+<title>Node29&#45;&gt;Node24</title>
+<g id="a_edge44_Node000029_Node000024"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1632.84,-203.55C1610.22,-193.7 1583.57,-182.09 1562.47,-172.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1631.3,-206.69 1641.86,-207.48 1634.09,-200.28 1631.3,-206.69"/>
 </a>
 </g>
 </g>

@@ -9,7 +9,7 @@ var searchData=
   ['barslice_6',['BarSlice',['../structalgotradelib_1_1strategy_1_1BarSlice.html',1,'algotradelib::strategy']]],
   ['basicratelimitbucket_7',['BasicRateLimitBucket',['../classalgotradelib_1_1network_1_1BasicRateLimitBucket.html',1,'algotradelib::network']]],
   ['blockingsession_8',['BlockingSession',['../classalgotradelib_1_1BlockingSession.html',1,'algotradelib']]],
-  ['broker_9',['Broker',['../structalgotradelib_1_1kis_1_1Broker.html',1,'algotradelib::kis::Broker'],['../structalgotradelib_1_1kiwoom_1_1Broker.html',1,'algotradelib::kiwoom::Broker'],['../structalgotradelib_1_1tossinvest_1_1Broker.html',1,'algotradelib::tossinvest::Broker']]],
+  ['broker_9',['Broker',['../structalgotradelib_1_1kis_1_1Broker.html',1,'algotradelib::kis::Broker'],['../structalgotradelib_1_1kiwoom_1_1Broker.html',1,'algotradelib::kiwoom::Broker'],['../structalgotradelib_1_1mock_1_1Broker.html',1,'algotradelib::mock::Broker'],['../structalgotradelib_1_1tossinvest_1_1Broker.html',1,'algotradelib::tossinvest::Broker']]],
   ['brokercaps_10',['BrokerCaps',['../structalgotradelib_1_1BrokerCaps.html',1,'algotradelib']]],
   ['brokererror_11',['BrokerError',['../structalgotradelib_1_1BrokerError.html',1,'algotradelib']]],
   ['brokerrefusal_12',['BrokerRefusal',['../structalgotradelib_1_1runner_1_1BrokerRefusal.html',1,'algotradelib::runner']]],
@@ -19,9 +19,10 @@ var searchData=
   ['brokertraits_3c_20kis_3a_3akisclient_20_3e_16',['BrokerTraits&lt; kis::KisClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html',1,'algotradelib']]],
   ['brokertraits_3c_20kiwoom_3a_3akiwoomblockingclient_20_3e_17',['BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html',1,'algotradelib']]],
   ['brokertraits_3c_20kiwoom_3a_3akiwoomclient_20_3e_18',['BrokerTraits&lt; kiwoom::KiwoomClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomClient_01_4.html',1,'algotradelib']]],
-  ['brokertraits_3c_20tossinvest_3a_3atossblockingclient_20_3e_19',['BrokerTraits&lt; tossinvest::TossBlockingClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html',1,'algotradelib']]],
-  ['brokertraits_3c_20tossinvest_3a_3atossclient_20_3e_20',['BrokerTraits&lt; tossinvest::TossClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html',1,'algotradelib']]],
-  ['buyandhold_21',['BuyAndHold',['../structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html',1,'algotradelib::strategy::vanilla']]],
-  ['buyingpower_22',['BuyingPower',['../structalgotradelib_1_1BuyingPower.html',1,'algotradelib']]],
-  ['byinterval_23',['ByInterval',['../structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html',1,'algotradelib::backtest::Backtester::InstrumentSlot']]]
+  ['brokertraits_3c_20mock_3a_3amockclient_20_3e_19',['BrokerTraits&lt; mock::MockClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html',1,'algotradelib']]],
+  ['brokertraits_3c_20tossinvest_3a_3atossblockingclient_20_3e_20',['BrokerTraits&lt; tossinvest::TossBlockingClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html',1,'algotradelib']]],
+  ['brokertraits_3c_20tossinvest_3a_3atossclient_20_3e_21',['BrokerTraits&lt; tossinvest::TossClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html',1,'algotradelib']]],
+  ['buyandhold_22',['BuyAndHold',['../structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html',1,'algotradelib::strategy::vanilla']]],
+  ['buyingpower_23',['BuyingPower',['../structalgotradelib_1_1BuyingPower.html',1,'algotradelib']]],
+  ['byinterval_24',['ByInterval',['../structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html',1,'algotradelib::backtest::Backtester::InstrumentSlot']]]
 ];

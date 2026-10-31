@@ -1,5 +1,7 @@
 <map id="algotradelib::PlacedOrder&lt; Broker &gt;" name="algotradelib::PlacedOrder&lt; Broker &gt;">
-<area shape="rect" id="Node000001" title="An accepted order: the acknowledgement and the reference to address it with." alt="" coords="5,5,192,50"/>
+<area shape="rect" id="Node000001" title="An accepted order: the acknowledgement and the reference to address it with." alt="" coords="111,5,297,50"/>
 <area shape="rect" id="Node000002" href="$structalgotradelib_1_1PlacedOrder.html" title=" " alt="" coords="5,123,192,168"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,64,101,123,96,122,97,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,59,158,76,117,125,113,121,154,72,167,62"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1PlacedOrder.html" title=" " alt="" coords="216,123,402,168"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,56,282,72,297,97,306,124,302,121,292,99,278,76,263,62"/>
 </map>

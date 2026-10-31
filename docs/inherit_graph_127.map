@@ -1,3 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structalgotradelib_1_1runner_1_1BrokerRefusal.html" title="The broker&#39;s own code and message for a refusal, kept for diagnosis." alt="" coords="5,5,155,50"/>
+<area shape="rect" id="Node000000" href="$structalgotradelib_1_1OrderShape.html" title="An order&#39;s type, price, trigger, time in force and session, as an amendment states them." alt="" coords="5,5,189,33"/>
 </map>

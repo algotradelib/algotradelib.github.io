@@ -147,6 +147,7 @@ graph TD
     CO[&quot;&lt;b&gt;&lt;core&gt;&lt;/b&gt;&lt;br/&gt;Decimal64, Money, InstrumentId,&lt;br/&gt;bars, calendar, Result, BrokerError&quot;]
     NW[&quot;&lt;b&gt;&lt;network&gt;&lt;/b&gt;&lt;br/&gt;HTTPS transport, OAuth,&lt;br/&gt;WebSocket, rate-limit pacer&quot;]
     KT[&quot;&lt;b&gt;&lt;kis&gt;&lt;/b&gt; &nbsp; &lt;b&gt;&lt;tossinvest&gt;&lt;/b&gt; &nbsp; &lt;b&gt;&lt;kiwoom&gt;&lt;/b&gt;&lt;br/&gt;adapters: one BrokerTraits&lt;br/&gt;specialization each&quot;]
+    MK[&quot;&lt;b&gt;&lt;mock&gt;&lt;/b&gt;&lt;br/&gt;an in-memory market over&lt;br/&gt;your bars; no transport&quot;]
   end
 
   X((&quot;KIS / Toss / Kiwoom&lt;br/&gt;HTTPS&quot;))
@@ -165,6 +166,9 @@ graph TD
   BR --&gt; NW
   KT --&gt; BR
   KT --&gt; NW
+  MK --&gt; BR
+  MK --&gt; BT
+  MK --&gt; ST
   LV -.binds.-&gt; KT
   NW --&gt; X
 
@@ -173,9 +177,9 @@ graph TD
   classDef you fill:#e7eefc,stroke:#3f5f9e,color:#123
   class S you
   class V,ST,RU,BT,AN,MA,CO pure
-  class BR,NW,KT,LV io</pre>
+  class BR,NW,KT,LV,MK io</pre>
 </div>
-<p>Green is I/O-free. Orange is the broker side; its HTTP and TLS code is in <span class="tt">&lt;network&gt;</span> and the adapters, which <span class="tt">&lt;algotradelib/broker&gt;</span> and <span class="tt">&lt;algotradelib/live&gt;</span> reach only as far as the rate-limit header. The green boundary is not a convention — it is asserted at compile time by two translation units that include exactly one umbrella header each and <span class="tt">#error</span> if a transport or adapter macro is visible: <span class="tt">tests/test-strategy-isolation.cpp</span> for <span class="tt">&lt;algotradelib/strategy&gt;</span>, and <span class="tt">tests/test-runner-isolation.cpp</span> for <span class="tt">&lt;algotradelib/runner&gt;</span>. A third, <span class="tt">tests/test-broker-isolation.cpp</span>, holds <span class="tt">&lt;algotradelib/broker&gt;</span> to a narrower line: Asio and the network module's rate-limit types, but no Beast and no OpenSSL.</p>
+<p>Green is I/O-free. Orange is the broker side; its HTTP and TLS code is in <span class="tt">&lt;network&gt;</span> and the adapters, which <span class="tt">&lt;algotradelib/broker&gt;</span> and <span class="tt">&lt;algotradelib/live&gt;</span> reach only as far as the rate-limit header. The green boundary is not a convention — it is asserted at compile time by two translation units that include exactly one umbrella header each and <span class="tt">#error</span> if a transport or adapter macro is visible: <span class="tt">tests/test-strategy-isolation.cpp</span> for <span class="tt">&lt;algotradelib/strategy&gt;</span>, and <span class="tt">tests/test-runner-isolation.cpp</span> for <span class="tt">&lt;algotradelib/runner&gt;</span>. A third, <span class="tt">tests/test-broker-isolation.cpp</span>, holds <span class="tt">&lt;algotradelib/broker&gt;</span> to a narrower line: Asio and the network module's rate-limit types, but no Beast and no OpenSSL. A fourth, <span class="tt">tests/test-mock-isolation.cpp</span>, holds <span class="tt">&lt;algotradelib/mock&gt;</span> to the same line: the mock broker reaches no HTTP, WebSocket or TLS code.</p>
 <p>What that assertion does and does not claim is worth being exact about. It establishes that a dry-run or replay translation unit <b>instantiates</b> no adapter and no transport code, so there is no instantiated code path from a backtest to a market. It does not claim libssl is off the link line: the package exports one interface target for every consumer, so an offline binary carries the dependency it never calls; the library does not have a transport-free target yet.</p>
 <p>Two other edges are worth reading off the picture:</p>
 <ul>

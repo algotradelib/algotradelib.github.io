@@ -1,5 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classalgotradelib_1_1network_1_1ClientCredentials.html" title=" " alt="" coords="5,5,166,67"/>
-<area shape="rect" id="Node000001" href="$structalgotradelib_1_1kis_1_1KisConfig.html" title="KIS credentials (app key and secret), demo or real account, and the market&#45;data tape." alt="" coords="214,14,348,58"/>
-<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="181,34,216,36,210,36,182,39"/>
+<area shape="rect" id="Node000000" href="$classalgotradelib_1_1mock_1_1MockClient.html" title="The mock broker&#39;s client: blocking, answering from a Market, after any faults scripted for the call." alt="" coords="5,5,149,50"/>
 </map>

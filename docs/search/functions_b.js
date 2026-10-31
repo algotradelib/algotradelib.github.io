@@ -27,6 +27,7 @@ var searchData=
   ['local_5fdate_24',['local_date',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#abc194e6bc9f52c7396d325326a2022c9',1,'algotradelib::strategy::SessionWindow']]],
   ['local_5ffailure_25',['local_failure',['../classalgotradelib_1_1runner_1_1Runner.html#a23e90e5fcf4c0bace8639a6abeb5b436',1,'algotradelib::runner::Runner']]],
   ['log_26',['log',['../classalgotradelib_1_1runner_1_1Context.html#a409ea09c485666df3f5b01b56b44a59d',1,'algotradelib::runner::Context::log()'],['../classalgotradelib_1_1strategy_1_1ProbeContextT.html#a824760971b89b5d9927a147ad5d8b743',1,'algotradelib::strategy::ProbeContextT::log()']]],
-  ['lot_5fof_27',['lot_of',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#a76b2cddc4a38cdec340a3080a00a37b6',1,'algotradelib::backtest::ReplayLedger']]],
-  ['low_28',['low',['../classalgotradelib_1_1analytics_1_1SeriesFrame.html#ad47bed820d7d200292473b59dfbec7b4',1,'algotradelib::analytics::SeriesFrame']]]
+  ['lose_5fnext_5freply_27',['lose_next_reply',['../classalgotradelib_1_1mock_1_1MockClient.html#a58d9eee8998098a21216269bc98419de',1,'algotradelib::mock::MockClient']]],
+  ['lot_5fof_28',['lot_of',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#a76b2cddc4a38cdec340a3080a00a37b6',1,'algotradelib::backtest::ReplayLedger']]],
+  ['low_29',['low',['../classalgotradelib_1_1analytics_1_1SeriesFrame.html#ad47bed820d7d200292473b59dfbec7b4',1,'algotradelib::analytics::SeriesFrame']]]
 ];

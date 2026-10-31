@@ -9,10 +9,11 @@ var searchData=
   ['algotradelib_3a_3akiwoom_6',['kiwoom',['../namespacealgotradelib_1_1kiwoom.html',1,'algotradelib']]],
   ['algotradelib_3a_3alive_7',['live',['../namespacealgotradelib_1_1live.html',1,'algotradelib']]],
   ['algotradelib_3a_3amath_8',['math',['../namespacealgotradelib_1_1math.html',1,'algotradelib']]],
-  ['algotradelib_3a_3anetwork_9',['network',['../namespacealgotradelib_1_1network.html',1,'algotradelib']]],
-  ['algotradelib_3a_3arunner_10',['runner',['../namespacealgotradelib_1_1runner.html',1,'algotradelib']]],
-  ['algotradelib_3a_3astrategy_11',['strategy',['../namespacealgotradelib_1_1strategy.html',1,'algotradelib']]],
-  ['algotradelib_3a_3astrategy_3a_3adispatch_12',['dispatch',['../namespacealgotradelib_1_1strategy_1_1dispatch.html',1,'algotradelib::strategy']]],
-  ['algotradelib_3a_3astrategy_3a_3avanilla_13',['vanilla',['../namespacealgotradelib_1_1strategy_1_1vanilla.html',1,'algotradelib::strategy']]],
-  ['algotradelib_3a_3atossinvest_14',['tossinvest',['../namespacealgotradelib_1_1tossinvest.html',1,'algotradelib']]]
+  ['algotradelib_3a_3amock_9',['mock',['../namespacealgotradelib_1_1mock.html',1,'algotradelib']]],
+  ['algotradelib_3a_3anetwork_10',['network',['../namespacealgotradelib_1_1network.html',1,'algotradelib']]],
+  ['algotradelib_3a_3arunner_11',['runner',['../namespacealgotradelib_1_1runner.html',1,'algotradelib']]],
+  ['algotradelib_3a_3astrategy_12',['strategy',['../namespacealgotradelib_1_1strategy.html',1,'algotradelib']]],
+  ['algotradelib_3a_3astrategy_3a_3adispatch_13',['dispatch',['../namespacealgotradelib_1_1strategy_1_1dispatch.html',1,'algotradelib::strategy']]],
+  ['algotradelib_3a_3astrategy_3a_3avanilla_14',['vanilla',['../namespacealgotradelib_1_1strategy_1_1vanilla.html',1,'algotradelib::strategy']]],
+  ['algotradelib_3a_3atossinvest_15',['tossinvest',['../namespacealgotradelib_1_1tossinvest.html',1,'algotradelib']]]
 ];
