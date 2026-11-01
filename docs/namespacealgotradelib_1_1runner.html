@@ -1780,7 +1780,7 @@ template&lt;typename Enum&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00082">82</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00082">journal_action_from()</a>, <a class="el" href="file__journal_8hpp_source.html#l00765">journal_entry_from_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00983">salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00082">journal_action_from()</a>, <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -1890,11 +1890,11 @@ template&lt;typename Enum&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The entry, or <span class="tt">std::nullopt</span> if the line is not a readable journal entry: not JSON, its action, outcome or time missing or unreadable, its time outside 1970-01-02 to 2200-01-01 (after 2019 on a line without a checksum) unless it is operator-only, an unknown field, or a checksum that does not match. If a field describing the order (symbol, country, venue, side, type, quantity, or a present condition, session, price or trigger) is missing or unreadable, the entry is operator-only, names no instrument, and its id is suffixed <span class="tt">~damaged</span>; it keeps its outcome. An unreadable route leaves the route unknown on an otherwise complete entry. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The entry, or <span class="tt">std::nullopt</span> if the line is not a readable journal entry: not JSON, its action, outcome or time missing or unreadable, its time outside 1970-01-02 to 2200-01-01 (after 2019 on a line without a checksum) unless it is an operator-only line at the epoch, an unknown field, or a checksum that does not match. If a field describing the order (symbol, country, venue, side, type, quantity, or a present condition, session, price or trigger) is missing or unreadable, the entry is operator-only, names no instrument, and its id is suffixed <span class="tt">~damaged</span>; it keeps its outcome. An unreadable route leaves the route unknown on an otherwise complete entry. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00765">765</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00761">761</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00765">journal_entry_from_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>.</p>
 
 </div>
 </div>
@@ -1932,7 +1932,7 @@ template&lt;typename Enum&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00669">669</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01413">algotradelib::runner::FileJournal::append()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00669">journal_entry_to_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01409">algotradelib::runner::FileJournal::append()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00669">journal_entry_to_line()</a>.</p>
 
 </div>
 </div>
@@ -2154,7 +2154,7 @@ template&lt;typename Enum&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00178">178</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00765">journal_entry_from_line()</a>, and <a class="el" href="journal_8hpp_source.html#l00178">journal_outcome_from()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>, and <a class="el" href="journal_8hpp_source.html#l00178">journal_outcome_from()</a>.</p>
 
 </div>
 </div>
@@ -3056,9 +3056,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The replay. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01260">1260</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01256">1256</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01260">parse_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01272">read_journal_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01256">parse_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01268">read_journal_file()</a>.</p>
 
 </div>
 </div>
@@ -3214,9 +3214,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The bytes and <span class="tt">READ</span>; <span class="tt">MISSING</span> if there is no file (a first start, nothing owed); or <span class="tt">UNREADABLE</span> if it exists and could not be opened or read to the end. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01079">1079</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01075">1075</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01079">read_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01272">read_journal_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01075">read_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01268">read_journal_file()</a>.</p>
 
 </div>
 </div>
@@ -3252,9 +3252,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The replay; see <span class="tt"><a class="el" href="#a1f8e785b57695ba73f215691204e747c" title="Reads a journal file&#39;s bytes, without opening it for appending.">read_journal_bytes</a></span> and <span class="tt"><a class="el" href="#aff85b9cd21b41fd1859c73af4cce59fd" title="Parses a journal&#39;s bytes, salvaging a torn final line.">parse_journal_bytes</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01272">1272</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01268">1268</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01272">read_journal_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01268">read_journal_file()</a>.</p>
 
 </div>
 </div>
@@ -3865,9 +3865,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the field is damaged. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00963">963</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00959">959</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00963">salvage_damaged()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00983">salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00959">salvage_damaged()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -3904,9 +3904,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The entry, or <span class="tt">std::nullopt</span> if the line does not even name a symbol. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00983">983</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00979">979</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00983">salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -4400,7 +4400,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00744">744</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00765">journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00983">salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00744">unattributable_journal_entry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00744">unattributable_journal_entry()</a>.</p>
 
 </div>
 </div>
