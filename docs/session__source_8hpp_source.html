@@ -1050,7 +1050,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('session__sourc
 <div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>    <span class="keywordflow">if</span> (journal_ == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>    }</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>    <span class="keyword">const</span> <span class="keyword">auto</span> replay = journal_-&gt;replay();</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; replay = journal_-&gt;replay();</div>
 <div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>    <span class="keyword">const</span> <span class="keyword">auto</span> open = <a class="code hl_function" href="namespacealgotradelib_1_1runner.html#abe75759c1f7351fcc6b793f2beac3198">runner::unresolved_instructions</a>(replay);</div>
 <div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>    <span class="keywordflow">if</span> (open.empty()) {</div>
 <div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>      reconcile_ = runner::ReconcileReport{};</div>
