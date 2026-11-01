@@ -153,7 +153,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>How much an <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1OrderIntent.html" title="One order a strategy asks the runner to place.">OrderIntent</a></span> trades: a quantity, a notional amount, or a target weight. </p>
 <p>The runner converts a notional or a weight into a quantity, using a price and the portfolio. Read the value with the accessor that matches <span class="tt"><a class="el" href="#a7e8d9beec3c4f67ff2b2d016c105319d" title="Returns how the size is expressed.">kind()</a></span>; the others throw. </p>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00137">137</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00139">139</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aed1d3be0d681f434f6747e90ffff34fb" name="aed1d3be0d681f434f6747e90ffff34fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed1d3be0d681f434f6747e90ffff34fb">&#9670;&#160;</a></span>SizeSpec()</h2>
@@ -180,7 +180,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Constructs a quantity of zero (reconciling it reports <span class="tt">QUANTITY_ROUNDS_TO_ZERO</span>). </p>
 
-<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00159">notional()</a>, <a class="el" href="intent_8hpp_source.html#l00147">quantity()</a>, and <a class="el" href="intent_8hpp_source.html#l00187">target_weight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="intent_8hpp_source.html#l00161">notional()</a>, <a class="el" href="intent_8hpp_source.html#l00149">quantity()</a>, and <a class="el" href="intent_8hpp_source.html#l00189">target_weight()</a>.</p>
 
 </div>
 </div>
@@ -217,9 +217,9 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00215">215</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00219">219</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00804">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00791">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -255,9 +255,9 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00205">205</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00209">209</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00804">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00791">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -293,9 +293,9 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00225">225</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00229">229</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00804">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00956">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00791">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00931">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +325,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns how the size is expressed. </p>
 <dl class="section return"><dt>Returns</dt><dd>The kind, which selects the accessor to read. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00198">198</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00200">200</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00804">algotradelib::strategy::reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00791">algotradelib::strategy::reconcile()</a>.</p>
 
 </div>
 </div>
@@ -363,7 +363,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The size. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00159">159</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00161">161</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +399,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The size. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00147">147</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00149">149</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
 </div>
 </div>
@@ -438,9 +438,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The size. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00187">187</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00189">189</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sizing_8hpp_source.html#l00150">algotradelib::strategy::vanilla::EqualWeightRebalance::on_phase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sizing_8hpp_source.html#l00151">algotradelib::strategy::vanilla::EqualWeightRebalance::on_phase()</a>.</p>
 
 </div>
 </div>

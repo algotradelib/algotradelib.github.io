@@ -341,7 +341,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00276">276</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00282">282</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +415,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00163">163</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">apply()</a>, <a class="el" href="ledger_8hpp_source.html#l00251">equity()</a>, and <a class="el" href="ledger_8hpp_source.html#l00618">equity_in()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00282">apply()</a>, <a class="el" href="ledger_8hpp_source.html#l00257">equity()</a>, and <a class="el" href="ledger_8hpp_source.html#l00619">equity_in()</a>.</p>
 
 </div>
 </div>
@@ -444,9 +444,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Forgets which lots changed, after a <span class="tt"><a class="el" href="#ad959d2663ae192356e4fc4069cbf5531" title="Returns the portfolio a strategy sees.">snapshot</a></span> that already shows them. </p>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00603">603</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00604">604</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00562">update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00563">update()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +477,7 @@ Public Member Functions</h2></td></tr>
 <p>The same value, digit for digit and in the same representation, as <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span> for that currency, without adding up every position: the ledger keeps a running total. It uses it only while the magnitudes of the cash and of every position it counts, added up and written at the largest scale among them, fit &ndash; which guarantees that <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span>'s own additions, in any order, cannot overflow &ndash; and otherwise calls <span class="tt"><a class="el" href="#a92546364ee4e4abc8d702d720fa86281" title="Returns total equity in a currency: cash plus positions at their last marks.">equity_in</a></span>.</p>
 <dl class="section return"><dt>Returns</dt><dd>The equity, or <span class="tt">std::nullopt</span> if the arithmetic does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00251">251</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00257">257</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -514,9 +514,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The equity, or <span class="tt">std::nullopt</span> if the arithmetic does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00618">618</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00619">619</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00251">equity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00257">equity()</a>.</p>
 
 </div>
 </div>
@@ -552,7 +552,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00232">232</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00236">236</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +582,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns whether the ledger keeps the executions it applies. </p>
 <dl class="section return"><dt>Returns</dt><dd>The setting it was constructed with. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00224">224</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00226">226</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00087">ReplayLedger()</a>.</p>
 
@@ -621,7 +621,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Its place, or <span class="tt">std::nullopt</span> if no fill opened a lot in it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00477">477</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00479">479</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -662,7 +662,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if a position's value does not fit (that position keeps its old mark and value; <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html" title="Replays bars (and quotes) through one strategy, with a ledger and a fill model.">Backtester</a></span> halts the replay with <span class="tt">mark_not_representable</span>); <span class="tt">true</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00462">462</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00464">464</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -703,9 +703,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>As <span class="tt"><a class="el" href="#ac1486c555aac77cfa001b2b387a46c2b" title="Marks positions in an instrument to a price, updating their market value.">mark</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00485">485</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00489">489</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00462">mark()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00464">mark()</a>.</p>
 
 </div>
 </div>
@@ -888,7 +888,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00201">201</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00276">apply()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ledger_8hpp_source.html#l00282">apply()</a>.</p>
 
 </div>
 </div>
@@ -933,7 +933,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The portfolio. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00517">517</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00520">520</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +989,7 @@ template&lt;typename BrokerTag&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00562">562</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ledger_8hpp_source.html#l00563">563</a> of file <a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>.</p>
 
 </div>
 </div>

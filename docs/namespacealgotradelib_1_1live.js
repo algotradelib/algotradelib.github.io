@@ -2,9 +2,9 @@ var namespacealgotradelib_1_1live =
 [
     [ "SessionExecutor", "classalgotradelib_1_1live_1_1SessionExecutor.html", "classalgotradelib_1_1live_1_1SessionExecutor" ],
     [ "SessionSource", "classalgotradelib_1_1live_1_1SessionSource.html", "classalgotradelib_1_1live_1_1SessionSource" ],
-    [ "BoundRunner", "namespacealgotradelib_1_1live.html#ae8b22f13947a1bed732bbeb8403c42bb", null ],
-    [ "JournaledRunner", "namespacealgotradelib_1_1live.html#aa6a5bfa531abc9945b7c87db10cfe2ee", null ],
-    [ "ObservingRunner", "namespacealgotradelib_1_1live.html#a3637b9f11faf2e4c23aab33b1b4a2717", null ],
+    [ "BoundRunner", "namespacealgotradelib_1_1live.html#ac4f8c120794b9394f371bc416b2dc8ea", null ],
+    [ "JournaledRunner", "namespacealgotradelib_1_1live.html#a22273fb3e687a1037b43875f4367026a", null ],
+    [ "ObservingRunner", "namespacealgotradelib_1_1live.html#aa65a45f1be7c7de25e2c730873c987c0", null ],
     [ "bind", "namespacealgotradelib_1_1live.html#af531075724b5c38aa848c5d8bbec48ed", null ],
     [ "bind_journaled", "namespacealgotradelib_1_1live.html#a3ce65f98a5517b9dfdb8502d798508d7", null ],
     [ "bind_observer", "namespacealgotradelib_1_1live.html#a4277e01edb971953e079b47f1e587440", null ],

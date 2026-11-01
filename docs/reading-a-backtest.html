@@ -131,7 +131,7 @@ What it is</h1>
 <div class="line"> </div>
 <div class="line">backtest::ReplayConfig config;</div>
 <div class="line">config.cash_ = <a class="code hl_function" href="classalgotradelib_1_1Decimal64.html#ae1ac1381266a0fc492abcd63a6fc33ca">atl::Decimal64::parse</a>(<span class="stringliteral">&quot;100000000&quot;</span>);</div>
-<div class="line">config.instruments_ = {reference};          <span class="comment">// reference data, with its PriceRule</span></div>
+<div class="line">config.instruments_ = {reference}; <span class="comment">// reference data, with its PriceRule</span></div>
 <div class="line"> </div>
 <div class="line">backtest::Backtester&lt;vanilla::SmaCrossover&gt; engine(</div>
 <div class="line">  vanilla::SmaCrossover{params},</div>
@@ -148,8 +148,8 @@ What it is</h1>
 <div class="line">engine.finish();</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> report = backtest::summarize(engine.result(), engine.fills(), periods_per_year);</div>
-<div class="ttc" id="aclassalgotradelib_1_1Decimal64_html_ae1ac1381266a0fc492abcd63a6fc33ca"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html#ae1ac1381266a0fc492abcd63a6fc33ca">algotradelib::Decimal64::parse</a></div><div class="ttdeci">static Decimal64 parse(std::string_view input)</div><div class="ttdoc">Parses a decimal string exactly (no binary floating point).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00443">types.hpp:443</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00274">event.hpp:274</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1Decimal64_html_ae1ac1381266a0fc492abcd63a6fc33ca"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html#ae1ac1381266a0fc492abcd63a6fc33ca">algotradelib::Decimal64::parse</a></div><div class="ttdeci">static Decimal64 parse(std::string_view input)</div><div class="ttdoc">Parses a decimal string exactly (no binary floating point).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00466">types.hpp:466</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00267">event.hpp:267</a></div></div>
 </div><!-- fragment --><p>The <b>third</b> configuration of <span class="tt">Runner</span>, after <span class="tt">DryRunner</span> and the session-backed one. A strategy's source is identical in all three; if it were not, the surface would be wrong.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md64"></a>
 The one guarantee worth relying on</h1>
@@ -216,13 +216,15 @@ limit": a limit marketable through the whole bar is credited the bar's worst pri
 Quotes, and the one place a quote-driven replay differs from a quote-driven live run</h1>
 <p><span class="tt">Backtester::feed</span> takes a <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1QuoteEvent.html" title="A quote the runner has just read, delivered to on_quote.">strategy::QuoteEvent</a></span> as well as a <span class="tt">BarEvent</span>, so <span class="tt">on_quote</span> fires in a replay. It did not before: <span class="tt">QuoteEvent</span> appeared nowhere in <span class="tt">backtest/</span>, while <span class="tt">PollKind::QUOTES</span> is a supported live cadence — so a strategy that acts between bars ran live having been evaluated against nothing. Interleave quotes and bars in timestamp order yourself, exactly as you already interleave bars across instruments.</p>
 <p>Sketched — <span class="tt">bar</span> and <span class="tt">quote</span> stand for events you build from your own data:</p>
-<div class="fragment"><div class="line">engine.feed(bar);      // yesterday&#39;s close  -&gt; on_bar</div>
-<div class="line">engine.feed(quote);    // today 10:30        -&gt; on_quote; an order placed here cannot fill</div>
-<div class="line">                       //                       against today&#39;s bar, whose open was 09:00</div>
-<div class="line">engine.feed(bar);      // today&#39;s close      -&gt; on_bar</div>
-<div class="line">engine.feed(bar);      // tomorrow&#39;s close   -&gt; a market order from the quote fills here, at</div>
-<div class="line">                       //                       tomorrow&#39;s open; a limit may miss, and expires</div>
-<div class="line">                       //                       with tomorrow&#39;s session</div>
+<div class="fragment"><div class="line">// yesterday&#39;s close -&gt; on_bar</div>
+<div class="line">engine.feed(bar);</div>
+<div class="line">// today 10:30 -&gt; on_quote; an order placed here cannot fill against today&#39;s bar, whose open was 09:00</div>
+<div class="line">engine.feed(quote);</div>
+<div class="line">// today&#39;s close -&gt; on_bar</div>
+<div class="line">engine.feed(bar);</div>
+<div class="line">// tomorrow&#39;s close -&gt; a market order from the quote fills here, at tomorrow&#39;s open.</div>
+<div class="line">// A limit may miss, and expires with tomorrow&#39;s session.</div>
+<div class="line">engine.feed(bar);</div>
 <div class="line">engine.finish();</div>
 </div><!-- fragment --><p><b>A quote does the same thing in both modes, because both go through the same function.</b> <span class="tt">Runner::feed(const QuoteEvent&amp;)</span> sets the price a market order is valued at, advances the decision clock to the quote's own instant, and calls the handler; live, the quote poll calls exactly that. What a replay arranges around it is an approximation of the rest of a live iteration, and the last three rows below say which way each one errs:</p>
 <table class="markdownTable">
@@ -281,7 +283,7 @@ The equity curve is one currency's</h1>
 Costs, which are the most common way a backtest lies</h1>
 <p>A strategy evaluated at zero cost can look excellent and lose money at any real one. So costs are models you state, and <span class="tt">analytics</span> deliberately carries none of its own:</p>
 <div class="fragment"><div class="line">backtest::CommissionModel::of(rate, per_order_minimum);</div>
-<div class="line">backtest::SlippageModel::of_ticks(1);          <span class="comment">// one tick at the instrument&#39;s own grid</span></div>
+<div class="line">backtest::SlippageModel::of_ticks(1); <span class="comment">// one tick at the instrument&#39;s own grid</span></div>
 <div class="line">backtest::SlippageModel::of_basis_points(bps); <span class="comment">// a fraction of the price</span></div>
 </div><!-- fragment --><p>Slippage always moves <b>against</b> the order — slippage that helped would not be slippage, and a model cutting both ways would be right on average and flattering in exactly the cases a strategy trades most. A tick means a tick <em>at that price level</em>, through the instrument's <span class="tt">PriceRule</span>, so it is 100 won at 70,000 and 50 at 30,000; an unknown grid contributes nothing rather than a guessed step. Several ticks walk the grid one step at a time: three ticks up from 4,990 are 4,995, 5,000 and 5,010, and three down from 5,010 are 5,000, 4,995 and 4,990, so from a price on the KRX grid the tick walk stays on it across a band boundary (basis points, when combined with ticks, are added after the walk and can leave the grid). The tick walk never steps a sell to zero or below; the report's <span class="tt">slippage_ticks_</span> is the count you configured, and fewer apply where the grid has no further step.</p>
 <p><b>Charging nothing is itself a model</b>, and the report says so. A zero-cost run should be your informed choice, not an oversight you cannot detect.</p>

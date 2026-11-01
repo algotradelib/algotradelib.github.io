@@ -155,7 +155,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The contents of a journal, including what could not be read. </p>
 <p>Damage is returned as data: a torn last line is evidence that something was in flight. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00464">464</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00474">474</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a2ad7c4349a9c783904b06f98f22ab643" name="a2ad7c4349a9c783904b06f98f22ab643"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ad7c4349a9c783904b06f98f22ab643">&#9670;&#160;</a></span>intact()</h2>
@@ -183,7 +183,7 @@ Public Attributes</h2></td></tr>
 <p>Tests whether everything was read. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if readable, with no unparsed lines and no torn last line. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00499">499</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00509">509</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -213,9 +213,9 @@ Public Attributes</h2></td></tr>
 <p>Tests whether the file could be read. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> only for <span class="tt">UNREADABLE</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00484">484</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00494">494</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00499">intact()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01291">algotradelib::runner::recover_into()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00509">intact()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01249">algotradelib::runner::recover_into()</a>.</p>
 
 </div>
 </div>
@@ -234,9 +234,9 @@ Public Attributes</h2></td></tr>
 
 <p>What was wrong, for the operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00472">472</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00482">482</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01291">algotradelib::runner::recover_into()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01249">algotradelib::runner::recover_into()</a>.</p>
 
 </div>
 </div>
@@ -254,9 +254,9 @@ Public Attributes</h2></td></tr>
 
 <p>Every line that parsed, in file order. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00466">466</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00476">476</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00592">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00535">algotradelib::runner::recorded_placements()</a>, <a class="el" href="journal_8hpp_source.html#l00651">algotradelib::runner::MemoryJournal::replay()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">algotradelib::runner::unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00602">algotradelib::runner::placements_of()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00516">algotradelib::runner::recorded_placements()</a>, <a class="el" href="journal_8hpp_source.html#l00662">algotradelib::runner::MemoryJournal::replay()</a>, and <a class="el" href="journal_8hpp_source.html#l00547">algotradelib::runner::unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -274,7 +274,7 @@ Public Attributes</h2></td></tr>
 
 <p>Whether a header was found; a non-empty file without one is not written to. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00476">476</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00486">486</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +292,7 @@ Public Attributes</h2></td></tr>
 
 <p>The broker and account the file's header declares, if it has one. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00474">474</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00484">484</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,9 +310,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the file was read; <span class="tt">READ</span> for an in-memory journal. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00478">478</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00488">488</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00484">readable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00494">readable()</a>.</p>
 
 </div>
 </div>
@@ -330,9 +330,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the last line was incomplete, as after a kill during a write. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00470">470</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00480">480</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00499">intact()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01291">algotradelib::runner::recover_into()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00509">intact()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01249">algotradelib::runner::recover_into()</a>.</p>
 
 </div>
 </div>
@@ -350,9 +350,9 @@ Public Attributes</h2></td></tr>
 
 <p>How many lines did not parse (on an append-only file, writes that did not finish). </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00468">468</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00478">478</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00499">intact()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01291">algotradelib::runner::recover_into()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00509">intact()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01249">algotradelib::runner::recover_into()</a>.</p>
 
 </div>
 </div>

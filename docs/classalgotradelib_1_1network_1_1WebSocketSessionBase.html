@@ -313,7 +313,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 <p><span class="tt"><a class="el" href="#adb6704727c717d1744512914f5d18dbc" title="Closes the session asynchronously after any write in progress, and disables reconnection; on_closed i...">close()</a></span> cancels the stage in progress, but a stage whose completion was already queued arrives without an error. Going on would open a session whose <span class="tt"><a class="el" href="#adb6704727c717d1744512914f5d18dbc" title="Closes the session asynchronously after any write in progress, and disables reconnection; on_closed i...">close()</a></span> is spent: <span class="tt"><a class="el" href="#a1ab8d5372a6114321fe220597d2e8ded" title="Called when the session has closed (by close() or by the server).">on_closed</a></span> would never be called, and a later <span class="tt"><a class="el" href="#adb6704727c717d1744512914f5d18dbc" title="Closes the session asynchronously after any write in progress, and disables reconnection; on_closed i...">close()</a></span> would return early because one is in progress.</p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the session was closing: it is torn down and <span class="tt"><a class="el" href="#a1ab8d5372a6114321fe220597d2e8ded" title="Called when the session has closed (by close() or by the server).">on_closed</a></span> has been called. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00255">255</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00252">252</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00275">275</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00272">272</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -448,9 +448,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Called when the session has closed (by <span class="tt"><a class="el" href="#adb6704727c717d1744512914f5d18dbc" title="Closes the session asynchronously after any write in progress, and disables reconnection; on_closed i...">close()</a></span> or by the server). </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00172">172</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00171">171</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00255">abandon_if_closing()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00275">fail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00252">abandon_if_closing()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00272">fail()</a>.</p>
 
 </div>
 </div>
@@ -492,9 +492,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00167">167</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00166">166</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00275">fail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00272">fail()</a>.</p>
 
 </div>
 </div>
@@ -560,7 +560,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Called when the session is connected (after each successful upgrade, reconnects included). </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00159">159</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00158">158</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -630,9 +630,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 <p>Returns a shared pointer to this session as the transport type. </p>
 <dl class="section return"><dt>Returns</dt><dd>The pointer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00213">213</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00212">212</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00106">close()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00078">connect()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00093">send()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00218">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00229">start_ws_handshake()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00106">close()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00078">connect()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00093">send()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00217">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00228">start_ws_handshake()</a>.</p>
 
 </div>
 </div>
@@ -663,7 +663,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Starts the DNS lookup; called by the transport class's <span class="tt">do_connect()</span> once <span class="tt"><a class="el" href="#acd161b2fdd3866218f6c2848e2b8fbd2" title="The stream, created by the transport class on each connect.">ws_</a></span> is ready. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00218">218</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00217">217</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -694,7 +694,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Sends the upgrade request; called once connected (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WsSession.html" title="A WebSocket client over plain TCP (no TLS); derive from it and override on_message.">WsSession</a></span>) or after the TLS handshake (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WssSession.html" title="A WebSocket client over TLS; derive from it and override on_message.">WssSession</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00229">229</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00228">228</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -721,7 +721,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00293">293</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00290">290</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -750,7 +750,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The read buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00183">183</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00182">182</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -778,9 +778,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Whether a close is in progress. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00199">199</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00198">198</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00255">abandon_if_closing()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00275">fail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00252">abandon_if_closing()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00272">fail()</a>.</p>
 
 </div>
 </div>
@@ -808,9 +808,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Whether the session is connected. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00195">195</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00194">194</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00275">fail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00272">fail()</a>.</p>
 
 </div>
 </div>
@@ -838,9 +838,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Whether a connect is in progress. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00197">197</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00196">196</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00255">abandon_if_closing()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00275">fail()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00218">start_resolve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00252">abandon_if_closing()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00272">fail()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00217">start_resolve()</a>.</p>
 
 </div>
 </div>
@@ -868,9 +868,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The host. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00187">187</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00186">186</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00218">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00217">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
 
 </div>
 </div>
@@ -898,9 +898,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The <span class="tt">Host</span> header value (<span class="tt">host:port</span>), set on connect. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00191">191</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00190">190</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00229">start_ws_handshake()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00228">start_ws_handshake()</a>.</p>
 
 </div>
 </div>
@@ -928,9 +928,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The options. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00193">193</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00192">192</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00229">start_ws_handshake()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00228">start_ws_handshake()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
 
 </div>
 </div>
@@ -958,9 +958,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The port. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00189">189</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00188">188</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00218">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00217">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
 
 </div>
 </div>
@@ -988,7 +988,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Reconnect attempts since the last successful connect. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00205">205</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00204">204</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -1016,7 +1016,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The random source for reconnect jitter. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00207">207</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00206">206</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
 
@@ -1046,7 +1046,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The reconnect timer. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00179">179</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00178">178</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
 
@@ -1076,9 +1076,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The resolver. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00177">177</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00176">176</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00218">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00217">start_resolve()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
 
 </div>
 </div>
@@ -1106,7 +1106,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Whether <span class="tt"><a class="el" href="#adb6704727c717d1744512914f5d18dbc" title="Closes the session asynchronously after any write in progress, and disables reconnection; on_closed i...">close()</a></span> was called (no reconnection). </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00203">203</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00202">202</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1134,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The strand every handler runs on. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00175">175</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00174">174</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00106">close()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00078">connect()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00093">send()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00139">WebSocketSessionBase()</a>.</p>
 
@@ -1164,7 +1164,7 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Messages waiting to be sent; the front one may be being written. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00185">185</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00184">184</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
 </div>
 </div>
@@ -1192,9 +1192,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>Whether a write is in progress. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00201">201</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00200">200</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00275">fail()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00272">fail()</a>.</p>
 
 </div>
 </div>
@@ -1222,9 +1222,9 @@ template&lt;typename Derived, typename Stream&gt; </div>
 
 <p>The stream, created by the transport class on each connect. </p>
 
-<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00181">181</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__session__base_8hpp_source.html#l00180">180</a> of file <a class="el" href="ws__session__base_8hpp_source.html">ws_session_base.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00255">abandon_if_closing()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00275">fail()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00229">start_ws_handshake()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ws__session__base_8hpp_source.html#l00252">abandon_if_closing()</a>, <a class="el" href="ws__session__base_8hpp_source.html#l00272">fail()</a>, and <a class="el" href="ws__session__base_8hpp_source.html#l00228">start_ws_handshake()</a>.</p>
 
 </div>
 </div>

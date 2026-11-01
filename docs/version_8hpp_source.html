@@ -138,15 +138,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('version_8hpp_s
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#if ATL_VERSION_DEV</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define ATL_VERSION_STRING \</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">  ATL_VERSION_STRINGIZE(ATL_VERSION_MAJOR) &quot;.&quot; ATL_VERSION_STRINGIZE(ATL_VERSION_MINOR) &quot;.&quot; \</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">  ATL_VERSION_STRINGIZE(ATL_VERSION_PATCH) &quot;.&quot; ATL_VERSION_STRINGIZE(ATL_VERSION_DEV)</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
-<div class="foldopen" id="foldopen00068" data-start="" data-end="">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="version_8hpp.html#af736cd936cd7285f37c8986fc603dca1">   68</a></span><span class="preprocessor">#define ATL_VERSION_STRING \</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">  ATL_VERSION_STRINGIZE(ATL_VERSION_MAJOR) &quot;.&quot; ATL_VERSION_STRINGIZE(ATL_VERSION_MINOR) &quot;.&quot; \</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">  ATL_VERSION_STRINGIZE(ATL_VERSION_PATCH)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">  ATL_VERSION_STRINGIZE(ATL_VERSION_MAJOR) \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">  &quot;.&quot; ATL_VERSION_STRINGIZE(ATL_VERSION_MINOR) &quot;.&quot; ATL_VERSION_STRINGIZE(ATL_VERSION_PATCH) &quot;.&quot; ATL_VERSION_STRINGIZE( \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    ATL_VERSION_DEV \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">  )</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00070" data-start="" data-end="">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="version_8hpp.html#af736cd936cd7285f37c8986fc603dca1">   70</a></span><span class="preprocessor">#define ATL_VERSION_STRING \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">  ATL_VERSION_STRINGIZE(ATL_VERSION_MAJOR) \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">  &quot;.&quot; ATL_VERSION_STRINGIZE(ATL_VERSION_MINOR) &quot;.&quot; ATL_VERSION_STRINGIZE(ATL_VERSION_PATCH)</span></div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

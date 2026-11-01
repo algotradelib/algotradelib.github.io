@@ -135,33 +135,37 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('brokers_2mock_
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classalgotradelib_1_1mock_1_1MarketClock.html#af78ab42b269f9f67c0a0d7eea6265906">   22</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classalgotradelib_1_1mock_1_1MarketClock.html#af78ab42b269f9f67c0a0d7eea6265906">MarketClock</a>(<a class="code hl_class" href="classalgotradelib_1_1mock_1_1Market.html">Market</a>&amp; market) : market_(&amp;market) {}</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classalgotradelib_1_1mock_1_1MarketClock.html#ad88167b7063efed9e18b98bdd64b0cc7">   28</a></span>  std::chrono::system_clock::time_point <a class="code hl_function" href="classalgotradelib_1_1mock_1_1MarketClock.html#ad88167b7063efed9e18b98bdd64b0cc7">now</a>() const noexcept { <span class="keywordflow">return</span> market_-&gt;now(); }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6">   34</a></span>  std::chrono::steady_clock::time_point <a class="code hl_function" href="classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6">monotonic_now</a>() const noexcept {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> std::chrono::steady_clock::time_point(</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      std::chrono::duration_cast&lt;std::chrono::steady_clock::duration&gt;(market_-&gt;now().time_since_epoch())</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    );</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  }</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classalgotradelib_1_1mock_1_1MarketClock.html#ad88167b7063efed9e18b98bdd64b0cc7">   28</a></span>  std::chrono::system_clock::time_point <a class="code hl_function" href="classalgotradelib_1_1mock_1_1MarketClock.html#ad88167b7063efed9e18b98bdd64b0cc7">now</a>() const noexcept {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">return</span> market_-&gt;now();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245">   44</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245">wait_for</a>(std::chrono::nanoseconds duration) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (duration.count() &gt; 0) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      market_-&gt;advance_to(market_-&gt;now() + std::chrono::duration_cast&lt;std::chrono::system_clock::duration&gt;(duration));</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6">   36</a></span>  std::chrono::steady_clock::time_point <a class="code hl_function" href="classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6">monotonic_now</a>() const noexcept {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">return</span> std::chrono::steady_clock::time_point(</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      std::chrono::duration_cast&lt;std::chrono::steady_clock::duration&gt;(market_-&gt;now().time_since_epoch())</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    );</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_class" href="classalgotradelib_1_1mock_1_1Market.html">Market</a>* market_;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245">   46</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245">wait_for</a>(std::chrono::nanoseconds duration) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (duration.count() &gt; 0) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      market_-&gt;advance_to(market_-&gt;now() + std::chrono::duration_cast&lt;std::chrono::system_clock::duration&gt;(duration));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace mock</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace algotradelib</span></div>
-<div class="ttc" id="aclassalgotradelib_1_1mock_1_1MarketClock_html_a0ebea8b81aa93c11c9a5545c072d0ac6"><div class="ttname"><a href="classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6">algotradelib::mock::MarketClock::monotonic_now</a></div><div class="ttdeci">std::chrono::steady_clock::time_point monotonic_now() const noexcept</div><div class="ttdoc">Returns a reading that moves with the market&#39;s time and never backwards.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">clock.hpp:34</a></div></div>
-<div class="ttc" id="aclassalgotradelib_1_1mock_1_1MarketClock_html_a5f030747c92fdf92300c75d417a7b245"><div class="ttname"><a href="classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245">algotradelib::mock::MarketClock::wait_for</a></div><div class="ttdeci">void wait_for(std::chrono::nanoseconds duration)</div><div class="ttdoc">Advances the market by a duration instead of sleeping.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">clock.hpp:44</a></div></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_class" href="classalgotradelib_1_1mock_1_1Market.html">Market</a>* market_;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// namespace mock</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="ttc" id="aclassalgotradelib_1_1mock_1_1MarketClock_html_a0ebea8b81aa93c11c9a5545c072d0ac6"><div class="ttname"><a href="classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6">algotradelib::mock::MarketClock::monotonic_now</a></div><div class="ttdeci">std::chrono::steady_clock::time_point monotonic_now() const noexcept</div><div class="ttdoc">Returns a reading that moves with the market&#39;s time and never backwards.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">clock.hpp:36</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1mock_1_1MarketClock_html_a5f030747c92fdf92300c75d417a7b245"><div class="ttname"><a href="classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245">algotradelib::mock::MarketClock::wait_for</a></div><div class="ttdeci">void wait_for(std::chrono::nanoseconds duration)</div><div class="ttdoc">Advances the market by a duration instead of sleeping.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">clock.hpp:46</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1mock_1_1MarketClock_html_ad88167b7063efed9e18b98bdd64b0cc7"><div class="ttname"><a href="classalgotradelib_1_1mock_1_1MarketClock.html#ad88167b7063efed9e18b98bdd64b0cc7">algotradelib::mock::MarketClock::now</a></div><div class="ttdeci">std::chrono::system_clock::time_point now() const noexcept</div><div class="ttdoc">Returns the market&#39;s time.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">clock.hpp:28</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1mock_1_1MarketClock_html_af78ab42b269f9f67c0a0d7eea6265906"><div class="ttname"><a href="classalgotradelib_1_1mock_1_1MarketClock.html#af78ab42b269f9f67c0a0d7eea6265906">algotradelib::mock::MarketClock::MarketClock</a></div><div class="ttdeci">MarketClock(Market &amp;market)</div><div class="ttdoc">Builds a clock over a market.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">clock.hpp:22</a></div></div>
 <div class="ttc" id="aclassalgotradelib_1_1mock_1_1Market_html"><div class="ttname"><a href="classalgotradelib_1_1mock_1_1Market.html">algotradelib::mock::Market</a></div><div class="ttdoc">A market in memory: bars the caller gives, a clock the caller moves, one account&#39;s cash,...</div><div class="ttdef"><b>Definition</b> <a href="market_8hpp_source.html#l00099">market.hpp:99</a></div></div>

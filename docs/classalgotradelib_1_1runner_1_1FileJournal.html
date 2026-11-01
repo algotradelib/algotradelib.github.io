@@ -153,7 +153,7 @@ Public Member Functions</h2></td></tr>
 <p><span class="tt"><a class="el" href="#ad30188f3f4df0c2a72448ec4cf41f91b" title="Reads the journal back.">replay()</a></span> keeps what it read, so the parsed journal stays in memory while the journal is open. On POSIX a later call reads only the lines appended since, when the file's device, inode, size and modification and status-change times show that only this journal wrote to it; a change by another program between two calls makes it read the whole file. A change by another program that leaves all of them as they were (within the file system's timestamp resolution), or that happens during one of this journal's own writes (an in-place write, or a truncation), is read at the next whole read, which a newly opened journal always does.</p>
 <p>Lines are stamped with the clock the journal's writer is given, and a line whose instant lies outside 1970-01-02 to 2200-01-01 reads as damage (see <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#ae38131f594850cacb185524fc7fc83d7" title="Parses one journal line.">journal_entry_from_line</a></span>). So a paper market's clock may run over history from 1970-01-02 on; earlier history is not supported. </p>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01301">1301</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01329">1329</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad8874adfb90801cf16d94e87393eb1f7" name="ad8874adfb90801cf16d94e87393eb1f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8874adfb90801cf16d94e87393eb1f7">&#9670;&#160;</a></span>FileJournal()</h2>
@@ -192,7 +192,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01312">1312</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01340">1340</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the line was written whole and flushed. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01409">1409</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01444">1444</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -260,9 +260,9 @@ Public Member Functions</h2></td></tr>
 <p>Tests whether the journal opened. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it is open for appending. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01369">1369</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01394">1394</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01409">append()</a>, <a class="el" href="file__journal_8hpp_source.html#l01312">FileJournal()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01445">replay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01444">append()</a>, <a class="el" href="file__journal_8hpp_source.html#l01340">FileJournal()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01480">replay()</a>.</p>
 
 </div>
 </div>
@@ -292,9 +292,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns the file's path. </p>
 <dl class="section return"><dt>Returns</dt><dd>The path. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01382">1382</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01411">1411</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01312">FileJournal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01340">FileJournal()</a>.</p>
 
 </div>
 </div>
@@ -325,7 +325,7 @@ Public Member Functions</h2></td></tr>
 <p>The file holds another account's records, has no header, or cannot be read; another writer holds its lock (POSIX); the lock could not be taken; the file could not be opened; a torn last line could not be repaired; or the scope is empty.</p>
 <dl class="section return"><dt>Returns</dt><dd>The reason, or empty if it opened. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01399">1399</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01432">1432</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +355,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns what opening had to repair: a torn last line is terminated and a salvaged entry written beside it. </p>
 <dl class="section return"><dt>Returns</dt><dd>The description, or empty if nothing was wrong. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01376">1376</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01403">1403</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +386,7 @@ Public Member Functions</h2></td></tr>
 <p>The result is kept by the journal: it stays valid until the next call, or until the journal is moved or destroyed, and <span class="tt"><a class="el" href="#a36458d76e312e78ad44c6810cefbcb50" title="Appends one entry and flushes it to disk.">append</a></span> does not change it. So do not call <span class="tt"><a class="el" href="#ad30188f3f4df0c2a72448ec4cf41f91b" title="Reads the journal back.">replay()</a></span> while still using an earlier result, and do not call it from two threads at once. On POSIX only the lines appended since the last call are read and parsed, when the file shows that only this journal wrote to it; otherwise, and always on Windows, the whole file is.</p>
 <dl class="section return"><dt>Returns</dt><dd>The replay, reporting anything that could not be read. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01445">1445</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01480">1480</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -416,9 +416,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns the journal's broker and account. </p>
 <dl class="section return"><dt>Returns</dt><dd>The scope. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01388">1388</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01419">1419</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01312">FileJournal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01340">FileJournal()</a>.</p>
 
 </div>
 </div>

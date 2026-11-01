@@ -555,9 +555,9 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <div class="line">dry.context().set_instrument(reference);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> report = dry.feed(<a class="code hl_function" href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">strategy::make_bar_event</a>(<span class="keywordtype">id</span>, BarInterval::ONE_DAY, <a class="code hl_enumvalue" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">BarStamp::CLOSE</a>, bar));</div>
 <div class="line"><span class="comment">// report.would_place_ holds what would have been sent</span></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a0a953e1898c7dd6ec8560a110d4db989"><div class="ttname"><a href="#a0a953e1898c7dd6ec8560a110d4db989">algotradelib::runner::DryRunner</a></div><div class="ttdeci">Runner&lt; Strategy, CapsType, DryTag, RecordingExecutor&lt; DryTag &gt; &gt; DryRunner</div><div class="ttdoc">A runner that sends nothing: handlers fire and instructions are recorded by a RecordingExecutor.</div><div class="ttdef"><b>Definition</b> <a href="runner_8hpp_source.html#l04603">runner.hpp:4603</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00274">event.hpp:274</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_html_a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d"><div class="ttname"><a href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">algotradelib::BarStamp::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">The timestamp is the instant the period ended.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00122">market_data.hpp:122</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a0a953e1898c7dd6ec8560a110d4db989"><div class="ttname"><a href="#a0a953e1898c7dd6ec8560a110d4db989">algotradelib::runner::DryRunner</a></div><div class="ttdeci">Runner&lt; Strategy, CapsType, DryTag, RecordingExecutor&lt; DryTag &gt; &gt; DryRunner</div><div class="ttdoc">A runner that sends nothing: handlers fire and instructions are recorded by a RecordingExecutor.</div><div class="ttdef"><b>Definition</b> <a href="runner_8hpp_source.html#l04770">runner.hpp:4770</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00267">event.hpp:267</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d"><div class="ttname"><a href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">algotradelib::BarStamp::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">The timestamp is the instant the period ended.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00127">market_data.hpp:127</a></div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Strategy</td><td>The strategy type. </td></tr>
@@ -566,7 +566,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l04603">4603</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l04770">4770</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -611,7 +611,7 @@ template&lt;typename Broker&gt; </div>
 
 <p><span class="tt"><a class="el" href="#ad7e4b613b463f3c4c87852c8318a6502" title="What one attribute of a broker row says about an instruction.">Evidence</a></span>, under the name used for the route comparison. </p>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00249">249</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00242">242</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +647,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00190">190</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00183">183</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
 </div>
 </div>
@@ -726,7 +726,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00093">93</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00098">98</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -761,7 +761,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00433">433</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00443">443</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -865,7 +865,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00374">374</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00379">379</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 </div>
 </div>
@@ -947,7 +947,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00117">117</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00122">122</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1076,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00299">299</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00304">304</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1110,7 +1110,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00263">263</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00268">268</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
 </div>
 </div>
@@ -1147,9 +1147,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if any is a <span class="tt">PLACE</span> that is not operator-only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01077">1077</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01040">1040</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01077">any_placement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01040">any_placement()</a>.</p>
 
 </div>
 </div>
@@ -1198,9 +1198,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ABSENT</span> if either is <span class="tt">UNKNOWN</span>; otherwise <span class="tt">CONFIRMS</span> or <span class="tt">CONTRADICTS</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00259">259</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00252">252</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00259">attribute_evidence()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01111">dates_listed_order()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00368">row_corresponds()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00423">row_might_correspond()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00252">attribute_evidence()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01073">dates_listed_order()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00353">row_corresponds()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00408">row_might_correspond()</a>.</p>
 
 </div>
 </div>
@@ -1237,9 +1237,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the request reached the broker and the category is <span class="tt">RATE_LIMIT</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00190">190</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00195">195</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00190">broker_rate_limited()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00195">broker_rate_limited()</a>.</p>
 
 </div>
 </div>
@@ -1276,9 +1276,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if nothing was sent and the category is not <span class="tt">INVALID_ARGUMENT</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00176">176</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00181">181</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00176">broker_unreachable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00181">broker_unreachable()</a>.</p>
 
 </div>
 </div>
@@ -1314,9 +1314,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The date. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01204">1204</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01165">1165</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01204">date_of()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01230">history_range_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01165">date_of()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01191">history_range_for()</a>.</p>
 
 </div>
 </div>
@@ -1357,9 +1357,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the history row dates the listed order. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01111">1111</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01073">1073</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01111">dates_listed_order()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01073">dates_listed_order()</a>.</p>
 
 </div>
 </div>
@@ -1401,9 +1401,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A report with every instruction <span class="tt">UNDECIDED</span> and withheld. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01044">1044</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01009">1009</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01044">decide_nothing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01009">decide_nothing()</a>.</p>
 
 </div>
 </div>
@@ -1457,9 +1457,9 @@ template&lt;typename Enum&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00815">815</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00791">791</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00815">drop_rows_fitting_another_placement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00791">drop_rows_fitting_another_placement()</a>.</p>
 
 </div>
 </div>
@@ -1496,9 +1496,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> for <span class="tt">INVALID_ARGUMENT</span>; <span class="tt">true</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00150">150</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00155">155</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00176">broker_unreachable()</a>, and <a class="el" href="execution_8hpp_source.html#l00150">error_retries_when_unsent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00181">broker_unreachable()</a>, and <a class="el" href="execution_8hpp_source.html#l00155">error_retries_when_unsent()</a>.</p>
 
 </div>
 </div>
@@ -1534,9 +1534,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CONFIRMS</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00204">204</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00197">197</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00204">evidence_confirms()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00368">row_corresponds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00197">evidence_confirms()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00353">row_corresponds()</a>.</p>
 
 </div>
 </div>
@@ -1572,9 +1572,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CONTRADICTS</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00220">220</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00213">213</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01111">dates_listed_order()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00220">evidence_contradicts()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00423">row_might_correspond()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01073">dates_listed_order()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00213">evidence_contradicts()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00408">row_might_correspond()</a>.</p>
 
 </div>
 </div>
@@ -1610,9 +1610,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">ABSENT</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00237">237</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00230">230</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00237">evidence_leaves_open()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00423">row_might_correspond()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00230">evidence_leaves_open()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00408">row_might_correspond()</a>.</p>
 
 </div>
 </div>
@@ -1653,9 +1653,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> only if all three are stated and equal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01097">1097</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01059">1059</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01097">exact_copy()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01146">merge_dated_history()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01059">exact_copy()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01108">merge_dated_history()</a>.</p>
 
 </div>
 </div>
@@ -1697,9 +1697,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The first and last date. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01230">1230</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01191">1191</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01230">history_range_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01191">history_range_for()</a>.</p>
 
 </div>
 </div>
@@ -1740,9 +1740,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>When its answering line was written, or its <span class="tt">PENDING</span> time plus <span class="tt">maximum_request_</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00151">151</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00149">149</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01230">history_range_for()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00151">instruction_sent_by()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00166">match_window_closed()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00312">time_evidence()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01191">history_range_for()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00149">instruction_sent_by()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00162">match_window_closed()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00302">time_evidence()</a>.</p>
 
 </div>
 </div>
@@ -1778,9 +1778,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The action, or <span class="tt">std::nullopt</span> if <span class="tt">text</span> names none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00082">82</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00087">87</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00082">journal_action_from()</a>, <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00087">journal_action_from()</a>, <a class="el" href="file__journal_8hpp_source.html#l00797">journal_entry_from_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01011">salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -1816,9 +1816,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CANCEL</span> (it names the order it cancels); <span class="tt">false</span> for <span class="tt">PLACE</span> (matched by instrument, side, shape, quantity and time). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00067">67</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00072">72</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00067">journal_action_matches_by_order_id()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00485">unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00072">journal_action_matches_by_order_id()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00471">unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -1856,7 +1856,7 @@ template&lt;typename Enum&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00045">45</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00082">journal_action_from()</a>, <a class="el" href="journal_8hpp_source.html#l00045">journal_action_name()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00669">journal_entry_to_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00087">journal_action_from()</a>, <a class="el" href="journal_8hpp_source.html#l00045">journal_action_name()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00705">journal_entry_to_line()</a>.</p>
 
 </div>
 </div>
@@ -1892,9 +1892,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The entry, or <span class="tt">std::nullopt</span> if the line is not a readable journal entry: not JSON, its action, outcome or time missing or unreadable, its time outside 1970-01-02 to 2200-01-01 (after 2019 on a line without a checksum) unless it is an operator-only line at the epoch, an unknown field, or a checksum that does not match. If a field describing the order (symbol, country, venue, side, type, quantity, or a present condition, session, price or trigger) is missing or unreadable, the entry is operator-only, names no instrument, and its id is suffixed <span class="tt">~damaged</span>; it keeps its outcome. An unreadable route leaves the route unknown on an otherwise complete entry. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00761">761</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00797">797</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00797">journal_entry_from_line()</a>.</p>
 
 </div>
 </div>
@@ -1930,9 +1930,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The line, without a newline. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00669">669</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00705">705</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01409">algotradelib::runner::FileJournal::append()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00669">journal_entry_to_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01444">algotradelib::runner::FileJournal::append()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00705">journal_entry_to_line()</a>.</p>
 
 </div>
 </div>
@@ -1962,9 +1962,9 @@ template&lt;typename Enum&gt; </div>
 <p>Returns the format name in a journal header's <span class="tt">journal</span> field. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"algotradelib-order-journal"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00599">599</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00637">637</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00599">journal_format_name()</a>, <a class="el" href="file__journal_8hpp_source.html#l00608">journal_header_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00639">journal_header_scope()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00637">journal_format_name()</a>, <a class="el" href="file__journal_8hpp_source.html#l00646">journal_header_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00676">journal_header_scope()</a>.</p>
 
 </div>
 </div>
@@ -2000,9 +2000,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it declares <span class="tt">"integrity":"crc32"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00623">623</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00661">661</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00623">journal_header_declares_checksums()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00661">journal_header_declares_checksums()</a>.</p>
 
 </div>
 </div>
@@ -2038,9 +2038,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The JSON line, without a newline. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00608">608</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00646">646</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00608">journal_header_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00646">journal_header_line()</a>.</p>
 
 </div>
 </div>
@@ -2076,9 +2076,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The scope, or <span class="tt">std::nullopt</span> if the line is not a journal header. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00639">639</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00676">676</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00639">journal_header_scope()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00676">journal_header_scope()</a>.</p>
 
 </div>
 </div>
@@ -2114,9 +2114,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">ACCEPTED</span>, <span class="tt">REJECTED</span> and <span class="tt">INDETERMINATE</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00234">234</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00244">244</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00234">journal_outcome_answers_send()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00535">recorded_placements()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00244">journal_outcome_answers_send()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00516">recorded_placements()</a>.</p>
 
 </div>
 </div>
@@ -2152,9 +2152,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The outcome, or <span class="tt">std::nullopt</span> if <span class="tt">text</span> names none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00178">178</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00188">188</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>, and <a class="el" href="journal_8hpp_source.html#l00178">journal_outcome_from()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00797">journal_entry_from_line()</a>, and <a class="el" href="journal_8hpp_source.html#l00188">journal_outcome_from()</a>.</p>
 
 </div>
 </div>
@@ -2190,9 +2190,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CONFIRMED</span> and <span class="tt">HELD</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00295">295</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00305">305</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00295">journal_outcome_is_closing_account()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00305">journal_outcome_is_closing_account()</a>.</p>
 
 </div>
 </div>
@@ -2228,9 +2228,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for every outcome but <span class="tt">PENDING</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00213">213</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00223">223</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00213">journal_outcome_is_terminal()</a>, <a class="el" href="journal_8hpp_source.html#l00592">placements_of()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00223">journal_outcome_is_terminal()</a>, <a class="el" href="journal_8hpp_source.html#l00602">placements_of()</a>, and <a class="el" href="journal_8hpp_source.html#l00547">unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -2266,9 +2266,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">PENDING</span> (not answered yet) and <span class="tt">INDETERMINATE</span> (answered, outcome unknown); <span class="tt">false</span> for every outcome that settles it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00338">338</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00348">348</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00338">journal_outcome_leaves_open()</a>, <a class="el" href="journal_8hpp_source.html#l00592">placements_of()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00348">journal_outcome_leaves_open()</a>, <a class="el" href="journal_8hpp_source.html#l00602">placements_of()</a>, and <a class="el" href="journal_8hpp_source.html#l00547">unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -2304,9 +2304,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a9cc0e393ff3814afb3fc70c660f5b56e" title="What a journal line says about an instruction.">JournalOutcome</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00148">148</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00153">153</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00669">journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00178">journal_outcome_from()</a>, and <a class="el" href="journal_8hpp_source.html#l00148">journal_outcome_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00705">journal_entry_to_line()</a>, <a class="el" href="journal_8hpp_source.html#l00188">journal_outcome_from()</a>, and <a class="el" href="journal_8hpp_source.html#l00153">journal_outcome_name()</a>.</p>
 
 </div>
 </div>
@@ -2342,9 +2342,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">ACCEPTED</span> and <span class="tt">RESOLVED</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00254">254</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00264">264</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00254">journal_outcome_names_order()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00535">recorded_placements()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00264">journal_outcome_names_order()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00516">recorded_placements()</a>.</p>
 
 </div>
 </div>
@@ -2380,9 +2380,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ACCEPTED</span>, <span class="tt">INDETERMINATE</span>, or <span class="tt">REJECTED</span> for <span class="tt">REJECTED</span>, <span class="tt">UNAVAILABLE</span> and <span class="tt">REFUSED_LOCALLY</span>. For a placement, <span class="tt">REJECTED</span> means the order does not exist; for a cancellation, only that the request was refused or not sent, which says nothing about the named order's state (it may have filled). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00190">190</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00200">200</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00839">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="journal_8hpp_source.html#l00190">journal_outcome_of()</a>, and <a class="el" href="journal_8hpp_source.html#l00770">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00864">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::cancel()</a>, <a class="el" href="journal_8hpp_source.html#l00200">journal_outcome_of()</a>, and <a class="el" href="journal_8hpp_source.html#l00793">algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -2418,9 +2418,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">REJECTED</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00274">274</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00284">284</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00274">journal_outcome_refuses()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00535">recorded_placements()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00284">journal_outcome_refuses()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00516">recorded_placements()</a>.</p>
 
 </div>
 </div>
@@ -2456,9 +2456,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">HELD</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00316">316</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00326">326</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00316">journal_outcome_requires_operator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00326">journal_outcome_requires_operator()</a>.</p>
 
 </div>
 </div>
@@ -2494,9 +2494,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00447">447</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00457">457</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00447">journal_read_status_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00457">journal_read_status_name()</a>.</p>
 
 </div>
 </div>
@@ -2557,9 +2557,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The verdict. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00626">626</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00605">605</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00626">match_against()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00784">match_against()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00605">match_against()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00762">match_against()</a>.</p>
 
 </div>
 </div>
@@ -2613,7 +2613,7 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The verdict. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00784">784</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00762">762</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
 </div>
 </div>
@@ -2736,9 +2736,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> once <span class="tt">now</span> is past <span class="tt"><a class="el" href="#a257f1281f988d2de88f50f7fc5a5af18" title="Returns the last instant an instruction could have reached the broker.">instruction_sent_by</a></span> plus the clock skew and listing delay. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00166">166</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00162">162</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00166">match_window_closed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00162">match_window_closed()</a>.</p>
 
 </div>
 </div>
@@ -2779,9 +2779,9 @@ template&lt;typename Enum&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01146">1146</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01108">1108</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01146">merge_dated_history()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01108">merge_dated_history()</a>.</p>
 
 </div>
 </div>
@@ -2821,9 +2821,9 @@ template&lt;typename Enum&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01181">1181</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01142">1142</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01181">merge_rows()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01142">merge_rows()</a>.</p>
 
 </div>
 </div>
@@ -2859,9 +2859,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">UNNAMED</span> and <span class="tt">OPERATOR</span>: an order nobody can account for without help. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00411">411</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00416">416</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00411">obligation_is_unaccounted()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00416">obligation_is_unaccounted()</a>.</p>
 
 </div>
 </div>
@@ -2897,9 +2897,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">OPERATOR</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00429">429</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00434">434</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00429">obligation_needs_operator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00434">obligation_needs_operator()</a>.</p>
 
 </div>
 </div>
@@ -2935,9 +2935,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00464">464</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00469">469</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00464">obligation_state_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00469">obligation_state_name()</a>.</p>
 
 </div>
 </div>
@@ -2973,9 +2973,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for <span class="tt">NONE</span>, 1 for <span class="tt">NAMED</span>, 2 for <span class="tt">UNNAMED</span>, 3 for <span class="tt">OPERATOR</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00391">391</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00396">396</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l00925">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::obligation_state()</a>, and <a class="el" href="execution_8hpp_source.html#l00391">obligation_weight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l00973">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::obligation_state()</a>, and <a class="el" href="execution_8hpp_source.html#l00396">obligation_weight()</a>.</p>
 
 </div>
 </div>
@@ -3017,9 +3017,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The outcome. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00117">117</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00122">122</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00160">algotradelib::live::SessionExecutor&lt; Session &gt;::cancel()</a>, <a class="el" href="execution_8hpp_source.html#l00117">outcome_of()</a>, and <a class="el" href="session__executor_8hpp_source.html#l00108">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00160">algotradelib::live::SessionExecutor&lt; Session &gt;::cancel()</a>, <a class="el" href="execution_8hpp_source.html#l00122">outcome_of()</a>, and <a class="el" href="session__executor_8hpp_source.html#l00109">algotradelib::live::SessionExecutor&lt; Session &gt;::place()</a>.</p>
 
 </div>
 </div>
@@ -3056,9 +3056,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The replay. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01256">1256</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01284">1284</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01256">parse_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01268">read_journal_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01284">parse_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01296">read_journal_file()</a>.</p>
 
 </div>
 </div>
@@ -3100,9 +3100,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>One instruction per id that has a <span class="tt">PENDING</span> or <span class="tt">INDETERMINATE</span> placement line, in file order; one recovered from a damaged line is left out. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00592">592</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00602">602</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00592">placements_of()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00602">placements_of()</a>.</p>
 
 </div>
 </div>
@@ -3140,7 +3140,7 @@ template&lt;typename Enum&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00066">66</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00066">poll_kind_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00066">poll_kind_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>.</p>
 
 </div>
 </div>
@@ -3176,9 +3176,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a4b0650e6d65e9dcd541dd9e63f860dda" title="What became of one poll.">PollOutcome</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00141">141</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00146">146</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00141">poll_outcome_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00146">poll_outcome_name()</a>.</p>
 
 </div>
 </div>
@@ -3214,9 +3214,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The bytes and <span class="tt">READ</span>; <span class="tt">MISSING</span> if there is no file (a first start, nothing owed); or <span class="tt">UNREADABLE</span> if it exists and could not be opened or read to the end. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01075">1075</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01102">1102</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01075">read_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01268">read_journal_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01102">read_journal_bytes()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01296">read_journal_file()</a>.</p>
 
 </div>
 </div>
@@ -3252,9 +3252,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The replay; see <span class="tt"><a class="el" href="#a1f8e785b57695ba73f215691204e747c" title="Reads a journal file&#39;s bytes, without opening it for appending.">read_journal_bytes</a></span> and <span class="tt"><a class="el" href="#aff85b9cd21b41fd1859c73af4cce59fd" title="Parses a journal&#39;s bytes, salvaging a torn final line.">parse_journal_bytes</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01268">1268</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01296">1296</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01268">read_journal_file()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01296">read_journal_file()</a>.</p>
 
 </div>
 </div>
@@ -3332,9 +3332,9 @@ template&lt;typename Journal&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00937">937</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00911">911</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00937">reconcile_against()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01023">reconcile_against()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00911">reconcile_against()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00992">reconcile_against()</a>.</p>
 
 </div>
 </div>
@@ -3405,7 +3405,7 @@ template&lt;typename Journal&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01023">1023</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00992">992</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
 </div>
 </div>
@@ -3459,9 +3459,9 @@ template&lt;typename Journal&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The placement, or <span class="tt">nullptr</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00588">588</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00569">569</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00588">recorded_owner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00569">recorded_owner()</a>.</p>
 
 </div>
 </div>
@@ -3498,9 +3498,9 @@ template&lt;typename Journal&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The placements, with <span class="tt">entry_.order_id_</span> set to the recorded id. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00535">535</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00516">516</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00535">recorded_placements()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00516">recorded_placements()</a>.</p>
 
 </div>
 </div>
@@ -3541,7 +3541,7 @@ template&lt;typename Journal&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01330">1330</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01288">1288</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
 </div>
 </div>
@@ -3583,9 +3583,9 @@ template&lt;typename Journal&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01291">1291</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01249">1249</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01330">recover_into()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01291">recover_into()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01350">recover_runner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01288">recover_into()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l01249">recover_into()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l01308">recover_runner()</a>.</p>
 
 </div>
 </div>
@@ -3628,9 +3628,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01350">1350</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l01308">1308</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01350">recover_runner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01308">recover_runner()</a>.</p>
 
 </div>
 </div>
@@ -3677,9 +3677,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The line. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00901">901</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00877">877</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00901">resolution_entry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00877">resolution_entry()</a>.</p>
 
 </div>
 </div>
@@ -3721,9 +3721,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ABSENT</span> if the line predates routes or the row names no venue; <span class="tt">CONFIRMS</span> if the instruction asked for no venue (as at Toss) or the venues agree; otherwise <span class="tt">CONTRADICTS</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00337">337</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00324">324</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00337">route_evidence()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00368">row_corresponds()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00423">row_might_correspond()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00324">route_evidence()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00353">row_corresponds()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00408">row_might_correspond()</a>.</p>
 
 </div>
 </div>
@@ -3771,9 +3771,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if every attribute confirms. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00368">368</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00353">353</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00588">recorded_owner()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00368">row_corresponds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00569">recorded_owner()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00353">row_corresponds()</a>.</p>
 
 </div>
 </div>
@@ -3821,9 +3821,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if some attribute is unknown and nothing disagrees; <span class="tt">false</span> for a row that fully corresponds (see <span class="tt"><a class="el" href="#af68bbe2bce1e7c691a90a0bb68cb4552" title="Tests whether a row is established to be an instruction&#39;s order.">row_corresponds</a></span>) or disagrees. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00423">423</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00408">408</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00588">recorded_owner()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00423">row_might_correspond()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00569">recorded_owner()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00408">row_might_correspond()</a>.</p>
 
 </div>
 </div>
@@ -3865,9 +3865,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the field is damaged. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00959">959</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00991">991</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00959">salvage_damaged()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00991">salvage_damaged()</a>, and <a class="el" href="file__journal_8hpp_source.html#l01011">salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -3904,9 +3904,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The entry, or <span class="tt">std::nullopt</span> if the line does not even name a symbol. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00979">979</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l01011">1011</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l01011">salvage_journal_line()</a>.</p>
 
 </div>
 </div>
@@ -3942,9 +3942,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">UNAVAILABLE</span> only. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00218">218</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00223">223</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00218">send_outcome_is_local_failure()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00223">send_outcome_is_local_failure()</a>.</p>
 
 </div>
 </div>
@@ -4018,9 +4018,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> for <span class="tt">UNAVAILABLE</span> and <span class="tt">REFUSED_LOCALLY</span>; <span class="tt">true</span> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00199">199</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00204">204</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00199">send_outcome_reached_broker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00204">send_outcome_reached_broker()</a>.</p>
 
 </div>
 </div>
@@ -4056,9 +4056,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> for <span class="tt">QUIESCE</span>; <span class="tt">true</span> for <span class="tt">WITHDRAW</span> and <span class="tt">FLATTEN</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00114">114</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00119">119</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00114">stop_intent_closes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00119">stop_intent_closes()</a>.</p>
 
 </div>
 </div>
@@ -4094,9 +4094,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">FLATTEN</span>; <span class="tt">false</span> for <span class="tt">QUIESCE</span> and <span class="tt">WITHDRAW</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00131">131</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00136">136</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00131">stop_intent_closes_positions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00136">stop_intent_closes_positions()</a>.</p>
 
 </div>
 </div>
@@ -4137,9 +4137,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">held</span> is at least as strong (<span class="tt">QUIESCE</span> &lt; <span class="tt">WITHDRAW</span> &lt; <span class="tt">FLATTEN</span>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00148">148</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00153">153</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00148">stop_intent_covers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00153">stop_intent_covers()</a>.</p>
 
 </div>
 </div>
@@ -4175,9 +4175,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The intent, or <span class="tt">std::nullopt</span> for any other text. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00083">83</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00088">88</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00254">algotradelib::runner::FileStopChannel::poll()</a>, and <a class="el" href="stop_8hpp_source.html#l00083">stop_intent_from()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00264">algotradelib::runner::FileStopChannel::poll()</a>, and <a class="el" href="stop_8hpp_source.html#l00088">stop_intent_from()</a>.</p>
 
 </div>
 </div>
@@ -4215,7 +4215,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00061">61</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="live__program_8hpp_source.html#l00216">live_program::print_loop()</a>, <a class="el" href="stop_8hpp_source.html#l00083">stop_intent_from()</a>, and <a class="el" href="stop_8hpp_source.html#l00061">stop_intent_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>, <a class="el" href="stop_8hpp_source.html#l00088">stop_intent_from()</a>, and <a class="el" href="stop_8hpp_source.html#l00061">stop_intent_name()</a>.</p>
 
 </div>
 </div>
@@ -4252,9 +4252,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 for <span class="tt">QUIESCE</span>, 1 for <span class="tt">WITHDRAW</span>, 2 for <span class="tt">FLATTEN</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00096">96</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00101">101</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00167">algotradelib::runner::StopSource::request()</a>, <a class="el" href="stop_8hpp_source.html#l00148">stop_intent_covers()</a>, and <a class="el" href="stop_8hpp_source.html#l00096">stop_intent_strength()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00172">algotradelib::runner::StopSource::request()</a>, <a class="el" href="stop_8hpp_source.html#l00153">stop_intent_covers()</a>, and <a class="el" href="stop_8hpp_source.html#l00101">stop_intent_strength()</a>.</p>
 
 </div>
 </div>
@@ -4302,9 +4302,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">ABSENT</span> if the row's date was assumed; otherwise <span class="tt">CONFIRMS</span> if it has no time or its time is inside the widened send window, and <span class="tt">CONTRADICTS</span> if not. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00312">312</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00302">302</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00368">row_corresponds()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00423">row_might_correspond()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00312">time_evidence()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00353">row_corresponds()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00408">row_might_correspond()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00302">time_evidence()</a>.</p>
 
 </div>
 </div>
@@ -4359,9 +4359,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The evidence. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00281">281</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00274">274</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01111">dates_listed_order()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00368">row_corresponds()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00423">row_might_correspond()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00281">trigger_evidence()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01073">dates_listed_order()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00353">row_corresponds()</a>, <a class="el" href="reconcile__orders_8hpp_source.html#l00408">row_might_correspond()</a>, and <a class="el" href="reconcile__orders_8hpp_source.html#l00274">trigger_evidence()</a>.</p>
 
 </div>
 </div>
@@ -4398,9 +4398,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The entry. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00744">744</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file__journal_8hpp_source.html#l00780">780</a> of file <a class="el" href="file__journal_8hpp_source.html">file_journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00761">journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l00979">salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00744">unattributable_journal_entry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file__journal_8hpp_source.html#l00797">journal_entry_from_line()</a>, <a class="el" href="file__journal_8hpp_source.html#l01011">salvage_journal_line()</a>, and <a class="el" href="file__journal_8hpp_source.html#l00780">unattributable_journal_entry()</a>.</p>
 
 </div>
 </div>
@@ -4437,9 +4437,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The reason, or an empty string if it can be matched. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00485">485</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reconcile__orders_8hpp_source.html#l00471">471</a> of file <a class="el" href="reconcile__orders_8hpp_source.html">reconcile_orders.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00485">unresolvable_reason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l00471">unresolvable_reason()</a>.</p>
 
 </div>
 </div>
@@ -4476,9 +4476,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The unresolved instructions. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00537">537</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00547">547</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01291">recover_into()</a>, and <a class="el" href="journal_8hpp_source.html#l00537">unresolved_instructions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01249">recover_into()</a>, and <a class="el" href="journal_8hpp_source.html#l00547">unresolved_instructions()</a>.</p>
 
 </div>
 </div>
@@ -4514,9 +4514,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00334">334</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00339">339</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00334">withheld_plan_reason_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00339">withheld_plan_reason_name()</a>.</p>
 
 </div>
 </div>
@@ -4552,9 +4552,9 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00283">283</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00288">288</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00283">withheld_reason_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="execution_8hpp_source.html#l00288">withheld_reason_name()</a>.</p>
 
 </div>
 </div>
@@ -4583,7 +4583,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00038">38</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00082">journal_action_from()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00087">journal_action_from()</a>.</p>
 
 </div>
 </div>
@@ -4615,19 +4615,19 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <div class="line">  <a class="code hl_enumvalue" href="#a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0">JournalOutcome::CONFIRMED</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33">JournalOutcome::HELD</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0">algotradelib::runner::JournalOutcome::CONFIRMED</a></div><div class="ttdeci">@ CONFIRMED</div><div class="ttdoc">A serialized runner accounted for the placement: holdings showed what it filled, its history showed i...</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00124">journal.hpp:124</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea717bb676b27571e4f5392a911194842a"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea717bb676b27571e4f5392a911194842a">algotradelib::runner::JournalOutcome::INDETERMINATE</a></div><div class="ttdeci">@ INDETERMINATE</div><div class="ttdoc">The outcome is unknown (SendOutcome::INDETERMINATE: a failure in transit, an unreadable reply,...</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00108">journal.hpp:108</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea874584b84df5da74c3964d8efbff7a02"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea874584b84df5da74c3964d8efbff7a02">algotradelib::runner::JournalOutcome::RESOLVED</a></div><div class="ttdeci">@ RESOLVED</div><div class="ttdoc">A recovery sweep read the broker&#39;s order list and closed the question.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00116">journal.hpp:116</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea9cc8ad3d99798c6726d4af0bd14e49d2"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea9cc8ad3d99798c6726d4af0bd14e49d2">algotradelib::runner::JournalOutcome::REJECTED</a></div><div class="ttdeci">@ REJECTED</div><div class="ttdoc">The instruction was refused, by the broker or before it was sent, so it does not exist.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00103">journal.hpp:103</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56eaa806f1d2c42338ef5fa6497b66153e79"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56eaa806f1d2c42338ef5fa6497b66153e79">algotradelib::runner::JournalOutcome::ACCEPTED</a></div><div class="ttdeci">@ ACCEPTED</div><div class="ttdoc">The broker accepted the instruction; it exists.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00097">journal.hpp:97</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33">algotradelib::runner::JournalOutcome::HELD</a></div><div class="ttdeci">@ HELD</div><div class="ttdoc">Evidence contradicted the placement (holdings moved past what it can explain), so only an operator ma...</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00129">journal.hpp:129</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2">algotradelib::runner::JournalOutcome::PENDING</a></div><div class="ttdeci">@ PENDING</div><div class="ttdoc">Written before the send; whether the instruction exists is not yet known.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00095">journal.hpp:95</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0">algotradelib::runner::JournalOutcome::CONFIRMED</a></div><div class="ttdeci">@ CONFIRMED</div><div class="ttdoc">A serialized runner accounted for the placement: holdings showed what it filled, its history showed i...</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00129">journal.hpp:129</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea717bb676b27571e4f5392a911194842a"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea717bb676b27571e4f5392a911194842a">algotradelib::runner::JournalOutcome::INDETERMINATE</a></div><div class="ttdeci">@ INDETERMINATE</div><div class="ttdoc">The outcome is unknown (SendOutcome::INDETERMINATE: a failure in transit, an unreadable reply,...</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00113">journal.hpp:113</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea874584b84df5da74c3964d8efbff7a02"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea874584b84df5da74c3964d8efbff7a02">algotradelib::runner::JournalOutcome::RESOLVED</a></div><div class="ttdeci">@ RESOLVED</div><div class="ttdoc">A recovery sweep read the broker&#39;s order list and closed the question.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00121">journal.hpp:121</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56ea9cc8ad3d99798c6726d4af0bd14e49d2"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56ea9cc8ad3d99798c6726d4af0bd14e49d2">algotradelib::runner::JournalOutcome::REJECTED</a></div><div class="ttdeci">@ REJECTED</div><div class="ttdoc">The instruction was refused, by the broker or before it was sent, so it does not exist.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00108">journal.hpp:108</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56eaa806f1d2c42338ef5fa6497b66153e79"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56eaa806f1d2c42338ef5fa6497b66153e79">algotradelib::runner::JournalOutcome::ACCEPTED</a></div><div class="ttdeci">@ ACCEPTED</div><div class="ttdoc">The broker accepted the instruction; it exists.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00102">journal.hpp:102</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33">algotradelib::runner::JournalOutcome::HELD</a></div><div class="ttdeci">@ HELD</div><div class="ttdoc">Evidence contradicted the placement (holdings moved past what it can explain), so only an operator ma...</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00134">journal.hpp:134</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2"><div class="ttname"><a href="#a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2">algotradelib::runner::JournalOutcome::PENDING</a></div><div class="ttdeci">@ PENDING</div><div class="ttdoc">Written before the send; whether the instruction exists is not yet known.</div><div class="ttdef"><b>Definition</b> <a href="journal_8hpp_source.html#l00100">journal.hpp:100</a></div></div>
 </div><!-- fragment -->
 <p>Every <span class="tt"><a class="el" href="#a9cc0e393ff3814afb3fc70c660f5b56e" title="What a journal line says about an instruction.">JournalOutcome</a></span>, in declaration order. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00133">133</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00138">138</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00178">journal_outcome_from()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00188">journal_outcome_from()</a>.</p>
 
 </div>
 </div>
@@ -4703,14 +4703,14 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <div class="line">  <a class="code hl_enumvalue" href="#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419">PollOutcome::FAILED</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f">PollOutcome::RATE_LIMITED</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f">algotradelib::runner::PollOutcome::RATE_LIMITED</a></div><div class="ttdeci">@ RATE_LIMITED</div><div class="ttdoc">The rate limiter refused the poll; not counted as a failure.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00125">loop.hpp:125</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc">algotradelib::runner::PollOutcome::UNCHANGED</a></div><div class="ttdeci">@ UNCHANGED</div><div class="ttdoc">The poll succeeded and there was nothing new.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00121">loop.hpp:121</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419">algotradelib::runner::PollOutcome::FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdoc">The poll failed; counted toward the failure budget.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00123">loop.hpp:123</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5">algotradelib::runner::PollOutcome::UPDATED</a></div><div class="ttdeci">@ UPDATED</div><div class="ttdoc">New data arrived and was fed to the runner, or installed in it (a calendar, price bands).</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00119">loop.hpp:119</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f">algotradelib::runner::PollOutcome::RATE_LIMITED</a></div><div class="ttdeci">@ RATE_LIMITED</div><div class="ttdoc">The rate limiter refused the poll; not counted as a failure.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00130">loop.hpp:130</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc">algotradelib::runner::PollOutcome::UNCHANGED</a></div><div class="ttdeci">@ UNCHANGED</div><div class="ttdoc">The poll succeeded and there was nothing new.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00126">loop.hpp:126</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419">algotradelib::runner::PollOutcome::FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdoc">The poll failed; counted toward the failure budget.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00128">loop.hpp:128</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5">algotradelib::runner::PollOutcome::UPDATED</a></div><div class="ttdeci">@ UPDATED</div><div class="ttdoc">New data arrived and was fed to the runner, or installed in it (a calendar, price bands).</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00124">loop.hpp:124</a></div></div>
 </div><!-- fragment -->
 <p>Every <span class="tt"><a class="el" href="#a4b0650e6d65e9dcd541dd9e63f860dda" title="What became of one poll.">PollOutcome</a></span>, in declaration order. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00129">129</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00134">134</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -4784,7 +4784,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p class="definition">Definition at line <a class="el" href="stop_8hpp_source.html#l00050">50</a> of file <a class="el" href="stop_8hpp_source.html">stop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00083">stop_intent_from()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stop_8hpp_source.html#l00088">stop_intent_from()</a>.</p>
 
 </div>
 </div>
@@ -4810,7 +4810,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p>The number of <span class="tt"><a class="el" href="#a3cc0ab250b8a6e9c3e107ddc121d875a" title="What a PollingLoop polls for; each has a cadence in PollSchedule.">PollKind</a></span> values. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00109">109</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00114">114</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>

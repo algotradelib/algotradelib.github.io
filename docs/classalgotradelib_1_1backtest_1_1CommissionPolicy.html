@@ -151,7 +151,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>How a backtest charges commission: one stated model, or a schedule resolved per execution. </p>
 <p><span class="tt"><a class="el" href="#a6fbe237ce05a5769e4364d0bb2bf01ee" title="Makes a policy that charges one model on every execution.">stated</a></span> charges one <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1CommissionModel.html" title="A flat commission: a rate on traded value, with an optional per-execution minimum.">CommissionModel</a></span> throughout. <span class="tt"><a class="el" href="#a369640c82d07b1fbf8566f08f2cdcc06" title="Makes a policy that picks a rate from a schedule for each execution.">scheduled</a></span> picks the rate for each execution by its market, its local trading date and the venue the caller asserts (a replay cannot know where an order executed, so the report lists the venue as an assumption). A rate that cannot be resolved is an error, and the replay halts rather than skipping or zero-costing the fill. </p>
 
-<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00184">184</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00185">185</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a18a547b72a401befe987c19731e7ea35" name="a18a547b72a401befe987c19731e7ea35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18a547b72a401befe987c19731e7ea35">&#9670;&#160;</a></span>CommissionPolicy()</h2>
@@ -178,7 +178,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Constructs a policy that charges nothing (the report says so). </p>
 
-<p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00211">scheduled()</a>, and <a class="el" href="cost_8hpp_source.html#l00194">stated()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00212">scheduled()</a>, and <a class="el" href="cost_8hpp_source.html#l00195">stated()</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the asserted venue. </p>
 <dl class="section return"><dt>Returns</dt><dd>The venue a scheduled policy charges at; <span class="tt"><a class="el" href="classalgotradelib_1_1VenueKey.html#a52ae393f8ff33520ca0627e7a2caf416" title="Returns the key for any venue.">VenueKey::any()</a></span> for a stated one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00247">247</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00246">246</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The charge, or an <span class="tt">INVALID_ARGUMENT</span> error: <span class="tt">commission_not_representable</span>, <span class="tt">commission_date_not_market_local</span> (a dated rate for a market other than <span class="tt">dating_market</span>), <span class="tt">rate_bounds_unreadable</span> or <span class="tt">no_rate_for_date</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00270">270</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00271">271</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Tests whether the policy resolves a schedule. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for a <span class="tt"><a class="el" href="#a369640c82d07b1fbf8566f08f2cdcc06" title="Makes a policy that picks a rate from a schedule for each execution.">scheduled</a></span> policy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00241">241</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00238">238</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 
 </div>
 </div>
@@ -340,7 +340,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The policy, or an <span class="tt">INVALID_ARGUMENT</span> error: <span class="tt">commission_tariff_unnamed</span> or <span class="tt">commission_venue_not_an_execution</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00211">211</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00212">212</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 
 </div>
 </div>
@@ -376,7 +376,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The policy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00194">194</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00195">195</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 
 </div>
 </div>
@@ -406,7 +406,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the schedule's tariff name. </p>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a stated policy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00253">253</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00254">254</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 
 </div>
 </div>

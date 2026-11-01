@@ -150,7 +150,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>An amendment or cancellation of a Kiwoom order. </p>
 <p>Kiwoom amends only quantity, price and trigger price (<span class="tt">kt10002</span>) and cancels by quantity (<span class="tt">kt10003</span>); the order type, condition and session cannot change, and an amendment asking to change them is refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00070">70</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00072">72</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="aa4e042fb1a953160e954ec249c7f9c02" name="aa4e042fb1a953160e954ec249c7f9c02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4e042fb1a953160e954ec249c7f9c02">&#9670;&#160;</a></span>condition_price_</h2>
@@ -166,7 +166,7 @@ Public Attributes</h2></td></tr>
 
 <p>The new trigger price (<span class="tt">mdfy_cond_uv</span>), for amending a stop-limit (<span class="tt">28</span>) order; must be empty on a cancellation, which is otherwise refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00089">89</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00091">91</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -184,7 +184,7 @@ Public Attributes</h2></td></tr>
 
 <p>The order to amend, which carries the symbol Kiwoom requires beside the order number. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00072">72</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00074">74</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Public Attributes</h2></td></tr>
 
 <p>The new price, on a modification; absent on an unpriced basis, and refused on a cancellation. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00084">84</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00086">86</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -220,7 +220,7 @@ Public Attributes</h2></td></tr>
 
 <p>The quantity affected, or zero for everything still resting (Kiwoom evaluates <span class="tt">0</span> when it processes the instruction, so it cannot overshoot a partial fill). </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00082">82</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00084">84</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +238,7 @@ Public Attributes</h2></td></tr>
 
 <p>The venue the order rests on, as listed (Kiwoom's <span class="tt">dmst_stex_tp</span>): <span class="tt">KRX</span>, <span class="tt">NXT</span> or <span class="tt">COMBINED</span> (SOR). Required: <span class="tt">UNSPECIFIED</span> is refused before sending, for a cancellation too. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00077">77</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00079">79</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>

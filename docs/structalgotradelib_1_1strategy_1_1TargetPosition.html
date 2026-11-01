@@ -148,7 +148,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The position a strategy wants to hold in one instrument. </p>
 <p>The runner compares the target with the current position <b>and the orders still working</b>, and places only what is needed to reach it. Prefer it to <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1OrderIntent.html" title="One order a strategy asks the runner to place.">OrderIntent</a></span>: emitting "buy 100" again after 40 filled and 60 are working would buy 100 more, while a target of 100 buys nothing more. Submit it with <span class="tt">ctx.submit(target)</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00442">442</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00451">451</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a48b7235f4bfab5f2381f5d5f6f51ca62" name="a48b7235f4bfab5f2381f5d5f6f51ca62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48b7235f4bfab5f2381f5d5f6f51ca62">&#9670;&#160;</a></span>instrument_</h2>
@@ -164,9 +164,9 @@ Public Attributes</h2></td></tr>
 
 <p>The instrument. </p>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00444">444</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00453">453</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="buy__and__hold_8hpp_source.html#l00045">algotradelib::strategy::vanilla::BuyAndHold::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00235">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="crossover_8hpp_source.html#l00080">algotradelib::strategy::vanilla::MovingAverageCrossover::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00155">algotradelib::strategy::vanilla::RsiThreshold::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00058">algotradelib::strategy::vanilla::ZScoreReversion::on_bar()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00956">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="buy__and__hold_8hpp_source.html#l00045">algotradelib::strategy::vanilla::BuyAndHold::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00240">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="crossover_8hpp_source.html#l00082">algotradelib::strategy::vanilla::MovingAverageCrossover::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00158">algotradelib::strategy::vanilla::RsiThreshold::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00060">algotradelib::strategy::vanilla::ZScoreReversion::on_bar()</a>, <a class="el" href="reconcile_8hpp_source.html#l00573">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00931">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -184,9 +184,9 @@ Public Attributes</h2></td></tr>
 
 <p>The limit price for the orders the runner places; without one they are market orders. </p>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00448">448</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00457">457</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00956">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00573">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00931">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -204,9 +204,9 @@ Public Attributes</h2></td></tr>
 
 <p>A label carried to the orders and their fills. </p>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00450">450</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00459">459</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="buy__and__hold_8hpp_source.html#l00045">algotradelib::strategy::vanilla::BuyAndHold::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00235">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="crossover_8hpp_source.html#l00080">algotradelib::strategy::vanilla::MovingAverageCrossover::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00155">algotradelib::strategy::vanilla::RsiThreshold::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00058">algotradelib::strategy::vanilla::ZScoreReversion::on_bar()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00956">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="buy__and__hold_8hpp_source.html#l00045">algotradelib::strategy::vanilla::BuyAndHold::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00240">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="crossover_8hpp_source.html#l00082">algotradelib::strategy::vanilla::MovingAverageCrossover::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00158">algotradelib::strategy::vanilla::RsiThreshold::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00060">algotradelib::strategy::vanilla::ZScoreReversion::on_bar()</a>, <a class="el" href="reconcile_8hpp_source.html#l00573">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00931">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>
@@ -224,9 +224,9 @@ Public Attributes</h2></td></tr>
 
 <p>The position to hold, signed: negative is short, and zero means flat. </p>
 
-<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00446">446</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00455">455</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="buy__and__hold_8hpp_source.html#l00045">algotradelib::strategy::vanilla::BuyAndHold::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00235">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="crossover_8hpp_source.html#l00080">algotradelib::strategy::vanilla::MovingAverageCrossover::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00155">algotradelib::strategy::vanilla::RsiThreshold::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00059">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00058">algotradelib::strategy::vanilla::ZScoreReversion::on_bar()</a>, <a class="el" href="reconcile_8hpp_source.html#l00581">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00956">algotradelib::strategy::weight_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="buy__and__hold_8hpp_source.html#l00045">algotradelib::strategy::vanilla::BuyAndHold::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00240">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="crossover_8hpp_source.html#l00082">algotradelib::strategy::vanilla::MovingAverageCrossover::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00158">algotradelib::strategy::vanilla::RsiThreshold::on_bar()</a>, <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="reversion_8hpp_source.html#l00060">algotradelib::strategy::vanilla::ZScoreReversion::on_bar()</a>, <a class="el" href="reconcile_8hpp_source.html#l00573">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00931">algotradelib::strategy::weight_target()</a>.</p>
 
 </div>
 </div>

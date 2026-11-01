@@ -69,7 +69,7 @@ var searchData=
   ['boundary_66',['Two numeric worlds, one gated boundary',['../architecture.html#autotoc_md28',1,'']]],
   ['boundary_20and_20it_20is_20narrower_20outbound_67',['Convention 1: one gated boundary, and it is narrower outbound',['../analytics-conventions.html#autotoc_md14',1,'']]],
   ['bounded_5f_68',['bounded_',['../structalgotradelib_1_1backtest_1_1FillDecision.html#a5e474d4e6da3263d1946246faa8e9586',1,'algotradelib::backtest::FillDecision']]],
-  ['boundrunner_69',['BoundRunner',['../namespacealgotradelib_1_1live.html#ae8b22f13947a1bed732bbeb8403c42bb',1,'algotradelib::live']]],
+  ['boundrunner_69',['BoundRunner',['../namespacealgotradelib_1_1live.html#ac4f8c120794b9394f371bc416b2dc8ea',1,'algotradelib::live']]],
   ['bounds_5funreadable_5f_70',['bounds_unreadable_',['../structalgotradelib_1_1CommissionSchedule_1_1RateSelection.html#a7816948c8e2c4d0e4d91cc1bd8a20977',1,'algotradelib::CommissionSchedule::RateSelection']]],
   ['branch_5fnumber_5f_71',['branch_number_',['../structalgotradelib_1_1kis_1_1KisOrderRef.html#a9a2725e16c20a0eeab541a38d5e821f2',1,'algotradelib::kis::KisOrderRef']]],
   ['broker_72',['Broker',['../structalgotradelib_1_1kis_1_1Broker.html',1,'algotradelib::kis::Broker'],['../structalgotradelib_1_1kiwoom_1_1Broker.html',1,'algotradelib::kiwoom::Broker'],['../structalgotradelib_1_1mock_1_1Broker.html',1,'algotradelib::mock::Broker'],['../structalgotradelib_1_1tossinvest_1_1Broker.html',1,'algotradelib::tossinvest::Broker'],['../classalgotradelib_1_1runner_1_1Context.html#ad415b257a17a7027487dc84da4afc6a7',1,'algotradelib::runner::Context::Broker'],['../classalgotradelib_1_1strategy_1_1ProbeContextT.html#a7be098329b5edc9326c122aa84df55b5',1,'algotradelib::strategy::ProbeContextT::Broker']]],

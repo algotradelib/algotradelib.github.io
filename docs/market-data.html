@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('market-data.ht
 <div class="fragment"><div class="line">BarQuery query;</div>
 <div class="line">query.instrument_ = InstrumentId{Country::KR, Venue::COMBINED, <span class="stringliteral">&quot;005930&quot;</span>};</div>
 <div class="line">query.interval_ = BarInterval::ONE_DAY;</div>
-<div class="line">query.count_ = 250;            <span class="comment">// how many bars you want, not how many a page holds</span></div>
+<div class="line">query.count_ = 250; <span class="comment">// how many bars you want, not how many a page holds</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> bars = session.bars(query);</div>
 <div class="line"><span class="keyword">auto</span> book = session.depth(query.instrument_);</div>
@@ -143,7 +143,7 @@ Two conventions that prevent a silent lookahead</h1>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
 The price grid is the library's own</h1>
 <p><b>No adapter builds the grid from the broker.</b> A broker states at most the tick at one price (KIS's quote carries <span class="tt">aspr_unit</span>; Toss's refusal of an off-tick price names the tick it wanted), not the whole ladder, so <span class="tt">PriceRule</span> is a table this library maintains, carried on <span class="tt">Instrument::price_rule_</span>. It records its own <span class="tt">source_</span> so a stale table is visible rather than assumed, and it is data a caller can replace.</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; rule = instrument.price_rule_;            <span class="comment">// depends on what it is</span></div>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span>&amp; rule = instrument.price_rule_; <span class="comment">// depends on what it is</span></div>
 <div class="line"><span class="keywordflow">if</span> (<span class="keyword">auto</span> limit = rule.round_to_tick(computed_price, OrderSide::BUY)) {</div>
 <div class="line">  order.price_ = *limit;</div>
 <div class="line">}</div>
@@ -185,7 +185,7 @@ Two broker-specific behaviours worth knowing</h1>
 <p><b>KIS's calendar is cached per client</b> for the same reason, and served from the cache for any date it already covers. Pass <span class="tt">refresh</span> to fetch again deliberately.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md60"></a>
 The calendar answers three states, not two</h1>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> open = calendar.value().is_trading_day(date);   <span class="comment">// std::optional&lt;bool&gt;</span></div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> open = calendar.value().is_trading_day(date); <span class="comment">// std::optional&lt;bool&gt;</span></div>
 </div><!-- fragment --><p>Empty means the date is <b>not covered</b>, which is different from closed. Reporting an uncovered date as closed would stop a strategy on a day that is in fact open; reporting it as open would let it place orders into a holiday.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md61"></a>
 Example</h1>

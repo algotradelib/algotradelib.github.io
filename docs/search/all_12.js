@@ -21,7 +21,7 @@ var searchData=
   ['observedcharge_18',['ObservedCharge',['../structalgotradelib_1_1live_1_1SessionSource_1_1ObservedCharge.html',1,'algotradelib::live::SessionSource']]],
   ['observedfigure_19',['ObservedFigure',['../structalgotradelib_1_1live_1_1SessionSource_1_1ObservedFigure.html',1,'algotradelib::live::SessionSource']]],
   ['observing_20against_20a_20live_20session_20',['Observing against a live session',['../binding-a-broker.html#autotoc_md42',1,'']]],
-  ['observingrunner_21',['ObservingRunner',['../namespacealgotradelib_1_1live.html#a3637b9f11faf2e4c23aab33b1b4a2717',1,'algotradelib::live']]],
+  ['observingrunner_21',['ObservingRunner',['../namespacealgotradelib_1_1live.html#aa65a45f1be7c7de25e2c730873c987c0',1,'algotradelib::live']]],
   ['of_22',['of',['../structalgotradelib_1_1backtest_1_1CommissionModel.html#a76c1d5e3741099e3992306d938151c62',1,'algotradelib::backtest::CommissionModel::of()'],['../classalgotradelib_1_1strategy_1_1PortfolioRows.html#aa79d490c3af7c42f56c02dcbb72bf319',1,'algotradelib::strategy::PortfolioRows::of()']]],
   ['of_20absence_20and_20every_20reduction_20masks_20both_23',['Convention 2: two kinds of absence, and every reduction masks both',['../analytics-conventions.html#autotoc_md15',1,'']]],
   ['of_20operations_24',['Order of operations',['../binding-a-broker.html#autotoc_md41',1,'']]],

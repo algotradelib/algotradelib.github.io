@@ -208,13 +208,13 @@ struct algotradelib::DataOnlyTraits&lt; Tag &gt;</div><p>A base for the <span cl
 <div class="line">  <span class="keyword">static</span> <a class="code hl_class" href="classalgotradelib_1_1Result.html">Result&lt;QuoteSnapshot&gt;</a> quote(Client&amp; client, <a class="code hl_struct" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> instrument);</div>
 <div class="line">  <span class="keyword">static</span> <a class="code hl_class" href="classalgotradelib_1_1Result.html">Result&lt;BarSeries&gt;</a> bars(Client&amp; client, <a class="code hl_struct" href="structalgotradelib_1_1BarQuery.html">BarQuery</a> query);</div>
 <div class="line">};</div>
-<div class="line">ATL_ASSERT_BROKER(my::Client);  <span class="comment">// in one source file</span></div>
-<div class="ttc" id="aclassalgotradelib_1_1Result_html"><div class="ttname"><a href="classalgotradelib_1_1Result.html">algotradelib::Result</a></div><div class="ttdoc">Either a value or a BrokerError.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00917">types.hpp:917</a></div></div>
+<div class="line">ATL_ASSERT_BROKER(my::Client); <span class="comment">// in one source file</span></div>
+<div class="ttc" id="aclassalgotradelib_1_1Result_html"><div class="ttname"><a href="classalgotradelib_1_1Result.html">algotradelib::Result</a></div><div class="ttdoc">Either a value or a BrokerError.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00935">types.hpp:935</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_ad822be21460535bed6354950db4e7dc4"><div class="ttname"><a href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">algotradelib::BarInterval</a></div><div class="ttdeci">BarInterval</div><div class="ttdoc">The period one bar covers.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00020">market_data.hpp:20</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1BarQuery_html"><div class="ttname"><a href="structalgotradelib_1_1BarQuery.html">algotradelib::BarQuery</a></div><div class="ttdoc">What bars to fetch.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00325">market_data.hpp:325</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1BarQuery_html"><div class="ttname"><a href="structalgotradelib_1_1BarQuery.html">algotradelib::BarQuery</a></div><div class="ttdoc">What bars to fetch.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00330">market_data.hpp:330</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1BrokerTraits_html"><div class="ttname"><a href="structalgotradelib_1_1BrokerTraits.html">algotradelib::BrokerTraits</a></div><div class="ttdoc">Describes one broker client to the library: its types, capabilities, call thunks and normalizers.</div><div class="ttdef"><b>Definition</b> <a href="broker__traits_8hpp_source.html#l00041">broker_traits.hpp:41</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1DataOnlyTraits_html"><div class="ttname"><a href="structalgotradelib_1_1DataOnlyTraits.html">algotradelib::DataOnlyTraits</a></div><div class="ttdoc">A base for the BrokerTraits of a market-data client that cannot trade.</div><div class="ttdef"><b>Definition</b> <a href="data__only__traits_8hpp_source.html#l00148">data_only_traits.hpp:148</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1InstrumentId_html"><div class="ttname"><a href="structalgotradelib_1_1InstrumentId.html">algotradelib::InstrumentId</a></div><div class="ttdoc">Identifies an instrument: its country, venue and symbol.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1DataOnlyTraits_html"><div class="ttname"><a href="structalgotradelib_1_1DataOnlyTraits.html">algotradelib::DataOnlyTraits</a></div><div class="ttdoc">A base for the BrokerTraits of a market-data client that cannot trade.</div><div class="ttdef"><b>Definition</b> <a href="data__only__traits_8hpp_source.html#l00147">data_only_traits.hpp:147</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1InstrumentId_html"><div class="ttname"><a href="structalgotradelib_1_1InstrumentId.html">algotradelib::InstrumentId</a></div><div class="ttdoc">Identifies an instrument: its country, venue and symbol.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00083">types.hpp:83</a></div></div>
 </div><!-- fragment --><p>An asynchronous client takes the completion token as the last argument. To serve more (a calendar, reference data, price limits), declare that capability <span class="tt">true</span> and add its thunk.</p>
 <p>Every account-side member (holdings, place, replace, cancel, history) refuses before any I/O with <span class="tt"><a class="el" href="namespacealgotradelib_1_1data__only.html#aff6a6a252e93f6b4448e1bbc6550fad6" title="Returns the error every account-side member of DataOnlyTraits answers with.">data_only::refusal()</a></span>; none returns success, since an empty holdings or history would be read as facts about an account. So:</p><ul>
 <li>as a backtest source, or as the market-data session of a <span class="tt"><a class="el" href="classalgotradelib_1_1live_1_1SessionSource.html" title="The source a runner::PollingLoop polls: reads a broker session and feeds bars, quotes,...">live::SessionSource</a></span>, it is complete;</li>
@@ -232,7 +232,7 @@ struct algotradelib::DataOnlyTraits&lt; Tag &gt;</div><p>A base for the <span cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00148">148</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00147">147</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="ababb0d266233dd23ac0a28f304c84a9d" name="ababb0d266233dd23ac0a28f304c84a9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ababb0d266233dd23ac0a28f304c84a9d">&#9670;&#160;</a></span>Account</h2>
@@ -250,7 +250,7 @@ template&lt;typename Tag&gt; </div>
 
 <p>No account; the session binds an empty one. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00152">152</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00151">151</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -270,7 +270,7 @@ template&lt;typename Tag&gt; </div>
 
 <p>Never produced: amendment refuses. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00156">156</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00155">155</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -290,7 +290,7 @@ template&lt;typename Tag&gt; </div>
 
 <p>The vendor's tag type. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00150">150</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00149">149</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +310,7 @@ template&lt;typename Tag&gt; </div>
 
 <p>Never produced: history refuses. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00158">158</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00157">157</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +330,7 @@ template&lt;typename Tag&gt; </div>
 
 <p>Never produced: placement refuses. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00154">154</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00153">153</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -350,7 +350,7 @@ template&lt;typename Tag&gt; </div>
 
 <p>Never produced: working orders are not claimed. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00160">160</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00159">159</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -400,7 +400,7 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The refusal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00311">311</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00312">312</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +460,7 @@ template&lt;typename Client, typename Handler&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00322">322</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00323">323</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -504,7 +504,7 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The refusal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00248">248</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00249">249</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -559,7 +559,7 @@ template&lt;typename Client, typename Handler&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00259">259</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00260">260</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -597,7 +597,7 @@ template&lt;typename Tag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A refusal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00214">214</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00215">215</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -646,7 +646,7 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The refusal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00332">332</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00333">333</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -706,7 +706,7 @@ template&lt;typename Client, typename Handler&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00343">343</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00344">344</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -755,7 +755,7 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The refusal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00269">269</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00270">270</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -815,7 +815,7 @@ template&lt;typename Client, typename Handler&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00280">280</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00281">281</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -855,7 +855,7 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">nullptr</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00199">199</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00198">198</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -904,7 +904,7 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The refusal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00290">290</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00291">291</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -964,7 +964,7 @@ template&lt;typename Client, typename Handler&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00301">301</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00302">302</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1000,7 @@ template&lt;typename Tag&gt; </div>
 <p>Refuses a cancellation. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt"><a class="el" href="namespacealgotradelib_1_1data__only.html#aff6a6a252e93f6b4448e1bbc6550fad6" title="Returns the error every account-side member of DataOnlyTraits answers with.">data_only::refusal()</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00230">230</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00231">231</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1036,7 @@ template&lt;typename Tag&gt; </div>
 <p>Refuses a history query. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt"><a class="el" href="namespacealgotradelib_1_1data__only.html#aff6a6a252e93f6b4448e1bbc6550fad6" title="Returns the error every account-side member of DataOnlyTraits answers with.">data_only::refusal()</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00238">238</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00239">239</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1072,7 +1072,7 @@ template&lt;typename Tag&gt; </div>
 <p>Refuses an amendment. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt"><a class="el" href="namespacealgotradelib_1_1data__only.html#aff6a6a252e93f6b4448e1bbc6550fad6" title="Returns the error every account-side member of DataOnlyTraits answers with.">data_only::refusal()</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00222">222</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00223">223</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1104,7 +1104,7 @@ template&lt;typename Tag&gt; </div>
 <p>Refuses every order before it is built. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt"><a class="el" href="namespacealgotradelib_1_1data__only.html#aff6a6a252e93f6b4448e1bbc6550fad6" title="Returns the error every account-side member of DataOnlyTraits answers with.">data_only::refusal()</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00207">207</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00206">206</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1133,7 +1133,7 @@ template&lt;typename Tag&gt; </div>
 
 <p><span class="tt">true</span>: the client is a market-data source; see <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerCaps.html#aba3c572c48282053cce3c48eae36e471" title="Whether the client is a market-data source that takes no orders (built on DataOnlyTraits).">BrokerCaps::data_only</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00163">163</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__only__traits_8hpp_source.html#l00162">162</a> of file <a class="el" href="data__only__traits_8hpp_source.html">data_only_traits.hpp</a>.</p>
 
 </div>
 </div>

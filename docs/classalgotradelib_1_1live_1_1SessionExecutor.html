@@ -196,7 +196,7 @@ template&lt;typename Session&gt; </div>
 
 <p>The broker tag, from the session. </p>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00036">36</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00035">35</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ template&lt;typename Session&gt; </div>
 
 <p>The broker's capabilities, from the session. </p>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00034">34</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00033">33</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +259,7 @@ template&lt;typename Session&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00050">50</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00049">49</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -334,9 +334,9 @@ template&lt;typename Session&gt; </div>
 <dl class="section warning"><dt>Warning</dt><dd>Prefer <span class="tt">Venue::KRX</span> or <span class="tt">Venue::NXT</span> to <span class="tt">Venue::COMBINED</span> until SOR orders have been seen listed on your account. Journal recovery matches a listed order to the recorded route; if the broker lists a SOR order under the venue where it rests, recovery can conclude the order was never placed, and a restarted runner could send it again. Neither broker's SOR listing has been observed.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The default route. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00073">73</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00072">72</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00050">SessionExecutor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00049">SessionExecutor()</a>.</p>
 
 </div>
 </div>
@@ -375,7 +375,7 @@ template&lt;typename Session&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The venue. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00094">94</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00095">95</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +407,7 @@ template&lt;typename Session&gt; </div>
 <p>Returns why the last instruction failed. </p>
 <dl class="section return"><dt>Returns</dt><dd>The error, or empty if the last instruction succeeded. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00237">237</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00238">238</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +439,7 @@ template&lt;typename Session&gt; </div>
 <p>Returns the reference the broker issued for the last accepted order. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reference, or empty if no order was accepted yet. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00231">231</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00230">230</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -478,7 +478,7 @@ template&lt;typename Session&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The outcome; on failure <span class="tt"><a class="el" href="#ab91aee80f949f46c57d63f24eb5df82e" title="Returns why the last instruction failed.">last_error()</a></span> says why, and on success <span class="tt"><a class="el" href="#a08adb1f5eefc1c0e7ce90b2f253f7ff5" title="Returns the reference the broker issued for the last accepted order.">last_ref()</a></span> is the broker's reference. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00108">108</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00109">109</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -516,9 +516,9 @@ template&lt;typename Session&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">asked</span>, or <span class="tt"><a class="el" href="#a52a534dc191127a774461e51357521f5" title="Returns the venue an order that names none is sent to.">default_route()</a></span> if <span class="tt">asked</span> is <span class="tt">UNSPECIFIED</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00080">80</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00081">81</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00094">effective_route()</a>, and <a class="el" href="session__executor_8hpp_source.html#l00108">place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="session__executor_8hpp_source.html#l00095">effective_route()</a>, and <a class="el" href="session__executor_8hpp_source.html#l00109">place()</a>.</p>
 
 </div>
 </div>
@@ -550,7 +550,7 @@ template&lt;typename Session&gt; </div>
 <p>Returns what the broker's sellable-quantity inquiry establishes, recorded with each figure. </p>
 <dl class="section return"><dt>Returns</dt><dd>The basis. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00221">221</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00220">220</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -589,7 +589,7 @@ template&lt;typename Session&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The quantity, or <span class="tt">std::nullopt</span> if not asked or the inquiry failed (<span class="tt"><a class="el" href="#ab91aee80f949f46c57d63f24eb5df82e" title="Returns why the last instruction failed.">last_error()</a></span> says why); the runner treats an unknown quantity as nothing sellable. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00199">199</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00198">198</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -618,7 +618,7 @@ template&lt;typename Session&gt; </div>
 
 <p><span class="tt">true</span> if the sellable quantity is a separate inquiry (one request per instrument sold). </p>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00215">215</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00214">214</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>
@@ -646,7 +646,7 @@ template&lt;typename Session&gt; </div>
 
 <p><span class="tt">true</span>: a runner built on this executor requires holdings to have been read before it places, however the runner was assembled (see <span class="tt">Runner::allow_absent_portfolio</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00032">32</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="session__executor_8hpp_source.html#l00031">31</a> of file <a class="el" href="session__executor_8hpp_source.html">session_executor.hpp</a>.</p>
 
 </div>
 </div>

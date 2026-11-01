@@ -221,7 +221,7 @@ Functions</h2></td></tr>
 <div class="line">  Params params_;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_start(Ctx&amp; ctx);</div>
-<div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_bar(Ctx&amp; ctx, <span class="keyword">const</span> BarEvent&amp; bar);     <span class="comment">// or on_bars, not both</span></div>
+<div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_bar(Ctx&amp; ctx, <span class="keyword">const</span> BarEvent&amp; bar); <span class="comment">// or on_bars, not both</span></div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_quote(Ctx&amp; ctx, <span class="keyword">const</span> QuoteEvent&amp; quote);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_fill(Ctx&amp; ctx, <span class="keyword">const</span> Fill&amp; fill);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_order_update(Ctx&amp; ctx, <span class="keyword">const</span> OrderSnapshot&amp; order);</div>
@@ -253,11 +253,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static_assert</span>(                                                                         \</div>
-<div class="line">  <a class="code hl_variable" href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">::algotradelib::strategy::StrategyConformance&lt;S, Ctx&gt;::value</a>,                         \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static_assert</span>( \</div>
+<div class="line">  <a class="code hl_variable" href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">::algotradelib::strategy::StrategyConformance&lt;S, Ctx&gt;::value</a>, \</div>
 <div class="line">  <span class="stringliteral">&quot;Strategy does not satisfy the algotradelib strategy surface; see the messages above&quot;</span> \</div>
 <div class="line">)</div>
-<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00737">concept.hpp:737</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00763">concept.hpp:763</a></div></div>
 </div><!-- fragment -->
 <p>Asserts at compile time that <span class="tt">S</span> is a strategy a runner with context <span class="tt">Ctx</span> can drive. </p>
 <p>Checks that:</p><ul>
@@ -276,7 +276,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Not detected: a handler that takes by value a copyable base class of the context. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00758">758</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00784">784</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -294,20 +294,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>NAME##_fallback {                                                               \</div>
-<div class="line">  <span class="keywordtype">int</span> NAME;                                                                            \</div>
-<div class="line">};                                                                                     \</div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S&gt;                                                                  \</div>
-<div class="line"><span class="keyword">struct </span>NAME##_probe : S, NAME##_fallback {};                                           \</div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;                                                 \</div>
-<div class="line"><span class="keyword">struct </span>NAME##_is_ambiguous : std::true_type {};                                        \</div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S&gt;                                                                  \</div>
-<div class="line"><span class="keyword">struct </span>NAME##_is_ambiguous&lt;S, std::void_t&lt;decltype(&amp;NAME##_probe&lt;S&gt;::NAME)&gt;&gt;           \</div>
-<div class="line">: std::false_type {};                                                                  \</div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S&gt;                                                                  \</div>
-<div class="line"><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> declares_##NAME = std::conjunction_v&lt;                                   \</div>
-<div class="line">  std::is_class&lt;S&gt;, std::negation&lt;std::is_final&lt;S&gt;&gt;, NAME##_is_ambiguous&lt;S&gt;            \</div>
-<div class="line">&gt;</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>NAME##_fallback { \</div>
+<div class="line">  <span class="keywordtype">int</span> NAME; \</div>
+<div class="line">}; \</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S&gt; \</div>
+<div class="line"><span class="keyword">struct </span>NAME##_probe : S, NAME##_fallback {}; \</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt; \</div>
+<div class="line"><span class="keyword">struct </span>NAME##_is_ambiguous : std::true_type {}; \</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S&gt; \</div>
+<div class="line"><span class="keyword">struct </span>NAME##_is_ambiguous&lt;S, std::void_t&lt;decltype(&amp;NAME##_probe&lt;S&gt;::NAME)&gt;&gt; : std::false_type {}; \</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> S&gt; \</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> declares_##NAME = \</div>
+<div class="line">  std::conjunction_v&lt;std::is_class&lt;S&gt;, std::negation&lt;std::is_final&lt;S&gt;&gt;, NAME##_is_ambiguous&lt;S&gt;&gt;</div>
 </div><!-- fragment --><p>Detects that <span class="tt">S</span> declares a member named NAME: of any kind, signature or access, inherited included.</p>
 <p>Handlers are optional, so something has to decide whether to call one, and this is it: a declared name is called, and a call that does not compile is the compiler's error at the call (see <span class="tt">dispatch</span>). The name is what the author wrote; asking instead whether a particular call compiles would read a handler with a wrong parameter as absent and skip it in silence. Looking NAME up in a class that derives from <span class="tt">S</span> and from one declaring <span class="tt">int NAME</span> is ambiguous exactly when <span class="tt">S</span> declares it, which works for a member template, where <span class="tt">&amp;S::NAME</span> cannot name one.</p>
 <p><b>A <span class="tt">final</span> class cannot be derived from</b>, and a non-class type has no members, so neither can be looked into; <span class="tt">dispatch</span> and <span class="tt">StrategyConformance</span> refuse both rather than read them as declaring nothing. </p>
