@@ -392,16 +392,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    sell_tax<span class="op">=</span><span class="dv">0</span>,</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    slippage_ticks<span class="op">=</span><span class="dv">0</span>,</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    scale<span class="op">=</span><span class="dv">4</span>,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    shorts<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Replays <code>data</code> through <code>strategy</code> and returns the result.</p>
 <section id="parameters" class="level2 doc-section doc-section-parameters">
 <h2 class="doc-section doc-section-parameters anchored" data-anchor-id="parameters">Parameters</h2>
 <table class="caption-top table">
 <colgroup>
+<col style="width: 2%">
 <col style="width: 4%">
-<col style="width: 6%">
-<col style="width: 86%">
-<col style="width: 3%">
+<col style="width: 90%">
+<col style="width: 2%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -471,6 +472,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>int</td>
 <td>Decimal places kept when prices and volumes are converted to exact decimals.</td>
 <td><code>4</code></td>
+</tr>
+<tr class="odd">
+<td>shorts</td>
+<td>bool</td>
+<td>Whether a target below zero may sell shares not held. Off by default: such a sale is refused whole as <code>quantity_not_sellable</code>, so a long position targeted below zero is not closed either. On, the sale fills like any other (taxed by <code>sell_tax</code>, its proceeds added to cash) and the position is valued at each bar’s close; no borrow, fee, margin or recall is modelled. Since the proceeds count as cash, <code>ctx.cash()</code> includes them, and leverage through shorts does not show in <code>lowest_cash</code> or <code>overdrawn_bars</code>.</td>
+<td><code>False</code></td>
 </tr>
 </tbody>
 </table>

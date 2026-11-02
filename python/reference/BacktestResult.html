@@ -501,7 +501,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>lowest_cash</td>
 <td>float</td>
-<td>The lowest cash (KRW) an execution left, if an execution took cash below zero; NaN otherwise, which includes a run that started below zero and executed nothing.</td>
+<td>The lowest cash (KRW) an execution left, if an execution took cash below zero; NaN otherwise, which includes a run that started below zero and executed nothing. Short sale proceeds count as cash, so leverage through shorts does not show here (see <code>shorts</code>).</td>
 </tr>
 <tr class="odd">
 <td>aborted</td>
@@ -511,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>overdrawn_bars</td>
 <td>int</td>
-<td>Input bars that ended with cash below zero (with several symbols, one per symbol’s bar).</td>
+<td>Input bars that ended with cash below zero (with several symbols, one per symbol’s bar); short sale proceeds count as cash, as for <code>lowest_cash</code>.</td>
 </tr>
 <tr class="odd">
 <td>unchecked_fill_causality</td>
