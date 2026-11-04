@@ -15,6 +15,8 @@ var structalgotradelib_1_1backtest_1_1ReportCaveats =
     [ "limit_fills_bounded_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a29949e3ca15c760ef6511e28ddd7727b", null ],
     [ "lowest_cash_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a7acf24a8ca4f3a1c288bbfeb351dd078", null ],
     [ "lowest_cash_at_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a941d01fce3e932322850a4e845154e0a", null ],
+    [ "market_fills_by_rule_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a4fab2d82a3ab2d820892eb5dea70e917", null ],
+    [ "market_price_rule_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a4b16889a683c8fcd2933842d76c593ac", null ],
     [ "multiple_instruments_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#a2a2a340ac78c6f3eb5c56b7411e6e660", null ],
     [ "other_currency_executions_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#ae802d6f7d0a555e2049670576d94f7dd", null ],
     [ "overdrawn_bars_", "structalgotradelib_1_1backtest_1_1ReportCaveats.html#aa802cd063d042839baece078365a6911", null ],

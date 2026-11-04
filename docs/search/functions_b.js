@@ -24,7 +24,7 @@ var searchData=
   ['load_21',['load',['../kis__credentials_8hpp.html#ad24c626a43cda55562cfbc394fe236d1',1,'kis_credentials::load()'],['../kiwoom__credentials_8hpp.html#aa8ff3ed9a3f68b0a7b88389a2808aca6',1,'kiwoom_credentials::load()']]],
   ['load_5fconfig_22',['load_config',['../kis__credentials_8hpp.html#ae6f703f8486468a09ef4ec390524921d',1,'kis_credentials']]],
   ['load_5freference_5fdata_23',['load_reference_data',['../live__program_8hpp.html#a95645e038c781d7b3fcac41bc0206d0c',1,'live_program']]],
-  ['local_5fdate_24',['local_date',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#abc194e6bc9f52c7396d325326a2022c9',1,'algotradelib::strategy::SessionWindow']]],
+  ['local_5fdate_24',['local_date',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#abc194e6bc9f52c7396d325326a2022c9',1,'algotradelib::strategy::SessionWindow::local_date()'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#abc194e6bc9f52c7396d325326a2022c9',1,'algotradelib::runner::SessionWindow::local_date()']]],
   ['local_5ffailure_25',['local_failure',['../classalgotradelib_1_1runner_1_1Runner.html#a23e90e5fcf4c0bace8639a6abeb5b436',1,'algotradelib::runner::Runner']]],
   ['log_26',['log',['../classalgotradelib_1_1runner_1_1Context.html#a409ea09c485666df3f5b01b56b44a59d',1,'algotradelib::runner::Context::log()'],['../classalgotradelib_1_1strategy_1_1ProbeContextT.html#a824760971b89b5d9927a147ad5d8b743',1,'algotradelib::strategy::ProbeContextT::log()']]],
   ['lose_5fnext_5freply_27',['lose_next_reply',['../classalgotradelib_1_1mock_1_1MockClient.html#a58d9eee8998098a21216269bc98419de',1,'algotradelib::mock::MockClient']]],

@@ -36,6 +36,8 @@ var namespacealgotradelib_1_1strategy =
     [ "RiskLimits", "structalgotradelib_1_1strategy_1_1RiskLimits.html", "structalgotradelib_1_1strategy_1_1RiskLimits" ],
     [ "SellableConventionProbe", "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html", "classalgotradelib_1_1strategy_1_1SellableConventionProbe" ],
     [ "SellableEvidence", "structalgotradelib_1_1strategy_1_1SellableEvidence.html", "structalgotradelib_1_1strategy_1_1SellableEvidence" ],
+    [ "SessionEdge", "structalgotradelib_1_1strategy_1_1SessionEdge.html", "structalgotradelib_1_1strategy_1_1SessionEdge" ],
+    [ "SessionEdges", "classalgotradelib_1_1strategy_1_1SessionEdges.html", "classalgotradelib_1_1strategy_1_1SessionEdges" ],
     [ "SessionWindow", "structalgotradelib_1_1strategy_1_1SessionWindow.html", "structalgotradelib_1_1strategy_1_1SessionWindow" ],
     [ "SizeSpec", "classalgotradelib_1_1strategy_1_1SizeSpec.html", "classalgotradelib_1_1strategy_1_1SizeSpec" ],
     [ "StrategyConformance", "structalgotradelib_1_1strategy_1_1StrategyConformance.html", "structalgotradelib_1_1strategy_1_1StrategyConformance" ],
@@ -109,6 +111,7 @@ var namespacealgotradelib_1_1strategy =
       [ "TARGET_WEIGHT", "namespacealgotradelib_1_1strategy.html#ad706c8d4f2f53a5249d5968937ddf10baffe9ade900a768359ccb3217205ec61e", null ]
     ] ],
     [ "bar_period_end", "namespacealgotradelib_1_1strategy.html#a6038c598825a5d7af21cae316410b12a", null ],
+    [ "bar_period_start", "namespacealgotradelib_1_1strategy.html#aacbcb4a7d302ea03146ce04a7803cfcb", null ],
     [ "closes_toward_flat", "namespacealgotradelib_1_1strategy.html#a962acd3ecd7beb10a17cee0dbd226d2f", null ],
     [ "guard_reason_name", "namespacealgotradelib_1_1strategy.html#ab6f64a38cc5331834c188cba7fe11e13", null ],
     [ "halt_blocks", "namespacealgotradelib_1_1strategy.html#a7228fc16246626c17eff06ce08e8932c", null ],

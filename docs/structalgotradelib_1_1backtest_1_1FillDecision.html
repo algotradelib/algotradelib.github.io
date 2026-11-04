@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structalgotrad
 </div><!--header-->
 <div class="contents">
 
-<p>What <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a5d44bc0415ddeb1302ec9d75b4ee6151" title="Decides whether an order trades against a bar, and at what price and cost.">NextBarFillModel::decide</a></span> concluded about one order and one bar.  
+<p>What <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#ab46397d4b6f87a986430bd9746aea189" title="Decides whether an order trades against a bar, and at what price and cost.">NextBarFillModel::decide</a></span> concluded about one order and one bar.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="fill_8hpp_source.html">algotradelib/src/backtest/fill.hpp</a>&gt;</code></p>
@@ -141,11 +141,13 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:ab863c3215f67df06c8ec03ab068257c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the fill depended on a stop released inside the bar, where the bar cannot show the order of prices; counted by the report.  <br /></td></tr>
 <tr class="memitem:a5e474d4e6da3263d1946246faa8e9586" id="r_a5e474d4e6da3263d1946246faa8e9586"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5e474d4e6da3263d1946246faa8e9586">bounded_</a> {false}</td></tr>
 <tr class="memdesc:a5e474d4e6da3263d1946246faa8e9586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a limit-type fill price was moved to stay within the bar's range and the limit; counted by the report.  <br /></td></tr>
+<tr class="memitem:aba1ec595c9b223097b8779c2598c6364" id="r_aba1ec595c9b223097b8779c2598c6364"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aba1ec595c9b223097b8779c2598c6364">priced_by_rule_</a> {false}</td></tr>
+<tr class="memdesc:aba1ec595c9b223097b8779c2598c6364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the price was chosen by the model's market-price rule; counted by the report.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>What <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a5d44bc0415ddeb1302ec9d75b4ee6151" title="Decides whether an order trades against a bar, and at what price and cost.">NextBarFillModel::decide</a></span> concluded about one order and one bar. </p>
+<div class="textblock"><p>What <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#ab46397d4b6f87a986430bd9746aea189" title="Decides whether an order trades against a bar, and at what price and cost.">NextBarFillModel::decide</a></span> concluded about one order and one bar. </p>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00028">28</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00030">30</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a5e474d4e6da3263d1946246faa8e9586" name="a5e474d4e6da3263d1946246faa8e9586"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e474d4e6da3263d1946246faa8e9586">&#9670;&#160;</a></span>bounded_</h2>
@@ -161,9 +163,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether a limit-type fill price was moved to stay within the bar's range and the limit; counted by the report. </p>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00050">50</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00052">52</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00224">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00308">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
 </div>
 </div>
@@ -182,9 +184,9 @@ Public Attributes</h2></td></tr>
 <p>Why a fill could not be costed (no commission rate, or a tax that does not fit). </p>
 <p>Set instead of an execution; the backtest halts rather than dropping the trade. </p>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00038">38</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00040">40</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00224">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00308">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
 </div>
 </div>
@@ -202,9 +204,9 @@ Public Attributes</h2></td></tr>
 
 <p>The execution, if the order traded against this bar. </p>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00030">30</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00032">32</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00224">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00308">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
 </div>
 </div>
@@ -222,9 +224,29 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the fill depended on a stop released inside the bar, where the bar cannot show the order of prices; counted by the report. </p>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00045">45</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00047">47</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00224">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00308">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
+
+</div>
+</div>
+<a id="aba1ec595c9b223097b8779c2598c6364" name="aba1ec595c9b223097b8779c2598c6364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba1ec595c9b223097b8779c2598c6364">&#9670;&#160;</a></span>priced_by_rule_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::backtest::FillDecision::priced_by_rule_ {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether the price was chosen by the model's market-price rule; counted by the report. </p>
+
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00054">54</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00308">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
 </div>
 </div>
@@ -242,9 +264,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether this bar released a dormant stop-limit order (whether or not it also filled). </p>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00040">40</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00042">42</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00224">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00308">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
 </div>
 </div>
@@ -262,9 +284,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the order stays queued for a later bar (it did not trade but may still). </p>
 
-<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00032">32</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00034">34</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00224">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fill_8hpp_source.html#l00308">algotradelib::backtest::NextBarFillModel::decide()</a>.</p>
 
 </div>
 </div>

@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aed4b6e329a2122570c024d504448c7c9" id="r_aed4b6e329a2122570c024d504448c7c9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aed4b6e329a2122570c024d504448c7c9">allow_absent_portfolio</a> ()</td></tr>
 <tr class="memdesc:aed4b6e329a2122570c024d504448c7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lets the run place orders before holdings have ever been read (for a broker without a holdings inquiry, or a run deliberately without that poll).  <br /></td></tr>
 <tr class="memitem:a55d2b1c16de8c07aacb09dbcc34faf2e" id="r_a55d2b1c16de8c07aacb09dbcc34faf2e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a55d2b1c16de8c07aacb09dbcc34faf2e">set_session_window</a> (<a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">strategy::SessionWindow</a> window)</td></tr>
-<tr class="memdesc:a55d2b1c16de8c07aacb09dbcc34faf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the session window the market phase is derived from (KRX by default, as in a backtest).  <br /></td></tr>
+<tr class="memdesc:a55d2b1c16de8c07aacb09dbcc34faf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the session window the market phase is derived from (KRX by default, as in a backtest), and the one the strategy reads (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Context.html#a8a8738023689c53c2db4633485351d3d" title="Returns the session window the runner derives phases from, for strategy::SessionEdges.">Context::session</a></span>).  <br /></td></tr>
 <tr class="memitem:afcf039d984a01f7a1117bb54dc533107" id="r_afcf039d984a01f7a1117bb54dc533107"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">strategy::SessionWindow</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afcf039d984a01f7a1117bb54dc533107">session_window</a> () const noexcept</td></tr>
 <tr class="memdesc:afcf039d984a01f7a1117bb54dc533107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the session window.  <br /></td></tr>
 <tr class="memitem:a2ad123ef3aa0c0bbf1346446ad2b1801" id="r_a2ad123ef3aa0c0bbf1346446ad2b1801"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ad123ef3aa0c0bbf1346446ad2b1801">set_failure_policy</a> (<a class="el" href="structalgotradelib_1_1runner_1_1FailurePolicy.html">FailurePolicy</a> policy)</td></tr>
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">Runner</a>, typename Source, typename Clock = SteadyClock&gt;<br />
 class algotradelib::runner::PollingLoop&lt; Runner, Source, Clock &gt;</div><p>Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market phase, and honours stop requests. </p>
-<p>Each iteration: check for a stop (a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html" title="A stop request the loop polls; safe to set from a signal handler.">StopSource</a></span> or the control file); derive and install the market phase from the <span class="tt">SessionWindow</span> and the polled calendar; make sure the broker's order list has been read once (until it has, placements are held); poll whatever is due, in <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a83a408937aeb3dfebceb85876482a96a" title="Every poll kind, in the order an iteration polls them.">all_poll_kinds</a></span> order, deriving the phase again before each poll; announce a phase change; retry retained targets.</p>
+<p>Each iteration: check for a stop (a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html" title="A stop request the loop polls; safe to set from a signal handler.">StopSource</a></span> or the control file); derive and install the market phase from the <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1SessionWindow.html" title="The intraday session of a market, as the operator states it.">SessionWindow</a></span> and the polled calendar; make sure the broker's order list has been read once (until it has, placements are held); poll whatever is due, in <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a83a408937aeb3dfebceb85876482a96a" title="Every poll kind, in the order an iteration polls them.">all_poll_kinds</a></span> order, deriving the phase again before each poll; announce a phase change; retry retained targets.</p>
 <p>Placements are held through holds on the runner's <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1RiskGuard.html" title="Checks planned orders against RiskLimits, holds trading stopped, and counts orders sent.">strategy::RiskGuard</a></span>: <span class="tt">ORDER_LIST_UNREAD</span>, <span class="tt">PORTFOLIO_ABSENT</span>, <span class="tt">PORTFOLIO_STALE</span>, <span class="tt">BUYING_POWER_UNREAD</span> and <span class="tt">POLL_FAILING</span> are data holds, under which named cancellations still go (see <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a7228fc16246626c17eff06ce08e8932c" title="Tests whether a hold stops an instruction of a given class.">strategy::halt_blocks</a></span>), so a stop can withdraw known orders even when the order list could not be read. <span class="tt">STOPPING</span>, taken while a stop is honoured and left in place after it, blocks cancellations too; the loop lifts it only for its own closing instructions. The loop never takes or releases <span class="tt">OPERATOR</span> or <span class="tt">LOCAL_FAILURE</span>, which also block cancellations.</p>
 <p><b>State a holdings age policy</b> (<span class="tt"><a class="el" href="#a00b24b592bb0a14a40bda001a309c7bc" title="Sets how old the holdings (and, for a runner that sends to a broker, the working-order listing) may b...">set_maximum_portfolio_age</a></span> or <span class="tt"><a class="el" href="#abb7a13500d8d0c3a8dcf245f33c916e8" title="Accepts holdings of any age, instead of stating a maximum.">allow_unbounded_portfolio_age</a></span>): without one, every placement is held as <span class="tt">PORTFOLIO_STALE</span>.</p>
 <p>A phase the loop cannot establish is reported (<span class="tt">final_phase_</span> and a note), not held. A stop is honoured with a closing pass (see <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677" title="What an operator asks for when stopping a running loop.">StopIntent</a></span>); <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1LoopReport.html#adc943a9d11237cde3fa15675af1ff960" title="Tests whether every closing instruction the loop asked for was accepted, and the loop knew what to as...">LoopReport::closing_complete()</a></span> says whether everything asked for was accepted, which is not the same as being flat. The closing orders are allowed in any phase but still face every other risk check (sellable quantity, ceilings).</p>
@@ -268,7 +268,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Lets the run place orders before holdings have ever been read (for a broker without a holdings inquiry, or a run deliberately without that poll). </p>
 <p>It lifts the <span class="tt">PORTFOLIO_ABSENT</span> hold, but not an age limit on holdings that were read, and a plan that would cancel something is still held back until holdings are read. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01218">1218</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01221">1221</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -301,7 +301,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>It does not lift the hold for holdings never read, nor the one for a runner whose working-order listing never arrives.</p>
 <dl class="section warning"><dt>Warning</dt><dd>A listing is then never too old. If account polls keep being refused for the rate limit (which never exhausts the failure budget), the loop keeps placing against the last listing, and sent orders can stay counted as working indefinitely. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01191">1191</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01194">1194</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
 
@@ -334,7 +334,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p>Applies price bands of any age (see <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#a6674b37271739ba96b6d1bbf1fee7b2a" title="Applies price bands of any age (replacing a stated maximum).">Runner::allow_unbounded_price_limits_age</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01207">1207</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01210">1210</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -366,7 +366,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Returns the clock. </p>
 <dl class="section return"><dt>Returns</dt><dd>The clock. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00994">994</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00997">997</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -398,7 +398,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Returns the clock, for a test to advance. </p>
 <dl class="section return"><dt>Returns</dt><dd>The clock. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01001">1001</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01004">1004</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +430,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Returns what the last iteration did. </p>
 <dl class="section return"><dt>Returns</dt><dd>The iteration report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01436">1436</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01451">1451</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,6 +465,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p>Runs until a stop is requested, a poll kind exhausts its failure budget, or <span class="tt">max_iterations</span> iterations have run. </p>
 <p>On a stop it honours the intent (cancelling and closing as asked) and calls the strategy's <span class="tt">on_stop</span> under the <span class="tt">STOPPING</span> hold.</p>
+<p>The first iteration of a runner not yet started calls <span class="tt">on_start</span> (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#a72ad5263968ff073424caea9538bffb2" title="Calls on_start and settles what it asked for, the first time it is called.">Runner::start</a></span>) before any read or poll, so before every other handler; it runs again in every new process, a restart included. It is the first handler, and it decides before the first holdings, buying-power and price-band polls, under the hold for an order list not yet read. While the account has never been read, an order intent it places is withheld and dropped, and a target is retained and placed after the first holdings read, unless a later handler restates the instrument or a stop, an operator's halt or an overdue order holds. Otherwise (with <span class="tt"><a class="el" href="#aed4b6e329a2122570c024d504448c7c9" title="Lets the run place orders before holdings have ever been read (for a broker without a holdings inquir...">allow_absent_portfolio</a></span>, or a current portfolio installed before the run), everything it places is refused under that hold and dropped. A replay retains nothing either, so state targets from <span class="tt">on_bar</span> rather than from <span class="tt">on_start</span>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stop</td><td>The stop source to poll (and that a signal handler may set). </td></tr>
@@ -474,7 +475,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The run's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01269">1269</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01284">1284</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -506,7 +507,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Returns the schedule. </p>
 <dl class="section return"><dt>Returns</dt><dd>The schedule. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01009">1009</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01012">1012</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00987">PollingLoop()</a>.</p>
 
@@ -540,7 +541,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Returns the session window. </p>
 <dl class="section return"><dt>Returns</dt><dd>The window. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01238">1238</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01243">1243</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -586,7 +587,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01123">1123</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01126">1126</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -623,7 +624,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01254">1254</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01259">1259</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -660,7 +661,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01246">1246</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01251">1251</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -698,7 +699,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l02127">2127</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l02160">2160</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +737,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01084">1084</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01087">1087</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -773,7 +774,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01202">1202</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01205">1205</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -815,7 +816,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01177">1177</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01180">1180</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -844,7 +845,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </table>
 </div><div class="memdoc">
 
-<p>Sets the session window the market phase is derived from (KRX by default, as in a backtest). </p>
+<p>Sets the session window the market phase is derived from (KRX by default, as in a backtest), and the one the strategy reads (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Context.html#a8a8738023689c53c2db4633485351d3d" title="Returns the session window the runner derives phases from, for strategy::SessionEdges.">Context::session</a></span>). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">window</td><td>The window. </td></tr>
@@ -852,7 +853,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01230">1230</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l01234">1234</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>

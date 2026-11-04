@@ -214,6 +214,8 @@ Classes</h2></td></tr>
 <tr class="memitem:runner_5Fkeeps_5Fsent_5Forders_3C_20Runner_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28Runner_3A_3Akeeps_5Fsent_5Forders_5Funtil_5Flisted_29_3E_20_3E" id="r_runner_5Fkeeps_5Fsent_5Forders_3C_20Runner_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28Runner_3A_3Akeeps_5Fsent_5Forders_5Funtil_5Flisted_29_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html">runner_keeps_sent_orders&lt; Runner, std::void_t&lt; decltype(Runner::keeps_sent_orders_until_listed)&gt; &gt;</a></td></tr>
 <tr class="memitem:SeriesKey" id="r_SeriesKey"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1runner_1_1SeriesKey.html">SeriesKey</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies one cached bar series: an instrument at one bar interval.  <a href="structalgotradelib_1_1runner_1_1SeriesKey.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SessionWindow" id="r_SessionWindow"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1runner_1_1SessionWindow.html">SessionWindow</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The intraday session of a market, as the operator states it.  <a href="structalgotradelib_1_1runner_1_1SessionWindow.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SignalStop" id="r_SignalStop"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1runner_1_1SignalStop.html">SignalStop</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routes <span class="tt">SIGINT</span> and <span class="tt">SIGTERM</span> to a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1StopSource.html" title="A stop request the loop polls; safe to set from a signal handler.">StopSource</a></span> as a quiesce, and ignores <span class="tt">SIGHUP</span> where it exists (POSIX); only when <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1SignalStop.html#a5692aa8e544d3f7ccefbafb70e83df76" title="Installs the handlers: SIGINT and SIGTERM request a quiesce on source; SIGHUP, where it exists,...">install</a></span> is called.  <a href="classalgotradelib_1_1runner_1_1SignalStop.html#details">More...</a><br /></td></tr>
 <tr class="memitem:source_5Fnames_5Fbuying_5Fpower_5Fcurrencies" id="r_source_5Fnames_5Fbuying_5Fpower_5Fcurrencies"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1runner_1_1source__names__buying__power__currencies.html">source_names_buying_power_currencies</a></td></tr>
@@ -555,8 +557,8 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <div class="line">dry.context().set_instrument(reference);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> report = dry.feed(<a class="code hl_function" href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">strategy::make_bar_event</a>(<span class="keywordtype">id</span>, BarInterval::ONE_DAY, <a class="code hl_enumvalue" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">BarStamp::CLOSE</a>, bar));</div>
 <div class="line"><span class="comment">// report.would_place_ holds what would have been sent</span></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a0a953e1898c7dd6ec8560a110d4db989"><div class="ttname"><a href="#a0a953e1898c7dd6ec8560a110d4db989">algotradelib::runner::DryRunner</a></div><div class="ttdeci">Runner&lt; Strategy, CapsType, DryTag, RecordingExecutor&lt; DryTag &gt; &gt; DryRunner</div><div class="ttdoc">A runner that sends nothing: handlers fire and instructions are recorded by a RecordingExecutor.</div><div class="ttdef"><b>Definition</b> <a href="runner_8hpp_source.html#l04770">runner.hpp:4770</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00267">event.hpp:267</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a0a953e1898c7dd6ec8560a110d4db989"><div class="ttname"><a href="#a0a953e1898c7dd6ec8560a110d4db989">algotradelib::runner::DryRunner</a></div><div class="ttdeci">Runner&lt; Strategy, CapsType, DryTag, RecordingExecutor&lt; DryTag &gt; &gt; DryRunner</div><div class="ttdoc">A runner that sends nothing: handlers fire and instructions are recorded by a RecordingExecutor.</div><div class="ttdef"><b>Definition</b> <a href="runner_8hpp_source.html#l04799">runner.hpp:4799</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00278">event.hpp:278</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d"><div class="ttname"><a href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">algotradelib::BarStamp::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">The timestamp is the instant the period ended.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00127">market_data.hpp:127</a></div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -566,7 +568,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l04770">4770</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l04799">4799</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -593,7 +595,7 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="context_8hpp_source.html#l00047">47</a> of file <a class="el" href="context_8hpp_source.html">context.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8hpp_source.html#l00048">48</a> of file <a class="el" href="context_8hpp_source.html">context.hpp</a>.</p>
 
 </div>
 </div>
@@ -786,9 +788,9 @@ template&lt;typename Broker&gt; </div>
 </div><div class="memdoc">
 
 <p>Where the clock stands relative to the trading session. </p>
-<p>Whether a date trades comes from the broker's calendar; the intraday open and close come from the configured <span class="tt">SessionWindow</span>. </p>
+<p>Whether a date trades comes from the broker's calendar; the intraday open and close come from the configured <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1SessionWindow.html" title="The intraday session of a market, as the operator states it.">SessionWindow</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00031">31</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00032">32</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>

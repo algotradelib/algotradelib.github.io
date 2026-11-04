@@ -13,6 +13,8 @@ var structalgotradelib_1_1backtest_1_1ReplayResult =
     [ "limit_fills_bounded_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a4e1b49a6b2cba347174838a17e5ef16a", null ],
     [ "lowest_cash_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#ae994c9bc49c1816bbb1ac87369c63357", null ],
     [ "lowest_cash_at_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#af39742b969e23b48edc730587681061f", null ],
+    [ "market_fills_by_rule_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#abc3e73eb7cd085f9e98583b030ac3d74", null ],
+    [ "market_price_rule_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#aa649a9233da3f2e0736a7d1325c9d26a", null ],
     [ "overdrawn_bars_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#af5635c48a743f6a46dc93842369bd9bb", null ],
     [ "quotes_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#abf593948a01e569973b089692848d7f2", null ],
     [ "refused_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a688685e711a29d2bceaabf38909dcbe6", null ],

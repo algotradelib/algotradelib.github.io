@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1kis_1_1KisOrderRef.html" target="_top" xlink:title="A KIS order&#39;s address: branch number and order number, both kept.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1kis_1_1KisOrderAck.html" target="_top" xlink:title="KIS&#39;s acknowledgement of an accepted order, amendment or cancellation.">
 <polygon fill="white" stroke="#666666" points="100.75,-33.5 0,-33.5 0,0 100.75,0 100.75,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::kis::</text>
-<text xml:space="preserve" text-anchor="middle" x="50.38" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">KisOrderRef</text>
+<text xml:space="preserve" text-anchor="middle" x="50.38" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">KisOrderAck</text>
 </a>
 </g>
 </g>

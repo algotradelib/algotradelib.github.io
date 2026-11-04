@@ -5,7 +5,7 @@ var searchData=
   ['date_5fof_2',['date_of',['../namespacealgotradelib_1_1runner.html#a06a95d163084c548a74408697cc0c2b6',1,'algotradelib::runner']]],
   ['dates_5fexclude_3',['dates_exclude',['../structalgotradelib_1_1Instrument.html#a57a50e9ad3a4a4d4d9aec11a024e7df3',1,'algotradelib::Instrument']]],
   ['dates_5flisted_5forder_4',['dates_listed_order',['../namespacealgotradelib_1_1runner.html#a9223085a614d17b1e54a9f29660c2301',1,'algotradelib::runner']]],
-  ['decide_5',['decide',['../classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a5d44bc0415ddeb1302ec9d75b4ee6151',1,'algotradelib::backtest::NextBarFillModel']]],
+  ['decide_5',['decide',['../classalgotradelib_1_1backtest_1_1NextBarFillModel.html#ab46397d4b6f87a986430bd9746aea189',1,'algotradelib::backtest::NextBarFillModel']]],
   ['decide_5fnothing_6',['decide_nothing',['../namespacealgotradelib_1_1runner.html#a23de9e32a77abe4c93e53c2971a569cd',1,'algotradelib::runner']]],
   ['deciding_5fat_7',['deciding_at',['../classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a0245a37392a001497723893e7833afb3',1,'algotradelib::backtest::QueueingExecutor']]],
   ['decimal64_8',['Decimal64',['../classalgotradelib_1_1Decimal64.html#aa0e0a2d2c73682636161b0403bfb4436',1,'algotradelib::Decimal64::Decimal64()=default'],['../classalgotradelib_1_1Decimal64.html#a4cdff6f056edc72c142593458d55b3aa',1,'algotradelib::Decimal64::Decimal64(std::int64_t coefficient, std::uint8_t scale)']]],

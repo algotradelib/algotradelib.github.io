@@ -22,5 +22,5 @@ var searchData=
   ['until_5funreadable_5f_19',['until_unreadable_',['../structalgotradelib_1_1CommissionRate.html#a3346d4496025475e980ba394c6cfe311',1,'algotradelib::CommissionRate']]],
   ['unvalued_5fbars_5f_20',['unvalued_bars_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#a33d9b018911470bdac0df7ef8a973ee6',1,'algotradelib::backtest::ReplayResult::unvalued_bars_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#ac1e2707b3579a25cbfe5e9589c8de62a',1,'algotradelib::backtest::ReportCaveats::unvalued_bars_']]],
   ['upper_5f_21',['upper_',['../structalgotradelib_1_1PriceLimits.html#abcfd43223abc343c639ca1f3d58d59b8',1,'algotradelib::PriceLimits']]],
-  ['utc_5foffset_5f_22',['utc_offset_',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::strategy::SessionWindow']]]
+  ['utc_5foffset_5f_22',['utc_offset_',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::strategy::SessionWindow::utc_offset_'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::runner::SessionWindow::utc_offset_']]]
 ];

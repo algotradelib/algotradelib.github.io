@@ -20,6 +20,7 @@ var classalgotradelib_1_1backtest_1_1QueueingExecutor =
     [ "place", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#ab8eec746d4ee345671591b49eac5084c", null ],
     [ "queued", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a573dec487b596e5d2dc8cdb2f706b7f7", null ],
     [ "release", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a866f80315925485e3a5c5f2f97166476", null ],
+    [ "stamp_decision_prices", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a3b95fae5255356343d3f8791f65f6baa", null ],
     [ "withdraw", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#acaca4d47f4c63c910c9bc945c59bee2d", null ],
     [ "reaches_a_broker", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a81a4e3b512b10926f709b674d9073f58", null ]
 ];

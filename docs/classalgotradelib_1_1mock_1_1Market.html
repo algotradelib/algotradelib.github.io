@@ -160,13 +160,13 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A market in memory: bars the caller gives, a clock the caller moves, one account's cash, holdings and orders. </p>
-<p>A bar is applied when the clock passes its period end. Orders fill by the backtest's rule (<span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html" title="The fill model: market orders at the next bar&#39;s open, limit orders when the next bar&#39;s range reaches ...">backtest::NextBarFillModel</a></span>): an order trades against the first bar of its instrument whose period began at or after the instant the market accepted it, a market order at that bar's open, a limit order if the bar's range reaches the limit, never partly; the fill is stamped at the bar's period end. A <span class="tt">DAY</span> order lives in the session of that first bar, and expires as a backtest's does: after a daily bar of its session, after an intraday bar ending at or after the session's close, or before a bar of a later date (a session whose closing bar is missing still ended). An immediate-or-cancel or fill-or-kill order expires after its first bar. Expired orders are <span class="tt">CANCELED</span>.</p>
+<p>A bar is applied when the clock passes its period end. Orders fill by the backtest's rule (<span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html" title="The fill model: market orders at the next bar&#39;s open, limit orders when the next bar&#39;s range reaches ...">backtest::NextBarFillModel</a></span>): an order trades against the first bar of its instrument whose period began at or after the instant the market accepted it, a market order at that bar's open (or at the price of the fill model's market-price rule, given the series' bar before it), a limit order if the bar's range reaches the limit, never partly; the fill is stamped at the bar's period end. A <span class="tt">DAY</span> order lives in the session of that first bar, and expires as a backtest's does: after a daily bar of its session, after an intraday bar ending at or after the session's close, or before a bar of a later date (a session whose closing bar is missing still ended). An immediate-or-cancel or fill-or-kill order expires after its first bar. Expired orders are <span class="tt">CANCELED</span>.</p>
 <p>Unlike a backtest, the market never fills an order against a bar that began before the order was accepted, even where a backtest cannot tell and allows it (<span class="tt">ReplayResult::unchecked_fill_causality_</span>).</p>
 <p>Not modelled: trading hours (an order is accepted at any instant; the calendar and the session window only date the market), price bands, partial fills, volume, settlement, short selling, interest. Cash is kept in one currency, and may go below zero when a market buy fills above the price it reserved.</p>
 <p>If a fill cannot be costed (the fill model's commission has no rate for its date) or recorded (its amount does not fit an exact decimal), or a position cannot be valued at a bar's close, the market halts: <span class="tt"><a class="el" href="#afcb5f8ea4bf246dcd20f7107e92a3573" title="Moves the clock to an instant, applying every bar whose period end it reaches, in order of period end...">advance_to</a></span> throws <span class="tt">std::runtime_error</span> and keeps throwing, placements are refused (<span class="tt">market_halted</span>), and the clock stays at the period end of the bar it halted on. What was done before the failure stands, including fills of earlier orders on that bar; the order that failed stays <span class="tt">PENDING</span>. Reads answer that state.</p>
 <p>Not thread-safe; nothing is persisted. </p>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00099">99</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00100">100</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1f32ec26a6d10bb7a48238c6cb48400a" name="a1f32ec26a6d10bb7a48238c6cb48400a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f32ec26a6d10bb7a48238c6cb48400a">&#9670;&#160;</a></span>Market()</h2>
@@ -216,7 +216,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00114">114</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00115">115</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +259,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00181">181</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00182">182</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -295,9 +295,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The last <span class="tt">count_</span> such bars at or before <span class="tt">before_</span>, oldest first; <span class="tt">INVALID_ARGUMENT</span> with <span class="tt">unknown_instrument</span>, <span class="tt">unsupported_interval</span> or <span class="tt">bars_count</span> (a count below one). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00217">217</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00218">218</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="market_8hpp_source.html#l00114">Market()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="market_8hpp_source.html#l00115">Market()</a>.</p>
 
 </div>
 </div>
@@ -334,7 +334,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The figure; <span class="tt">INVALID_ARGUMENT</span> <span class="tt">unknown_currency</span> for a currency the market keeps no cash in, <span class="tt">PROTOCOL</span> <span class="tt">out_of_range</span> if the arithmetic does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00365">365</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00366">366</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +370,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The trading days (<span class="tt"><a class="el" href="structalgotradelib_1_1mock_1_1MarketSettings.html#a818651487b8f3c0adae4d88b6ad73a16" title="The trading days the market publishes, as a backtest is given them (backtest::ReplayConfig::calendar_...">MarketSettings::calendar_</a></span>, or those of the bars), <span class="tt">received_at_</span> now; <span class="tt">INVALID_ARGUMENT</span> <span class="tt">unsupported_market</span> for another market. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00308">308</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00309">309</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -406,7 +406,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The acknowledgement; <span class="tt">INVALID_ARGUMENT</span> <span class="tt">nothing_to_cancel</span> (with <span class="tt">reached_broker_</span> set) for an id that is unknown or already finished. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00484">484</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00489">489</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -436,7 +436,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns why the market halted, if it did. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reason, or <span class="tt">std::nullopt</span> while it trades. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00169">169</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00170">170</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +466,7 @@ Public Member Functions</h2></td></tr>
 <p>Answers a holdings request. </p>
 <dl class="section return"><dt>Returns</dt><dd>Every position not flat, valued at its last applied bar's close, with per-currency totals. Every held share is sellable (basis: whole holding, resting sells to be deducted by the caller, unverified). <span class="tt">PROTOCOL</span> <span class="tt">out_of_range</span> if a row's cost or gain, or a total, does not fit an exact decimal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00324">324</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00325">325</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -502,9 +502,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Its reference data, as given or defaulted at construction; <span class="tt">INVALID_ARGUMENT</span> <span class="tt">unknown_instrument</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00294">294</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00295">295</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="market_8hpp_source.html#l00294">instrument()</a>, and <a class="el" href="market_8hpp_source.html#l00266">quote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="market_8hpp_source.html#l00295">instrument()</a>, and <a class="el" href="market_8hpp_source.html#l00267">quote()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +534,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the market's clock. </p>
 <dl class="section return"><dt>Returns</dt><dd>The instant the market has reached. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00161">161</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00162">162</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,7 +570,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The page, each order with its status (<span class="tt">PENDING</span>, <span class="tt">FILLED</span> or <span class="tt">CANCELED</span>) and execution. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00530">530</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00535">535</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -607,7 +607,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The acknowledgement, the order id <span class="tt">"1"</span>, <span class="tt">"2"</span>, ... in the order accepted. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00398">398</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00399">399</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -643,9 +643,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The quote, <span class="tt">exchange_time_</span> the bar's period end; <span class="tt">INVALID_ARGUMENT</span> <span class="tt">unknown_instrument</span>, or <span class="tt">PROTOCOL</span> <span class="tt">no_price</span> before any bar of it has ended. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00266">266</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00267">267</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="market_8hpp_source.html#l00266">quote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="market_8hpp_source.html#l00267">quote()</a>.</p>
 
 </div>
 </div>
@@ -675,7 +675,7 @@ Public Member Functions</h2></td></tr>
 <p>Answers a working-order request. </p>
 <dl class="section return"><dt>Returns</dt><dd>The open orders, oldest first, each with its whole quantity amendable. A finished order leaves the list; read its outcome from <span class="tt"><a class="el" href="#ae5c590a496ad49b27dc327c260bb7b51" title="Answers an order-history request: every order, oldest first, in one page.">order_history</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00508">508</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00513">513</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>

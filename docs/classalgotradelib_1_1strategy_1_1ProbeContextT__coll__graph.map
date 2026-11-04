@@ -1,12 +1,14 @@
 <map id="algotradelib::strategy::ProbeContextT&lt; CapsType &gt;" name="algotradelib::strategy::ProbeContextT&lt; CapsType &gt;">
-<area shape="rect" id="Node000001" title="A context for testing a strategy without a runner: it records what the strategy asks for." alt="" coords="1058,32,1276,76"/>
-<area shape="rect" id="Node000002" href="$structalgotradelib_1_1TradingCalendar.html" title="The trading days a broker reported for one market, ascending by date." alt="" coords="727,5,939,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="955,29,1061,42,1055,43,955,34"/>
-<area shape="rect" id="Node000003" href="$structalgotradelib_1_1strategy_1_1Portfolio.html" title=" " alt="" coords="741,58,925,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="940,76,1034,67,1055,67,1060,67,1035,72,941,82"/>
-<area shape="rect" id="Node000004" href="$structalgotradelib_1_1SellableBasis.html" title="What a sellable quantity covers, and how RiskGuard must treat resting sells against it." alt="" coords="5,75,200,102"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="214,71,223,70,358,62,463,60,568,62,703,70,743,76,738,76,703,75,568,68,463,65,358,67,224,75,215,76"/>
-<area shape="rect" id="Node000005" href="$structalgotradelib_1_1strategy_1_1Portfolio.html" title="What the account holds and which orders are still working, as a strategy sees it." alt="" coords="355,102,516,147"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="216,98,357,115,352,117,215,103"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="531,125,615,124,703,117,738,114,743,113,703,122,615,129,531,131"/>
+<area shape="rect" id="Node000001" title="A context for testing a strategy without a runner: it records what the strategy asks for." alt="" coords="1058,65,1276,110"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1SessionWindow.html" title="The intraday session of a market, as the operator states it." alt="" coords="752,5,914,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="930,37,1035,54,1074,65,1069,65,1034,60,929,43"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1TradingCalendar.html" title="The trading days a broker reported for one market, ascending by date." alt="" coords="727,74,939,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="955,85,1061,87,1055,88,955,90"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1strategy_1_1Portfolio.html" title=" " alt="" coords="741,126,925,188"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="940,134,1034,115,1065,111,1070,110,1035,121,941,140"/>
+<area shape="rect" id="Node000005" href="$structalgotradelib_1_1SellableBasis.html" title="What a sellable quantity covers, and how RiskGuard must treat resting sells against it." alt="" coords="5,143,200,171"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="214,139,223,138,358,131,463,128,568,131,703,138,743,144,738,144,703,144,568,136,463,133,358,136,224,144,215,144"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1strategy_1_1Portfolio.html" title="What the account holds and which orders are still working, as a strategy sees it." alt="" coords="355,171,516,215"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="216,167,357,184,352,185,215,172"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="531,194,615,193,703,186,738,182,743,182,703,191,615,198,531,199"/>
 </map>

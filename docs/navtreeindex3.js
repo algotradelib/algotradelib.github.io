@@ -1,5 +1,13 @@
 var NAVTREEINDEX3 =
 {
+"classalgotradelib_1_1kis_1_1KisClient.html#ab48d245aa76db2dc47bbda5ec7eadf41":[1,0,0,4,5,12],
+"classalgotradelib_1_1kis_1_1KisClient.html#ab48d245aa76db2dc47bbda5ec7eadf41":[2,0,0,4,5,12],
+"classalgotradelib_1_1kis_1_1KisClient.html#ab5b27f6eeab7d502c99dd919c64bffc5":[1,0,0,4,5,2],
+"classalgotradelib_1_1kis_1_1KisClient.html#ab5b27f6eeab7d502c99dd919c64bffc5":[2,0,0,4,5,2],
+"classalgotradelib_1_1kis_1_1KisClient.html#ac763e5347ea611c958a32c86c59db36a":[1,0,0,4,5,21],
+"classalgotradelib_1_1kis_1_1KisClient.html#ac763e5347ea611c958a32c86c59db36a":[2,0,0,4,5,21],
+"classalgotradelib_1_1kis_1_1KisClient.html#ac8a919fa11f1a7cdf8deee183a06668b":[1,0,0,4,5,1],
+"classalgotradelib_1_1kis_1_1KisClient.html#ac8a919fa11f1a7cdf8deee183a06668b":[2,0,0,4,5,1],
 "classalgotradelib_1_1kis_1_1KisClient.html#acb2a70554d9429d84a701feed05f7fba":[1,0,0,4,5,27],
 "classalgotradelib_1_1kis_1_1KisClient.html#acb2a70554d9429d84a701feed05f7fba":[2,0,0,4,5,27],
 "classalgotradelib_1_1kis_1_1KisClient.html#ad7c18074a235a2d11bcd613a173d414e":[1,0,0,4,5,16],
@@ -241,13 +249,5 @@ var NAVTREEINDEX3 =
 "classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6":[1,0,0,8,2,1],
 "classalgotradelib_1_1mock_1_1MarketClock.html#a0ebea8b81aa93c11c9a5545c072d0ac6":[2,0,0,8,2,1],
 "classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245":[1,0,0,8,2,3],
-"classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245":[2,0,0,8,2,3],
-"classalgotradelib_1_1mock_1_1MarketClock.html#ad88167b7063efed9e18b98bdd64b0cc7":[1,0,0,8,2,2],
-"classalgotradelib_1_1mock_1_1MarketClock.html#ad88167b7063efed9e18b98bdd64b0cc7":[2,0,0,8,2,2],
-"classalgotradelib_1_1mock_1_1MarketClock.html#af78ab42b269f9f67c0a0d7eea6265906":[1,0,0,8,2,0],
-"classalgotradelib_1_1mock_1_1MarketClock.html#af78ab42b269f9f67c0a0d7eea6265906":[2,0,0,8,2,0],
-"classalgotradelib_1_1mock_1_1MockClient.html":[1,0,0,8,6],
-"classalgotradelib_1_1mock_1_1MockClient.html":[2,0,0,8,6],
-"classalgotradelib_1_1mock_1_1MockClient.html#a05e8835048e7eb2c38c7444f2307d064":[1,0,0,8,6,7],
-"classalgotradelib_1_1mock_1_1MockClient.html#a05e8835048e7eb2c38c7444f2307d064":[2,0,0,8,6,7]
+"classalgotradelib_1_1mock_1_1MarketClock.html#a5f030747c92fdf92300c75d417a7b245":[2,0,0,8,2,3]
 };

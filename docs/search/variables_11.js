@@ -37,5 +37,6 @@ var searchData=
   ['resting_5f_34',['resting_',['../structalgotradelib_1_1SellableBasis.html#ab16122dca4accae1c45140512ba1a492',1,'algotradelib::SellableBasis::resting_'],['../structalgotradelib_1_1AmendInstruction.html#a58fb33f40094e3f81e6174ed47e43d9c',1,'algotradelib::AmendInstruction::resting_']]],
   ['retry_5fafter_5f_35',['retry_after_',['../structalgotradelib_1_1BrokerError.html#ad48a7cc106f44c13a9b15cf39b8de523',1,'algotradelib::BrokerError']]],
   ['risk_5fbudget_5f_36',['risk_budget_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html#a0a6b9eb1f1aa5e70e11f0d8e690db6c9',1,'algotradelib::strategy::vanilla::VolatilityTargetSizing::Params']]],
-  ['rows_5f_37',['rows_',['../structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a3e64c9a8e6466e51a96de8f66820785c',1,'algotradelib::strategy::ReconcileInputs']]]
+  ['rows_5f_37',['rows_',['../structalgotradelib_1_1strategy_1_1ReconcileInputs.html#a3e64c9a8e6466e51a96de8f66820785c',1,'algotradelib::strategy::ReconcileInputs']]],
+  ['rule_5f_38',['rule_',['../structalgotradelib_1_1backtest_1_1MarketPriceInput.html#aed154f9a4b0975b70dce81638106f513',1,'algotradelib::backtest::MarketPriceInput']]]
 ];

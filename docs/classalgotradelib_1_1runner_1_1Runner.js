@@ -87,6 +87,7 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "set_trade_tolerance", "classalgotradelib_1_1runner_1_1Runner.html#af3707c9551a73005e6f3c1b9bf99ebc6", null ],
     [ "settle_closing", "classalgotradelib_1_1runner_1_1Runner.html#a9cf84e3414bf8602bb1b689d3b15838c", null ],
     [ "start", "classalgotradelib_1_1runner_1_1Runner.html#a72ad5263968ff073424caea9538bffb2", null ],
+    [ "started", "classalgotradelib_1_1runner_1_1Runner.html#a3755f83bdc5237daff7ae1f505ea9855", null ],
     [ "stop", "classalgotradelib_1_1runner_1_1Runner.html#a8fcadfa4547e03d85e7f4d8da94e534b", null ],
     [ "strategy", "classalgotradelib_1_1runner_1_1Runner.html#af5e71152bdd7fea59c8986cc5b02d976", null ],
     [ "strategy", "classalgotradelib_1_1runner_1_1Runner.html#a53d77a22b0739cacd060e90903b621ba", null ],

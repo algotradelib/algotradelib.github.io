@@ -165,10 +165,10 @@ class algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;</div><p>Rep
 <div class="line">}</div>
 <div class="line">replay.<a class="code hl_function" href="#aac085c0f5121c2a2a949abb953109e9a">finish</a>();</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> report = <a class="code hl_function" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762">backtest::summarize</a>(replay.result(), replay.fills());</div>
-<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html"><div class="ttname"><a href="classalgotradelib_1_1backtest_1_1Backtester.html">algotradelib::backtest::Backtester</a></div><div class="ttdoc">Replays bars (and quotes) through one strategy, with a ledger and a fill model.</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00789">engine.hpp:789</a></div></div>
-<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html_aac085c0f5121c2a2a949abb953109e9a"><div class="ttname"><a href="#aac085c0f5121c2a2a949abb953109e9a">algotradelib::backtest::Backtester::finish</a></div><div class="ttdeci">void finish()</div><div class="ttdoc">Ends the replay: calls on_stop (with the current portfolio, including orders from the last bar),...</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l01114">engine.hpp:1114</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1backtest_html_a59999d704779dfc064e43ddab62a7762"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762">algotradelib::backtest::summarize</a></div><div class="ttdeci">Report summarize(const ReplayResult &amp;result, const NextBarFillModel &amp;fills, std::optional&lt; math::Scalar &gt; periods_per_year=std::nullopt, math::Scalar risk_free=math::Scalar{0})</div><div class="ttdoc">Summarizes a replay into a Report.</div><div class="ttdef"><b>Definition</b> <a href="report_8hpp_source.html#l00327">report.hpp:327</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00267">event.hpp:267</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html"><div class="ttname"><a href="classalgotradelib_1_1backtest_1_1Backtester.html">algotradelib::backtest::Backtester</a></div><div class="ttdoc">Replays bars (and quotes) through one strategy, with a ledger and a fill model.</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00821">engine.hpp:821</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1backtest_1_1Backtester_html_aac085c0f5121c2a2a949abb953109e9a"><div class="ttname"><a href="#aac085c0f5121c2a2a949abb953109e9a">algotradelib::backtest::Backtester::finish</a></div><div class="ttdeci">void finish()</div><div class="ttdoc">Ends the replay: calls on_stop (with the current portfolio, including orders from the last bar),...</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l01161">engine.hpp:1161</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1backtest_html_a59999d704779dfc064e43ddab62a7762"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762">algotradelib::backtest::summarize</a></div><div class="ttdeci">Report summarize(const ReplayResult &amp;result, const NextBarFillModel &amp;fills, std::optional&lt; math::Scalar &gt; periods_per_year=std::nullopt, math::Scalar risk_free=math::Scalar{0})</div><div class="ttdoc">Summarizes a replay into a Report.</div><div class="ttdef"><b>Definition</b> <a href="report_8hpp_source.html#l00337">report.hpp:337</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00278">event.hpp:278</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d"><div class="ttname"><a href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">algotradelib::BarStamp::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">The timestamp is the instant the period ended.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00127">market_data.hpp:127</a></div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -178,7 +178,7 @@ class algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;</div><p>Rep
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00789">789</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00821">821</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a7dbed0a82a33668b40eaba6ccce8b2df" name="a7dbed0a82a33668b40eaba6ccce8b2df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7dbed0a82a33668b40eaba6ccce8b2df">&#9670;&#160;</a></span>Executor</h2>
@@ -196,7 +196,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 
 <p>The executor type. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00794">794</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00826">826</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 
 <p>The <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">runner::Runner</a></span> the replay drives, the same type a live session uses. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00796">796</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00828">828</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 
 <p>The order-reference tag. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00792">792</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00824">824</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -285,7 +285,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00804">804</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00836">836</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +320,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 </div><div class="memdoc">
 
 <p>Replays one bar. </p>
-<p>In order: record the previous period's equity point if this bar begins another period (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96" title="One point per period end, after the last bar of that period: one a day for daily bars,...">EquityCurve::PER_PERIOD</a></span>), fill orders resting from earlier bars against this bar (and call <span class="tt">on_fill</span>), mark positions at the close (recording this bar's point under <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23" title="One point per bar fed. A replay of many instruments records one per instrument per period,...">EquityCurve::PER_BAR</a></span>), advance the clock to the bar's period end (calling <span class="tt">on_phase</span> on a change), then call <span class="tt">on_bar</span>, whose orders wait for a later bar. After a halt it does nothing.</p>
+<p>In order: on the replay's first event, call <span class="tt">on_start</span> (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#a72ad5263968ff073424caea9538bffb2">Runner::start</a></span>; its orders are eligible on this bar), record the previous period's equity point if this bar begins another period (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96" title="One point per period end, after the last bar of that period: one a day for daily bars,...">EquityCurve::PER_PERIOD</a></span>), fill orders resting from earlier bars against this bar (and call <span class="tt">on_fill</span>), mark positions at the close (recording this bar's point under <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23" title="One point per bar fed. A replay of many instruments records one per instrument per period,...">EquityCurve::PER_BAR</a></span>), advance the clock to the bar's period end (calling <span class="tt">on_phase</span> on a change), then call <span class="tt">on_bar</span>, whose orders wait for a later bar. After a halt it does nothing.</p>
 <p>For a strategy declaring <span class="tt">on_bars</span>, the bar is cached instead and held with the rest of its period; the period goes to <span class="tt">on_bars</span> (one call per interval) when the first later bar arrives, before that bar settles, or at a quote at or after it, or at <span class="tt"><a class="el" href="#aac085c0f5121c2a2a949abb953109e9a" title="Ends the replay: calls on_stop (with the current portfolio, including orders from the last bar),...">finish</a></span>. Its orders wait for a later period's bar, as <span class="tt">on_bar</span>'s do. Such a strategy is fed every bar of a period before anything later.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -337,7 +337,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00878">878</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00913">913</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,6 +371,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 </div><div class="memdoc">
 
 <p>Replays one quote: moves the price and the clock to it, re-derives the phase (calling <span class="tt">on_phase</span> on a change), calls <span class="tt">on_quote</span>, and publishes order updates. </p>
+<p>On the replay's first event, <span class="tt">on_start</span> is called first, after the quote's instant is taken as the decision instant: its orders cannot fill against a bar whose period began before the quote.</p>
 <p>A quote does not mark the ledger, record an equity point or fill anything. An order placed from <span class="tt">on_quote</span> fills against a later bar, not the quote (see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a08413c2db76aa957b84d25328a5cf224" title="How many quotes the replay was fed (zero for a bars-only replay).">ReportCaveats::quotes_</a></span>). Compared with a live loop, <span class="tt">on_phase</span> fires before <span class="tt">on_quote</span> here (live, after the iteration's polls), and order updates are published here after every quote (live, only when the working-order poll runs) to a strategy that declares <span class="tt">on_order_update</span>. A quote before the first bar is fine; its orders wait for a bar.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -386,7 +387,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l01038">1038</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l01079">1079</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +419,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>Returns the fill model, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The fill model. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00841">841</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00875">875</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -448,10 +449,10 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 </div><div class="memdoc">
 
 <p>Ends the replay: calls <span class="tt">on_stop</span> (with the current portfolio, including orders from the last bar), settles what it asked for, and counts the orders still queued. </p>
-<p>For a strategy declaring <span class="tt">on_bars</span>, the last period's bars are delivered first.</p>
+<p>For a strategy declaring <span class="tt">on_bars</span>, the last period's bars are delivered first. A replay given no event calls <span class="tt">on_start</span> before <span class="tt">on_stop</span>.</p>
 <p>After a halt it does nothing; <span class="tt">on_stop</span> is not called. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l01114">1114</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l01161">1161</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +485,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>It keeps no executions (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693" title="Keep none, for an owner that records them itself (a Backtester, in ReplayResult::executions_).">ExecutionHistory::NONE</a></span>): they are in <span class="tt"><a class="el" href="#a5550e986a83ad759063d2e969e2404f5" title="Returns what the replay has produced so far.">result()</a>.executions_</span>, once.</p>
 <dl class="section return"><dt>Returns</dt><dd>The ledger. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00833">833</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00867">867</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -516,7 +517,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>Returns what the replay has produced so far. </p>
 <dl class="section return"><dt>Returns</dt><dd>The result. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00849">849</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00883">883</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -548,7 +549,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <p>Returns the strategy, to read the state it kept. </p>
 <dl class="section return"><dt>Returns</dt><dd>The strategy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00822">822</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00856">856</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

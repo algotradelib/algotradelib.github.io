@@ -19,12 +19,14 @@ var classalgotradelib_1_1runner_1_1Context =
     [ "phase", "classalgotradelib_1_1runner_1_1Context.html#a9db657bc10d89111e386314b6b780f0c", null ],
     [ "portfolio", "classalgotradelib_1_1runner_1_1Context.html#ad6390985611a799f5658dec4b1610e6a", null ],
     [ "queued", "classalgotradelib_1_1runner_1_1Context.html#a6c15d108dd05924d05be3167b76d20d9", null ],
+    [ "session", "classalgotradelib_1_1runner_1_1Context.html#a8a8738023689c53c2db4633485351d3d", null ],
     [ "set_calendar", "classalgotradelib_1_1runner_1_1Context.html#ab8021c4e3ffbeaa7b07ac43bfb3ca4b6", null ],
     [ "set_instrument", "classalgotradelib_1_1runner_1_1Context.html#af59e33eaf8a0c2e4e27a6ad98db566ac", null ],
     [ "set_last_price", "classalgotradelib_1_1runner_1_1Context.html#afba70ecda9dd49955ee7a2dfa383a0b2", null ],
     [ "set_now", "classalgotradelib_1_1runner_1_1Context.html#aaa4f5f2477a9b0b5e227d845b7775146", null ],
     [ "set_phase", "classalgotradelib_1_1runner_1_1Context.html#a109c605f78f27a8039d7f8a1cef98fc9", null ],
     [ "set_portfolio", "classalgotradelib_1_1runner_1_1Context.html#a854e8d4530904a305aae4b8bb5b06754", null ],
+    [ "set_session", "classalgotradelib_1_1runner_1_1Context.html#a4e8a6ae3d77ca26ae5ac9096eb04ede5", null ],
     [ "submit", "classalgotradelib_1_1runner_1_1Context.html#ae46bae9d0a0a28ab93a36459a79029d1", null ],
     [ "submit", "classalgotradelib_1_1runner_1_1Context.html#a5ea5ff6e9dd8acc3cff9b58d7bcc8df0", null ]
 ];

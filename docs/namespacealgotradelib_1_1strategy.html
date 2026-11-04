@@ -184,6 +184,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Infers a broker's <span class="tt"><a class="el" href="#a19c42b8aaf6ae900f613a2aef0e1bae7" title="Whether a broker&#39;s sellable quantity already excludes sell orders resting at the broker.">SellableConvention</a></span> from successive portfolios.  <a href="classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SellableEvidence" id="r_SellableEvidence"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1SellableEvidence.html">SellableEvidence</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many observations supported each answer.  <a href="structalgotradelib_1_1strategy_1_1SellableEvidence.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SessionEdge" id="r_SessionEdge"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1SessionEdge.html">SessionEdge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a bar opens or closes its session, as <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1SessionEdges.html#a287f82e9267ecf59c4bd5883995a0727" title="Decides whether the next bar opens or closes its session.">SessionEdges::next</a></span> decided it.  <a href="structalgotradelib_1_1strategy_1_1SessionEdge.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SessionEdges" id="r_SessionEdges"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1strategy_1_1SessionEdges.html">SessionEdges</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Follows a strategy's bars and says which bar opens its session and which closes it, by the session window, whatever the bar interval.  <a href="classalgotradelib_1_1strategy_1_1SessionEdges.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SessionWindow" id="r_SessionWindow"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">SessionWindow</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The intraday session of a market, as the operator states it.  <a href="structalgotradelib_1_1strategy_1_1SessionWindow.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SizeSpec" id="r_SizeSpec"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1strategy_1_1SizeSpec.html">SizeSpec</a></td></tr>
@@ -296,6 +300,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6038c598825a5d7af21cae316410b12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the instant a bar's period ended.  <br /></td></tr>
 <tr class="memitem:a260ce20a00a13c5a743bd4c749e54d19" id="r_a260ce20a00a13c5a743bd4c749e54d19"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">BarEvent</a>&#160;</td><td class="memItemRight"><a class="el" href="#a260ce20a00a13c5a743bd4c749e54d19">make_bar_event</a> (<a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> instrument, <a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, <a class="el" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bd">BarStamp</a> stamp, <a class="el" href="structalgotradelib_1_1Bar.html">Bar</a> bar)</td></tr>
 <tr class="memdesc:a260ce20a00a13c5a743bd4c749e54d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a bar event, computing its <span class="tt">period_end_</span> with <span class="tt"><a class="el" href="#a6038c598825a5d7af21cae316410b12a" title="Computes the instant a bar&#39;s period ended.">bar_period_end</a></span>.  <br /></td></tr>
+<tr class="memitem:aacbcb4a7d302ea03146ce04a7803cfcb" id="r_aacbcb4a7d302ea03146ce04a7803cfcb"><td class="memItemLeft">std::optional&lt; std::chrono::system_clock::time_point &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aacbcb4a7d302ea03146ce04a7803cfcb">bar_period_start</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">BarEvent</a> &amp;event, const <a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">SessionWindow</a> &amp;session)</td></tr>
+<tr class="memdesc:aacbcb4a7d302ea03146ce04a7803cfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns when a bar's period began, where the bar says so.  <br /></td></tr>
 <tr class="memitem:ac097cc56d34112816ead3a1c0e755977" id="r_ac097cc56d34112816ead3a1c0e755977"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#ac097cc56d34112816ead3a1c0e755977">size_kind_is_target</a> (<a class="el" href="#ad706c8d4f2f53a5249d5968937ddf10b">SizeKind</a> kind) noexcept</td></tr>
 <tr class="memdesc:ac097cc56d34112816ead3a1c0e755977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a size states a holding to reach (a target), rather than an amount to trade.  <br /></td></tr>
 <tr class="memitem:a91995669e8d9df29185503ac1b714d90" id="r_a91995669e8d9df29185503ac1b714d90"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a91995669e8d9df29185503ac1b714d90">order_is_open</a> (<a class="el" href="namespacealgotradelib.html#a1ed2d4b30116f2717c1210b808f45058">OrderStatus</a> status)</td></tr>
@@ -353,7 +359,7 @@ Variables</h2></td></tr>
 
 <p>A probe context whose broker implements everything optional. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00723">723</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00733">733</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +377,7 @@ Variables</h2></td></tr>
 
 <p>A probe context whose broker implements nothing optional. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00720">720</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00730">730</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +586,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00031">31</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00032">32</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -759,9 +765,53 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">bar.timestamp_</span> for a <span class="tt">CLOSE</span>-stamped bar; for an <span class="tt">OPEN</span>-stamped bar, the timestamp plus one interval. A month counts as 31 days and a year as 366, so for those intervals the result is an upper bound, not the exact end. So is an intraday bar cut short by the session's close (KRX's 15:00 hourly bar ends at 15:30, not 16:00): late, never early. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00230">230</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00241">241</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00230">bar_period_end()</a>, and <a class="el" href="event_8hpp_source.html#l00267">make_bar_event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00241">bar_period_end()</a>, and <a class="el" href="event_8hpp_source.html#l00278">make_bar_event()</a>.</p>
+
+</div>
+</div>
+<a id="aacbcb4a7d302ea03146ce04a7803cfcb" name="aacbcb4a7d302ea03146ce04a7803cfcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacbcb4a7d302ea03146ce04a7803cfcb">&#9670;&#160;</a></span>bar_period_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; std::chrono::system_clock::time_point &gt; algotradelib::strategy::bar_period_start </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">BarEvent</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">SessionWindow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>session</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns when a bar's period began, where the bar says so. </p>
+<p>An open-stamped bar states it; an intraday close-stamped bar began one interval before its end; a close-stamped daily bar began at its session's open, so one stamped at the open is an empty period, a single price at the open. A close-stamped weekly, monthly or yearly bar does not say.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The bar. </td></tr>
+    <tr><td class="paramname">session</td><td>The session window, for close-stamped daily bars. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The start, or <span class="tt">std::nullopt</span> when the bar does not say. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00299">299</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00299">bar_period_start()</a>, and <a class="el" href="event_8hpp_source.html#l00356">algotradelib::strategy::SessionEdges::next()</a>.</p>
 
 </div>
 </div>
@@ -1019,9 +1069,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The event. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00267">267</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00278">278</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00267">make_bar_event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00278">make_bar_event()</a>.</p>
 
 </div>
 </div>
@@ -1057,9 +1107,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00058">58</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00059">59</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00058">market_phase_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event_8hpp_source.html#l00059">market_phase_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>.</p>
 
 </div>
 </div>
@@ -1095,9 +1145,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for <span class="tt">CLOSED</span> and <span class="tt">POST_CLOSE</span>; <span class="tt">false</span> for <span class="tt">UNKNOWN</span>, <span class="tt">PRE_OPEN</span> and <span class="tt">OPEN</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00080">80</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00081">81</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01780">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00080">market_phase_session_ended()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01807">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00081">market_phase_session_ended()</a>.</p>
 
 </div>
 </div>
@@ -1552,15 +1602,15 @@ template&lt;typename Broker&gt; </div>
 <div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">MarketPhase::OPEN</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">MarketPhase::POST_CLOSE</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d">algotradelib::strategy::MarketPhase::CLOSED</a></div><div class="ttdeci">@ CLOSED</div><div class="ttdoc">A date the market does not trade.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00035">event.hpp:35</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2">algotradelib::strategy::MarketPhase::PRE_OPEN</a></div><div class="ttdeci">@ PRE_OPEN</div><div class="ttdoc">A trading day, before the session opens.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00037">event.hpp:37</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3">algotradelib::strategy::MarketPhase::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdoc">The calendar does not cover this date; nothing is known about it.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00033">event.hpp:33</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">algotradelib::strategy::MarketPhase::POST_CLOSE</a></div><div class="ttdeci">@ POST_CLOSE</div><div class="ttdoc">A trading day, after the session closed.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00041">event.hpp:41</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">algotradelib::strategy::MarketPhase::OPEN</a></div><div class="ttdeci">@ OPEN</div><div class="ttdoc">Inside the session.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00039">event.hpp:39</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa110ccf2f5d2ff4eda1fd1a494293467d">algotradelib::strategy::MarketPhase::CLOSED</a></div><div class="ttdeci">@ CLOSED</div><div class="ttdoc">A date the market does not trade.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00036">event.hpp:36</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa25e019a90065951a0c1a32d81716d6c2">algotradelib::strategy::MarketPhase::PRE_OPEN</a></div><div class="ttdeci">@ PRE_OPEN</div><div class="ttdoc">A trading day, before the session opens.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00038">event.hpp:38</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3">algotradelib::strategy::MarketPhase::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdoc">The calendar does not cover this date; nothing is known about it.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00034">event.hpp:34</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1">algotradelib::strategy::MarketPhase::POST_CLOSE</a></div><div class="ttdeci">@ POST_CLOSE</div><div class="ttdoc">A trading day, after the session closed.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00042">event.hpp:42</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3"><div class="ttname"><a href="#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">algotradelib::strategy::MarketPhase::OPEN</a></div><div class="ttdeci">@ OPEN</div><div class="ttdoc">Inside the session.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00040">event.hpp:40</a></div></div>
 </div><!-- fragment -->
 <p>Every <span class="tt"><a class="el" href="#a268f818d283919cc59717ac4ea8fe18f" title="Where the clock stands relative to the trading session.">MarketPhase</a></span>, in declaration order. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00045">45</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00046">46</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>

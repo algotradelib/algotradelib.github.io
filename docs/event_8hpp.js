@@ -2,6 +2,8 @@ var event_8hpp =
 [
     [ "algotradelib::strategy::SessionWindow", "structalgotradelib_1_1strategy_1_1SessionWindow.html", "structalgotradelib_1_1strategy_1_1SessionWindow" ],
     [ "algotradelib::strategy::BarEvent", "structalgotradelib_1_1strategy_1_1BarEvent.html", "structalgotradelib_1_1strategy_1_1BarEvent" ],
+    [ "algotradelib::strategy::SessionEdge", "structalgotradelib_1_1strategy_1_1SessionEdge.html", "structalgotradelib_1_1strategy_1_1SessionEdge" ],
+    [ "algotradelib::strategy::SessionEdges", "classalgotradelib_1_1strategy_1_1SessionEdges.html", "classalgotradelib_1_1strategy_1_1SessionEdges" ],
     [ "algotradelib::strategy::BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", "structalgotradelib_1_1strategy_1_1BarSlice" ],
     [ "algotradelib::strategy::QuoteEvent", "structalgotradelib_1_1strategy_1_1QuoteEvent.html", "structalgotradelib_1_1strategy_1_1QuoteEvent" ],
     [ "algotradelib::strategy::Fill", "structalgotradelib_1_1strategy_1_1Fill.html", "structalgotradelib_1_1strategy_1_1Fill" ],
@@ -13,6 +15,7 @@ var event_8hpp =
       [ "algotradelib::strategy::MarketPhase::POST_CLOSE", "namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18fa917f4008c6b50cb43f0e0e66b79361b1", null ]
     ] ],
     [ "algotradelib::strategy::bar_period_end", "namespacealgotradelib_1_1strategy.html#a6038c598825a5d7af21cae316410b12a", null ],
+    [ "algotradelib::strategy::bar_period_start", "namespacealgotradelib_1_1strategy.html#aacbcb4a7d302ea03146ce04a7803cfcb", null ],
     [ "algotradelib::strategy::make_bar_event", "namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19", null ],
     [ "algotradelib::strategy::market_phase_name", "namespacealgotradelib_1_1strategy.html#a5e4df3e7b24619eacad1c8ca26b67b77", null ],
     [ "algotradelib::strategy::market_phase_session_ended", "namespacealgotradelib_1_1strategy.html#aab148d4132b0eb543fba8d22e27042a9", null ],

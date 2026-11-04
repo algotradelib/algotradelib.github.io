@@ -45,6 +45,7 @@ var namespacealgotradelib_1_1runner =
     [ "runner_keeps_sent_orders", "structalgotradelib_1_1runner_1_1runner__keeps__sent__orders.html", null ],
     [ "runner_keeps_sent_orders&lt; Runner, std::void_t&lt; decltype(Runner::keeps_sent_orders_until_listed)&gt; &gt;", "structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html", null ],
     [ "SeriesKey", "structalgotradelib_1_1runner_1_1SeriesKey.html", "structalgotradelib_1_1runner_1_1SeriesKey" ],
+    [ "SessionWindow", "structalgotradelib_1_1runner_1_1SessionWindow.html", "structalgotradelib_1_1runner_1_1SessionWindow" ],
     [ "SignalStop", "classalgotradelib_1_1runner_1_1SignalStop.html", "classalgotradelib_1_1runner_1_1SignalStop" ],
     [ "source_names_buying_power_currencies", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies.html", null ],
     [ "source_names_buying_power_currencies&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().buying_power_currencies())&gt; &gt;", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html", null ],

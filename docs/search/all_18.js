@@ -68,5 +68,5 @@ var searchData=
   ['usd_65',['usd',['../classalgotradelib_1_1Currency.html#a13193725796b2649f3789b616fa6d53b',1,'algotradelib::Currency']]],
   ['user_20guide_66',['User guide',['../guide.html',1,'']]],
   ['using_20it_67',['Using it',['../index.html#autotoc_md8',1,'']]],
-  ['utc_5foffset_5f_68',['utc_offset_',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::strategy::SessionWindow']]]
+  ['utc_5foffset_5f_68',['utc_offset_',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::strategy::SessionWindow::utc_offset_'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#a2a917ccf962074809ea13f130a52c6a0',1,'algotradelib::runner::SessionWindow::utc_offset_']]]
 ];

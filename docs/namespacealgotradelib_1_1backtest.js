@@ -9,6 +9,7 @@ var namespacealgotradelib_1_1backtest =
     [ "EquityPoint", "structalgotradelib_1_1backtest_1_1EquityPoint.html", "structalgotradelib_1_1backtest_1_1EquityPoint" ],
     [ "Execution", "structalgotradelib_1_1backtest_1_1Execution.html", "structalgotradelib_1_1backtest_1_1Execution" ],
     [ "FillDecision", "structalgotradelib_1_1backtest_1_1FillDecision.html", "structalgotradelib_1_1backtest_1_1FillDecision" ],
+    [ "MarketPriceInput", "structalgotradelib_1_1backtest_1_1MarketPriceInput.html", "structalgotradelib_1_1backtest_1_1MarketPriceInput" ],
     [ "NextBarFillModel", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html", "classalgotradelib_1_1backtest_1_1NextBarFillModel" ],
     [ "QueuedOrder", "structalgotradelib_1_1backtest_1_1QueuedOrder.html", "structalgotradelib_1_1backtest_1_1QueuedOrder" ],
     [ "QueueingExecutor", "classalgotradelib_1_1backtest_1_1QueueingExecutor.html", "classalgotradelib_1_1backtest_1_1QueueingExecutor" ],
@@ -20,6 +21,7 @@ var namespacealgotradelib_1_1backtest =
     [ "ReportCaveats", "structalgotradelib_1_1backtest_1_1ReportCaveats.html", "structalgotradelib_1_1backtest_1_1ReportCaveats" ],
     [ "SellTax", "structalgotradelib_1_1backtest_1_1SellTax.html", "structalgotradelib_1_1backtest_1_1SellTax" ],
     [ "SlippageModel", "structalgotradelib_1_1backtest_1_1SlippageModel.html", "structalgotradelib_1_1backtest_1_1SlippageModel" ],
+    [ "MarketPriceFunction", "namespacealgotradelib_1_1backtest.html#a0de154050b10e8fd5f50f0649e4d12f1", null ],
     [ "EquityCurve", "namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2", [
       [ "PER_PERIOD", "namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2a3dfdca6e5a562e3c4b4940b2d6d85b96", null ],
       [ "PER_BAR", "namespacealgotradelib_1_1backtest.html#a5ae8ac3ad807ec038186d36b1d1e60c2ab2949d3565f3ecd12fd41bebc0ffae23", null ],
