@@ -87,6 +87,7 @@ var annotated_dup =
       ] ],
       [ "mock", "namespacealgotradelib_1_1mock.html", [
         [ "Broker", "structalgotradelib_1_1mock_1_1Broker.html", "structalgotradelib_1_1mock_1_1Broker" ],
+        [ "DataFeed", "classalgotradelib_1_1mock_1_1DataFeed.html", "classalgotradelib_1_1mock_1_1DataFeed" ],
         [ "Market", "classalgotradelib_1_1mock_1_1Market.html", "classalgotradelib_1_1mock_1_1Market" ],
         [ "MarketClock", "classalgotradelib_1_1mock_1_1MarketClock.html", "classalgotradelib_1_1mock_1_1MarketClock" ],
         [ "MarketSettings", "structalgotradelib_1_1mock_1_1MarketSettings.html", "structalgotradelib_1_1mock_1_1MarketSettings" ],
@@ -118,6 +119,7 @@ var annotated_dup =
         [ "ChargedCosts", "structalgotradelib_1_1runner_1_1ChargedCosts.html", "structalgotradelib_1_1runner_1_1ChargedCosts" ],
         [ "ClockReference", "classalgotradelib_1_1runner_1_1ClockReference.html", "classalgotradelib_1_1runner_1_1ClockReference" ],
         [ "Context", "classalgotradelib_1_1runner_1_1Context.html", "classalgotradelib_1_1runner_1_1Context" ],
+        [ "DataEvent", "structalgotradelib_1_1runner_1_1DataEvent.html", "structalgotradelib_1_1runner_1_1DataEvent" ],
         [ "DryRunReport", "structalgotradelib_1_1runner_1_1DryRunReport.html", "structalgotradelib_1_1runner_1_1DryRunReport" ],
         [ "DryTag", "structalgotradelib_1_1runner_1_1DryTag.html", "structalgotradelib_1_1runner_1_1DryTag" ],
         [ "FailurePolicy", "structalgotradelib_1_1runner_1_1FailurePolicy.html", "structalgotradelib_1_1runner_1_1FailurePolicy" ],
@@ -189,6 +191,7 @@ var annotated_dup =
         [ "BarEvent", "structalgotradelib_1_1strategy_1_1BarEvent.html", "structalgotradelib_1_1strategy_1_1BarEvent" ],
         [ "BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", "structalgotradelib_1_1strategy_1_1BarSlice" ],
         [ "CancelIntent", "structalgotradelib_1_1strategy_1_1CancelIntent.html", "structalgotradelib_1_1strategy_1_1CancelIntent" ],
+        [ "DataEvent", "structalgotradelib_1_1strategy_1_1DataEvent.html", "structalgotradelib_1_1strategy_1_1DataEvent" ],
         [ "Fill", "structalgotradelib_1_1strategy_1_1Fill.html", "structalgotradelib_1_1strategy_1_1Fill" ],
         [ "GuardDecision", "structalgotradelib_1_1strategy_1_1GuardDecision.html", "structalgotradelib_1_1strategy_1_1GuardDecision" ],
         [ "GuardInputs", "structalgotradelib_1_1strategy_1_1GuardInputs.html", "structalgotradelib_1_1strategy_1_1GuardInputs" ],

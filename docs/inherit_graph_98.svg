@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="classalgotradelib_1_1mock_1_1Market.html" target="_top" xlink:title="A market in memory: bars the caller gives, a clock the caller moves, one account&#39;s cash,...">
+<g id="a_Node000000"><a xlink:href="classalgotradelib_1_1mock_1_1DataFeed.html" target="_top" xlink:title="The mock vendor: records the caller gives, each released once the clock reaches the time it was publi...">
 <polygon fill="white" stroke="#666666" points="107.5,-33.5 0,-33.5 0,0 107.5,0 107.5,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::mock</text>
-<text xml:space="preserve" text-anchor="middle" x="53.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::Market</text>
+<text xml:space="preserve" text-anchor="middle" x="53.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::DataFeed&lt; T &gt;</text>
 </a>
 </g>
 </g>

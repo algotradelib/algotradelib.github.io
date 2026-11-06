@@ -6,6 +6,7 @@ var event_8hpp =
     [ "algotradelib::strategy::SessionEdges", "classalgotradelib_1_1strategy_1_1SessionEdges.html", "classalgotradelib_1_1strategy_1_1SessionEdges" ],
     [ "algotradelib::strategy::BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", "structalgotradelib_1_1strategy_1_1BarSlice" ],
     [ "algotradelib::strategy::QuoteEvent", "structalgotradelib_1_1strategy_1_1QuoteEvent.html", "structalgotradelib_1_1strategy_1_1QuoteEvent" ],
+    [ "algotradelib::strategy::DataEvent&lt; T &gt;", "structalgotradelib_1_1strategy_1_1DataEvent.html", "structalgotradelib_1_1strategy_1_1DataEvent" ],
     [ "algotradelib::strategy::Fill", "structalgotradelib_1_1strategy_1_1Fill.html", "structalgotradelib_1_1strategy_1_1Fill" ],
     [ "algotradelib::strategy::MarketPhase", "namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f", [
       [ "algotradelib::strategy::MarketPhase::UNKNOWN", "namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18fa696b031073e74bf2cb98e5ef201d4aa3", null ],

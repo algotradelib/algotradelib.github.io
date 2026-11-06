@@ -212,6 +212,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0b21ff6520548277bca3255d0da2a9c4" id="r_a0b21ff6520548277bca3255d0da2a9c4"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
 <tr class="memitem:a0b21ff6520548277bca3255d0da2a9c4 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a0b21ff6520548277bca3255d0da2a9c4">algotradelib::strategy::dispatch::phase</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a> &amp;event)</td></tr>
 <tr class="memdesc:a0b21ff6520548277bca3255d0da2a9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_phase(context, event)</span> if the strategy declares <span class="tt">on_phase</span>; otherwise does nothing.  <br /></td></tr>
+<tr class="memitem:ac1f044e30d523b99301c2d76ba9787b5" id="r_ac1f044e30d523b99301c2d76ba9787b5"><td class="memTemplParams" colspan="2">template&lt;typename S, typename Ctx&gt; </td></tr>
+<tr class="memitem:ac1f044e30d523b99301c2d76ba9787b5 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac1f044e30d523b99301c2d76ba9787b5">algotradelib::strategy::dispatch::data</a> (S &amp;strategy, Ctx &amp;context, const <a class="el" href="structalgotradelib_1_1strategy_1_1DataEvent.html">DataEvent</a>&lt; strategy_detail::data_record_t&lt; S &gt; &gt; &amp;event)</td></tr>
+<tr class="memdesc:ac1f044e30d523b99301c2d76ba9787b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">strategy.on_data(context, event)</span> if the strategy declares <span class="tt">on_data</span>; otherwise does nothing.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>What a strategy is, how a runner calls its handlers, and <span class="tt"><a class="el" href="#acdb78967260163c74c8853d3e6d665bf" title="Asserts at compile time that S is a strategy a runner with context Ctx can drive.">ATL_ASSERT_STRATEGY</a></span>. </p>
@@ -226,6 +229,7 @@ Functions</h2></td></tr>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_fill(Ctx&amp; ctx, <span class="keyword">const</span> Fill&amp; fill);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_order_update(Ctx&amp; ctx, <span class="keyword">const</span> OrderSnapshot&amp; order);</div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_phase(Ctx&amp; ctx, <span class="keyword">const</span> MarketPhase&amp; phase);</div>
+<div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_data(Ctx&amp; ctx, <span class="keyword">const</span> DataEvent&lt;data_type&gt;&amp; record); <span class="comment">// with `using data_type`</span></div>
 <div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt; <span class="keywordtype">void</span> on_stop(Ctx&amp; ctx);</div>
 <div class="line">};</div>
 </div><!-- fragment --><p><span class="tt">on_bar</span> receives one bar at a time. A strategy that decides on several instruments together (a pair's hedge ratio, a ranking across a universe) declares instead <span class="tt">template &lt;class Ctx&gt; void on_bars(Ctx&amp; ctx, const BarSlice&amp; slice);</span>, called once per period end and interval with every instrument's bar for it, after all of them are cached. A strategy declares one of the two; declaring both does not compile, so neither runs in silence beside the other.</p>
@@ -257,7 +261,7 @@ Functions</h2></td></tr>
 <div class="line">  <a class="code hl_variable" href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">::algotradelib::strategy::StrategyConformance&lt;S, Ctx&gt;::value</a>, \</div>
 <div class="line">  <span class="stringliteral">&quot;Strategy does not satisfy the algotradelib strategy surface; see the messages above&quot;</span> \</div>
 <div class="line">)</div>
-<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00773">concept.hpp:773</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1strategy_1_1StrategyConformance_html_af9667ad84c53a6e75cae670c6f384e8f"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1StrategyConformance.html#af9667ad84c53a6e75cae670c6f384e8f">algotradelib::strategy::StrategyConformance::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdoc">Always true; reading it compiles every handler call the runner makes with Ctx.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00845">concept.hpp:845</a></div></div>
 </div><!-- fragment -->
 <p>Asserts at compile time that <span class="tt">S</span> is a strategy a runner with context <span class="tt">Ctx</span> can drive. </p>
 <p>Checks that:</p><ul>
@@ -276,7 +280,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Not detected: a handler that takes by value a copyable base class of the context. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00794">794</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00866">866</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +314,7 @@ Functions</h2></td></tr>
 <p>Handlers are optional, so something has to decide whether to call one, and this is it: a declared name is called, and a call that does not compile is the compiler's error at the call (see <span class="tt">dispatch</span>). The name is what the author wrote; asking instead whether a particular call compiles would read a handler with a wrong parameter as absent and skip it in silence. Looking NAME up in a class that derives from <span class="tt">S</span> and from one declaring <span class="tt">int NAME</span> is ambiguous exactly when <span class="tt">S</span> declares it, which works for a member template, where <span class="tt">&amp;S::NAME</span> cannot name one.</p>
 <p><b>A <span class="tt">final</span> class cannot be derived from</b>, and a non-class type has no members, so neither can be looked into; <span class="tt">dispatch</span> and <span class="tt">StrategyConformance</span> refuse both rather than read them as declaring nothing. </p>
 
-<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00075">75</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concept_8hpp_source.html#l00076">76</a> of file <a class="el" href="concept_8hpp_source.html">concept.hpp</a>.</p>
 
 </div>
 </div>

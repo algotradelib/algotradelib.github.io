@@ -1,6 +1,7 @@
 var classalgotradelib_1_1runner_1_1Runner =
 [
     [ "Context", "classalgotradelib_1_1runner_1_1Runner.html#a41b8cc861f4235eb681975bf30162274", null ],
+    [ "DataRecord", "classalgotradelib_1_1runner_1_1Runner.html#af4e2d523eaf6c4c1f97f54d1252dca3c", null ],
     [ "Report", "classalgotradelib_1_1runner_1_1Runner.html#a9d9db7103115bb0766acacc943f85d08", null ],
     [ "Tag", "classalgotradelib_1_1runner_1_1Runner.html#a81b2c78d9771047b462b832fe1c92762", null ],
     [ "Runner", "classalgotradelib_1_1runner_1_1Runner.html#a71b17138d83b8f7b23b60780e2911149", null ],
@@ -25,6 +26,7 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a6edfae50f57bd0dda89b3a10b68d659d", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a162a5a1d9be49ce80a71ffac434700d9", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#abc0af9ff0a1cef64a704ba1e61d77807", null ],
+    [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#ab1cec485fef1a9948bd2494ca71e30c4", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a87270879d6602ab315c5b76768f2d85d", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#a4cba5f39b55c063155c50a2dc3da74a6", null ],
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#aab86a48e1cfb1cd72e328942967c716d", null ],
@@ -104,5 +106,6 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "keeps_sent_orders_until_listed", "classalgotradelib_1_1runner_1_1Runner.html#ae668d14d931ae5161cd54fe2b8238b18", null ],
     [ "on_fill_never_fires", "classalgotradelib_1_1runner_1_1Runner.html#a1cd4fdfee878b67f6bb50a449f45e678", null ],
     [ "records_bar_history", "classalgotradelib_1_1runner_1_1Runner.html#abc303e6ed583197c1b422bb3c095f589", null ],
-    [ "takes_bar_slices", "classalgotradelib_1_1runner_1_1Runner.html#a76eee3bb2ff0f70afe7df9ac1f96fc92", null ]
+    [ "takes_bar_slices", "classalgotradelib_1_1runner_1_1Runner.html#a76eee3bb2ff0f70afe7df9ac1f96fc92", null ],
+    [ "takes_records", "classalgotradelib_1_1runner_1_1Runner.html#ab1e4f5d86b704cbbb2ef4ac565b0a20b", null ]
 ];

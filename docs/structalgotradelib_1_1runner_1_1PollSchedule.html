@@ -150,13 +150,15 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a29d237a367372251d25d1dce9aff455c"><td class="mdescLeft">&#160;</td><td class="mdescRight">How often to read the trading calendar; six hours by default.  <br /></td></tr>
 <tr class="memitem:a879dc2dfa2d7c8293faf546df50bdbcd" id="r_a879dc2dfa2d7c8293faf546df50bdbcd"><td class="memItemLeft">std::optional&lt; std::chrono::nanoseconds &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a879dc2dfa2d7c8293faf546df50bdbcd">price_limits_</a></td></tr>
 <tr class="memdesc:a879dc2dfa2d7c8293faf546df50bdbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">How often to read today's price bands.  <br /></td></tr>
+<tr class="memitem:a6ce9d8e275357ce21ee03f4757ab5939" id="r_a6ce9d8e275357ce21ee03f4757ab5939"><td class="memItemLeft">std::optional&lt; std::chrono::nanoseconds &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6ce9d8e275357ce21ee03f4757ab5939">data_</a></td></tr>
+<tr class="memdesc:a6ce9d8e275357ce21ee03f4757ab5939"><td class="mdescLeft">&#160;</td><td class="mdescRight">How often to call the data poll (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html#a8070b401965e69f3fee3e3e1d2c85092" title="Installs the data poll that reads records for the strategy&#39;s on_data, called on PollSchedule::data_&#39;s...">PollingLoop::set_data_poll</a></span>); without it, or without a data poll, no record is read.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>How often a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> polls each kind; an unset interval disables that poll. </p>
 <p>Only <span class="tt"><a class="el" href="#a29d237a367372251d25d1dce9aff455c" title="How often to read the trading calendar; six hours by default.">calendar_</a></span> is on by default. <span class="tt"><a class="el" href="#a4e2ae61b48691dbdaa662c34fc069836" title="The loop&#39;s step, which bounds how quickly a stop is noticed; not a poll.">tick_</a></span> is the loop's own step: it bounds how quickly a stop is noticed, even when no poll is due.</p>
 <dl class="section note"><dt>Note</dt><dd>Members are positional in aggregate initialization (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1PollSchedule.html" title="How often a PollingLoop polls each kind; an unset interval disables that poll.">PollSchedule</a>{std::chrono::seconds(5)}</span> sets <span class="tt"><a class="el" href="#a8adf32f21946d894090299057a39a892" title="How often to fetch bars.">bars_</a></span>); new members are appended. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00179">179</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00191">191</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a2427a8f45f0a3b872d67ed6c5cdce8d2" name="a2427a8f45f0a3b872d67ed6c5cdce8d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2427a8f45f0a3b872d67ed6c5cdce8d2">&#9670;&#160;</a></span>interval_for()</h2>
@@ -190,7 +192,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The interval, or <span class="tt">std::nullopt</span> if that poll is disabled. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00226">226</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00243">243</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,9 +211,9 @@ Public Attributes</h2></td></tr>
 
 <p>How often to fetch bars. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00181">181</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00193">193</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00226">interval_for()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
 
 </div>
 </div>
@@ -230,9 +232,9 @@ Public Attributes</h2></td></tr>
 <p>How often to read buying power. </p>
 <p>With <span class="tt">RiskLimits::enforce_buying_power_</span> on and this unset, every placement is held (<span class="tt">BUYING_POWER_UNREAD</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00202">202</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00214">214</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00226">interval_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>.</p>
 
 </div>
 </div>
@@ -251,9 +253,29 @@ Public Attributes</h2></td></tr>
 <p>How often to read the trading calendar; six hours by default. </p>
 <p>Without a calendar the phase is <span class="tt">UNKNOWN</span> and the default <span class="tt">RiskLimits::permitted_phases_</span> refuses every order that opens or increases a position (closing a position is still allowed). Keep it under the nine hours between local midnight and a 09:00 open. KIS's client caches the calendar, so four polls a day cost about one request. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00213">213</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00225">225</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00226">interval_for()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
+
+</div>
+</div>
+<a id="a6ce9d8e275357ce21ee03f4757ab5939" name="a6ce9d8e275357ce21ee03f4757ab5939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce9d8e275357ce21ee03f4757ab5939">&#9670;&#160;</a></span>data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::chrono::nanoseconds&gt; algotradelib::runner::PollSchedule::data_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How often to call the data poll (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html#a8070b401965e69f3fee3e3e1d2c85092" title="Installs the data poll that reads records for the strategy&#39;s on_data, called on PollSchedule::data_&#39;s...">PollingLoop::set_data_poll</a></span>); without it, or without a data poll, no record is read. </p>
+
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00237">237</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>.</p>
 
 </div>
 </div>
@@ -271,9 +293,9 @@ Public Attributes</h2></td></tr>
 
 <p>How often to read holdings; without it the portfolio is never refreshed. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00185">185</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00197">197</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00226">interval_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>.</p>
 
 </div>
 </div>
@@ -292,9 +314,9 @@ Public Attributes</h2></td></tr>
 <p>How often to read today's price bands. </p>
 <p>A band is valid for one trading day. Bands are applied only under an age policy; see <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html#a03e7569b99c8d42d920a912cfdf4ba11" title="Sets how old a price band may be and still be applied; passed to the runner (see Runner::set_maximum_...">PollingLoop::set_maximum_price_limits_age</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00220">220</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00232">232</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00226">interval_for()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
 
 </div>
 </div>
@@ -312,9 +334,9 @@ Public Attributes</h2></td></tr>
 
 <p>How often to fetch quotes. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00183">183</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00195">195</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00226">interval_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>.</p>
 
 </div>
 </div>
@@ -332,7 +354,7 @@ Public Attributes</h2></td></tr>
 
 <p>The loop's step, which bounds how quickly a stop is noticed; not a poll. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00204">204</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00216">216</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="example-live-loop_8cpp_source.html#l00196">main()</a>.</p>
 
@@ -353,9 +375,9 @@ Public Attributes</h2></td></tr>
 <p>How often to read the working orders. </p>
 <p>Do not make it shorter than <span class="tt"><a class="el" href="#a40a8015ee0e5259716824f6669e2b29b" title="How often to read holdings; without it the portfolio is never refreshed.">holdings_</a></span>: a listing newer than the holdings withholds every plan as <span class="tt">PORTFOLIO_SUPERSEDED</span> (equal cadences read both in one iteration, listing first). Required for a runner that sends to a broker: without it, or when the last listing is older than <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html#a00b24b592bb0a14a40bda001a309c7bc" title="Sets how old the holdings (and, for a runner that sends to a broker, the working-order listing) may b...">PollingLoop::set_maximum_portfolio_age</a></span>, the loop holds placements as <span class="tt">PORTFOLIO_STALE</span> (leave a tick of margin between the cadence and the age). </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00195">195</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00207">207</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00226">interval_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00243">interval_for()</a>.</p>
 
 </div>
 </div>

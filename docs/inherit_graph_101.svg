@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1mock_1_1MockAccount.html" target="_top" xlink:title="The mock broker&#39;s one account; it has no selector.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1mock_1_1MarketSettings.html" target="_top" xlink:title="How a Market starts and what it charges.">
 <polygon fill="white" stroke="#666666" points="107.5,-33.5 0,-33.5 0,0 107.5,0 107.5,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::mock</text>
-<text xml:space="preserve" text-anchor="middle" x="53.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::MockAccount</text>
+<text xml:space="preserve" text-anchor="middle" x="53.75" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::MarketSettings</text>
 </a>
 </g>
 </g>

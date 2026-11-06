@@ -60,13 +60,14 @@ var searchData=
   ['kiwoomratelimitlayer_57',['KiwoomRateLimitLayer',['../namespacealgotradelib_1_1kiwoom.html#a3245c956be782384ff1486f70c3b9618',1,'algotradelib::kiwoom']]],
   ['kiwoomrest_58',['KiwoomRest',['../structalgotradelib_1_1kiwoom_1_1KiwoomRest.html',1,'algotradelib::kiwoom']]],
   ['kiwoomsellablescope_59',['KiwoomSellableScope',['../namespacealgotradelib_1_1kiwoom.html#a1b123ea5ef2e77e179ee2d47034acbee',1,'algotradelib::kiwoom']]],
-  ['know_20it_60',['The market phase, and what the loop needs to know it',['../running-a-strategy-live.html#autotoc_md94',1,'']]],
+  ['know_20it_60',['The market phase, and what the loop needs to know it',['../running-a-strategy-live.html#autotoc_md95',1,'']]],
   ['knowing_61',['knowing',['../market-data.html#autotoc_md59',1,'Two broker-specific behaviours worth knowing'],['../binding-a-broker.html#autotoc_md35',1,'Two rules worth knowing']]],
   ['known_62',['Known',['../structalgotradelib_1_1MarketSegment.html#ad12faa6d16cfe217a6ca1f56d94fa751',1,'algotradelib::MarketSegment']]],
   ['known_5f_63',['known_',['../structalgotradelib_1_1MarketSegment.html#a8a7104bf7e8209fbe924cf4bad697667',1,'algotradelib::MarketSegment']]],
-  ['kordershapes_64',['kOrderShapes',['../namespacealgotradelib_1_1kiwoom.html#a89a03664e3d28e1daba51d074d68a258',1,'algotradelib::kiwoom']]],
-  ['krw_65',['krw',['../classalgotradelib_1_1Currency.html#ab039d37b0dcdd3a33cc621b86fe98600',1,'algotradelib::Currency']]],
-  ['krx_66',['KRX',['../namespacealgotradelib_1_1kis.html#a180426dcbaf904ff2cca1189c5dc3289a97473ff9c0026db14da7c5377c92ae0a',1,'algotradelib::kis::KRX'],['../namespacealgotradelib_1_1kiwoom.html#a1476aa7a976b83d95727aee083da2ca1a97473ff9c0026db14da7c5377c92ae0a',1,'algotradelib::kiwoom::KRX']]],
-  ['krx_67',['krx',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::strategy::SessionWindow::krx()'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::runner::SessionWindow::krx()']]],
-  ['krx_5fequity_68',['krx_equity',['../structalgotradelib_1_1PriceRule.html#a5a791a8c9e6878491beb87472cb42597',1,'algotradelib::PriceRule']]]
+  ['known_5fat_5f_64',['known_at_',['../structalgotradelib_1_1strategy_1_1DataEvent.html#a26eaef161160e35ba670fcbf1bd8188c',1,'algotradelib::strategy::DataEvent::known_at_'],['../structalgotradelib_1_1runner_1_1DataEvent.html#a26eaef161160e35ba670fcbf1bd8188c',1,'algotradelib::runner::DataEvent::known_at_']]],
+  ['kordershapes_65',['kOrderShapes',['../namespacealgotradelib_1_1kiwoom.html#a89a03664e3d28e1daba51d074d68a258',1,'algotradelib::kiwoom']]],
+  ['krw_66',['krw',['../classalgotradelib_1_1Currency.html#ab039d37b0dcdd3a33cc621b86fe98600',1,'algotradelib::Currency']]],
+  ['krx_67',['KRX',['../namespacealgotradelib_1_1kis.html#a180426dcbaf904ff2cca1189c5dc3289a97473ff9c0026db14da7c5377c92ae0a',1,'algotradelib::kis::KRX'],['../namespacealgotradelib_1_1kiwoom.html#a1476aa7a976b83d95727aee083da2ca1a97473ff9c0026db14da7c5377c92ae0a',1,'algotradelib::kiwoom::KRX']]],
+  ['krx_68',['krx',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::strategy::SessionWindow::krx()'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::runner::SessionWindow::krx()']]],
+  ['krx_5fequity_69',['krx_equity',['../structalgotradelib_1_1PriceRule.html#a5a791a8c9e6878491beb87472cb42597',1,'algotradelib::PriceRule']]]
 ];

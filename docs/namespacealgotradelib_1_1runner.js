@@ -6,6 +6,7 @@ var namespacealgotradelib_1_1runner =
     [ "ChargedCosts", "structalgotradelib_1_1runner_1_1ChargedCosts.html", "structalgotradelib_1_1runner_1_1ChargedCosts" ],
     [ "ClockReference", "classalgotradelib_1_1runner_1_1ClockReference.html", "classalgotradelib_1_1runner_1_1ClockReference" ],
     [ "Context", "classalgotradelib_1_1runner_1_1Context.html", "classalgotradelib_1_1runner_1_1Context" ],
+    [ "DataEvent", "structalgotradelib_1_1runner_1_1DataEvent.html", "structalgotradelib_1_1runner_1_1DataEvent" ],
     [ "DryRunReport", "structalgotradelib_1_1runner_1_1DryRunReport.html", "structalgotradelib_1_1runner_1_1DryRunReport" ],
     [ "DryTag", "structalgotradelib_1_1runner_1_1DryTag.html", "structalgotradelib_1_1runner_1_1DryTag" ],
     [ "FailurePolicy", "structalgotradelib_1_1runner_1_1FailurePolicy.html", "structalgotradelib_1_1runner_1_1FailurePolicy" ],
@@ -105,7 +106,8 @@ var namespacealgotradelib_1_1runner =
       [ "WORKING_ORDERS", "namespacealgotradelib_1_1runner.html#a3cc0ab250b8a6e9c3e107ddc121d875aa2080fc2c14efc0e09b8c987ed7996b27", null ],
       [ "BUYING_POWER", "namespacealgotradelib_1_1runner.html#a3cc0ab250b8a6e9c3e107ddc121d875aac608ec81704f3c661a37054ff833b8ed", null ],
       [ "CALENDAR", "namespacealgotradelib_1_1runner.html#a3cc0ab250b8a6e9c3e107ddc121d875aabcacee7ad79abe4e25b877c5b6480a8c", null ],
-      [ "PRICE_LIMITS", "namespacealgotradelib_1_1runner.html#a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc", null ]
+      [ "PRICE_LIMITS", "namespacealgotradelib_1_1runner.html#a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc", null ],
+      [ "DATA", "namespacealgotradelib_1_1runner.html#a3cc0ab250b8a6e9c3e107ddc121d875aae44f9e348e41cb272efa87387728571b", null ]
     ] ],
     [ "PollOutcome", "namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860dda", [
       [ "UPDATED", "namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5", null ],

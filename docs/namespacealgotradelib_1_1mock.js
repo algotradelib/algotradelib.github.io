@@ -1,6 +1,7 @@
 var namespacealgotradelib_1_1mock =
 [
     [ "Broker", "structalgotradelib_1_1mock_1_1Broker.html", "structalgotradelib_1_1mock_1_1Broker" ],
+    [ "DataFeed", "classalgotradelib_1_1mock_1_1DataFeed.html", "classalgotradelib_1_1mock_1_1DataFeed" ],
     [ "Market", "classalgotradelib_1_1mock_1_1Market.html", "classalgotradelib_1_1mock_1_1Market" ],
     [ "MarketClock", "classalgotradelib_1_1mock_1_1MarketClock.html", "classalgotradelib_1_1mock_1_1MarketClock" ],
     [ "MarketSettings", "structalgotradelib_1_1mock_1_1MarketSettings.html", "structalgotradelib_1_1mock_1_1MarketSettings" ],

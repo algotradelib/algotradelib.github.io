@@ -157,6 +157,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:ae4f592c35cc79d69e4f0b58ebd96673a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orders still working when the replay halted, cleared from the queue (unlike <span class="tt"><a class="el" href="#a9a10283f434eab9a1586bcd6890225ad" title="Orders still queued when finish ran.">unfilled_</a></span>).  <br /></td></tr>
 <tr class="memitem:abf593948a01e569973b089692848d7f2" id="r_abf593948a01e569973b089692848d7f2"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abf593948a01e569973b089692848d7f2">quotes_</a> {0}</td></tr>
 <tr class="memdesc:abf593948a01e569973b089692848d7f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The quotes fed; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a08413c2db76aa957b84d25328a5cf224" title="How many quotes the replay was fed (zero for a bars-only replay).">ReportCaveats::quotes_</a></span> for what quote-driven orders mean in a replay.  <br /></td></tr>
+<tr class="memitem:a761eac17fbf02f1623b1dd1f7aa1a977" id="r_a761eac17fbf02f1623b1dd1f7aa1a977"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a761eac17fbf02f1623b1dd1f7aa1a977">records_</a> {0}</td></tr>
+<tr class="memdesc:a761eac17fbf02f1623b1dd1f7aa1a977"><td class="mdescLeft">&#160;</td><td class="mdescRight">The records fed to <span class="tt">on_data</span>.  <br /></td></tr>
 <tr class="memitem:a52409541c53241a038c4efd3f1fdc411" id="r_a52409541c53241a038c4efd3f1fdc411"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a52409541c53241a038c4efd3f1fdc411">unchecked_fill_causality_</a> {0}</td></tr>
 <tr class="memdesc:a52409541c53241a038c4efd3f1fdc411"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many fill decisions could not be checked for causality; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#aabbfca30aabfd6b0273825f7e8e3f194" title="How many times a fill was allowed without the engine being able to prove its price came after the dec...">ReportCaveats::unchecked_fill_causality_</a></span>.  <br /></td></tr>
 <tr class="memitem:a33d9b018911470bdac0df7ef8a973ee6" id="r_a33d9b018911470bdac0df7ef8a973ee6"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a33d9b018911470bdac0df7ef8a973ee6">unvalued_bars_</a> {0}</td></tr>
@@ -293,7 +295,7 @@ Public Attributes</h2></td></tr>
 
 <p><span class="tt">DAY</span> orders withdrawn unfilled when their session ended, as a broker does at the close. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00760">760</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00762">762</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +313,7 @@ Public Attributes</h2></td></tr>
 
 <p>The first bar end at which cash was below zero, if any. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00754">754</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00756">756</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +331,7 @@ Public Attributes</h2></td></tr>
 
 <p>The period end of the first unvalued bar, if any. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00731">731</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00733">733</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +386,7 @@ Public Attributes</h2></td></tr>
 
 <p>Limit-type fills moved to stay in range; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a29949e3ca15c760ef6511e28ddd7727b" title="Limit-type fills whose price was moved to stay within the bar&#39;s range and the limit (see LimitFillPri...">ReportCaveats::limit_fills_bounded_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00737">737</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00739">739</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -402,7 +404,7 @@ Public Attributes</h2></td></tr>
 
 <p>The lowest cash any execution left in <span class="tt"><a class="el" href="#ac15bf00fc1e87473965e4fa2e3a30340" title="The currency of the equity curve (the replay&#39;s accounting currency).">currency_</a></span>, if below zero (checked at every fill). </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00756">756</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00758">758</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -420,7 +422,7 @@ Public Attributes</h2></td></tr>
 
 <p>When <span class="tt"><a class="el" href="#ae994c9bc49c1816bbb1ac87369c63357" title="The lowest cash any execution left in currency_, if below zero (checked at every fill).">lowest_cash_</a></span> was reached (that execution's <span class="tt">Fill::at_</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00758">758</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00760">760</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -438,7 +440,7 @@ Public Attributes</h2></td></tr>
 
 <p>Fills priced by the fill model's market-price rule; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a4fab2d82a3ab2d820892eb5dea70e917" title="How many fills the market-price rule priced.">ReportCaveats::market_fills_by_rule_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00741">741</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00743">743</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -456,7 +458,7 @@ Public Attributes</h2></td></tr>
 
 <p>The fill model's market-price rule, or empty; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a4b16889a683c8fcd2933842d76c593ac" title="The fill model&#39;s market-price rule (NextBarFillModel::with_market_price), or empty when market orders...">ReportCaveats::market_price_rule_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00739">739</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00741">741</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +477,7 @@ Public Attributes</h2></td></tr>
 <p>Bars that closed with cash below zero in <span class="tt"><a class="el" href="#ac15bf00fc1e87473965e4fa2e3a30340" title="The currency of the equity curve (the replay&#39;s accounting currency).">currency_</a></span> (counted per bar fed, so two instruments count both). </p>
 <p>Under the default limits a replay borrows without limit: nothing refuses an unaffordable buy unless <span class="tt">RiskLimits::enforce_buying_power_</span> is on, and even then a market buy is checked at the reference price without commission and can overdraw on a gap. Short proceeds count as cash. With negative starting cash every bar counts, while <span class="tt"><a class="el" href="#ae994c9bc49c1816bbb1ac87369c63357" title="The lowest cash any execution left in currency_, if below zero (checked at every fill).">lowest_cash_</a></span> (set by executions) may stay empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00752">752</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00754">754</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -494,6 +496,24 @@ Public Attributes</h2></td></tr>
 <p>The quotes fed; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a08413c2db76aa957b84d25328a5cf224" title="How many quotes the replay was fed (zero for a bars-only replay).">ReportCaveats::quotes_</a></span> for what quote-driven orders mean in a replay. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00711">711</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a761eac17fbf02f1623b1dd1f7aa1a977" name="a761eac17fbf02f1623b1dd1f7aa1a977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a761eac17fbf02f1623b1dd1f7aa1a977">&#9670;&#160;</a></span>records_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t algotradelib::backtest::ReplayResult::records_ {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The records fed to <span class="tt">on_data</span>. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00713">713</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -547,7 +567,7 @@ Public Attributes</h2></td></tr>
 
 <p>Fills of stops released inside a bar; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a81fd1dea9ae85344c4ef9c14b020b0c6" title="Fills of stops released inside a bar, which assume the price moved continuously through the trigger.">ReportCaveats::stop_fills_intrabar_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00735">735</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00737">737</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -565,7 +585,7 @@ Public Attributes</h2></td></tr>
 
 <p>Stop-limit orders a bar released; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a14b9d8ff61bd3f453e2b45b93429fa99" title="How many stop-limit orders a bar released, each using the assumed direction (a sell stop releases whe...">ReportCaveats::stop_releases_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00733">733</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00735">735</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -584,7 +604,7 @@ Public Attributes</h2></td></tr>
 <p>How many fill decisions could not be checked for causality; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#aabbfca30aabfd6b0273825f7e8e3f194" title="How many times a fill was allowed without the engine being able to prove its price came after the dec...">ReportCaveats::unchecked_fill_causality_</a></span>. </p>
 <p>Besides quotes, an order decided on one interval's bar and filled against another interval's bar of the same instrument (a Tuesday daily bar against that week's weekly bar) can be one. Separately, the nominal period end of an open-stamped monthly or yearly bar also dates its fills and equity points, so a February fill can be dated in March. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00721">721</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00723">723</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -621,7 +641,7 @@ Public Attributes</h2></td></tr>
 <p>Bars whose equity total did not fit an exact decimal, so they have no curve point. </p>
 <p>The next point carries no return. The replay and its callbacks continue, with per-lot and per-currency figures available, but the missing total also means no portfolio value for weight sizing, so a weight-sized intent on such a bar is rejected (<span class="tt">NO_PORTFOLIO_VALUE</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00729">729</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00731">731</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

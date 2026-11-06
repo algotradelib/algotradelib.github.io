@@ -28,14 +28,14 @@ var guide =
       [ "Where to go next", "architecture.html#autotoc_md29", null ]
     ] ],
     [ "Writing a strategy", "writing-a-strategy.html", [
-      [ "The handlers", "writing-a-strategy.html#autotoc_md114", null ],
+      [ "The handlers", "writing-a-strategy.html#autotoc_md115", null ],
       [ "Several instruments at once: <span class=\"tt\">on_bars</span>", "writing-a-strategy.html#several-instruments", null ],
-      [ "Emit a target, not an order", "writing-a-strategy.html#autotoc_md115", null ],
-      [ "What the context gives you", "writing-a-strategy.html#autotoc_md116", null ],
-      [ "Prices", "writing-a-strategy.html#autotoc_md117", null ],
-      [ "Warm-up", "writing-a-strategy.html#autotoc_md118", null ],
-      [ "Reaching a broker-specific feature", "writing-a-strategy.html#autotoc_md119", null ],
-      [ "What you do not have to handle", "writing-a-strategy.html#autotoc_md120", null ]
+      [ "Emit a target, not an order", "writing-a-strategy.html#autotoc_md116", null ],
+      [ "What the context gives you", "writing-a-strategy.html#autotoc_md117", null ],
+      [ "Prices", "writing-a-strategy.html#autotoc_md118", null ],
+      [ "Warm-up", "writing-a-strategy.html#autotoc_md119", null ],
+      [ "Reaching a broker-specific feature", "writing-a-strategy.html#autotoc_md120", null ],
+      [ "What you do not have to handle", "writing-a-strategy.html#autotoc_md121", null ]
     ] ],
     [ "Binding a broker", "binding-a-broker.html", [
       [ "Four umbrellas, and the line between them", "binding-a-broker.html#autotoc_md30", null ],
@@ -78,56 +78,57 @@ var guide =
       [ "The one guarantee worth relying on", "reading-a-backtest.html#autotoc_md64", null ],
       [ "What the fill model assumes", "reading-a-backtest.html#autotoc_md65", null ],
       [ "Quotes, and the one place a quote-driven replay differs from a quote-driven live run", "reading-a-backtest.html#autotoc_md66", null ],
-      [ "What it does not model at all", "reading-a-backtest.html#autotoc_md67", null ],
-      [ "A replay's clock visits bar ends only", "reading-a-backtest.html#autotoc_md68", null ],
-      [ "What a replay says an account can do", "reading-a-backtest.html#autotoc_md69", null ],
-      [ "The equity curve is one currency's", "reading-a-backtest.html#autotoc_md70", null ],
-      [ "Costs, which are the most common way a backtest lies", "reading-a-backtest.html#autotoc_md71", null ],
-      [ "Annualizing, and the trap in it", "reading-a-backtest.html#autotoc_md72", null ],
-      [ "Absent figures mean something", "reading-a-backtest.html#autotoc_md73", null ],
-      [ "Survivorship bias, which the engine cannot fix", "reading-a-backtest.html#autotoc_md74", null ],
-      [ "Intraday", "reading-a-backtest.html#autotoc_md75", null ],
-      [ "What to distrust first", "reading-a-backtest.html#autotoc_md76", null ]
+      [ "Records of external data", "reading-a-backtest.html#autotoc_md67", null ],
+      [ "What it does not model at all", "reading-a-backtest.html#autotoc_md68", null ],
+      [ "A replay's clock visits bar ends only", "reading-a-backtest.html#autotoc_md69", null ],
+      [ "What a replay says an account can do", "reading-a-backtest.html#autotoc_md70", null ],
+      [ "The equity curve is one currency's", "reading-a-backtest.html#autotoc_md71", null ],
+      [ "Costs, which are the most common way a backtest lies", "reading-a-backtest.html#autotoc_md72", null ],
+      [ "Annualizing, and the trap in it", "reading-a-backtest.html#autotoc_md73", null ],
+      [ "Absent figures mean something", "reading-a-backtest.html#autotoc_md74", null ],
+      [ "Survivorship bias, which the engine cannot fix", "reading-a-backtest.html#autotoc_md75", null ],
+      [ "Intraday", "reading-a-backtest.html#autotoc_md76", null ],
+      [ "What to distrust first", "reading-a-backtest.html#autotoc_md77", null ]
     ] ],
     [ "Running a strategy live", "running-a-strategy-live.html", [
-      [ "What the loop adds over <span class=\"tt\">feed</span>", "running-a-strategy-live.html#autotoc_md85", null ],
-      [ "The three stops, and what each leaves you holding", "running-a-strategy-live.html#autotoc_md86", null ],
-      [ "How to stop one, from outside", "running-a-strategy-live.html#autotoc_md87", null ],
-      [ "The hierarchy that actually matters", "running-a-strategy-live.html#autotoc_md88", null ],
-      [ "The trap: your supervisor's grace period", "running-a-strategy-live.html#autotoc_md89", null ],
-      [ "The three gates that stop you trading, on purpose", "running-a-strategy-live.html#autotoc_md90", null ],
-      [ "What the report says about orders that did not go out", "running-a-strategy-live.html#autotoc_md91", null ],
-      [ "Did everything I asked for go out?", "running-a-strategy-live.html#autotoc_md92", [
-        [ "The history a cold start reads", "running-a-strategy-live.html#autotoc_md93", null ]
+      [ "What the loop adds over <span class=\"tt\">feed</span>", "running-a-strategy-live.html#autotoc_md86", null ],
+      [ "The three stops, and what each leaves you holding", "running-a-strategy-live.html#autotoc_md87", null ],
+      [ "How to stop one, from outside", "running-a-strategy-live.html#autotoc_md88", null ],
+      [ "The hierarchy that actually matters", "running-a-strategy-live.html#autotoc_md89", null ],
+      [ "The trap: your supervisor's grace period", "running-a-strategy-live.html#autotoc_md90", null ],
+      [ "The three gates that stop you trading, on purpose", "running-a-strategy-live.html#autotoc_md91", null ],
+      [ "What the report says about orders that did not go out", "running-a-strategy-live.html#autotoc_md92", null ],
+      [ "Did everything I asked for go out?", "running-a-strategy-live.html#autotoc_md93", [
+        [ "The history a cold start reads", "running-a-strategy-live.html#autotoc_md94", null ]
       ] ],
-      [ "The market phase, and what the loop needs to know it", "running-a-strategy-live.html#autotoc_md94", null ],
-      [ "Poll failures are not send failures", "running-a-strategy-live.html#autotoc_md95", null ],
-      [ "Asking the broker what the account can do", "running-a-strategy-live.html#autotoc_md96", [
-        [ "An order nobody can account for stops the run", "running-a-strategy-live.html#autotoc_md97", null ]
+      [ "The market phase, and what the loop needs to know it", "running-a-strategy-live.html#autotoc_md95", null ],
+      [ "Poll failures are not send failures", "running-a-strategy-live.html#autotoc_md96", null ],
+      [ "Asking the broker what the account can do", "running-a-strategy-live.html#autotoc_md97", [
+        [ "An order nobody can account for stops the run", "running-a-strategy-live.html#autotoc_md98", null ]
       ] ],
-      [ "Short positions", "running-a-strategy-live.html#autotoc_md98", null ],
-      [ "What the broker says it charged you", "running-a-strategy-live.html#autotoc_md99", null ],
-      [ "The portfolio exposure ceiling, and what it means by \"portfolio\"", "running-a-strategy-live.html#autotoc_md100", null ],
-      [ "What this does not do yet", "running-a-strategy-live.html#autotoc_md101", null ],
-      [ "Trying it without a broker", "running-a-strategy-live.html#autotoc_md102", null ]
+      [ "Short positions", "running-a-strategy-live.html#autotoc_md99", null ],
+      [ "What the broker says it charged you", "running-a-strategy-live.html#autotoc_md100", null ],
+      [ "The portfolio exposure ceiling, and what it means by \"portfolio\"", "running-a-strategy-live.html#autotoc_md101", null ],
+      [ "What this does not do yet", "running-a-strategy-live.html#autotoc_md102", null ],
+      [ "Trying it without a broker", "running-a-strategy-live.html#autotoc_md103", null ]
     ] ],
     [ "Recovering after a crash", "recovering-after-a-crash.html", [
-      [ "The sentence the whole thing rests on", "recovering-after-a-crash.html#autotoc_md77", null ],
-      [ "Turning it on", "recovering-after-a-crash.html#autotoc_md78", null ],
-      [ "What the file looks like", "recovering-after-a-crash.html#autotoc_md79", [
-        [ "Reading it under pressure", "recovering-after-a-crash.html#autotoc_md80", null ]
+      [ "The sentence the whole thing rests on", "recovering-after-a-crash.html#autotoc_md78", null ],
+      [ "Turning it on", "recovering-after-a-crash.html#autotoc_md79", null ],
+      [ "What the file looks like", "recovering-after-a-crash.html#autotoc_md80", [
+        [ "Reading it under pressure", "recovering-after-a-crash.html#autotoc_md81", null ]
       ] ],
-      [ "The five verdicts", "recovering-after-a-crash.html#autotoc_md81", null ],
-      [ "What matching can and cannot do", "recovering-after-a-crash.html#autotoc_md82", null ],
-      [ "What this does not do yet", "recovering-after-a-crash.html#autotoc_md83", null ],
-      [ "Trying it without a broker", "recovering-after-a-crash.html#autotoc_md84", null ]
+      [ "The five verdicts", "recovering-after-a-crash.html#autotoc_md82", null ],
+      [ "What matching can and cannot do", "recovering-after-a-crash.html#autotoc_md83", null ],
+      [ "What this does not do yet", "recovering-after-a-crash.html#autotoc_md84", null ],
+      [ "Trying it without a broker", "recovering-after-a-crash.html#autotoc_md85", null ]
     ] ],
     [ "The broker port", "broker-port.html", [
-      [ "Order identity", "broker-port.html#autotoc_md103", null ],
-      [ "Capabilities", "broker-port.html#autotoc_md104", null ],
-      [ "Example", "broker-port.html#autotoc_md105", null ],
-      [ "A market-data source that cannot trade", "broker-port.html#autotoc_md106", null ],
-      [ "Where to go next", "broker-port.html#autotoc_md107", null ]
+      [ "Order identity", "broker-port.html#autotoc_md104", null ],
+      [ "Capabilities", "broker-port.html#autotoc_md105", null ],
+      [ "Example", "broker-port.html#autotoc_md106", null ],
+      [ "A market-data source that cannot trade", "broker-port.html#autotoc_md107", null ],
+      [ "Where to go next", "broker-port.html#autotoc_md108", null ]
     ] ],
     [ "Talking to a broker directly", "broker-clients.html", [
       [ "Quote clients", "broker-clients.html#autotoc_md43", null ],
@@ -144,11 +145,11 @@ var guide =
       [ "Where to go next", "broker-clients.html#autotoc_md52", null ]
     ] ],
     [ "Transport and request pacing", "transport-and-pacing.html", [
-      [ "Transport behaviour", "transport-and-pacing.html#autotoc_md108", null ],
-      [ "Request pacing", "transport-and-pacing.html#autotoc_md109", null ],
-      [ "Traffic classes", "transport-and-pacing.html#autotoc_md110", null ],
-      [ "How the two brokers report a refusal", "transport-and-pacing.html#autotoc_md111", null ],
-      [ "Reading the counters", "transport-and-pacing.html#autotoc_md112", null ],
-      [ "Where to go next", "transport-and-pacing.html#autotoc_md113", null ]
+      [ "Transport behaviour", "transport-and-pacing.html#autotoc_md109", null ],
+      [ "Request pacing", "transport-and-pacing.html#autotoc_md110", null ],
+      [ "Traffic classes", "transport-and-pacing.html#autotoc_md111", null ],
+      [ "How the two brokers report a refusal", "transport-and-pacing.html#autotoc_md112", null ],
+      [ "Reading the counters", "transport-and-pacing.html#autotoc_md113", null ],
+      [ "Where to go next", "transport-and-pacing.html#autotoc_md114", null ]
     ] ]
 ];

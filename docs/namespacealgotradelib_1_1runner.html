@@ -139,6 +139,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A clock that reads another one, so that two holders (a loop and its journal) read one time.  <a href="classalgotradelib_1_1runner_1_1ClockReference.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Context" id="r_Context"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1runner_1_1Context.html">Context</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What a strategy's handlers receive as <span class="tt">ctx</span>: everything the strategy may read, and where it queues what it wants.  <a href="classalgotradelib_1_1runner_1_1Context.html#details">More...</a><br /></td></tr>
+<tr class="memitem:DataEvent" id="r_DataEvent"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1runner_1_1DataEvent.html">DataEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A record of data from outside the broker, delivered to <span class="tt">on_data</span>.  <a href="structalgotradelib_1_1runner_1_1DataEvent.html#details">More...</a><br /></td></tr>
 <tr class="memitem:DryRunReport" id="r_DryRunReport"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1runner_1_1DryRunReport.html">DryRunReport</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What one runner pass decided and did, sorted by outcome (returned by <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#a162a5a1d9be49ce80a71ffac434700d9" title="Feeds one bar: caches it, sets the last price and the clock to the bar&#39;s period end,...">Runner::feed</a></span>).  <a href="structalgotradelib_1_1runner_1_1DryRunReport.html#details">More...</a><br /></td></tr>
 <tr class="memitem:DryTag" id="r_DryTag"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1runner_1_1DryTag.html">DryTag</a></td></tr>
@@ -313,6 +315,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#a3cc0ab250b8a6e9c3e107ddc121d875aac608ec81704f3c661a37054ff833b8ed">BUYING_POWER</a>
 , <a class="el" href="#a3cc0ab250b8a6e9c3e107ddc121d875aabcacee7ad79abe4e25b877c5b6480a8c">CALENDAR</a>
 , <a class="el" href="#a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc">PRICE_LIMITS</a>
+, <a class="el" href="#a3cc0ab250b8a6e9c3e107ddc121d875aae44f9e348e41cb272efa87387728571b">DATA</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a3cc0ab250b8a6e9c3e107ddc121d875a"><td class="mdescLeft">&#160;</td><td class="mdescRight">What a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> polls for; each has a cadence in <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1PollSchedule.html" title="How often a PollingLoop polls each kind; an unset interval disables that poll.">PollSchedule</a></span>.  <a href="#a3cc0ab250b8a6e9c3e107ddc121d875a">More...</a><br /></td></tr>
@@ -557,7 +560,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 <div class="line">dry.context().set_instrument(reference);</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> report = dry.feed(<a class="code hl_function" href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">strategy::make_bar_event</a>(<span class="keywordtype">id</span>, BarInterval::ONE_DAY, <a class="code hl_enumvalue" href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">BarStamp::CLOSE</a>, bar));</div>
 <div class="line"><span class="comment">// report.would_place_ holds what would have been sent</span></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a0a953e1898c7dd6ec8560a110d4db989"><div class="ttname"><a href="#a0a953e1898c7dd6ec8560a110d4db989">algotradelib::runner::DryRunner</a></div><div class="ttdeci">Runner&lt; Strategy, CapsType, DryTag, RecordingExecutor&lt; DryTag &gt; &gt; DryRunner</div><div class="ttdoc">A runner that sends nothing: handlers fire and instructions are recorded by a RecordingExecutor.</div><div class="ttdef"><b>Definition</b> <a href="runner_8hpp_source.html#l04799">runner.hpp:4799</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a0a953e1898c7dd6ec8560a110d4db989"><div class="ttname"><a href="#a0a953e1898c7dd6ec8560a110d4db989">algotradelib::runner::DryRunner</a></div><div class="ttdeci">Runner&lt; Strategy, CapsType, DryTag, RecordingExecutor&lt; DryTag &gt; &gt; DryRunner</div><div class="ttdoc">A runner that sends nothing: handlers fire and instructions are recorded by a RecordingExecutor.</div><div class="ttdef"><b>Definition</b> <a href="runner_8hpp_source.html#l04829">runner.hpp:4829</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00278">event.hpp:278</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d"><div class="ttname"><a href="namespacealgotradelib.html#a11debdaf7ef5c03954d44c204afff5bda7286293c9125ac7d7bace94c190bc16d">algotradelib::BarStamp::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">The timestamp is the instant the period ended.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00127">market_data.hpp:127</a></div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -568,7 +571,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l04799">4799</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l04829">4829</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -595,7 +598,7 @@ template&lt;typename Broker&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="context_8hpp_source.html#l00048">48</a> of file <a class="el" href="context_8hpp_source.html">context.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8hpp_source.html#l00049">49</a> of file <a class="el" href="context_8hpp_source.html">context.hpp</a>.</p>
 
 </div>
 </div>
@@ -892,7 +895,7 @@ template&lt;typename Broker&gt; </div>
 </div><div class="memdoc">
 
 <p>What a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> polls for; each has a cadence in <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1PollSchedule.html" title="How often a PollingLoop polls each kind; an unset interval disables that poll.">PollSchedule</a></span>. </p>
-<p>Each iteration polls in the order of <span class="tt"><a class="el" href="#a83a408937aeb3dfebceb85876482a96a" title="Every poll kind, in the order an iteration polls them.">all_poll_kinds</a></span>: calendar, price limits, working orders, holdings, buying power, bars, quotes. </p>
+<p>Each iteration polls in the order of <span class="tt"><a class="el" href="#a83a408937aeb3dfebceb85876482a96a" title="Every poll kind, in the order an iteration polls them.">all_poll_kinds</a></span>: calendar, price limits, working orders, holdings, buying power, data, bars, quotes. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3cc0ab250b8a6e9c3e107ddc121d875aa3ee72bb3ee49a03042a5fad788a9fc0c" name="a3cc0ab250b8a6e9c3e107ddc121d875aa3ee72bb3ee49a03042a5fad788a9fc0c"></a>BARS&#160;</td><td class="fielddoc"><p>Completed bars. </p>
 </td></tr>
@@ -910,9 +913,12 @@ template&lt;typename Broker&gt; </div>
 <tr><td class="fieldname"><a id="a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc" name="a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc"></a>PRICE_LIMITS&#160;</td><td class="fielddoc"><p>Today's price bands, which an aggressive limit price is clamped to; polled second, before anything that feeds. </p>
 <p>It installs bands with <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#a9d5cbf433a7332442b5fc971f6f29d55" title="Records an instrument&#39;s price band for today, used to clamp order prices.">Runner::set_price_limits</a></span> and feeds nothing. Orders decided from a poll use this iteration's bands; an order decided inside <span class="tt">Source::read_order_list</span> (which runs before the polls) would use the previous iteration's. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a3cc0ab250b8a6e9c3e107ddc121d875aae44f9e348e41cb272efa87387728571b" name="a3cc0ab250b8a6e9c3e107ddc121d875aae44f9e348e41cb272efa87387728571b"></a>DATA&#160;</td><td class="fielddoc"><p>Records for a strategy's <span class="tt">on_data</span>, from the data poll <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html#a8070b401965e69f3fee3e3e1d2c85092" title="Installs the data poll that reads records for the strategy&#39;s on_data, called on PollSchedule::data_&#39;s...">PollingLoop::set_data_poll</a></span> installs; never from the source. </p>
+<p>Polled before bars, so a record and a bar read in one iteration reach the strategy record first. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00030">30</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00031">31</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -949,7 +955,7 @@ template&lt;typename Broker&gt; </div>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00122">122</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00134">134</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -2977,7 +2983,7 @@ template&lt;typename Enum&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="execution_8hpp_source.html#l00396">396</a> of file <a class="el" href="execution_8hpp_source.html">execution.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l00973">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::obligation_state()</a>, and <a class="el" href="execution_8hpp_source.html#l00396">obligation_weight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l00980">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::obligation_state()</a>, and <a class="el" href="execution_8hpp_source.html#l00396">obligation_weight()</a>.</p>
 
 </div>
 </div>
@@ -3140,9 +3146,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a3cc0ab250b8a6e9c3e107ddc121d875a" title="What a PollingLoop polls for; each has a cadence in PollSchedule.">PollKind</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00066">66</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00074">74</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00066">poll_kind_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00074">poll_kind_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>.</p>
 
 </div>
 </div>
@@ -3178,9 +3184,9 @@ template&lt;typename Enum&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#a4b0650e6d65e9dcd541dd9e63f860dda" title="What became of one poll.">PollOutcome</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00146">146</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00158">158</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00146">poll_outcome_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00158">poll_outcome_name()</a>.</p>
 
 </div>
 </div>
@@ -4663,20 +4669,23 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <div class="line">  <a class="code hl_enumvalue" href="#a3cc0ab250b8a6e9c3e107ddc121d875aa7d6422d2e3a45ca998ef0d8915c9d604">PollKind::HOLDINGS</a>,</div>
 <div class="line">  </div>
 <div class="line">  <a class="code hl_enumvalue" href="#a3cc0ab250b8a6e9c3e107ddc121d875aac608ec81704f3c661a37054ff833b8ed">PollKind::BUYING_POWER</a>,</div>
+<div class="line">  </div>
+<div class="line">  <a class="code hl_enumvalue" href="#a3cc0ab250b8a6e9c3e107ddc121d875aae44f9e348e41cb272efa87387728571b">PollKind::DATA</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a3cc0ab250b8a6e9c3e107ddc121d875aa3ee72bb3ee49a03042a5fad788a9fc0c">PollKind::BARS</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a3cc0ab250b8a6e9c3e107ddc121d875aa81aa5e0d6fd5b222f7c90c54a126604b">PollKind::QUOTES</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa2080fc2c14efc0e09b8c987ed7996b27"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa2080fc2c14efc0e09b8c987ed7996b27">algotradelib::runner::PollKind::WORKING_ORDERS</a></div><div class="ttdeci">@ WORKING_ORDERS</div><div class="ttdoc">Working orders, which reconciliation and cancellation need.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00038">loop.hpp:38</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa3ee72bb3ee49a03042a5fad788a9fc0c"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa3ee72bb3ee49a03042a5fad788a9fc0c">algotradelib::runner::PollKind::BARS</a></div><div class="ttdeci">@ BARS</div><div class="ttdoc">Completed bars.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00032">loop.hpp:32</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc">algotradelib::runner::PollKind::PRICE_LIMITS</a></div><div class="ttdeci">@ PRICE_LIMITS</div><div class="ttdoc">Today&#39;s price bands, which an aggressive limit price is clamped to; polled second,...</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00058">loop.hpp:58</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa7d6422d2e3a45ca998ef0d8915c9d604"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa7d6422d2e3a45ca998ef0d8915c9d604">algotradelib::runner::PollKind::HOLDINGS</a></div><div class="ttdeci">@ HOLDINGS</div><div class="ttdoc">Holdings, which orders are sized against.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00036">loop.hpp:36</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa81aa5e0d6fd5b222f7c90c54a126604b"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa81aa5e0d6fd5b222f7c90c54a126604b">algotradelib::runner::PollKind::QUOTES</a></div><div class="ttdeci">@ QUOTES</div><div class="ttdoc">Current quotes, for strategies that act between bars.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00034">loop.hpp:34</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aabcacee7ad79abe4e25b877c5b6480a8c"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aabcacee7ad79abe4e25b877c5b6480a8c">algotradelib::runner::PollKind::CALENDAR</a></div><div class="ttdeci">@ CALENDAR</div><div class="ttdoc">The trading calendar, from which the loop derives the market phase; polled first, and on by default.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00049">loop.hpp:49</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aac608ec81704f3c661a37054ff833b8ed"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aac608ec81704f3c661a37054ff833b8ed">algotradelib::runner::PollKind::BUYING_POWER</a></div><div class="ttdeci">@ BUYING_POWER</div><div class="ttdoc">Buying power, polled beside holdings (not before each order).</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00040">loop.hpp:40</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa2080fc2c14efc0e09b8c987ed7996b27"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa2080fc2c14efc0e09b8c987ed7996b27">algotradelib::runner::PollKind::WORKING_ORDERS</a></div><div class="ttdeci">@ WORKING_ORDERS</div><div class="ttdoc">Working orders, which reconciliation and cancellation need.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00039">loop.hpp:39</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa3ee72bb3ee49a03042a5fad788a9fc0c"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa3ee72bb3ee49a03042a5fad788a9fc0c">algotradelib::runner::PollKind::BARS</a></div><div class="ttdeci">@ BARS</div><div class="ttdoc">Completed bars.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00033">loop.hpp:33</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa70c09ebbae39c3d629a3e0697031f7cc">algotradelib::runner::PollKind::PRICE_LIMITS</a></div><div class="ttdeci">@ PRICE_LIMITS</div><div class="ttdoc">Today&#39;s price bands, which an aggressive limit price is clamped to; polled second,...</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00059">loop.hpp:59</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa7d6422d2e3a45ca998ef0d8915c9d604"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa7d6422d2e3a45ca998ef0d8915c9d604">algotradelib::runner::PollKind::HOLDINGS</a></div><div class="ttdeci">@ HOLDINGS</div><div class="ttdoc">Holdings, which orders are sized against.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00037">loop.hpp:37</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aa81aa5e0d6fd5b222f7c90c54a126604b"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aa81aa5e0d6fd5b222f7c90c54a126604b">algotradelib::runner::PollKind::QUOTES</a></div><div class="ttdeci">@ QUOTES</div><div class="ttdoc">Current quotes, for strategies that act between bars.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00035">loop.hpp:35</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aabcacee7ad79abe4e25b877c5b6480a8c"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aabcacee7ad79abe4e25b877c5b6480a8c">algotradelib::runner::PollKind::CALENDAR</a></div><div class="ttdeci">@ CALENDAR</div><div class="ttdoc">The trading calendar, from which the loop derives the market phase; polled first, and on by default.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00050">loop.hpp:50</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aac608ec81704f3c661a37054ff833b8ed"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aac608ec81704f3c661a37054ff833b8ed">algotradelib::runner::PollKind::BUYING_POWER</a></div><div class="ttdeci">@ BUYING_POWER</div><div class="ttdoc">Buying power, polled beside holdings (not before each order).</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00041">loop.hpp:41</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a3cc0ab250b8a6e9c3e107ddc121d875aae44f9e348e41cb272efa87387728571b"><div class="ttname"><a href="#a3cc0ab250b8a6e9c3e107ddc121d875aae44f9e348e41cb272efa87387728571b">algotradelib::runner::PollKind::DATA</a></div><div class="ttdeci">@ DATA</div><div class="ttdoc">Records for a strategy&#39;s on_data, from the data poll PollingLoop::set_data_poll installs; never from ...</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00066">loop.hpp:66</a></div></div>
 </div><!-- fragment -->
 <p>Every poll kind, in the order an iteration polls them. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00087">87</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00097">97</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -4705,14 +4714,14 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <div class="line">  <a class="code hl_enumvalue" href="#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419">PollOutcome::FAILED</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f">PollOutcome::RATE_LIMITED</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f">algotradelib::runner::PollOutcome::RATE_LIMITED</a></div><div class="ttdeci">@ RATE_LIMITED</div><div class="ttdoc">The rate limiter refused the poll; not counted as a failure.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00130">loop.hpp:130</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc">algotradelib::runner::PollOutcome::UNCHANGED</a></div><div class="ttdeci">@ UNCHANGED</div><div class="ttdoc">The poll succeeded and there was nothing new.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00126">loop.hpp:126</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419">algotradelib::runner::PollOutcome::FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdoc">The poll failed; counted toward the failure budget.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00128">loop.hpp:128</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5">algotradelib::runner::PollOutcome::UPDATED</a></div><div class="ttdeci">@ UPDATED</div><div class="ttdoc">New data arrived and was fed to the runner, or installed in it (a calendar, price bands).</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00124">loop.hpp:124</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f">algotradelib::runner::PollOutcome::RATE_LIMITED</a></div><div class="ttdeci">@ RATE_LIMITED</div><div class="ttdoc">The rate limiter refused the poll; not counted as a failure.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00142">loop.hpp:142</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc">algotradelib::runner::PollOutcome::UNCHANGED</a></div><div class="ttdeci">@ UNCHANGED</div><div class="ttdoc">The poll succeeded and there was nothing new.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00138">loop.hpp:138</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419">algotradelib::runner::PollOutcome::FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdoc">The poll failed; counted toward the failure budget.</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00140">loop.hpp:140</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1runner_html_a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5"><div class="ttname"><a href="#a4b0650e6d65e9dcd541dd9e63f860ddaac5d66c61a88f1b214933a91fda1e13f5">algotradelib::runner::PollOutcome::UPDATED</a></div><div class="ttdeci">@ UPDATED</div><div class="ttdoc">New data arrived and was fed to the runner, or installed in it (a calendar, price bands).</div><div class="ttdef"><b>Definition</b> <a href="loop_8hpp_source.html#l00136">loop.hpp:136</a></div></div>
 </div><!-- fragment -->
 <p>Every <span class="tt"><a class="el" href="#a4b0650e6d65e9dcd541dd9e63f860dda" title="What became of one poll.">PollOutcome</a></span>, in declaration order. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00134">134</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00146">146</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -4812,7 +4821,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p>The number of <span class="tt"><a class="el" href="#a3cc0ab250b8a6e9c3e107ddc121d875a" title="What a PollingLoop polls for; each has a cadence in PollSchedule.">PollKind</a></span> values. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00114">114</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00126">126</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>

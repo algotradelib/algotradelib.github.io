@@ -5,6 +5,7 @@ var classalgotradelib_1_1backtest_1_1Backtester =
     [ "Tag", "classalgotradelib_1_1backtest_1_1Backtester.html#afb00af4a116816e6fa52e13107d7ff60", null ],
     [ "Backtester", "classalgotradelib_1_1backtest_1_1Backtester.html#a515e827e70fc863578aa5388bc2c1369", null ],
     [ "feed", "classalgotradelib_1_1backtest_1_1Backtester.html#a72b488b082635ab96d1f755c1064b7c0", null ],
+    [ "feed", "classalgotradelib_1_1backtest_1_1Backtester.html#a4db1451cfe6c19d37ecd73647e682a6f", null ],
     [ "feed", "classalgotradelib_1_1backtest_1_1Backtester.html#a5f2f2a11698126d856f8053be40cfd7d", null ],
     [ "fills", "classalgotradelib_1_1backtest_1_1Backtester.html#a721677e15a1ddb65c632858c66e15820", null ],
     [ "finish", "classalgotradelib_1_1backtest_1_1Backtester.html#aac085c0f5121c2a2a949abb953109e9a", null ],

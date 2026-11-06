@@ -12,6 +12,7 @@ var classalgotradelib_1_1runner_1_1PollingLoop =
     [ "session_window", "classalgotradelib_1_1runner_1_1PollingLoop.html#afcf039d984a01f7a1117bb54dc533107", null ],
     [ "set_closing_wait", "classalgotradelib_1_1runner_1_1PollingLoop.html#a6e65fb1f5a48029b390c12c5f19d0571", null ],
     [ "set_control_file", "classalgotradelib_1_1runner_1_1PollingLoop.html#a6cbfce04f436d886be1ed72f2fa23633", null ],
+    [ "set_data_poll", "classalgotradelib_1_1runner_1_1PollingLoop.html#a8070b401965e69f3fee3e3e1d2c85092", null ],
     [ "set_failure_policy", "classalgotradelib_1_1runner_1_1PollingLoop.html#a2ad123ef3aa0c0bbf1346446ad2b1801", null ],
     [ "set_maximum_buying_power_age", "classalgotradelib_1_1runner_1_1PollingLoop.html#a262f793a8e87a7b81e5c28563b9e7483", null ],
     [ "set_maximum_portfolio_age", "classalgotradelib_1_1runner_1_1PollingLoop.html#a00b24b592bb0a14a40bda001a309c7bc", null ],
