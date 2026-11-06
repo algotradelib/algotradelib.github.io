@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"functions_vars_g.html":[2,3,2,6],
+"functions_vars_h.html":[2,3,2,7],
 "functions_vars_i.html":[2,3,2,8],
 "functions_vars_j.html":[2,3,2,9],
 "functions_vars_k.html":[2,3,2,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020":[1,0,0,0,6],
 "namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020a7938d3eb8c9ef87a0dd8661d42543688":[1,0,0,0,6,2],
 "namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020aa0494c90519e4a08049470357751e736":[1,0,0,0,6,1],
-"namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020ae47ea60847cd9166264ea3815d3434ef":[1,0,0,0,6,0],
-"namespacealgotradelib_1_1backtest.html":[1,0,0,1],
-"namespacealgotradelib_1_1backtest.html#a0de154050b10e8fd5f50f0649e4d12f1":[1,0,0,1,21]
+"namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020ae47ea60847cd9166264ea3815d3434ef":[1,0,0,0,6,0]
 };

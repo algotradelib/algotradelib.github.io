@@ -2,6 +2,7 @@ var classalgotradelib_1_1network_1_1ClientCredentials =
 [
     [ "from_env", "classalgotradelib_1_1network_1_1ClientCredentials.html#a2c0bfa081b4a52d8f79b5772c4ceca96", null ],
     [ "from_json", "classalgotradelib_1_1network_1_1ClientCredentials.html#a92687d5370ab758851ed63463bc293a0", null ],
+    [ "from_json_text", "classalgotradelib_1_1network_1_1ClientCredentials.html#a79ea200694fb537daf33a9b396dd7432", null ],
     [ "key", "classalgotradelib_1_1network_1_1ClientCredentials.html#a58ffe2de2f3f42e97ab7c89811588cf1", null ],
     [ "secret", "classalgotradelib_1_1network_1_1ClientCredentials.html#ae226abb8d7611d682c05fdefd8fe2fa7", null ],
     [ "to_form_urlencoded_body", "classalgotradelib_1_1network_1_1ClientCredentials.html#a586837684328010477d65b1b221cf6a8", null ],

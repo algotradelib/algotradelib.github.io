@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677adc48e73143b0e2d385a4bba45af2fc0a":[1,0,0,10,72,0],
+"namespacealgotradelib_1_1runner.html#aa394dc4435e3533c5fd6305c2fb90255":[1,0,0,10,110],
 "namespacealgotradelib_1_1runner.html#aa40374a73ffe35df0d567e5d60776b2c":[1,0,0,10,153],
 "namespacealgotradelib_1_1runner.html#aa4341a93d14e990dc48ee290eb9069f8":[1,0,0,10,97],
 "namespacealgotradelib_1_1runner.html#aa5f22f2f266d334cd2a07c8d8ddacf16":[1,0,0,10,128],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "recovering-after-a-crash.html":[0,19],
 "recovering-after-a-crash.html#autotoc_md78":[0,19,0],
 "recovering-after-a-crash.html#autotoc_md79":[0,19,1],
-"recovering-after-a-crash.html#autotoc_md80":[0,19,2],
-"recovering-after-a-crash.html#autotoc_md81":[0,19,2,0],
-"recovering-after-a-crash.html#autotoc_md82":[0,19,3]
+"recovering-after-a-crash.html#autotoc_md80":[0,19,2]
 };

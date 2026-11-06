@@ -1,9 +1,10 @@
 var structalgotradelib_1_1kiwoom_1_1KiwoomConfig =
 [
     [ "demo_from_env", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adbb9e353eee32010b21ff948a9642f77", null ],
-    [ "demo_from_json", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#aa5834c89fbc90a25d03ba53bf09cc652", null ],
+    [ "demo_from_json", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a1c71858961f156a41599ac99d0fa4c1e", null ],
     [ "from_env_impl", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ab3951ad46357e9d244d1182babcd895f", null ],
     [ "from_json_impl", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a19e73539ff26955d9c854f612fa24c21", null ],
+    [ "from_json_text_impl", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ad1295af448eb345a513e9409a2fb6d45", null ],
     [ "key_field", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a777b5d1a635d9d78831284d8ee209d79", null ],
     [ "rest_host", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adcd414a9457fa049e681e6f605a34c40", null ],
     [ "rest_port", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a39e388c06df22470e2e0ddd28270a115", null ],

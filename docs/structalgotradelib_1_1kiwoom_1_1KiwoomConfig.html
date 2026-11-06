@@ -145,6 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab3951ad46357e9d244d1182babcd895f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the credentials from <span class="tt">KIWOOM_APP_KEY</span> and <span class="tt">KIWOOM_SECRET_KEY</span>, and the environment from <span class="tt">KIWOOM_DEMO</span> (see <span class="tt"><a class="el" href="#adbb9e353eee32010b21ff948a9642f77" title="Reads KIWOOM_DEMO.">demo_from_env</a></span>); called by <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a2c0bfa081b4a52d8f79b5772c4ceca96">from_env()</a></span>. Nothing changes if it throws.  <br /></td></tr>
 <tr class="memitem:a19e73539ff26955d9c854f612fa24c21" id="r_a19e73539ff26955d9c854f612fa24c21"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a19e73539ff26955d9c854f612fa24c21">from_json_impl</a> (const std::string &amp;filename)</td></tr>
 <tr class="memdesc:a19e73539ff26955d9c854f612fa24c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the credentials from a JSON file; called by <span class="tt">from_json(filename)</span>. Nothing changes if it throws.  <br /></td></tr>
+<tr class="memitem:ad1295af448eb345a513e9409a2fb6d45" id="r_ad1295af448eb345a513e9409a2fb6d45"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad1295af448eb345a513e9409a2fb6d45">from_json_text_impl</a> (std::string_view text, const std::string &amp;origin)</td></tr>
+<tr class="memdesc:ad1295af448eb345a513e9409a2fb6d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the credentials from JSON text in the file's format; called by <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a79ea200694fb537daf33a9b396dd7432">from_json_text</a></span>. Nothing changes if it throws.  <br /></td></tr>
 <tr class="memitem:adcd414a9457fa049e681e6f605a34c40" id="r_adcd414a9457fa049e681e6f605a34c40"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#adcd414a9457fa049e681e6f605a34c40">rest_host</a> () const noexcept</td></tr>
 <tr class="memdesc:adcd414a9457fa049e681e6f605a34c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">The REST host for the selected environment.  <br /></td></tr>
 <tr class="memitem:a39e388c06df22470e2e0ddd28270a115" id="r_a39e388c06df22470e2e0ddd28270a115"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a39e388c06df22470e2e0ddd28270a115">rest_port</a> () const noexcept</td></tr>
@@ -160,6 +162,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2c0bfa081b4a52d8f79b5772c4ceca96 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the credentials from the broker's environment variables.  <br /></td></tr>
 <tr class="memitem:a92687d5370ab758851ed63463bc293a0 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials" id="r_a92687d5370ab758851ed63463bc293a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a92687d5370ab758851ed63463bc293a0">from_json</a> (const std::string &amp;filename)</td></tr>
 <tr class="memdesc:a92687d5370ab758851ed63463bc293a0 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the credentials from a JSON file, in the broker's format.  <br /></td></tr>
+<tr class="memitem:a79ea200694fb537daf33a9b396dd7432 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials" id="r_a79ea200694fb537daf33a9b396dd7432"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a79ea200694fb537daf33a9b396dd7432">from_json_text</a> (std::string_view text, const std::string &amp;origin)</td></tr>
+<tr class="memdesc:a79ea200694fb537daf33a9b396dd7432 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the credentials from JSON text in the broker's format, as <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a92687d5370ab758851ed63463bc293a0">from_json</a></span> reads a file's contents, for credentials kept somewhere other than a file (a system credential store).  <br /></td></tr>
 <tr class="memitem:a58ffe2de2f3f42e97ab7c89811588cf1 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials" id="r_a58ffe2de2f3f42e97ab7c89811588cf1"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a58ffe2de2f3f42e97ab7c89811588cf1">key</a> () const noexcept</td></tr>
 <tr class="memdesc:a58ffe2de2f3f42e97ab7c89811588cf1 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the app key (client id).  <br /></td></tr>
 <tr class="memitem:ae226abb8d7611d682c05fdefd8fe2fa7 inherit pub_methods_classalgotradelib_1_1network_1_1ClientCredentials" id="r_ae226abb8d7611d682c05fdefd8fe2fa7"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#ae226abb8d7611d682c05fdefd8fe2fa7">secret</a> () const noexcept</td></tr>
@@ -173,8 +177,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adbb9e353eee32010b21ff948a9642f77" id="r_adbb9e353eee32010b21ff948a9642f77"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#adbb9e353eee32010b21ff948a9642f77">demo_from_env</a> ()</td></tr>
 <tr class="memdesc:adbb9e353eee32010b21ff948a9642f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads <span class="tt">KIWOOM_DEMO</span>.  <br /></td></tr>
-<tr class="memitem:aa5834c89fbc90a25d03ba53bf09cc652" id="r_aa5834c89fbc90a25d03ba53bf09cc652"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#aa5834c89fbc90a25d03ba53bf09cc652">demo_from_json</a> (const json::object &amp;doc, const std::string &amp;filename)</td></tr>
-<tr class="memdesc:aa5834c89fbc90a25d03ba53bf09cc652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a credential file's <span class="tt">"demo"</span>.  <br /></td></tr>
+<tr class="memitem:a1c71858961f156a41599ac99d0fa4c1e" id="r_a1c71858961f156a41599ac99d0fa4c1e"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a1c71858961f156a41599ac99d0fa4c1e">demo_from_json</a> (const json::object &amp;doc, const std::string &amp;origin)</td></tr>
+<tr class="memdesc:a1c71858961f156a41599ac99d0fa4c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a credential document's <span class="tt">"demo"</span>.  <br /></td></tr>
 <tr class="memitem:a777b5d1a635d9d78831284d8ee209d79" id="r_a777b5d1a635d9d78831284d8ee209d79"><td class="memItemLeft">static constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a777b5d1a635d9d78831284d8ee209d79">key_field</a> () noexcept</td></tr>
 <tr class="memdesc:a777b5d1a635d9d78831284d8ee209d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">The JSON field Kiwoom expects the application key under.  <br /></td></tr>
 <tr class="memitem:a39c81036079eb81bd1241a0520194d09" id="r_a39c81036079eb81bd1241a0520194d09"><td class="memItemLeft">static constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a39c81036079eb81bd1241a0520194d09">secret_field</a> () noexcept</td></tr>
@@ -206,7 +210,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kiwoom credentials (app key and secret key), demo or real account, the market-data tape, and the holdings settings an account must state before trading. </p>
-<p>Load with <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a2c0bfa081b4a52d8f79b5772c4ceca96">from_env()</a></span> (<span class="tt">KIWOOM_APP_KEY</span>, <span class="tt">KIWOOM_SECRET_KEY</span>, <span class="tt">KIWOOM_DEMO</span>) or <span class="tt">from_json(filename)</span>. Holdings cannot be read until <span class="tt"><a class="el" href="#ae40058d6aa110aa6c5479c972c39619e" title="The venue holdings requests (kt00018) name: Venue::KRX or Venue::NXT. No default: holdings requests a...">holdings_venue_</a></span> is set. Orders cannot be placed or amended, and the session (so a runner) reads no holdings, until <span class="tt"><a class="el" href="#a52f50f807e1b1d4281a73fbc7a4b820d" title="Your assertion of what holdings_venue_ means for the positions listed. No default: until it is set,...">holdings_position_scope_</a></span> is set; a checked sell also needs <span class="tt"><a class="el" href="#a91c89a3450017a56addfb574a5ce43c4" title="Your assertion of what a holdings row&#39;s tradable quantity covers; separate from the position scope,...">holdings_sellable_scope_</a></span>. </p>
+<p>Load with <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a2c0bfa081b4a52d8f79b5772c4ceca96">from_env()</a></span> (<span class="tt">KIWOOM_APP_KEY</span>, <span class="tt">KIWOOM_SECRET_KEY</span>, <span class="tt">KIWOOM_DEMO</span>), <span class="tt">from_json(filename)</span> or <span class="tt">from_json_text(text, origin)</span>. Holdings cannot be read until <span class="tt"><a class="el" href="#ae40058d6aa110aa6c5479c972c39619e" title="The venue holdings requests (kt00018) name: Venue::KRX or Venue::NXT. No default: holdings requests a...">holdings_venue_</a></span> is set. Orders cannot be placed or amended, and the session (so a runner) reads no holdings, until <span class="tt"><a class="el" href="#a52f50f807e1b1d4281a73fbc7a4b820d" title="Your assertion of what holdings_venue_ means for the positions listed. No default: until it is set,...">holdings_position_scope_</a></span> is set; a checked sell also needs <span class="tt"><a class="el" href="#a91c89a3450017a56addfb574a5ce43c4" title="Your assertion of what a holdings row&#39;s tradable quantity covers; separate from the position scope,...">holdings_sellable_scope_</a></span>. </p>
 
 <p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00154">154</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -242,14 +246,14 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00266">266</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00278">278</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00209">from_env_impl()</a>, and <a class="el" href="kiwoom__credentials_8hpp_source.html#l00127">kiwoom_credentials::load()</a>.</p>
 
 </div>
 </div>
-<a id="aa5834c89fbc90a25d03ba53bf09cc652" name="aa5834c89fbc90a25d03ba53bf09cc652"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5834c89fbc90a25d03ba53bf09cc652">&#9670;&#160;</a></span>demo_from_json()</h2>
+<a id="a1c71858961f156a41599ac99d0fa4c1e" name="a1c71858961f156a41599ac99d0fa4c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c71858961f156a41599ac99d0fa4c1e">&#9670;&#160;</a></span>demo_from_json()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +269,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -275,11 +279,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reads a credential file's <span class="tt">"demo"</span>. </p>
+<p>Reads a credential document's <span class="tt">"demo"</span>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">doc</td><td>The file's contents. </td></tr>
-    <tr><td class="paramname">filename</td><td>The file, for the error message. </td></tr>
+    <tr><td class="paramname">doc</td><td>The document. </td></tr>
+    <tr><td class="paramname">origin</td><td>What the error message calls the source (<span class="tt">"file creds.json"</span>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,9 +295,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00288">288</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00300">300</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00233">from_json_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00250">from_json_text_impl()</a>.</p>
 
 </div>
 </div>
@@ -374,6 +378,54 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad1295af448eb345a513e9409a2fb6d45" name="ad1295af448eb345a513e9409a2fb6d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1295af448eb345a513e9409a2fb6d45">&#9670;&#160;</a></span>from_json_text_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void algotradelib::kiwoom::KiwoomConfig::from_json_text_impl </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads the credentials from JSON text in the file's format; called by <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html#a79ea200694fb537daf33a9b396dd7432">from_json_text</a></span>. Nothing changes if it throws. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The JSON document. </td></tr>
+    <tr><td class="paramname">origin</td><td>What error messages call the source (<span class="tt">"file creds.json"</span>); not a secret. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the text cannot be parsed, a key is missing or not a string, or <span class="tt">"demo"</span> is not a boolean. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00250">250</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00233">from_json_impl()</a>.</p>
+
+</div>
+</div>
 <a id="a777b5d1a635d9d78831284d8ee209d79" name="a777b5d1a635d9d78831284d8ee209d79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a777b5d1a635d9d78831284d8ee209d79">&#9670;&#160;</a></span>key_field()</h2>
 
@@ -400,7 +452,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The JSON field Kiwoom expects the application key under. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"appkey"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00307">307</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00319">319</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +482,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The REST host for the selected environment. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"mockapi.kiwoom.com"</span> (demo) or <span class="tt">"api.kiwoom.com"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00323">323</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00335">335</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +512,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The REST port, which is the same for both environments. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"443"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00331">331</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00343">343</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -490,7 +542,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The JSON field Kiwoom expects the application secret under. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"secretkey"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00315">315</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00327">327</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -526,7 +578,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The suffixed symbol. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00356">356</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00368">368</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -556,7 +608,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The WebSocket host for the selected environment. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"mockapi.kiwoom.com"</span> (demo) or <span class="tt">"api.kiwoom.com"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00339">339</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00351">351</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -586,7 +638,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The WebSocket port, which is the same for both environments. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">"10000"</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00347">347</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00359">359</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -667,7 +719,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00162">162</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00209">from_env_impl()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00233">from_json_impl()</a>, <a class="el" href="kiwoom__credentials_8hpp_source.html#l00127">kiwoom_credentials::load()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00323">rest_host()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00339">ws_host()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00209">from_env_impl()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00250">from_json_text_impl()</a>, <a class="el" href="kiwoom__credentials_8hpp_source.html#l00127">kiwoom_credentials::load()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00335">rest_host()</a>, and <a class="el" href="kiwoom_2config_8hpp_source.html#l00351">ws_host()</a>.</p>
 
 </div>
 </div>
@@ -688,7 +740,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="kiwoom_2config_8hpp_source.html#l00170">170</a> of file <a class="el" href="kiwoom_2config_8hpp_source.html">config.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00356">tape_symbol()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2config_8hpp_source.html#l00368">tape_symbol()</a>.</p>
 
 </div>
 </div>

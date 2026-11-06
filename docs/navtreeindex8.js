@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a1da88421eefcd9a816ecd6b27da15833":[1,0,0,12,4,3],
+"classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a1da88421eefcd9a816ecd6b27da15833":[2,0,0,12,4,3],
 "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a25e75bb86430088629c88b96fbce6f7f":[1,0,0,12,4,0],
 "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a25e75bb86430088629c88b96fbce6f7f":[2,0,0,12,4,0],
 "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a2bd27b4630d299ed55af91312badfe8d":[1,0,0,12,4,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "functions_vars_c.html":[2,3,2,2],
 "functions_vars_d.html":[2,3,2,3],
 "functions_vars_e.html":[2,3,2,4],
-"functions_vars_f.html":[2,3,2,5],
-"functions_vars_g.html":[2,3,2,6],
-"functions_vars_h.html":[2,3,2,7]
+"functions_vars_f.html":[2,3,2,5]
 };

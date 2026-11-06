@@ -1,5 +1,13 @@
 var NAVTREEINDEX20 =
 {
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html":[1,0,0,10,1],
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html":[2,0,0,10,1],
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a0ce97b99b5a8b5f5bd46a5479575d6ee":[1,0,0,10,1,3],
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a0ce97b99b5a8b5f5bd46a5479575d6ee":[2,0,0,10,1,3],
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a1dc73a785c2df551358730d915903c61":[1,0,0,10,1,2],
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a1dc73a785c2df551358730d915903c61":[2,0,0,10,1,2],
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a5a7557db574417ad36606b9f017332fc":[1,0,0,10,1,0],
+"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a5a7557db574417ad36606b9f017332fc":[2,0,0,10,1,0],
 "structalgotradelib_1_1runner_1_1BrokerRefusal.html#a8dee342b1649612df4e413c97d5c7ef2":[1,0,0,10,1,1],
 "structalgotradelib_1_1runner_1_1BrokerRefusal.html#a8dee342b1649612df4e413c97d5c7ef2":[2,0,0,10,1,1],
 "structalgotradelib_1_1runner_1_1CancelIntent.html":[1,0,0,10,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX20 =
 "structalgotradelib_1_1runner_1_1LoopReport.html#a94492379af2a3547a84ea371de5183d2":[1,0,0,10,19,2],
 "structalgotradelib_1_1runner_1_1LoopReport.html#a94492379af2a3547a84ea371de5183d2":[2,0,0,10,19,2],
 "structalgotradelib_1_1runner_1_1LoopReport.html#a960e5e5dac5a5bc9005e67a23e6c4466":[1,0,0,10,19,24],
-"structalgotradelib_1_1runner_1_1LoopReport.html#a960e5e5dac5a5bc9005e67a23e6c4466":[2,0,0,10,19,24],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa429d79fbf924dfbeecfcb411afb1f0e":[1,0,0,10,19,49],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa429d79fbf924dfbeecfcb411afb1f0e":[2,0,0,10,19,49],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa44619eba7622787e750190ac514b01c":[1,0,0,10,19,9],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa44619eba7622787e750190ac514b01c":[2,0,0,10,19,9],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa590539eeb43bce590b8f740dda70f38":[1,0,0,10,19,33],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa590539eeb43bce590b8f740dda70f38":[2,0,0,10,19,33],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa6d58991995db7e23184a7c41723aae2":[1,0,0,10,19,13],
-"structalgotradelib_1_1runner_1_1LoopReport.html#aa6d58991995db7e23184a7c41723aae2":[2,0,0,10,19,13]
+"structalgotradelib_1_1runner_1_1LoopReport.html#a960e5e5dac5a5bc9005e67a23e6c4466":[2,0,0,10,19,24]
 };

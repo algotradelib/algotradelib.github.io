@@ -1,5 +1,13 @@
 var NAVTREEINDEX21 =
 {
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa429d79fbf924dfbeecfcb411afb1f0e":[1,0,0,10,19,49],
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa429d79fbf924dfbeecfcb411afb1f0e":[2,0,0,10,19,49],
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa44619eba7622787e750190ac514b01c":[1,0,0,10,19,9],
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa44619eba7622787e750190ac514b01c":[2,0,0,10,19,9],
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa590539eeb43bce590b8f740dda70f38":[1,0,0,10,19,33],
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa590539eeb43bce590b8f740dda70f38":[2,0,0,10,19,33],
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa6d58991995db7e23184a7c41723aae2":[1,0,0,10,19,13],
+"structalgotradelib_1_1runner_1_1LoopReport.html#aa6d58991995db7e23184a7c41723aae2":[2,0,0,10,19,13],
 "structalgotradelib_1_1runner_1_1LoopReport.html#aaafc7ad8ce16eabf4e623cef1d8238d3":[1,0,0,10,19,25],
 "structalgotradelib_1_1runner_1_1LoopReport.html#aaafc7ad8ce16eabf4e623cef1d8238d3":[2,0,0,10,19,25],
 "structalgotradelib_1_1runner_1_1LoopReport.html#aad7216cf550eefc1d54cbbc77a4fadc3":[1,0,0,10,19,27],
@@ -241,13 +249,5 @@ var NAVTREEINDEX21 =
 "structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2":[1,0,0,10,46,1],
 "structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2":[2,0,0,10,46,1],
 "structalgotradelib_1_1runner_1_1SessionWindow.html#ad9e36e53ce3c471e0b67ae4fab3b118c":[1,0,0,10,46,0],
-"structalgotradelib_1_1runner_1_1SessionWindow.html#ad9e36e53ce3c471e0b67ae4fab3b118c":[2,0,0,10,46,0],
-"structalgotradelib_1_1runner_1_1TargetPosition.html":[1,0,0,10,56],
-"structalgotradelib_1_1runner_1_1TargetPosition.html":[2,0,0,10,56],
-"structalgotradelib_1_1runner_1_1TargetPosition.html#a48b7235f4bfab5f2381f5d5f6f51ca62":[1,0,0,10,56,0],
-"structalgotradelib_1_1runner_1_1TargetPosition.html#a48b7235f4bfab5f2381f5d5f6f51ca62":[2,0,0,10,56,0],
-"structalgotradelib_1_1runner_1_1TargetPosition.html#aba87213d9d38df80a8acdc461fed9784":[1,0,0,10,56,2],
-"structalgotradelib_1_1runner_1_1TargetPosition.html#aba87213d9d38df80a8acdc461fed9784":[2,0,0,10,56,2],
-"structalgotradelib_1_1runner_1_1TargetPosition.html#ae565dabdeae9c37992ee6ae25c0693f6":[1,0,0,10,56,3],
-"structalgotradelib_1_1runner_1_1TargetPosition.html#ae565dabdeae9c37992ee6ae25c0693f6":[2,0,0,10,56,3]
+"structalgotradelib_1_1runner_1_1SessionWindow.html#ad9e36e53ce3c471e0b67ae4fab3b118c":[2,0,0,10,46,0]
 };

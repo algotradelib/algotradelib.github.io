@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"structalgotradelib_1_1DataOnlyTraits.html#a95e56dc58d052550b76587d1c181b979":[1,0,0,35,3],
+"structalgotradelib_1_1DataOnlyTraits.html#a95e56dc58d052550b76587d1c181b979":[2,0,0,35,3],
 "structalgotradelib_1_1DataOnlyTraits.html#a9e168ac1f0be1ef7a35be3361078aefe":[1,0,0,35,11],
 "structalgotradelib_1_1DataOnlyTraits.html#a9e168ac1f0be1ef7a35be3361078aefe":[2,0,0,35,11],
 "structalgotradelib_1_1DataOnlyTraits.html#aa5b97385739bbcfcb4d8f8d6e7457e54":[1,0,0,35,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "structalgotradelib_1_1OrderRequest.html#aed0f926c0b74aba2f47da7642efd2a8b":[1,0,0,52,1],
 "structalgotradelib_1_1OrderRequest.html#aed0f926c0b74aba2f47da7642efd2a8b":[2,0,0,52,1],
 "structalgotradelib_1_1OrderRequest.html#aef21a14fd6532214163cbbad75f4c3a5":[1,0,0,52,8],
-"structalgotradelib_1_1OrderRequest.html#aef21a14fd6532214163cbbad75f4c3a5":[2,0,0,52,8],
-"structalgotradelib_1_1OrderShape.html":[1,0,0,53],
-"structalgotradelib_1_1OrderShape.html":[2,0,0,53]
+"structalgotradelib_1_1OrderRequest.html#aef21a14fd6532214163cbbad75f4c3a5":[2,0,0,52,8]
 };

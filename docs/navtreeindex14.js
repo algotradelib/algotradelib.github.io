@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#ab7308ed15eb49c7c55a6e8c8b97825c5":[1,0,0,27,9],
+"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#ab7308ed15eb49c7c55a6e8c8b97825c5":[2,0,0,27,9],
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#ab985c985302d7fc6b17f69425042e4e0":[1,0,0,27,27],
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#ab985c985302d7fc6b17f69425042e4e0":[2,0,0,27,27],
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#ac13d24864999f7e7c75f4f5f6a25fb45":[1,0,0,27,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "structalgotradelib_1_1DataOnlyTraits.html#a8dbb285cf0a4ec8132294bff000ba249":[1,0,0,35,2],
 "structalgotradelib_1_1DataOnlyTraits.html#a8dbb285cf0a4ec8132294bff000ba249":[2,0,0,35,2],
 "structalgotradelib_1_1DataOnlyTraits.html#a905285c59ee72f045b23abc37faff57b":[1,0,0,35,18],
-"structalgotradelib_1_1DataOnlyTraits.html#a905285c59ee72f045b23abc37faff57b":[2,0,0,35,18],
-"structalgotradelib_1_1DataOnlyTraits.html#a95e56dc58d052550b76587d1c181b979":[1,0,0,35,3],
-"structalgotradelib_1_1DataOnlyTraits.html#a95e56dc58d052550b76587d1c181b979":[2,0,0,35,3]
+"structalgotradelib_1_1DataOnlyTraits.html#a905285c59ee72f045b23abc37faff57b":[2,0,0,35,18]
 };

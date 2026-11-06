@@ -1,5 +1,13 @@
 var NAVTREEINDEX19 =
 {
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ae40058d6aa110aa6c5479c972c39619e":[1,0,0,5,7,14],
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ae40058d6aa110aa6c5479c972c39619e":[2,0,0,5,7,14],
+"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html":[1,0,0,5,8],
+"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html":[2,0,0,5,8],
+"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a0463d34f377d00757199520739b4f909":[1,0,0,5,8,2],
+"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a0463d34f377d00757199520739b4f909":[2,0,0,5,8,2],
+"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a3df5e2f7f7a654fc35ffe70b13de7a8e":[1,0,0,5,8,7],
+"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a3df5e2f7f7a654fc35ffe70b13de7a8e":[2,0,0,5,8,7],
 "structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a8ce6636e3b989ba4fbe441941ef8d05a":[1,0,0,5,8,5],
 "structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a8ce6636e3b989ba4fbe441941ef8d05a":[2,0,0,5,8,5],
 "structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a9a8c7d09b8e7d0c291c123fc155150a6":[1,0,0,5,8,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX19 =
 "structalgotradelib_1_1runner_1_1BarEvent.html#af03bc137e005425b14046a6ac32b705b":[1,0,0,10,0,0],
 "structalgotradelib_1_1runner_1_1BarEvent.html#af03bc137e005425b14046a6ac32b705b":[2,0,0,10,0,0],
 "structalgotradelib_1_1runner_1_1BarEvent.html#afa2d0aab90ed0ee068ebfda0c4023f2d":[1,0,0,10,0,2],
-"structalgotradelib_1_1runner_1_1BarEvent.html#afa2d0aab90ed0ee068ebfda0c4023f2d":[2,0,0,10,0,2],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html":[1,0,0,10,1],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html":[2,0,0,10,1],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a0ce97b99b5a8b5f5bd46a5479575d6ee":[1,0,0,10,1,3],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a0ce97b99b5a8b5f5bd46a5479575d6ee":[2,0,0,10,1,3],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a1dc73a785c2df551358730d915903c61":[1,0,0,10,1,2],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a1dc73a785c2df551358730d915903c61":[2,0,0,10,1,2],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a5a7557db574417ad36606b9f017332fc":[1,0,0,10,1,0],
-"structalgotradelib_1_1runner_1_1BrokerRefusal.html#a5a7557db574417ad36606b9f017332fc":[2,0,0,10,1,0]
+"structalgotradelib_1_1runner_1_1BarEvent.html#afa2d0aab90ed0ee068ebfda0c4023f2d":[2,0,0,10,0,2]
 };

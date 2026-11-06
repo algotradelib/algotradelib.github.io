@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"classalgotradelib_1_1runner_1_1Context.html#a38a964fd3f30ab0c2280d800e2961f63":[1,0,0,10,5,10],
+"classalgotradelib_1_1runner_1_1Context.html#a38a964fd3f30ab0c2280d800e2961f63":[2,0,0,10,5,10],
 "classalgotradelib_1_1runner_1_1Context.html#a409ea09c485666df3f5b01b56b44a59d":[1,0,0,10,5,12],
 "classalgotradelib_1_1runner_1_1Context.html#a409ea09c485666df3f5b01b56b44a59d":[2,0,0,10,5,12],
 "classalgotradelib_1_1runner_1_1Context.html#a4e8a6ae3d77ca26ae5ac9096eb04ede5":[1,0,0,10,5,26],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "classalgotradelib_1_1runner_1_1PollingLoop.html#a03e7569b99c8d42d920a912cfdf4ba11":[1,0,0,10,29,16],
 "classalgotradelib_1_1runner_1_1PollingLoop.html#a03e7569b99c8d42d920a912cfdf4ba11":[2,0,0,10,29,16],
 "classalgotradelib_1_1runner_1_1PollingLoop.html#a262f793a8e87a7b81e5c28563b9e7483":[1,0,0,10,29,14],
-"classalgotradelib_1_1runner_1_1PollingLoop.html#a262f793a8e87a7b81e5c28563b9e7483":[2,0,0,10,29,14],
-"classalgotradelib_1_1runner_1_1PollingLoop.html#a2ad123ef3aa0c0bbf1346446ad2b1801":[1,0,0,10,29,13],
-"classalgotradelib_1_1runner_1_1PollingLoop.html#a2ad123ef3aa0c0bbf1346446ad2b1801":[2,0,0,10,29,13]
+"classalgotradelib_1_1runner_1_1PollingLoop.html#a262f793a8e87a7b81e5c28563b9e7483":[2,0,0,10,29,14]
 };

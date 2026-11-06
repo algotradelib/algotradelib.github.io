@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"recovering-after-a-crash.html#autotoc_md81":[0,19,2,0],
+"recovering-after-a-crash.html#autotoc_md82":[0,19,3],
 "recovering-after-a-crash.html#autotoc_md83":[0,19,4],
 "recovering-after-a-crash.html#autotoc_md84":[0,19,5],
 "recovering-after-a-crash.html#autotoc_md85":[0,19,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af9769089c50bb49925d05d090fe42f8d":[1,0,0,23,21],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af9769089c50bb49925d05d090fe42f8d":[2,0,0,23,21],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html":[1,0,0,24],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html":[2,0,0,24],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a0136a522bc822f7732f87881a53bc447":[1,0,0,24,6],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a0136a522bc822f7732f87881a53bc447":[2,0,0,24,6]
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html":[2,0,0,24]
 };
