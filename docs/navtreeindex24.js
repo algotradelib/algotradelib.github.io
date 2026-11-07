@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#a27489b7d6c8b4c56aac4cae3e8a4c97f":[1,0,0,11,1,1,1],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#a27489b7d6c8b4c56aac4cae3e8a4c97f":[2,0,0,11,0,1,1],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#aa6f334b6eef16e7a718a6943108f2623":[1,0,0,11,1,1,0],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#aa6f334b6eef16e7a718a6943108f2623":[2,0,0,11,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "transport-and-pacing.html#autotoc_md112":[0,22,3],
 "transport-and-pacing.html#autotoc_md113":[0,22,4],
 "transport-and-pacing.html#autotoc_md114":[0,22,5],
-"types_8hpp_source.html":[3,0,0,0,3,9],
-"version_8hpp.html":[3,0,0,0,9]
+"types_8hpp_source.html":[3,0,0,0,3,9]
 };

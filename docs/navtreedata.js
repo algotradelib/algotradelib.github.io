@@ -73,8 +73,8 @@ var NAVTREEINDEX =
 "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a01c395cc891b1f7eb9aa0ea0c99cbdb6",
 "functions_vars_e.html",
 "namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020aa0494c90519e4a08049470357751e736",
-"namespacealgotradelib_1_1runner.html#a9dfe68f9c83a46cc33314d35500852a4",
-"reconcile__orders_8hpp_source.html",
+"namespacealgotradelib_1_1runner.html#a9d22db34a115b553255f3b52d574d92e",
+"reconcile_8hpp_source.html",
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af6c796d9236352ea415c6d3d1ae0247a",
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa63e6341ad927eaad2dbbe73198c1507",
 "structalgotradelib_1_1DataOnlyTraits.html#a89a4ca814e3e57c1957c5447f48ba58c",
@@ -87,7 +87,7 @@ var NAVTREEINDEX =
 "structalgotradelib_1_1runner_1_1SessionWindow.html#abc194e6bc9f52c7396d325326a2022c9",
 "structalgotradelib_1_1strategy_1_1NoCaps.html#abd6b977be2b87e0ad2c5f3aed841123a",
 "structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#a27489b7d6c8b4c56aac4cae3e8a4c97f",
-"version_8hpp.html#a279d98738ae688bfcf5f310842a82800"
+"version_8hpp.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

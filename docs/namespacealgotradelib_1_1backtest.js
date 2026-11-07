@@ -37,7 +37,8 @@ var namespacealgotradelib_1_1backtest =
     ] ],
     [ "MarketPrice", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4", [
       [ "NEXT_OPEN", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4acafe4ae5ec9ffd57f87fabc9c260be38", null ],
-      [ "DECISION_CLOSE", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a5f9f9f91da30681402179bb813499499", null ]
+      [ "DECISION_CLOSE", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a5f9f9f91da30681402179bb813499499", null ],
+      [ "NEXT_CLOSE", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a41fe2387a3f47cccd099d6b01e5c434f", null ]
     ] ],
     [ "commission_model_from", "namespacealgotradelib_1_1backtest.html#a163a37b1cd1c3f7fbc9f2e50d654e5ab", null ],
     [ "interval_duration", "namespacealgotradelib_1_1backtest.html#acd73673d1e6bfa8aedfc949137724705", null ],

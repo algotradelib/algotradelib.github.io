@@ -6,6 +6,7 @@ var NAVTREEINDEX10 =
 "namespacealgotradelib_1_1backtest.html#a0de154050b10e8fd5f50f0649e4d12f1":[1,0,0,1,21],
 "namespacealgotradelib_1_1backtest.html#a163a37b1cd1c3f7fbc9f2e50d654e5ab":[1,0,0,1,26],
 "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4":[1,0,0,1,25],
+"namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a41fe2387a3f47cccd099d6b01e5c434f":[1,0,0,1,25,2],
 "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a5f9f9f91da30681402179bb813499499":[1,0,0,1,25,1],
 "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4acafe4ae5ec9ffd57f87fabc9c260be38":[1,0,0,1,25,0],
 "namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762":[1,0,0,1,30],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56ea9cc8ad3d99798c6726d4af0bd14e49d2":[1,0,0,10,64,2],
 "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eaa806f1d2c42338ef5fa6497b66153e79":[1,0,0,10,64,1],
 "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33":[1,0,0,10,64,6],
-"namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2":[1,0,0,10,64,0],
-"namespacealgotradelib_1_1runner.html#a9d22db34a115b553255f3b52d574d92e":[1,0,0,10,160]
+"namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2":[1,0,0,10,64,0]
 };

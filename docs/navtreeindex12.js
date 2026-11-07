@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"reconcile_8hpp_source.html":[3,0,0,0,8,5],
 "reconcile__orders_8hpp_source.html":[3,0,0,0,7,8],
 "recovering-after-a-crash.html":[0,19],
 "recovering-after-a-crash.html#autotoc_md78":[0,19,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#aee101f43ef7893ea7090937841173177":[1,0,0,23,17],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#aee101f43ef7893ea7090937841173177":[2,0,0,23,17],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af11997bcc8377a7ca26ba6d9540a6f1e":[1,0,0,23,14],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af11997bcc8377a7ca26ba6d9540a6f1e":[2,0,0,23,14],
-"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af6c796d9236352ea415c6d3d1ae0247a":[1,0,0,23,6]
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af11997bcc8377a7ca26ba6d9540a6f1e":[2,0,0,23,14]
 };

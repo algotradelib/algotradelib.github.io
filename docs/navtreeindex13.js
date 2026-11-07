@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af6c796d9236352ea415c6d3d1ae0247a":[1,0,0,23,6],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af6c796d9236352ea415c6d3d1ae0247a":[2,0,0,23,6],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af9769089c50bb49925d05d090fe42f8d":[1,0,0,23,21],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af9769089c50bb49925d05d090fe42f8d":[2,0,0,23,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#a9e7fa9c84c8854f03917ef477d405c4e":[1,0,0,27,21],
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#a9e7fa9c84c8854f03917ef477d405c4e":[2,0,0,27,21],
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa49535919329d93930eb397e3a17337b":[1,0,0,27,2],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa49535919329d93930eb397e3a17337b":[2,0,0,27,2],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa63e6341ad927eaad2dbbe73198c1507":[1,0,0,27,49]
+"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa49535919329d93930eb397e3a17337b":[2,0,0,27,2]
 };

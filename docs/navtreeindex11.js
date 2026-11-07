@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"namespacealgotradelib_1_1runner.html#a9d22db34a115b553255f3b52d574d92e":[1,0,0,10,160],
 "namespacealgotradelib_1_1runner.html#a9dfe68f9c83a46cc33314d35500852a4":[1,0,0,10,151],
 "namespacealgotradelib_1_1runner.html#a9e12231f9fce1400dd2554f9dee1b669":[1,0,0,10,82],
 "namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677":[1,0,0,10,72],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "reading-a-backtest.html#autotoc_md75":[0,17,12],
 "reading-a-backtest.html#autotoc_md76":[0,17,13],
 "reading-a-backtest.html#autotoc_md77":[0,17,14],
-"reconcile_8hpp.html":[3,0,0,0,8,5],
-"reconcile_8hpp_source.html":[3,0,0,0,8,5]
+"reconcile_8hpp.html":[3,0,0,0,8,5]
 };
