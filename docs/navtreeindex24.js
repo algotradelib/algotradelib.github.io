@@ -1,5 +1,10 @@
 var NAVTREEINDEX24 =
 {
+"structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#a27489b7d6c8b4c56aac4cae3e8a4c97f":[2,0,0,11,0,1,1],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#aa6f334b6eef16e7a718a6943108f2623":[1,0,0,11,1,1,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html#aa6f334b6eef16e7a718a6943108f2623":[2,0,0,11,0,1,0],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout.html":[1,0,0,11,1,2],
+"structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout.html":[2,0,0,11,0,2],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout.html#a19eb31a39d482ae2a44809ffe5c34c10":[1,0,0,11,1,2,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout.html#a19eb31a39d482ae2a44809ffe5c34c10":[2,0,0,11,0,2,3],
 "structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout.html#adc4300840f76aa14ca8c6a4263ad86e5":[1,0,0,11,1,2,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX24 =
 "transport-and-pacing.html#autotoc_md113":[0,22,4],
 "transport-and-pacing.html#autotoc_md114":[0,22,5],
 "types_8hpp_source.html":[3,0,0,0,3,9],
-"version_8hpp.html":[3,0,0,0,9],
-"version_8hpp.html#a279d98738ae688bfcf5f310842a82800":[3,0,0,0,9,4],
-"version_8hpp.html#a287993b102002df56e7b112e2b10bfa4":[3,0,0,0,9,7],
-"version_8hpp.html#a31055ddcc237d737db799b887ac817eb":[3,0,0,0,9,0],
-"version_8hpp.html#a4614246fb7020d7f342adfae73b371db":[3,0,0,0,9,2],
-"version_8hpp.html#a53668e120f4474c267de16caf6da4c89":[3,0,0,0,9,5]
+"version_8hpp.html":[3,0,0,0,9]
 };

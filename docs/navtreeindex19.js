@@ -1,5 +1,10 @@
 var NAVTREEINDEX19 =
 {
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ad1295af448eb345a513e9409a2fb6d45":[2,0,0,5,7,4],
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adbb9e353eee32010b21ff948a9642f77":[1,0,0,5,7,0],
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adbb9e353eee32010b21ff948a9642f77":[2,0,0,5,7,0],
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adcd414a9457fa049e681e6f605a34c40":[1,0,0,5,7,6],
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adcd414a9457fa049e681e6f605a34c40":[2,0,0,5,7,6],
 "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ae40058d6aa110aa6c5479c972c39619e":[1,0,0,5,7,14],
 "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ae40058d6aa110aa6c5479c972c39619e":[2,0,0,5,7,14],
 "structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html":[1,0,0,5,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX19 =
 "structalgotradelib_1_1runner_1_1BarEvent.html#a7617741f66b40d602cf16d29754d4b8e":[2,0,0,10,0,4],
 "structalgotradelib_1_1runner_1_1BarEvent.html#aa820bb24c14498e7467ccbb11cc9b7f6":[1,0,0,10,0,3],
 "structalgotradelib_1_1runner_1_1BarEvent.html#aa820bb24c14498e7467ccbb11cc9b7f6":[2,0,0,10,0,3],
-"structalgotradelib_1_1runner_1_1BarEvent.html#ad53ca5c9a6fee8f2a170f11df4a03435":[1,0,0,10,0,1],
-"structalgotradelib_1_1runner_1_1BarEvent.html#ad53ca5c9a6fee8f2a170f11df4a03435":[2,0,0,10,0,1],
-"structalgotradelib_1_1runner_1_1BarEvent.html#af03bc137e005425b14046a6ac32b705b":[1,0,0,10,0,0],
-"structalgotradelib_1_1runner_1_1BarEvent.html#af03bc137e005425b14046a6ac32b705b":[2,0,0,10,0,0],
-"structalgotradelib_1_1runner_1_1BarEvent.html#afa2d0aab90ed0ee068ebfda0c4023f2d":[1,0,0,10,0,2],
-"structalgotradelib_1_1runner_1_1BarEvent.html#afa2d0aab90ed0ee068ebfda0c4023f2d":[2,0,0,10,0,2]
+"structalgotradelib_1_1runner_1_1BarEvent.html#ad53ca5c9a6fee8f2a170f11df4a03435":[1,0,0,10,0,1]
 };

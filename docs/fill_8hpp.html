@@ -171,6 +171,13 @@ Namespaces</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a0de154050b10e8fd5f50f0649e4d12f1" id="r_a0de154050b10e8fd5f50f0649e4d12f1"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html#a0de154050b10e8fd5f50f0649e4d12f1">algotradelib::backtest::MarketPriceFunction</a> = std::function&lt;std::optional&lt;<a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a>&gt;(const <a class="el" href="structalgotradelib_1_1backtest_1_1MarketPriceInput.html">MarketPriceInput</a>&amp;)&gt;</td></tr>
 <tr class="memdesc:a0de154050b10e8fd5f50f0649e4d12f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A market-price rule: the price a market order trades at against <span class="tt">next_</span>, before slippage, or nothing when it does not trade against that bar.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2c177881db0340a5861367236639ded4" id="r_a2c177881db0340a5861367236639ded4"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4">algotradelib::backtest::MarketPrice</a> { <a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4acafe4ae5ec9ffd57f87fabc9c260be38">algotradelib::backtest::NEXT_OPEN</a>
+, <a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a5f9f9f91da30681402179bb813499499">algotradelib::backtest::DECISION_CLOSE</a>
+ }</td></tr>
+<tr class="memdesc:a2c177881db0340a5861367236639ded4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A market-price rule the library ships; see <span class="tt">NextBarFillModel::with_market_price(MarketPrice)</span>.  <a href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The backtest fill model: whether a queued order trades against the next bar, and at what price and cost. </p>

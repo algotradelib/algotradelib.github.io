@@ -35,6 +35,10 @@ var namespacealgotradelib_1_1backtest =
       [ "AT_LIMIT", "namespacealgotradelib_1_1backtest.html#a6091b7a3a9ee16fea01f3e814e6ea581ab93271a28df58ecbefb6683e648225f0", null ],
       [ "AT_OPEN_IF_BETTER", "namespacealgotradelib_1_1backtest.html#a6091b7a3a9ee16fea01f3e814e6ea581a1e5b220a23cc0269942441fbf35b2eb6", null ]
     ] ],
+    [ "MarketPrice", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4", [
+      [ "NEXT_OPEN", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4acafe4ae5ec9ffd57f87fabc9c260be38", null ],
+      [ "DECISION_CLOSE", "namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a5f9f9f91da30681402179bb813499499", null ]
+    ] ],
     [ "commission_model_from", "namespacealgotradelib_1_1backtest.html#a163a37b1cd1c3f7fbc9f2e50d654e5ab", null ],
     [ "interval_duration", "namespacealgotradelib_1_1backtest.html#acd73673d1e6bfa8aedfc949137724705", null ],
     [ "limit_fill_price_name", "namespacealgotradelib_1_1backtest.html#ab7b7b79afcb9e4c14e889430b9fb01ce", null ],

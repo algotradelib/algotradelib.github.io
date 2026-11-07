@@ -1,5 +1,10 @@
 var NAVTREEINDEX16 =
 {
+"structalgotradelib_1_1OrderRequest.html#abe90ef4813b7b68c880bdbfd9aa9aa23":[2,0,0,52,7],
+"structalgotradelib_1_1OrderRequest.html#aed0f926c0b74aba2f47da7642efd2a8b":[1,0,0,52,1],
+"structalgotradelib_1_1OrderRequest.html#aed0f926c0b74aba2f47da7642efd2a8b":[2,0,0,52,1],
+"structalgotradelib_1_1OrderRequest.html#aef21a14fd6532214163cbbad75f4c3a5":[1,0,0,52,8],
+"structalgotradelib_1_1OrderRequest.html#aef21a14fd6532214163cbbad75f4c3a5":[2,0,0,52,8],
 "structalgotradelib_1_1OrderShape.html":[1,0,0,53],
 "structalgotradelib_1_1OrderShape.html":[2,0,0,53],
 "structalgotradelib_1_1OrderShape.html#a05ca5273b0c2d57b2a741b6eff6f7fb1":[1,0,0,53,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX16 =
 "structalgotradelib_1_1backtest_1_1BacktestTag.html#a5bc2732472b17511c0ba296d3ec223ac":[2,0,0,1,2,0],
 "structalgotradelib_1_1backtest_1_1CommissionCharge.html":[1,0,0,1,3],
 "structalgotradelib_1_1backtest_1_1CommissionCharge.html":[2,0,0,1,3],
-"structalgotradelib_1_1backtest_1_1CommissionCharge.html#a154c67f57bb4185f66257fddaec7b4bf":[1,0,0,1,3,2],
-"structalgotradelib_1_1backtest_1_1CommissionCharge.html#a154c67f57bb4185f66257fddaec7b4bf":[2,0,0,1,3,2],
-"structalgotradelib_1_1backtest_1_1CommissionCharge.html#a16884869b88305ab3f6cf063c2535c8c":[1,0,0,1,3,1],
-"structalgotradelib_1_1backtest_1_1CommissionCharge.html#a16884869b88305ab3f6cf063c2535c8c":[2,0,0,1,3,1],
-"structalgotradelib_1_1backtest_1_1CommissionCharge.html#a2c6abf422d606ee7c8a6aaf81db4685b":[1,0,0,1,3,0],
-"structalgotradelib_1_1backtest_1_1CommissionCharge.html#a2c6abf422d606ee7c8a6aaf81db4685b":[2,0,0,1,3,0]
+"structalgotradelib_1_1backtest_1_1CommissionCharge.html#a154c67f57bb4185f66257fddaec7b4bf":[1,0,0,1,3,2]
 };

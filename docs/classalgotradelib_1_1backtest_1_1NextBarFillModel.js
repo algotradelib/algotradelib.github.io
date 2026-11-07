@@ -11,6 +11,7 @@ var classalgotradelib_1_1backtest_1_1NextBarFillModel =
     [ "rests_unfilled", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#ae149f9190db239ccd789a7f23bf68af7", null ],
     [ "sell_tax", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a6a80ebd2b6271b092c69192290920823", null ],
     [ "slippage", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#afe6184b725200162c30cbe7f0df6152f", null ],
+    [ "with_market_price", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#ae78931bfa164081591234af17c46c47b", null ],
     [ "with_market_price", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a5514231b59abdd570f7ebe1d6e8dd0f8", null ],
     [ "with_sell_tax", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a45e7927a04aa1f3d339af0535f0074bd", null ]
 ];

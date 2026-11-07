@@ -1,5 +1,10 @@
 var NAVTREEINDEX11 =
 {
+"namespacealgotradelib_1_1runner.html#a9dfe68f9c83a46cc33314d35500852a4":[1,0,0,10,151],
+"namespacealgotradelib_1_1runner.html#a9e12231f9fce1400dd2554f9dee1b669":[1,0,0,10,82],
+"namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677":[1,0,0,10,72],
+"namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677a67fe3c3b350234a9755db0deddd116cf":[1,0,0,10,72,2],
+"namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677ad46cbcb197473899801adc52f1d94deb":[1,0,0,10,72,1],
 "namespacealgotradelib_1_1runner.html#a9e46bc656c462267adcfa957a041d677adc48e73143b0e2d385a4bba45af2fc0a":[1,0,0,10,72,0],
 "namespacealgotradelib_1_1runner.html#aa394dc4435e3533c5fd6305c2fb90255":[1,0,0,10,110],
 "namespacealgotradelib_1_1runner.html#aa40374a73ffe35df0d567e5d60776b2c":[1,0,0,10,153],
@@ -244,10 +249,5 @@ var NAVTREEINDEX11 =
 "reading-a-backtest.html#autotoc_md76":[0,17,13],
 "reading-a-backtest.html#autotoc_md77":[0,17,14],
 "reconcile_8hpp.html":[3,0,0,0,8,5],
-"reconcile_8hpp_source.html":[3,0,0,0,8,5],
-"reconcile__orders_8hpp_source.html":[3,0,0,0,7,8],
-"recovering-after-a-crash.html":[0,19],
-"recovering-after-a-crash.html#autotoc_md78":[0,19,0],
-"recovering-after-a-crash.html#autotoc_md79":[0,19,1],
-"recovering-after-a-crash.html#autotoc_md80":[0,19,2]
+"reconcile_8hpp_source.html":[3,0,0,0,8,5]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX13 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af6c796d9236352ea415c6d3d1ae0247a":[2,0,0,23,6],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af9769089c50bb49925d05d090fe42f8d":[1,0,0,23,21],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html#af9769089c50bb49925d05d090fe42f8d":[2,0,0,23,21],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html":[1,0,0,24],
+"structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html":[2,0,0,24],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a0136a522bc822f7732f87881a53bc447":[1,0,0,24,6],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a0136a522bc822f7732f87881a53bc447":[2,0,0,24,6],
 "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html#a03f6a53a7c440516c2c33feb806a89a4":[1,0,0,24,13],
@@ -244,10 +249,5 @@ var NAVTREEINDEX13 =
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#a9e7fa9c84c8854f03917ef477d405c4e":[2,0,0,27,21],
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa49535919329d93930eb397e3a17337b":[1,0,0,27,2],
 "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa49535919329d93930eb397e3a17337b":[2,0,0,27,2],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa63e6341ad927eaad2dbbe73198c1507":[1,0,0,27,49],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa63e6341ad927eaad2dbbe73198c1507":[2,0,0,27,49],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aaa05d1de4a3f965048f432ac7622da70":[1,0,0,27,37],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aaa05d1de4a3f965048f432ac7622da70":[2,0,0,27,37],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#ab105eb92fd5725afa235d85666a5cf93":[1,0,0,27,39],
-"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#ab105eb92fd5725afa235d85666a5cf93":[2,0,0,27,39]
+"structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html#aa63e6341ad927eaad2dbbe73198c1507":[1,0,0,27,49]
 };
