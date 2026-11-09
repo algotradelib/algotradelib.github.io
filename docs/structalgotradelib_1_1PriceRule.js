@@ -6,7 +6,6 @@ var structalgotradelib_1_1PriceRule =
       [ "UNKNOWN", "structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62a696b031073e74bf2cb98e5ef201d4aa3", null ]
     ] ],
     [ "grid_known", "structalgotradelib_1_1PriceRule.html#a9ddccf645dea179b99c81e09cf9ab426", null ],
-    [ "krx_equity", "structalgotradelib_1_1PriceRule.html#a5a791a8c9e6878491beb87472cb42597", null ],
     [ "on_tick", "structalgotradelib_1_1PriceRule.html#a4368b3055fec11581766b2b3a070e1cb", null ],
     [ "round_to_tick", "structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02", null ],
     [ "tick_at", "structalgotradelib_1_1PriceRule.html#a00b46c7ee4959c8a48b455b6c988f810", null ],

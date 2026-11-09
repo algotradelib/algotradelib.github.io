@@ -29,5 +29,6 @@ var searchData=
   ['from_5fjson_5ftext_26',['from_json_text',['../structalgotradelib_1_1kis_1_1KisAccount.html#a5014a3d99ed687652cf73aafa31e232d',1,'algotradelib::kis::KisAccount::from_json_text()'],['../classalgotradelib_1_1network_1_1ClientCredentials.html#a79ea200694fb537daf33a9b396dd7432',1,'algotradelib::network::ClientCredentials::from_json_text()']]],
   ['from_5fjson_5ftext_5fimpl_27',['from_json_text_impl',['../structalgotradelib_1_1kis_1_1KisConfig.html#a3629bc62051b216a9cde8f6a229fd53b',1,'algotradelib::kis::KisConfig::from_json_text_impl()'],['../structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ad1295af448eb345a513e9409a2fb6d45',1,'algotradelib::kiwoom::KiwoomConfig::from_json_text_impl()'],['../structalgotradelib_1_1tossinvest_1_1TossConfig.html#a2dd37d5980164aed6135b3cb8b64df1b',1,'algotradelib::tossinvest::TossConfig::from_json_text_impl()']]],
   ['front_28',['front',['../classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html#ad253f72141133e89f8c850c27c68c060',1,'algotradelib::backtest::QueueingExecutor::Queue']]],
-  ['full_29',['full',['../classalgotradelib_1_1analytics_1_1SeriesBuffer.html#a0059a88206122386164d6d3269af743d',1,'algotradelib::analytics::SeriesBuffer']]]
+  ['full_29',['full',['../classalgotradelib_1_1analytics_1_1SeriesBuffer.html#a0059a88206122386164d6d3269af743d',1,'algotradelib::analytics::SeriesBuffer']]],
+  ['fund_5fprice_5frule_30',['fund_price_rule',['../namespacealgotradelib_1_1krx.html#ab4deaa6f17b8d801761be2c48cecd1cd',1,'algotradelib::krx']]]
 ];

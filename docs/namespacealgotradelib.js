@@ -6,6 +6,11 @@ var namespacealgotradelib =
     [ "data_only", "namespacealgotradelib_1_1data__only.html", "namespacealgotradelib_1_1data__only" ],
     [ "kis", "namespacealgotradelib_1_1kis.html", "namespacealgotradelib_1_1kis" ],
     [ "kiwoom", "namespacealgotradelib_1_1kiwoom.html", "namespacealgotradelib_1_1kiwoom" ],
+    [ "krx", "namespacealgotradelib_1_1krx.html", [
+      [ "equity_price_rule", "namespacealgotradelib_1_1krx.html#acba6ce332b84338604c007dc68033c12", null ],
+      [ "fund_price_rule", "namespacealgotradelib_1_1krx.html#ab4deaa6f17b8d801761be2c48cecd1cd", null ],
+      [ "price_rule_for", "namespacealgotradelib_1_1krx.html#a22f73dc909f7696fbf753e596c27d25f", null ]
+    ] ],
     [ "live", "namespacealgotradelib_1_1live.html", "namespacealgotradelib_1_1live" ],
     [ "math", "namespacealgotradelib_1_1math.html", "namespacealgotradelib_1_1math" ],
     [ "mock", "namespacealgotradelib_1_1mock.html", "namespacealgotradelib_1_1mock" ],
@@ -178,7 +183,6 @@ var namespacealgotradelib =
     [ "order_depth", "namespacealgotradelib.html#afc31101e8069a02ac84ee2fe155767d0", null ],
     [ "order_status_cancel_pending", "namespacealgotradelib.html#a60f5c9615a6d0424898778bbec9bedfc", null ],
     [ "parse_iso8601_timestamp", "namespacealgotradelib.html#a2f95c828e6b0e38b35ee39ac792b5978", null ],
-    [ "price_rule_for", "namespacealgotradelib.html#a09ce0eadd0acd91e2651e07c2ea6fdfb", null ],
     [ "reads_every_capability", "namespacealgotradelib.html#a2011ff5e27c040891cc95094583c9f6d", null ],
     [ "replace_with", "namespacealgotradelib.html#abbbdfc8d57f6d397cba4eb5fd4c46490", null ],
     [ "reprice", "namespacealgotradelib.html#a24c87efb9eb718374da8177f305f000e", null ],

@@ -115,7 +115,7 @@ var searchData=
   ['price_5fonly_112',['PRICE_ONLY',['../namespacealgotradelib_1_1strategy.html#a869805317ffa009bf5bf571f4b0c896baae76c529742b61999b09644cd765d335',1,'algotradelib::strategy']]],
   ['price_5frounded_5f_113',['price_rounded_',['../structalgotradelib_1_1strategy_1_1PlannedOrder.html#aaccf5bb59750c712fcd621bd3bd744b4',1,'algotradelib::strategy::PlannedOrder']]],
   ['price_5frule_5f_114',['price_rule_',['../structalgotradelib_1_1Instrument.html#a7720684e5a4d32e025f3e71c632669ab',1,'algotradelib::Instrument']]],
-  ['price_5frule_5ffor_115',['price_rule_for',['../namespacealgotradelib.html#a09ce0eadd0acd91e2651e07c2ea6fdfb',1,'algotradelib']]],
+  ['price_5frule_5ffor_115',['price_rule_for',['../namespacealgotradelib_1_1krx.html#a22f73dc909f7696fbf753e596c27d25f',1,'algotradelib::krx']]],
   ['price_5fwould_5fhave_5fbeen_5fclamped_5f_116',['price_would_have_been_clamped_',['../structalgotradelib_1_1strategy_1_1PlannedOrder.html#a8ec70c7148086fbbcb824fa27c22c92d',1,'algotradelib::strategy::PlannedOrder']]],
   ['priced_5fby_5frule_5f_117',['priced_by_rule_',['../structalgotradelib_1_1backtest_1_1FillDecision.html#aba1ec595c9b223097b8779c2598c6364',1,'algotradelib::backtest::FillDecision']]],
   ['pricelimits_118',['PriceLimits',['../structalgotradelib_1_1PriceLimits.html',1,'algotradelib']]],

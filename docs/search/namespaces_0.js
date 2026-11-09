@@ -7,13 +7,14 @@ var searchData=
   ['algotradelib_3a_3adata_5fonly_4',['data_only',['../namespacealgotradelib_1_1data__only.html',1,'algotradelib']]],
   ['algotradelib_3a_3akis_5',['kis',['../namespacealgotradelib_1_1kis.html',1,'algotradelib']]],
   ['algotradelib_3a_3akiwoom_6',['kiwoom',['../namespacealgotradelib_1_1kiwoom.html',1,'algotradelib']]],
-  ['algotradelib_3a_3alive_7',['live',['../namespacealgotradelib_1_1live.html',1,'algotradelib']]],
-  ['algotradelib_3a_3amath_8',['math',['../namespacealgotradelib_1_1math.html',1,'algotradelib']]],
-  ['algotradelib_3a_3amock_9',['mock',['../namespacealgotradelib_1_1mock.html',1,'algotradelib']]],
-  ['algotradelib_3a_3anetwork_10',['network',['../namespacealgotradelib_1_1network.html',1,'algotradelib']]],
-  ['algotradelib_3a_3arunner_11',['runner',['../namespacealgotradelib_1_1runner.html',1,'algotradelib']]],
-  ['algotradelib_3a_3astrategy_12',['strategy',['../namespacealgotradelib_1_1strategy.html',1,'algotradelib']]],
-  ['algotradelib_3a_3astrategy_3a_3adispatch_13',['dispatch',['../namespacealgotradelib_1_1strategy_1_1dispatch.html',1,'algotradelib::strategy']]],
-  ['algotradelib_3a_3astrategy_3a_3avanilla_14',['vanilla',['../namespacealgotradelib_1_1strategy_1_1vanilla.html',1,'algotradelib::strategy']]],
-  ['algotradelib_3a_3atossinvest_15',['tossinvest',['../namespacealgotradelib_1_1tossinvest.html',1,'algotradelib']]]
+  ['algotradelib_3a_3akrx_7',['krx',['../namespacealgotradelib_1_1krx.html',1,'algotradelib']]],
+  ['algotradelib_3a_3alive_8',['live',['../namespacealgotradelib_1_1live.html',1,'algotradelib']]],
+  ['algotradelib_3a_3amath_9',['math',['../namespacealgotradelib_1_1math.html',1,'algotradelib']]],
+  ['algotradelib_3a_3amock_10',['mock',['../namespacealgotradelib_1_1mock.html',1,'algotradelib']]],
+  ['algotradelib_3a_3anetwork_11',['network',['../namespacealgotradelib_1_1network.html',1,'algotradelib']]],
+  ['algotradelib_3a_3arunner_12',['runner',['../namespacealgotradelib_1_1runner.html',1,'algotradelib']]],
+  ['algotradelib_3a_3astrategy_13',['strategy',['../namespacealgotradelib_1_1strategy.html',1,'algotradelib']]],
+  ['algotradelib_3a_3astrategy_3a_3adispatch_14',['dispatch',['../namespacealgotradelib_1_1strategy_1_1dispatch.html',1,'algotradelib::strategy']]],
+  ['algotradelib_3a_3astrategy_3a_3avanilla_15',['vanilla',['../namespacealgotradelib_1_1strategy_1_1vanilla.html',1,'algotradelib::strategy']]],
+  ['algotradelib_3a_3atossinvest_16',['tossinvest',['../namespacealgotradelib_1_1tossinvest.html',1,'algotradelib']]]
 ];

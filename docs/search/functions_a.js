@@ -23,6 +23,5 @@ var searchData=
   ['kiwoomblockingclient_20',['KiwoomBlockingClient',['../classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#ab3775b99b9a783823a0b35b695146840',1,'algotradelib::kiwoom::KiwoomBlockingClient']]],
   ['kiwoomclient_21',['KiwoomClient',['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#ae181a62bf65e937ea88755bad29ffea6',1,'algotradelib::kiwoom::KiwoomClient']]],
   ['krw_22',['krw',['../classalgotradelib_1_1Currency.html#ab039d37b0dcdd3a33cc621b86fe98600',1,'algotradelib::Currency']]],
-  ['krx_23',['krx',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::strategy::SessionWindow::krx()'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::runner::SessionWindow::krx()']]],
-  ['krx_5fequity_24',['krx_equity',['../structalgotradelib_1_1PriceRule.html#a5a791a8c9e6878491beb87472cb42597',1,'algotradelib::PriceRule']]]
+  ['krx_23',['krx',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::strategy::SessionWindow::krx()'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::runner::SessionWindow::krx()']]]
 ];

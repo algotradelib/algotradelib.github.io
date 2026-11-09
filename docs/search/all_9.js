@@ -76,5 +76,6 @@ var searchData=
   ['from_5funreadable_5f_73',['from_unreadable_',['../structalgotradelib_1_1CommissionRate.html#af32050754d718ecced6f6717ab06d1f2',1,'algotradelib::CommissionRate']]],
   ['front_74',['front',['../classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html#ad253f72141133e89f8c850c27c68c060',1,'algotradelib::backtest::QueueingExecutor::Queue']]],
   ['full_75',['full',['../classalgotradelib_1_1analytics_1_1SeriesBuffer.html#a0059a88206122386164d6d3269af743d',1,'algotradelib::analytics::SeriesBuffer']]],
-  ['fullcontext_76',['FullContext',['../namespacealgotradelib_1_1strategy.html#ab8a8234520851cbeb8c4230cb038ec94',1,'algotradelib::strategy']]]
+  ['fullcontext_76',['FullContext',['../namespacealgotradelib_1_1strategy.html#ab8a8234520851cbeb8c4230cb038ec94',1,'algotradelib::strategy']]],
+  ['fund_5fprice_5frule_77',['fund_price_rule',['../namespacealgotradelib_1_1krx.html#ab4deaa6f17b8d801761be2c48cecd1cd',1,'algotradelib::krx']]]
 ];

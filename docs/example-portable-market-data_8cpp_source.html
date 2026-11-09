@@ -304,134 +304,133 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('example-portab
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>      <span class="comment">// A computed price has to sit on the exchange&#39;s grid, and the grid is the</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      <span class="comment">// library&#39;s own because no broker publishes one.</span></div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> mid = book.value().mid()) {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="comment">// The grid comes from the instrument, because it depends on what the</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="comment">// instrument is: KRX prices funds and notes on a ladder this library does not</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="comment">// carry, and those refuse to round rather than rounding onto the wrong one.</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keyword">const</span> <span class="keyword">auto</span> rule = reference_rule;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keyword">const</span> <span class="keyword">auto</span> buy = rule.<a class="code hl_function" href="structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02">round_to_tick</a>(*mid, OrderSide::BUY);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        std::cout</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          &lt;&lt; <span class="stringliteral">&quot;  a buy at the midpoint would rest at &quot;</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>          &lt;&lt; (buy ? buy-&gt;str() : std::string(<span class="stringliteral">&quot;no grid known for this instrument&quot;</span>)) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      print_error(<span class="stringliteral">&quot;order book&quot;</span>, book.error());</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  }</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_price_limits) {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> limits = session.price_limits(subject)) {</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      print_price_limits(limits.value());</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      print_error(<span class="stringliteral">&quot;price bounds&quot;</span>, limits.error());</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  }</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_trade_prints) {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> prints = session.trades(subject, 5)) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;recent executions: &quot;</span> &lt;&lt; prints.value().size() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; print : prints.value()) {</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; print.price_.str() &lt;&lt; <span class="stringliteral">&quot; x &quot;</span> &lt;&lt; print.quantity_.str() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      }</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      print_error(<span class="stringliteral">&quot;recent executions&quot;</span>, prints.error());</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_batch_prices) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="comment">// One request for several instruments, where the broker offers it. Looping</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="comment">// single quotes instead would spend several times the request budget.</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> quotes = session.prices({subject})) {</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;batch quotes: &quot;</span> &lt;&lt; quotes.value().size() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      print_error(<span class="stringliteral">&quot;batch quotes&quot;</span>, quotes.error());</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;batch quotes: this broker quotes one instrument per request\n&quot;</span>;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_calendar) {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> calendar = session.calendar(subject.country_)) {</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      print_calendar(calendar.value());</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (!Caps::has_calendar_range) {</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;  one request covers the requested day and the ones either side\n&quot;</span>;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      }</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      print_error(<span class="stringliteral">&quot;calendar&quot;</span>, calendar.error());</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_calendar_sessions) {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    std::cout</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      &lt;&lt; <span class="stringliteral">&quot;sessions: this broker publishes intraday session windows; the library &quot;</span></div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      &lt;&lt; <span class="stringliteral">&quot;does not expose them yet\n&quot;</span>;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  }</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="keywordtype">int</span> report_kis(ssl::context&amp; tls, <span class="keyword">const</span> std::string&amp; symbol) {</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="keyword">namespace </span>kis = algotradelib::kis;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  kis::KisConfig config;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  kis::KisAccount account;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <a class="code hl_function" href="kis__credentials_8hpp.html#ad24c626a43cda55562cfbc394fe236d1">kis_credentials::load</a>(kis_credentials::environment_directory(), config, &amp;account, std::cout);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keyword">auto</span> client = std::make_shared&lt;kis::KisBlockingClient&gt;(tls, std::move(config), kis_credentials::paced_options());</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  BlockingSession&lt;kis::KisBlockingClient&gt; session(std::move(client), std::move(account));</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keywordflow">return</span> report(session, InstrumentId{Country::KR, Venue::COMBINED, symbol});</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>}</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="keywordtype">int</span> report_tossinvest(ssl::context&amp; tls, <span class="keyword">const</span> std::string&amp; symbol, <span class="keyword">const</span> <span class="keywordtype">char</span>* sequence) {</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="keyword">namespace </span>toss = algotradelib::tossinvest;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  toss::TossConfig config;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  config.from_env();</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <span class="keyword">auto</span> client = std::make_shared&lt;toss::TossBlockingClient&gt;(tls, std::move(config));</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  std::int64_t selected = 0;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="keywordflow">if</span> (sequence) {</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    selected = std::strtoll(sequence, <span class="keyword">nullptr</span>, 10);</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keyword">auto</span> accounts = <a class="code hl_function" href="namespacealgotradelib.html#a135a215fd865ef03ad860bfc8ef484af">algotradelib::list_accounts</a>(*client);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">if</span> (!accounts) {</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      print_error(<span class="stringliteral">&quot;account discovery&quot;</span>, accounts.error());</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    }</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keywordflow">if</span> (accounts.value().empty()) {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;no Toss accounts are available for these credentials\n&quot;</span>;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    selected = accounts.value().front().selector_;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  }</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  BlockingSession&lt;toss::TossBlockingClient&gt; session(std::move(client), selected);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keywordflow">return</span> report(session, InstrumentId{Country::KR, Venue::COMBINED, symbol});</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>}</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>} <span class="comment">// namespace</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <span class="keyword">const</span> std::string broker = argc &gt; 1 ? argv[1] : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="keywordflow">if</span> (broker != <span class="stringliteral">&quot;kis&quot;</span> &amp;&amp; broker != <span class="stringliteral">&quot;tossinvest&quot;</span>) {</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;usage: example-portable-market-data &lt;kis|tossinvest&gt; [symbol] [account-sequence]\n&quot;</span>;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  }</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keyword">const</span> std::string symbol = argc &gt; 2 ? argv[2] : <span class="stringliteral">&quot;005930&quot;</span>;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    ssl::context tls(ssl::context::tls_client);</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    tls.set_default_verify_paths();</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    tls.set_verify_mode(ssl::verify_peer);</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keywordflow">if</span> (broker == <span class="stringliteral">&quot;kis&quot;</span>) {</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>      <span class="keywordflow">return</span> report_kis(tls, symbol);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    }</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keywordflow">return</span> report_tossinvest(tls, symbol, argc &gt; 3 ? argv[3] : <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; exception) {</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;example failed: &quot;</span> &lt;&lt; exception.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  }</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="comment">// The grid comes from the instrument: the adapter chose it from what the instrument is.</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="comment">// An instrument whose ladder the library does not know refuses to round rather than guessing one.</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keyword">const</span> <span class="keyword">auto</span> rule = reference_rule;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keyword">const</span> <span class="keyword">auto</span> buy = rule.<a class="code hl_function" href="structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02">round_to_tick</a>(*mid, OrderSide::BUY);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        std::cout</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>          &lt;&lt; <span class="stringliteral">&quot;  a buy at the midpoint would rest at &quot;</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>          &lt;&lt; (buy ? buy-&gt;str() : std::string(<span class="stringliteral">&quot;no grid known for this instrument&quot;</span>)) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      print_error(<span class="stringliteral">&quot;order book&quot;</span>, book.error());</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_price_limits) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> limits = session.price_limits(subject)) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      print_price_limits(limits.value());</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      print_error(<span class="stringliteral">&quot;price bounds&quot;</span>, limits.error());</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_trade_prints) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> prints = session.trades(subject, 5)) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;recent executions: &quot;</span> &lt;&lt; prints.value().size() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; print : prints.value()) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; print.price_.str() &lt;&lt; <span class="stringliteral">&quot; x &quot;</span> &lt;&lt; print.quantity_.str() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      print_error(<span class="stringliteral">&quot;recent executions&quot;</span>, prints.error());</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_batch_prices) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">// One request for several instruments, where the broker offers it. Looping</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="comment">// single quotes instead would spend several times the request budget.</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> quotes = session.prices({subject})) {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;batch quotes: &quot;</span> &lt;&lt; quotes.value().size() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      print_error(<span class="stringliteral">&quot;batch quotes&quot;</span>, quotes.error());</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;batch quotes: this broker quotes one instrument per request\n&quot;</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  }</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_calendar) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> calendar = session.calendar(subject.country_)) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      print_calendar(calendar.value());</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (!Caps::has_calendar_range) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;  one request covers the requested day and the ones either side\n&quot;</span>;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      print_error(<span class="stringliteral">&quot;calendar&quot;</span>, calendar.error());</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Caps::has_calendar_sessions) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    std::cout</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      &lt;&lt; <span class="stringliteral">&quot;sessions: this broker publishes intraday session windows; the library &quot;</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      &lt;&lt; <span class="stringliteral">&quot;does not expose them yet\n&quot;</span>;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>}</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="keywordtype">int</span> report_kis(ssl::context&amp; tls, <span class="keyword">const</span> std::string&amp; symbol) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="keyword">namespace </span>kis = algotradelib::kis;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  kis::KisConfig config;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  kis::KisAccount account;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <a class="code hl_function" href="kis__credentials_8hpp.html#ad24c626a43cda55562cfbc394fe236d1">kis_credentials::load</a>(kis_credentials::environment_directory(), config, &amp;account, std::cout);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  <span class="keyword">auto</span> client = std::make_shared&lt;kis::KisBlockingClient&gt;(tls, std::move(config), kis_credentials::paced_options());</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  BlockingSession&lt;kis::KisBlockingClient&gt; session(std::move(client), std::move(account));</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keywordflow">return</span> report(session, InstrumentId{Country::KR, Venue::COMBINED, symbol});</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>}</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keywordtype">int</span> report_tossinvest(ssl::context&amp; tls, <span class="keyword">const</span> std::string&amp; symbol, <span class="keyword">const</span> <span class="keywordtype">char</span>* sequence) {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <span class="keyword">namespace </span>toss = algotradelib::tossinvest;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  toss::TossConfig config;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  config.from_env();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <span class="keyword">auto</span> client = std::make_shared&lt;toss::TossBlockingClient&gt;(tls, std::move(config));</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  std::int64_t selected = 0;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="keywordflow">if</span> (sequence) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    selected = std::strtoll(sequence, <span class="keyword">nullptr</span>, 10);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keyword">auto</span> accounts = <a class="code hl_function" href="namespacealgotradelib.html#a135a215fd865ef03ad860bfc8ef484af">algotradelib::list_accounts</a>(*client);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordflow">if</span> (!accounts) {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      print_error(<span class="stringliteral">&quot;account discovery&quot;</span>, accounts.error());</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">if</span> (accounts.value().empty()) {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;no Toss accounts are available for these credentials\n&quot;</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    selected = accounts.value().front().selector_;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  BlockingSession&lt;toss::TossBlockingClient&gt; session(std::move(client), selected);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <span class="keywordflow">return</span> report(session, InstrumentId{Country::KR, Venue::COMBINED, symbol});</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>}</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>} <span class="comment">// namespace</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  <span class="keyword">const</span> std::string broker = argc &gt; 1 ? argv[1] : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <span class="keywordflow">if</span> (broker != <span class="stringliteral">&quot;kis&quot;</span> &amp;&amp; broker != <span class="stringliteral">&quot;tossinvest&quot;</span>) {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;usage: example-portable-market-data &lt;kis|tossinvest&gt; [symbol] [account-sequence]\n&quot;</span>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <span class="keyword">const</span> std::string symbol = argc &gt; 2 ? argv[2] : <span class="stringliteral">&quot;005930&quot;</span>;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    ssl::context tls(ssl::context::tls_client);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    tls.set_default_verify_paths();</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    tls.set_verify_mode(ssl::verify_peer);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keywordflow">if</span> (broker == <span class="stringliteral">&quot;kis&quot;</span>) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      <span class="keywordflow">return</span> report_kis(tls, symbol);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordflow">return</span> report_tossinvest(tls, symbol, argc &gt; 3 ? argv[3] : <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; exception) {</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;example failed: &quot;</span> &lt;&lt; exception.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>}</div>
 <div class="ttc" id="akis__credentials_8hpp_html"><div class="ttname"><a href="kis__credentials_8hpp.html">kis_credentials.hpp</a></div><div class="ttdoc">The examples&#39; KIS credentials: one JSON file per account, or the environment.</div></div>
 <div class="ttc" id="akis__credentials_8hpp_html_ad24c626a43cda55562cfbc394fe236d1"><div class="ttname"><a href="kis__credentials_8hpp.html#ad24c626a43cda55562cfbc394fe236d1">kis_credentials::load</a></div><div class="ttdeci">void load(const std::optional&lt; std::filesystem::path &gt; &amp;directory, algotradelib::kis::KisConfig &amp;config, algotradelib::kis::KisAccount *account, std::ostream &amp;out)</div><div class="ttdoc">Loads the credentials (and account) KIS_DEMO chooses, and prints where from (a path or &quot;environment v...</div><div class="ttdef"><b>Definition</b> <a href="kis__credentials_8hpp_source.html#l00127">kis_credentials.hpp:127</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_1_1dispatch_html_a327288f7c928699b2d70577aa5ab6699"><div class="ttname"><a href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">algotradelib::strategy::dispatch::bar</a></div><div class="ttdeci">void bar(S &amp;strategy, Ctx &amp;context, const BarEvent &amp;event)</div><div class="ttdoc">Calls strategy.on_bar(context, event) if the strategy declares on_bar; otherwise does nothing.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00282">concept.hpp:282</a></div></div>
@@ -443,7 +442,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('example-portab
 <div class="ttc" id="anamespacealgotradelib_html_ac78f755f933a0a9a9f38040d8e56828d"><div class="ttname"><a href="namespacealgotradelib.html#ac78f755f933a0a9a9f38040d8e56828d">algotradelib::Venue</a></div><div class="ttdeci">Venue</div><div class="ttdoc">A trading venue: an exchange, or the combined view across exchanges.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00043">types.hpp:43</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_ad822be21460535bed6354950db4e7dc4"><div class="ttname"><a href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">algotradelib::BarInterval</a></div><div class="ttdeci">BarInterval</div><div class="ttdoc">The period one bar covers.</div><div class="ttdef"><b>Definition</b> <a href="market__data_8hpp_source.html#l00020">market_data.hpp:20</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html_ae2d6f37a7311b1956dac26c57b416067"><div class="ttname"><a href="namespacealgotradelib.html#ae2d6f37a7311b1956dac26c57b416067">algotradelib::OrderSide</a></div><div class="ttdeci">OrderSide</div><div class="ttdoc">The side of an order: its economic direction, buy or sell.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01851">types.hpp:1851</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1PriceRule_html_a441f04938e2e8af4811163b86a5a2c02"><div class="ttname"><a href="structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02">algotradelib::PriceRule::round_to_tick</a></div><div class="ttdeci">std::optional&lt; Decimal64 &gt; round_to_tick(const Decimal64 &amp;price, OrderSide side) const</div><div class="ttdoc">Rounds a price to its band&#39;s tick in the order&#39;s favour: a buy rounds down, a sell up.</div><div class="ttdef"><b>Definition</b> <a href="instrument_8hpp_source.html#l00237">instrument.hpp:237</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1PriceRule_html_a441f04938e2e8af4811163b86a5a2c02"><div class="ttname"><a href="structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02">algotradelib::PriceRule::round_to_tick</a></div><div class="ttdeci">std::optional&lt; Decimal64 &gt; round_to_tick(const Decimal64 &amp;price, OrderSide side) const</div><div class="ttdoc">Rounds a price to its band&#39;s tick in the order&#39;s favour: a buy rounds down, a sell up.</div><div class="ttdef"><b>Definition</b> <a href="instrument_8hpp_source.html#l00235">instrument.hpp:235</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

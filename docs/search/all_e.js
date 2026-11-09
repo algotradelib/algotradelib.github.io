@@ -68,6 +68,5 @@ var searchData=
   ['kordershapes_65',['kOrderShapes',['../namespacealgotradelib_1_1kiwoom.html#a89a03664e3d28e1daba51d074d68a258',1,'algotradelib::kiwoom']]],
   ['krw_66',['krw',['../classalgotradelib_1_1Currency.html#ab039d37b0dcdd3a33cc621b86fe98600',1,'algotradelib::Currency']]],
   ['krx_67',['KRX',['../namespacealgotradelib_1_1kis.html#a180426dcbaf904ff2cca1189c5dc3289a97473ff9c0026db14da7c5377c92ae0a',1,'algotradelib::kis::KRX'],['../namespacealgotradelib_1_1kiwoom.html#a1476aa7a976b83d95727aee083da2ca1a97473ff9c0026db14da7c5377c92ae0a',1,'algotradelib::kiwoom::KRX']]],
-  ['krx_68',['krx',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::strategy::SessionWindow::krx()'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::runner::SessionWindow::krx()']]],
-  ['krx_5fequity_69',['krx_equity',['../structalgotradelib_1_1PriceRule.html#a5a791a8c9e6878491beb87472cb42597',1,'algotradelib::PriceRule']]]
+  ['krx_68',['krx',['../structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::strategy::SessionWindow::krx()'],['../structalgotradelib_1_1runner_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2',1,'algotradelib::runner::SessionWindow::krx()']]]
 ];

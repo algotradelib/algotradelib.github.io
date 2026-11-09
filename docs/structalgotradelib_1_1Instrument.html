@@ -151,7 +151,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8080013873a5cb0a4fe5f5b88b18a615" id="r_a8080013873a5cb0a4fe5f5b88b18a615"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1MarketSegment.html">MarketSegment</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8080013873a5cb0a4fe5f5b88b18a615">segment_</a></td></tr>
 <tr class="memdesc:a8080013873a5cb0a4fe5f5b88b18a615"><td class="mdescLeft">&#160;</td><td class="mdescRight">The market segment.  <br /></td></tr>
 <tr class="memitem:ab5cdb3a4baaa7504f3dc68fc28751a4a" id="r_ab5cdb3a4baaa7504f3dc68fc28751a4a"><td class="memItemLeft"><a class="el" href="namespacealgotradelib.html#a1caf6f2514c249110053aeed85321c26">SecurityType</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab5cdb3a4baaa7504f3dc68fc28751a4a">type_</a> {SecurityType::UNKNOWN}</td></tr>
-<tr class="memdesc:ab5cdb3a4baaa7504f3dc68fc28751a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The kind of security, which selects the price grid.  <br /></td></tr>
+<tr class="memdesc:ab5cdb3a4baaa7504f3dc68fc28751a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The kind of security.  <br /></td></tr>
 <tr class="memitem:a18c62b84230be604a9d1201dd7b3fc57" id="r_a18c62b84230be604a9d1201dd7b3fc57"><td class="memItemLeft"><a class="el" href="namespacealgotradelib.html#a5cdf942d89d3bba3e95b242e4225dbfc">InstrumentStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a18c62b84230be604a9d1201dd7b3fc57">status_</a> {InstrumentStatus::UNKNOWN}</td></tr>
 <tr class="memdesc:a18c62b84230be604a9d1201dd7b3fc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listed, awaiting listing, or delisted.  <br /></td></tr>
 <tr class="memitem:a33b329ef5371b13580e8f34738fff20c" id="r_a33b329ef5371b13580e8f34738fff20c"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Currency.html">Currency</a>&#160;</td><td class="memItemRight"><a class="el" href="#a33b329ef5371b13580e8f34738fff20c">currency_</a></td></tr>
@@ -167,13 +167,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a86dc03c515f5d1f7fb58d8e813918e98" id="r_a86dc03c515f5d1f7fb58d8e813918e98"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a86dc03c515f5d1f7fb58d8e813918e98">lot_size_</a></td></tr>
 <tr class="memdesc:a86dc03c515f5d1f7fb58d8e813918e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">The order quantity increment, if the broker publishes one.  <br /></td></tr>
 <tr class="memitem:a7720684e5a4d32e025f3e71c632669ab" id="r_a7720684e5a4d32e025f3e71c632669ab"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7720684e5a4d32e025f3e71c632669ab">price_rule_</a></td></tr>
-<tr class="memdesc:a7720684e5a4d32e025f3e71c632669ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The price grid; kind <span class="tt">UNKNOWN</span> where the library has no table.  <br /></td></tr>
+<tr class="memdesc:a7720684e5a4d32e025f3e71c632669ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The price grid, set by the adapter or the caller; kind <span class="tt">UNKNOWN</span> where it has no table.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Reference data for one instrument. </p>
-<p>Fields a broker may omit are optional or empty. <span class="tt"><a class="el" href="#a7720684e5a4d32e025f3e71c632669ab" title="The price grid; kind UNKNOWN where the library has no table.">price_rule_</a></span> is the library's grid, chosen by <span class="tt"><a class="el" href="namespacealgotradelib.html#a09ce0eadd0acd91e2651e07c2ea6fdfb" title="Returns the library&#39;s price grid for a kind of security in a country.">price_rule_for</a></span> from the security type. </p>
+<p>Fields a broker may omit are optional or empty. <span class="tt"><a class="el" href="#a7720684e5a4d32e025f3e71c632669ab" title="The price grid, set by the adapter or the caller; kind UNKNOWN where it has no table.">price_rule_</a></span> is set by the adapter that read the instrument, or by the caller who builds the reference data, and is <span class="tt">UNKNOWN</span> where it has no table. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00482">482</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00420">420</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a57a50e9ad3a4a4d4d9aec11a024e7df3" name="a57a50e9ad3a4a4d4d9aec11a024e7df3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57a50e9ad3a4a4d4d9aec11a024e7df3">&#9670;&#160;</a></span>dates_exclude()</h2>
@@ -208,7 +208,7 @@ Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">EXCLUDED</span> if a readable date rules <span class="tt">day</span> out (listed after it, or delisted on or before it); otherwise <span class="tt">UNREADABLE</span> if either date is unreadable; otherwise <span class="tt">NOT_EXCLUDED</span>. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd><span class="tt">NOT_EXCLUDED</span> does not mean the instrument trades on <span class="tt">day</span>; check <span class="tt"><a class="el" href="#a18c62b84230be604a9d1201dd7b3fc57" title="Listed, awaiting listing, or delisted.">status_</a></span> too. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00524">524</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00462">462</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ Public Attributes</h2></td></tr>
 
 <p>Whether this is the common share, not a preferred or derived line. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00500">500</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00438">438</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ Public Attributes</h2></td></tr>
 
 <p>The currency it trades in. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00498">498</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00436">436</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00936">algotradelib::strategy::weight_target()</a>.</p>
 
@@ -265,9 +265,9 @@ Public Attributes</h2></td></tr>
 
 <p>The delisting date; always <span class="tt">NOT_STATED</span> from Kiwoom, which publishes none. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00508">508</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00446">446</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00524">dates_exclude()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00462">dates_exclude()</a>.</p>
 
 </div>
 </div>
@@ -285,7 +285,7 @@ Public Attributes</h2></td></tr>
 
 <p>The English name, or empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00488">488</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00426">426</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +303,7 @@ Public Attributes</h2></td></tr>
 
 <p>The instrument. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00484">484</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00422">422</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="context_8hpp_source.html#l00539">algotradelib::runner::Context&lt; BrokerTag, CapsType &gt;::set_instrument()</a>.</p>
 
@@ -323,7 +323,7 @@ Public Attributes</h2></td></tr>
 
 <p>The ISIN, or empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00490">490</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00428">428</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,9 +342,9 @@ Public Attributes</h2></td></tr>
 <p>The listing date. </p>
 <p>Toss sends <span class="tt">null</span> for none; KIS sends <span class="tt">""</span> (and probably <span class="tt">"00000000"</span>); Kiwoom sends <span class="tt">""</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00506">506</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00444">444</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00524">dates_exclude()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="instrument_8hpp_source.html#l00462">dates_exclude()</a>.</p>
 
 </div>
 </div>
@@ -362,7 +362,7 @@ Public Attributes</h2></td></tr>
 
 <p>The order quantity increment, if the broker publishes one. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00512">512</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00450">450</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -380,7 +380,7 @@ Public Attributes</h2></td></tr>
 
 <p>The local-language name, as the broker spells it. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00486">486</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00424">424</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -396,9 +396,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The price grid; kind <span class="tt">UNKNOWN</span> where the library has no table. </p>
+<p>The price grid, set by the adapter or the caller; kind <span class="tt">UNKNOWN</span> where it has no table. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00514">514</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00452">452</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="reconcile_8hpp_source.html#l00796">algotradelib::strategy::reconcile()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00573">algotradelib::strategy::reconcile()</a>.</p>
 
@@ -418,7 +418,7 @@ Public Attributes</h2></td></tr>
 
 <p>The market segment. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00492">492</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00430">430</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -436,7 +436,7 @@ Public Attributes</h2></td></tr>
 
 <p>Shares outstanding, if published; KIS's blank or zero is empty, never zero shares. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00510">510</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00448">448</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -454,7 +454,7 @@ Public Attributes</h2></td></tr>
 
 <p>Listed, awaiting listing, or delisted. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00496">496</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00434">434</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
@@ -470,9 +470,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The kind of security, which selects the price grid. </p>
+<p>The kind of security. </p>
 
-<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00494">494</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="instrument_8hpp_source.html#l00432">432</a> of file <a class="el" href="instrument_8hpp_source.html">instrument.hpp</a>.</p>
 
 </div>
 </div>
