@@ -1,9 +1,0 @@
-<map id="algotradelib::BrokerTraits&lt; kis::KisClient &gt;" name="algotradelib::BrokerTraits&lt; kis::KisClient &gt;">
-<area shape="rect" id="Node000001" title="The BrokerSession adapter for kis::KisClient." alt="" coords="363,75,547,119"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,192,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,46,364,78,360,81,207,51"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="6,75,191,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,94,364,96,360,98,206,100"/>
-<area shape="rect" id="Node000004" href="$structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="6,144,191,189"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,149,338,125,368,121,373,119,339,130,206,154"/>
-</map>
