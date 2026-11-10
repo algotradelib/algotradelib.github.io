@@ -348,7 +348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://algotradelib.github.io/docs/"> 
+    <a class="nav-link" href="https://algotradelib.github.io/cpp/"> 
 <span class="menu-text">algotradelib (C++)</span></a>
   </li>  
 </ul>
@@ -408,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="a-first-backtest" class="level2">
 <h2 class="anchored" data-anchor-id="a-first-backtest">A first backtest</h2>
 <p>A strategy is any object with <code>on_bar(ctx, bar)</code> (one bar at a time) or <code>on_bars(ctx, bars)</code> (every symbol’s bar for a period at once), and optionally <code>on_stop(ctx)</code>. <code>ctx.target(symbol, quantity)</code> states how many shares to hold; the order fills at the next bar’s open. With <code>fill="decision-close"</code> it fills at the symbol’s last close when the target was set instead, the convention of backtests that trade on the close; that is optimistic, since a real order cannot trade at a close already seen. With <code>fill="next-close"</code> it fills at the next bar’s close instead; that prices daily or shorter bars, and an order that would fill on a weekly or longer bar halts the replay.</p>
-<div id="76a8f377" class="cell" data-execution_count="1">
+<div id="8c607674" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyatl</span>
@@ -454,7 +454,7 @@ total return -0.12%</code></pre>
 <section id="the-result" class="level2">
 <h2 class="anchored" data-anchor-id="the-result">The result</h2>
 <p><code>fills</code> and <code>equity</code> are dicts of NumPy columns, so a table is one call away.</p>
-<div id="7c4ceb41" class="cell" data-execution_count="2">
+<div id="b8e1d516" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(result.fills).head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
@@ -537,7 +537,7 @@ total return -0.12%</code></pre>
 </div>
 </div>
 <p>The summary holds the library’s figures and what did not go as asked:</p>
-<div id="c58be69b" class="cell" data-execution_count="3">
+<div id="062a4bec" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sharpe </span><span class="sc">{</span>result<span class="sc">.</span>sharpe<span class="sc">:.3f}</span><span class="ss">, Sortino </span><span class="sc">{</span>result<span class="sc">.</span>sortino<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"max drawdown </span><span class="sc">{</span>result<span class="sc">.</span>max_drawdown<span class="sc">:.2%}</span><span class="ss">, turnover </span><span class="sc">{</span>result<span class="sc">.</span>turnover<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"commission </span><span class="sc">{</span>result<span class="sc">.</span>commission_paid<span class="sc">:,.0f}</span><span class="ss"> KRW, tax </span><span class="sc">{</span>result<span class="sc">.</span>tax_paid<span class="sc">:,.0f}</span><span class="ss"> KRW"</span>)</span>
@@ -555,7 +555,7 @@ unvalued bars 0</code></pre>
 <section id="a-replay-you-feed-yourself" class="level2">
 <h2 class="anchored" data-anchor-id="a-replay-you-feed-yourself">A replay you feed yourself</h2>
 <p><code>backtest()</code> replays the bars you give it in time order. A <code>Replay</code> takes them in as many calls as you like, in the order you define, and is finished once.</p>
-<div id="bed270a2" class="cell" data-execution_count="4">
+<div id="c217589f" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>replay <span class="op">=</span> pyatl.Replay(</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    Crossover(), [<span class="st">"005930"</span>], commission<span class="op">=</span><span class="fl">0.00015</span>, sell_tax<span class="op">=</span><span class="fl">0.002</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>)</span>
