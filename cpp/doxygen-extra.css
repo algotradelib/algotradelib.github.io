@@ -1,0 +1,44 @@
+/* Added to Doxygen's own stylesheet through HTML_EXTRA_STYLESHEET in doxygen/Doxyfile. */
+
+/* Fit a figure to the page. The README's architecture figure is exported at scale 2 (2729 px wide),
+   and Doxygen sets no width on an image, so without this the main page scrolls sideways. 880 px is
+   about the width GitHub gives a README, so the figure reads at the same size in both places. It is a
+   cap, not a width: a smaller image is not enlarged. */
+div.image img {
+  max-width: min(100%, 880px);
+  height: auto;
+}
+
+/* Fit the project logo to the header, as Doxygen's PROJECT_LOGO help asks (at most 55 px high). Doxygen
+   sets no size on it, and the logo file is larger. */
+#projectlogo img {
+  max-height: 55px;
+  width: auto;
+}
+
+/* Naming any extra stylesheet makes Doxygen leave the block below out of doxygen.css (see the comment
+   on HTML_EXTRA_STYLESHEET). It is restored verbatim from Doxygen 1.18.0's doxygen.css, so the output
+   matches a build without an extra stylesheet. Under HTML_COLORSTYLE = AUTO_LIGHT nothing sets the
+   dark-mode class, so that rule is inert today; it matters if the Doxyfile moves to a toggle style. */
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-background-color);
+}
+
+:root.dark-mode {
+  color-scheme: dark;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--scrollbar-background-color);
+  height: 12px;
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  box-shadow: inset 0 0 12px 12px var(--scrollbar-thumb-color);
+  border: solid 2px transparent;
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--scrollbar-background-color);
+}

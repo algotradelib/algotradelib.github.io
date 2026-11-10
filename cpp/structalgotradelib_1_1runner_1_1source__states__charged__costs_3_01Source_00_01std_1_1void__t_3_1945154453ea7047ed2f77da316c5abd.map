@@ -1,0 +1,10 @@
+<map id="algotradelib::runner::source_states_charged_costs&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().charged_costs())&gt; &gt;" name="algotradelib::runner::source_states_charged_costs&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().charged_costs())&gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="639,71,854,184"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,41,123,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,34,233,16,354,4,420,3,486,6,552,16,616,32,652,48,685,71,680,71,649,52,614,37,551,21,486,12,420,8,354,10,234,22,137,39"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1source__states__charged__costs.html" title="Detects whether a source provides const ChargedCosts&amp; charged_costs() const, which LoopReport then re..." alt="" coords="172,62,382,124"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="137,65,174,73,169,75,138,70"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="222,158,333,186"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="348,163,615,138,636,139,642,139,616,144,349,168"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="398,122,407,124,527,132,642,134,636,134,527,138,406,129,398,128"/>
+</map>

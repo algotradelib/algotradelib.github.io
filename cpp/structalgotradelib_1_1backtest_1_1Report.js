@@ -1,0 +1,26 @@
+var structalgotradelib_1_1backtest_1_1Report =
+[
+    [ "aborted_", "structalgotradelib_1_1backtest_1_1Report.html#a7a67858d4dac09d6d783a04dede0ad8a", null ],
+    [ "annualized_sharpe_", "structalgotradelib_1_1backtest_1_1Report.html#a7e4bb3d226b08f6f7c3f2a4fe7e080fa", null ],
+    [ "bars_", "structalgotradelib_1_1backtest_1_1Report.html#aa0b6cde32e2f4f9d2375f3f8dadb796c", null ],
+    [ "caveats_", "structalgotradelib_1_1backtest_1_1Report.html#af9c1ddde755d938febaa91ed67ec29f2", null ],
+    [ "closing_equity_", "structalgotradelib_1_1backtest_1_1Report.html#a4dd4da0d6a16499a26f49930888361a5", null ],
+    [ "commission_by_currency_", "structalgotradelib_1_1backtest_1_1Report.html#a5fc8ba00d4c4ddacf3866cd80ccfbc99", null ],
+    [ "commission_paid_", "structalgotradelib_1_1backtest_1_1Report.html#abb4ef94d2349d0e565ff7e54f3c8d416", null ],
+    [ "executions_", "structalgotradelib_1_1backtest_1_1Report.html#afcc5006213a4a5ad1da44bb740bef732", null ],
+    [ "halted_", "structalgotradelib_1_1backtest_1_1Report.html#a0d486030112b4ac09ffb8c92fec1edbe", null ],
+    [ "institution_by_currency_", "structalgotradelib_1_1backtest_1_1Report.html#aa5abc5ca53641be5ca94b9f37678ae88", null ],
+    [ "institution_fees_paid_", "structalgotradelib_1_1backtest_1_1Report.html#ab86e6f8b20f70c9542351d0b695167a3", null ],
+    [ "max_drawdown_", "structalgotradelib_1_1backtest_1_1Report.html#a513a18c841332eab2d1e60698d697a5c", null ],
+    [ "opening_equity_", "structalgotradelib_1_1backtest_1_1Report.html#a2bf04c9e6dfbea969755ed28fa128ecd", null ],
+    [ "refused_", "structalgotradelib_1_1backtest_1_1Report.html#a5d27318a59d021e49b0ec0b1848e5333", null ],
+    [ "rejected_", "structalgotradelib_1_1backtest_1_1Report.html#a6a5da131da67c3722a9f2a4478544053", null ],
+    [ "sharpe_", "structalgotradelib_1_1backtest_1_1Report.html#af28bc302def829d0c9b58a1eaf2128b9", null ],
+    [ "slippage_by_currency_", "structalgotradelib_1_1backtest_1_1Report.html#ab0a64acba798b3882d2bfd5ba18a8977", null ],
+    [ "slippage_paid_", "structalgotradelib_1_1backtest_1_1Report.html#a256e75cc9d41c3c895f855fc7ae92071", null ],
+    [ "sortino_", "structalgotradelib_1_1backtest_1_1Report.html#a8f40f46c8ffbae6696a0a702f4a764cf", null ],
+    [ "tax_by_currency_", "structalgotradelib_1_1backtest_1_1Report.html#ac69a0f22ecc3554ac3da652efc217036", null ],
+    [ "tax_paid_", "structalgotradelib_1_1backtest_1_1Report.html#a6d08058d427073be4cb6ddb13bc2331d", null ],
+    [ "total_return_", "structalgotradelib_1_1backtest_1_1Report.html#a3a69398f1d645faf248f74d094c633f0", null ],
+    [ "total_turnover_", "structalgotradelib_1_1backtest_1_1Report.html#a1b54d38ccf71d6cbf8c58876f8cfe6fc", null ]
+];

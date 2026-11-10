@@ -1,0 +1,17 @@
+<map id="algotradelib::backtest::MarketPriceInput" name="algotradelib::backtest::MarketPriceInput">
+<area shape="rect" id="Node000001" title="What a market&#45;price rule is given (see NextBarFillModel::with_market_price)." alt="" coords="884,117,1048,161"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1strategy_1_1PlannedOrder.html" title="One order the runner is to place." alt="" coords="622,47,784,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="799,90,861,106,891,116,885,116,860,111,799,95"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1InstrumentId.html" title="Identifies an instrument: its country, venue and symbol." alt="" coords="295,108,485,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="492,102,625,82,620,83,493,107"/>
+<area shape="rect" id="Node000005" href="$structalgotradelib_1_1strategy_1_1BarEvent.html" title="One bar, delivered to on_bar." alt="" coords="622,117,784,161"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="500,127,509,128,625,136,619,136,509,133,500,133"/>
+<area shape="rect" id="Node000004" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,94,183,122"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="127,83,164,63,206,47,261,36,318,30,431,29,536,37,625,52,619,53,535,43,431,34,318,35,262,41,207,52,166,68,130,88"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1Bar.html" title="One bar: the prices and volume of one period, as exact decimals." alt="" coords="325,161,454,189"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="154,124,207,139,327,164,322,166,206,144,154,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="799,136,887,139,881,139,800,142"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="470,172,531,169,595,163,620,161,625,160,595,168,532,175,470,177"/>
+<area shape="rect" id="Node000007" href="$structalgotradelib_1_1PriceRule.html" title="The price grid (tick sizes) an instrument&#39;s order prices must sit on." alt="" coords="619,185,787,213"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="802,179,860,167,886,162,892,161,861,172,803,184"/>
+</map>

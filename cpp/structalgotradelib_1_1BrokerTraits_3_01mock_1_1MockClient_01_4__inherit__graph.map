@@ -1,0 +1,5 @@
+<map id="algotradelib::BrokerTraits&lt; mock::MockClient &gt;" name="algotradelib::BrokerTraits&lt; mock::MockClient &gt;">
+<area shape="rect" id="Node000001" title="The mock broker&#39;s adaptation: what it implements, and the thunks to mock::MockClient." alt="" coords="5,123,190,168"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="5,5,190,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,64,100,123,95,122,96,68"/>
+</map>

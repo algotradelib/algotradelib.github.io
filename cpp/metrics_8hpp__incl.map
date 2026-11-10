@@ -1,0 +1,26 @@
+<map id="algotradelib/src/analytics/metrics.hpp" name="algotradelib/src/analytics/metrics.hpp">
+<area shape="rect" id="Node000001" title="Performance metrics: maximum drawdown, Sharpe and Sortino ratios, annualization." alt="" coords="214,5,400,50"/>
+<area shape="rect" id="Node000002" href="$numeric_8hpp.html" title="Re&#45;exports math::Scalar, math::missing and math::observed into analytics." alt="" coords="173,98,284,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="285,52,254,88,250,85,288,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,325,68,353"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="244,52,205,73,163,100,125,134,99,166,79,202,59,250,43,310,38,309,54,248,74,200,94,163,121,131,160,96,202,69,248,49"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="352,325,422,353"/>
+<area shape="poly" id="edge13_Node000001_Node000006" title=" " alt="" coords="315,48,371,249,384,311,379,309,366,250,312,52"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="424,98,510,126"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="350,48,431,90,425,91,350,53"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="The linear algebra types of the math module: Matrix, Vector, SeriesView, MutableSeriesView,..." alt="" coords="157,174,300,201"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,124,231,159,226,157,227,129"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="197,128,164,148,130,176,103,209,80,246,49,312,44,309,76,243,99,206,127,172,162,144,201,124"/>
+<area shape="poly" id="edge10_Node000002_Node000006" title=" " alt="" coords="252,124,284,144,313,172,337,206,356,243,382,311,377,309,351,246,332,209,309,175,281,149,252,129"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="91,325,150,353"/>
+<area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="199,128,173,148,148,175,133,209,125,245,121,310,116,308,120,244,128,207,144,172,169,144,202,124"/>
+<area shape="rect" id="Node000004" href="$scalar_8hpp_source.html" title=" " alt="" coords="170,249,266,277"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="228,200,224,235,220,233,225,204"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="186,280,83,322,81,317,185,275"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="249,275,346,318,341,319,248,280"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="262,325,328,353"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="233,275,273,315,268,314,231,280"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="173,325,238,353"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="218,276,213,311,208,308,214,279"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="203,277,151,318,148,313,198,278"/>
+</map>
