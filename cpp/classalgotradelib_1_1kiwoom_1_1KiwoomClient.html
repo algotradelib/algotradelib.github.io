@@ -171,6 +171,8 @@ Public Types</h2></td></tr>
 <tr class="memdesc:af09feb524fc852402bad2732c6c3ad75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion handler for one normalized page of order history.  <br /></td></tr>
 <tr class="memitem:a75e0b0e51f00583f5881d36b31b504d8" id="r_a75e0b0e51f00583f5881d36b31b504d8"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a75e0b0e51f00583f5881d36b31b504d8">TokenHandler</a> = net::any_completion_handler&lt;void(std::optional&lt;<a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&gt;)&gt;</td></tr>
 <tr class="memdesc:a75e0b0e51f00583f5881d36b31b504d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal completion handler for a shared access-token refresh.  <br /></td></tr>
+<tr class="memitem:a6dca6f86472b0b977fe6f76550ee1155" id="r_a6dca6f86472b0b977fe6f76550ee1155"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a6dca6f86472b0b977fe6f76550ee1155">TokenResultHandler</a> = net::any_completion_handler&lt;void(<a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt;<a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomRest.html">KiwoomRest</a>&gt;)&gt;</td></tr>
+<tr class="memdesc:a6dca6f86472b0b977fe6f76550ee1155"><td class="mdescLeft">&#160;</td><td class="mdescRight">The completion handler type of <span class="tt"><a class="el" href="#a3da5946f1f245b036c53bad698f2b5a3" title="Requests an access token unless the held one stays valid for five more minutes, as any request does f...">async_ensure_token</a></span>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -230,18 +232,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3f6ef4aa9b5d3da9451ce28fa23578e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests one day of order history, paging <span class="tt">kt00007</span> 계좌별주문체결내역상세요청.  <br /></td></tr>
 <tr class="memitem:add7b92cb79aa9c7d0c302cf6c56d02d1" id="r_add7b92cb79aa9c7d0c302cf6c56d02d1"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1network_1_1RateLimitStats.html">network::RateLimitStats</a> *&#160;</td><td class="memItemRight"><a class="el" href="#add7b92cb79aa9c7d0c302cf6c56d02d1">rate_limit_stats</a> () const</td></tr>
 <tr class="memdesc:add7b92cb79aa9c7d0c302cf6c56d02d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rate limiter's statistics.  <br /></td></tr>
+<tr class="memitem:a4c81104c0f9978a5f938d69fcdf7330b" id="r_a4c81104c0f9978a5f938d69fcdf7330b"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomRest.html">KiwoomRest</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4c81104c0f9978a5f938d69fcdf7330b">token</a> () const</td></tr>
+<tr class="memdesc:a4c81104c0f9978a5f938d69fcdf7330b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the access token the client holds, to reuse in another client or a later process (<span class="tt"><a class="el" href="#a387b1d9c34a9fb1d0a00dfa7a6ce3a60" title="Uses a token issued earlier for the same app key and environment instead of requesting one.">adopt_token</a></span>).  <br /></td></tr>
+<tr class="memitem:a387b1d9c34a9fb1d0a00dfa7a6ce3a60" id="r_a387b1d9c34a9fb1d0a00dfa7a6ce3a60"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a387b1d9c34a9fb1d0a00dfa7a6ce3a60">adopt_token</a> (<a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomRest.html">KiwoomRest</a> token)</td></tr>
+<tr class="memdesc:a387b1d9c34a9fb1d0a00dfa7a6ce3a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses a token issued earlier for the same app key and environment instead of requesting one.  <br /></td></tr>
+<tr class="memitem:a3da5946f1f245b036c53bad698f2b5a3" id="r_a3da5946f1f245b036c53bad698f2b5a3"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken&gt; </td></tr>
+<tr class="memitem:a3da5946f1f245b036c53bad698f2b5a3 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a3da5946f1f245b036c53bad698f2b5a3">async_ensure_token</a> (CompletionToken &amp;&amp;token)</td></tr>
+<tr class="memdesc:a3da5946f1f245b036c53bad698f2b5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests an access token unless the held one stays valid for five more minutes, as any request does first, and reports the token held afterwards.  <br /></td></tr>
+<tr class="memitem:a61cd3c80a27d49e8306d0f514249cc93" id="r_a61cd3c80a27d49e8306d0f514249cc93"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61cd3c80a27d49e8306d0f514249cc93">forget_token</a> ()</td></tr>
+<tr class="memdesc:a61cd3c80a27d49e8306d0f514249cc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drops the held token: the next request asks for one.  <br /></td></tr>
 <tr class="memitem:a00726f4c79810f45e851e3aaa7cc164a" id="r_a00726f4c79810f45e851e3aaa7cc164a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a00726f4c79810f45e851e3aaa7cc164a">close</a> ()</td></tr>
 <tr class="memdesc:a00726f4c79810f45e851e3aaa7cc164a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the client for good: pending requests, and later ones that would send, complete with <span class="tt">CANCELLED</span>. A request already being sent has <span class="tt">reached_broker_</span> set and an unknown outcome. A request refused before sending is still refused.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:adc6e4764f4756359fccd600957b0f846" id="r_adc6e4764f4756359fccd600957b0f846"><td class="memItemLeft">struct&#160;</td><td class="memItemRight"><a class="el" href="#adc6e4764f4756359fccd600957b0f846">KiwoomClientTestAccess</a></td></tr>
+<tr class="memitem:a13dcd2e2ff10b22514ba6f17c60ffdd3" id="r_a13dcd2e2ff10b22514ba6f17c60ffdd3"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a13dcd2e2ff10b22514ba6f17c60ffdd3">KiwoomBlockingClient</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The asynchronous Kiwoom REST client: market data, account inquiries and orders for domestic stocks. </p>
-<p>It requests an access token when first needed and shares one refresh among concurrent requests. Create it with <span class="tt">std::make_shared</span>. Each completion runs on the handler's associated executor, or on the client's strand if it has none. Before trading, state the holdings settings in <span class="tt"><a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html" title="Kiwoom credentials (app key and secret key), demo or real account, the market-data tape,...">KiwoomConfig</a></span>. A blocking wrapper is <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html" title="A blocking Kiwoom client: each call runs a KiwoomClient request on a private event loop and returns i...">KiwoomBlockingClient</a></span>. </p>
+<p>It requests an access token when first needed, and again after Kiwoom refuses the one it holds; one refresh is shared among concurrent requests, and a refused request is not sent again. Create it with <span class="tt">std::make_shared</span>. Each completion runs on the handler's associated executor, or on the client's strand if it has none. Before trading, state the holdings settings in <span class="tt"><a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html" title="Kiwoom credentials (app key and secret key), demo or real account, the market-data tape,...">KiwoomConfig</a></span>. A blocking wrapper is <span class="tt"><a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html" title="A blocking Kiwoom client: each call runs a KiwoomClient request on a private event loop and returns i...">KiwoomBlockingClient</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00879">879</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00882">882</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="ae36a2743d3a4f940fa0268097d25821d" name="ae36a2743d3a4f940fa0268097d25821d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae36a2743d3a4f940fa0268097d25821d">&#9670;&#160;</a></span>AccountsHandler</h2>
@@ -257,7 +269,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for the one account the bound credential drives. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00902">902</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00905">905</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +287,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized bar series. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00884">884</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00887">887</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +305,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized buying-power reading. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00896">896</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00899">899</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +323,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for Kiwoom's own fuller deposit detail. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00898">898</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00901">901</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +341,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized order book. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00886">886</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00889">889</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -347,7 +359,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized holdings snapshot. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00894">894</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00897">897</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +377,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one instrument's reference data. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00892">892</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00895">895</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -383,7 +395,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one page of modifiable or cancellable orders. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00906">906</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00909">909</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -401,7 +413,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for Kiwoom's per-margin-tier orderable amounts and quantities. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00900">900</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00903">903</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +431,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one Kiwoom order acknowledgement. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00904">904</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00907">907</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -437,7 +449,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized page of order history. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00908">908</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00911">911</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +467,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one instrument's price bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00888">888</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00891">891</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -473,7 +485,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized quote. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00882">882</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00885">885</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -491,7 +503,25 @@ Friends</h2></td></tr>
 
 <p>Internal completion handler for a shared access-token refresh. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00910">910</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00913">913</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6dca6f86472b0b977fe6f76550ee1155" name="a6dca6f86472b0b977fe6f76550ee1155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dca6f86472b0b977fe6f76550ee1155">&#9670;&#160;</a></span>TokenResultHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a6dca6f86472b0b977fe6f76550ee1155">algotradelib::kiwoom::KiwoomClient::TokenResultHandler</a> = net::any_completion_handler&lt;void(<a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt;<a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomRest.html">KiwoomRest</a>&gt;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The completion handler type of <span class="tt"><a class="el" href="#a3da5946f1f245b036c53bad698f2b5a3" title="Requests an access token unless the held one stays valid for five more minutes, as any request does f...">async_ensure_token</a></span>. </p>
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00916">916</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +539,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for recent executions. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00890">890</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00893">893</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -562,11 +592,49 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00919">919</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00925">925</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a387b1d9c34a9fb1d0a00dfa7a6ce3a60" name="a387b1d9c34a9fb1d0a00dfa7a6ce3a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387b1d9c34a9fb1d0a00dfa7a6ce3a60">&#9670;&#160;</a></span>adopt_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::kiwoom::KiwoomClient::adopt_token </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomRest.html">KiwoomRest</a></td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uses a token issued earlier for the same app key and environment instead of requesting one. </p>
+<p>When Kiwoom refuses the token a request carried (<span class="tt">return_code</span> <span class="tt">8005</span>, or <span class="tt">8010</span> for a token issued to another address), that request fails with Kiwoom's code and is not sent again, and the client drops the token: the next request asks for a new one, which <span class="tt"><a class="el" href="#a4c81104c0f9978a5f938d69fcdf7330b" title="Returns the access token the client holds, to reuse in another client or a later process (adopt_token...">token()</a></span> then returns. The token does not identify its key, so key stored tokens by environment and app key, and discard one Kiwoom refused. <b>The token is a bearer credential</b>: store it as carefully as the key and secret.</p>
+<p>Call it on the client's strand or before any request; on the blocking client, between calls. A blocking client given a <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">network::TokenStore</a></span> shares its token with other clients and programs without this call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>The token. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> (nothing adopted) if the token is empty or expires within five minutes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01376">1376</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ac5a3551f694f8b5a712cc1d367b8d506" name="ac5a3551f694f8b5a712cc1d367b8d506"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5a3551f694f8b5a712cc1d367b8d506">&#9670;&#160;</a></span>async_accounts()</h2>
 
@@ -607,7 +675,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01177">1177</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01183">1183</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00706">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::accounts()</a>.</p>
 
@@ -659,7 +727,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01049">1049</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01055">1055</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00681">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::bars()</a>.</p>
 
@@ -716,7 +784,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01110">1110</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01116">1116</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00720">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::buying_power()</a>.</p>
 
@@ -775,7 +843,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01277">1277</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01283">1283</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00793">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::cancel_order()</a>.</p>
 
@@ -821,7 +889,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01128">1128</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01134">1134</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -870,9 +938,53 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00980">980</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00986">986</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00668">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::depth()</a>.</p>
+
+</div>
+</div>
+<a id="a3da5946f1f245b036c53bad698f2b5a3" name="a3da5946f1f245b036c53bad698f2b5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da5946f1f245b036c53bad698f2b5a3">&#9670;&#160;</a></span>async_ensure_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto algotradelib::kiwoom::KiwoomClient::async_ensure_token </td>
+          <td>(</td>
+          <td class="paramtype">CompletionToken &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Requests an access token unless the held one stays valid for five more minutes, as any request does first, and reports the token held afterwards. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">CompletionToken</td><td>An Asio completion token. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>The completion token, called with <span class="tt"><a class="el" href="classalgotradelib_1_1Result.html" title="Either a value or a BrokerError.">Result</a>&lt;<a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomRest.html" title="A Kiwoom REST access token (au10001&#39;s token) and its expiry (expires_dt).">KiwoomRest</a>&gt;</span>: a bearer credential, never to be logged. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01392">1392</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -922,7 +1034,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01090">1090</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01096">1096</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00737">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::holdings()</a>.</p>
 
@@ -973,7 +1085,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01022">1022</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01028">1028</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00694">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::instrument()</a>.</p>
 
@@ -1024,7 +1136,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01296">1296</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01302">1302</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00806">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::working_orders()</a>.</p>
 
@@ -1081,7 +1193,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01316">1316</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01322">1322</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00820">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::order_history()</a>.</p>
 
@@ -1144,7 +1256,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01149">1149</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01155">1155</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1314,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01220">1220</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01226">1226</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00765">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::place_order()</a>.</p>
 
@@ -1253,7 +1365,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00958">958</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00964">964</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00641">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::price_limits()</a>.</p>
 
@@ -1304,7 +1416,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00936">936</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l00942">942</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00628">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::quote()</a>.</p>
 
@@ -1362,7 +1474,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01246">1246</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01252">1252</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00779">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::replace_order()</a>.</p>
 
@@ -1419,7 +1531,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01003">1003</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01009">1009</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00655">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::trades()</a>.</p>
 
@@ -1450,7 +1562,7 @@ template&lt;typename CompletionToken&gt; </div>
 
 <p>Closes the client for good: pending requests, and later ones that would send, complete with <span class="tt">CANCELLED</span>. A request already being sent has <span class="tt">reached_broker_</span> set and an unknown outcome. A request refused before sending is still refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01345">1345</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01424">1424</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -1480,9 +1592,39 @@ template&lt;typename CompletionToken&gt; </div>
 <p>Returns the configuration (the session reads its holdings assertions from it). </p>
 <dl class="section return"><dt>Returns</dt><dd>The configuration. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01064">1064</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01070">1070</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00737">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::holdings()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00919">KiwoomClient()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00737">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::holdings()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l00925">KiwoomClient()</a>.</p>
+
+</div>
+</div>
+<a id="a61cd3c80a27d49e8306d0f514249cc93" name="a61cd3c80a27d49e8306d0f514249cc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cd3c80a27d49e8306d0f514249cc93">&#9670;&#160;</a></span>forget_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void algotradelib::kiwoom::KiwoomClient::forget_token </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drops the held token: the next request asks for one. </p>
+<p>Call it on the client's strand or before any request; on the blocking client, between calls. </p>
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01415">1415</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -1512,7 +1654,7 @@ template&lt;typename CompletionToken&gt; </div>
 <p>Returns the client's strand. </p>
 <dl class="section return"><dt>Returns</dt><dd>The strand. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01072">1072</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01078">1078</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00737">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::holdings()</a>.</p>
 
@@ -1545,13 +1687,71 @@ template&lt;typename CompletionToken&gt; </div>
 <p>Read them on the client's strand or while no request is in progress (between calls on the blocking client).</p>
 <dl class="section return"><dt>Returns</dt><dd>The statistics, or null if the client has no rate-limit budget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01335">1335</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01341">1341</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00615">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::rate_limit_stats()</a>.</p>
 
 </div>
 </div>
+<a id="a4c81104c0f9978a5f938d69fcdf7330b" name="a4c81104c0f9978a5f938d69fcdf7330b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c81104c0f9978a5f938d69fcdf7330b">&#9670;&#160;</a></span>token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1kiwoom_1_1KiwoomRest.html">KiwoomRest</a> algotradelib::kiwoom::KiwoomClient::token </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the access token the client holds, to reuse in another client or a later process (<span class="tt"><a class="el" href="#a387b1d9c34a9fb1d0a00dfa7a6ce3a60" title="Uses a token issued earlier for the same app key and environment instead of requesting one.">adopt_token</a></span>). </p>
+<p><b>The token is a bearer credential</b>: store it as carefully as the key and secret.</p>
+<p>Read it on the client's strand or before any request; on the blocking client, between calls.</p>
+<dl class="section return"><dt>Returns</dt><dd>The token, empty until a request has obtained one. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01356">1356</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="kiwoom_2client_8hpp_source.html#l01376">adopt_token()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01183">async_accounts()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01055">async_bars()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01116">async_buying_power()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01283">async_cancel_order()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01134">async_deposit()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l00986">async_depth()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01392">async_ensure_token()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01096">async_holdings()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01028">async_instrument()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01302">async_open_orders()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01322">async_order_history()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01155">async_orderable_amount()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01226">async_place_order()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l00964">async_price_limits()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l00942">async_quote()</a>, <a class="el" href="kiwoom_2client_8hpp_source.html#l01252">async_replace_order()</a>, and <a class="el" href="kiwoom_2client_8hpp_source.html#l01009">async_trades()</a>.</p>
+
+</div>
+</div>
 <a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a13dcd2e2ff10b22514ba6f17c60ffdd3" name="a13dcd2e2ff10b22514ba6f17c60ffdd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13dcd2e2ff10b22514ba6f17c60ffdd3">&#9670;&#160;</a></span>KiwoomBlockingClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class KiwoomBlockingClient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01430">1430</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+
+</div>
+</div>
 <a id="adc6e4764f4756359fccd600957b0f846" name="adc6e4764f4756359fccd600957b0f846"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc6e4764f4756359fccd600957b0f846">&#9670;&#160;</a></span>KiwoomClientTestAccess</h2>
 
@@ -1572,7 +1772,7 @@ template&lt;typename CompletionToken&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01350">1350</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2client_8hpp_source.html#l01429">1429</a> of file <a class="el" href="kiwoom_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>

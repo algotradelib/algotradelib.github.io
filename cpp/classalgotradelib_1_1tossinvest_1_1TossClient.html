@@ -175,6 +175,8 @@ Public Types</h2></td></tr>
 <tr class="memdesc:abf44411e1db7670448a586e2de4df757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion handler for one normalized order.  <br /></td></tr>
 <tr class="memitem:a0de998e666b5d977def25144b43d7c59" id="r_a0de998e666b5d977def25144b43d7c59"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a0de998e666b5d977def25144b43d7c59">TokenHandler</a> = net::any_completion_handler&lt;void(std::optional&lt;<a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&gt;)&gt;</td></tr>
 <tr class="memdesc:a0de998e666b5d977def25144b43d7c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal completion handler for a shared access-token refresh.  <br /></td></tr>
+<tr class="memitem:a5e4fb7362627b2b35c67370cbb480c82" id="r_a5e4fb7362627b2b35c67370cbb480c82"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a5e4fb7362627b2b35c67370cbb480c82">TokenResultHandler</a> = net::any_completion_handler&lt;void(<a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt;<a class="el" href="structalgotradelib_1_1tossinvest_1_1TossRest.html">TossRest</a>&gt;)&gt;</td></tr>
+<tr class="memdesc:a5e4fb7362627b2b35c67370cbb480c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">The completion handler type of <span class="tt"><a class="el" href="#aefb11aa7a13c5619f8c1b8d2c1678e2e" title="Requests an access token unless the held one stays valid for five more minutes, as any request does f...">async_ensure_token</a></span>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -236,18 +238,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af103f4fb3d5bad4771d6a56c35b9d372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests one order by id, in any state.  <br /></td></tr>
 <tr class="memitem:adceebf94abea9f1978c5ae6b54deea3a" id="r_adceebf94abea9f1978c5ae6b54deea3a"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1network_1_1RateLimitStats.html">network::RateLimitStats</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adceebf94abea9f1978c5ae6b54deea3a">rate_limit_stats</a> () const</td></tr>
 <tr class="memdesc:adceebf94abea9f1978c5ae6b54deea3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rate limiter's statistics.  <br /></td></tr>
+<tr class="memitem:ac2c70b06c93d6fc1826c3bb558decd5f" id="r_ac2c70b06c93d6fc1826c3bb558decd5f"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1tossinvest_1_1TossRest.html">TossRest</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac2c70b06c93d6fc1826c3bb558decd5f">token</a> () const</td></tr>
+<tr class="memdesc:ac2c70b06c93d6fc1826c3bb558decd5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the access token the client holds, to reuse in another client or a later process (<span class="tt"><a class="el" href="#a632b0b1054a838a395f737242f76843e" title="Uses a token issued earlier for the same key instead of requesting one.">adopt_token</a></span>).  <br /></td></tr>
+<tr class="memitem:a632b0b1054a838a395f737242f76843e" id="r_a632b0b1054a838a395f737242f76843e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a632b0b1054a838a395f737242f76843e">adopt_token</a> (<a class="el" href="structalgotradelib_1_1tossinvest_1_1TossRest.html">TossRest</a> token)</td></tr>
+<tr class="memdesc:a632b0b1054a838a395f737242f76843e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses a token issued earlier for the same key instead of requesting one.  <br /></td></tr>
+<tr class="memitem:aefb11aa7a13c5619f8c1b8d2c1678e2e" id="r_aefb11aa7a13c5619f8c1b8d2c1678e2e"><td class="memTemplParams" colspan="2">template&lt;typename CompletionToken&gt; </td></tr>
+<tr class="memitem:aefb11aa7a13c5619f8c1b8d2c1678e2e template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#aefb11aa7a13c5619f8c1b8d2c1678e2e">async_ensure_token</a> (CompletionToken &amp;&amp;token)</td></tr>
+<tr class="memdesc:aefb11aa7a13c5619f8c1b8d2c1678e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests an access token unless the held one stays valid for five more minutes, as any request does first, and reports the token held afterwards.  <br /></td></tr>
+<tr class="memitem:aebe61c2a8f6cafba33b21dc59ef54092" id="r_aebe61c2a8f6cafba33b21dc59ef54092"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aebe61c2a8f6cafba33b21dc59ef54092">forget_token</a> ()</td></tr>
+<tr class="memdesc:aebe61c2a8f6cafba33b21dc59ef54092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drops the held token: the next request asks for one.  <br /></td></tr>
 <tr class="memitem:ac10e2956d7a308ec87ee53255db0cee5" id="r_ac10e2956d7a308ec87ee53255db0cee5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac10e2956d7a308ec87ee53255db0cee5">close</a> ()</td></tr>
 <tr class="memdesc:ac10e2956d7a308ec87ee53255db0cee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels transport work and queued HTTP operations.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ab6c7606f7309ad23b61c9a77172f39a2" id="r_ab6c7606f7309ad23b61c9a77172f39a2"><td class="memItemLeft">struct&#160;</td><td class="memItemRight"><a class="el" href="#ab6c7606f7309ad23b61c9a77172f39a2">TossClientTestAccess</a></td></tr>
+<tr class="memitem:acba85f33d9789108c1196c6b95c45f7b" id="r_acba85f33d9789108c1196c6b95c45f7b"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#acba85f33d9789108c1196c6b95c45f7b">TossBlockingClient</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The asynchronous Toss Securities REST client: market data, accounts and orders. </p>
 <p>It requests an access token when first needed, and again after Toss refuses the one it holds (as it does once another program issues a token with the same key); one refresh is shared among concurrent requests, and a refused request is not sent again. Create it with <span class="tt">std::make_shared</span>. Each completion runs on the handler's associated executor, or on the client's strand if it has none. A blocking wrapper is <span class="tt"><a class="el" href="classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html" title="Blocking facade that drives TossClient on a private event loop.">TossBlockingClient</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00147">147</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00149">149</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a7172d745a31967a95dc14b772189d87b" name="a7172d745a31967a95dc14b772189d87b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7172d745a31967a95dc14b772189d87b">&#9670;&#160;</a></span>AccountsHandler</h2>
@@ -263,7 +275,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for Toss account discovery. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00173">173</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00175">175</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -281,7 +293,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized bar series. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00153">153</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00155">155</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +311,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized buying-power reading. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00178">178</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00180">180</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -317,7 +329,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one trading calendar. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00168">168</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00170">170</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -335,7 +347,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for the account's commission schedule. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00182">182</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00184">184</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +365,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized order book. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00156">156</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00158">158</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +383,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized holdings snapshot. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00176">176</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00178">178</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +401,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one instrument's reference data. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00171">171</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00173">173</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +419,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one accepted Toss order instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00185">185</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00187">187</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -425,7 +437,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized order. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00191">191</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00193">193</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -443,7 +455,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized page of orders. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00188">188</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00190">190</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +473,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one instrument's price bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00159">159</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00161">161</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +491,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for several instruments quoted at once. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00165">165</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00167">167</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -497,7 +509,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one normalized quote. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00150">150</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00152">152</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +527,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for one instrument's sellable quantity. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00180">180</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00182">182</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -533,7 +545,25 @@ Friends</h2></td></tr>
 
 <p>Internal completion handler for a shared access-token refresh. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00194">194</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00196">196</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5e4fb7362627b2b35c67370cbb480c82" name="a5e4fb7362627b2b35c67370cbb480c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4fb7362627b2b35c67370cbb480c82">&#9670;&#160;</a></span>TokenResultHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a5e4fb7362627b2b35c67370cbb480c82">algotradelib::tossinvest::TossClient::TokenResultHandler</a> = net::any_completion_handler&lt;void(<a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt;<a class="el" href="structalgotradelib_1_1tossinvest_1_1TossRest.html">TossRest</a>&gt;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The completion handler type of <span class="tt"><a class="el" href="#aefb11aa7a13c5619f8c1b8d2c1678e2e" title="Requests an access token unless the held one stays valid for five more minutes, as any request does f...">async_ensure_token</a></span>. </p>
+
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00199">199</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -551,7 +581,7 @@ Friends</h2></td></tr>
 
 <p>Completion handler for recent executions. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00162">162</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00164">164</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -604,11 +634,49 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00203">203</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00208">208</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a632b0b1054a838a395f737242f76843e" name="a632b0b1054a838a395f737242f76843e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632b0b1054a838a395f737242f76843e">&#9670;&#160;</a></span>adopt_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool algotradelib::tossinvest::TossClient::adopt_token </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structalgotradelib_1_1tossinvest_1_1TossRest.html">TossRest</a></td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Uses a token issued earlier for the same key instead of requesting one. </p>
+<p>When Toss refuses the token a request carried (HTTP 401), that request fails with Toss's code and is not sent again, and the client drops the token: the next request asks for a new one, which revokes the token every other holder of it has and which <span class="tt"><a class="el" href="#ac2c70b06c93d6fc1826c3bb558decd5f" title="Returns the access token the client holds, to reuse in another client or a later process (adopt_token...">token()</a></span> then returns. The token does not identify its key, so key stored tokens by key, and discard one Toss refused. <b>The token is a bearer credential</b>: store it as carefully as the key and secret.</p>
+<p>Call it on the client's strand or before any request; on the blocking client, between calls. A blocking client given a <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">network::TokenStore</a></span> shares its token with other clients and programs without this call.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>The token. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> (nothing adopted) if the token is empty or expires within five minutes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00714">714</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ab76edd8257956f939471637ec206611d" name="ab76edd8257956f939471637ec206611d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab76edd8257956f939471637ec206611d">&#9670;&#160;</a></span>async_accounts()</h2>
 
@@ -649,7 +717,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00410">410</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00415">415</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00572">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::accounts()</a>.</p>
 
@@ -701,7 +769,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00222">222</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00227">227</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00547">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::bars()</a>.</p>
 
@@ -758,7 +826,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00431">431</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00436">436</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00586">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::buying_power()</a>.</p>
 
@@ -815,7 +883,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00245">245</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00250">250</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00481">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::calendar()</a>.</p>
 
@@ -873,7 +941,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00593">593</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00598">598</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00668">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::cancel_order()</a>.</p>
 
@@ -924,7 +992,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00475">475</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00480">480</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00613">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::commissions()</a>.</p>
 
@@ -975,9 +1043,53 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00366">366</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00371">371</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00534">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::depth()</a>.</p>
+
+</div>
+</div>
+<a id="aefb11aa7a13c5619f8c1b8d2c1678e2e" name="aefb11aa7a13c5619f8c1b8d2c1678e2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb11aa7a13c5619f8c1b8d2c1678e2e">&#9670;&#160;</a></span>async_ensure_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CompletionToken&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto algotradelib::tossinvest::TossClient::async_ensure_token </td>
+          <td>(</td>
+          <td class="paramtype">CompletionToken &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>token</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Requests an access token unless the held one stays valid for five more minutes, as any request does first, and reports the token held afterwards. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">CompletionToken</td><td>An Asio completion token. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>The completion token, called with <span class="tt"><a class="el" href="classalgotradelib_1_1Result.html" title="Either a value or a BrokerError.">Result</a>&lt;<a class="el" href="structalgotradelib_1_1tossinvest_1_1TossRest.html" title="A Toss REST access token and its expiry.">TossRest</a>&gt;</span>: a bearer credential, never to be logged. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00730">730</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1138,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00495">495</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00500">500</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00626">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::holdings()</a>.</p>
 
@@ -1077,7 +1189,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00265">265</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00270">270</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00467">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::instrument()</a>.</p>
 
@@ -1135,7 +1247,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00650">650</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00655">655</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00710">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::order_by_id()</a>.</p>
 
@@ -1188,7 +1300,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00624">624</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00629">629</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00695">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::order_history()</a>, and <a class="el" href="tossinvest_2traits_8hpp_source.html#l00681">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::working_orders()</a>.</p>
 
@@ -1247,7 +1359,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00531">531</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00536">536</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00640">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::place_order()</a>.</p>
 
@@ -1298,7 +1410,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00289">289</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00294">294</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00494">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::price_limits()</a>.</p>
 
@@ -1349,7 +1461,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00344">344</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00349">349</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00521">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::prices()</a>.</p>
 
@@ -1400,7 +1512,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00389">389</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00394">394</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00560">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::quote()</a>.</p>
 
@@ -1458,7 +1570,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00563">563</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00568">568</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00654">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::replace_order()</a>.</p>
 
@@ -1515,7 +1627,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00452">452</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00457">457</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00600">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::sellable_quantity()</a>.</p>
 
@@ -1572,7 +1684,7 @@ template&lt;typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever the completion token returns. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00314">314</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00319">319</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00508">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::trades()</a>.</p>
 
@@ -1603,7 +1715,37 @@ template&lt;typename CompletionToken&gt; </div>
 
 <p>Cancels transport work and queued HTTP operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00679">679</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00758">758</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aebe61c2a8f6cafba33b21dc59ef54092" name="aebe61c2a8f6cafba33b21dc59ef54092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe61c2a8f6cafba33b21dc59ef54092">&#9670;&#160;</a></span>forget_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void algotradelib::tossinvest::TossClient::forget_token </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Drops the held token: the next request asks for one. </p>
+<p>Call it on the client's strand or before any request; on the blocking client, between calls. </p>
+
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00753">753</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -1634,13 +1776,71 @@ template&lt;typename CompletionToken&gt; </div>
 <p>Read them on the client's strand or while no request is in progress (between calls on the blocking client).</p>
 <dl class="section return"><dt>Returns</dt><dd>The statistics, or null if the client has no rate-limit budget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00673">673</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00678">678</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00454">algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::rate_limit_stats()</a>.</p>
 
 </div>
 </div>
+<a id="ac2c70b06c93d6fc1826c3bb558decd5f" name="ac2c70b06c93d6fc1826c3bb558decd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c70b06c93d6fc1826c3bb558decd5f">&#9670;&#160;</a></span>token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1tossinvest_1_1TossRest.html">TossRest</a> algotradelib::tossinvest::TossClient::token </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the access token the client holds, to reuse in another client or a later process (<span class="tt"><a class="el" href="#a632b0b1054a838a395f737242f76843e" title="Uses a token issued earlier for the same key instead of requesting one.">adopt_token</a></span>). </p>
+<p>Toss keeps one valid token per key: issuing a token revokes the one issued before it, so programs running with the same key share one token rather than each requesting its own. <b>The token is a bearer credential</b>: store it as carefully as the key and secret.</p>
+<p>Read it on the client's strand or before any request; on the blocking client, between calls.</p>
+<dl class="section return"><dt>Returns</dt><dd>The token, empty until a request has obtained one. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00695">695</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="tossinvest_2client_8hpp_source.html#l00714">adopt_token()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00415">async_accounts()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00227">async_bars()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00436">async_buying_power()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00250">async_calendar()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00598">async_cancel_order()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00480">async_commissions()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00371">async_depth()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00730">async_ensure_token()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00500">async_holdings()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00270">async_instrument()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00655">async_order()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00629">async_orders()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00536">async_place_order()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00294">async_price_limits()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00349">async_prices()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00394">async_quote()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00568">async_replace_order()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l00457">async_sellable_quantity()</a>, and <a class="el" href="tossinvest_2client_8hpp_source.html#l00319">async_trades()</a>.</p>
+
+</div>
+</div>
 <a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="acba85f33d9789108c1196c6b95c45f7b" name="acba85f33d9789108c1196c6b95c45f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba85f33d9789108c1196c6b95c45f7b">&#9670;&#160;</a></span>TossBlockingClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class TossBlockingClient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00764">764</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ab6c7606f7309ad23b61c9a77172f39a2" name="ab6c7606f7309ad23b61c9a77172f39a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6c7606f7309ad23b61c9a77172f39a2">&#9670;&#160;</a></span>TossClientTestAccess</h2>
 
@@ -1661,7 +1861,7 @@ template&lt;typename CompletionToken&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00684">684</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l00763">763</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>

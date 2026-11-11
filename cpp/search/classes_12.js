@@ -29,5 +29,6 @@ var searchData=
   ['statedtotal_26',['StatedTotal',['../structalgotradelib_1_1runner_1_1ChargedCosts_1_1StatedTotal.html',1,'algotradelib::runner::ChargedCosts']]],
   ['steadyclock_27',['SteadyClock',['../classalgotradelib_1_1runner_1_1SteadyClock.html',1,'algotradelib::runner']]],
   ['stopsource_28',['StopSource',['../classalgotradelib_1_1runner_1_1StopSource.html',1,'algotradelib::runner']]],
-  ['strategyconformance_29',['StrategyConformance',['../structalgotradelib_1_1strategy_1_1StrategyConformance.html',1,'algotradelib::strategy']]]
+  ['storedtoken_29',['StoredToken',['../structalgotradelib_1_1network_1_1StoredToken.html',1,'algotradelib::network']]],
+  ['strategyconformance_30',['StrategyConformance',['../structalgotradelib_1_1strategy_1_1StrategyConformance.html',1,'algotradelib::strategy']]]
 ];

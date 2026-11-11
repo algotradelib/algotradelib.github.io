@@ -1,0 +1,5 @@
+<map id="algotradelib::network::TokenStore" name="algotradelib::network::TokenStore">
+<area shape="rect" id="Node000001" title="Where blocking broker clients on one key share its access token, across threads and processes." alt="" coords="5,5,166,50"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1network_1_1FileTokenStore.html" title="A TokenStore in a private folder: one token file and one lock file per identity. POSIX only; not prov..." alt="" coords="5,98,166,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,64,88,99,83,97,84,68"/>
+</map>

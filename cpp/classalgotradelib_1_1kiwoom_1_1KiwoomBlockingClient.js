@@ -1,7 +1,8 @@
 var classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient =
 [
-    [ "KiwoomBlockingClient", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#ab3775b99b9a783823a0b35b695146840", null ],
+    [ "KiwoomBlockingClient", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a8752618d230cac6a6636cefbfc83e094", null ],
     [ "accounts", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a8c19cce53b5380ede8d58dc99cc836d4", null ],
+    [ "adopt_token", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a0b5be23f1a47696f6251dd92faba7e71", null ],
     [ "bars", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a7c29f5ebe81e0008043b77cc169d789c", null ],
     [ "buying_power", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a3a0afff65693062745fe1dc332c3f940", null ],
     [ "cancel_order", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a7a5b6f4f1bb5ab2b28d01c85fc71a235", null ],
@@ -19,5 +20,6 @@ var classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient =
     [ "quote", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a89be4d5756cf139350be0376afc30310", null ],
     [ "rate_limit_stats", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a2c3e6dc7a6efbae51986153c9c49fec6", null ],
     [ "replace_order", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a4121dfd38f62334cffed031c4c7ab062", null ],
+    [ "token", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a4462e0f486040d1c6b71980deb1713ed", null ],
     [ "trades", "classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html#a0bc49a76e5c0d5accb6bd7e517f65f88", null ]
 ];

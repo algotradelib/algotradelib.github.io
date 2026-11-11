@@ -12,6 +12,7 @@ var classalgotradelib_1_1kis_1_1KisClient =
     [ "PriceLimitsHandler", "classalgotradelib_1_1kis_1_1KisClient.html#a7376c4eeb697f23610eddfdb17cb4afb", null ],
     [ "QuoteHandler", "classalgotradelib_1_1kis_1_1KisClient.html#a275451050828a2a5046489f8e2e1130f", null ],
     [ "TokenHandler", "classalgotradelib_1_1kis_1_1KisClient.html#a1d2f4d00d8a8254811b666aa7e5a1ba1", null ],
+    [ "TokenResultHandler", "classalgotradelib_1_1kis_1_1KisClient.html#acbd56431434ca74c8cf4e0cd4ea4c9e4", null ],
     [ "TradesHandler", "classalgotradelib_1_1kis_1_1KisClient.html#ab48d245aa76db2dc47bbda5ec7eadf41", null ],
     [ "KisClient", "classalgotradelib_1_1kis_1_1KisClient.html#a9622f518815c7c1dcd28334b3fe7680e", null ],
     [ "adopt_token", "classalgotradelib_1_1kis_1_1KisClient.html#a88858cbd9deb4d42c441bd44ff8b647e", null ],
@@ -20,6 +21,7 @@ var classalgotradelib_1_1kis_1_1KisClient =
     [ "async_calendar", "classalgotradelib_1_1kis_1_1KisClient.html#a38a6a12fecfdc4219dcbebcb26b3b437", null ],
     [ "async_cancel_order", "classalgotradelib_1_1kis_1_1KisClient.html#a4fe7f03592ca78351a56a6783d256c18", null ],
     [ "async_depth", "classalgotradelib_1_1kis_1_1KisClient.html#ae7d7a2ab2388e3047729bca7cf9720a1", null ],
+    [ "async_ensure_token", "classalgotradelib_1_1kis_1_1KisClient.html#a3fd9e65bf30601fe32bfd0f92c9f4a94", null ],
     [ "async_holdings", "classalgotradelib_1_1kis_1_1KisClient.html#a8f582c88b14e2afe9ac5ce1213d0ea24", null ],
     [ "async_instrument", "classalgotradelib_1_1kis_1_1KisClient.html#ac763e5347ea611c958a32c86c59db36a", null ],
     [ "async_open_orders", "classalgotradelib_1_1kis_1_1KisClient.html#a9d37e6770eee74342097baa730eb6746", null ],
@@ -30,6 +32,7 @@ var classalgotradelib_1_1kis_1_1KisClient =
     [ "async_replace_order", "classalgotradelib_1_1kis_1_1KisClient.html#acb2a70554d9429d84a701feed05f7fba", null ],
     [ "async_trades", "classalgotradelib_1_1kis_1_1KisClient.html#a8096286f6ac9afcd16e183d3ac043253", null ],
     [ "close", "classalgotradelib_1_1kis_1_1KisClient.html#a32efd31f0cbd998c020d1504890cf896", null ],
+    [ "forget_token", "classalgotradelib_1_1kis_1_1KisClient.html#ae927ad99f3f6d2db80a69a4bd56abac6", null ],
     [ "rate_limit_stats", "classalgotradelib_1_1kis_1_1KisClient.html#a9682843f0571814f2844fdcd4512014d", null ],
     [ "token", "classalgotradelib_1_1kis_1_1KisClient.html#a31e4eb0c948bdc20e51e0d724fc3a794", null ]
 ];

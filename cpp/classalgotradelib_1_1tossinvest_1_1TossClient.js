@@ -16,8 +16,10 @@ var classalgotradelib_1_1tossinvest_1_1TossClient =
     [ "QuoteHandler", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a99189a55691472eb96f79e6128738c57", null ],
     [ "SellableQuantityHandler", "classalgotradelib_1_1tossinvest_1_1TossClient.html#ad9631b0dc45c2dcf4ae1dcf272abfde0", null ],
     [ "TokenHandler", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a0de998e666b5d977def25144b43d7c59", null ],
+    [ "TokenResultHandler", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a5e4fb7362627b2b35c67370cbb480c82", null ],
     [ "TradesHandler", "classalgotradelib_1_1tossinvest_1_1TossClient.html#afc44b2af03cbb980616ca52a1231ee07", null ],
     [ "TossClient", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a49a5c9cb7ab33a874b0fc0c2257a84b1", null ],
+    [ "adopt_token", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a632b0b1054a838a395f737242f76843e", null ],
     [ "async_accounts", "classalgotradelib_1_1tossinvest_1_1TossClient.html#ab76edd8257956f939471637ec206611d", null ],
     [ "async_bars", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a7d82280c07e15c674f03512f26dd5fdf", null ],
     [ "async_buying_power", "classalgotradelib_1_1tossinvest_1_1TossClient.html#ad3db27f21c037da1a0c1e33f67bb61d3", null ],
@@ -25,6 +27,7 @@ var classalgotradelib_1_1tossinvest_1_1TossClient =
     [ "async_cancel_order", "classalgotradelib_1_1tossinvest_1_1TossClient.html#ac28c248c52cc005bf17f05c44a970836", null ],
     [ "async_commissions", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a03952ef049a133d53d2590d727d7710c", null ],
     [ "async_depth", "classalgotradelib_1_1tossinvest_1_1TossClient.html#ac72084bc474f111c45c0b5b5488436b2", null ],
+    [ "async_ensure_token", "classalgotradelib_1_1tossinvest_1_1TossClient.html#aefb11aa7a13c5619f8c1b8d2c1678e2e", null ],
     [ "async_holdings", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a8bc482dc528fb4f87c62765a627b4828", null ],
     [ "async_instrument", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a05366c06e23c57ab1ea8bf126d9990bc", null ],
     [ "async_order", "classalgotradelib_1_1tossinvest_1_1TossClient.html#af103f4fb3d5bad4771d6a56c35b9d372", null ],
@@ -37,5 +40,7 @@ var classalgotradelib_1_1tossinvest_1_1TossClient =
     [ "async_sellable_quantity", "classalgotradelib_1_1tossinvest_1_1TossClient.html#afb2b5b9aa059a0f61d6eb0296a231b39", null ],
     [ "async_trades", "classalgotradelib_1_1tossinvest_1_1TossClient.html#a316201fe0a01b30216738d2fa65db1af", null ],
     [ "close", "classalgotradelib_1_1tossinvest_1_1TossClient.html#ac10e2956d7a308ec87ee53255db0cee5", null ],
-    [ "rate_limit_stats", "classalgotradelib_1_1tossinvest_1_1TossClient.html#adceebf94abea9f1978c5ae6b54deea3a", null ]
+    [ "forget_token", "classalgotradelib_1_1tossinvest_1_1TossClient.html#aebe61c2a8f6cafba33b21dc59ef54092", null ],
+    [ "rate_limit_stats", "classalgotradelib_1_1tossinvest_1_1TossClient.html#adceebf94abea9f1978c5ae6b54deea3a", null ],
+    [ "token", "classalgotradelib_1_1tossinvest_1_1TossClient.html#ac2c70b06c93d6fc1826c3bb558decd5f", null ]
 ];

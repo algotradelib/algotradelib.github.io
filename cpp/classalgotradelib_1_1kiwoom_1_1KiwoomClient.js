@@ -14,14 +14,17 @@ var classalgotradelib_1_1kiwoom_1_1KiwoomClient =
     [ "PriceLimitsHandler", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a442b30d03fed8c7bcdb3858620bda999", null ],
     [ "QuoteHandler", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#abaae986a34fe36616f2fb00e9193980a", null ],
     [ "TokenHandler", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a75e0b0e51f00583f5881d36b31b504d8", null ],
+    [ "TokenResultHandler", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a6dca6f86472b0b977fe6f76550ee1155", null ],
     [ "TradesHandler", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a586401e614b491cc90e3becde8c368ac", null ],
     [ "KiwoomClient", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#ae181a62bf65e937ea88755bad29ffea6", null ],
+    [ "adopt_token", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a387b1d9c34a9fb1d0a00dfa7a6ce3a60", null ],
     [ "async_accounts", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#ac5a3551f694f8b5a712cc1d367b8d506", null ],
     [ "async_bars", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#ab54a5d6b4fa7d334020f6e21a5d69e5c", null ],
     [ "async_buying_power", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a1885a7d9f7653f7f5bbb4762e1bd4ba0", null ],
     [ "async_cancel_order", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a66145d989f9e21d02bc23dbaec750089", null ],
     [ "async_deposit", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#aa3ae44fb36c722f202550fd47acae97e", null ],
     [ "async_depth", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a19a5dc35fd759d8cd3d1a4ee8e4ba92c", null ],
+    [ "async_ensure_token", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a3da5946f1f245b036c53bad698f2b5a3", null ],
     [ "async_holdings", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#ad8e747d3e22bc47444d3671a55377159", null ],
     [ "async_instrument", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a00a9f823790cbb0fa53eca83340354d3", null ],
     [ "async_open_orders", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a36d2d5bccbc6a3eec0effcde7234a7fb", null ],
@@ -34,6 +37,8 @@ var classalgotradelib_1_1kiwoom_1_1KiwoomClient =
     [ "async_trades", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#af87465da0adc2d44cd67e36db34d71df", null ],
     [ "close", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a00726f4c79810f45e851e3aaa7cc164a", null ],
     [ "config", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#aae42da009a97e7601a2c73f853b5f785", null ],
+    [ "forget_token", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a61cd3c80a27d49e8306d0f514249cc93", null ],
     [ "get_executor", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#ab8a45ee94c5a681df7c0c3cb406d9118", null ],
-    [ "rate_limit_stats", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#add7b92cb79aa9c7d0c302cf6c56d02d1", null ]
+    [ "rate_limit_stats", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#add7b92cb79aa9c7d0c302cf6c56d02d1", null ],
+    [ "token", "classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a4c81104c0f9978a5f938d69fcdf7330b", null ]
 ];

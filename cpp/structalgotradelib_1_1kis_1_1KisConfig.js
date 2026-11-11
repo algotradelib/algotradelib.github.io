@@ -9,6 +9,7 @@ var structalgotradelib_1_1kis_1_1KisConfig =
     [ "rest_host", "structalgotradelib_1_1kis_1_1KisConfig.html#ad7d716015a33763ec772e88b5505c159", null ],
     [ "rest_port", "structalgotradelib_1_1kis_1_1KisConfig.html#ad680c3f57a89487c559836b09c9b903f", null ],
     [ "secret_field", "structalgotradelib_1_1kis_1_1KisConfig.html#a9025b90a32a85c20fa1a8e7c57219755", null ],
+    [ "token_identity", "structalgotradelib_1_1kis_1_1KisConfig.html#a067133f2cdbaec559817cdf12f99af8e", null ],
     [ "ws_host", "structalgotradelib_1_1kis_1_1KisConfig.html#ae9b3627863aa73bb7c97fed7c8ed95f3", null ],
     [ "ws_port", "structalgotradelib_1_1kis_1_1KisConfig.html#a23c42a07aea6493f08a1c0017357114e", null ],
     [ "ws_to_jsonbody", "structalgotradelib_1_1kis_1_1KisConfig.html#ab0f55dc426ce93f5e11ec913979644a9", null ],

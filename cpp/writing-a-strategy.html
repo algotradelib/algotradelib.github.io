@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('writing-a-stra
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1TargetPosition_html_aba87213d9d38df80a8acdc461fed9784"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1TargetPosition.html#aba87213d9d38df80a8acdc461fed9784">algotradelib::strategy::TargetPosition::tag_</a></div><div class="ttdeci">std::string tag_</div><div class="ttdoc">A label carried to the orders and their fills.</div><div class="ttdef"><b>Definition</b> <a href="intent_8hpp_source.html#l00459">intent.hpp:459</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1strategy_1_1TargetPosition_html_ae565dabdeae9c37992ee6ae25c0693f6"><div class="ttname"><a href="structalgotradelib_1_1strategy_1_1TargetPosition.html#ae565dabdeae9c37992ee6ae25c0693f6">algotradelib::strategy::TargetPosition::target_quantity_</a></div><div class="ttdeci">Decimal64 target_quantity_</div><div class="ttdoc">The position to hold, signed: negative is short, and zero means flat.</div><div class="ttdef"><b>Definition</b> <a href="intent_8hpp_source.html#l00455">intent.hpp:455</a></div></div>
 </div><!-- fragment --><p>That is a complete strategy. Every handler is optional, so a strategy reacting only to bars writes only <span class="tt">on_bar</span> and costs nothing for the rest.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md115"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md116"></a>
 The handlers</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -271,13 +271,13 @@ Several instruments at once: <span class="tt">on_bars</span></h1>
 <li><b>A source of your own</b> calls <span class="tt">Runner::record</span> for each bar of a period, then <span class="tt">Runner::feed(const BarSlice&amp;)</span>; <span class="tt">Runner::feed(const BarEvent&amp;)</span> does not compile for such a strategy, so a path still feeding single bars cannot skip it.</li>
 <li><b>Without a linear algebra backend</b> there is no cache: the slice is what the strategy has.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md116"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md117"></a>
 Emit a target, not an order</h1>
 <p>Every strategy this library ships states a position: <span class="tt">TargetPosition</span>, or — for <span class="tt">EqualWeightRebalance</span> — an <span class="tt">OrderIntent</span> sized by <span class="tt">SizeSpec::target_weight</span>, which the runner plans as the position the weight states. Do the same unless you have a reason not to, and the reason is this:</p>
 <p>A strategy that emits orders has to remember whether it already entered. After a restart it does not know, so it either misses an exit or re-enters a position it already holds. Worse, it double-sizes after a partial fill: the signal still says "hold 100", forty are filled and sixty are still working, and sizing against the position alone asks for sixty more on top of the sixty already in the market.</p>
 <p>Stating the position you want leaves that arithmetic to reconciliation, which can see the portfolio <em>and</em> the orders already working. <span class="tt">BuyAndHold</span> never trades twice while remembering nothing at all, because once the position matches, reconciliation produces nothing.</p>
 <p>Use <span class="tt">OrderIntent</span> when you genuinely mean "trade this much" rather than "hold this much" — and accept that the sizing is then yours. The one exception is a weight: <span class="tt">SizeSpec::target_weight</span> means "hold this fraction", so a weight-sized buy intent is planned as a target and diffed against the portfolio (a sell, a trigger, a non-day validity or an idempotency key on one is refused). It needs a portfolio value, which a replay supplies and a live runner does not unless you set <span class="tt">Runner::set_portfolio_value</span>. It stays an intent, though: withheld for the account it is dropped rather than kept for later as a <span class="tt">TargetPosition</span> would be, and refused for the market phase (or because the broker could not be reached, or turned it away for its rate limit) it is kept as an intent is, with the check an intent gets at release.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md117"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md118"></a>
 What the context gives you</h1>
 <p>Every read is from a cache the runner has already filled, so a handler never blocks and never issues a request:</p>
 <ul>
@@ -293,7 +293,7 @@ What the context gives you</h1>
 <li><span class="tt">ctx.cancel(ref)</span> — take the reference from <span class="tt">ctx.portfolio().working_</span> with <span class="tt">auto</span>, and your source still names no broker.</li>
 </ul>
 <p>The queue preserves order, because a cancellation followed by a target means something different from the reverse.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md118"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md119"></a>
 Prices</h1>
 <p>A limit price must be a <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1Price.html" title="A price known to be on its instrument&#39;s tick grid.">strategy::Price</a></span>, and a <span class="tt">Price</span> has no public constructor. The only routes in validate against the instrument's grid:</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> reference = ctx.instrument(bar.instrument_);</div>
@@ -309,7 +309,7 @@ Prices</h1>
 <div class="ttc" id="aclassalgotradelib_1_1strategy_1_1Price_html_add1fd39131ded06ae2c3ca819826d421"><div class="ttname"><a href="classalgotradelib_1_1strategy_1_1Price.html#add1fd39131ded06ae2c3ca819826d421">algotradelib::strategy::Price::rounded</a></div><div class="ttdeci">static std::optional&lt; Price &gt; rounded(const Decimal64 &amp;value, const PriceRule &amp;rule, OrderSide side)</div><div class="ttdoc">Makes a price by rounding a value onto the grid, in the order&#39;s favour.</div><div class="ttdef"><b>Definition</b> <a href="intent_8hpp_source.html#l00057">intent.hpp:57</a></div></div>
 </div><!-- fragment --><p><span class="tt">rounded</span> moves a price onto the grid in the direction that cannot cross your intent — a buy rounds down, a sell rounds up — so rounding never makes a limit more aggressive than you asked for. <span class="tt">checked</span> accepts a price already on the grid. Both return <span class="tt">std::nullopt</span> when the instrument's ladder is unknown, which is the honest answer: a guessed tick is an order the exchange rejects at best.</p>
 <p>Computing a price from an indicator? Cross the boundary once, through <span class="tt">analytics::round_scalar_to_tick</span>, and hand the exact result to <span class="tt">Price::checked</span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md119"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md120"></a>
 Warm-up</h1>
 <p>Live, a cold start shows your handlers the whole history it reads — every instrument's bars merged in time order, as a replay feeds them — and sends only what they decide on the newest bar of each instrument; everything before it is warm-up, discarded and counted (see "Running a strategy live"). So write handlers that can state, on any single bar, what should be held — a level — rather than ones that act only on the bar where something crossed. Beyond that, state your requirement and honour it:</p>
 <div class="fragment"><div class="line">std::size_t warmup_bars()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> params_.window_ + 1; }</div>
@@ -330,7 +330,7 @@ Warm-up</h1>
 <div class="line">}</div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_1_1vanilla_html_a424223bc95cfda5f57c23dba6b8c940f"><div class="ttname"><a href="namespacealgotradelib_1_1strategy_1_1vanilla.html#a424223bc95cfda5f57c23dba6b8c940f">algotradelib::strategy::vanilla::trailing</a></div><div class="ttdeci">std::optional&lt; math::SeriesView &gt; trailing(math::SeriesView values, std::size_t count)</div><div class="ttdoc">Returns the last count + 1 rows of a series.</div><div class="ttdef"><b>Definition</b> <a href="signal_8hpp_source.html#l00145">signal.hpp:145</a></div></div>
 </div><!-- fragment --><p>Two habits in that snippet are worth copying. <b>Slice before computing</b>: an indicator over the whole cache is <span class="tt">O(rows × window)</span> per bar, and you need only the last value or two, so <span class="tt">trailing(...)</span> keeps the per-bar cost from growing with the cache. And <b>test observability rather than a value</b>: <span class="tt">math::observed()</span> is false for the warm-up (<span class="tt">missing()</span>) <em>and</em> for a window with no dispersion (<span class="tt">undefined()</span>), where a z-score genuinely does not exist. <span class="tt">math::is_undefined()</span> separates those two if you care.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md120"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md121"></a>
 Reaching a broker-specific feature</h1>
 <p>Under a capability gate, so the broker-specific path is visible and compiled only where it exists:</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> Ctx&gt;</div>
@@ -344,7 +344,7 @@ Reaching a broker-specific feature</h1>
 <div class="line">}</div>
 <div class="ttc" id="aclassalgotradelib_1_1strategy_1_1OrderIntent_html_ade48d3ba127c28eff909e503a1e98f76"><div class="ttname"><a href="classalgotradelib_1_1strategy_1_1OrderIntent.html#ade48d3ba127c28eff909e503a1e98f76">algotradelib::strategy::OrderIntent::market</a></div><div class="ttdeci">static OrderIntent market(InstrumentId instrument, OrderSide side, SizeSpec size, TimeInForce time_in_force=TimeInForce::DAY)</div><div class="ttdoc">Makes a market order, which carries no price.</div><div class="ttdef"><b>Definition</b> <a href="intent_8hpp_source.html#l00318">intent.hpp:318</a></div></div>
 </div><!-- fragment --><p><span class="tt"><a class="el" href="concept_8hpp.html#acdb78967260163c74c8853d3e6d665bf" title="Asserts at compile time that S is a strategy a runner with context Ctx can drive.">ATL_ASSERT_STRATEGY(MyStrategy, strategy::FullContext)</a></span> and <span class="tt">(MyStrategy, <a class="el" href="namespacealgotradelib_1_1strategy.html#a2dbe0bb2bf68d1e254ef0bc044d5a399" title="A probe context whose broker implements nothing optional.">strategy::MinimalContext</a>)</span> compile <b>both</b> branches, since the assertion compiles the handler bodies for the context it names: one stub has every capability present and the other none. A key attached for a broker that accepts none is refused rather than dropped: dropping it would make a retry look safe on a broker offering no such guarantee.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md121"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md122"></a>
 What you do not have to handle</h1>
 <p>These live in the runner, once, and restating them in a strategy is how they get restated inconsistently:</p>
 <ul>

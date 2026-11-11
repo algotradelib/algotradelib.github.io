@@ -10,6 +10,7 @@ var structalgotradelib_1_1kiwoom_1_1KiwoomConfig =
     [ "rest_port", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a39e388c06df22470e2e0ddd28270a115", null ],
     [ "secret_field", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a39c81036079eb81bd1241a0520194d09", null ],
     [ "tape_symbol", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a8ebb7a55f863c52ffcccac94b5bd1ea5", null ],
+    [ "token_identity", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#aa61badb670af5a5bde0790a95dd13a62", null ],
     [ "ws_host", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a442992e98f88f49cc1ac87e40c5cbef7", null ],
     [ "ws_port", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a92fcfd7525b441127c55d3a2670c23f1", null ],
     [ "holdings_position_scope_", "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#a52f50f807e1b1d4281a73fbc7a4b820d", null ],

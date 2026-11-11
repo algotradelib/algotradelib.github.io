@@ -1,7 +1,8 @@
 var classalgotradelib_1_1tossinvest_1_1TossBlockingClient =
 [
-    [ "TossBlockingClient", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a25e75bb86430088629c88b96fbce6f7f", null ],
+    [ "TossBlockingClient", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a6f27184fab84f68d31f0d06cbd8783a6", null ],
     [ "accounts", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#af069f766127751c602ff8489c440a2bb", null ],
+    [ "adopt_token", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#ad20f25a0840da7ee8d10586192daa7b2", null ],
     [ "bars", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#af1485a9b805c593d6748b816e7d59e20", null ],
     [ "buying_power", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a1da88421eefcd9a816ecd6b27da15833", null ],
     [ "calendar", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#af7d7e3c38555c800efb2cc7e3ce53c2a", null ],
@@ -19,5 +20,6 @@ var classalgotradelib_1_1tossinvest_1_1TossBlockingClient =
     [ "rate_limit_stats", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a2bd27b4630d299ed55af91312badfe8d", null ],
     [ "replace_order", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a01c395cc891b1f7eb9aa0ea0c99cbdb6", null ],
     [ "sellable_quantity", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#a3492cd2a02e8506d06ada7faa51069a9", null ],
+    [ "token", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#afb2a26da3a985acc350243cfd3a75ec9", null ],
     [ "trades", "classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#ae65b52dc64672caa1469d6ee42d76d95", null ]
 ];

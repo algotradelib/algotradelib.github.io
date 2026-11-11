@@ -135,6 +135,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A rate limiter (the generic cell rate algorithm) that computes when a request may go; it neither waits nor reads the clock itself.  <a href="classalgotradelib_1_1network_1_1BasicRateLimitBucket.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ClientCredentials" id="r_ClientCredentials"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html">ClientCredentials</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OAuth client credentials (an app key and secret), the base of each broker's credentials class.  <a href="classalgotradelib_1_1network_1_1ClientCredentials.html#details">More...</a><br /></td></tr>
+<tr class="memitem:FileTokenStore" id="r_FileTokenStore"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1FileTokenStore.html">FileTokenStore</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">TokenStore</a></span> in a private folder: one token file and one lock file per identity. POSIX only; not provided on Windows.  <a href="classalgotradelib_1_1network_1_1FileTokenStore.html#details">More...</a><br /></td></tr>
 <tr class="memitem:HttpClient" id="r_HttpClient"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1HttpClient.html">HttpClient</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A blocking HTTP/1.1 client over TLS that keeps one connection to one host.  <a href="classalgotradelib_1_1network_1_1HttpClient.html#details">More...</a><br /></td></tr>
 <tr class="memitem:HttpClientOptions" id="r_HttpClientOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html">HttpClientOptions</a></td></tr>
@@ -149,6 +151,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A rate limiter's counters for one traffic class.  <a href="structalgotradelib_1_1network_1_1RateLimitGroupStats.html#details">More...</a><br /></td></tr>
 <tr class="memitem:RateLimitStats" id="r_RateLimitStats"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1network_1_1RateLimitStats.html">RateLimitStats</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A rate limiter's counters per traffic class, its current budget, and the broker's refusals (from <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1RateLimitController.html#a936a464832d76aaece4e4cce665e30a2" title="Returns the counters.">RateLimitController::stats</a></span>).  <a href="structalgotradelib_1_1network_1_1RateLimitStats.html#details">More...</a><br /></td></tr>
+<tr class="memitem:StoredToken" id="r_StoredToken"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1network_1_1StoredToken.html">StoredToken</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An access token as a <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">TokenStore</a></span> keeps it.  <a href="structalgotradelib_1_1network_1_1StoredToken.html#details">More...</a><br /></td></tr>
+<tr class="memitem:TokenStore" id="r_TokenStore"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html">TokenStore</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where blocking broker clients on one key share its access token, across threads and processes.  <a href="classalgotradelib_1_1network_1_1TokenStore.html#details">More...</a><br /></td></tr>
 <tr class="memitem:WebSocketSessionBase" id="r_WebSocketSessionBase"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html">WebSocketSessionBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base of the WebSocket clients <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WsSession.html" title="A WebSocket client over plain TCP (no TLS); derive from it and override on_message.">WsSession</a></span> and <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1WssSession.html" title="A WebSocket client over TLS; derive from it and override on_message.">WssSession</a></span>: connecting, sending, receiving, closing and reconnecting.  <a href="classalgotradelib_1_1network_1_1WebSocketSessionBase.html#details">More...</a><br /></td></tr>
 <tr class="memitem:WebSocketSessionOptions" id="r_WebSocketSessionOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1network_1_1WebSocketSessionOptions.html">WebSocketSessionOptions</a></td></tr>
@@ -198,6 +204,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa4013419d865995b72fa61b0373d1b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a traffic class's index, for per-class arrays.  <br /></td></tr>
 <tr class="memitem:a3acbcbad72597790e84e409ed51ff185" id="r_a3acbcbad72597790e84e409ed51ff185"><td class="memItemLeft">constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a3acbcbad72597790e84e409ed51ff185">usable_burst</a> (const <a class="el" href="structalgotradelib_1_1network_1_1RateLimitBudget.html">RateLimitBudget</a> &amp;budget, <a class="el" href="#a083ad43ca671110d78741e3c5b113940">RateLimitGroup</a> group) noexcept</td></tr>
 <tr class="memdesc:a3acbcbad72597790e84e409ed51ff185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how much of the burst a traffic class may use.  <br /></td></tr>
+<tr class="memitem:a1c24c399fbd813807516d07e394802f5" id="r_a1c24c399fbd813807516d07e394802f5"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1c24c399fbd813807516d07e394802f5">token_store_error</a> (std::string_view reason)</td></tr>
+<tr class="memdesc:a1c24c399fbd813807516d07e394802f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a store's error: <span class="tt">AUTHENTICATION</span>, not sent to the broker, code <span class="tt">token_store</span>.  <br /></td></tr>
+<tr class="memitem:a8323be68f758bbb2d125e787e225fd46" id="r_a8323be68f758bbb2d125e787e225fd46"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8323be68f758bbb2d125e787e225fd46">token_unusable_error</a> ()</td></tr>
+<tr class="memdesc:a8323be68f758bbb2d125e787e225fd46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the error of a call whose token stopped being usable while it ran on a client with a store: <span class="tt">AUTHENTICATION</span>, not sent to the broker, code <span class="tt">token_unusable</span>. The next call prepares a token.  <br /></td></tr>
+<tr class="memitem:af17ce4ff5e562bef05e1ccf68f70b9d5" id="r_af17ce4ff5e562bef05e1ccf68f70b9d5"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#af17ce4ff5e562bef05e1ccf68f70b9d5">token_identity</a> (std::string_view broker, std::string_view environment, std::string_view key)</td></tr>
+<tr class="memdesc:af17ce4ff5e562bef05e1ccf68f70b9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names what a token may not outlive: the broker, the environment and the app key.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -538,6 +550,125 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00157">157</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00157">shutdown_ssl_stream()</a>.</p>
+
+</div>
+</div>
+<a id="af17ce4ff5e562bef05e1ccf68f70b9d5" name="af17ce4ff5e562bef05e1ccf68f70b9d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af17ce4ff5e562bef05e1ccf68f70b9d5">&#9670;&#160;</a></span>token_identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string algotradelib::network::token_identity </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>broker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>environment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Names what a token may not outlive: the broker, the environment and the app key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">broker</td><td>The broker, such as <span class="tt"><a class="el" href="namespacealgotradelib_1_1kis.html" title="The Korea Investment &amp; Securities (KIS) Open API client.">kis</a></span>. </td></tr>
+    <tr><td class="paramname">environment</td><td>The environment, such as <span class="tt">demo</span> or <span class="tt">real</span>. </td></tr>
+    <tr><td class="paramname">key</td><td>The app key; only its SHA-256 digest appears. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">&lt;broker&gt;-&lt;environment&gt;-&lt;64 hexadecimal digits&gt;</span>, or empty if the digest fails (no store accepts it). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="token__store_8hpp_source.html#l00123">123</a> of file <a class="el" href="token__store_8hpp_source.html">token_store.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="kis_2config_8hpp_source.html#l00235">algotradelib::kis::KisConfig::token_identity()</a>, <a class="el" href="kiwoom_2config_8hpp_source.html#l00336">algotradelib::kiwoom::KiwoomConfig::token_identity()</a>, <a class="el" href="token__store_8hpp_source.html#l00123">token_identity()</a>, and <a class="el" href="tossinvest_2config_8hpp_source.html#l00114">algotradelib::tossinvest::TossConfig::token_identity()</a>.</p>
+
+</div>
+</div>
+<a id="a1c24c399fbd813807516d07e394802f5" name="a1c24c399fbd813807516d07e394802f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c24c399fbd813807516d07e394802f5">&#9670;&#160;</a></span>token_store_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a> algotradelib::network::token_store_error </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>reason</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a store's error: <span class="tt">AUTHENTICATION</span>, not sent to the broker, code <span class="tt">token_store</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>Fixed text; never a token, a file's contents or another error's message. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="token__store_8hpp_source.html#l00093">93</a> of file <a class="el" href="token__store_8hpp_source.html">token_store.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="file__token__store_8hpp_source.html#l00059">algotradelib::network::FileTokenStore::lock()</a>, and <a class="el" href="token__store_8hpp_source.html#l00093">token_store_error()</a>.</p>
+
+</div>
+</div>
+<a id="a8323be68f758bbb2d125e787e225fd46" name="a8323be68f758bbb2d125e787e225fd46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8323be68f758bbb2d125e787e225fd46">&#9670;&#160;</a></span>token_unusable_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a> algotradelib::network::token_unusable_error </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the error of a call whose token stopped being usable while it ran on a client with a store: <span class="tt">AUTHENTICATION</span>, not sent to the broker, code <span class="tt">token_unusable</span>. The next call prepares a token. </p>
+<dl class="section return"><dt>Returns</dt><dd>The error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="token__store_8hpp_source.html#l00107">107</a> of file <a class="el" href="token__store_8hpp_source.html">token_store.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="token__store_8hpp_source.html#l00107">token_unusable_error()</a>.</p>
 
 </div>
 </div>
