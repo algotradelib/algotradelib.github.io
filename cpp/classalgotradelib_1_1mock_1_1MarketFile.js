@@ -1,7 +1,7 @@
 var classalgotradelib_1_1mock_1_1MarketFile =
 [
     [ "MarketFile", "classalgotradelib_1_1mock_1_1MarketFile.html#ae8c8359e49fe7b83d0c26d165a3d84ae", null ],
-    [ "~MarketFile", "classalgotradelib_1_1mock_1_1MarketFile.html#aa999c780b1eaee69c3b13ef117b611df", null ],
+    [ "~MarketFile", "classalgotradelib_1_1mock_1_1MarketFile.html#ac981204b796b5efc06dbfe762805c729", null ],
     [ "failed", "classalgotradelib_1_1mock_1_1MarketFile.html#ae9bd11023b557592c7db146eb060eafd", null ],
     [ "market", "classalgotradelib_1_1mock_1_1MarketFile.html#a8e47fe872ec462bff89b3dbacf6c0244", null ],
     [ "market", "classalgotradelib_1_1mock_1_1MarketFile.html#ad089a831a44d34285f8d15858288cd10", null ],

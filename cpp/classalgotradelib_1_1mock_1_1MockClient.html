@@ -168,7 +168,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The mock broker's client: blocking, answering from a <span class="tt"><a class="el" href="classalgotradelib_1_1mock_1_1Market.html" title="A market in memory: bars the caller gives, a clock the caller moves, one account&#39;s cash,...">Market</a></span>, after any faults scripted for the call. </p>
 <p>Bind it like any blocking client, <span class="tt"><a class="el" href="classalgotradelib_1_1BlockingSession.html" title="A blocking broker client bound to one account, with the same broker operations as BrokerSession,...">BlockingSession</a>&lt;<a class="el" href="classalgotradelib_1_1mock_1_1MockClient.html" title="The mock broker&#39;s client: blocking, answering from a Market, after any faults scripted for the call.">MockClient</a>&gt;(std::make_shared&lt;<a class="el" href="classalgotradelib_1_1mock_1_1MockClient.html" title="The mock broker&#39;s client: blocking, answering from a Market, after any faults scripted for the call.">MockClient</a>&gt;(<a class="el" href="#a32ba152240ab6c05f0c9a4b72c0b6adc" title="Returns the market.">market</a>),
-<a class="el" href="structalgotradelib_1_1mock_1_1MockAccount.html" title="The mock broker&#39;s one account; it has no selector.">MockAccount</a>{})</span>. Nothing leaves the process; <span class="tt"><a class="el" href="#a8a069e022004c113c0d150ae3dfe1b69" title="Returns the environment this client trades in.">environment</a></span> is <span class="tt">"paper"</span>. </p>
+<a class="el" href="structalgotradelib_1_1mock_1_1MockAccount.html" title="The mock broker&#39;s one account; it has no selector.">MockAccount</a>{})</span>. Nothing leaves the process; <span class="tt"><a class="el" href="#a8a069e022004c113c0d150ae3dfe1b69" title="Returns the environment this client trades in.">environment</a></span> is <span class="tt">"<a class="el" href="namespacealgotradelib_1_1mock.html" title="The mock broker: an in-memory market over bars the caller gives, bound like any broker.">mock</a>"</span>. </p>
 
 <p class="definition">Definition at line <a class="el" href="mock_2client_8hpp_source.html#l00053">53</a> of file <a class="el" href="mock_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -384,7 +384,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the environment this client trades in. </p>
-<dl class="section return"><dt>Returns</dt><dd>Always <span class="tt">"paper"</span>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Always <span class="tt">"<a class="el" href="namespacealgotradelib_1_1mock.html" title="The mock broker: an in-memory market over bars the caller gives, bound like any broker.">mock</a>"</span>. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mock_2client_8hpp_source.html#l00065">65</a> of file <a class="el" href="mock_2client_8hpp_source.html">client.hpp</a>.</p>
 

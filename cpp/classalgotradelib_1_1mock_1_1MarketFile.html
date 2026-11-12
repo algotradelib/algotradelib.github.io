@@ -131,8 +131,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classalgotrade
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8c8359e49fe7b83d0c26d165a3d84ae" id="r_ae8c8359e49fe7b83d0c26d165a3d84ae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae8c8359e49fe7b83d0c26d165a3d84ae">MarketFile</a> (std::string path, std::vector&lt; <a class="el" href="structalgotradelib_1_1BarSeries.html">BarSeries</a> &gt; bars, <a class="el" href="structalgotradelib_1_1mock_1_1MarketSettings.html">MarketSettings</a> settings, std::vector&lt; <a class="el" href="structalgotradelib_1_1Instrument.html">Instrument</a> &gt; instruments={})</td></tr>
 <tr class="memdesc:ae8c8359e49fe7b83d0c26d165a3d84ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens or creates the file, replays it into a market built as <span class="tt"><a class="el" href="classalgotradelib_1_1mock_1_1Market.html" title="A market in memory: bars the caller gives, a clock the caller moves, one account&#39;s cash,...">Market</a></span>'s constructor builds one, and takes its lock.  <br /></td></tr>
-<tr class="memitem:aa999c780b1eaee69c3b13ef117b611df" id="r_aa999c780b1eaee69c3b13ef117b611df"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa999c780b1eaee69c3b13ef117b611df">~MarketFile</a> ()</td></tr>
-<tr class="memdesc:aa999c780b1eaee69c3b13ef117b611df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the file, which releases its lock.  <br /></td></tr>
+<tr class="memitem:ac981204b796b5efc06dbfe762805c729" id="r_ac981204b796b5efc06dbfe762805c729"><td class="memItemLeft"><a id="ac981204b796b5efc06dbfe762805c729" name="ac981204b796b5efc06dbfe762805c729"></a>
+&#160;</td><td class="memItemRight"><b>~MarketFile</b> ()=default</td></tr>
+<tr class="memdesc:ac981204b796b5efc06dbfe762805c729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the file, which releases its lock. <br /></td></tr>
 <tr class="memitem:a742324c4d124001533a2e1e8ca74f918" id="r_a742324c4d124001533a2e1e8ca74f918"><td class="memItemLeft"><a id="a742324c4d124001533a2e1e8ca74f918" name="a742324c4d124001533a2e1e8ca74f918"></a>
 &#160;</td><td class="memItemRight"><b>MarketFile</b> (const MarketFile &amp;)=delete</td></tr>
 <tr class="memitem:aecc87d3b38466a2dc32f0e83a980ec69" id="r_aecc87d3b38466a2dc32f0e83a980ec69"><td class="memItemLeft"><a id="aecc87d3b38466a2dc32f0e83a980ec69" name="aecc87d3b38466a2dc32f0e83a980ec69"></a>
@@ -165,7 +166,7 @@ Static Public Attributes</h2></td></tr>
 <p>On POSIX the file is locked (<span class="tt">flock</span>) while it is open, so a second <span class="tt"><a class="el" href="classalgotradelib_1_1mock_1_1MarketFile.html" title="A mock market that keeps its account in a file: every placement, cancellation and clock move is writt...">MarketFile</a></span> on it, in any process, is refused; a process that forks without <span class="tt">exec</span> shares the lock with its child. Keep it on a local disk. Windows takes no lock and does not flush the file's folder. A file is opened only where the system clock counts in the unit it was written with.</p>
 <p>Not copyable or movable: the market stays at one address while the file is open. </p>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00066">66</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00067">67</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae8c8359e49fe7b83d0c26d165a3d84ae" name="ae8c8359e49fe7b83d0c26d165a3d84ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8c8359e49fe7b83d0c26d165a3d84ae">&#9670;&#160;</a></span>MarketFile()</h2>
@@ -222,36 +223,9 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00089">89</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00090">90</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
-</div>
-</div>
-<a id="aa999c780b1eaee69c3b13ef117b611df" name="aa999c780b1eaee69c3b13ef117b611df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa999c780b1eaee69c3b13ef117b611df">&#9670;&#160;</a></span>~MarketFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">algotradelib::mock::MarketFile::~MarketFile </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Closes the file, which releases its lock. </p>
-
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00105">105</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ac981204b796b5efc06dbfe762805c729">~MarketFile()</a>.</p>
 
 </div>
 </div>
@@ -282,7 +256,7 @@ Static Public Attributes</h2></td></tr>
 <p>Tests whether a line could not be written or flushed since the file opened. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if one could not; the market then refuses changes until the file is opened again. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00126">126</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00122">122</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +286,7 @@ Static Public Attributes</h2></td></tr>
 <p>Returns the kept market. </p>
 <dl class="section return"><dt>Returns</dt><dd>The market. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00159">159</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00155">155</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,7 +316,7 @@ Static Public Attributes</h2></td></tr>
 <p>Returns the kept market, for <span class="tt"><a class="el" href="classalgotradelib_1_1mock_1_1MockClient.html" title="The mock broker&#39;s client: blocking, answering from a Market, after any faults scripted for the call.">MockClient</a></span> and <span class="tt"><a class="el" href="classalgotradelib_1_1mock_1_1MarketClock.html" title="The clock a loop waits on over a mock market: waiting moves the market.">MarketClock</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The market; copy it to try changes that are not recorded. Assigning to it or moving from it throws <span class="tt">std::logic_error</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00151">151</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00147">147</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
 </div>
 </div>
@@ -372,7 +346,7 @@ Static Public Attributes</h2></td></tr>
 <p>Tests whether the file opened and replayed. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if it did; changes are then recorded until one fails (<span class="tt"><a class="el" href="#ae9bd11023b557592c7db146eb060eafd" title="Tests whether a line could not be written or flushed since the file opened.">failed()</a></span>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00118">118</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00114">114</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
 </div>
 </div>
@@ -402,9 +376,9 @@ Static Public Attributes</h2></td></tr>
 <p>Returns the file's path. </p>
 <dl class="section return"><dt>Returns</dt><dd>The path. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00142">142</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00138">138</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="file_8hpp_source.html#l00089">MarketFile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="file_8hpp_source.html#l00090">MarketFile()</a>.</p>
 
 </div>
 </div>
@@ -434,7 +408,7 @@ Static Public Attributes</h2></td></tr>
 <p>Returns why the file did not open. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reason, in fixed words, or empty if it opened. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00134">134</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00130">130</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +435,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>The file format's number, on its first line. </p>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00069">69</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00070">70</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +461,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>The number of the market's rules a file replays under, raised when a fill, cost, ledger, expiry or calendar rule changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00074">74</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="file_8hpp_source.html#l00075">75</a> of file <a class="el" href="file_8hpp_source.html">file.hpp</a>.</p>
 
 </div>
 </div>
