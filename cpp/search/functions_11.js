@@ -32,7 +32,7 @@ var searchData=
   ['refusal_29',['refusal',['../namespacealgotradelib_1_1data__only.html#aff6a6a252e93f6b4448e1bbc6550fad6',1,'algotradelib::data_only']]],
   ['refuse_5funknown_5fflags_30',['refuse_unknown_flags',['../kiwoom__credentials_8hpp.html#a6d2e86c42da23c426ec2c185e9ab054c',1,'kiwoom_credentials']]],
   ['reject_5freason_5fname_31',['reject_reason_name',['../namespacealgotradelib_1_1strategy.html#a7441fcdd2f2661fa34ae88bea734b3c7',1,'algotradelib::strategy']]],
-  ['rejection_32',['rejection',['../classalgotradelib_1_1runner_1_1FileJournal.html#ae5fc930874872a05208c0abf68318b07',1,'algotradelib::runner::FileJournal']]],
+  ['rejection_32',['rejection',['../classalgotradelib_1_1mock_1_1MarketFile.html#af8fd794e1e9acdded51f135ae621311b',1,'algotradelib::mock::MarketFile::rejection()'],['../classalgotradelib_1_1runner_1_1FileJournal.html#ae5fc930874872a05208c0abf68318b07',1,'algotradelib::runner::FileJournal::rejection()']]],
   ['release_33',['release',['../classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a866f80315925485e3a5c5f2f97166476',1,'algotradelib::backtest::QueueingExecutor']]],
   ['release_5fobligations_34',['release_obligations',['../classalgotradelib_1_1runner_1_1Runner.html#a949d60f8a08ac176f900a46b08eda827',1,'algotradelib::runner::Runner']]],
   ['remaining_35',['remaining',['../classalgotradelib_1_1mock_1_1DataFeed.html#a9ceaeba08f86373393c54356f9c4183a',1,'algotradelib::mock::DataFeed']]],

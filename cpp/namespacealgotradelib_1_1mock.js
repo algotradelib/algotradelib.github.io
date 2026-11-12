@@ -4,6 +4,8 @@ var namespacealgotradelib_1_1mock =
     [ "DataFeed", "classalgotradelib_1_1mock_1_1DataFeed.html", "classalgotradelib_1_1mock_1_1DataFeed" ],
     [ "Market", "classalgotradelib_1_1mock_1_1Market.html", "classalgotradelib_1_1mock_1_1Market" ],
     [ "MarketClock", "classalgotradelib_1_1mock_1_1MarketClock.html", "classalgotradelib_1_1mock_1_1MarketClock" ],
+    [ "MarketFile", "classalgotradelib_1_1mock_1_1MarketFile.html", "classalgotradelib_1_1mock_1_1MarketFile" ],
+    [ "MarketFileError", "classalgotradelib_1_1mock_1_1MarketFileError.html", "classalgotradelib_1_1mock_1_1MarketFileError" ],
     [ "MarketSettings", "structalgotradelib_1_1mock_1_1MarketSettings.html", "structalgotradelib_1_1mock_1_1MarketSettings" ],
     [ "MockAccount", "structalgotradelib_1_1mock_1_1MockAccount.html", null ],
     [ "MockAmendment", "structalgotradelib_1_1mock_1_1MockAmendment.html", "structalgotradelib_1_1mock_1_1MockAmendment" ],

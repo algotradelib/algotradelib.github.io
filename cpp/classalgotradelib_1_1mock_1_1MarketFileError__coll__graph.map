@@ -1,0 +1,5 @@
+<map id="algotradelib::mock::MarketFileError" name="algotradelib::mock::MarketFileError">
+<area shape="rect" id="Node000001" title="Thrown by a kept market&#39;s Market::advance_to when its state file (MarketFile) could not record the mo..." alt="" coords="5,81,149,126"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="8,5,146,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,47,80,81,74,80,75,51"/>
+</map>

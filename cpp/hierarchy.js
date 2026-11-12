@@ -174,6 +174,7 @@ var hierarchy =
     [ "algotradelib::runner::ManualSource&lt; Runner &gt;", "classalgotradelib_1_1runner_1_1ManualSource.html", null ],
     [ "algotradelib::mock::Market", "classalgotradelib_1_1mock_1_1Market.html", null ],
     [ "algotradelib::mock::MarketClock", "classalgotradelib_1_1mock_1_1MarketClock.html", null ],
+    [ "algotradelib::mock::MarketFile", "classalgotradelib_1_1mock_1_1MarketFile.html", null ],
     [ "algotradelib::backtest::MarketPriceInput", "structalgotradelib_1_1backtest_1_1MarketPriceInput.html", null ],
     [ "algotradelib::MarketSegment", "structalgotradelib_1_1MarketSegment.html", null ],
     [ "algotradelib::mock::MarketSettings", "structalgotradelib_1_1mock_1_1MarketSettings.html", null ],
@@ -275,6 +276,9 @@ var hierarchy =
     [ "algotradelib::strategy::PortfolioRows::Rows", "structalgotradelib_1_1strategy_1_1PortfolioRows_1_1Rows.html", null ],
     [ "algotradelib::strategy::vanilla::RsiThreshold", "structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold.html", null ],
     [ "algotradelib::runner::Runner&lt; Strategy, CapsType, BrokerTag, Executor &gt;", "classalgotradelib_1_1runner_1_1Runner.html", null ],
+    [ "std::runtime_error", null, [
+      [ "algotradelib::mock::MarketFileError", "classalgotradelib_1_1mock_1_1MarketFileError.html", null ]
+    ] ],
     [ "algotradelib::SellableBasis", "structalgotradelib_1_1SellableBasis.html", null ],
     [ "algotradelib::strategy::SellableConventionProbe&lt; Broker &gt;", "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html", null ],
     [ "algotradelib::strategy::SellableEvidence", "structalgotradelib_1_1strategy_1_1SellableEvidence.html", null ],

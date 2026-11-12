@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,14,144,42"/>
+<area shape="rect" id="Node000001" href="$classalgotradelib_1_1mock_1_1MarketFileError.html" title="Thrown by a kept market&#39;s Market::advance_to when its state file (MarketFile) could not record the mo..." alt="" coords="192,5,335,50"/>
+<area shape="poly" id="edge47_Node000000_Node000001" title=" " alt="" coords="159,25,194,27,189,28,159,30"/>
+</map>

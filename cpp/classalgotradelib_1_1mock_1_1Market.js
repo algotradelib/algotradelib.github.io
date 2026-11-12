@@ -6,6 +6,7 @@ var classalgotradelib_1_1mock_1_1Market =
     [ "buying_power", "classalgotradelib_1_1mock_1_1Market.html#a631037624d7f89fd84709fb8f1739e68", null ],
     [ "calendar", "classalgotradelib_1_1mock_1_1Market.html#af5fc50c353eb12a560060329db3cabba", null ],
     [ "cancel", "classalgotradelib_1_1mock_1_1Market.html#a1fa1aa1d4c0c8349a29bac8f005a1f67", null ],
+    [ "cash", "classalgotradelib_1_1mock_1_1Market.html#a07f07291b1803c0592fb18b886496ab9", null ],
     [ "halted", "classalgotradelib_1_1mock_1_1Market.html#aac929e388e9a913a512746c4dfa3565d", null ],
     [ "holdings", "classalgotradelib_1_1mock_1_1Market.html#aa11436245777c4b4fd5e93f7fdf3e10f", null ],
     [ "instrument", "classalgotradelib_1_1mock_1_1Market.html#a864b0d0161af6a3d9867be4cd7fb7add", null ],

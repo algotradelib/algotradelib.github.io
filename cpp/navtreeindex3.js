@@ -1,5 +1,13 @@
 var NAVTREEINDEX3 =
 {
+"classalgotradelib_1_1kis_1_1KisClient.html#a9352a7b6be0e2da2c4b60b242f4bd476":[1,0,0,4,5,8],
+"classalgotradelib_1_1kis_1_1KisClient.html#a9352a7b6be0e2da2c4b60b242f4bd476":[2,0,0,4,5,8],
+"classalgotradelib_1_1kis_1_1KisClient.html#a948f6f8b42a6748d3cecf7a039e904eb":[1,0,0,4,5,25],
+"classalgotradelib_1_1kis_1_1KisClient.html#a948f6f8b42a6748d3cecf7a039e904eb":[2,0,0,4,5,25],
+"classalgotradelib_1_1kis_1_1KisClient.html#a949eb3fe9dc36c112f57d83f7ce50b18":[1,0,0,4,5,5],
+"classalgotradelib_1_1kis_1_1KisClient.html#a949eb3fe9dc36c112f57d83f7ce50b18":[2,0,0,4,5,5],
+"classalgotradelib_1_1kis_1_1KisClient.html#a9622f518815c7c1dcd28334b3fe7680e":[1,0,0,4,5,14],
+"classalgotradelib_1_1kis_1_1KisClient.html#a9622f518815c7c1dcd28334b3fe7680e":[2,0,0,4,5,14],
 "classalgotradelib_1_1kis_1_1KisClient.html#a9682843f0571814f2844fdcd4512014d":[1,0,0,4,5,33],
 "classalgotradelib_1_1kis_1_1KisClient.html#a9682843f0571814f2844fdcd4512014d":[2,0,0,4,5,33],
 "classalgotradelib_1_1kis_1_1KisClient.html#a9870b55d146ebcb81f4face6bfdcf228":[1,0,0,4,5,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX3 =
 "classalgotradelib_1_1live_1_1SessionSource.html#afa5f26bda14386cbe1a65e5e8f54244f":[1,0,0,7,1,10],
 "classalgotradelib_1_1live_1_1SessionSource.html#afa5f26bda14386cbe1a65e5e8f54244f":[2,0,0,6,1,10],
 "classalgotradelib_1_1mock_1_1DataFeed.html":[1,0,0,9,1],
-"classalgotradelib_1_1mock_1_1DataFeed.html":[2,0,0,8,1],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a8047606066a78bba9160a5919953135f":[1,0,0,9,1,1],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a8047606066a78bba9160a5919953135f":[2,0,0,8,1,1],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a91f1f7e6c574c03e2e92a71f7fe1f937":[1,0,0,9,1,0],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a91f1f7e6c574c03e2e92a71f7fe1f937":[2,0,0,8,1,0],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a991975399a8780a046a5bffc3e32dd9f":[1,0,0,9,1,2],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a991975399a8780a046a5bffc3e32dd9f":[2,0,0,8,1,2],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a9ceaeba08f86373393c54356f9c4183a":[1,0,0,9,1,3],
-"classalgotradelib_1_1mock_1_1DataFeed.html#a9ceaeba08f86373393c54356f9c4183a":[2,0,0,8,1,3]
+"classalgotradelib_1_1mock_1_1DataFeed.html":[2,0,0,8,1]
 };

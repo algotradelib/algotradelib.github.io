@@ -17,6 +17,7 @@ var searchData=
   ['not_5fplaced_14',['NOT_PLACED',['../namespacealgotradelib_1_1runner.html#a01e2e7f5af1bc68031fd3e2f534c72f6a42ddb795b78f1b508dae792c2b100c2e',1,'algotradelib::runner']]],
   ['not_5frepresentable_15',['NOT_REPRESENTABLE',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163fa4c786ffea7d608153f2ededf8eab455b',1,'algotradelib::strategy']]],
   ['not_5fstated_16',['NOT_STATED',['../classalgotradelib_1_1StatedDate.html#a0dfab292f116b371859c2abc62d7d614af1686678cb22f32699dd6c77841fafc4',1,'algotradelib::StatedDate']]],
-  ['notional_17',['NOTIONAL',['../namespacealgotradelib_1_1strategy.html#ad706c8d4f2f53a5249d5968937ddf10ba4edaf7f256f99c852c66a0a9087d370f',1,'algotradelib::strategy']]],
-  ['nxt_18',['NXT',['../namespacealgotradelib_1_1kis.html#a180426dcbaf904ff2cca1189c5dc3289a3f15fada7994f98f3bc6207bed01c16b',1,'algotradelib::kis::NXT'],['../namespacealgotradelib_1_1kiwoom.html#a1476aa7a976b83d95727aee083da2ca1a3f15fada7994f98f3bc6207bed01c16b',1,'algotradelib::kiwoom::NXT']]]
+  ['not_5fwritten_17',['NOT_WRITTEN',['../classalgotradelib_1_1mock_1_1MarketFileError.html#af8953c4d76746e3aad14035191ffa92daed57a430ad12f0b2ae1cc29611de8906',1,'algotradelib::mock::MarketFileError']]],
+  ['notional_18',['NOTIONAL',['../namespacealgotradelib_1_1strategy.html#ad706c8d4f2f53a5249d5968937ddf10ba4edaf7f256f99c852c66a0a9087d370f',1,'algotradelib::strategy']]],
+  ['nxt_19',['NXT',['../namespacealgotradelib_1_1kis.html#a180426dcbaf904ff2cca1189c5dc3289a3f15fada7994f98f3bc6207bed01c16b',1,'algotradelib::kis::NXT'],['../namespacealgotradelib_1_1kiwoom.html#a1476aa7a976b83d95727aee083da2ca1a3f15fada7994f98f3bc6207bed01c16b',1,'algotradelib::kiwoom::NXT']]]
 ];

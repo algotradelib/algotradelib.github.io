@@ -149,7 +149,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>How a <span class="tt"><a class="el" href="classalgotradelib_1_1mock_1_1Market.html" title="A market in memory: bars the caller gives, a clock the caller moves, one account&#39;s cash,...">Market</a></span> starts and what it charges. </p>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00044">44</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00085">85</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a818651487b8f3c0adae4d88b6ad73a16" name="a818651487b8f3c0adae4d88b6ad73a16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a818651487b8f3c0adae4d88b6ad73a16">&#9670;&#160;</a></span>calendar_</h2>
@@ -166,7 +166,7 @@ Public Attributes</h2></td></tr>
 <p>The trading days the market publishes, as a backtest is given them (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#aace3b50bb7369dc3ff803080cfcd553c" title="The calendar ctx.calendar() returns, for a strategy asking about dates it has no bar for (such as whe...">backtest::ReplayConfig::calendar_</a></span>). </p>
 <p>Empty by default: then every local date from the first bar to the last, open where any instrument has a bar and closed where none has, for the country of the first instrument that has bars (KR when none has); dates outside are uncovered. The local dates are <span class="tt"><a class="el" href="#aedd85d7eb4bed60daf25a0ab194ca608" title="The session window local dates and the close are read in, as a backtest&#39;s (backtest::ReplayConfig::se...">session_</a></span>'s, one offset for every instrument; give the loop the same window (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html#a55d2b1c16de8c07aacb09dbcc34faf2e" title="Sets the session window the market phase is derived from (KRX by default, as in a backtest),...">runner::PollingLoop::set_session_window</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00065">65</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00106">106</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -184,7 +184,7 @@ Public Attributes</h2></td></tr>
 
 <p>The starting cash, in the one currency the market keeps cash in. </p>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00046">46</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00087">87</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Public Attributes</h2></td></tr>
 
 <p>The fill rule and its costs, as a backtest's; no commission, slippage or tax by default. </p>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00050">50</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00091">91</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -220,7 +220,7 @@ Public Attributes</h2></td></tr>
 
 <p>The session window local dates and the close are read in, as a backtest's (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#ade8215df12bb493eb9dba669fe037700" title="The session window phases are derived from and DAY orders expire at; one for the whole replay.">backtest::ReplayConfig::session_</a></span>): a <span class="tt">DAY</span> order lives for one session. </p>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00055">55</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00096">96</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +238,7 @@ Public Attributes</h2></td></tr>
 
 <p>The market's first instant; bars that ended by then are history. </p>
 
-<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00048">48</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="market_8hpp_source.html#l00089">89</a> of file <a class="el" href="market_8hpp_source.html">market.hpp</a>.</p>
 
 </div>
 </div>

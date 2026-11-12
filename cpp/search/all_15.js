@@ -97,7 +97,7 @@ var searchData=
   ['rejected_5fcancel_5f_94',['rejected_cancel_',['../structalgotradelib_1_1runner_1_1DryRunReport.html#a6fa118216259554e505e735b50f681ae',1,'algotradelib::runner::DryRunReport']]],
   ['rejectedcancel_95',['RejectedCancel',['../structalgotradelib_1_1runner_1_1RejectedCancel.html',1,'algotradelib::runner']]],
   ['rejection_96',['Rejection',['../structalgotradelib_1_1strategy_1_1Rejection.html',1,'algotradelib::strategy']]],
-  ['rejection_97',['rejection',['../classalgotradelib_1_1runner_1_1FileJournal.html#ae5fc930874872a05208c0abf68318b07',1,'algotradelib::runner::FileJournal']]],
+  ['rejection_97',['rejection',['../classalgotradelib_1_1mock_1_1MarketFile.html#af8fd794e1e9acdded51f135ae621311b',1,'algotradelib::mock::MarketFile::rejection()'],['../classalgotradelib_1_1runner_1_1FileJournal.html#ae5fc930874872a05208c0abf68318b07',1,'algotradelib::runner::FileJournal::rejection()']]],
   ['rejection_5f_98',['rejection_',['../structalgotradelib_1_1strategy_1_1GuardDecision.html#aa12efcbbd3d69e475321bc12d45b466c',1,'algotradelib::strategy::GuardDecision']]],
   ['rejectreason_99',['RejectReason',['../namespacealgotradelib_1_1strategy.html#aae377ebdae21b45a09b6e1132773163f',1,'algotradelib::strategy']]],
   ['release_100',['release',['../classalgotradelib_1_1backtest_1_1QueueingExecutor.html#a866f80315925485e3a5c5f2f97166476',1,'algotradelib::backtest::QueueingExecutor']]],

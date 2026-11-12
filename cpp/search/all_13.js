@@ -13,7 +13,7 @@ var searchData=
   ['parse_5fiso8601_5ftimestamp_10',['parse_iso8601_timestamp',['../namespacealgotradelib.html#a2f95c828e6b0e38b35ee39ac792b5978',1,'algotradelib']]],
   ['parse_5fjournal_5fbytes_11',['parse_journal_bytes',['../namespacealgotradelib_1_1runner.html#aff85b9cd21b41fd1859c73af4cce59fd',1,'algotradelib::runner']]],
   ['partial_12',['PARTIAL',['../structalgotradelib_1_1SellableBasis.html#ac0fcaee4889db5950920bea85e880aacafba5cdfa4bcb408f641c743519a0fe19',1,'algotradelib::SellableBasis']]],
-  ['path_13',['path',['../classalgotradelib_1_1runner_1_1FileJournal.html#ae30345e81450fe1ff282e5271b711a20',1,'algotradelib::runner::FileJournal::path()'],['../classalgotradelib_1_1runner_1_1FileStopChannel.html#ab7f08d57560a57415d12e10d38dd1ae5',1,'algotradelib::runner::FileStopChannel::path()']]],
+  ['path_13',['path',['../classalgotradelib_1_1mock_1_1MarketFile.html#a5ff0cf3471b60005ada230a6102188f2',1,'algotradelib::mock::MarketFile::path()'],['../classalgotradelib_1_1runner_1_1FileJournal.html#ae30345e81450fe1ff282e5271b711a20',1,'algotradelib::runner::FileJournal::path()'],['../classalgotradelib_1_1runner_1_1FileStopChannel.html#ab7f08d57560a57415d12e10d38dd1ae5',1,'algotradelib::runner::FileStopChannel::path()']]],
   ['peak_5frow_5f_14',['peak_row_',['../structalgotradelib_1_1analytics_1_1MaxDrawdown.html#a0617e9a1729e2306894e77c181afc49f',1,'algotradelib::analytics::MaxDrawdown']]],
   ['pending_15',['PENDING',['../namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2',1,'algotradelib::runner']]],
   ['pending_16',['pending',['../classalgotradelib_1_1runner_1_1IndeterminacyLedger.html#a7231874b981f3e69354fb8507c65a1a7',1,'algotradelib::runner::IndeterminacyLedger']]],
