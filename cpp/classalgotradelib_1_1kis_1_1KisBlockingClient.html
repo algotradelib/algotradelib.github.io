@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classalgotrade
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad47e17a110dd8a330defda896caf3714" id="r_ad47e17a110dd8a330defda896caf3714"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad47e17a110dd8a330defda896caf3714">KisBlockingClient</a> (ssl::context &amp;context, <a class="el" href="structalgotradelib_1_1kis_1_1KisConfig.html">KisConfig</a> config, <a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html">network::HttpClientOptions</a> options={}, std::shared_ptr&lt; <a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html">network::TokenStore</a> &gt; store=nullptr)</td></tr>
-<tr class="memdesc:ad47e17a110dd8a330defda896caf3714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a client.  <br /></td></tr>
+<tr class="memitem:a1f61f159b42d73c1b028dc3bd4072407" id="r_a1f61f159b42d73c1b028dc3bd4072407"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1f61f159b42d73c1b028dc3bd4072407">KisBlockingClient</a> (ssl::context &amp;context, <a class="el" href="structalgotradelib_1_1kis_1_1KisConfig.html">KisConfig</a> config, <a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html">network::HttpClientOptions</a> options={}, std::shared_ptr&lt; <a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html">network::TokenStore</a> &gt; store=nullptr, std::shared_ptr&lt; <a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html">network::CalendarCache</a> &gt; calendars=nullptr)</td></tr>
+<tr class="memdesc:a1f61f159b42d73c1b028dc3bd4072407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a client.  <br /></td></tr>
 <tr class="memitem:a40f19aa22ea2323ce89ddaef678c8514" id="r_a40f19aa22ea2323ce89ddaef678c8514"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; <a class="el" href="structalgotradelib_1_1QuoteSnapshot.html">QuoteSnapshot</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a40f19aa22ea2323ce89ddaef678c8514">quote</a> (<a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> instrument)</td></tr>
 <tr class="memdesc:a40f19aa22ea2323ce89ddaef678c8514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a quote; see <span class="tt"><a class="el" href="classalgotradelib_1_1kis_1_1KisClient.html#a12bcabc1f1ad1d98a9df6c186a6e37c2" title="Requests a quote.">KisClient::async_quote</a></span>.  <br /></td></tr>
 <tr class="memitem:a8d99f5a30be47d87f86a79812ee9d843" id="r_a8d99f5a30be47d87f86a79812ee9d843"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; <a class="el" href="structalgotradelib_1_1Instrument.html">Instrument</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8d99f5a30be47d87f86a79812ee9d843">instrument</a> (<a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> subject)</td></tr>
@@ -173,12 +173,13 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A blocking KIS client: each call runs a <span class="tt"><a class="el" href="classalgotradelib_1_1kis_1_1KisClient.html" title="The asynchronous KIS REST client: market data, account inquiries and orders for domestic stocks.">KisClient</a></span> request on a private event loop and returns its result. Not thread-safe. </p>
 <p>A call whose loop stops before the request completes returns a <span class="tt">TRANSPORT</span> error (<span class="tt">event_loop_stopped</span>).</p>
-<p>With a token store, clients on one app key and environment share one token, in this process or others (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">network::TokenStore</a></span>): KIS issues one token per key per minute (<span class="tt">EGW00133</span>). Every token is then requested under the store's lock before a call, and none during it: a call whose token stops being usable while it runs returns <span class="tt">token_unusable</span> (<span class="tt">AUTHENTICATION</span>, not sent), and the next call prepares one. A request authorized just before another program replaced the token can still be refused; it is not sent again. A program stopped after KIS issued a token and before it was stored leaves the old one stored until KIS refuses it. </p>
+<p>With a token store, clients on one app key and environment share one token, in this process or others (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">network::TokenStore</a></span>): KIS issues one token per key per minute (<span class="tt">EGW00133</span>). Every token is then requested under the store's lock before a call, and none during it: a call whose token stops being usable while it runs returns <span class="tt">token_unusable</span> (<span class="tt">AUTHENTICATION</span>, not sent), and the next call prepares one. A request authorized just before another program replaced the token can still be refused; it is not sent again. A program stopped after KIS issued a token and before it was stored leaves the old one stored until KIS refuses it.</p>
+<p>With a calendar cache, clients share KIS's trading calendar for the day, in this process or others (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html" title="Where blocking broker clients share a market&#39;s trading calendar, across threads and processes.">network::CalendarCache</a></span>, see <span class="tt"><a class="el" href="#a0c1ae50a9fc933f056a98c442c88be55" title="Returns the trading calendar from a date on; see KisClient::async_calendar (cached).">calendar</a></span>): KIS asks that its holiday inquiry be made at most once a day. </p>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04246">4246</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04270">4270</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad47e17a110dd8a330defda896caf3714" name="ad47e17a110dd8a330defda896caf3714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad47e17a110dd8a330defda896caf3714">&#9670;&#160;</a></span>KisBlockingClient()</h2>
+<a id="a1f61f159b42d73c1b028dc3bd4072407" name="a1f61f159b42d73c1b028dc3bd4072407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f61f159b42d73c1b028dc3bd4072407">&#9670;&#160;</a></span>KisBlockingClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +205,12 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html">network::TokenStore</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>store</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html">network::TokenStore</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>store</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html">network::CalendarCache</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>calendars</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -221,11 +227,12 @@ Friends</h2></td></tr>
     <tr><td class="paramname">config</td><td>The credentials and environment. </td></tr>
     <tr><td class="paramname">options</td><td>HTTP options. </td></tr>
     <tr><td class="paramname">store</td><td>Where to share the access token (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">network::TokenStore</a></span>), or null to keep it to this client. </td></tr>
+    <tr><td class="paramname">calendars</td><td>Where to share the trading calendar (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html" title="Where blocking broker clients share a market&#39;s trading calendar, across threads and processes.">network::CalendarCache</a></span>), or null to keep it to this client. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04255">4255</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04280">4280</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -262,7 +269,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if the token is empty or expires within five minutes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04496">4496</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04551">4551</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -298,7 +305,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The bars or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04356">4356</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04411">4411</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00733">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::bars()</a>.</p>
 
@@ -341,7 +348,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The buying power or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04385">4385</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04440">4440</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00764">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::buying_power()</a>.</p>
 
@@ -375,6 +382,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the trading calendar from a date on; see <span class="tt"><a class="el" href="classalgotradelib_1_1kis_1_1KisClient.html#a38a6a12fecfdc4219dcbebcb26b3b437" title="Requests the trading calendar from a date on, and caches it for the client&#39;s life.">KisClient::async_calendar</a></span> (cached). </p>
+<p>With a calendar cache, unless <span class="tt">refresh</span>, a calendar the client holds that covers <span class="tt">from</span> is returned first, and then one the cache holds under <span class="tt">kis-kr</span> that is for KR, was received on today's date in Seoul and covers <span class="tt">from</span>; neither needs a token. Otherwise KIS is asked, and its calendar is stored in the cache if it was received on the date in Seoul the request started on. A cache that cannot be read or written changes nothing else: KIS is asked, or its calendar returned. KIS's own error is returned as it is, never a stored calendar. Clients that start together can each ask KIS; a correction KIS makes during the day is seen only with <span class="tt">refresh</span>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">from</td><td>The first date; an invalid date is refused (<span class="tt">invalid_date</span>) before sending. </td></tr>
@@ -384,7 +392,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The calendar or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04299">4299</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04332">4332</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00692">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::calendar()</a>.</p>
 
@@ -427,7 +435,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The acknowledgement or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04436">4436</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04491">4491</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00797">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::cancel_order()</a>.</p>
 
@@ -465,7 +473,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The book or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04342">4342</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04397">4397</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00723">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::depth()</a>.</p>
 
@@ -503,7 +511,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The holdings or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04370">4370</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04425">4425</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00753">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::holdings()</a>.</p>
 
@@ -541,9 +549,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The data or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04284">4284</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04310">4310</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l04342">depth()</a>, <a class="el" href="kis_2traits_8hpp_source.html#l00682">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::instrument()</a>, <a class="el" href="kis_2client_8hpp_source.html#l04313">price_limits()</a>, <a class="el" href="kis_2client_8hpp_source.html#l04270">quote()</a>, and <a class="el" href="kis_2client_8hpp_source.html#l04328">trades()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l04397">depth()</a>, <a class="el" href="kis_2traits_8hpp_source.html#l00682">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::instrument()</a>, <a class="el" href="kis_2client_8hpp_source.html#l04368">price_limits()</a>, <a class="el" href="kis_2client_8hpp_source.html#l04296">quote()</a>, and <a class="el" href="kis_2client_8hpp_source.html#l04383">trades()</a>.</p>
 
 </div>
 </div>
@@ -579,7 +587,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The orders or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04451">4451</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04506">4506</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00807">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::working_orders()</a>.</p>
 
@@ -622,7 +630,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The orders or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04466">4466</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04521">4521</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00818">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::order_history()</a>.</p>
 
@@ -666,7 +674,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The acknowledgement or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04404">4404</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04459">4459</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00775">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::place_order()</a>.</p>
 
@@ -704,7 +712,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The band or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04313">4313</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04368">4368</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00702">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::price_limits()</a>.</p>
 
@@ -742,7 +750,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The quote or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04270">4270</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04296">4296</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00743">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::quote()</a>.</p>
 
@@ -774,7 +782,7 @@ Friends</h2></td></tr>
 <p>Returns the rate limiter's statistics (safe to read between calls). </p>
 <dl class="section return"><dt>Returns</dt><dd>The statistics, or null if the client has no rate-limit budget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04479">4479</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04534">4534</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00672">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::rate_limit_stats()</a>.</p>
 
@@ -817,7 +825,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The acknowledgement or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04420">4420</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04475">4475</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00786">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::replace_order()</a>.</p>
 
@@ -849,9 +857,9 @@ Friends</h2></td></tr>
 <p>Returns the access token; see <span class="tt"><a class="el" href="classalgotradelib_1_1kis_1_1KisClient.html#a31e4eb0c948bdc20e51e0d724fc3a794" title="Returns the access token the client holds, to reuse in a later process (adopt_token).">KisClient::token</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The token, empty until a request has obtained one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04487">4487</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04542">4542</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l04496">adopt_token()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l04551">adopt_token()</a>.</p>
 
 </div>
 </div>
@@ -892,7 +900,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The trades or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04328">4328</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04383">4383</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00713">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::trades()</a>.</p>
 
@@ -919,7 +927,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04501">4501</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2client_8hpp_source.html#l04556">4556</a> of file <a class="el" href="kis_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>

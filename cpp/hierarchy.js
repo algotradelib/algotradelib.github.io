@@ -41,6 +41,9 @@ var hierarchy =
     [ "algotradelib::strategy::vanilla::BuyAndHold", "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html", null ],
     [ "algotradelib::BuyingPower", "structalgotradelib_1_1BuyingPower.html", null ],
     [ "algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;::InstrumentSlot::ByInterval", "structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html", null ],
+    [ "algotradelib::network::CalendarCache", "classalgotradelib_1_1network_1_1CalendarCache.html", [
+      [ "algotradelib::network::FileCalendarCache", "classalgotradelib_1_1network_1_1FileCalendarCache.html", null ]
+    ] ],
     [ "algotradelib::runner::CancelIntent&lt; Broker &gt;", "structalgotradelib_1_1runner_1_1CancelIntent.html", null ],
     [ "algotradelib::strategy::CancelIntent&lt; Broker &gt;", "structalgotradelib_1_1strategy_1_1CancelIntent.html", null ],
     [ "algotradelib::kis::traits_detail::Capabilities", null, [

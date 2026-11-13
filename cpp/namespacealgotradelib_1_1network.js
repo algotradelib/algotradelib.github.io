@@ -3,7 +3,9 @@ var namespacealgotradelib_1_1network =
     [ "AsyncHttpClient", "classalgotradelib_1_1network_1_1AsyncHttpClient.html", "classalgotradelib_1_1network_1_1AsyncHttpClient" ],
     [ "AuthBody", "structalgotradelib_1_1network_1_1AuthBody.html", "structalgotradelib_1_1network_1_1AuthBody" ],
     [ "BasicRateLimitBucket", "classalgotradelib_1_1network_1_1BasicRateLimitBucket.html", "classalgotradelib_1_1network_1_1BasicRateLimitBucket" ],
+    [ "CalendarCache", "classalgotradelib_1_1network_1_1CalendarCache.html", "classalgotradelib_1_1network_1_1CalendarCache" ],
     [ "ClientCredentials", "classalgotradelib_1_1network_1_1ClientCredentials.html", "classalgotradelib_1_1network_1_1ClientCredentials" ],
+    [ "FileCalendarCache", "classalgotradelib_1_1network_1_1FileCalendarCache.html", "classalgotradelib_1_1network_1_1FileCalendarCache" ],
     [ "FileTokenStore", "classalgotradelib_1_1network_1_1FileTokenStore.html", "classalgotradelib_1_1network_1_1FileTokenStore" ],
     [ "HttpClient", "classalgotradelib_1_1network_1_1HttpClient.html", "classalgotradelib_1_1network_1_1HttpClient" ],
     [ "HttpClientOptions", "structalgotradelib_1_1network_1_1HttpClientOptions.html", "structalgotradelib_1_1network_1_1HttpClientOptions" ],
@@ -28,6 +30,7 @@ var namespacealgotradelib_1_1network =
       [ "MARKET_DATA", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940a1e6cfae1f4dd21ae8c5451d66f74e43c", null ],
       [ "REFERENCE", "namespacealgotradelib_1_1network.html#a083ad43ca671110d78741e3c5b113940adcd320d017d7f3c317bc8b234287bc9f", null ]
     ] ],
+    [ "calendar_cache_error", "namespacealgotradelib_1_1network.html#ab77606b91c006595fb6a445dd0d9e1dc", null ],
     [ "close_ssl_stream", "namespacealgotradelib_1_1network.html#a89ab64ee4c611c19a0d43fe6f3167e28", null ],
     [ "make_host_header", "namespacealgotradelib_1_1network.html#ad3e40597b613a8ad74c2f3a5b4c7d53d", null ],
     [ "rate_limit_group_index", "namespacealgotradelib_1_1network.html#aa4013419d865995b72fa61b0373d1b9d", null ],

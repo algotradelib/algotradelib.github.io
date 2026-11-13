@@ -7,7 +7,7 @@ var searchData=
   ['kis_5feffective_5froute_4',['kis_effective_route',['../namespacealgotradelib.html#adf0e087bc27ed5c3b5f65333b09c9bf5',1,'algotradelib']]],
   ['kis_5frate_5flimit_5flayer_5',['kis_rate_limit_layer',['../namespacealgotradelib_1_1kis.html#a3602c755430f920929fda291e0de616c',1,'algotradelib::kis']]],
   ['kisauth_6',['KisAuth',['../classalgotradelib_1_1kis_1_1KisAuth.html#ac1aa28296ec922cd6d3bb379c174c565',1,'algotradelib::kis::KisAuth']]],
-  ['kisblockingclient_7',['KisBlockingClient',['../classalgotradelib_1_1kis_1_1KisBlockingClient.html#ad47e17a110dd8a330defda896caf3714',1,'algotradelib::kis::KisBlockingClient']]],
+  ['kisblockingclient_7',['KisBlockingClient',['../classalgotradelib_1_1kis_1_1KisBlockingClient.html#a1f61f159b42d73c1b028dc3bd4072407',1,'algotradelib::kis::KisBlockingClient']]],
   ['kisclient_8',['KisClient',['../classalgotradelib_1_1kis_1_1KisClient.html#a9622f518815c7c1dcd28334b3fe7680e',1,'algotradelib::kis::KisClient']]],
   ['kisrest_9',['KisRest',['../structalgotradelib_1_1kis_1_1KisRest.html#a963ac14bb5cf271c5c033dc1ccce7bba',1,'algotradelib::kis::KisRest']]],
   ['kiswebsocket_10',['KisWebsocket',['../structalgotradelib_1_1kis_1_1KisWebsocket.html#a51a0cf413be9ed008376fc12d87348db',1,'algotradelib::kis::KisWebsocket']]],

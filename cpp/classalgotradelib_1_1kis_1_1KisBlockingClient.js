@@ -1,6 +1,6 @@
 var classalgotradelib_1_1kis_1_1KisBlockingClient =
 [
-    [ "KisBlockingClient", "classalgotradelib_1_1kis_1_1KisBlockingClient.html#ad47e17a110dd8a330defda896caf3714", null ],
+    [ "KisBlockingClient", "classalgotradelib_1_1kis_1_1KisBlockingClient.html#a1f61f159b42d73c1b028dc3bd4072407", null ],
     [ "adopt_token", "classalgotradelib_1_1kis_1_1KisBlockingClient.html#ac09a8f43b935d486878847741d07a828", null ],
     [ "bars", "classalgotradelib_1_1kis_1_1KisBlockingClient.html#acf653bed2cb9a7bbe83c1a0461bedf01", null ],
     [ "buying_power", "classalgotradelib_1_1kis_1_1KisBlockingClient.html#a476e39f0a0accce5559dde74e63ed188", null ],

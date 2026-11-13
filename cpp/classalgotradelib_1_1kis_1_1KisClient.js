@@ -15,6 +15,7 @@ var classalgotradelib_1_1kis_1_1KisClient =
     [ "TokenResultHandler", "classalgotradelib_1_1kis_1_1KisClient.html#acbd56431434ca74c8cf4e0cd4ea4c9e4", null ],
     [ "TradesHandler", "classalgotradelib_1_1kis_1_1KisClient.html#ab48d245aa76db2dc47bbda5ec7eadf41", null ],
     [ "KisClient", "classalgotradelib_1_1kis_1_1KisClient.html#a9622f518815c7c1dcd28334b3fe7680e", null ],
+    [ "adopt_calendar", "classalgotradelib_1_1kis_1_1KisClient.html#a9a3259dd1efbd89cd893fa4ecfc737a1", null ],
     [ "adopt_token", "classalgotradelib_1_1kis_1_1KisClient.html#a88858cbd9deb4d42c441bd44ff8b647e", null ],
     [ "async_bars", "classalgotradelib_1_1kis_1_1KisClient.html#aebde776953cd986d31a73b089c0b99d8", null ],
     [ "async_buying_power", "classalgotradelib_1_1kis_1_1KisClient.html#ad7c18074a235a2d11bcd613a173d414e", null ],

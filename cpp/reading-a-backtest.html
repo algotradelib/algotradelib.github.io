@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('reading-a-back
 <div class="textblock"><p><a class="anchor" id="md_doxygen_2vignettes_2reading-a-backtest"></a></p>
 <p>A backtester is the easiest place in a library to produce confident, wrong numbers. This page is about what this one assumes, what it refuses to claim, and which of its figures you should distrust first.</p>
 <p>See <a class="el" href="writing-a-strategy.html" title="Writing a strategy">Writing a strategy</a> for the strategy side and <a class="el" href="binding-a-broker.html" title="Binding a broker">Binding a broker</a> for running one live.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md64"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md65"></a>
 What it is</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;algotradelib/backtest&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;algotradelib/vanilla&gt;</span></div>
@@ -151,7 +151,7 @@ What it is</h1>
 <div class="ttc" id="aclassalgotradelib_1_1Decimal64_html_ae1ac1381266a0fc492abcd63a6fc33ca"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html#ae1ac1381266a0fc492abcd63a6fc33ca">algotradelib::Decimal64::parse</a></div><div class="ttdeci">static Decimal64 parse(std::string_view input)</div><div class="ttdoc">Parses a decimal string exactly (no binary floating point).</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00466">types.hpp:466</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_a260ce20a00a13c5a743bd4c749e54d19"><div class="ttname"><a href="namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19">algotradelib::strategy::make_bar_event</a></div><div class="ttdeci">BarEvent make_bar_event(InstrumentId instrument, BarInterval interval, BarStamp stamp, Bar bar)</div><div class="ttdoc">Makes a bar event, computing its period_end_ with bar_period_end.</div><div class="ttdef"><b>Definition</b> <a href="event_8hpp_source.html#l00278">event.hpp:278</a></div></div>
 </div><!-- fragment --><p>The <b>third</b> configuration of <span class="tt">Runner</span>, after <span class="tt">DryRunner</span> and the session-backed one. A strategy's source is identical in all three; if it were not, the surface would be wrong.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md65"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md66"></a>
 The one guarantee worth relying on</h1>
 <p><b>A fill never comes from the bar that produced the order.</b> <span class="tt">NextBarFillModel::decide</span> takes the next bar and nothing else — it has no way to see the signal's own bar, so an engine wanting to cheat would have to pass the wrong one deliberately.</p>
 <p>That is why <span class="tt">Runner</span>'s executor accepts an order without filling it. The ordering inside <span class="tt">feed</span> is the whole correctness argument:</p>
@@ -164,7 +164,7 @@ The one guarantee worth relying on</h1>
 </ol>
 <p>Reversing 1 and 5 is exactly the lookahead defect. Doing 3 before 2 would value a portfolio not yet updated by its own fills.</p>
 <p>An order submitted on the <b>last</b> bar never fills, and is counted in <span class="tt">caveats_.unfilled_</span>. There is no next bar, and inventing one would be inventing data.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md66"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md67"></a>
 What the fill model assumes</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -224,7 +224,7 @@ limit": a limit marketable through the whole bar is credited the bar's worst pri
 <td class="markdownTableBodyNone">Slippage  </td><td class="markdownTableBodyNone">never carries a stop fill out of its bar or through its limit — the same bound as a plain limit  </td><td class="markdownTableBodyNone">a limit order that could only have traded worse did not trade  </td></tr>
 </table>
 <p><span class="tt">caveats_.stop_fills_intrabar_</span> counts the fills that relied on a release inside the bar. Each assumes the price moved continuously through the trigger; a jump past both trigger and limit would have left the stop released and unfilled. A working stop is shown to the strategy as a stop with its trigger, released or not, because neither broker's listing says which.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md67"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md68"></a>
 Quotes, and the one place a quote-driven replay differs from a quote-driven live run</h1>
 <p><span class="tt">Backtester::feed</span> takes a <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1QuoteEvent.html" title="A quote the runner has just read, delivered to on_quote.">strategy::QuoteEvent</a></span> as well as a <span class="tt">BarEvent</span>, so <span class="tt">on_quote</span> fires in a replay. It did not before: <span class="tt">QuoteEvent</span> appeared nowhere in <span class="tt">backtest/</span>, while <span class="tt">PollKind::QUOTES</span> is a supported live cadence — so a strategy that acts between bars ran live having been evaluated against nothing. Interleave quotes and bars in timestamp order yourself, exactly as you already interleave bars across instruments.</p>
 <p>Sketched — <span class="tt">bar</span> and <span class="tt">quote</span> stand for events you build from your own data:</p>
@@ -258,10 +258,10 @@ Quotes, and the one place a quote-driven replay differs from a quote-driven live
 <p><b>A calendar period boundary the engine cannot establish makes the check impossible, and the report says so rather than guessing.</b> It happens on either side of the comparison. A close-stamped weekly, monthly or yearly bar does not state when its period <em>began</em> — and nothing in <span class="tt">feed</span>'s contract lets the engine derive it, as three attempts to infer it from a previous bar each proved. An open-stamped bar of any calendar interval does not state when its period <em>ended</em> either: that is <span class="tt">bar_period_end</span>'s nominal 24 hours, 7, 31 or 366 days, which is what <b>every shipped adapter produces for every non-minute bar</b>. So an adapter-fetched monthly or yearly replay carries this on most of its fills — though not all: the nominal end is an upper <em>bound</em>, so wherever the next period's start reaches it the check still passes, which every Monday-to-Monday week does.</p>
 <p>Where it does not run: the fill is allowed on the older rule that an order never fills against the bar that produced it, and <span class="tt">ReportCaveats::unchecked_fill_causality_</span> counts every such decision. Non-zero means those fill prices are not guaranteed to come from after the decision, and <b>any dated order can be one of them</b> — a quote is the obvious way in, and a bars-only replay reaches it too.</p>
 <p><b>You can discharge it yourself</b>: with no quotes, one interval per instrument, and series whose periods do not overlap, the fills were causal whatever this figure says. The engine simply could not prove it from the events it was handed.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md68"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md69"></a>
 Records of external data</h1>
 <p><span class="tt">Backtester::feed</span> also takes a <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1DataEvent.html" title="A record of data from outside the broker, delivered to on_data.">strategy::DataEvent</a></span>, a record for a strategy declaring <span class="tt">on_data</span>; its type is the strategy's own, and the engine reads only <span class="tt">known_at_</span>, when it became known. Feed records in time order with the bars and a record before the bars of its instant: a bar's handler then sees what was known by the bar's end, and with <span class="tt">on_bars</span> a record at a buffered period's own instant is in that period's slice. Feed a record before a quote of the same instant too: a quote delivers a buffered period first, so a record fed after it would miss that period's slice. A bar that ended before a record already fed is refused, since it would be decided on with that record in view, and so is a record earlier than a record or a bar already fed. An order placed from <span class="tt">on_data</span> follows the quote's rule above: dated at <span class="tt">known_at_</span>, it fills against a later bar, one that began at or after the record wherever a bar's start can be established, and is counted in <span class="tt">unchecked_fill_causality_</span> where it cannot. A record prices nothing, marks nothing and fills nothing; <span class="tt">ReplayResult::records_</span> counts them. <span class="tt">known_at_</span> is your statement of when the record was available: a date with no time of publication is an assumption, which the replay cannot check.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md69"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md70"></a>
 What it does not model at all</h1>
 <p><span class="tt">ReportCaveats::volume_ignored</span> is always true, and present so you are told rather than left to assume:</p>
 <ul>
@@ -272,12 +272,12 @@ What it does not model at all</h1>
 <li><b>Settlement.</b> A sale's proceeds are credited on the fill and the whole holding is reported as sellable, so a replay trades in a T+0 world. <span class="tt">ReportCaveats::sellable_is_whole_holding</span> and <span class="tt">buying_power_is_ledger_cash</span> are both always true and present for the same reason as <span class="tt">volume_ignored</span>.</li>
 </ul>
 <p>If a strategy's edge is small relative to these, the backtest cannot tell you whether the edge is real.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md70"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md71"></a>
 A replay's clock visits bar ends only</h1>
 <p>A replay advances its clock to each bar's period end and derives the market phase there. For daily bars stamped at local midnight — every shipped adapter's convention — that is the next midnight, which is outside the session, so with the default <span class="tt">permitted_phases_ = {OPEN}</span> a daily replay refuses every opening order (<span class="tt">phase_not_permitted</span>) and trades nothing. Every replay example sets <span class="tt">permitted_phases_ = std::nullopt</span> for this reason: the order is decided at the bar's end and filled at the next bar's open, which is what a daily strategy means. <b>Keep that setting in the replay only.</b> Live, the default limits already carry a daily target to the next session's open (see "Running a
 strategy live"), and <span class="tt">std::nullopt</span> there sends every decision at midnight.</p>
 <p>For the same reason <span class="tt">on_phase</span> fires on a daily replay only when the phase at one bar end differs from the last — in practice once — not once a session as it does live. A strategy that acts in <span class="tt">on_phase</span> (<span class="tt">vanilla::EqualWeightRebalance</span>, <span class="tt">vanilla::TimedLiquidation</span>) needs intraday bars to be replayed faithfully.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md71"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md72"></a>
 What a replay says an account can do</h1>
 <p>The live path can ask the broker what may be spent and what may be sold. A replay has no broker, so it answers from its own ledger — and <b>the two answers are different quantities wearing the same field</b>:</p>
 <ul>
@@ -288,13 +288,13 @@ What a replay says an account can do</h1>
 <p>Borrowing can lose more than the opening equity. A period whose preceding recorded equity is zero or negative has no return (<span class="tt">EquityPoint::period_return_</span> is missing); returns resume once equity is positive again. If any recorded equity point before the last is zero or negative, <span class="tt">summarize</span> reports <span class="tt">sharpe_</span> and <span class="tt">sortino_</span> as <span class="tt">math::undefined()</span> for the whole run, and <span class="tt">annualized_sharpe_</span> too when a period count is given. A non-positive last point alone does not invalidate the ratios. Reducing the curve's returns yourself (<span class="tt">analytics::sharpe</span> over a slice) skips the missing ones and applies no such rule, so check the equity each return is measured from.</p>
 <p>Turning the check on refuses such buys, but a market buy is checked at the reference price, without commission, and filled at the next bar's open, so a gap up can still overdraw a little. Live, whether a buy the cash cannot cover is refused depends on the account: a Korean account with 미수 (credit) enabled can buy past its cash, and the broker's buying-power inquiry is what says how far.</p>
 <p>The consequence worth keeping in mind: <b>a strategy sized against the sellable check passes more easily in a replay than live</b>, because the whole holding is an upper bound on what a broker will let you sell. For buying power there is no such direction — ledger cash may be above or below what a broker would answer — so the difference is real but not one you can lean on either way. Either way, with <span class="tt">enforce_sellable_quantity_</span> on (the default) or <span class="tt">enforce_buying_power_</span> enabled, a clean backtest is not evidence the live account will accept the same orders; a settlement model in the replay would close the sellable half, and the library does not have one yet.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md72"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md73"></a>
 The equity curve is one currency's</h1>
 <p><span class="tt">ReplayConfig::currency_</span> names the currency the report is in, and the equity curve is <span class="tt">ledger.equity_in()</span> of it: by default one point per period end, after the period's last bar (<span class="tt">EquityCurve::PER_PERIOD</span>; call <span class="tt">finish</span> for the last one), so a ratio over a replay of many instruments is per period; <span class="tt">EquityCurve::PER_BAR</span> records one per bar fed, and <span class="tt">EquityCurve::NONE</span> none (<span class="tt">summarize</span> then reports no ratios). Choose it with <span class="tt">ReplayConfig::equity_curve_</span>.</p>
 <p>It counts only positions in the currency being asked about (adding a won-quoted holding into a dollar curve at a rate of one would corrupt every derived metric), and the ledger records each position's currency from the fill that opened it.</p>
 <p>The engine books each fill in the instrument's own currency, from the reference data the replay already needs (<span class="tt">ReplayConfig::currency_</span> is the currency of the <em>starting cash</em>, not of every fill).</p>
 <p><b>What that means for a multi-currency replay.</b> Each currency is tracked apart and correctly, and a replay that opens with won and trades a dollar instrument runs its dollar cash negative from zero, because funding it would need a conversion this library does not do. The report still curves one currency, so read it as one currency's result rather than the account's. <span class="tt">ReportCaveats::other_currency_executions_</span> counts the executions the curve leaves out; when it is nonzero and equals <span class="tt">executions_</span>, nothing traded is in the curve, so the total return, Sharpe and annualized Sharpe, Sortino and maximum drawdown are missing rather than a flat result (the opening and closing equity stay the curve's): set <span class="tt">currency_</span> to the instruments' currency.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md73"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md74"></a>
 Costs, which are the most common way a backtest lies</h1>
 <p>A strategy evaluated at zero cost can look excellent and lose money at any real one. So costs are models you state, and <span class="tt">analytics</span> deliberately carries none of its own:</p>
 <div class="fragment"><div class="line">backtest::CommissionModel::of(rate, per_order_minimum);</div>
@@ -326,13 +326,13 @@ dating_market)</span> resolves a rate <b>per execution</b>, against that executi
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> fills = backtest::NextBarFillModel(commission, slippage)</div>
 <div class="line">                     .with_sell_tax(backtest::SellTax{Decimal64::parse(<span class="stringliteral">&quot;0.0020&quot;</span>), Country::KR});</div>
 </div><!-- fragment --><p>It is truncated to whole currency units, charged to the account with the commission (and, like it, not in realized profit), and reported apart from it: <span class="tt">Execution::tax_</span>, <span class="tt">Report::tax_paid_</span> / <span class="tt">tax_by_currency_</span>, and <span class="tt">ReportCaveats::sell_tax_</span>. Only sales in the stated market pay it. A replay spanning a change in the rate is charged one rate throughout, and instruments exempt in that market — Korean ETFs and ETNs pay no transaction tax — need a replay of their own without it.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md74"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md75"></a>
 Annualizing, and the trap in it</h1>
 <p><span class="tt">summarize</span>'s <span class="tt">periods_per_year</span> defaults to none, which leaves the annualized Sharpe ratio unobserved, and <span class="tt">analytics::annualize_ratio</span> requires one: neither guesses your bar frequency. The number is <b>245</b> for daily bars on KRX and <b>95,550</b> for minute bars over the same year.</p>
 <p><span class="tt">backtest::periods_per_year(interval, session, trading_days)</span> derives it. A calendar interval — weekly, monthly — returns nothing rather than a plausible constant, because a week's divisor depends on the market's week.</p>
 <p>The trap, which <span class="tt">example-backtest-offline</span> demonstrates: the same strategy over the same path at two granularities reports an identical per-bar Sharpe of 0.308, annualizing to <b>4.82</b> daily and <b>95.21</b> at minute frequency. Both are arithmetically right. <b>Mislabel your bar frequency and the annualized figure is wrong by the square root of the ratio.</b> And annualizing assumes returns are serially uncorrelated, which a trending strategy violates by construction — so treat an annualized Sharpe as an order of magnitude, not a measurement.</p>
 <p>Absent a period count, <span class="tt">annualized_sharpe_</span> stays unobserved rather than being scaled by a guess.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md75"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md76"></a>
 Absent figures mean something</h1>
 <p>The metrics keep <span class="tt">analytics</span>'s two kinds of absence, and the difference is diagnostic:</p>
 <ul>
@@ -340,18 +340,18 @@ Absent figures mean something</h1>
 <li><span class="tt">undefined()</span> — the data was there and the statistic does not exist. A Sortino ratio over a run that never lost has no downside to divide by; <span class="tt">math::is_undefined()</span> tells it from a warm-up.</li>
 </ul>
 <p>A report that showed <span class="tt">0.0</span> where a figure did not exist would be the worst kind of wrong.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md76"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md77"></a>
 Survivorship bias, which the engine cannot fix</h1>
 <p><span class="tt">caveats_.multiple_instruments_</span> is set whenever more than one instrument traded. Broker reference data lists instruments that exist <b>now</b>, so a universe assembled from it silently excludes everything delisted during the period — and what gets delisted is disproportionately what did badly. A cross-sectional result built that way is flattered by an amount nothing in the engine can measure.</p>
 <p>This is a property of the data, not of the replay, so the engine states it rather than correcting it. Single-instrument backtests are unaffected.</p>
 <p>Read the flag as a <b>caution, not a finding</b>. The bias comes from how you <em>assembled</em> the universe, and the engine cannot see that — it only sees how many instruments arrived, so the flag is a proxy and it has false positives: a hand-picked pair you know was listed for the whole period sets it and carries no survivorship problem at all.</p>
 <p>That is also why the report still computes every metric instead of refusing. Refusing would block a replay that is perfectly sound in order to prevent a mistake the engine has no way to detect. You know how you picked the universe; the engine does not, so it tells you what it saw and leaves the judgement with you.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md77"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md78"></a>
 Intraday</h1>
 <p>The engine is interval-agnostic by construction, and that is under test: the same strategy replayed at daily and minute granularity is asserted <b>equal to itself</b> on execution count, position, cash and realized profit. Nothing multiplies by 245 or divides by 24 hours; the clock advances by each bar's own <span class="tt">period_end_</span>, and phases come from a <span class="tt">SessionWindow</span>.</p>
 <p>What limits intraday work today is <em>data</em>, not the engine. KIS serves minute bars one trading day at a time and crossing days needs a calendar walk that does not exist yet. A broker that serves intraday history, or your own bar files, replays without any engine change.</p>
 <p>A gap between sessions is counted in <span class="tt">caveats_.gaps_</span> and <b>not interpolated across</b> — nothing happened in it that a strategy should be told about.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md78"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md79"></a>
 What to distrust first</h1>
 <p>In rough order:</p>
 <ol type="1">

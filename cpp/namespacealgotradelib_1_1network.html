@@ -133,8 +133,12 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An OAuth access token and its expiry, the base of each broker's token-response class.  <a href="structalgotradelib_1_1network_1_1AuthBody.html#details">More...</a><br /></td></tr>
 <tr class="memitem:BasicRateLimitBucket" id="r_BasicRateLimitBucket"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1BasicRateLimitBucket.html">BasicRateLimitBucket</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A rate limiter (the generic cell rate algorithm) that computes when a request may go; it neither waits nor reads the clock itself.  <a href="classalgotradelib_1_1network_1_1BasicRateLimitBucket.html#details">More...</a><br /></td></tr>
+<tr class="memitem:CalendarCache" id="r_CalendarCache"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html">CalendarCache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where blocking broker clients share a market's trading calendar, across threads and processes.  <a href="classalgotradelib_1_1network_1_1CalendarCache.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ClientCredentials" id="r_ClientCredentials"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html">ClientCredentials</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OAuth client credentials (an app key and secret), the base of each broker's credentials class.  <a href="classalgotradelib_1_1network_1_1ClientCredentials.html#details">More...</a><br /></td></tr>
+<tr class="memitem:FileCalendarCache" id="r_FileCalendarCache"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1FileCalendarCache.html">FileCalendarCache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html" title="Where blocking broker clients share a market&#39;s trading calendar, across threads and processes.">CalendarCache</a></span> in a private folder: one file per name. POSIX only; not provided on Windows.  <a href="classalgotradelib_1_1network_1_1FileCalendarCache.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FileTokenStore" id="r_FileTokenStore"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1FileTokenStore.html">FileTokenStore</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">TokenStore</a></span> in a private folder: one token file and one lock file per identity. POSIX only; not provided on Windows.  <a href="classalgotradelib_1_1network_1_1FileTokenStore.html#details">More...</a><br /></td></tr>
 <tr class="memitem:HttpClient" id="r_HttpClient"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1HttpClient.html">HttpClient</a></td></tr>
@@ -188,6 +192,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab77606b91c006595fb6a445dd0d9e1dc" id="r_ab77606b91c006595fb6a445dd0d9e1dc"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab77606b91c006595fb6a445dd0d9e1dc">calendar_cache_error</a> (std::string_view reason)</td></tr>
+<tr class="memdesc:ab77606b91c006595fb6a445dd0d9e1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a calendar cache's error: <span class="tt">TRANSPORT</span>, not sent to the broker, code <span class="tt">calendar_cache</span>.  <br /></td></tr>
 <tr class="memitem:a430c9c3332bda042ce8377d013be9b05" id="r_a430c9c3332bda042ce8377d013be9b05"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&#160;</td><td class="memItemRight"><a class="el" href="#a430c9c3332bda042ce8377d013be9b05">transport_error</a> (std::string stage, beast::error_code ec)</td></tr>
 <tr class="memdesc:a430c9c3332bda042ce8377d013be9b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a transport error into a <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerError.html" title="The error a broker or transport operation returns.">BrokerError</a></span>.  <br /></td></tr>
 <tr class="memitem:ad3e40597b613a8ad74c2f3a5b4c7d53d" id="r_ad3e40597b613a8ad74c2f3a5b4c7d53d"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ad3e40597b613a8ad74c2f3a5b4c7d53d">make_host_header</a> (const std::string &amp;host, const std::string &amp;port)</td></tr>
@@ -315,6 +321,44 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ab77606b91c006595fb6a445dd0d9e1dc" name="ab77606b91c006595fb6a445dd0d9e1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77606b91c006595fb6a445dd0d9e1dc">&#9670;&#160;</a></span>calendar_cache_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a> algotradelib::network::calendar_cache_error </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>reason</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a calendar cache's error: <span class="tt">TRANSPORT</span>, not sent to the broker, code <span class="tt">calendar_cache</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>Fixed text. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00048">48</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="calendar__cache_8hpp_source.html#l00048">calendar_cache_error()</a>, <a class="el" href="calendar__cache_8hpp_source.html#l00108">algotradelib::network::FileCalendarCache::load()</a>, and <a class="el" href="calendar__cache_8hpp_source.html#l00143">algotradelib::network::FileCalendarCache::publish()</a>.</p>
+
+</div>
+</div>
 <a id="a89ab64ee4c611c19a0d43fe6f3167e28" name="a89ab64ee4c611c19a0d43fe6f3167e28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89ab64ee4c611c19a0d43fe6f3167e28">&#9670;&#160;</a></span>close_ssl_stream()</h2>
 

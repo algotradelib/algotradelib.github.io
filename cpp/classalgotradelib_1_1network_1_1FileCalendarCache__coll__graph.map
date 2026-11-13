@@ -1,0 +1,5 @@
+<map id="algotradelib::network::FileCalendarCache" name="algotradelib::network::FileCalendarCache">
+<area shape="rect" id="Node000001" title="A CalendarCache in a private folder: one file per name. POSIX only; not provided on Windows." alt="" coords="5,98,166,143"/>
+<area shape="rect" id="Node000002" href="$classalgotradelib_1_1network_1_1CalendarCache.html" title="Where blocking broker clients share a market&#39;s trading calendar, across threads and processes." alt="" coords="5,5,166,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,64,88,99,83,97,84,68"/>
+</map>
