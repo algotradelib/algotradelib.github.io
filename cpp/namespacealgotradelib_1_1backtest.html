@@ -143,10 +143,24 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One point on a replay's equity curve: per period end, or per bar (<span class="tt"><a class="el" href="#a5ae8ac3ad807ec038186d36b1d1e60c2" title="Which points a replay records on its equity curve (ReplayResult::equity_); see ReplayConfig::equity_c...">EquityCurve</a></span>).  <a href="structalgotradelib_1_1backtest_1_1EquityPoint.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Execution" id="r_Execution"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html">Execution</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One execution a backtest produced, and what it cost.  <a href="structalgotradelib_1_1backtest_1_1Execution.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Expanding" id="r_Expanding"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Expanding.html">Expanding</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Training on every position from the end of the first history to each test range.  <a href="structalgotradelib_1_1backtest_1_1Expanding.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FillDecision" id="r_FillDecision"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1FillDecision.html">FillDecision</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#ab46397d4b6f87a986430bd9746aea189" title="Decides whether an order trades against a bar, and at what price and cost.">NextBarFillModel::decide</a></span> concluded about one order and one bar.  <a href="structalgotradelib_1_1backtest_1_1FillDecision.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Fold" id="r_Fold"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Fold.html">Fold</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One fold: its training and test ranges, and where each one's history starts.  <a href="structalgotradelib_1_1backtest_1_1Fold.html#details">More...</a><br /></td></tr>
+<tr class="memitem:FoldLengths" id="r_FoldLengths"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1FoldLengths.html">FoldLengths</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lengths of a fold, in positions.  <a href="structalgotradelib_1_1backtest_1_1FoldLengths.html#details">More...</a><br /></td></tr>
+<tr class="memitem:IndexRange" id="r_IndexRange"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1IndexRange.html">IndexRange</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A half-open range of positions, <span class="tt">[<a class="el" href="structalgotradelib_1_1backtest_1_1IndexRange.html#a9040961cc4a2b89639dea67471d92a61" title="The first position.">begin_</a>, <a class="el" href="structalgotradelib_1_1backtest_1_1IndexRange.html#aa4816b912d4dcbff10ef3bcd29d5937c" title="One past the last position.">end_</a>)</span>.  <a href="structalgotradelib_1_1backtest_1_1IndexRange.html#details">More...</a><br /></td></tr>
+<tr class="memitem:is_5Fwindow_5Fscheme" id="r_is_5Fwindow_5Fscheme"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1is__window__scheme.html">is_window_scheme</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether <span class="tt">Scheme</span> can choose a fold's training range: <span class="tt">true</span> when a <span class="tt">const Scheme</span> has a member <span class="tt">train(std::size_t, const <a class="el" href="structalgotradelib_1_1backtest_1_1FoldLengths.html" title="The lengths of a fold, in positions.">FoldLengths</a>&amp;)</span> returning something convertible to <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1IndexRange.html" title="A half-open range of positions, [begin_, end_).">IndexRange</a></span>.  <a href="structalgotradelib_1_1backtest_1_1is__window__scheme.html#details">More...</a><br /></td></tr>
+<tr class="memitem:is_5Fwindow_5Fscheme_3C_20Scheme_2C_20std_3A_3Aenable_5Fif_5Ft_3C_20std_3A_3Ais_5Fconvertible_5Fv_3C_20decltype_28std_3A_3Adeclval_3C_20const_20Scheme_20_26_20_3E_28_29_2Etrain_28std_3A_3Asize_5Ft_7B_7D_2C_20std_3A_3Adeclval_3C_20const_20FoldLengths_20_26_20_3E_28_29_29_29_2C_20IndexRange_20_3E_20_3E_20_3E" id="r_is_5Fwindow_5Fscheme_3C_20Scheme_2C_20std_3A_3Aenable_5Fif_5Ft_3C_20std_3A_3Ais_5Fconvertible_5Fv_3C_20decltype_28std_3A_3Adeclval_3C_20const_20Scheme_20_26_20_3E_28_29_2Etrain_28std_3A_3Asize_5Ft_7B_7D_2C_20std_3A_3Adeclval_3C_20const_20FoldLengths_20_26_20_3E_28_29_29_29_2C_20IndexRange_20_3E_20_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1is__window__scheme_3_01Scheme_00_01std_1_1enable__if__t_3_01st78dd9823fcdae9fb5106fec7a4ed3015.html">is_window_scheme&lt; Scheme, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Scheme &amp; &gt;().train(std::size_t{}, std::declval&lt; const FoldLengths &amp; &gt;())), IndexRange &gt; &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scheme with the member <span class="tt">train</span> that <span class="tt"><a class="el" href="#adfbdbe9d4f52afbb81f7f25b68b672a3" title="Lists the folds over a time index of count positions.">folds</a></span> calls.  <a href="structalgotradelib_1_1backtest_1_1is__window__scheme_3_01Scheme_00_01std_1_1enable__if__t_3_01st78dd9823fcdae9fb5106fec7a4ed3015.html#details">More...</a><br /></td></tr>
 <tr class="memitem:MarketPriceInput" id="r_MarketPriceInput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1MarketPriceInput.html">MarketPriceInput</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What a market-price rule is given (see <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a5514231b59abdd570f7ebe1d6e8dd0f8" title="Returns a copy of this model that prices market orders by a rule instead of the next bar&#39;s open.">NextBarFillModel::with_market_price</a></span>).  <a href="structalgotradelib_1_1backtest_1_1MarketPriceInput.html#details">More...</a><br /></td></tr>
+<tr class="memitem:MeasureInput" id="r_MeasureInput"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1MeasureInput.html">MeasureInput</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What a measure of a finished replay reads: the replay, its report, and its equity curve's levels and returns as the columns <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#af24e9e7b0236d8585417e404de6f7c98" title="Computes the per-period Sharpe ratio, (mean(returns) - risk_free) / stdev(returns).">analytics::sharpe</a></span>, <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#aaee174047c611c00d176217a1ff63d4d" title="Computes the per-period Sortino ratio, (mean(returns) - target) / downside_deviation.">analytics::sortino</a></span> and <span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#ac722704ca00110ea27bd39822382ded7" title="Finds the worst peak-to-trough decline of a level series.">analytics::max_drawdown</a></span> take.  <a href="structalgotradelib_1_1backtest_1_1MeasureInput.html#details">More...</a><br /></td></tr>
 <tr class="memitem:NextBarFillModel" id="r_NextBarFillModel"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The fill model: market orders at the next bar's open, limit orders when the next bar's range reaches them, stop-limit orders once released.  <a href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#details">More...</a><br /></td></tr>
 <tr class="memitem:QueuedOrder" id="r_QueuedOrder"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1QueuedOrder.html">QueuedOrder</a></td></tr>
@@ -165,6 +179,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The summary of a replay; read <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html#a0d486030112b4ac09ffb8c92fec1edbe" title="Why the replay stopped early, if it did; read this before any figure.">halted_</a></span> and <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html#af9c1ddde755d938febaa91ed67ec29f2" title="What this run assumed and did not model.">caveats_</a></span> before the figures.  <a href="structalgotradelib_1_1backtest_1_1Report.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ReportCaveats" id="r_ReportCaveats"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html">ReportCaveats</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What a replay's figures assumed and did not account for.  <a href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Rolling" id="r_Rolling"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Rolling.html">Rolling</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Training on the <span class="tt">train_</span> positions just before each test range.  <a href="structalgotradelib_1_1backtest_1_1Rolling.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SellTax" id="r_SellTax"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1SellTax.html">SellTax</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tax on sales, stated by the caller; see <span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a45e7927a04aa1f3d339af0535f0074bd" title="Returns a copy of this model that charges a tax on sales.">NextBarFillModel::with_sell_tax</a></span>.  <a href="structalgotradelib_1_1backtest_1_1SellTax.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SlippageModel" id="r_SlippageModel"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1SlippageModel.html">SlippageModel</a></td></tr>
@@ -198,6 +214,8 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a888cb1eef441f6e54439e1df3987e63e" id="r_a888cb1eef441f6e54439e1df3987e63e"><td class="memItemLeft">std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a888cb1eef441f6e54439e1df3987e63e">resample_closes</a> (const std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; &amp;closes, const <a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> &amp;rule, const std::vector&lt; std::size_t &gt; &amp;indices)</td></tr>
+<tr class="memdesc:a888cb1eef441f6e54439e1df3987e63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuilds one instrument's closes along a bootstrap path (<span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#a28c4fee1287618a2be87d940fd74bc75" title="Draws the returns of one bootstrap path: entry k names the return, close[j + 1] / close[j] as j,...">analytics::bootstrap_indices</a></span>) and rounds each to its nearest grid price, a tie going up.  <br /></td></tr>
 <tr class="memitem:acd73673d1e6bfa8aedfc949137724705" id="r_acd73673d1e6bfa8aedfc949137724705"><td class="memItemLeft">std::optional&lt; std::chrono::seconds &gt;&#160;</td><td class="memItemRight"><a class="el" href="#acd73673d1e6bfa8aedfc949137724705">interval_duration</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval)</td></tr>
 <tr class="memdesc:acd73673d1e6bfa8aedfc949137724705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fixed duration of an interval (<span class="tt"><a class="el" href="namespacealgotradelib.html#a17f3163b5d9df8ecc71ea5f3c2ce7d77" title="Returns an interval&#39;s fixed length, for an intraday interval.">bar_interval_length</a></span>).  <br /></td></tr>
 <tr class="memitem:a7f25da0c437c8ae30b84192f617a2077" id="r_a7f25da0c437c8ae30b84192f617a2077"><td class="memItemLeft">std::optional&lt; <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7f25da0c437c8ae30b84192f617a2077">periods_per_year</a> (<a class="el" href="namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4">BarInterval</a> interval, const <a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">strategy::SessionWindow</a> &amp;session, <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> trading_days)</td></tr>
@@ -206,8 +224,17 @@ Functions</h2></td></tr>
 <tr class="memdesc:a163a37b1cd1c3f7fbc9f2e50d654e5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a flat commission model from a schedule's rate for a market on a date.  <br /></td></tr>
 <tr class="memitem:ab7b7b79afcb9e4c14e889430b9fb01ce" id="r_ab7b7b79afcb9e4c14e889430b9fb01ce"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#ab7b7b79afcb9e4c14e889430b9fb01ce">limit_fill_price_name</a> (<a class="el" href="#a6091b7a3a9ee16fea01f3e814e6ea581">LimitFillPrice</a> choice) noexcept</td></tr>
 <tr class="memdesc:ab7b7b79afcb9e4c14e889430b9fb01ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase name for a choice, such as <span class="tt">"at_limit"</span>, for reports.  <br /></td></tr>
+<tr class="memitem:adfbdbe9d4f52afbb81f7f25b68b672a3" id="r_adfbdbe9d4f52afbb81f7f25b68b672a3"><td class="memTemplParams" colspan="2">template&lt;typename Scheme = Rolling&gt; </td></tr>
+<tr class="memitem:adfbdbe9d4f52afbb81f7f25b68b672a3 template"><td class="memItemLeft">std::vector&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1Fold.html">Fold</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#adfbdbe9d4f52afbb81f7f25b68b672a3">folds</a> (std::size_t count, const <a class="el" href="structalgotradelib_1_1backtest_1_1FoldLengths.html">FoldLengths</a> &amp;lengths, const Scheme &amp;scheme=Scheme{})</td></tr>
+<tr class="memdesc:adfbdbe9d4f52afbb81f7f25b68b672a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists the folds over a time index of <span class="tt">count</span> positions.  <br /></td></tr>
 <tr class="memitem:a59999d704779dfc064e43ddab62a7762" id="r_a59999d704779dfc064e43ddab62a7762"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html">Report</a>&#160;</td><td class="memItemRight"><a class="el" href="#a59999d704779dfc064e43ddab62a7762">summarize</a> (const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> &amp;result, const <a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a> &amp;fills, std::optional&lt; <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> &gt; periods_per_year=std::nullopt, <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> risk_free=<a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a>{0})</td></tr>
 <tr class="memdesc:a59999d704779dfc064e43ddab62a7762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summarizes a replay into a <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html" title="The summary of a replay; read halted_ and caveats_ before the figures.">Report</a></span>.  <br /></td></tr>
+<tr class="memitem:ab165bc645628780e297ea4d3e0173ebb" id="r_ab165bc645628780e297ea4d3e0173ebb"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1backtest_1_1MeasureInput.html">MeasureInput</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab165bc645628780e297ea4d3e0173ebb">measure_input</a> (const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> &amp;result, const <a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a> &amp;fills, std::optional&lt; <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> &gt; periods_per_year=std::nullopt)</td></tr>
+<tr class="memdesc:ab165bc645628780e297ea4d3e0173ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the input a measure reads from a finished replay, calling <span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> once.  <br /></td></tr>
+<tr class="memitem:aabbec86d47fb7a8752b3cf08ee5bf8ec" id="r_aabbec86d47fb7a8752b3cf08ee5bf8ec"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1backtest_1_1MeasureInput.html">MeasureInput</a>&#160;</td><td class="memItemRight"><a class="el" href="#aabbec86d47fb7a8752b3cf08ee5bf8ec">measure_input</a> (const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> &amp;&amp;, const <a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a> &amp;, std::optional&lt; <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> &gt;=std::nullopt)=delete</td></tr>
+<tr class="memdesc:aabbec86d47fb7a8752b3cf08ee5bf8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refused: the input would refer to a temporary result that is gone before the input is read.  <br /></td></tr>
+<tr class="memitem:ad9703600deeb9a37a7aa0e8edaf3b673" id="r_ad9703600deeb9a37a7aa0e8edaf3b673"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad9703600deeb9a37a7aa0e8edaf3b673">chain_results</a> (const std::vector&lt; const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> * &gt; &amp;results)</td></tr>
+<tr class="memdesc:ad9703600deeb9a37a7aa0e8edaf3b673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chains test replays into one result, so <span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> and <span class="tt"><a class="el" href="#ab165bc645628780e297ea4d3e0173ebb" title="Builds the input a measure reads from a finished replay, calling summarize once.">measure_input</a></span> give the chain's figures.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Replays a strategy over stored bars: fill and cost models, the replay ledger, and the report. </p>
@@ -373,6 +400,51 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ad9703600deeb9a37a7aa0e8edaf3b673" name="ad9703600deeb9a37a7aa0e8edaf3b673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9703600deeb9a37a7aa0e8edaf3b673">&#9670;&#160;</a></span>chain_results()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> algotradelib::backtest::chain_results </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>results</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Chains test replays into one result, so <span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> and <span class="tt"><a class="el" href="#ab165bc645628780e297ea4d3e0173ebb" title="Builds the input a measure reads from a finished replay, calling summarize once.">measure_input</a></span> give the chain's figures. </p>
+<p>The chain is a synthetic account reset to the previous fold's close at each boundary, not a continuously held portfolio. Each later fold's curve is scaled so its first point is the close so far, each point a decimal of fifteen significant digits (a relative error near 1e-15 at each boundary, compounding over the folds) where a decimal's 255 places hold them; a level nearer the 255th place keeps fewer digits and can be far less accurate, but a nonzero level is never rounded to zero. Returns are kept as recorded, and a fold's first point carries none. Executions, rejections and refusals are concatenated and counts summed; each <span class="tt">first_*</span> instant and the market-price rule come from the first fold that has one, and <span class="tt">lowest_cash_</span> is the lowest over the folds, each in its own capital. <span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> measures turnover against fold 0's opening equity. The folds should share one fill model and one <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html" title="A replay&#39;s settings, besides the strategy and the bars.">ReplayConfig</a></span> but for <span class="tt">trade_from_</span>; this is not checked.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">results</td><td>The test replays, in order. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The chained result. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">results</span> is empty or holds a null pointer, a halted result, one with no curve point or one in another currency; if a fold does not start after the previous one ends, its first equity or the close it follows is not positive, or a scaled equity does not fit a decimal (too large, or nonzero and zero once rounded to 255 places). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00650">650</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">chain_results()</a>.</p>
+
+</div>
+</div>
 <a id="a163a37b1cd1c3f7fbc9f2e50d654e5ab" name="a163a37b1cd1c3f7fbc9f2e50d654e5ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a163a37b1cd1c3f7fbc9f2e50d654e5ab">&#9670;&#160;</a></span>commission_model_from()</h2>
 
@@ -420,6 +492,62 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="cost_8hpp_source.html#l00096">96</a> of file <a class="el" href="cost_8hpp_source.html">cost.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="cost_8hpp_source.html#l00096">commission_model_from()</a>.</p>
+
+</div>
+</div>
+<a id="adfbdbe9d4f52afbb81f7f25b68b672a3" name="adfbdbe9d4f52afbb81f7f25b68b672a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbdbe9d4f52afbb81f7f25b68b672a3">&#9670;&#160;</a></span>folds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Scheme = Rolling&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1Fold.html">Fold</a> &gt; algotradelib::backtest::folds </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1backtest_1_1FoldLengths.html">FoldLengths</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lengths</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Scheme &amp;</td>          <td class="paramname"><span class="paramname"><em>scheme</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Scheme{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lists the folds over a time index of <span class="tt">count</span> positions. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Fold.html" title="One fold: its training and test ranges, and where each one&#39;s history starts.">Fold</a> <span class="tt">k</span> tests <span class="tt">[t_k, t_k + test_)</span> with <span class="tt">t_k = warmup_ + train_ + k * step_</span>, for every <span class="tt">k</span> whose test range fits; a shorter last test range is dropped, so every fold tests the same length. The training range is <span class="tt">scheme.train(t_k, lengths)</span>. Chaining the test ranges into one curve needs <span class="tt">step_ == test_</span>; any positive step is allowed.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scheme</td><td>The training scheme: <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Rolling.html" title="Training on the train_ positions just before each test range.">Rolling</a></span>, <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Expanding.html" title="Training on every position from the end of the first history to each test range.">Expanding</a></span>, or one of your own with the member <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1IndexRange.html" title="A half-open range of positions, [begin_, end_).">IndexRange</a> train(std::size_t test_begin, const <a class="el" href="structalgotradelib_1_1backtest_1_1FoldLengths.html" title="The lengths of a fold, in positions.">FoldLengths</a>&amp; lengths) const</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>The number of positions in the time index. </td></tr>
+    <tr><td class="paramname">lengths</td><td>The fold lengths. </td></tr>
+    <tr><td class="paramname">scheme</td><td>The training scheme. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The folds, in order. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">train_</span> or <span class="tt">step_</span> is zero, <span class="tt">warmup_ + train_ + test_</span> exceeds <span class="tt">count</span>, or the scheme returns a range that starts before <span class="tt">warmup_</span>, is empty, or ends after the test range starts. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="folds_8hpp_source.html#l00114">114</a> of file <a class="el" href="folds_8hpp_source.html">folds.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="folds_8hpp_source.html#l00114">folds()</a>.</p>
 
 </div>
 </div>
@@ -499,6 +627,99 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aabbec86d47fb7a8752b3cf08ee5bf8ec" name="aabbec86d47fb7a8752b3cf08ee5bf8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbec86d47fb7a8752b3cf08ee5bf8ec">&#9670;&#160;</a></span>measure_input() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1backtest_1_1MeasureInput.html">MeasureInput</a> algotradelib::backtest::measure_input </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Refused: the input would refer to a temporary result that is gone before the input is read. </p>
+<dl class="section return"><dt>Returns</dt><dd>Nothing; it does not compile. </dd></dl>
+
+</div>
+</div>
+<a id="ab165bc645628780e297ea4d3e0173ebb" name="ab165bc645628780e297ea4d3e0173ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab165bc645628780e297ea4d3e0173ebb">&#9670;&#160;</a></span>measure_input() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalgotradelib_1_1backtest_1_1MeasureInput.html">MeasureInput</a> algotradelib::backtest::measure_input </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fills</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">math::Scalar</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>periods_per_year</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Builds the input a measure reads from a finished replay, calling <span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> once. </p>
+<p>Does not throw for an empty curve or a halted replay: the levels and returns are then empty or end at the halt, as the report's figures do. A measure computing its own ratio applies the report's rule for equity at or below zero by reading <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a113dc01ca9017f58f13b6b78193a8caa" title="Tests whether a value is the undefined() marker.">math::is_undefined</a>(report_.sharpe_)</span>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>The replay's result; it must outlive the input (see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1MeasureInput.html" title="What a measure of a finished replay reads: the replay, its report, and its equity curve&#39;s levels and ...">MeasureInput</a></span>). </td></tr>
+    <tr><td class="paramname">fills</td><td>The fill model the replay used. </td></tr>
+    <tr><td class="paramname">periods_per_year</td><td>Periods in a year, as for <span class="tt"><a class="el" href="#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The input. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt"><a class="el" href="#a7f25da0c437c8ae30b84192f617a2077" title="Returns how many bars of an interval a year contains, for analytics::annualize_ratio.">periods_per_year</a></span> is given, not positive, and the equity curve is not empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00610">610</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#aabbec86d47fb7a8752b3cf08ee5bf8ec">measure_input()</a>, and <a class="el" href="report_8hpp_source.html#l00610">measure_input()</a>.</p>
+
+</div>
+</div>
 <a id="a7f25da0c437c8ae30b84192f617a2077" name="a7f25da0c437c8ae30b84192f617a2077"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f25da0c437c8ae30b84192f617a2077">&#9670;&#160;</a></span>periods_per_year()</h2>
 
@@ -545,7 +766,63 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00047">47</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>, and <a class="el" href="report_8hpp_source.html#l00337">summarize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00610">measure_input()</a>, <a class="el" href="backtest_2clock_8hpp_source.html#l00047">periods_per_year()</a>, and <a class="el" href="report_8hpp_source.html#l00560">summarize()</a>.</p>
+
+</div>
+</div>
+<a id="a888cb1eef441f6e54439e1df3987e63e" name="a888cb1eef441f6e54439e1df3987e63e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888cb1eef441f6e54439e1df3987e63e">&#9670;&#160;</a></span>resample_closes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; algotradelib::backtest::resample_closes </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>closes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rule</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::size_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>indices</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rebuilds one instrument's closes along a bootstrap path (<span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#a28c4fee1287618a2be87d940fd74bc75" title="Draws the returns of one bootstrap path: entry k names the return, close[j + 1] / close[j] as j,...">analytics::bootstrap_indices</a></span>) and rounds each to its nearest grid price, a tie going up. </p>
+<p>Call it with the same <span class="tt">indices</span> for every instrument of a path, so they move on the same drawn days. The identity draw (<span class="tt">0, 1, ..., n - 2</span>) returns <span class="tt">closes</span> as they are. Otherwise close 0 is the first close, and close <span class="tt">k</span> is close <span class="tt">k - 1</span> times <span class="tt">closes[j + 1] / closes[j]</span> with <span class="tt">j = indices[k - 1]</span>, accumulated unrounded and rounded once each. The arithmetic is in grid units (<span class="tt">10^-s</span>, <span class="tt">s</span> the largest scale among the closes and the rule's band starts and ticks), exact below 2^53 units, so the result is the same on every platform.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">closes</td><td>The closes, in order. </td></tr>
+    <tr><td class="paramname">rule</td><td>The price grid: <span class="tt">UNCONSTRAINED</span> rounds to one unit; a stated grid must be aligned (each band's start a multiple of its own tick and of the previous band's). </td></tr>
+    <tr><td class="paramname">indices</td><td>The drawn returns, each below <span class="tt">closes.size() - 1</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">indices.size() + 1</span> closes. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>for fewer than two closes, a close at or below zero, too many indices or one out of range, an <span class="tt">UNKNOWN</span> or unaligned rule, or a band or tick at or beyond 2^53 units at the rule's own scale (the identity draw included); for a drawn path, a close, band, tick, level or grid neighbour at or beyond 2^53 units, a level below the first band, or a close rounded to zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="bootstrap_8hpp_source.html#l00042">42</a> of file <a class="el" href="bootstrap_8hpp_source.html">bootstrap.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="bootstrap_8hpp_source.html#l00042">resample_closes()</a>.</p>
 
 </div>
 </div>
@@ -604,9 +881,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00337">337</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="report_8hpp_source.html#l00560">560</a> of file <a class="el" href="report_8hpp_source.html">report.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00337">summarize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00560">summarize()</a>.</p>
 
 </div>
 </div>

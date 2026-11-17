@@ -9,6 +9,7 @@ var classalgotradelib_1_1backtest_1_1Backtester =
     [ "feed", "classalgotradelib_1_1backtest_1_1Backtester.html#a5f2f2a11698126d856f8053be40cfd7d", null ],
     [ "fills", "classalgotradelib_1_1backtest_1_1Backtester.html#a721677e15a1ddb65c632858c66e15820", null ],
     [ "finish", "classalgotradelib_1_1backtest_1_1Backtester.html#aac085c0f5121c2a2a949abb953109e9a", null ],
+    [ "finish_history", "classalgotradelib_1_1backtest_1_1Backtester.html#acf17870e4a7eac3cf422367da9984200", null ],
     [ "ledger", "classalgotradelib_1_1backtest_1_1Backtester.html#a467b358a3c18b251f0936816cbfd21ab", null ],
     [ "result", "classalgotradelib_1_1backtest_1_1Backtester.html#a5550e986a83ad759063d2e969e2404f5", null ],
     [ "strategy", "classalgotradelib_1_1backtest_1_1Backtester.html#af187daf2ab272637bb438b0ae35996ac", null ]

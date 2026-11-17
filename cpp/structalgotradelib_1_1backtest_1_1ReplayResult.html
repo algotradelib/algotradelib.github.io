@@ -146,7 +146,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a88232f04ca9a6cc61e1980540264b8a1" id="r_a88232f04ca9a6cc61e1980540264b8a1"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a88232f04ca9a6cc61e1980540264b8a1">gaps_</a> {0}</td></tr>
 <tr class="memdesc:a88232f04ca9a6cc61e1980540264b8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bars that did not follow their predecessor; gaps are not interpolated.  <br /></td></tr>
 <tr class="memitem:a45e1d9700ed1ae2e20b30b4e7c31dfc0" id="r_a45e1d9700ed1ae2e20b30b4e7c31dfc0"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a45e1d9700ed1ae2e20b30b4e7c31dfc0">bars_</a> {0}</td></tr>
-<tr class="memdesc:a45e1d9700ed1ae2e20b30b4e7c31dfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bars fed.  <br /></td></tr>
+<tr class="memdesc:a45e1d9700ed1ae2e20b30b4e7c31dfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bars replayed; bars fed as history (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a492c1a0fc1dbe2a2bf60b5bb611652b8" title="Where trading starts: an event earlier than it is history; empty, none is.">ReplayConfig::trade_from_</a></span>) are in <span class="tt"><a class="el" href="#ad7d5b331db453aa5b2d761f4f0abaf98" title="The bars fed as history, before ReplayConfig::trade_from_.">history_bars_</a></span>.  <br /></td></tr>
 <tr class="memitem:a9a10283f434eab9a1586bcd6890225ad" id="r_a9a10283f434eab9a1586bcd6890225ad"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a9a10283f434eab9a1586bcd6890225ad">unfilled_</a> {0}</td></tr>
 <tr class="memdesc:a9a10283f434eab9a1586bcd6890225ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orders still queued when <span class="tt">finish</span> ran.  <br /></td></tr>
 <tr class="memitem:ac15bf00fc1e87473965e4fa2e3a30340" id="r_ac15bf00fc1e87473965e4fa2e3a30340"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Currency.html">Currency</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac15bf00fc1e87473965e4fa2e3a30340">currency_</a> {<a class="el" href="classalgotradelib_1_1Currency.html">Currency</a>{&quot;KRW&quot;}}</td></tr>
@@ -185,6 +185,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:af39742b969e23b48edc730587681061f"><td class="mdescLeft">&#160;</td><td class="mdescRight">When <span class="tt"><a class="el" href="#ae994c9bc49c1816bbb1ac87369c63357" title="The lowest cash any execution left in currency_, if below zero (checked at every fill).">lowest_cash_</a></span> was reached (that execution's <span class="tt">Fill::at_</span>).  <br /></td></tr>
 <tr class="memitem:a917ac58525054be1fd3d8cd090ad3469" id="r_a917ac58525054be1fd3d8cd090ad3469"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a917ac58525054be1fd3d8cd090ad3469">expired_day_orders_</a> {0}</td></tr>
 <tr class="memdesc:a917ac58525054be1fd3d8cd090ad3469"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">DAY</span> orders withdrawn unfilled when their session ended, as a broker does at the close.  <br /></td></tr>
+<tr class="memitem:ad7d5b331db453aa5b2d761f4f0abaf98" id="r_ad7d5b331db453aa5b2d761f4f0abaf98"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#ad7d5b331db453aa5b2d761f4f0abaf98">history_bars_</a> {0}</td></tr>
+<tr class="memdesc:ad7d5b331db453aa5b2d761f4f0abaf98"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bars fed as history, before <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a492c1a0fc1dbe2a2bf60b5bb611652b8" title="Where trading starts: an event earlier than it is history; empty, none is.">ReplayConfig::trade_from_</a></span>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Everything a replay produced; <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span> turns it into a <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html" title="The summary of a replay; read halted_ and caveats_ before the figures.">Report</a></span>. </p>
@@ -207,6 +209,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00709">709</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="a45e1d9700ed1ae2e20b30b4e7c31dfc0" name="a45e1d9700ed1ae2e20b30b4e7c31dfc0"></a>
@@ -221,9 +225,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The bars fed. </p>
+<p>The bars replayed; bars fed as history (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a492c1a0fc1dbe2a2bf60b5bb611652b8" title="Where trading starts: an event earlier than it is history; empty, none is.">ReplayConfig::trade_from_</a></span>) are in <span class="tt"><a class="el" href="#ad7d5b331db453aa5b2d761f4f0abaf98" title="The bars fed as history, before ReplayConfig::trade_from_.">history_bars_</a></span>. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00694">694</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -243,6 +249,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00698">698</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="af42c0b72cc2819675d1aad1e93203396" name="af42c0b72cc2819675d1aad1e93203396"></a>
@@ -260,6 +268,8 @@ Public Attributes</h2></td></tr>
 <p>The equity curve, in order: one point per period end, or per bar, or none (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a3c979493ca8c7d9940223b5ae3e26220" title="Which points the equity curve records: one per period end (the default), one per bar,...">ReplayConfig::equity_curve_</a></span>), each where the equity could be valued. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00681">681</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -279,6 +289,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00683">683</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="a917ac58525054be1fd3d8cd090ad3469" name="a917ac58525054be1fd3d8cd090ad3469"></a>
@@ -296,6 +308,8 @@ Public Attributes</h2></td></tr>
 <p><span class="tt">DAY</span> orders withdrawn unfilled when their session ended, as a broker does at the close. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00762">762</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -315,6 +329,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00756">756</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="a5a30adb14e2c64dbd081b8f636ce35f0" name="a5a30adb14e2c64dbd081b8f636ce35f0"></a>
@@ -332,6 +348,8 @@ Public Attributes</h2></td></tr>
 <p>The period end of the first unvalued bar, if any. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00733">733</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -351,6 +369,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00692">692</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="a9c4ff8ca110347c57c415b281fa5935c" name="a9c4ff8ca110347c57c415b281fa5935c"></a>
@@ -366,9 +386,31 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Why the replay stopped early, if it did. </p>
-<p>Set when an execution could not be costed (no rate for the date or venue, or a market whose trading day the replay cannot compute), the ledger could not record one, or a position could not be marked at a bar's close (<span class="tt">mark_not_representable</span>). Every figure then covers the bars up to the halt; the halting bar is counted in <span class="tt"><a class="el" href="#a45e1d9700ed1ae2e20b30b4e7c31dfc0" title="The bars fed.">bars_</a></span>, but nothing after the refusal ran on it. </p>
+<p>Set when an execution could not be costed (no rate for the date or venue, or a market whose trading day the replay cannot compute), the ledger could not record one, or a position could not be marked at a bar's close (<span class="tt">mark_not_representable</span>). Every figure then covers the bars up to the halt; the halting bar is counted in <span class="tt"><a class="el" href="#a45e1d9700ed1ae2e20b30b4e7c31dfc0" title="The bars replayed; bars fed as history (ReplayConfig::trade_from_) are in history_bars_.">bars_</a></span>, but nothing after the refusal ran on it. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00707">707</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
+</div>
+</div>
+<a id="ad7d5b331db453aa5b2d761f4f0abaf98" name="ad7d5b331db453aa5b2d761f4f0abaf98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d5b331db453aa5b2d761f4f0abaf98">&#9670;&#160;</a></span>history_bars_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t algotradelib::backtest::ReplayResult::history_bars_ {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The bars fed as history, before <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html#a492c1a0fc1dbe2a2bf60b5bb611652b8" title="Where trading starts: an event earlier than it is history; empty, none is.">ReplayConfig::trade_from_</a></span>. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00764">764</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -388,6 +430,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00739">739</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="ae994c9bc49c1816bbb1ac87369c63357" name="ae994c9bc49c1816bbb1ac87369c63357"></a>
@@ -405,6 +449,8 @@ Public Attributes</h2></td></tr>
 <p>The lowest cash any execution left in <span class="tt"><a class="el" href="#ac15bf00fc1e87473965e4fa2e3a30340" title="The currency of the equity curve (the replay&#39;s accounting currency).">currency_</a></span>, if below zero (checked at every fill). </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00758">758</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -424,6 +470,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00760">760</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="abc3e73eb7cd085f9e98583b030ac3d74" name="abc3e73eb7cd085f9e98583b030ac3d74"></a>
@@ -442,6 +490,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00743">743</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="aa649a9233da3f2e0736a7d1325c9d26a" name="aa649a9233da3f2e0736a7d1325c9d26a"></a>
@@ -459,6 +509,8 @@ Public Attributes</h2></td></tr>
 <p>The fill model's market-price rule, or empty; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a4b16889a683c8fcd2933842d76c593ac" title="The fill model&#39;s market-price rule (NextBarFillModel::with_market_price), or empty when market orders...">ReportCaveats::market_price_rule_</a></span>. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00741">741</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -479,6 +531,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00754">754</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="abf593948a01e569973b089692848d7f2" name="abf593948a01e569973b089692848d7f2"></a>
@@ -496,6 +550,8 @@ Public Attributes</h2></td></tr>
 <p>The quotes fed; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a08413c2db76aa957b84d25328a5cf224" title="How many quotes the replay was fed (zero for a bars-only replay).">ReportCaveats::quotes_</a></span> for what quote-driven orders mean in a replay. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00711">711</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -515,6 +571,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00713">713</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="a688685e711a29d2bceaabf38909dcbe6" name="a688685e711a29d2bceaabf38909dcbe6"></a>
@@ -532,6 +590,8 @@ Public Attributes</h2></td></tr>
 <p>Instructions a risk guard refused. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00690">690</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -551,6 +611,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00688">688</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="aa3c87e35845bdf58c485fef23acdda51" name="aa3c87e35845bdf58c485fef23acdda51"></a>
@@ -569,6 +631,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00737">737</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="a388a5592e90bec192f9a4f6115c5e0e5" name="a388a5592e90bec192f9a4f6115c5e0e5"></a>
@@ -586,6 +650,8 @@ Public Attributes</h2></td></tr>
 <p>Stop-limit orders a bar released; see <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1ReportCaveats.html#a14b9d8ff61bd3f453e2b45b93429fa99" title="How many stop-limit orders a bar released, each using the assumed direction (a sell stop releases whe...">ReportCaveats::stop_releases_</a></span>. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00735">735</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -606,6 +672,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00723">723</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
+
 </div>
 </div>
 <a id="a9a10283f434eab9a1586bcd6890225ad" name="a9a10283f434eab9a1586bcd6890225ad"></a>
@@ -623,6 +691,8 @@ Public Attributes</h2></td></tr>
 <p>Orders still queued when <span class="tt">finish</span> ran. </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00696">696</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>
@@ -642,6 +712,8 @@ Public Attributes</h2></td></tr>
 <p>The next point carries no return. The replay and its callbacks continue, with per-lot and per-currency figures available, but the missing total also means no portfolio value for weight sizing, so a weight-sized intent on such a bar is rejected (<span class="tt">NO_PORTFOLIO_VALUE</span>). </p>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00731">731</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>.</p>
 
 </div>
 </div>

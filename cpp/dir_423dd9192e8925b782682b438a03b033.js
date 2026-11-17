@@ -6,6 +6,7 @@ var dir_423dd9192e8925b782682b438a03b033 =
     [ "metrics.hpp", "metrics_8hpp.html", "metrics_8hpp" ],
     [ "numeric.hpp", "numeric_8hpp.html", "numeric_8hpp" ],
     [ "panel.hpp", "panel_8hpp_source.html", null ],
+    [ "resample.hpp", "resample_8hpp.html", "resample_8hpp" ],
     [ "returns.hpp", "returns_8hpp.html", "returns_8hpp" ],
     [ "rolling.hpp", "rolling_8hpp.html", "rolling_8hpp" ],
     [ "series_buffer.hpp", "series__buffer_8hpp_source.html", null ],

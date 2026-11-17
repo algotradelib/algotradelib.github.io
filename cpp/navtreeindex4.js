@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"classalgotradelib_1_1live_1_1SessionSource.html#ad14cd46cb2ff2addb1367b4e23474683":[1,0,0,7,1,8],
+"classalgotradelib_1_1live_1_1SessionSource.html#ad14cd46cb2ff2addb1367b4e23474683":[2,0,0,6,1,8],
+"classalgotradelib_1_1live_1_1SessionSource.html#adbfd14bae84d4a2d45935a6998da178a":[1,0,0,7,1,16],
+"classalgotradelib_1_1live_1_1SessionSource.html#adbfd14bae84d4a2d45935a6998da178a":[2,0,0,6,1,16],
 "classalgotradelib_1_1live_1_1SessionSource.html#afa5f26bda14386cbe1a65e5e8f54244f":[1,0,0,7,1,10],
 "classalgotradelib_1_1live_1_1SessionSource.html#afa5f26bda14386cbe1a65e5e8f54244f":[2,0,0,6,1,10],
 "classalgotradelib_1_1mock_1_1DataFeed.html":[1,0,0,9,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "classalgotradelib_1_1network_1_1RateLimitController.html#a528582aaf0ab8867d88d620b85ff3e15":[1,0,0,10,11,1],
 "classalgotradelib_1_1network_1_1RateLimitController.html#a528582aaf0ab8867d88d620b85ff3e15":[2,0,0,9,11,1],
 "classalgotradelib_1_1network_1_1RateLimitController.html#a8cf1d6f57181514465a251871e9ad59b":[1,0,0,10,11,0],
-"classalgotradelib_1_1network_1_1RateLimitController.html#a8cf1d6f57181514465a251871e9ad59b":[2,0,0,9,11,0],
-"classalgotradelib_1_1network_1_1RateLimitController.html#a936a464832d76aaece4e4cce665e30a2":[1,0,0,10,11,9],
-"classalgotradelib_1_1network_1_1RateLimitController.html#a936a464832d76aaece4e4cce665e30a2":[2,0,0,9,11,9],
-"classalgotradelib_1_1network_1_1RateLimitController.html#ac136a35beb355a2fa5c00a7b92c83f0f":[1,0,0,10,11,7],
-"classalgotradelib_1_1network_1_1RateLimitController.html#ac136a35beb355a2fa5c00a7b92c83f0f":[2,0,0,9,11,7]
+"classalgotradelib_1_1network_1_1RateLimitController.html#a8cf1d6f57181514465a251871e9ad59b":[2,0,0,9,11,0]
 };

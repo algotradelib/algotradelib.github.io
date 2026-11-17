@@ -1,0 +1,5 @@
+<map id="algotradelib::backtest::Fold" name="algotradelib::backtest::Fold">
+<area shape="rect" id="Node000001" title="One fold: its training and test ranges, and where each one&#39;s history starts." alt="" coords="5,145,169,190"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1backtest_1_1IndexRange.html" title="A half&#45;open range of positions, [begin_, end_)." alt="" coords="5,5,169,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,64,90,146,84,145,85,67"/>
+</map>

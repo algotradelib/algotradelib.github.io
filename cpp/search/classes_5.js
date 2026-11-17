@@ -6,5 +6,7 @@ var searchData=
   ['filestopchannel_3',['FileStopChannel',['../classalgotradelib_1_1runner_1_1FileStopChannel.html',1,'algotradelib::runner']]],
   ['filetokenstore_4',['FileTokenStore',['../classalgotradelib_1_1network_1_1FileTokenStore.html',1,'algotradelib::network']]],
   ['fill_5',['Fill',['../structalgotradelib_1_1runner_1_1Fill.html',1,'algotradelib::runner::Fill'],['../structalgotradelib_1_1strategy_1_1Fill.html',1,'algotradelib::strategy::Fill']]],
-  ['filldecision_6',['FillDecision',['../structalgotradelib_1_1backtest_1_1FillDecision.html',1,'algotradelib::backtest']]]
+  ['filldecision_6',['FillDecision',['../structalgotradelib_1_1backtest_1_1FillDecision.html',1,'algotradelib::backtest']]],
+  ['fold_7',['Fold',['../structalgotradelib_1_1backtest_1_1Fold.html',1,'algotradelib::backtest']]],
+  ['foldlengths_8',['FoldLengths',['../structalgotradelib_1_1backtest_1_1FoldLengths.html',1,'algotradelib::backtest']]]
 ];

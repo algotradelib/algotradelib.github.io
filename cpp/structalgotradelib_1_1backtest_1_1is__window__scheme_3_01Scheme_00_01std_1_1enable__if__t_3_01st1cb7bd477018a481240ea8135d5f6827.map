@@ -1,0 +1,10 @@
+<map id="algotradelib::backtest::is_window_scheme&lt; Scheme, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Scheme &amp; &gt;().train(std::size_t{}, std::declval&lt; const FoldLengths &amp; &gt;())), IndexRange &gt; &gt; &gt;" name="algotradelib::backtest::is_window_scheme&lt; Scheme, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Scheme &amp; &gt;().train(std::size_t{}, std::declval&lt; const FoldLengths &amp; &gt;())), IndexRange &gt; &gt; &gt;">
+<area shape="rect" id="Node000001" title="A scheme with the member train that folds calls." alt="" coords="647,131,980,261"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,59,123,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,52,220,27,281,16,347,7,416,3,487,5,557,15,624,33,663,51,698,75,760,131,754,130,695,79,660,56,622,38,556,20,486,10,416,8,347,13,281,21,221,32,124,57"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1backtest_1_1is__window__scheme.html" title="Whether Scheme can choose a fold&#39;s training range: true when a const Scheme has a member train(std::s..." alt="" coords="172,97,398,159"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="137,89,174,99,169,101,138,94"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="230,226,341,254"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="357,235,481,229,623,219,644,219,650,219,624,224,481,234,357,240"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="350,164,386,180,423,192,479,202,536,208,650,212,644,212,535,213,478,208,422,198,384,185,349,169"/>
+</map>

@@ -11,11 +11,12 @@ var searchData=
   ['marketsettings_8',['MarketSettings',['../structalgotradelib_1_1mock_1_1MarketSettings.html',1,'algotradelib::mock']]],
   ['matchwindow_9',['MatchWindow',['../structalgotradelib_1_1runner_1_1MatchWindow.html',1,'algotradelib::runner']]],
   ['maxdrawdown_10',['MaxDrawdown',['../structalgotradelib_1_1analytics_1_1MaxDrawdown.html',1,'algotradelib::analytics']]],
-  ['memoryjournal_11',['MemoryJournal',['../classalgotradelib_1_1runner_1_1MemoryJournal.html',1,'algotradelib::runner']]],
-  ['mockaccount_12',['MockAccount',['../structalgotradelib_1_1mock_1_1MockAccount.html',1,'algotradelib::mock']]],
-  ['mockamendment_13',['MockAmendment',['../structalgotradelib_1_1mock_1_1MockAmendment.html',1,'algotradelib::mock']]],
-  ['mockclient_14',['MockClient',['../classalgotradelib_1_1mock_1_1MockClient.html',1,'algotradelib::mock']]],
-  ['money_15',['Money',['../structalgotradelib_1_1Money.html',1,'algotradelib']]],
-  ['moveonlycallback_16',['MoveOnlyCallback',['../structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html',1,'algotradelib::conformance']]],
-  ['movingaveragecrossover_17',['MovingAverageCrossover',['../structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover.html',1,'algotradelib::strategy::vanilla']]]
+  ['measureinput_11',['MeasureInput',['../structalgotradelib_1_1backtest_1_1MeasureInput.html',1,'algotradelib::backtest']]],
+  ['memoryjournal_12',['MemoryJournal',['../classalgotradelib_1_1runner_1_1MemoryJournal.html',1,'algotradelib::runner']]],
+  ['mockaccount_13',['MockAccount',['../structalgotradelib_1_1mock_1_1MockAccount.html',1,'algotradelib::mock']]],
+  ['mockamendment_14',['MockAmendment',['../structalgotradelib_1_1mock_1_1MockAmendment.html',1,'algotradelib::mock']]],
+  ['mockclient_15',['MockClient',['../classalgotradelib_1_1mock_1_1MockClient.html',1,'algotradelib::mock']]],
+  ['money_16',['Money',['../structalgotradelib_1_1Money.html',1,'algotradelib']]],
+  ['moveonlycallback_17',['MoveOnlyCallback',['../structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html',1,'algotradelib::conformance']]],
+  ['movingaveragecrossover_18',['MovingAverageCrossover',['../structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover.html',1,'algotradelib::strategy::vanilla']]]
 ];

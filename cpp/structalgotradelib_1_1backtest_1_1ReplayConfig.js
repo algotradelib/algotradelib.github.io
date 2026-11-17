@@ -7,5 +7,6 @@ var structalgotradelib_1_1backtest_1_1ReplayConfig =
     [ "instruments_", "structalgotradelib_1_1backtest_1_1ReplayConfig.html#aba0bf17a4f3d4a82f54c61476d4d49f2", null ],
     [ "limits_", "structalgotradelib_1_1backtest_1_1ReplayConfig.html#a5136330204a1d48bf717cf3b843d73e0", null ],
     [ "series_capacity_", "structalgotradelib_1_1backtest_1_1ReplayConfig.html#abc96e62f4c4ec05da2bb0d2d7a95366c", null ],
-    [ "session_", "structalgotradelib_1_1backtest_1_1ReplayConfig.html#ade8215df12bb493eb9dba669fe037700", null ]
+    [ "session_", "structalgotradelib_1_1backtest_1_1ReplayConfig.html#ade8215df12bb493eb9dba669fe037700", null ],
+    [ "trade_from_", "structalgotradelib_1_1backtest_1_1ReplayConfig.html#a492c1a0fc1dbe2a2bf60b5bb611652b8", null ]
 ];

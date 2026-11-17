@@ -12,11 +12,17 @@ var namespacealgotradelib_1_1analytics =
       [ "FORWARD_FILL", "namespacealgotradelib_1_1analytics.html#af6f97fb805bc5968f1157db44a8d2020a7938d3eb8c9ef87a0dd8661d42543688", null ]
     ] ],
     [ "BarField", "namespacealgotradelib_1_1analytics.html#a36711d90c13978d4ae1a79e868f4d0f2", null ],
+    [ "BlockScheme", "namespacealgotradelib_1_1analytics.html#a67be6c54c9dbdb43c93218c6deb67a6c", [
+      [ "MOVING", "namespacealgotradelib_1_1analytics.html#a67be6c54c9dbdb43c93218c6deb67a6caaf5a690fd5ec6f789dbfc51ec6a891ba", null ],
+      [ "CIRCULAR", "namespacealgotradelib_1_1analytics.html#a67be6c54c9dbdb43c93218c6deb67a6ca93c8d295bb538cdb3302604512828d68", null ],
+      [ "STATIONARY", "namespacealgotradelib_1_1analytics.html#a67be6c54c9dbdb43c93218c6deb67a6ca4120eb7591bd0789af75a8973d5f9146", null ]
+    ] ],
     [ "alignment_name", "namespacealgotradelib_1_1analytics.html#aa007f4e18852c2ccd6e7a679693c7e6b", null ],
     [ "alpha_from_span", "namespacealgotradelib_1_1analytics.html#a3c7f1fb6c402128348d4e004b76b10e6", null ],
     [ "annualize_ratio", "namespacealgotradelib_1_1analytics.html#ab19fa55f5c2131a1fc28ab652b43d0e1", null ],
     [ "bar_field_index", "namespacealgotradelib_1_1analytics.html#ad72a3dd09a9ecade69cd5f59c0737b05", null ],
     [ "bar_field_name", "namespacealgotradelib_1_1analytics.html#a89ce3336924ce286831cd51ff56fc35f", null ],
+    [ "bootstrap_indices", "namespacealgotradelib_1_1analytics.html#a28c4fee1287618a2be87d940fd74bc75", null ],
     [ "ema", "namespacealgotradelib_1_1analytics.html#a714d14c568658b14a495a49413661d80", null ],
     [ "ema", "namespacealgotradelib_1_1analytics.html#aa99731f9508ab4ad39127ee2c657b45f", null ],
     [ "from_bars", "namespacealgotradelib_1_1analytics.html#ae3efdc25f1b58a29c8466dd77dc3ddd9", null ],

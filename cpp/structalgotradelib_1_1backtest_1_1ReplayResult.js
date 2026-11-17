@@ -10,6 +10,7 @@ var structalgotradelib_1_1backtest_1_1ReplayResult =
     [ "first_unvalued_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a5a30adb14e2c64dbd081b8f636ce35f0", null ],
     [ "gaps_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a88232f04ca9a6cc61e1980540264b8a1", null ],
     [ "halted_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a9c4ff8ca110347c57c415b281fa5935c", null ],
+    [ "history_bars_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#ad7d5b331db453aa5b2d761f4f0abaf98", null ],
     [ "limit_fills_bounded_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#a4e1b49a6b2cba347174838a17e5ef16a", null ],
     [ "lowest_cash_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#ae994c9bc49c1816bbb1ac87369c63357", null ],
     [ "lowest_cash_at_", "structalgotradelib_1_1backtest_1_1ReplayResult.html#af39742b969e23b48edc730587681061f", null ],

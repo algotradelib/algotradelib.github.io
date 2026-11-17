@@ -1,0 +1,14 @@
+<map id="algotradelib::backtest::MeasureInput" name="algotradelib::backtest::MeasureInput">
+<area shape="rect" id="Node000001" title="What a measure of a finished replay reads: the replay, its report, and its equity curve&#39;s levels and ..." alt="" coords="938,56,1102,100"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1backtest_1_1ReplayResult.html" title="Everything a replay produced; summarize turns it into a Report." alt="" coords="673,13,836,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="852,48,941,65,935,65,852,54"/>
+<area shape="rect" id="Node000003" href="$classalgotradelib_1_1Currency.html" title="A three&#45;letter currency code, such as KRW or USD (ISO 4217 style)." alt="" coords="389,13,554,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="569,27,675,33,670,33,570,33"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1backtest_1_1Report.html" title="The summary of a replay; read halted_ and caveats_ before the figures." alt="" coords="673,90,836,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="851,106,914,99,935,98,941,97,915,104,852,111"/>
+<area shape="rect" id="Node000005" href="$classalgotradelib_1_1Decimal64.html" title="An exact signed decimal: an int64 coefficient times 10^&#45;scale." alt="" coords="5,133,183,161"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="197,130,206,129,461,114,675,112,670,113,462,119,207,134,198,135"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1backtest_1_1ReportCaveats.html" title="What a replay&#39;s figures assumed and did not account for." alt="" coords="390,161,553,206"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="198,154,391,174,387,177,198,160"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="568,170,648,154,703,136,708,135,650,159,569,176"/>
+</map>

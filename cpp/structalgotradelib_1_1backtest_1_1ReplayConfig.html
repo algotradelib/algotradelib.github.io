@@ -151,11 +151,13 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a3c979493ca8c7d9940223b5ae3e26220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which points the equity curve records: one per period end (the default), one per bar, or none.  <br /></td></tr>
 <tr class="memitem:aace3b50bb7369dc3ff803080cfcd553c" id="r_aace3b50bb7369dc3ff803080cfcd553c"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1TradingCalendar.html">TradingCalendar</a>&#160;</td><td class="memItemRight"><a class="el" href="#aace3b50bb7369dc3ff803080cfcd553c">calendar_</a></td></tr>
 <tr class="memdesc:aace3b50bb7369dc3ff803080cfcd553c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The calendar <span class="tt">ctx.calendar()</span> returns, for a strategy asking about dates it has no bar for (such as whether tomorrow trades).  <br /></td></tr>
+<tr class="memitem:a492c1a0fc1dbe2a2bf60b5bb611652b8" id="r_a492c1a0fc1dbe2a2bf60b5bb611652b8"><td class="memItemLeft">std::optional&lt; std::chrono::system_clock::time_point &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a492c1a0fc1dbe2a2bf60b5bb611652b8">trade_from_</a></td></tr>
+<tr class="memdesc:a492c1a0fc1dbe2a2bf60b5bb611652b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where trading starts: an event earlier than it is history; empty, none is.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A replay's settings, besides the strategy and the bars. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00766">766</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00768">768</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="aace3b50bb7369dc3ff803080cfcd553c" name="aace3b50bb7369dc3ff803080cfcd553c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aace3b50bb7369dc3ff803080cfcd553c">&#9670;&#160;</a></span>calendar_</h2>
@@ -172,7 +174,7 @@ Public Attributes</h2></td></tr>
 <p>The calendar <span class="tt">ctx.calendar()</span> returns, for a strategy asking about dates it has no bar for (such as whether tomorrow trades). </p>
 <p>Empty by default. It does not change the phase of a fed bar, which comes from <span class="tt">feed</span>'s <span class="tt">trading_day</span> argument. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00801">801</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00803">803</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -190,7 +192,7 @@ Public Attributes</h2></td></tr>
 
 <p>The starting cash, in <span class="tt"><a class="el" href="#ab4530985b149ff0cd8a75d9e6399969f" title="The accounting currency; the equity curve is in this currency only.">currency_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00768">768</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00770">770</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -208,7 +210,7 @@ Public Attributes</h2></td></tr>
 
 <p>The accounting currency; the equity curve is in this currency only. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00770">770</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00772">772</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +229,7 @@ Public Attributes</h2></td></tr>
 <p>Which points the equity curve records: one per period end (the default), one per bar, or none. </p>
 <p>The bar counts (<span class="tt">overdrawn_bars_</span>, <span class="tt">unvalued_bars_</span>) are counted per bar whichever is chosen. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00793">793</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00795">795</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +247,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reference data for every instrument replayed; orders on an instrument without it are refused. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00772">772</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00774">774</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +265,7 @@ Public Attributes</h2></td></tr>
 
 <p>The risk limits, applied as they are live. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00774">774</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00776">776</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -281,7 +283,7 @@ Public Attributes</h2></td></tr>
 
 <p>How many trailing bars the context caches per series, for indicators; must be positive. Unused for a strategy declaring <span class="tt">reads_bar_history = false</span>, which keeps none. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00787">787</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00789">789</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -300,7 +302,27 @@ Public Attributes</h2></td></tr>
 <p>The session window phases are derived from and <span class="tt">DAY</span> orders expire at; one for the whole replay. </p>
 <p>Set it to the replayed market's session: US bars under the KRX default would expire orders at the KRX close. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00782">782</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00784">784</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a492c1a0fc1dbe2a2bf60b5bb611652b8" name="a492c1a0fc1dbe2a2bf60b5bb611652b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492c1a0fc1dbe2a2bf60b5bb611652b8">&#9670;&#160;</a></span>trade_from_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::chrono::system_clock::time_point&gt; algotradelib::backtest::ReplayConfig::trade_from_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Where trading starts: an event earlier than it is history; empty, none is. </p>
+<p>A bar is history when its period end is earlier, a record when it became known earlier. History runs the strategy's handlers, so its series and state warm up, and discards what they ask for, as a live warm-up does (<span class="tt">Runner::feed_warmup</span>): nothing fills, no equity point is recorded, the clock and <span class="tt">on_phase</span> do not move, and nothing is counted as rejected or refused. <span class="tt">on_start</span> still runs at the first event, and an order it places rests through history and may fill on the first traded bar. A strategy keeping its own record of having traded can start trading believing it holds a position the book does not.</p>
+<p>Set it to the smallest period end among the first traded date's bars, not to a bar's timestamp: an open-stamped daily bar ends at the next one's timestamp. A quote before it is refused. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00817">817</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 </div>
 </div>

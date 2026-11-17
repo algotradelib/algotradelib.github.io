@@ -21,8 +21,8 @@ var NAVTREEINDEX0 =
 "architecture.html#autotoc_md27":[0,12,5],
 "architecture.html#autotoc_md28":[0,12,6],
 "architecture.html#autotoc_md29":[0,12,7],
-"backtest_2clock_8hpp.html":[3,0,0,0,1,0],
-"backtest_2clock_8hpp_source.html":[3,0,0,0,1,0],
+"backtest_2clock_8hpp.html":[3,0,0,0,1,1],
+"backtest_2clock_8hpp_source.html":[3,0,0,0,1,1],
 "bind_8hpp.html":[3,0,0,0,4,0],
 "bind_8hpp_source.html":[3,0,0,0,4,0],
 "binding-a-broker.html":[0,14],
@@ -39,6 +39,8 @@ var NAVTREEINDEX0 =
 "binding-a-broker.html#autotoc_md40":[0,14,7],
 "binding-a-broker.html#autotoc_md41":[0,14,8],
 "binding-a-broker.html#autotoc_md42":[0,14,9],
+"bootstrap_8hpp.html":[3,0,0,0,1,0],
+"bootstrap_8hpp_source.html":[3,0,0,0,1,0],
 "broker-clients.html":[0,21],
 "broker-clients.html#autotoc_md43":[0,21,0],
 "broker-clients.html#autotoc_md44":[0,21,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classalgotradelib_1_1Decimal64.html":[1,0,0,38],
 "classalgotradelib_1_1Decimal64.html":[2,0,0,37],
 "classalgotradelib_1_1Decimal64.html#a0ebe9176b2a54f9802a455ed444778f8":[1,0,0,38,4],
-"classalgotradelib_1_1Decimal64.html#a0ebe9176b2a54f9802a455ed444778f8":[2,0,0,37,4],
-"classalgotradelib_1_1Decimal64.html#a1cc04fd3398d415b3ea3a14123ce0fbe":[1,0,0,38,6],
-"classalgotradelib_1_1Decimal64.html#a1cc04fd3398d415b3ea3a14123ce0fbe":[2,0,0,37,6]
+"classalgotradelib_1_1Decimal64.html#a0ebe9176b2a54f9802a455ed444778f8":[2,0,0,37,4]
 };

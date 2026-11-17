@@ -161,6 +161,11 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#af6f97fb805bc5968f1157db44a8d2020a7938d3eb8c9ef87a0dd8661d42543688">FORWARD_FILL</a>
  }</td></tr>
 <tr class="memdesc:af6f97fb805bc5968f1157db44a8d2020"><td class="mdescLeft">&#160;</td><td class="mdescRight">How <span class="tt"><a class="el" href="classalgotradelib_1_1analytics_1_1Panel.html#a9a330596c579f50849b3a56a75126d13" title="Builds a panel of one bar field from several bar series.">Panel::from_bars</a></span> lines up instruments whose bars fall on different instants.  <a href="#af6f97fb805bc5968f1157db44a8d2020">More...</a><br /></td></tr>
+<tr class="memitem:a67be6c54c9dbdb43c93218c6deb67a6c" id="r_a67be6c54c9dbdb43c93218c6deb67a6c"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6c">BlockScheme</a> { <a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6caaf5a690fd5ec6f789dbfc51ec6a891ba">MOVING</a>
+, <a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6ca93c8d295bb538cdb3302604512828d68">CIRCULAR</a>
+, <a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6ca4120eb7591bd0789af75a8973d5f9146">STATIONARY</a>
+ }</td></tr>
+<tr class="memdesc:a67be6c54c9dbdb43c93218c6deb67a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">How a block bootstrap draws its blocks of consecutive returns.  <a href="#a67be6c54c9dbdb43c93218c6deb67a6c">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -192,6 +197,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ab19fa55f5c2131a1fc28ab652b43d0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Annualizes a per-period ratio by multiplying it by <span class="tt">sqrt(periods_per_year)</span>.  <br /></td></tr>
 <tr class="memitem:aa007f4e18852c2ccd6e7a679693c7e6b" id="r_aa007f4e18852c2ccd6e7a679693c7e6b"><td class="memItemLeft">constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#aa007f4e18852c2ccd6e7a679693c7e6b">alignment_name</a> (<a class="el" href="#af6f97fb805bc5968f1157db44a8d2020">Alignment</a> alignment) noexcept</td></tr>
 <tr class="memdesc:aa007f4e18852c2ccd6e7a679693c7e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase display name for an alignment, such as <span class="tt">"intersection"</span>.  <br /></td></tr>
+<tr class="memitem:a28c4fee1287618a2be87d940fd74bc75" id="r_a28c4fee1287618a2be87d940fd74bc75"><td class="memItemLeft">std::vector&lt; std::size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a28c4fee1287618a2be87d940fd74bc75">bootstrap_indices</a> (std::size_t count, <a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6c">BlockScheme</a> scheme, std::size_t block, std::uint64_t seed, std::uint64_t path)</td></tr>
+<tr class="memdesc:a28c4fee1287618a2be87d940fd74bc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the returns of one bootstrap path: entry <span class="tt">k</span> names the return, <span class="tt">close[j + 1] / close[j]</span> as <span class="tt">j</span>, the path takes at step <span class="tt">k</span>.  <br /></td></tr>
 <tr class="memitem:ae513271d6929b08cab9a1b66ee56041c" id="r_ae513271d6929b08cab9a1b66ee56041c"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae513271d6929b08cab9a1b66ee56041c">returns</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> prices)</td></tr>
 <tr class="memdesc:ae513271d6929b08cab9a1b66ee56041c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes simple period returns, <span class="tt">p[i] / p[i - 1] - 1</span>.  <br /></td></tr>
 <tr class="memitem:a1939f6f853886d2c05bfba7875825e3d" id="r_a1939f6f853886d2c05bfba7875825e3d"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1939f6f853886d2c05bfba7875825e3d">rolling_mean</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window, std::size_t min_observed)</td></tr>
@@ -317,6 +324,40 @@ Variables</h2></td></tr>
 <p>A bar field, used as a column of a <span class="tt"><a class="el" href="classalgotradelib_1_1analytics_1_1SeriesFrame.html" title="One instrument&#39;s bars as numeric columns: one row per bar, one column per BarField.">SeriesFrame</a></span>. </p>
 
 <p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00021">21</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a67be6c54c9dbdb43c93218c6deb67a6c" name="a67be6c54c9dbdb43c93218c6deb67a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67be6c54c9dbdb43c93218c6deb67a6c">&#9670;&#160;</a></span>BlockScheme</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6c">algotradelib::analytics::BlockScheme</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>How a block bootstrap draws its blocks of consecutive returns. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a67be6c54c9dbdb43c93218c6deb67a6caaf5a690fd5ec6f789dbfc51ec6a891ba" name="a67be6c54c9dbdb43c93218c6deb67a6caaf5a690fd5ec6f789dbfc51ec6a891ba"></a>MOVING&#160;</td><td class="fielddoc"><p>Blocks of <span class="tt">block</span> returns that never wrap past the last. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a67be6c54c9dbdb43c93218c6deb67a6ca93c8d295bb538cdb3302604512828d68" name="a67be6c54c9dbdb43c93218c6deb67a6ca93c8d295bb538cdb3302604512828d68"></a>CIRCULAR&#160;</td><td class="fielddoc"><p>Blocks of <span class="tt">block</span> returns that wrap from the last to the first. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a67be6c54c9dbdb43c93218c6deb67a6ca4120eb7591bd0789af75a8973d5f9146" name="a67be6c54c9dbdb43c93218c6deb67a6ca4120eb7591bd0789af75a8973d5f9146"></a>STATIONARY&#160;</td><td class="fielddoc"><p>Wrapping blocks whose lengths are geometric with mean <span class="tt">block</span> (Politis and Romano). </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="resample_8hpp_source.html#l00018">18</a> of file <a class="el" href="resample_8hpp_source.html">resample.hpp</a>.</p>
 
 </div>
 </div>
@@ -527,6 +568,74 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00057">57</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00057">bar_field_name()</a>.</p>
+
+</div>
+</div>
+<a id="a28c4fee1287618a2be87d940fd74bc75" name="a28c4fee1287618a2be87d940fd74bc75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c4fee1287618a2be87d940fd74bc75">&#9670;&#160;</a></span>bootstrap_indices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::size_t &gt; algotradelib::analytics::bootstrap_indices </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6c">BlockScheme</a></td>          <td class="paramname"><span class="paramname"><em>scheme</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>block</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint64_t</td>          <td class="paramname"><span class="paramname"><em>seed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint64_t</td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws the returns of one bootstrap path: entry <span class="tt">k</span> names the return, <span class="tt">close[j + 1] / close[j]</span> as <span class="tt">j</span>, the path takes at step <span class="tt">k</span>. </p>
+<p>Path <span class="tt">path</span> of <span class="tt">seed</span> comes from its own <span class="tt">std::mt19937_64</span>, seeded by <span class="tt">std::seed_seq</span> with the low and high 32 bits of <span class="tt">seed</span> and then of <span class="tt">path</span>, so it is reproducible alone, on any thread and in any order. Draws use only the engine's integers (no standard distribution, whose algorithm the standard leaves open), so a path is the same on every standard library. A stationary block restarts with probability exactly <span class="tt">1 / block</span>; <span class="tt">block</span> 1 is the plain bootstrap.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>The number of returns (closes minus one); the path has as many entries, each below it. </td></tr>
+    <tr><td class="paramname">scheme</td><td>How blocks are drawn. </td></tr>
+    <tr><td class="paramname">block</td><td>The block length, or the mean block length for <span class="tt">STATIONARY</span>. </td></tr>
+    <tr><td class="paramname">seed</td><td>The seed. </td></tr>
+    <tr><td class="paramname">path</td><td>The path's number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The indices. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">count</span> or <span class="tt">block</span> is zero, or <span class="tt">block</span> exceeds <span class="tt">count</span> for <span class="tt">MOVING</span> or <span class="tt">CIRCULAR</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="resample_8hpp_source.html#l00046">46</a> of file <a class="el" href="resample_8hpp_source.html">resample.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="resample_8hpp_source.html#l00046">bootstrap_indices()</a>.</p>
 
 </div>
 </div>
@@ -1564,7 +1673,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="conversion_8hpp_source.html#l00060">60</a> of file <a class="el" href="conversion_8hpp_source.html">conversion.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="conversion_8hpp_source.html#l00099">round_scalar_to_tick()</a>, and <a class="el" href="conversion_8hpp_source.html#l00060">to_decimal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>, <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="conversion_8hpp_source.html#l00099">round_scalar_to_tick()</a>, and <a class="el" href="conversion_8hpp_source.html#l00060">to_decimal()</a>.</p>
 
 </div>
 </div>
@@ -1604,7 +1713,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="conversion_8hpp_source.html#l00037">37</a> of file <a class="el" href="conversion_8hpp_source.html">conversion.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00247">from_bars()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00157">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="conversion_8hpp_source.html#l00037">to_scalar()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>, <a class="el" href="frame_8hpp_source.html#l00247">from_bars()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00157">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="conversion_8hpp_source.html#l00037">to_scalar()</a>.</p>
 
 </div>
 </div>

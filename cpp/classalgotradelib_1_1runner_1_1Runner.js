@@ -32,6 +32,7 @@ var classalgotradelib_1_1runner_1_1Runner =
     [ "feed", "classalgotradelib_1_1runner_1_1Runner.html#aab86a48e1cfb1cd72e328942967c716d", null ],
     [ "feed_warmup", "classalgotradelib_1_1runner_1_1Runner.html#a6a4a112cb3ec60b20a7a6664af452573", null ],
     [ "feed_warmup", "classalgotradelib_1_1runner_1_1Runner.html#a7868c77dbf64065a91e3efcbaf7b0cfb", null ],
+    [ "feed_warmup", "classalgotradelib_1_1runner_1_1Runner.html#ad50cd59a115a3d9ee3d61840c71d429f", null ],
     [ "guard", "classalgotradelib_1_1runner_1_1Runner.html#aa75264569eaa48592145cf76aa1882f0", null ],
     [ "guard", "classalgotradelib_1_1runner_1_1Runner.html#a7b9d359e09eaffbed27f22f5655cd6ac", null ],
     [ "halt_locally", "classalgotradelib_1_1runner_1_1Runner.html#a99d28dfaf904c2d07f72276ce2a7ed74", null ],

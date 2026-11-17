@@ -1,0 +1,7 @@
+<map id="algotradelib::backtest::is_window_scheme&lt; Scheme, typename &gt;" name="algotradelib::backtest::is_window_scheme&lt; Scheme, typename &gt;">
+<area shape="rect" id="Node000001" title="Whether Scheme can choose a fold&#39;s training range: true when a const Scheme has a member train(std::s..." alt="" coords="172,134,398,195"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1backtest_1_1is__window__scheme_3_01Scheme_00_01std_1_1enable__if__t_3_01st78dd9823fcdae9fb5106fec7a4ed3015.html" title="A scheme with the member train that folds calls." alt="" coords="647,100,980,229"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="414,162,649,164,644,165,414,167"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,150,123,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,162,174,164,169,165,139,167"/>
+</map>
