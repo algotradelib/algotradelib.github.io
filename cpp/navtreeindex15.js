@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#adf9b392e5e0e7cf0dd293309d08acac1":[2,0,0,28,11],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aea3a156a25616c78753fcf095f5a5146":[1,0,0,29,1],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aea3a156a25616c78753fcf095f5a5146":[2,0,0,28,1],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#af54c6467e87faedd51498988cdbf9699":[1,0,0,29,29],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "structalgotradelib_1_1HoldingsSnapshot.html":[2,0,0,41],
 "structalgotradelib_1_1HoldingsSnapshot.html#a8995e5be10b307c45c6b0edc2f9b8265":[1,0,0,42,1],
 "structalgotradelib_1_1HoldingsSnapshot.html#a8995e5be10b307c45c6b0edc2f9b8265":[2,0,0,41,1],
-"structalgotradelib_1_1HoldingsSnapshot.html#aa51ca907ee2601f9101c540c04aeafa3":[1,0,0,42,3],
-"structalgotradelib_1_1HoldingsSnapshot.html#aa51ca907ee2601f9101c540c04aeafa3":[2,0,0,41,3]
+"structalgotradelib_1_1HoldingsSnapshot.html#aa51ca907ee2601f9101c540c04aeafa3":[1,0,0,42,3]
 };

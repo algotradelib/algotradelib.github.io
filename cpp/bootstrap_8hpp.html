@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('bootstrap_8hpp
 </div><!--header-->
 <div class="contents">
 
-<p>The closes of a bootstrap path, rebuilt from drawn returns and put on the instrument's price grid.  
+<p>The prices of a bootstrap path, rebuilt from drawn blocks joined to the path and put on the instrument's price grid.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;algotradelib/core&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('bootstrap_8hpp
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" class="dynheader closed"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for bootstrap.hpp:</div>
@@ -142,6 +143,19 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('bootstrap_8hpp
 </div>
 <p><a href="bootstrap_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3AReturns" id="r_algotradelib_3A_3Abacktest_3A_3AReturns"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html">algotradelib::backtest::Returns</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chains the drawn returns: a path price is the path's previous close times <span class="tt">value / from</span>.  <a href="structalgotradelib_1_1backtest_1_1Returns.html#details">More...</a><br /></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3ADifferences" id="r_algotradelib_3A_3Abacktest_3A_3ADifferences"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Differences.html">algotradelib::backtest::Differences</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chains the drawn changes (Paparoditis and Politis): the path's previous close plus <span class="tt">value - from</span>.  <a href="structalgotradelib_1_1backtest_1_1Differences.html#details">More...</a><br /></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3ALevels" id="r_algotradelib_3A_3Abacktest_3A_3ALevels"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Levels.html">algotradelib::backtest::Levels</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins the drawn prices as they are (Künsch; Politis and Romano): for a stationary series, not trending prices, where each block boundary is a jump.  <a href="structalgotradelib_1_1backtest_1_1Levels.html#details">More...</a><br /></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3Ais_5Fprice_5Fjoin_3C_20Join_2C_20typename_20_3E" id="r_algotradelib_3A_3Abacktest_3A_3Ais_5Fprice_5Fjoin_3C_20Join_2C_20typename_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1is__price__join.html">algotradelib::backtest::is_price_join&lt; Join, typename &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether <span class="tt">Join</span> can join drawn blocks: <span class="tt">true</span> when a <span class="tt">const Join</span> has a member <span class="tt">join(double, double, double)</span> returning something convertible to <span class="tt">double</span>.  <a href="structalgotradelib_1_1backtest_1_1is__price__join.html#details">More...</a><br /></td></tr>
+<tr class="memitem:algotradelib_3A_3Abacktest_3A_3Ais_5Fprice_5Fjoin_3C_20Join_2C_20std_3A_3Aenable_5Fif_5Ft_3C_20std_3A_3Ais_5Fconvertible_5Fv_3C_20decltype_28std_3A_3Adeclval_3C_20const_20Join_20_26_20_3E_28_29_2Ejoin_28double_7B_7D_2C_20double_7B_7D_2C_20double_7B_7D_29_29_2C_20double_20_3E_20_3E_20_3E" id="r_algotradelib_3A_3Abacktest_3A_3Ais_5Fprice_5Fjoin_3C_20Join_2C_20std_3A_3Aenable_5Fif_5Ft_3C_20std_3A_3Ais_5Fconvertible_5Fv_3C_20decltype_28std_3A_3Adeclval_3C_20const_20Join_20_26_20_3E_28_29_2Ejoin_28double_7B_7D_2C_20double_7B_7D_2C_20double_7B_7D_29_29_2C_20double_20_3E_20_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1backtest_1_1is__price__join_3_01Join_00_01std_1_1enable__if__t_3_01std_1_1f8db1d5447abf19be8d6285ba8cb8e78.html">algotradelib::backtest::is_price_join&lt; Join, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Join &amp; &gt;().join(double{}, double{}, double{})), double &gt; &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A join with the member <span class="tt">join</span> that <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a2038a200fcb928e99b28b5be34d3b09c" title="Rebuilds one instrument&#39;s closes along a bootstrap path (analytics::bootstrap_indices),...">resample_closes</a></span> and <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a85dd753ad1bc4dc346826710a83a0536" title="Rebuilds one instrument&#39;s bars along a bootstrap path (analytics::bootstrap_indices): each drawn day&#39;...">resample_bars</a></span> call.  <a href="structalgotradelib_1_1backtest_1_1is__price__join_3_01Join_00_01std_1_1enable__if__t_3_01std_1_1f8db1d5447abf19be8d6285ba8cb8e78.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:algotradelib" id="r_algotradelib"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib.html">algotradelib</a></td></tr>
@@ -151,11 +165,15 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a888cb1eef441f6e54439e1df3987e63e" id="r_a888cb1eef441f6e54439e1df3987e63e"><td class="memItemLeft">std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html#a888cb1eef441f6e54439e1df3987e63e">algotradelib::backtest::resample_closes</a> (const std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; &amp;closes, const <a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> &amp;rule, const std::vector&lt; std::size_t &gt; &amp;indices)</td></tr>
-<tr class="memdesc:a888cb1eef441f6e54439e1df3987e63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuilds one instrument's closes along a bootstrap path (<span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#a28c4fee1287618a2be87d940fd74bc75" title="Draws the returns of one bootstrap path: entry k names the return, close[j + 1] / close[j] as j,...">analytics::bootstrap_indices</a></span>) and rounds each to its nearest grid price, a tie going up.  <br /></td></tr>
+<tr class="memitem:a2038a200fcb928e99b28b5be34d3b09c" id="r_a2038a200fcb928e99b28b5be34d3b09c"><td class="memTemplParams" colspan="2">template&lt;typename Join = Returns&gt; </td></tr>
+<tr class="memitem:a2038a200fcb928e99b28b5be34d3b09c template"><td class="memItemLeft">std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html#a2038a200fcb928e99b28b5be34d3b09c">algotradelib::backtest::resample_closes</a> (const std::vector&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; &amp;closes, const <a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> &amp;rule, const std::vector&lt; std::size_t &gt; &amp;indices, const Join &amp;join=Join{})</td></tr>
+<tr class="memdesc:a2038a200fcb928e99b28b5be34d3b09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuilds one instrument's closes along a bootstrap path (<span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#a28c4fee1287618a2be87d940fd74bc75" title="Draws the steps of one bootstrap path: entry k names the step from close j to close j + 1,...">analytics::bootstrap_indices</a></span>), joining the drawn blocks by <span class="tt">Join</span>, and rounds each to its nearest grid price, a tie going up.  <br /></td></tr>
+<tr class="memitem:a85dd753ad1bc4dc346826710a83a0536" id="r_a85dd753ad1bc4dc346826710a83a0536"><td class="memTemplParams" colspan="2">template&lt;typename Join = Returns&gt; </td></tr>
+<tr class="memitem:a85dd753ad1bc4dc346826710a83a0536 template"><td class="memItemLeft">std::vector&lt; <a class="el" href="structalgotradelib_1_1Bar.html">Bar</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacealgotradelib_1_1backtest.html#a85dd753ad1bc4dc346826710a83a0536">algotradelib::backtest::resample_bars</a> (const std::vector&lt; <a class="el" href="structalgotradelib_1_1Bar.html">Bar</a> &gt; &amp;bars, const <a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> &amp;rule, const std::vector&lt; std::size_t &gt; &amp;indices, const Join &amp;join=Join{})</td></tr>
+<tr class="memdesc:a85dd753ad1bc4dc346826710a83a0536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuilds one instrument's bars along a bootstrap path (<span class="tt"><a class="el" href="namespacealgotradelib_1_1analytics.html#a28c4fee1287618a2be87d940fd74bc75" title="Draws the steps of one bootstrap path: entry k names the step from close j to close j + 1,...">analytics::bootstrap_indices</a></span>): each drawn day's prices joined to the path's previous close and rounded to their nearest grid prices, a tie going up.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The closes of a bootstrap path, rebuilt from drawn returns and put on the instrument's price grid. </p>
+<div class="textblock"><p>The prices of a bootstrap path, rebuilt from drawn blocks joined to the path and put on the instrument's price grid. </p>
 
 <p class="definition">Definition in file <a class="el" href="bootstrap_8hpp_source.html">bootstrap.hpp</a>.</p>
 </div></div><!-- contents -->

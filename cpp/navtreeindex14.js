@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a914d7dcfd8ee162314764d7f4f5ddfb0":[2,0,0,25,18],
 "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a9344f6410d602aad51d0654e28e5cf16":[1,0,0,26,23],
 "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a9344f6410d602aad51d0654e28e5cf16":[2,0,0,25,23],
 "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a9a2ad40c94320ba6c80b800f40b287b7":[1,0,0,26,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#acb5e492bc639864131af26edba79aaec":[2,0,0,28,0],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#ad02e3b9ae110235e4b966fa0dd0ef668":[1,0,0,29,31],
 "structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#ad02e3b9ae110235e4b966fa0dd0ef668":[2,0,0,28,31],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#adf9b392e5e0e7cf0dd293309d08acac1":[1,0,0,29,11],
-"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#adf9b392e5e0e7cf0dd293309d08acac1":[2,0,0,28,11]
+"structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#adf9b392e5e0e7cf0dd293309d08acac1":[1,0,0,29,11]
 };

@@ -1,0 +1,10 @@
+<map id="algotradelib::backtest::is_price_join&lt; Join, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Join &amp; &gt;().join(double{}, double{}, double{})), double &gt; &gt; &gt;" name="algotradelib::backtest::is_price_join&lt; Join, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Join &amp; &gt;().join(double{}, double{}, double{})), double &gt; &gt; &gt;">
+<area shape="rect" id="Node000001" title="A join with the member join that resample_closes and resample_bars call." alt="" coords="658,91,870,221"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,52,123,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,45,227,22,289,12,356,5,426,3,497,6,568,18,635,38,675,60,711,91,706,90,672,64,633,43,566,23,497,12,426,8,356,11,289,17,228,27,128,50"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1backtest_1_1is__price__join.html" title="Whether Join can join drawn blocks: true when a const Join has a member join(double,..." alt="" coords="172,79,335,140"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="137,80,174,90,169,91,138,85"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="198,186,309,214"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="325,197,468,193,634,179,655,178,660,178,635,184,468,198,325,202"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="331,144,360,152,437,163,515,168,661,167,655,167,515,174,436,169,359,157,331,149"/>
+</map>

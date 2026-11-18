@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="classalgotradelib_1_1network_1_1TokenStore_1_1Lock.html" target="_top" xlink:title="Held while one caller works on one identity; destroying it releases the lock.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1network_1_1RateLimitStats.html" target="_top" xlink:title="A rate limiter&#39;s counters per traffic class, its current budget, and the broker&#39;s refusals (from Rate...">
 <polygon fill="white" stroke="#666666" points="120.25,-33.5 0,-33.5 0,0 120.25,0 120.25,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::network</text>
-<text xml:space="preserve" text-anchor="middle" x="60.12" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::TokenStore::Lock</text>
+<text xml:space="preserve" text-anchor="middle" x="60.12" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::RateLimitStats</text>
 </a>
 </g>
 </g>

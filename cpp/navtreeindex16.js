@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"structalgotradelib_1_1HoldingsSnapshot.html#aa51ca907ee2601f9101c540c04aeafa3":[2,0,0,41,3],
 "structalgotradelib_1_1HoldingsSnapshot.html#ab82b3f1adeb11c5c76e3319461067ab7":[1,0,0,42,2],
 "structalgotradelib_1_1HoldingsSnapshot.html#ab82b3f1adeb11c5c76e3319461067ab7":[2,0,0,41,2],
 "structalgotradelib_1_1HoldingsSnapshot.html#af9f2269915ada9216dcdd5d578eba228":[1,0,0,42,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02":[2,0,0,57,3],
 "structalgotradelib_1_1PriceRule.html#a4aa52490cbe08dd9ff701a48d381a86d":[1,0,0,58,7],
 "structalgotradelib_1_1PriceRule.html#a4aa52490cbe08dd9ff701a48d381a86d":[2,0,0,57,7],
-"structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62":[1,0,0,58,0],
-"structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62":[2,0,0,57,0]
+"structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62":[1,0,0,58,0]
 };

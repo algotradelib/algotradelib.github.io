@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"namespacealgotradelib_1_1strategy.html#a7228fc16246626c17eff06ce08e8932c":[1,0,0,12,50],
 "namespacealgotradelib_1_1strategy.html#a7441fcdd2f2661fa34ae88bea734b3c7":[1,0,0,12,60],
 "namespacealgotradelib_1_1strategy.html#a856e034baa4972b2c7f9de0be810aa33":[1,0,0,12,57],
 "namespacealgotradelib_1_1strategy.html#a869805317ffa009bf5bf571f4b0c896b":[1,0,0,12,38],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "structalgotradelib_1_1BarQuery.html":[2,0,0,16],
 "structalgotradelib_1_1BarQuery.html#a755a69aca931683e8d95ffccbe9bcdd5":[1,0,0,17,3],
 "structalgotradelib_1_1BarQuery.html#a755a69aca931683e8d95ffccbe9bcdd5":[2,0,0,16,3],
-"structalgotradelib_1_1BarQuery.html#a7778df2cd2698365e8bce8fe14990a0c":[1,0,0,17,4],
-"structalgotradelib_1_1BarQuery.html#a7778df2cd2698365e8bce8fe14990a0c":[2,0,0,16,4]
+"structalgotradelib_1_1BarQuery.html#a7778df2cd2698365e8bce8fe14990a0c":[1,0,0,17,4]
 };

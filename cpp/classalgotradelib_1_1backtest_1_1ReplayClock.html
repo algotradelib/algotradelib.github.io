@@ -132,11 +132,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c2b22b94cd62d8edec74e30f6f40591" id="r_a2c2b22b94cd62d8edec74e30f6f40591"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2c2b22b94cd62d8edec74e30f6f40591">ReplayClock</a> (<a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">strategy::SessionWindow</a> session=<a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html#ac609cf8f0342b83d410c80f8140f42d2">strategy::SessionWindow::krx</a>())</td></tr>
 <tr class="memdesc:a2c2b22b94cd62d8edec74e30f6f40591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a clock.  <br /></td></tr>
 <tr class="memitem:a1a9af09c685e010a250039ec51e5236a" id="r_a1a9af09c685e010a250039ec51e5236a"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1strategy_1_1SessionWindow.html">strategy::SessionWindow</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1a9af09c685e010a250039ec51e5236a">session</a> () const noexcept</td></tr>
-<tr class="memdesc:a1a9af09c685e010a250039ec51e5236a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the session window.  <br /></td></tr>
+<tr class="memdesc:a1a9af09c685e010a250039ec51e5236a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the session window.  <br /></td></tr>
 <tr class="memitem:a2bd9e842a5dda9aac1763b654dc50c94" id="r_a2bd9e842a5dda9aac1763b654dc50c94"><td class="memItemLeft">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight"><a class="el" href="#a2bd9e842a5dda9aac1763b654dc50c94">now</a> () const noexcept</td></tr>
-<tr class="memdesc:a2bd9e842a5dda9aac1763b654dc50c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the instant the replay has reached.  <br /></td></tr>
+<tr class="memdesc:a2bd9e842a5dda9aac1763b654dc50c94"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the instant the replay has reached.  <br /></td></tr>
 <tr class="memitem:a0bd9abd89104f2c475df16cd185b2575" id="r_a0bd9abd89104f2c475df16cd185b2575"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f">strategy::MarketPhase</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0bd9abd89104f2c475df16cd185b2575">phase</a> () const noexcept</td></tr>
-<tr class="memdesc:a0bd9abd89104f2c475df16cd185b2575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the market phase at the current instant.  <br /></td></tr>
+<tr class="memdesc:a0bd9abd89104f2c475df16cd185b2575"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the market phase at the current instant.  <br /></td></tr>
 <tr class="memitem:a8616cd5c8fa0fad236949284dd76e60d" id="r_a8616cd5c8fa0fad236949284dd76e60d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8616cd5c8fa0fad236949284dd76e60d">advance</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">strategy::BarEvent</a> &amp;event, std::optional&lt; bool &gt; trading_day)</td></tr>
 <tr class="memdesc:a8616cd5c8fa0fad236949284dd76e60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the clock to a bar's period end and recomputes the phase.  <br /></td></tr>
 <tr class="memitem:a8cdf655f19f0f6843d8ea34e5c071b28" id="r_a8cdf655f19f0f6843d8ea34e5c071b28"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8cdf655f19f0f6843d8ea34e5c071b28">advance_to</a> (std::chrono::system_clock::time_point at, std::optional&lt; bool &gt; trading_day)</td></tr>
@@ -389,7 +389,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the instant the replay has reached. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the instant the replay has reached. </p>
 <dl class="section return"><dt>Returns</dt><dd>The current instant; the epoch before the first event. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00096">96</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
@@ -419,7 +419,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the market phase at the current instant. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the market phase at the current instant. </p>
 <dl class="section return"><dt>Returns</dt><dd>The phase; <span class="tt">UNKNOWN</span> before the first event. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00104">104</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>
@@ -449,7 +449,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the session window. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the session window. </p>
 <dl class="section return"><dt>Returns</dt><dd>The window phases are derived from. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="backtest_2clock_8hpp_source.html#l00088">88</a> of file <a class="el" href="backtest_2clock_8hpp_source.html">clock.hpp</a>.</p>

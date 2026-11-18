@@ -1,0 +1,7 @@
+<map id="algotradelib::backtest::is_price_join&lt; Join, typename &gt;" name="algotradelib::backtest::is_price_join&lt; Join, typename &gt;">
+<area shape="rect" id="Node000001" title="Whether Join can join drawn blocks: true when a const Join has a member join(double,..." alt="" coords="172,89,335,150"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1backtest_1_1is__price__join_3_01Join_00_01std_1_1enable__if__t_3_01std_1_1f8db1d5447abf19be8d6285ba8cb8e78.html" title="A join with the member join that resample_closes and resample_bars call." alt="" coords="658,55,870,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="351,117,660,118,656,121,351,122"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,106,123,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,117,174,119,169,120,139,122"/>
+</map>

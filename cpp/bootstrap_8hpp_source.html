@@ -131,138 +131,330 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('bootstrap_8hpp
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib.html">algotradelib</a> {</div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacealgotradelib_1_1backtest.html">   15</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib_1_1backtest.html">backtest</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespacealgotradelib_1_1backtest.html#a888cb1eef441f6e54439e1df3987e63e">   42</a></span><span class="keyword">inline</span> std::vector&lt;Decimal64&gt; <a class="code hl_function" href="namespacealgotradelib_1_1backtest.html#a888cb1eef441f6e54439e1df3987e63e">resample_closes</a>(</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">const</span> std::vector&lt;Decimal64&gt;&amp; closes, <span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&amp; rule, <span class="keyword">const</span> std::vector&lt;std::size_t&gt;&amp; indices</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">const</span> <span class="keyword">auto</span> refuse = [](<span class="keyword">const</span> <span class="keywordtype">char</span>* why) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> std::invalid_argument(std::string(<span class="stringliteral">&quot;resample_closes: &quot;</span>) + why);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  };</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordflow">if</span> (closes.size() &lt; 2 || indices.size() &gt; closes.size() - 1) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;needs two closes or more, and at most one index per return&quot;</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">bool</span> identity = indices.size() == closes.size() - 1;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">for</span> (std::size_t k = 0; k &lt; indices.size(); ++k) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    identity = identity &amp;&amp; indices[k] == k;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (indices[k] &gt;= closes.size() - 1) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;an index names no return&quot;</span>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; close : closes) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (close.coefficient() &lt;= 0) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;a close at or below zero&quot;</span>);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">if</span> (!rule.<a class="code hl_function" href="structalgotradelib_1_1PriceRule.html#a9ddccf645dea179b99c81e09cf9ab426">grid_known</a>()) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;the price grid is unknown&quot;</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  std::uint8_t scale = 0;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// A value in grid units, refused at or beyond 2^53, where a double would no longer hold every integer.</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">constexpr</span> std::int64_t limit = std::int64_t{1} &lt;&lt; 53;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keyword">const</span> <span class="keyword">auto</span> units = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classalgotradelib_1_1Decimal64.html">Decimal64</a>&amp; value) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    std::int64_t out = value.coefficient();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> step = value.scale();; ++step) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keywordflow">if</span> (out &gt;= limit || out &lt;= -limit) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;a value at or beyond 2^53 grid units&quot;</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keywordflow">if</span> (step &gt;= scale) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> out;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      out *= 10;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  };</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="comment">// The bands in units, checked aligned, at the bands&#39; own scale and again at the closes&#39;; one unit unconstrained.</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  std::vector&lt;std::pair&lt;std::int64_t, std::int64_t&gt;&gt; grid;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">const</span> <span class="keyword">auto</span> grid_in_units = [&amp;]() {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    grid.clear();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span> (rule.<a class="code hl_variable" href="structalgotradelib_1_1PriceRule.html#ae841fb8998208e077d220b78a5679161">kind_</a> == <a class="code hl_enumvalue" href="structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62a2882f30bbca588e5d0e88be217ce75c1">PriceRule::Kind::UNCONSTRAINED</a>) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      grid.emplace_back(0, 1);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; band : rule.<a class="code hl_variable" href="structalgotradelib_1_1PriceRule.html#a4aa52490cbe08dd9ff701a48d381a86d">bands_</a>) {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      scale = std::max({scale, band.from_.scale(), band.tick_.scale()});</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; band : rule.<a class="code hl_variable" href="structalgotradelib_1_1PriceRule.html#a4aa52490cbe08dd9ff701a48d381a86d">bands_</a>) {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keyword">const</span> <span class="keyword">auto</span> start = units(band.from_);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keyword">const</span> <span class="keyword">auto</span> tick = units(band.tick_);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keywordflow">if</span> (tick &lt;= 0 || start % tick != 0 || (!grid.empty() &amp;&amp; start % grid.back().second != 0)) {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;a band&#39;s start is not a multiple of its tick and of the previous band&#39;s&quot;</span>);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      grid.emplace_back(start, tick);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  };</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  grid_in_units();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">if</span> (identity) {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> closes;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; close : closes) {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    scale = std::max(scale, close.scale());</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  grid_in_units();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  std::vector&lt;double&gt; in;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; close : closes) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    in.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(units(close)));</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  std::vector&lt;Decimal64&gt; out;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordtype">double</span> level = in.front();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordflow">for</span> (std::size_t k = 0; k &lt;= indices.size(); ++k) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (k &gt; 0) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> ratio = in[indices[k - 1] + 1] / in[indices[k - 1]];</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      level = level * ratio;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    std::size_t band = 0;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">while</span> (band + 1 &lt; grid.size() &amp;&amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(grid[band + 1].first) &lt;= level) {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      ++band;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib.html">algotradelib</a> {</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacealgotradelib_1_1backtest.html">   16</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacealgotradelib_1_1backtest.html">backtest</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span>bootstrap_detail {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// A refusal naming the function.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">inline</span> std::invalid_argument refusal(<span class="keyword">const</span> <span class="keywordtype">char</span>* who, <span class="keyword">const</span> <span class="keywordtype">char</span>* why) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordflow">return</span> std::invalid_argument(std::string(who) + <span class="stringliteral">&quot;: &quot;</span> + why);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// The checks before the identity draw: two prices or more (`few`), the indices, and without `any_sign` every price</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// above zero (`sign`). Returns whether `indices` is the identity draw.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> identity_draw(</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  std::size_t count, <span class="keyword">const</span> std::vector&lt;std::size_t&gt;&amp; indices, <span class="keyword">const</span> std::vector&lt;Decimal64&gt;&amp; prices, <span class="keywordtype">bool</span> any_sign,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* who, <span class="keyword">const</span> <span class="keywordtype">char</span>* few, <span class="keyword">const</span> <span class="keywordtype">char</span>* sign</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">if</span> (count &lt; 2 || indices.size() &gt; count - 1) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">throw</span> refusal(who, few);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">bool</span> identity = indices.size() == count - 1;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordflow">for</span> (std::size_t k = 0; k &lt; indices.size(); ++k) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    identity = identity &amp;&amp; indices[k] == k;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (indices[k] &gt;= count - 1) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keywordflow">throw</span> refusal(who, <span class="stringliteral">&quot;an index names no return&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; price : prices) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (!any_sign &amp;&amp; price.coefficient() &lt;= 0) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">throw</span> refusal(who, sign);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">return</span> identity;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// A price grid in whole units of `10^-scale_`, checked aligned, and the rounding of a path&#39;s level onto it.</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">class </span>Grid {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// A value in grid units is refused at or beyond 2^53, where a double would no longer hold every integer.</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> std::int64_t <a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">LIMIT</a> = std::int64_t{1} &lt;&lt; 53;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="comment">// The bands at their own scale; `rule` must outlive the grid.</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  Grid(<span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&amp; rule, <span class="keywordtype">bool</span> any_sign, <span class="keyword">const</span> <span class="keywordtype">char</span>* who) : rule_(rule), any_sign_(any_sign), who_(who) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!rule.<a class="code hl_function" href="structalgotradelib_1_1PriceRule.html#a9ddccf645dea179b99c81e09cf9ab426">grid_known</a>()) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">throw</span> refusal(who_, <span class="stringliteral">&quot;the price grid is unknown&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    build();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// The bands again, at a scale covering the values&#39;.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">void</span> widen(<span class="keyword">const</span> std::vector&lt;Decimal64&gt;&amp; values) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; value : values) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      scale_ = std::max(scale_, value.scale());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    build();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  std::int64_t units(<span class="keyword">const</span> <a class="code hl_class" href="classalgotradelib_1_1Decimal64.html">Decimal64</a>&amp; value)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    std::int64_t out = value.<a class="code hl_function" href="classalgotradelib_1_1Decimal64.html#a3462e887403ef75218cd4bc8f9a3e7d8">coefficient</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> step = value.<a class="code hl_function" href="classalgotradelib_1_1Decimal64.html#a0ebe9176b2a54f9802a455ed444778f8">scale</a>();; ++step) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordflow">if</span> (out &gt;= <a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">LIMIT</a> || out &lt;= -<a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">LIMIT</a>) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">throw</span> refusal(who_, <span class="stringliteral">&quot;a value at or beyond 2^53 grid units&quot;</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordflow">if</span> (step &gt;= scale_) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      out *= 10;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="comment">// The nearest grid price, a tie going up; below the first band only unconstrained with `any_sign`.</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_class" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> round(<span class="keywordtype">double</span> level, <span class="keyword">const</span> <span class="keywordtype">char</span>* zero)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> limit = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">LIMIT</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    std::size_t band = 0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">while</span> (band + 1 &lt; grid_.size() &amp;&amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(grid_[band + 1].first) &lt;= level) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      ++band;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> floored = !any_sign_ || rule_.kind_ != <a class="code hl_enumvalue" href="structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62a2882f30bbca588e5d0e88be217ce75c1">PriceRule::Kind::UNCONSTRAINED</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      !(level &lt; limit) || !(level &gt; -limit) || grid_.empty() ||</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      (floored &amp;&amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(grid_[band].first) &gt; level)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    ) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keywordflow">throw</span> refusal(who_, <span class="stringliteral">&quot;a level at or beyond 2^53 grid units, or below the first band&quot;</span>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">const</span> <span class="keyword">auto</span> tick = grid_[band].second;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">auto</span> lower = <span class="keyword">static_cast&lt;</span>std::int64_t<span class="keyword">&gt;</span>(std::floor(level / <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(tick)));</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keyword">const</span> std::int64_t lo = lower * tick;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="keyword">const</span> std::int64_t hi = lo + tick;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordflow">if</span> (hi &gt;= <a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">LIMIT</a> || lo &lt;= -<a class="code hl_enumvalue" href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">LIMIT</a>) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">throw</span> refusal(who_, <span class="stringliteral">&quot;a grid neighbour at or beyond 2^53 grid units&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(lo) &gt; level) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        --lower;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(hi) &lt;= level) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        ++lower;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keyword">const</span> <span class="keyword">auto</span> nearest = level - <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(lo) &lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(hi) - level ? lo : hi;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">if</span> (nearest == 0 &amp;&amp; !any_sign_) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>          <span class="keywordflow">throw</span> refusal(who_, zero);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classalgotradelib_1_1Decimal64.html#aa0e0a2d2c73682636161b0403bfb4436">Decimal64</a>(nearest, scale_);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (!(level &lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(limit)) || grid.empty() || <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(grid[band].first) &gt; level) {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;a level at or beyond 2^53 grid units, or below the first band&quot;</span>);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">const</span> <span class="keyword">auto</span> tick = grid[band].second;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">auto</span> lower = <span class="keyword">static_cast&lt;</span>std::int64_t<span class="keyword">&gt;</span>(std::floor(level / <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(tick)));</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">for</span> (;;) {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keyword">const</span> std::int64_t lo = lower * tick;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keyword">const</span> std::int64_t hi = lo + tick;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordflow">if</span> (hi &gt;= limit) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;a grid neighbour at or beyond 2^53 grid units&quot;</span>);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(lo) &gt; level) {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        --lower;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(hi) &lt;= level) {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        ++lower;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keyword">const</span> <span class="keyword">auto</span> nearest = level - <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(lo) &lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(hi) - level ? lo : hi;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">if</span> (nearest == 0) {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>          <span class="keywordflow">throw</span> refuse(<span class="stringliteral">&quot;a close rounded to zero&quot;</span>);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        }</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        out.emplace_back(nearest, scale);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keywordflow">return</span> out;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="comment">// The bands in units, checked aligned; one unit unconstrained.</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordtype">void</span> build() {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    grid_.clear();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (rule_.kind_ == <a class="code hl_enumvalue" href="structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62a2882f30bbca588e5d0e88be217ce75c1">PriceRule::Kind::UNCONSTRAINED</a>) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      grid_.emplace_back(0, 1);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; band : rule_.bands_) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      scale_ = std::max({scale_, band.from_.scale(), band.tick_.scale()});</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; band : rule_.bands_) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <span class="keyword">const</span> <span class="keyword">auto</span> start = units(band.from_);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      <span class="keyword">const</span> <span class="keyword">auto</span> tick = units(band.tick_);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      <span class="keywordflow">if</span> (tick &lt;= 0 || start % tick != 0 || (!grid_.empty() &amp;&amp; start % grid_.back().second != 0)) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">throw</span> refusal(who_, <span class="stringliteral">&quot;a band&#39;s start is not a multiple of its tick and of the previous band&#39;s&quot;</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      grid_.emplace_back(start, tick);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&amp; rule_;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="keywordtype">bool</span> any_sign_;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* who_;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  std::uint8_t scale_{0};</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  std::vector&lt;std::pair&lt;std::int64_t, std::int64_t&gt;&gt; grid_;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>};</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">// Whether a join declares `static constexpr bool any_sign = true`; `false` when it declares nothing.</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Join, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">struct </span>has_any_sign : std::false_type {};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Join&gt;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keyword">struct </span>has_any_sign&lt;Join, std::void_t&lt;decltype(Join::any_sign)&gt;&gt; : std::bool_constant&lt;Join::any_sign&gt; {};</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>} <span class="comment">// namespace bootstrap_detail</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="};">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Returns.html">  164</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structalgotradelib_1_1backtest_1_1Returns.html">Returns</a> {</div>
+<div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Returns.html#aa87c3c6f9aba23ec1a9bcab65ec43c8c">  172</a></span>  <span class="keywordtype">double</span> <a class="code hl_function" href="structalgotradelib_1_1backtest_1_1Returns.html#aa87c3c6f9aba23ec1a9bcab65ec43c8c">join</a>(<span class="keywordtype">double</span> level, <span class="keywordtype">double</span> from, <span class="keywordtype">double</span> value)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">return</span> level * (value / from);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  }</div>
 </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>} <span class="comment">// namespace backtest</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>};</div>
 </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>} <span class="comment">// namespace algotradelib</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="};">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Differences.html">  178</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structalgotradelib_1_1backtest_1_1Differences.html">Differences</a> {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Differences.html#a72b860c56d457900bf5cd236ea9a0ba9">  180</a></span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structalgotradelib_1_1backtest_1_1Differences.html#a72b860c56d457900bf5cd236ea9a0ba9">any_sign</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Differences.html#ab10c2778181cebffcbc2ab360037450f">  190</a></span>  <span class="keywordtype">double</span> <a class="code hl_function" href="structalgotradelib_1_1backtest_1_1Differences.html#ab10c2778181cebffcbc2ab360037450f">join</a>(<span class="keywordtype">double</span> level, <span class="keywordtype">double</span> from, <span class="keywordtype">double</span> value)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> limit = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(bootstrap_detail::Grid::LIMIT);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> step = value - from;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">if</span> (!(step &lt; limit &amp;&amp; step &gt; -limit)) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Differences: a step at or beyond 2^53 grid units&quot;</span>);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> level + step;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  }</div>
+</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>};</div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span></div>
+<div class="foldopen" id="foldopen00204" data-start="{" data-end="};">
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Levels.html">  204</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structalgotradelib_1_1backtest_1_1Levels.html">Levels</a> {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Levels.html#a7c50c5e3f95abaa8daad40eb3e81bfe7">  206</a></span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structalgotradelib_1_1backtest_1_1Levels.html#a7c50c5e3f95abaa8daad40eb3e81bfe7">any_sign</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span></div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1Levels.html#a7d80f3e2d43dda1db89073e5c7c3a003">  215</a></span>  <span class="keywordtype">double</span> <a class="code hl_function" href="structalgotradelib_1_1backtest_1_1Levels.html#a7d80f3e2d43dda1db89073e5c7c3a003">join</a>([[maybe_unused]] <span class="keywordtype">double</span> level, [[maybe_unused]] <span class="keywordtype">double</span> from, <span class="keywordtype">double</span> value)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  }</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>};</div>
+</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Join, <span class="keyword">typename</span> = <span class="keywordtype">void</span>&gt;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1is__price__join.html">  226</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structalgotradelib_1_1backtest_1_1is__price__join.html">is_price_join</a> : std::false_type {};</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Join&gt;</div>
+<div class="foldopen" id="foldopen00230" data-start="{" data-end="};">
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="structalgotradelib_1_1backtest_1_1is__price__join_3_01Join_00_01std_1_1enable__if__t_3_01std_1_1f8db1d5447abf19be8d6285ba8cb8e78.html">  230</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structalgotradelib_1_1backtest_1_1is__price__join.html">is_price_join</a>&lt;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  Join,</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  std::enable_if_t&lt;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    std::is_convertible_v&lt;decltype(std::declval&lt;const Join&amp;&gt;().join(double{}, double{}, double{})), double&gt;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  &gt;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>&gt; : std::true_type {};</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Join = Returns&gt;</div>
+<div class="foldopen" id="foldopen00269" data-start="{" data-end="}">
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="namespacealgotradelib_1_1backtest.html#a2038a200fcb928e99b28b5be34d3b09c">  269</a></span>std::vector&lt;Decimal64&gt; <a class="code hl_function" href="namespacealgotradelib_1_1backtest.html#a2038a200fcb928e99b28b5be34d3b09c">resample_closes</a>(</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keyword">const</span> std::vector&lt;Decimal64&gt;&amp; closes, <span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&amp; rule, <span class="keyword">const</span> std::vector&lt;std::size_t&gt;&amp; indices,</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keyword">const</span> Join&amp; join = Join{}</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>) {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <span class="keyword">static_assert</span>(</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    is_price_join&lt;Join&gt;::value,</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="stringliteral">&quot;a bootstrap join needs the member double join(double level, double from, double value) const&quot;</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  );</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> any_sign = bootstrap_detail::has_any_sign&lt;Join&gt;::value;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> identity = bootstrap_detail::identity_draw(</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    closes.size(), indices, closes, any_sign, <span class="stringliteral">&quot;resample_closes&quot;</span>,</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="stringliteral">&quot;needs two closes or more, and at most one index per return&quot;</span>, <span class="stringliteral">&quot;a close at or below zero&quot;</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  );</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="comment">// The bands checked aligned at their own scale, then at the closes&#39;.</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  bootstrap_detail::Grid grid(rule, any_sign, <span class="stringliteral">&quot;resample_closes&quot;</span>);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keywordflow">if</span> (identity) {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">return</span> closes;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  grid.widen(closes);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  std::vector&lt;double&gt; in;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; close : closes) {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    in.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(grid.units(close)));</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  std::vector&lt;Decimal64&gt; out;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <span class="keywordtype">double</span> level = in.front();</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  <span class="keywordflow">for</span> (std::size_t k = 0; k &lt;= indices.size(); ++k) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">if</span> (k &gt; 0) {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      level = join.join(level, in[indices[k - 1]], in[indices[k - 1] + 1]);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    out.push_back(grid.round(level, <span class="stringliteral">&quot;a close rounded to zero&quot;</span>));</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  }</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>}</div>
+</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Join = Returns&gt;</div>
+<div class="foldopen" id="foldopen00331" data-start="{" data-end="}">
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="namespacealgotradelib_1_1backtest.html#a85dd753ad1bc4dc346826710a83a0536">  331</a></span>std::vector&lt;Bar&gt; <a class="code hl_function" href="namespacealgotradelib_1_1backtest.html#a85dd753ad1bc4dc346826710a83a0536">resample_bars</a>(</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  <span class="keyword">const</span> std::vector&lt;Bar&gt;&amp; bars, <span class="keyword">const</span> <a class="code hl_struct" href="structalgotradelib_1_1PriceRule.html">PriceRule</a>&amp; rule, <span class="keyword">const</span> std::vector&lt;std::size_t&gt;&amp; indices,</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  <span class="keyword">const</span> Join&amp; join = Join{}</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>) {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  <span class="keyword">static_assert</span>(</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    is_price_join&lt;Join&gt;::value,</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="stringliteral">&quot;a bootstrap join needs the member double join(double level, double from, double value) const&quot;</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  );</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> any_sign = bootstrap_detail::has_any_sign&lt;Join&gt;::value;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  std::vector&lt;Decimal64&gt; prices;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; bar : bars) {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordflow">if</span> (bar.open_) {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      prices.push_back(*bar.open_);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    prices.insert(prices.end(), {bar.high_, bar.low_, bar.close_});</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> identity = bootstrap_detail::identity_draw(</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">bars</a>.size(), indices, prices, any_sign, <span class="stringliteral">&quot;resample_bars&quot;</span>, <span class="stringliteral">&quot;needs two bars or more, and at most one index per return&quot;</span>,</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="stringliteral">&quot;a price at or below zero&quot;</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  );</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  bootstrap_detail::Grid grid(rule, any_sign, <span class="stringliteral">&quot;resample_bars&quot;</span>);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  <span class="keywordflow">if</span> (identity) {</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">bars</a>;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  grid.widen(prices);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <span class="comment">// Every price in bounds, drawn or not, as `resample_closes` reads every close.</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; price : prices) {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    grid.units(price);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>  }</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  <span class="keyword">const</span> <span class="keyword">auto</span> units = [&amp;grid](<span class="keyword">const</span> Decimal64&amp; value) {</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(grid.units(value));</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>  };</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>  std::vector&lt;Bar&gt; out;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>  <span class="keywordtype">double</span> level = units(<a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">bars</a>.front().close_);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <span class="keywordflow">for</span> (std::size_t k = 0; k &lt;= indices.size(); ++k) {</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="comment">// Bar 0 is the first bar on the grid; bar `k` is day `j + 1` joined from close `j`.</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; drawn = k == 0 ? <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">bars</a>.front() : <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">bars</a>[indices[k - 1] + 1];</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> from = k == 0 ? 0.0 : units(bars[indices[k - 1]].close_);</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keyword">const</span> <span class="keyword">auto</span> price = [&amp;](<span class="keyword">const</span> Decimal64&amp; value) {</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      <span class="keywordflow">return</span> grid.round(k == 0 ? units(value) : join.join(level, from, units(value)), <span class="stringliteral">&quot;a price rounded to zero&quot;</span>);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    };</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    Bar <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">bar</a> = drawn;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">bar</a>.timestamp_ = <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">bars</a>[k].timestamp_;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keywordflow">if</span> (drawn.open_) {</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>      <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">bar</a>.open_ = price(*drawn.open_);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    }</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">bar</a>.high_ = price(drawn.high_);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">bar</a>.low_ = price(drawn.low_);</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">bar</a>.close_ = price(drawn.close_);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    <span class="keywordflow">if</span> (k &gt; 0) {</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>      level = join.join(level, from, units(drawn.close_));</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>      <a class="code hl_function" href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">bar</a>.traded_value_.reset();</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    }</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    out.push_back(bar);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>  }</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>  <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>}</div>
+</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>} <span class="comment">// namespace backtest</span></div>
+</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>} <span class="comment">// namespace algotradelib</span></div>
 <div class="ttc" id="aclassalgotradelib_1_1Decimal64_html"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html">algotradelib::Decimal64</a></div><div class="ttdoc">An exact signed decimal: an int64 coefficient times 10^-scale.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00441">types.hpp:441</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1backtest_html"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html">algotradelib::backtest</a></div><div class="ttdoc">Replays a strategy over stored bars: fill and cost models, the replay ledger, and the report.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">bootstrap.hpp:15</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1backtest_html_a888cb1eef441f6e54439e1df3987e63e"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html#a888cb1eef441f6e54439e1df3987e63e">algotradelib::backtest::resample_closes</a></div><div class="ttdeci">std::vector&lt; Decimal64 &gt; resample_closes(const std::vector&lt; Decimal64 &gt; &amp;closes, const PriceRule &amp;rule, const std::vector&lt; std::size_t &gt; &amp;indices)</div><div class="ttdoc">Rebuilds one instrument&#39;s closes along a bootstrap path (analytics::bootstrap_indices) and rounds eac...</div><div class="ttdef"><b>Definition</b> <a href="#l00042">bootstrap.hpp:42</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1Decimal64_html_a0ebe9176b2a54f9802a455ed444778f8"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html#a0ebe9176b2a54f9802a455ed444778f8">algotradelib::Decimal64::scale</a></div><div class="ttdeci">std::uint8_t scale() const noexcept</div><div class="ttdoc">Returns the scale.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00547">types.hpp:547</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1Decimal64_html_a3462e887403ef75218cd4bc8f9a3e7d8"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html#a3462e887403ef75218cd4bc8f9a3e7d8">algotradelib::Decimal64::coefficient</a></div><div class="ttdeci">std::int64_t coefficient() const noexcept</div><div class="ttdoc">Returns the coefficient.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00539">types.hpp:539</a></div></div>
+<div class="ttc" id="aclassalgotradelib_1_1Decimal64_html_aa0e0a2d2c73682636161b0403bfb4436"><div class="ttname"><a href="classalgotradelib_1_1Decimal64.html#aa0e0a2d2c73682636161b0403bfb4436">algotradelib::Decimal64::Decimal64</a></div><div class="ttdeci">Decimal64()=default</div><div class="ttdoc">Constructs zero.</div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1backtest_html"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html">algotradelib::backtest</a></div><div class="ttdoc">Replays a strategy over stored bars: fill and cost models, the replay ledger, and the report.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">bootstrap.hpp:16</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1backtest_html_a2038a200fcb928e99b28b5be34d3b09c"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html#a2038a200fcb928e99b28b5be34d3b09c">algotradelib::backtest::resample_closes</a></div><div class="ttdeci">std::vector&lt; Decimal64 &gt; resample_closes(const std::vector&lt; Decimal64 &gt; &amp;closes, const PriceRule &amp;rule, const std::vector&lt; std::size_t &gt; &amp;indices, const Join &amp;join=Join{})</div><div class="ttdoc">Rebuilds one instrument&#39;s closes along a bootstrap path (analytics::bootstrap_indices),...</div><div class="ttdef"><b>Definition</b> <a href="#l00269">bootstrap.hpp:269</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1backtest_html_a85dd753ad1bc4dc346826710a83a0536"><div class="ttname"><a href="namespacealgotradelib_1_1backtest.html#a85dd753ad1bc4dc346826710a83a0536">algotradelib::backtest::resample_bars</a></div><div class="ttdeci">std::vector&lt; Bar &gt; resample_bars(const std::vector&lt; Bar &gt; &amp;bars, const PriceRule &amp;rule, const std::vector&lt; std::size_t &gt; &amp;indices, const Join &amp;join=Join{})</div><div class="ttdoc">Rebuilds one instrument&#39;s bars along a bootstrap path (analytics::bootstrap_indices): each drawn day&#39;...</div><div class="ttdef"><b>Definition</b> <a href="#l00331">bootstrap.hpp:331</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_1_1dispatch_html_a327288f7c928699b2d70577aa5ab6699"><div class="ttname"><a href="namespacealgotradelib_1_1strategy_1_1dispatch.html#a327288f7c928699b2d70577aa5ab6699">algotradelib::strategy::dispatch::bar</a></div><div class="ttdeci">void bar(S &amp;strategy, Ctx &amp;context, const BarEvent &amp;event)</div><div class="ttdoc">Calls strategy.on_bar(context, event) if the strategy declares on_bar; otherwise does nothing.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00282">concept.hpp:282</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_1_1dispatch_html_ac523d71c8ba48b9336360423c986502e"><div class="ttname"><a href="namespacealgotradelib_1_1strategy_1_1dispatch.html#ac523d71c8ba48b9336360423c986502e">algotradelib::strategy::dispatch::bars</a></div><div class="ttdeci">void bars(S &amp;strategy, Ctx &amp;context, const BarSlice &amp;slice)</div><div class="ttdoc">Calls strategy.on_bars(context, slice) if the strategy declares on_bars; otherwise does nothing.</div><div class="ttdef"><b>Definition</b> <a href="concept_8hpp_source.html#l00309">concept.hpp:309</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_html"><div class="ttname"><a href="namespacealgotradelib.html">algotradelib</a></div><div class="ttdoc">The library: broker-neutral types (core), and the modules below.</div><div class="ttdef"><b>Definition</b> <a href="conversion_8hpp_source.html#l00013">conversion.hpp:13</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_html_a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2"><div class="ttname"><a href="namespacealgotradelib.html#a431efa8049bf5c7f539e97b34e8bcbcea3d49b5cb41d88e381beb0d887d7023a2">algotradelib::OrderType::LIMIT</a></div><div class="ttdeci">@ LIMIT</div><div class="ttdoc">지정가: fills at the stated price or better.</div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l01878">types.hpp:1878</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1PriceRule_html"><div class="ttname"><a href="structalgotradelib_1_1PriceRule.html">algotradelib::PriceRule</a></div><div class="ttdoc">The price grid (tick sizes) an instrument&#39;s order prices must sit on.</div><div class="ttdef"><b>Definition</b> <a href="instrument_8hpp_source.html#l00150">instrument.hpp:150</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1PriceRule_html_a4aa52490cbe08dd9ff701a48d381a86d"><div class="ttname"><a href="structalgotradelib_1_1PriceRule.html#a4aa52490cbe08dd9ff701a48d381a86d">algotradelib::PriceRule::bands_</a></div><div class="ttdeci">std::vector&lt; TickBand &gt; bands_</div><div class="ttdoc">The bands, ascending by from_; empty unless kind_ is STATED.</div><div class="ttdef"><b>Definition</b> <a href="instrument_8hpp_source.html#l00166">instrument.hpp:166</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1PriceRule_html_a82faddcfa34f6b56193a5b8e7756cf62a2882f30bbca588e5d0e88be217ce75c1"><div class="ttname"><a href="structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62a2882f30bbca588e5d0e88be217ce75c1">algotradelib::PriceRule::Kind::UNCONSTRAINED</a></div><div class="ttdeci">@ UNCONSTRAINED</div><div class="ttdoc">The market imposes no grid (free decimals).</div><div class="ttdef"><b>Definition</b> <a href="instrument_8hpp_source.html#l00156">instrument.hpp:156</a></div></div>
 <div class="ttc" id="astructalgotradelib_1_1PriceRule_html_a9ddccf645dea179b99c81e09cf9ab426"><div class="ttname"><a href="structalgotradelib_1_1PriceRule.html#a9ddccf645dea179b99c81e09cf9ab426">algotradelib::PriceRule::grid_known</a></div><div class="ttdeci">constexpr bool grid_known() const noexcept</div><div class="ttdoc">Tests whether the rule says anything about the grid: a stated one, or none at all.</div><div class="ttdef"><b>Definition</b> <a href="instrument_8hpp_source.html#l00174">instrument.hpp:174</a></div></div>
-<div class="ttc" id="astructalgotradelib_1_1PriceRule_html_ae841fb8998208e077d220b78a5679161"><div class="ttname"><a href="structalgotradelib_1_1PriceRule.html#ae841fb8998208e077d220b78a5679161">algotradelib::PriceRule::kind_</a></div><div class="ttdeci">Kind kind_</div><div class="ttdoc">The kind of rule; UNKNOWN by default, so an unset rule refuses to round.</div><div class="ttdef"><b>Definition</b> <a href="instrument_8hpp_source.html#l00164">instrument.hpp:164</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Differences_html"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Differences.html">algotradelib::backtest::Differences</a></div><div class="ttdoc">Chains the drawn changes (Paparoditis and Politis): the path&#39;s previous close plus value - from.</div><div class="ttdef"><b>Definition</b> <a href="#l00178">bootstrap.hpp:178</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Differences_html_a72b860c56d457900bf5cd236ea9a0ba9"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Differences.html#a72b860c56d457900bf5cd236ea9a0ba9">algotradelib::backtest::Differences::any_sign</a></div><div class="ttdeci">static constexpr bool any_sign</div><div class="ttdoc">Prices at or below zero are joined, not refused.</div><div class="ttdef"><b>Definition</b> <a href="#l00180">bootstrap.hpp:180</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Differences_html_ab10c2778181cebffcbc2ab360037450f"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Differences.html#ab10c2778181cebffcbc2ab360037450f">algotradelib::backtest::Differences::join</a></div><div class="ttdeci">double join(double level, double from, double value) const</div><div class="ttdoc">Returns the path&#39;s price for a drawn price.</div><div class="ttdef"><b>Definition</b> <a href="#l00190">bootstrap.hpp:190</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Levels_html"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Levels.html">algotradelib::backtest::Levels</a></div><div class="ttdoc">Joins the drawn prices as they are (Künsch; Politis and Romano): for a stationary series,...</div><div class="ttdef"><b>Definition</b> <a href="#l00204">bootstrap.hpp:204</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Levels_html_a7c50c5e3f95abaa8daad40eb3e81bfe7"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Levels.html#a7c50c5e3f95abaa8daad40eb3e81bfe7">algotradelib::backtest::Levels::any_sign</a></div><div class="ttdeci">static constexpr bool any_sign</div><div class="ttdoc">Prices at or below zero are joined, not refused.</div><div class="ttdef"><b>Definition</b> <a href="#l00206">bootstrap.hpp:206</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Levels_html_a7d80f3e2d43dda1db89073e5c7c3a003"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Levels.html#a7d80f3e2d43dda1db89073e5c7c3a003">algotradelib::backtest::Levels::join</a></div><div class="ttdeci">double join(double level, double from, double value) const</div><div class="ttdoc">Returns the drawn price.</div><div class="ttdef"><b>Definition</b> <a href="#l00215">bootstrap.hpp:215</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Returns_html"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Returns.html">algotradelib::backtest::Returns</a></div><div class="ttdoc">Chains the drawn returns: a path price is the path&#39;s previous close times value / from.</div><div class="ttdef"><b>Definition</b> <a href="#l00164">bootstrap.hpp:164</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1Returns_html_aa87c3c6f9aba23ec1a9bcab65ec43c8c"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1Returns.html#aa87c3c6f9aba23ec1a9bcab65ec43c8c">algotradelib::backtest::Returns::join</a></div><div class="ttdeci">double join(double level, double from, double value) const</div><div class="ttdoc">Returns the path&#39;s price for a drawn price.</div><div class="ttdef"><b>Definition</b> <a href="#l00172">bootstrap.hpp:172</a></div></div>
+<div class="ttc" id="astructalgotradelib_1_1backtest_1_1is__price__join_html"><div class="ttname"><a href="structalgotradelib_1_1backtest_1_1is__price__join.html">algotradelib::backtest::is_price_join</a></div><div class="ttdoc">Whether Join can join drawn blocks: true when a const Join has a member join(double,...</div><div class="ttdef"><b>Definition</b> <a href="#l00226">bootstrap.hpp:226</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

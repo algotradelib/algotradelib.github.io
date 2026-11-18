@@ -134,25 +134,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c9faa8705e420f14bf2471ded2a396e" id="r_a0c9faa8705e420f14bf2471ded2a396e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0c9faa8705e420f14bf2471ded2a396e">NextBarFillModel</a> (<a class="el" href="classalgotradelib_1_1backtest_1_1CommissionPolicy.html">CommissionPolicy</a> commission, <a class="el" href="structalgotradelib_1_1backtest_1_1SlippageModel.html">SlippageModel</a> slippage=<a class="el" href="structalgotradelib_1_1backtest_1_1SlippageModel.html#a420c32611f08e2fbd0fc113d54bbde13">SlippageModel::none</a>(), <a class="el" href="namespacealgotradelib_1_1backtest.html#a6091b7a3a9ee16fea01f3e814e6ea581">LimitFillPrice</a> limit_price=<a class="el" href="namespacealgotradelib_1_1backtest.html#a6091b7a3a9ee16fea01f3e814e6ea581ab93271a28df58ecbefb6683e648225f0">LimitFillPrice::AT_LIMIT</a>)</td></tr>
 <tr class="memdesc:a0c9faa8705e420f14bf2471ded2a396e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a model with a commission policy, which may resolve a schedule per execution.  <br /></td></tr>
 <tr class="memitem:a09410f6da32b620fac7857bc8fb37d0d" id="r_a09410f6da32b620fac7857bc8fb37d0d"><td class="memItemLeft">const <a class="el" href="classalgotradelib_1_1backtest_1_1CommissionPolicy.html">CommissionPolicy</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a09410f6da32b620fac7857bc8fb37d0d">commission</a> () const noexcept</td></tr>
-<tr class="memdesc:a09410f6da32b620fac7857bc8fb37d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the commission policy.  <br /></td></tr>
+<tr class="memdesc:a09410f6da32b620fac7857bc8fb37d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the commission policy.  <br /></td></tr>
 <tr class="memitem:afe6184b725200162c30cbe7f0df6152f" id="r_afe6184b725200162c30cbe7f0df6152f"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1backtest_1_1SlippageModel.html">SlippageModel</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afe6184b725200162c30cbe7f0df6152f">slippage</a> () const noexcept</td></tr>
-<tr class="memdesc:afe6184b725200162c30cbe7f0df6152f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the slippage model.  <br /></td></tr>
+<tr class="memdesc:afe6184b725200162c30cbe7f0df6152f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the slippage model.  <br /></td></tr>
 <tr class="memitem:aeb771c4675fcfdbf9175ecd96874e452" id="r_aeb771c4675fcfdbf9175ecd96874e452"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1backtest.html#a6091b7a3a9ee16fea01f3e814e6ea581">LimitFillPrice</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeb771c4675fcfdbf9175ecd96874e452">limit_price</a> () const noexcept</td></tr>
-<tr class="memdesc:aeb771c4675fcfdbf9175ecd96874e452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns which price a filled limit order is credited.  <br /></td></tr>
+<tr class="memdesc:aeb771c4675fcfdbf9175ecd96874e452"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> which price a filled limit order is credited.  <br /></td></tr>
 <tr class="memitem:a45e7927a04aa1f3d339af0535f0074bd" id="r_a45e7927a04aa1f3d339af0535f0074bd"><td class="memItemLeft"><a class="el" href="#a95e37375ec81ac98f64f54988c9216d9">NextBarFillModel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a45e7927a04aa1f3d339af0535f0074bd">with_sell_tax</a> (<a class="el" href="structalgotradelib_1_1backtest_1_1SellTax.html">SellTax</a> tax) const</td></tr>
-<tr class="memdesc:a45e7927a04aa1f3d339af0535f0074bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this model that charges a tax on sales.  <br /></td></tr>
+<tr class="memdesc:a45e7927a04aa1f3d339af0535f0074bd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> a copy of this model that charges a tax on sales.  <br /></td></tr>
 <tr class="memitem:a6a80ebd2b6271b092c69192290920823" id="r_a6a80ebd2b6271b092c69192290920823"><td class="memItemLeft">const std::optional&lt; <a class="el" href="structalgotradelib_1_1backtest_1_1SellTax.html">SellTax</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6a80ebd2b6271b092c69192290920823">sell_tax</a> () const noexcept</td></tr>
-<tr class="memdesc:a6a80ebd2b6271b092c69192290920823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the tax on sales.  <br /></td></tr>
+<tr class="memdesc:a6a80ebd2b6271b092c69192290920823"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the tax on sales.  <br /></td></tr>
 <tr class="memitem:a5514231b59abdd570f7ebe1d6e8dd0f8" id="r_a5514231b59abdd570f7ebe1d6e8dd0f8"><td class="memItemLeft"><a class="el" href="#a95e37375ec81ac98f64f54988c9216d9">NextBarFillModel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5514231b59abdd570f7ebe1d6e8dd0f8">with_market_price</a> (std::string name, <a class="el" href="namespacealgotradelib_1_1backtest.html#a0de154050b10e8fd5f50f0649e4d12f1">MarketPriceFunction</a> price) const</td></tr>
-<tr class="memdesc:a5514231b59abdd570f7ebe1d6e8dd0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this model that prices market orders by a rule instead of the next bar's open.  <br /></td></tr>
+<tr class="memdesc:a5514231b59abdd570f7ebe1d6e8dd0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> a copy of this model that prices market orders by a rule instead of the next bar's open.  <br /></td></tr>
 <tr class="memitem:ae78931bfa164081591234af17c46c47b" id="r_ae78931bfa164081591234af17c46c47b"><td class="memItemLeft"><a class="el" href="#a95e37375ec81ac98f64f54988c9216d9">NextBarFillModel</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae78931bfa164081591234af17c46c47b">with_market_price</a> (<a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4">MarketPrice</a> price) const</td></tr>
-<tr class="memdesc:ae78931bfa164081591234af17c46c47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this model that prices market orders by a rule the library ships.  <br /></td></tr>
+<tr class="memdesc:ae78931bfa164081591234af17c46c47b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> a copy of this model that prices market orders by a rule the library ships.  <br /></td></tr>
 <tr class="memitem:af78e26484ce68187f3735b4df40701d8" id="r_af78e26484ce68187f3735b4df40701d8"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af78e26484ce68187f3735b4df40701d8">market_price_rule</a> () const noexcept</td></tr>
-<tr class="memdesc:af78e26484ce68187f3735b4df40701d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the market-price rule's name.  <br /></td></tr>
+<tr class="memdesc:af78e26484ce68187f3735b4df40701d8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the market-price rule's name.  <br /></td></tr>
 <tr class="memitem:a3355a92bbf8d9389ac4f4eca7cdc3626" id="r_a3355a92bbf8d9389ac4f4eca7cdc3626"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3355a92bbf8d9389ac4f4eca7cdc3626">has_market_price_rule</a> () const noexcept</td></tr>
 <tr class="memdesc:a3355a92bbf8d9389ac4f4eca7cdc3626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a market-price rule is set.  <br /></td></tr>
 <tr class="memitem:a393b996b119a627d0e68606a31224cf8" id="r_a393b996b119a627d0e68606a31224cf8"><td class="memItemLeft">const std::optional&lt; <a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4">MarketPrice</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a393b996b119a627d0e68606a31224cf8">library_market_price</a> () const noexcept</td></tr>
-<tr class="memdesc:a393b996b119a627d0e68606a31224cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns which of the library's market-price rules prices market orders.  <br /></td></tr>
+<tr class="memdesc:a393b996b119a627d0e68606a31224cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> which of the library's market-price rules prices market orders.  <br /></td></tr>
 <tr class="memitem:ab46397d4b6f87a986430bd9746aea189" id="r_ab46397d4b6f87a986430bd9746aea189"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1backtest_1_1FillDecision.html">FillDecision</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab46397d4b6f87a986430bd9746aea189">decide</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1PlannedOrder.html">strategy::PlannedOrder</a> &amp;order, const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">strategy::BarEvent</a> &amp;next, const <a class="el" href="structalgotradelib_1_1PriceRule.html">PriceRule</a> &amp;rule, const <a class="el" href="structalgotradelib_1_1Date.html">Date</a> &amp;date, const std::optional&lt; <a class="el" href="structalgotradelib_1_1Date.html">Date</a> &gt; &amp;open_date=std::nullopt, bool released=false, const std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; &amp;decision_price=std::nullopt, const std::optional&lt; std::chrono::system_clock::time_point &gt; &amp;decision_price_at=std::nullopt, const std::optional&lt; std::chrono::system_clock::time_point &gt; &amp;decided_at=std::nullopt) const</td></tr>
 <tr class="memdesc:ab46397d4b6f87a986430bd9746aea189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decides whether an order trades against a bar, and at what price and cost.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -287,7 +287,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the commission policy. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the commission policy. </p>
 <dl class="section return"><dt>Returns</dt><dd>The policy in force. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00174">174</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
@@ -438,7 +438,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns which of the library's market-price rules prices market orders. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> which of the library's market-price rules prices market orders. </p>
 <dl class="section return"><dt>Returns</dt><dd>The rule, <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4acafe4ae5ec9ffd57f87fabc9c260be38" title="The default: a market order fills at the next bar&#39;s open (its close if it has no open).">MarketPrice::NEXT_OPEN</a></span> when none is set; <span class="tt">std::nullopt</span> when a caller's own function (<span class="tt">with_market_price(std::string, MarketPriceFunction)</span>) does, whatever its name. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00309">309</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
@@ -468,7 +468,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns which price a filled limit order is credited. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> which price a filled limit order is credited. </p>
 <dl class="section return"><dt>Returns</dt><dd>The choice. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00190">190</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
@@ -538,7 +538,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the market-price rule's name. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the market-price rule's name. </p>
 <dl class="section return"><dt>Returns</dt><dd>The name, or empty when market orders take the next bar's open. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00292">292</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
@@ -607,7 +607,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the tax on sales. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the tax on sales. </p>
 <dl class="section return"><dt>Returns</dt><dd>The tax, or <span class="tt">std::nullopt</span> if none is modelled. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00219">219</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
@@ -637,7 +637,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the slippage model. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the slippage model. </p>
 <dl class="section return"><dt>Returns</dt><dd>The model in force. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="fill_8hpp_source.html#l00182">182</a> of file <a class="el" href="fill_8hpp_source.html">fill.hpp</a>.</p>
@@ -669,7 +669,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a copy of this model that prices market orders by a rule the library ships. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> a copy of this model that prices market orders by a rule the library ships. </p>
 <p><span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4acafe4ae5ec9ffd57f87fabc9c260be38" title="The default: a market order fills at the next bar&#39;s open (its close if it has no open).">MarketPrice::NEXT_OPEN</a></span> removes any rule set before; <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a5f9f9f91da30681402179bb813499499" title="A market order fills at the price it was decided on, named decision-close in the report.">MarketPrice::DECISION_CLOSE</a></span> and <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a2c177881db0340a5861367236639ded4a41fe2387a3f47cccd099d6b01e5c434f" title="A market order fills at the close of the bar it fills against, named next-close in the report.">MarketPrice::NEXT_CLOSE</a></span> set the rules named <span class="tt">decision-close</span> and <span class="tt">next-close</span>, priced, costed and dated as <span class="tt">with_market_price(std::string, MarketPriceFunction)</span> describes.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -710,7 +710,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a copy of this model that prices market orders by a rule instead of the next bar's open. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> a copy of this model that prices market orders by a rule instead of the next bar's open. </p>
 <p>The rule is called for every order the model does not price against a limit (<span class="tt"><a class="el" href="#aecce6069b9d2aebb8687783c883564d1" title="Tests whether the model prices an order type against its limit (a limit order, and a stop-limit once ...">limit_priced</a></span> false), with the order, the instrument's previous bar and the bar it fills against. Its price is then slipped, costed and taxed as an open would be, and the fill is stamped at <span class="tt">next.period_end_</span> and charged on the fill bar's date. When it returns nothing, a <span class="tt">DAY</span> order rests for a later bar of its session and any other order is withdrawn. Limit and stop-limit orders are untouched.</p>
 <p>The rule may look at <span class="tt">next_</span> beyond its open (its close, high or low): that is a choice the rule makes, not one the model can check, and the report names the rule so a reader can judge it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -755,7 +755,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a copy of this model that charges a tax on sales. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> a copy of this model that charges a tax on sales. </p>
 <p>The library has no tax rate of its own (Korean securities transaction tax changes yearly); one rate applies to the whole replay. The tax is truncated to whole currency units and reported apart from commission (<span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Execution.html#a9ad74beb86837b93179d65baa8fc4f48" title="The sale tax charged; zero unless a sell tax applies (NextBarFillModel::with_sell_tax).">Execution::tax_</a></span>, <span class="tt"><a class="el" href="structalgotradelib_1_1backtest_1_1Report.html#a6d08058d427073be4cb6ddb13bc2331d" title="Sale tax paid.">Report::tax_paid_</a></span>). Only sales of instruments in <span class="tt">tax.country_</span> pay it; exempt instruments (Korean ETFs and ETNs) need a replay without it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

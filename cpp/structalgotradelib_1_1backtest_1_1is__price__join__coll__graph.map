@@ -1,0 +1,5 @@
+<map id="algotradelib::backtest::is_price_join&lt; Join, typename &gt;" name="algotradelib::backtest::is_price_join&lt; Join, typename &gt;">
+<area shape="rect" id="Node000001" title="Whether Join can join drawn blocks: true when a const Join has a member join(double,..." alt="" coords="5,81,169,143"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="28,5,146,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,47,90,81,84,80,85,51"/>
+</map>

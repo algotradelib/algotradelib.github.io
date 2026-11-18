@@ -1,0 +1,20 @@
+var NAVTREEINDEX26 =
+{
+"version_8hpp.html#a80ec63879decc3b2871f1e37177f8479":[3,0,0,0,9,8],
+"version_8hpp.html#aad019171500f010a95eb802f4fc6ab78":[3,0,0,0,9,1],
+"version_8hpp.html#af410793e37122678334d6a308891823a":[3,0,0,0,9,3],
+"version_8hpp.html#af736cd936cd7285f37c8986fc603dca1":[3,0,0,0,9,6],
+"version_8hpp_source.html":[3,0,0,0,9],
+"writing-a-strategy.html":[0,13],
+"writing-a-strategy.html#autotoc_md117":[0,13,0],
+"writing-a-strategy.html#autotoc_md118":[0,13,2],
+"writing-a-strategy.html#autotoc_md119":[0,13,3],
+"writing-a-strategy.html#autotoc_md120":[0,13,4],
+"writing-a-strategy.html#autotoc_md121":[0,13,5],
+"writing-a-strategy.html#autotoc_md122":[0,13,6],
+"writing-a-strategy.html#autotoc_md123":[0,13,7],
+"writing-a-strategy.html#several-instruments":[0,13,1],
+"ws__session_8hpp_source.html":[3,0,0,0,6,6],
+"ws__session__base_8hpp_source.html":[3,0,0,0,6,7],
+"wss__session_8hpp_source.html":[3,0,0,0,6,8]
+};

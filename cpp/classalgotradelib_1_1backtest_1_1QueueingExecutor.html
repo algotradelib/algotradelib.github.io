@@ -156,9 +156,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e96246d9eabf743edd7f6b778e7f528" id="r_a5e96246d9eabf743edd7f6b778e7f528"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218ccc">runner::SendOutcome</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528">cancel</a> (const <a class="el" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder</a>&lt; BrokerTag &gt; &amp;working)</td></tr>
 <tr class="memdesc:a5e96246d9eabf743edd7f6b778e7f528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Withdraws the order a working row names, matched by reference.  <br /></td></tr>
 <tr class="memitem:a2db1a4671fa24ff023c40e818461ee1c" id="r_a2db1a4671fa24ff023c40e818461ee1c"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1OrderRef.html">OrderRef</a>&lt; BrokerTag &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2db1a4671fa24ff023c40e818461ee1c">last_ref</a> () const</td></tr>
-<tr class="memdesc:a2db1a4671fa24ff023c40e818461ee1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference issued to the most recently accepted order.  <br /></td></tr>
+<tr class="memdesc:a2db1a4671fa24ff023c40e818461ee1c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the reference issued to the most recently accepted order.  <br /></td></tr>
 <tr class="memitem:a573dec487b596e5d2dc8cdb2f706b7f7" id="r_a573dec487b596e5d2dc8cdb2f706b7f7"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue.html">Queue</a>&#160;</td><td class="memItemRight"><a class="el" href="#a573dec487b596e5d2dc8cdb2f706b7f7">queued</a> () const noexcept</td></tr>
-<tr class="memdesc:a573dec487b596e5d2dc8cdb2f706b7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns every outstanding order, oldest first.  <br /></td></tr>
+<tr class="memdesc:a573dec487b596e5d2dc8cdb2f706b7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> every outstanding order, oldest first.  <br /></td></tr>
 <tr class="memitem:a7e64ce9bc6f7d8e752ad6d5c46f01a2b" id="r_a7e64ce9bc6f7d8e752ad6d5c46f01a2b"><td class="memTemplParams" colspan="2">template&lt;typename Each&gt; </td></tr>
 <tr class="memitem:a7e64ce9bc6f7d8e752ad6d5c46f01a2b template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7e64ce9bc6f7d8e752ad6d5c46f01a2b">for_each_queued_in</a> (const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;instrument, Each &amp;&amp;each) const</td></tr>
 <tr class="memdesc:a7e64ce9bc6f7d8e752ad6d5c46f01a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">each</span> with every outstanding order in one instrument, oldest first.  <br /></td></tr>
@@ -173,9 +173,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acb9fff17fc5147274ea304597ba2b669" id="r_acb9fff17fc5147274ea304597ba2b669"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acb9fff17fc5147274ea304597ba2b669">open_bar</a> () noexcept</td></tr>
 <tr class="memdesc:acb9fff17fc5147274ea304597ba2b669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the next bar; orders accepted from now on cannot fill against it.  <br /></td></tr>
 <tr class="memitem:a52e3e28ff43ff9e0acb24b9980c348f1" id="r_a52e3e28ff43ff9e0acb24b9980c348f1"><td class="memItemLeft">std::uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a52e3e28ff43ff9e0acb24b9980c348f1">bar</a> () const noexcept</td></tr>
-<tr class="memdesc:a52e3e28ff43ff9e0acb24b9980c348f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bar being replayed.  <br /></td></tr>
+<tr class="memdesc:a52e3e28ff43ff9e0acb24b9980c348f1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the bar being replayed.  <br /></td></tr>
 <tr class="memitem:a16729c5545e3a15736f4c27567f91221" id="r_a16729c5545e3a15736f4c27567f91221"><td class="memItemLeft">std::uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a16729c5545e3a15736f4c27567f91221">changes</a> () const noexcept</td></tr>
-<tr class="memdesc:a16729c5545e3a15736f4c27567f91221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many times the queue gained or lost an order (<span class="tt"><a class="el" href="#ab8eec746d4ee345671591b49eac5084c" title="Accepts and queues an order, issuing it a reference.">place</a></span>, <span class="tt"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528" title="Withdraws the order a working row names, matched by reference.">cancel</a></span>, <span class="tt"><a class="el" href="#acaca4d47f4c63c910c9bc945c59bee2d" title="Removes an order from the queue.">withdraw</a></span>).  <br /></td></tr>
+<tr class="memdesc:a16729c5545e3a15736f4c27567f91221"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> how many times the queue gained or lost an order (<span class="tt"><a class="el" href="#ab8eec746d4ee345671591b49eac5084c" title="Accepts and queues an order, issuing it a reference.">place</a></span>, <span class="tt"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528" title="Withdraws the order a working row names, matched by reference.">cancel</a></span>, <span class="tt"><a class="el" href="#acaca4d47f4c63c910c9bc945c59bee2d" title="Removes an order from the queue.">withdraw</a></span>).  <br /></td></tr>
 <tr class="memitem:a3b95fae5255356343d3f8791f65f6baa" id="r_a3b95fae5255356343d3f8791f65f6baa"><td class="memTemplParams" colspan="2">template&lt;typename PriceOf&gt; </td></tr>
 <tr class="memitem:a3b95fae5255356343d3f8791f65f6baa template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b95fae5255356343d3f8791f65f6baa">stamp_decision_prices</a> (PriceOf &amp;&amp;price_of)</td></tr>
 <tr class="memdesc:a3b95fae5255356343d3f8791f65f6baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stamps the orders accepted since the last call with their instrument's price now, and when it was observed.  <br /></td></tr>
@@ -354,7 +354,7 @@ template&lt;typename BrokerTag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the bar being replayed. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the bar being replayed. </p>
 <dl class="section return"><dt>Returns</dt><dd>The bar number, counting from one. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00519">519</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
@@ -463,7 +463,7 @@ template&lt;typename BrokerTag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns how many times the queue gained or lost an order (<span class="tt"><a class="el" href="#ab8eec746d4ee345671591b49eac5084c" title="Accepts and queues an order, issuing it a reference.">place</a></span>, <span class="tt"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528" title="Withdraws the order a working row names, matched by reference.">cancel</a></span>, <span class="tt"><a class="el" href="#acaca4d47f4c63c910c9bc945c59bee2d" title="Removes an order from the queue.">withdraw</a></span>). </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> how many times the queue gained or lost an order (<span class="tt"><a class="el" href="#ab8eec746d4ee345671591b49eac5084c" title="Accepts and queues an order, issuing it a reference.">place</a></span>, <span class="tt"><a class="el" href="#a5e96246d9eabf743edd7f6b778e7f528" title="Withdraws the order a working row names, matched by reference.">cancel</a></span>, <span class="tt"><a class="el" href="#acaca4d47f4c63c910c9bc945c59bee2d" title="Removes an order from the queue.">withdraw</a></span>). </p>
 <p>Releasing a stop and dating an order's session change neither its working row nor the count.</p>
 <dl class="section return"><dt>Returns</dt><dd>The count since construction. </dd></dl>
 
@@ -621,7 +621,7 @@ template&lt;typename BrokerTag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the reference issued to the most recently accepted order. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the reference issued to the most recently accepted order. </p>
 <dl class="section return"><dt>Returns</dt><dd>The reference, or <span class="tt">std::nullopt</span> before any. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00284">284</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
@@ -844,7 +844,7 @@ template&lt;typename BrokerTag&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns every outstanding order, oldest first. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> every outstanding order, oldest first. </p>
 <dl class="section return"><dt>Returns</dt><dd>A view of the orders; valid until the queue changes. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00424">424</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>

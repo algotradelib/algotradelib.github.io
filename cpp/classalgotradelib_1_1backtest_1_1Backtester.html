@@ -141,13 +141,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a515e827e70fc863578aa5388bc2c1369" id="r_a515e827e70fc863578aa5388bc2c1369"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a515e827e70fc863578aa5388bc2c1369">Backtester</a> (Strategy strategy={}, <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayConfig.html">ReplayConfig</a> config={}, <a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a> fills=<a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a>{})</td></tr>
 <tr class="memdesc:a515e827e70fc863578aa5388bc2c1369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a replay.  <br /></td></tr>
 <tr class="memitem:af187daf2ab272637bb438b0ae35996ac" id="r_af187daf2ab272637bb438b0ae35996ac"><td class="memItemLeft">const Strategy &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af187daf2ab272637bb438b0ae35996ac">strategy</a> () const noexcept</td></tr>
-<tr class="memdesc:af187daf2ab272637bb438b0ae35996ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the strategy, to read the state it kept.  <br /></td></tr>
+<tr class="memdesc:af187daf2ab272637bb438b0ae35996ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the strategy, to read the state it kept.  <br /></td></tr>
 <tr class="memitem:a467b358a3c18b251f0936816cbfd21ab" id="r_a467b358a3c18b251f0936816cbfd21ab"><td class="memItemLeft">const <a class="el" href="classalgotradelib_1_1backtest_1_1ReplayLedger.html">ReplayLedger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a467b358a3c18b251f0936816cbfd21ab">ledger</a> () const noexcept</td></tr>
-<tr class="memdesc:a467b358a3c18b251f0936816cbfd21ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ledger: positions, cash and realized profit.  <br /></td></tr>
+<tr class="memdesc:a467b358a3c18b251f0936816cbfd21ab"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the ledger: positions, cash and realized profit.  <br /></td></tr>
 <tr class="memitem:a721677e15a1ddb65c632858c66e15820" id="r_a721677e15a1ddb65c632858c66e15820"><td class="memItemLeft">const <a class="el" href="classalgotradelib_1_1backtest_1_1NextBarFillModel.html">NextBarFillModel</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a721677e15a1ddb65c632858c66e15820">fills</a> () const noexcept</td></tr>
-<tr class="memdesc:a721677e15a1ddb65c632858c66e15820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the fill model, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>.  <br /></td></tr>
+<tr class="memdesc:a721677e15a1ddb65c632858c66e15820"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the fill model, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>.  <br /></td></tr>
 <tr class="memitem:a5550e986a83ad759063d2e969e2404f5" id="r_a5550e986a83ad759063d2e969e2404f5"><td class="memItemLeft">const <a class="el" href="structalgotradelib_1_1backtest_1_1ReplayResult.html">ReplayResult</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5550e986a83ad759063d2e969e2404f5">result</a> () const noexcept</td></tr>
-<tr class="memdesc:a5550e986a83ad759063d2e969e2404f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns what the replay has produced so far.  <br /></td></tr>
+<tr class="memdesc:a5550e986a83ad759063d2e969e2404f5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> what the replay has produced so far.  <br /></td></tr>
 <tr class="memitem:a72b488b082635ab96d1f755c1064b7c0" id="r_a72b488b082635ab96d1f755c1064b7c0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a72b488b082635ab96d1f755c1064b7c0">feed</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1BarEvent.html">strategy::BarEvent</a> &amp;event, std::optional&lt; bool &gt; trading_day=true)</td></tr>
 <tr class="memdesc:a72b488b082635ab96d1f755c1064b7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replays one bar.  <br /></td></tr>
 <tr class="memitem:acf17870e4a7eac3cf422367da9984200" id="r_acf17870e4a7eac3cf422367da9984200"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acf17870e4a7eac3cf422367da9984200">finish_history</a> ()</td></tr>
@@ -484,7 +484,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the fill model, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the fill model, for <span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a59999d704779dfc064e43ddab62a7762" title="Summarizes a replay into a Report.">summarize</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The fill model. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00897">897</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
@@ -580,7 +580,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the ledger: positions, cash and realized profit. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the ledger: positions, cash and realized profit. </p>
 <p>It keeps no executions (<span class="tt"><a class="el" href="namespacealgotradelib_1_1backtest.html#a8d358a3a982cb4529f94d41572de0279ab50339a10e1de285ac99d4c3990b8693" title="Keep none, for an owner that records them itself (a Backtester, in ReplayResult::executions_).">ExecutionHistory::NONE</a></span>): they are in <span class="tt"><a class="el" href="#a5550e986a83ad759063d2e969e2404f5" title="Returns what the replay has produced so far.">result()</a>.executions_</span>, once.</p>
 <dl class="section return"><dt>Returns</dt><dd>The ledger. </dd></dl>
 
@@ -613,7 +613,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns what the replay has produced so far. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> what the replay has produced so far. </p>
 <dl class="section return"><dt>Returns</dt><dd>The result. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00905">905</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
@@ -645,7 +645,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the strategy, to read the state it kept. </p>
+<p><a class="el" href="structalgotradelib_1_1backtest_1_1Returns.html" title="Chains the drawn returns: a path price is the path&#39;s previous close times value / from.">Returns</a> the strategy, to read the state it kept. </p>
 <dl class="section return"><dt>Returns</dt><dd>The strategy. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00878">878</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>

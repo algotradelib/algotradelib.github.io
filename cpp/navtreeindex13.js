@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"structalgotradelib_1_1BarQuery.html#a7778df2cd2698365e8bce8fe14990a0c":[2,0,0,16,4],
 "structalgotradelib_1_1BarQuery.html#a908df933456a0721f5b24f2cae36b8d7":[1,0,0,17,2],
 "structalgotradelib_1_1BarQuery.html#a908df933456a0721f5b24f2cae36b8d7":[2,0,0,16,2],
 "structalgotradelib_1_1BarQuery.html#acbf99b95dd4672144689e8ecbc972442":[1,0,0,17,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a7efc511750c405c0f3fb47d79a6b91fd":[2,0,0,25,13],
 "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a87c8979289dacf3d49873091a075eace":[1,0,0,26,7],
 "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a87c8979289dacf3d49873091a075eace":[2,0,0,25,7],
-"structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a914d7dcfd8ee162314764d7f4f5ddfb0":[1,0,0,26,18],
-"structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a914d7dcfd8ee162314764d7f4f5ddfb0":[2,0,0,25,18]
+"structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html#a914d7dcfd8ee162314764d7f4f5ddfb0":[1,0,0,26,18]
 };

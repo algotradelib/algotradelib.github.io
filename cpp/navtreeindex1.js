@@ -246,8 +246,8 @@ var NAVTREEINDEX1 =
 "classalgotradelib_1_1backtest_1_1CommissionPolicy.html#abe8f30d77162aedc6a1c19b372ec14f0":[2,0,0,1,5,8],
 "classalgotradelib_1_1backtest_1_1CommissionPolicy.html#adf3dd8f7c9efef6e5140daa999d31502":[1,0,0,1,5,4],
 "classalgotradelib_1_1backtest_1_1CommissionPolicy.html#adf3dd8f7c9efef6e5140daa999d31502":[2,0,0,1,5,4],
-"classalgotradelib_1_1backtest_1_1NextBarFillModel.html":[1,0,0,1,17],
-"classalgotradelib_1_1backtest_1_1NextBarFillModel.html":[2,0,0,1,17],
-"classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a09410f6da32b620fac7857bc8fb37d0d":[1,0,0,1,17,2],
-"classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a09410f6da32b620fac7857bc8fb37d0d":[2,0,0,1,17,2]
+"classalgotradelib_1_1backtest_1_1NextBarFillModel.html":[1,0,0,1,21],
+"classalgotradelib_1_1backtest_1_1NextBarFillModel.html":[2,0,0,1,21],
+"classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a09410f6da32b620fac7857bc8fb37d0d":[1,0,0,1,21,2],
+"classalgotradelib_1_1backtest_1_1NextBarFillModel.html#a09410f6da32b620fac7857bc8fb37d0d":[2,0,0,1,21,2]
 };
