@@ -69,6 +69,7 @@ var hierarchy =
     [ "algotradelib::network::ClientCredentials&lt; TossConfig &gt;", "classalgotradelib_1_1network_1_1ClientCredentials.html", [
       [ "algotradelib::tossinvest::TossConfig", "structalgotradelib_1_1tossinvest_1_1TossConfig.html", null ]
     ] ],
+    [ "algotradelib::network::ClientStores", "structalgotradelib_1_1network_1_1ClientStores.html", null ],
     [ "algotradelib::runner::ClockReference&lt; Clock &gt;", "classalgotradelib_1_1runner_1_1ClockReference.html", null ],
     [ "algotradelib::Code&lt; N &gt;", "classalgotradelib_1_1Code.html", null ],
     [ "algotradelib::backtest::CommissionCharge", "structalgotradelib_1_1backtest_1_1CommissionCharge.html", null ],
@@ -349,6 +350,8 @@ var hierarchy =
       [ "algotradelib::runner::source_names_buying_power_currencies< Source, std::void_t< decltype(std::declval< const Source & >().buying_power_currencies())> >", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html", null ],
       [ "algotradelib::runner::source_states_charged_costs< Source, std::void_t< decltype(std::declval< const Source & >().charged_costs())> >", "structalgotradelib_1_1runner_1_1source__states__charged__costs_3_01Source_00_01std_1_1void__t_3_18ee40020b45d1e61f73c6245e3686dd.html", null ]
     ] ],
+    [ "algotradelib::type_list&lt; Clients &gt;", "structalgotradelib_1_1type__list.html", null ],
+    [ "algotradelib::type_tag&lt; T &gt;", "structalgotradelib_1_1type__tag.html", null ],
     [ "algotradelib::VenueKey", "classalgotradelib_1_1VenueKey.html", null ],
     [ "algotradelib::strategy::vanilla::VolatilityTargetSizing", "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html", null ],
     [ "algotradelib::network::WebSocketSessionOptions", "structalgotradelib_1_1network_1_1WebSocketSessionOptions.html", null ],

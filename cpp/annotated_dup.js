@@ -116,6 +116,7 @@ var annotated_dup =
         [ "BasicRateLimitBucket", "classalgotradelib_1_1network_1_1BasicRateLimitBucket.html", "classalgotradelib_1_1network_1_1BasicRateLimitBucket" ],
         [ "CalendarCache", "classalgotradelib_1_1network_1_1CalendarCache.html", "classalgotradelib_1_1network_1_1CalendarCache" ],
         [ "ClientCredentials", "classalgotradelib_1_1network_1_1ClientCredentials.html", "classalgotradelib_1_1network_1_1ClientCredentials" ],
+        [ "ClientStores", "structalgotradelib_1_1network_1_1ClientStores.html", "structalgotradelib_1_1network_1_1ClientStores" ],
         [ "FileCalendarCache", "classalgotradelib_1_1network_1_1FileCalendarCache.html", "classalgotradelib_1_1network_1_1FileCalendarCache" ],
         [ "FileTokenStore", "classalgotradelib_1_1network_1_1FileTokenStore.html", "classalgotradelib_1_1network_1_1FileTokenStore" ],
         [ "HttpClient", "classalgotradelib_1_1network_1_1HttpClient.html", "classalgotradelib_1_1network_1_1HttpClient" ],
@@ -307,6 +308,8 @@ var annotated_dup =
       [ "TradePrint", "structalgotradelib_1_1TradePrint.html", "structalgotradelib_1_1TradePrint" ],
       [ "TradingCalendar", "structalgotradelib_1_1TradingCalendar.html", "structalgotradelib_1_1TradingCalendar" ],
       [ "TradingDay", "structalgotradelib_1_1TradingDay.html", "structalgotradelib_1_1TradingDay" ],
+      [ "type_list", "structalgotradelib_1_1type__list.html", "structalgotradelib_1_1type__list" ],
+      [ "type_tag", "structalgotradelib_1_1type__tag.html", "structalgotradelib_1_1type__tag" ],
       [ "VenueKey", "classalgotradelib_1_1VenueKey.html", "classalgotradelib_1_1VenueKey" ],
       [ "WorkingOrder", "structalgotradelib_1_1WorkingOrder.html", "structalgotradelib_1_1WorkingOrder" ],
       [ "WorkingOrders", "structalgotradelib_1_1WorkingOrders.html", "structalgotradelib_1_1WorkingOrders" ]

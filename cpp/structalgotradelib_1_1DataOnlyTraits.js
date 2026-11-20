@@ -10,6 +10,7 @@ var structalgotradelib_1_1DataOnlyTraits =
     [ "cancel_order", "structalgotradelib_1_1DataOnlyTraits.html#ab6ae4769b5cb5d48bcb9f2f3eb77a68e", null ],
     [ "holdings", "structalgotradelib_1_1DataOnlyTraits.html#abdfc196c8aae73b8790b25948fffaea6", null ],
     [ "holdings", "structalgotradelib_1_1DataOnlyTraits.html#a197a129abe08ece52cacc50e379e7d33", null ],
+    [ "no_account", "structalgotradelib_1_1DataOnlyTraits.html#a686f46c2bbad6ee27b9704bf742945a0", null ],
     [ "normalize_place", "structalgotradelib_1_1DataOnlyTraits.html#a4dbd14dc2339ad8153f1e07ba530acdf", null ],
     [ "order_history", "structalgotradelib_1_1DataOnlyTraits.html#a9e168ac1f0be1ef7a35be3361078aefe", null ],
     [ "order_history", "structalgotradelib_1_1DataOnlyTraits.html#a89a4ca814e3e57c1957c5447f48ba58c", null ],

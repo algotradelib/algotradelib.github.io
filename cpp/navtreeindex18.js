@@ -1,5 +1,16 @@
 var NAVTREEINDEX18 =
 {
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a0f555ff4e6b431b5e8eacf2a9bab8b85":[1,0,0,1,12,1],
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a0f555ff4e6b431b5e8eacf2a9bab8b85":[2,0,0,1,12,1],
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a3b3f4d550b724d4c1ceb4adb8c9d5542":[1,0,0,1,12,2],
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a3b3f4d550b724d4c1ceb4adb8c9d5542":[2,0,0,1,12,2],
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a3bafedc4a5222faad3442021f2e56b26":[1,0,0,1,12,3],
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a3bafedc4a5222faad3442021f2e56b26":[2,0,0,1,12,3],
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a49a244c42f5cfda709465bb0a1c31e67":[1,0,0,1,12,0],
+"structalgotradelib_1_1backtest_1_1FoldLengths.html#a49a244c42f5cfda709465bb0a1c31e67":[2,0,0,1,12,0],
+"structalgotradelib_1_1backtest_1_1IndexRange.html":[1,0,0,1,13],
+"structalgotradelib_1_1backtest_1_1IndexRange.html":[2,0,0,1,13],
+"structalgotradelib_1_1backtest_1_1IndexRange.html#a9040961cc4a2b89639dea67471d92a61":[1,0,0,1,13,0],
 "structalgotradelib_1_1backtest_1_1IndexRange.html#a9040961cc4a2b89639dea67471d92a61":[2,0,0,1,13,0],
 "structalgotradelib_1_1backtest_1_1IndexRange.html#aa4816b912d4dcbff10ef3bcd29d5937c":[1,0,0,1,13,1],
 "structalgotradelib_1_1backtest_1_1IndexRange.html#aa4816b912d4dcbff10ef3bcd29d5937c":[2,0,0,1,13,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX18 =
 "structalgotradelib_1_1backtest_1_1ReportCaveats.html#aed0eb3a7848f6cb3626a5983853a63b2":[1,0,0,1,29,1],
 "structalgotradelib_1_1backtest_1_1ReportCaveats.html#aed0eb3a7848f6cb3626a5983853a63b2":[2,0,0,1,29,1],
 "structalgotradelib_1_1backtest_1_1ReportCaveats.html#aeeb7b16c23683faac4d99d2b25deabbb":[1,0,0,1,29,3],
-"structalgotradelib_1_1backtest_1_1ReportCaveats.html#aeeb7b16c23683faac4d99d2b25deabbb":[2,0,0,1,29,3],
-"structalgotradelib_1_1backtest_1_1ReportCaveats.html#afe24a84a20fb08c18e6b40647ae921c7":[1,0,0,1,29,22],
-"structalgotradelib_1_1backtest_1_1ReportCaveats.html#afe24a84a20fb08c18e6b40647ae921c7":[2,0,0,1,29,22],
-"structalgotradelib_1_1backtest_1_1Returns.html":[1,0,0,1,30],
-"structalgotradelib_1_1backtest_1_1Returns.html":[2,0,0,1,30],
-"structalgotradelib_1_1backtest_1_1Returns.html#aa87c3c6f9aba23ec1a9bcab65ec43c8c":[1,0,0,1,30,0],
-"structalgotradelib_1_1backtest_1_1Returns.html#aa87c3c6f9aba23ec1a9bcab65ec43c8c":[2,0,0,1,30,0],
-"structalgotradelib_1_1backtest_1_1Rolling.html":[1,0,0,1,31],
-"structalgotradelib_1_1backtest_1_1Rolling.html":[2,0,0,1,31],
-"structalgotradelib_1_1backtest_1_1Rolling.html#a213dcf7813462fff1974660bcd1fd8a7":[1,0,0,1,31,0],
-"structalgotradelib_1_1backtest_1_1Rolling.html#a213dcf7813462fff1974660bcd1fd8a7":[2,0,0,1,31,0],
-"structalgotradelib_1_1backtest_1_1SellTax.html":[1,0,0,1,32]
+"structalgotradelib_1_1backtest_1_1ReportCaveats.html#aeeb7b16c23683faac4d99d2b25deabbb":[2,0,0,1,29,3]
 };

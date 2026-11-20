@@ -137,6 +137,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where blocking broker clients share a market's trading calendar, across threads and processes.  <a href="classalgotradelib_1_1network_1_1CalendarCache.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ClientCredentials" id="r_ClientCredentials"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1ClientCredentials.html">ClientCredentials</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OAuth client credentials (an app key and secret), the base of each broker's credentials class.  <a href="classalgotradelib_1_1network_1_1ClientCredentials.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ClientStores" id="r_ClientStores"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1network_1_1ClientStores.html">ClientStores</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">What the clients of a run share, across processes too; each takes those its constructor accepts.  <a href="structalgotradelib_1_1network_1_1ClientStores.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FileCalendarCache" id="r_FileCalendarCache"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1FileCalendarCache.html">FileCalendarCache</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html" title="Where blocking broker clients share a market&#39;s trading calendar, across threads and processes.">CalendarCache</a></span> in a private folder: one file per name. POSIX only; not provided on Windows.  <a href="classalgotradelib_1_1network_1_1FileCalendarCache.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FileTokenStore" id="r_FileTokenStore"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1network_1_1FileTokenStore.html">FileTokenStore</a></td></tr>
@@ -194,6 +196,9 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ab77606b91c006595fb6a445dd0d9e1dc" id="r_ab77606b91c006595fb6a445dd0d9e1dc"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab77606b91c006595fb6a445dd0d9e1dc">calendar_cache_error</a> (std::string_view reason)</td></tr>
 <tr class="memdesc:ab77606b91c006595fb6a445dd0d9e1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a calendar cache's error: <span class="tt">TRANSPORT</span>, not sent to the broker, code <span class="tt">calendar_cache</span>.  <br /></td></tr>
+<tr class="memitem:ab500f94a106d4b7ad9b4b58efbd1e315" id="r_ab500f94a106d4b7ad9b4b58efbd1e315"><td class="memTemplParams" colspan="2">template&lt;typename Client, typename Config&gt; </td></tr>
+<tr class="memitem:ab500f94a106d4b7ad9b4b58efbd1e315 template"><td class="memItemLeft">std::shared_ptr&lt; Client &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab500f94a106d4b7ad9b4b58efbd1e315">make_client</a> (ssl::context &amp;context, Config config, <a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html">HttpClientOptions</a> options, const <a class="el" href="structalgotradelib_1_1network_1_1ClientStores.html">ClientStores</a> &amp;stores)</td></tr>
+<tr class="memdesc:ab500f94a106d4b7ad9b4b58efbd1e315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a blocking client with the run's stores; sends nothing.  <br /></td></tr>
 <tr class="memitem:a430c9c3332bda042ce8377d013be9b05" id="r_a430c9c3332bda042ce8377d013be9b05"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1BrokerError.html">BrokerError</a>&#160;</td><td class="memItemRight"><a class="el" href="#a430c9c3332bda042ce8377d013be9b05">transport_error</a> (std::string stage, beast::error_code ec)</td></tr>
 <tr class="memdesc:a430c9c3332bda042ce8377d013be9b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a transport error into a <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerError.html" title="The error a broker or transport operation returns.">BrokerError</a></span>.  <br /></td></tr>
 <tr class="memitem:ad3e40597b613a8ad74c2f3a5b4c7d53d" id="r_ad3e40597b613a8ad74c2f3a5b4c7d53d"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ad3e40597b613a8ad74c2f3a5b4c7d53d">make_host_header</a> (const std::string &amp;host, const std::string &amp;port)</td></tr>
@@ -393,6 +398,64 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00170">170</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00170">close_ssl_stream()</a>.</p>
+
+</div>
+</div>
+<a id="ab500f94a106d4b7ad9b4b58efbd1e315" name="ab500f94a106d4b7ad9b4b58efbd1e315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab500f94a106d4b7ad9b4b58efbd1e315">&#9670;&#160;</a></span>make_client()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Client, typename Config&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; Client &gt; algotradelib::network::make_client </td>
+          <td>(</td>
+          <td class="paramtype">ssl::context &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Config</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html">HttpClientOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1network_1_1ClientStores.html">ClientStores</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stores</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a blocking client with the run's stores; sends nothing. </p>
+<p>The client gets the token store always, and the calendar cache when its constructor takes one as a fifth argument. A client of another shape, or whose constructor is a variadic forwarding template (it counts as taking five arguments and then fails in its own body), is constructed by hand. The stores are passed as const lvalues, so a constructor taking <span class="tt">std::shared_ptr&lt;<a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">TokenStore</a>&gt;&amp;&amp;</span> fails inside <span class="tt">std::make_shared</span>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Client</td><td>A client constructible as <span class="tt">Client(ssl::context&amp;, Config, <a class="el" href="structalgotradelib_1_1network_1_1HttpClientOptions.html" title="Deadlines, size limits and pacing for an HTTP client.">HttpClientOptions</a>,
+  std::shared_ptr&lt;<a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">TokenStore</a>&gt;)</span>, optionally with a trailing <span class="tt">std::shared_ptr&lt;<a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html" title="Where blocking broker clients share a market&#39;s trading calendar, across threads and processes.">CalendarCache</a>&gt;</span>. </td></tr>
+    <tr><td class="paramname">Config</td><td>The client's configuration type, <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers.">BrokerTraits</a>&lt;Client&gt;::Config</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>The TLS context; borrowed, and must outlive the client. </td></tr>
+    <tr><td class="paramname">config</td><td>The credentials and environment. </td></tr>
+    <tr><td class="paramname">options</td><td>HTTP options, pacing included; nothing is added (unset pacing is unpaced). </td></tr>
+    <tr><td class="paramname">stores</td><td>The run's stores. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The client. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="client__stores_8hpp_source.html#l00040">40</a> of file <a class="el" href="client__stores_8hpp_source.html">client_stores.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="client__stores_8hpp_source.html#l00040">make_client()</a>.</p>
 
 </div>
 </div>

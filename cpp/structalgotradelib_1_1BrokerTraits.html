@@ -156,7 +156,11 @@ struct algotradelib::BrokerTraits&lt; Client &gt;</div><p>Describes one broker c
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">quote</span>, <span class="tt">bars</span>, <span class="tt">validate_bars</span>, <span class="tt">holdings</span>, <span class="tt">validate_place</span>, <span class="tt">place_order</span>, <span class="tt">replace_order</span>, <span class="tt">cancel_order</span>, <span class="tt">order_history</span>, <span class="tt">normalize_place</span>, <span class="tt">to_replacement</span>, <span class="tt">to_cancellation</span>, <span class="tt">to_history_query</span>, <span class="tt">rate_limit_stats</span>  </td><td class="markdownTableBodyNone">always: every session calls them  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">buying_power</span>, <span class="tt">sellable_quantity</span>, <span class="tt">commissions</span>, <span class="tt">working_orders</span> and <span class="tt">normalize_working_orders</span>, <span class="tt">instrument</span>, <span class="tt">calendar</span> and <span class="tt">validate_calendar</span>, <span class="tt">price_limits</span>, <span class="tt">trades</span>, <span class="tt">prices</span>, <span class="tt">depth</span>, <span class="tt">order_by_id</span>, <span class="tt">accounts</span> with <span class="tt">selector_of</span>, <span class="tt">display_of</span> and <span class="tt">type_of</span>  </td><td class="markdownTableBodyNone">where the capability that gates it is claimed  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">buying_power</span>, <span class="tt">sellable_quantity</span>, <span class="tt">commissions</span>, <span class="tt">working_orders</span> and <span class="tt">normalize_working_orders</span>, <span class="tt">instrument</span>, <span class="tt">calendar</span> and <span class="tt">validate_calendar</span>, <span class="tt">price_limits</span>, <span class="tt">trades</span>, <span class="tt">prices</span>, <span class="tt">depth</span>, <span class="tt">order_by_id</span>, <span class="tt">accounts</span> with <span class="tt">selector_of</span>, <span class="tt">display_of</span> and <span class="tt">type_of</span> (each taking a listing row)  </td><td class="markdownTableBodyNone">where the capability that gates it is claimed  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">display_of(const Account&amp;)</span>, the account's number  </td><td class="markdownTableBodyNone">where <span class="tt">has_account_discovery</span> is not claimed and <span class="tt"><a class="el" href="namespacealgotradelib.html#a4d621fda4d9d1d8f6d4fa0a23350146c" title="Names the one account a session should bind, or refuses; never guesses.">resolve_account</a></span> is used  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">no_account()</span>, an <span class="tt">Account</span> for a session that reads market data only  </td><td class="markdownTableBodyNone">optional: only where every account path refuses that value before I/O  </td></tr>
 </table>
 <p>A blocking client (<span class="tt">blocking = true</span>) returns each result; an asynchronous one takes a completion handler as its last argument. A market-data vendor can inherit <span class="tt"><a class="el" href="structalgotradelib_1_1DataOnlyTraits.html" title="A base for the BrokerTraits of a market-data client that cannot trade.">DataOnlyTraits</a>&lt;Tag&gt;</span>, which answers the account side.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -166,7 +170,7 @@ struct algotradelib::BrokerTraits&lt; Client &gt;</div><p>Describes one broker c
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="broker__traits_8hpp_source.html#l00041">41</a> of file <a class="el" href="broker__traits_8hpp_source.html">broker_traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="broker__traits_8hpp_source.html#l00043">43</a> of file <a class="el" href="broker__traits_8hpp_source.html">broker_traits.hpp</a>.</p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>algotradelib/src/core/<a class="el" href="broker__traits_8hpp_source.html">broker_traits.hpp</a></li>
 </ul>

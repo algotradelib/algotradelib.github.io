@@ -266,6 +266,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The trading days a broker reported for one market, ascending by date.  <a href="structalgotradelib_1_1TradingCalendar.html#details">More...</a><br /></td></tr>
 <tr class="memitem:TradingDay" id="r_TradingDay"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1TradingDay.html">TradingDay</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One calendar date and whether the market opens on it.  <a href="structalgotradelib_1_1TradingDay.html#details">More...</a><br /></td></tr>
+<tr class="memitem:type_5Flist" id="r_type_5Flist"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1type__list.html">type_list</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A compile-time list of broker client types, for <span class="tt"><a class="el" href="#a8e8c9ccc4884fb3c5dd9472c972ac7ec" title="Calls visit with the type_tag of the client in List whose BrokerTraits&lt;Client&gt;::name is name.">with_broker</a></span>.  <a href="structalgotradelib_1_1type__list.html#details">More...</a><br /></td></tr>
+<tr class="memitem:type_5Ftag" id="r_type_5Ftag"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1type__tag.html">type_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type carried as a value, so a C++17 visitor can be called with a type.  <a href="structalgotradelib_1_1type__tag.html#details">More...</a><br /></td></tr>
 <tr class="memitem:VenueKey" id="r_VenueKey"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1VenueKey.html">VenueKey</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which venue a commission rate applies to: any venue, a normalized <span class="tt"><a class="el" href="#ac78f755f933a0a9a9f38040d8e56828d" title="A trading venue: an exchange, or the combined view across exchanges.">Venue</a></span>, or a raw code.  <a href="classalgotradelib_1_1VenueKey.html#details">More...</a><br /></td></tr>
 <tr class="memitem:WorkingOrder" id="r_WorkingOrder"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1WorkingOrder.html">WorkingOrder</a></td></tr>
@@ -275,6 +279,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:ade0f7de038ca873cf482170f06085349" id="r_ade0f7de038ca873cf482170f06085349"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ade0f7de038ca873cf482170f06085349">builtin_brokers</a> = <a class="el" href="structalgotradelib_1_1type__list.html">type_list</a>&lt;<a class="el" href="classalgotradelib_1_1kis_1_1KisBlockingClient.html">kis::KisBlockingClient</a>, <a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html">kiwoom::KiwoomBlockingClient</a>, <a class="el" href="classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html">tossinvest::TossBlockingClient</a>&gt;</td></tr>
+<tr class="memdesc:ade0f7de038ca873cf482170f06085349"><td class="mdescLeft">&#160;</td><td class="mdescRight">The library's blocking broker clients, for <span class="tt"><a class="el" href="#a8e8c9ccc4884fb3c5dd9472c972ac7ec" title="Calls visit with the type_tag of the client in List whose BrokerTraits&lt;Client&gt;::name is name.">with_broker</a></span>; including it parses all three adapters. A broker added later joins it: a consumer that keeps each broker in its own translation unit then adds one.  <br /></td></tr>
 <tr class="memitem:ad4cc4cfbaae4e7d14288fd523c8a73e3" id="r_ad4cc4cfbaae4e7d14288fd523c8a73e3"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ad4cc4cfbaae4e7d14288fd523c8a73e3">tcp</a> = net::ip::tcp</td></tr>
 <tr class="memdesc:ad4cc4cfbaae4e7d14288fd523c8a73e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short for <span class="tt">boost::asio::ip::tcp</span>.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -437,12 +443,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a80d7aeb78c261be284942f65a7f453c5" id="r_a80d7aeb78c261be284942f65a7f453c5"><td class="memTemplParams" colspan="2">template&lt;typename Client&gt; </td></tr>
 <tr class="memitem:a80d7aeb78c261be284942f65a7f453c5 template"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a80d7aeb78c261be284942f65a7f453c5">answers_every_capability</a> ()</td></tr>
 <tr class="memdesc:a80d7aeb78c261be284942f65a7f453c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads every capability of a client's traits (see <span class="tt"><a class="el" href="#a2011ff5e27c040891cc95094583c9f6d" title="Reads every capability constant of a capability set, so a missing one fails to compile here.">reads_every_capability</a></span>).  <br /></td></tr>
+<tr class="memitem:a8e8c9ccc4884fb3c5dd9472c972ac7ec" id="r_a8e8c9ccc4884fb3c5dd9472c972ac7ec"><td class="memTemplParams" colspan="2">template&lt;typename List, typename Visit&gt; </td></tr>
+<tr class="memitem:a8e8c9ccc4884fb3c5dd9472c972ac7ec template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a8e8c9ccc4884fb3c5dd9472c972ac7ec">with_broker</a> (std::string_view name, Visit &amp;&amp;visit)</td></tr>
+<tr class="memdesc:a8e8c9ccc4884fb3c5dd9472c972ac7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <span class="tt">visit</span> with the <span class="tt"><a class="el" href="structalgotradelib_1_1type__tag.html" title="A type carried as a value, so a C++17 visitor can be called with a type.">type_tag</a></span> of the client in <span class="tt">List</span> whose <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers.">BrokerTraits</a>&lt;Client&gt;::name</span> is <span class="tt">name</span>.  <br /></td></tr>
 <tr class="memitem:a07f9106464e3bf048d9c0cb41e674589" id="r_a07f9106464e3bf048d9c0cb41e674589"><td class="memTemplParams" colspan="2">template&lt;typename Client, typename CompletionToken&gt; </td></tr>
 <tr class="memitem:a07f9106464e3bf048d9c0cb41e674589 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a07f9106464e3bf048d9c0cb41e674589">async_accounts</a> (Client &amp;client, CompletionToken &amp;&amp;token)</td></tr>
 <tr class="memdesc:a07f9106464e3bf048d9c0cb41e674589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists a broker's accounts, before a session exists; requires <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerCaps.html" title="What one broker client implements, as compile-time constants.">BrokerCaps</a>&lt;Client&gt;::has_account_discovery</span> (KIS reads its account from configuration).  <br /></td></tr>
 <tr class="memitem:a135a215fd865ef03ad860bfc8ef484af" id="r_a135a215fd865ef03ad860bfc8ef484af"><td class="memTemplParams" colspan="2">template&lt;typename Client&gt; </td></tr>
 <tr class="memitem:a135a215fd865ef03ad860bfc8ef484af template"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; std::vector&lt; <a class="el" href="structalgotradelib_1_1AccountInfo.html">AccountInfo</a>&lt; Client &gt; &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a135a215fd865ef03ad860bfc8ef484af">list_accounts</a> (Client &amp;client)</td></tr>
 <tr class="memdesc:a135a215fd865ef03ad860bfc8ef484af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists a broker's accounts with a blocking client, before a session exists; requires <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerCaps.html" title="What one broker client implements, as compile-time constants.">BrokerCaps</a>&lt;Client&gt;::has_account_discovery</span>.  <br /></td></tr>
+<tr class="memitem:a4d621fda4d9d1d8f6d4fa0a23350146c" id="r_a4d621fda4d9d1d8f6d4fa0a23350146c"><td class="memTemplParams" colspan="2">template&lt;typename Client&gt; </td></tr>
+<tr class="memitem:a4d621fda4d9d1d8f6d4fa0a23350146c template"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; <a class="el" href="structalgotradelib_1_1AccountInfo.html">AccountInfo</a>&lt; Client &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4d621fda4d9d1d8f6d4fa0a23350146c">resolve_account</a> (Client &amp;client, std::optional&lt; typename <a class="el" href="structalgotradelib_1_1BrokerTraits.html">BrokerTraits</a>&lt; Client &gt;::Account &gt; configured, std::string_view number={})</td></tr>
+<tr class="memdesc:a4d621fda4d9d1d8f6d4fa0a23350146c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names the one account a session should bind, or refuses; never guesses.  <br /></td></tr>
 <tr class="memitem:a33578d53c14c1cdf3c62eb42a2780996" id="r_a33578d53c14c1cdf3c62eb42a2780996"><td class="memTemplParams" colspan="2">template&lt;typename Enum, std::size_t N, typename IsEnumerator&gt; </td></tr>
 <tr class="memitem:a33578d53c14c1cdf3c62eb42a2780996 template"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a33578d53c14c1cdf3c62eb42a2780996">lists_every_value</a> (const std::array&lt; Enum, N &gt; &amp;values, IsEnumerator is_enumerator) noexcept</td></tr>
 <tr class="memdesc:a33578d53c14c1cdf3c62eb42a2780996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a list holds every value of an enum exactly once, in any order.  <br /></td></tr>
@@ -549,6 +561,24 @@ Variables</h2></td></tr>
 <div class="textblock"><p>The library: broker-neutral types (<span class="tt">core</span>), and the modules below. </p>
 <p>Include <span class="tt">&lt;algotradelib/core&gt;</span> for orders, quotes, bars, instruments and the calendar, and <span class="tt">&lt;algotradelib/broker&gt;</span> for the broker port (<span class="tt"><a class="el" href="classalgotradelib_1_1BrokerSession.html" title="An asynchronous broker client bound to one account, with broker-neutral operations.">BrokerSession</a></span>, <span class="tt"><a class="el" href="classalgotradelib_1_1BlockingSession.html" title="A blocking broker client bound to one account, with the same broker operations as BrokerSession,...">BlockingSession</a></span>, <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers.">BrokerTraits</a></span>, <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerCaps.html" title="What one broker client implements, as compile-time constants.">BrokerCaps</a></span>); each module has its own umbrella header (<span class="tt">&lt;algotradelib/runner&gt;</span>, <span class="tt">&lt;algotradelib/kis&gt;</span>, ...). </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="ade0f7de038ca873cf482170f06085349" name="ade0f7de038ca873cf482170f06085349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade0f7de038ca873cf482170f06085349">&#9670;&#160;</a></span>builtin_brokers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ade0f7de038ca873cf482170f06085349">algotradelib::builtin_brokers</a> = <a class="el" href="structalgotradelib_1_1type__list.html">type_list</a>&lt;<a class="el" href="classalgotradelib_1_1kis_1_1KisBlockingClient.html">kis::KisBlockingClient</a>, <a class="el" href="classalgotradelib_1_1kiwoom_1_1KiwoomBlockingClient.html">kiwoom::KiwoomBlockingClient</a>, <a class="el" href="classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html">tossinvest::TossBlockingClient</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The library's blocking broker clients, for <span class="tt"><a class="el" href="#a8e8c9ccc4884fb3c5dd9472c972ac7ec" title="Calls visit with the type_tag of the client in List whose BrokerTraits&lt;Client&gt;::name is name.">with_broker</a></span>; including it parses all three adapters. A broker added later joins it: a consumer that keeps each broker in its own translation unit then adds one. </p>
+
+<p class="definition">Definition at line <a class="el" href="builtin_8hpp_source.html#l00014">14</a> of file <a class="el" href="builtin_8hpp_source.html">builtin.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ad4cc4cfbaae4e7d14288fd523c8a73e3" name="ad4cc4cfbaae4e7d14288fd523c8a73e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4cc4cfbaae4e7d14288fd523c8a73e3">&#9670;&#160;</a></span>tcp</h2>
 
@@ -1254,9 +1284,9 @@ template&lt;typename Client, typename CompletionToken&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whatever <span class="tt">token</span> produces. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="broker__session_8hpp_source.html#l01276">1276</a> of file <a class="el" href="broker__session_8hpp_source.html">broker_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="broker__session_8hpp_source.html#l01278">1278</a> of file <a class="el" href="broker__session_8hpp_source.html">broker_session.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="broker__session_8hpp_source.html#l01276">async_accounts()</a>, and <a class="el" href="broker__verbs_8hpp_source.html#l00081">algotradelib::conformance::call_claimed_async_verbs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="broker__session_8hpp_source.html#l01278">async_accounts()</a>, and <a class="el" href="broker__verbs_8hpp_source.html#l00081">algotradelib::conformance::call_claimed_async_verbs()</a>.</p>
 
 </div>
 </div>
@@ -2152,9 +2182,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">KRX</span> if <span class="tt">asked</span> is <span class="tt">UNSPECIFIED</span> (KIS's documented default), otherwise <span class="tt">asked</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kis_2traits_8hpp_source.html#l00380">380</a> of file <a class="el" href="kis_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kis_2traits_8hpp_source.html#l00401">401</a> of file <a class="el" href="kis_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00633">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::effective_route()</a>, <a class="el" href="kis_2traits_8hpp_source.html#l00392">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::effective_route()</a>, and <a class="el" href="kis_2traits_8hpp_source.html#l00380">kis_effective_route()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kis_2traits_8hpp_source.html#l00654">algotradelib::BrokerTraits&lt; kis::KisBlockingClient &gt;::effective_route()</a>, <a class="el" href="kis_2traits_8hpp_source.html#l00413">algotradelib::BrokerTraits&lt; kis::KisClient &gt;::effective_route()</a>, and <a class="el" href="kis_2traits_8hpp_source.html#l00401">kis_effective_route()</a>.</p>
 
 </div>
 </div>
@@ -2190,9 +2220,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">asked</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kiwoom_2traits_8hpp_source.html#l00561">561</a> of file <a class="el" href="kiwoom_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kiwoom_2traits_8hpp_source.html#l00565">565</a> of file <a class="el" href="kiwoom_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00834">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::effective_route()</a>, <a class="el" href="kiwoom_2traits_8hpp_source.html#l00573">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::effective_route()</a>, and <a class="el" href="kiwoom_2traits_8hpp_source.html#l00561">kiwoom_route()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kiwoom_2traits_8hpp_source.html#l00838">algotradelib::BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;::effective_route()</a>, <a class="el" href="kiwoom_2traits_8hpp_source.html#l00577">algotradelib::BrokerTraits&lt; kiwoom::KiwoomClient &gt;::effective_route()</a>, and <a class="el" href="kiwoom_2traits_8hpp_source.html#l00565">kiwoom_route()</a>.</p>
 
 </div>
 </div>
@@ -2228,9 +2258,9 @@ template&lt;typename Client&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The accounts, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="broker__session_8hpp_source.html#l01309">1309</a> of file <a class="el" href="broker__session_8hpp_source.html">broker_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="broker__session_8hpp_source.html#l01311">1311</a> of file <a class="el" href="broker__session_8hpp_source.html">broker_session.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="broker__verbs_8hpp_source.html#l00135">algotradelib::conformance::call_claimed_blocking_verbs()</a>, and <a class="el" href="broker__session_8hpp_source.html#l01309">list_accounts()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="broker__verbs_8hpp_source.html#l00135">algotradelib::conformance::call_claimed_blocking_verbs()</a>, and <a class="el" href="broker__session_8hpp_source.html#l01311">list_accounts()</a>.</p>
 
 </div>
 </div>
@@ -2653,6 +2683,56 @@ template&lt;typename Broker&gt; </div>
 
 </div>
 </div>
+<a id="a4d621fda4d9d1d8f6d4fa0a23350146c" name="a4d621fda4d9d1d8f6d4fa0a23350146c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d621fda4d9d1d8f6d4fa0a23350146c">&#9670;&#160;</a></span>resolve_account()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Client&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classalgotradelib_1_1Result.html">Result</a>&lt; <a class="el" href="structalgotradelib_1_1AccountInfo.html">AccountInfo</a>&lt; Client &gt; &gt; algotradelib::resolve_account </td>
+          <td>(</td>
+          <td class="paramtype">Client &amp;</td>          <td class="paramname"><span class="paramname"><em>client</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; typename <a class="el" href="structalgotradelib_1_1BrokerTraits.html">BrokerTraits</a>&lt; Client &gt;::Account &gt;</td>          <td class="paramname"><span class="paramname"><em>configured</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>number</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Names the one account a session should bind, or refuses; never guesses. </p>
+<p>The candidates are the broker's listing where it has one (<span class="tt"><a class="el" href="structalgotradelib_1_1BrokerCaps.html" title="What one broker client implements, as compile-time constants.">BrokerCaps</a>&lt;Client&gt;::has_account_discovery</span>), else the configured account. A candidate is kept when <span class="tt">number</span> is empty, or when <span class="tt">number</span> and its <span class="tt">display_number_</span>, with the separators <span class="tt">-</span>, space, <span class="tt">.</span> and <span class="tt">/</span> removed, are equal and not empty (the rest compared exactly). Exactly one must remain, with a number. A failed listing is returned unchanged; a refusal is <span class="tt">INVALID_ARGUMENT</span> with a <span class="tt">broker_code_</span> (<span class="tt">account_missing</span>, <span class="tt">account_configured</span>, <span class="tt">no_accounts</span>, <span class="tt">account_not_found</span>, <span class="tt">several_accounts</span>, <span class="tt">account_without_number</span>), <span class="tt">reached_broker_</span> only after a listing, and at most the last four characters of an account number in its message.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Client</td><td>A blocking, not data-only client; without discovery, its traits need <span class="tt">display_of(const Account&amp;)</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>The client; a listing is requested from it where the broker lists accounts. </td></tr>
+    <tr><td class="paramname">configured</td><td>The account the configuration names: required where the broker lists none (<span class="tt">account_missing</span>), and refused where it lists them (<span class="tt">account_configured</span>), so it is never ignored. </td></tr>
+    <tr><td class="paramname">number</td><td>The account number to require (<span class="tt">1234567801</span> matches <span class="tt">12345678-01</span>); empty for "the only one". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The account, or a refusal. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="broker__session_8hpp_source.html#l01399">1399</a> of file <a class="el" href="broker__session_8hpp_source.html">broker_session.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="broker__session_8hpp_source.html#l01399">resolve_account()</a>.</p>
+
+</div>
+</div>
 <a id="afd278b715ef040458d306305652e2aec" name="afd278b715ef040458d306305652e2aec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd278b715ef040458d306305652e2aec">&#9670;&#160;</a></span>resting_shape()</h2>
 
@@ -2983,6 +3063,50 @@ template&lt;typename Enum, std::size_t N, typename Name&gt; </div>
 <p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00058">58</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="types_8hpp_source.html#l00058">venue_name()</a>.</p>
+
+</div>
+</div>
+<a id="a8e8c9ccc4884fb3c5dd9472c972ac7ec" name="a8e8c9ccc4884fb3c5dd9472c972ac7ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8c9ccc4884fb3c5dd9472c972ac7ec">&#9670;&#160;</a></span>with_broker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename List, typename Visit&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto algotradelib::with_broker </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Visit &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>visit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls <span class="tt">visit</span> with the <span class="tt"><a class="el" href="structalgotradelib_1_1type__tag.html" title="A type carried as a value, so a C++17 visitor can be called with a type.">type_tag</a></span> of the client in <span class="tt">List</span> whose <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers.">BrokerTraits</a>&lt;Client&gt;::name</span> is <span class="tt">name</span>. </p>
+<p>Every listed client's <span class="tt">visit</span> is compiled where this is called. To keep each broker in its own translation unit, let the visitor call a function template declared <span class="tt">extern template</span> there and explicitly instantiated in that broker's source.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">List</td><td>A non-empty <span class="tt"><a class="el" href="structalgotradelib_1_1type__list.html" title="A compile-time list of broker client types, for with_broker.">type_list</a></span> of clients with distinct names (checked at compile time). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The broker's name, compared exactly (case and all). </td></tr>
+    <tr><td class="paramname">visit</td><td>Called as <span class="tt">visit(<a class="el" href="structalgotradelib_1_1type__tag.html" title="A type carried as a value, so a C++17 visitor can be called with a type.">type_tag</a>&lt;Client&gt;{})</span>; every client must give the same type <span class="tt">R</span>, a value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>What <span class="tt">visit</span> returned, or nothing (and <span class="tt">visit</span> is not called) if no listed client has that name. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="broker__list_8hpp_source.html#l00086">86</a> of file <a class="el" href="broker__list_8hpp_source.html">broker_list.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="broker__list_8hpp_source.html#l00086">with_broker()</a>.</p>
 
 </div>
 </div>

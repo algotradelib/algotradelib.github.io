@@ -6,7 +6,7 @@
 <!-- Title: algotradelib::backtest::is_window_scheme&lt; Scheme, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Scheme &amp; &gt;().train(std::size_t{}, std::declval&lt; const FoldLengths &amp; &gt;())), IndexRange &gt; &gt; &gt; Pages: 1 -->
 <svg width="739pt" height="200pt"
  viewBox="0.00 0.00 739.00 200.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 195.57)">
+<g id="page0,1_graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 195.57)">
 <title>algotradelib::backtest::is_window_scheme&lt; Scheme, std::enable_if_t&lt; std::is_convertible_v&lt; decltype(std::declval&lt; const Scheme &amp; &gt;().train(std::size_t{}, std::declval&lt; const FoldLengths &amp; &gt;())), IndexRange &gt; &gt; &gt;</title>
 <!-- Node1 -->
 <g id="Node000001" class="node">

@@ -1,5 +1,16 @@
 var NAVTREEINDEX19 =
 {
+"structalgotradelib_1_1backtest_1_1ReportCaveats.html#afe24a84a20fb08c18e6b40647ae921c7":[1,0,0,1,29,22],
+"structalgotradelib_1_1backtest_1_1ReportCaveats.html#afe24a84a20fb08c18e6b40647ae921c7":[2,0,0,1,29,22],
+"structalgotradelib_1_1backtest_1_1Returns.html":[1,0,0,1,30],
+"structalgotradelib_1_1backtest_1_1Returns.html":[2,0,0,1,30],
+"structalgotradelib_1_1backtest_1_1Returns.html#aa87c3c6f9aba23ec1a9bcab65ec43c8c":[1,0,0,1,30,0],
+"structalgotradelib_1_1backtest_1_1Returns.html#aa87c3c6f9aba23ec1a9bcab65ec43c8c":[2,0,0,1,30,0],
+"structalgotradelib_1_1backtest_1_1Rolling.html":[1,0,0,1,31],
+"structalgotradelib_1_1backtest_1_1Rolling.html":[2,0,0,1,31],
+"structalgotradelib_1_1backtest_1_1Rolling.html#a213dcf7813462fff1974660bcd1fd8a7":[1,0,0,1,31,0],
+"structalgotradelib_1_1backtest_1_1Rolling.html#a213dcf7813462fff1974660bcd1fd8a7":[2,0,0,1,31,0],
+"structalgotradelib_1_1backtest_1_1SellTax.html":[1,0,0,1,32],
 "structalgotradelib_1_1backtest_1_1SellTax.html":[2,0,0,1,32],
 "structalgotradelib_1_1backtest_1_1SellTax.html#a2ac264ca1780d85612c5dc23fcd63fd4":[1,0,0,1,32,0],
 "structalgotradelib_1_1backtest_1_1SellTax.html#a2ac264ca1780d85612c5dc23fcd63fd4":[2,0,0,1,32,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX19 =
 "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ad1295af448eb345a513e9409a2fb6d45":[1,0,0,5,7,4],
 "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ad1295af448eb345a513e9409a2fb6d45":[2,0,0,5,7,4],
 "structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adbb9e353eee32010b21ff948a9642f77":[1,0,0,5,7,0],
-"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adbb9e353eee32010b21ff948a9642f77":[2,0,0,5,7,0],
-"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adcd414a9457fa049e681e6f605a34c40":[1,0,0,5,7,6],
-"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adcd414a9457fa049e681e6f605a34c40":[2,0,0,5,7,6],
-"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ae40058d6aa110aa6c5479c972c39619e":[1,0,0,5,7,15],
-"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#ae40058d6aa110aa6c5479c972c39619e":[2,0,0,5,7,15],
-"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html":[1,0,0,5,8],
-"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html":[2,0,0,5,8],
-"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a0463d34f377d00757199520739b4f909":[1,0,0,5,8,2],
-"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a0463d34f377d00757199520739b4f909":[2,0,0,5,8,2],
-"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a3df5e2f7f7a654fc35ffe70b13de7a8e":[1,0,0,5,8,7],
-"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a3df5e2f7f7a654fc35ffe70b13de7a8e":[2,0,0,5,8,7],
-"structalgotradelib_1_1kiwoom_1_1KiwoomDeposit.html#a8ce6636e3b989ba4fbe441941ef8d05a":[1,0,0,5,8,5]
+"structalgotradelib_1_1kiwoom_1_1KiwoomConfig.html#adbb9e353eee32010b21ff948a9642f77":[2,0,0,5,7,0]
 };

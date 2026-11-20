@@ -1,5 +1,16 @@
 var NAVTREEINDEX16 =
 {
+"structalgotradelib_1_1HoldingPosition.html#af202196613a9e6bac2ff08ba35d7f044":[1,0,0,41,3],
+"structalgotradelib_1_1HoldingPosition.html#af202196613a9e6bac2ff08ba35d7f044":[2,0,0,40,3],
+"structalgotradelib_1_1HoldingPosition.html#af4c1b28f82e1da6262fae3eba796758d":[1,0,0,41,2],
+"structalgotradelib_1_1HoldingPosition.html#af4c1b28f82e1da6262fae3eba796758d":[2,0,0,40,2],
+"structalgotradelib_1_1HoldingPosition.html#af4d89867bb7291d2a2d74adc2171ce9a":[1,0,0,41,7],
+"structalgotradelib_1_1HoldingPosition.html#af4d89867bb7291d2a2d74adc2171ce9a":[2,0,0,40,7],
+"structalgotradelib_1_1HoldingsSnapshot.html":[1,0,0,42],
+"structalgotradelib_1_1HoldingsSnapshot.html":[2,0,0,41],
+"structalgotradelib_1_1HoldingsSnapshot.html#a8995e5be10b307c45c6b0edc2f9b8265":[1,0,0,42,1],
+"structalgotradelib_1_1HoldingsSnapshot.html#a8995e5be10b307c45c6b0edc2f9b8265":[2,0,0,41,1],
+"structalgotradelib_1_1HoldingsSnapshot.html#aa51ca907ee2601f9101c540c04aeafa3":[1,0,0,42,3],
 "structalgotradelib_1_1HoldingsSnapshot.html#aa51ca907ee2601f9101c540c04aeafa3":[2,0,0,41,3],
 "structalgotradelib_1_1HoldingsSnapshot.html#ab82b3f1adeb11c5c76e3319461067ab7":[1,0,0,42,2],
 "structalgotradelib_1_1HoldingsSnapshot.html#ab82b3f1adeb11c5c76e3319461067ab7":[2,0,0,41,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX16 =
 "structalgotradelib_1_1PriceRule.html":[1,0,0,58],
 "structalgotradelib_1_1PriceRule.html":[2,0,0,57],
 "structalgotradelib_1_1PriceRule.html#a00b46c7ee4959c8a48b455b6c988f810":[1,0,0,58,4],
-"structalgotradelib_1_1PriceRule.html#a00b46c7ee4959c8a48b455b6c988f810":[2,0,0,57,4],
-"structalgotradelib_1_1PriceRule.html#a060035c08ed5e5b6a36e85484587da44":[1,0,0,58,9],
-"structalgotradelib_1_1PriceRule.html#a060035c08ed5e5b6a36e85484587da44":[2,0,0,57,9],
-"structalgotradelib_1_1PriceRule.html#a37e9a92e2578424d2dccc19958bdad3d":[1,0,0,58,5],
-"structalgotradelib_1_1PriceRule.html#a37e9a92e2578424d2dccc19958bdad3d":[2,0,0,57,5],
-"structalgotradelib_1_1PriceRule.html#a4368b3055fec11581766b2b3a070e1cb":[1,0,0,58,2],
-"structalgotradelib_1_1PriceRule.html#a4368b3055fec11581766b2b3a070e1cb":[2,0,0,57,2],
-"structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02":[1,0,0,58,3],
-"structalgotradelib_1_1PriceRule.html#a441f04938e2e8af4811163b86a5a2c02":[2,0,0,57,3],
-"structalgotradelib_1_1PriceRule.html#a4aa52490cbe08dd9ff701a48d381a86d":[1,0,0,58,7],
-"structalgotradelib_1_1PriceRule.html#a4aa52490cbe08dd9ff701a48d381a86d":[2,0,0,57,7],
-"structalgotradelib_1_1PriceRule.html#a82faddcfa34f6b56193a5b8e7756cf62":[1,0,0,58,0]
+"structalgotradelib_1_1PriceRule.html#a00b46c7ee4959c8a48b455b6c988f810":[2,0,0,57,4]
 };
