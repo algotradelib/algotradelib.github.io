@@ -1,6 +1,16 @@
 var annotated_dup =
 [
     [ "algotradelib", "namespacealgotradelib.html", [
+      [ "alpaca", "namespacealgotradelib_1_1alpaca.html", [
+        [ "AlpacaAccount", "structalgotradelib_1_1alpaca_1_1AlpacaAccount.html", "structalgotradelib_1_1alpaca_1_1AlpacaAccount" ],
+        [ "AlpacaAccountInfo", "structalgotradelib_1_1alpaca_1_1AlpacaAccountInfo.html", "structalgotradelib_1_1alpaca_1_1AlpacaAccountInfo" ],
+        [ "AlpacaAmendment", "structalgotradelib_1_1alpaca_1_1AlpacaAmendment.html", "structalgotradelib_1_1alpaca_1_1AlpacaAmendment" ],
+        [ "AlpacaBlockingClient", "classalgotradelib_1_1alpaca_1_1AlpacaBlockingClient.html", "classalgotradelib_1_1alpaca_1_1AlpacaBlockingClient" ],
+        [ "AlpacaConfig", "structalgotradelib_1_1alpaca_1_1AlpacaConfig.html", "structalgotradelib_1_1alpaca_1_1AlpacaConfig" ],
+        [ "AlpacaOpenOrders", "structalgotradelib_1_1alpaca_1_1AlpacaOpenOrders.html", "structalgotradelib_1_1alpaca_1_1AlpacaOpenOrders" ],
+        [ "AlpacaOrderAck", "structalgotradelib_1_1alpaca_1_1AlpacaOrderAck.html", "structalgotradelib_1_1alpaca_1_1AlpacaOrderAck" ],
+        [ "Broker", "structalgotradelib_1_1alpaca_1_1Broker.html", "structalgotradelib_1_1alpaca_1_1Broker" ]
+      ] ],
       [ "analytics", "namespacealgotradelib_1_1analytics.html", [
         [ "MaxDrawdown", "structalgotradelib_1_1analytics_1_1MaxDrawdown.html", "structalgotradelib_1_1analytics_1_1MaxDrawdown" ],
         [ "Panel", "classalgotradelib_1_1analytics_1_1Panel.html", "classalgotradelib_1_1analytics_1_1Panel" ],
@@ -186,6 +196,8 @@ var annotated_dup =
         [ "source_names_buying_power_currencies&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().buying_power_currencies())&gt; &gt;", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html", null ],
         [ "source_provides_working_orders", "structalgotradelib_1_1runner_1_1source__provides__working__orders.html", null ],
         [ "source_provides_working_orders&lt; Source, std::void_t&lt; decltype(Source::provides_working_orders)&gt; &gt;", "structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html", null ],
+        [ "source_states_calendar_sessions", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions.html", null ],
+        [ "source_states_calendar_sessions&lt; Source, std::void_t&lt; decltype(Source::states_calendar_sessions)&gt; &gt;", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions_3_01Source_00_01std_1_1void__497b593350037081ad2186f1435eb9d0.html", null ],
         [ "source_states_charged_costs", "structalgotradelib_1_1runner_1_1source__states__charged__costs.html", null ],
         [ "source_states_charged_costs&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().charged_costs())&gt; &gt;", "structalgotradelib_1_1runner_1_1source__states__charged__costs_3_01Source_00_01std_1_1void__t_3_18ee40020b45d1e61f73c6245e3686dd.html", null ],
         [ "SteadyClock", "classalgotradelib_1_1runner_1_1SteadyClock.html", "classalgotradelib_1_1runner_1_1SteadyClock" ],
@@ -264,6 +276,7 @@ var annotated_dup =
       [ "BrokerError", "structalgotradelib_1_1BrokerError.html", "structalgotradelib_1_1BrokerError" ],
       [ "BrokerSession", "classalgotradelib_1_1BrokerSession.html", "classalgotradelib_1_1BrokerSession" ],
       [ "BrokerTraits", "structalgotradelib_1_1BrokerTraits.html", null ],
+      [ "BrokerTraits&lt; alpaca::AlpacaBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01alpaca_1_1AlpacaBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01alpaca_1_1AlpacaBlockingClient_01_4" ],
       [ "BrokerTraits&lt; kis::KisBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4" ],
       [ "BrokerTraits&lt; kis::KisClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4" ],
       [ "BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4" ],
@@ -302,6 +315,7 @@ var annotated_dup =
       [ "QuoteSnapshot", "structalgotradelib_1_1QuoteSnapshot.html", "structalgotradelib_1_1QuoteSnapshot" ],
       [ "Result", "classalgotradelib_1_1Result.html", "classalgotradelib_1_1Result" ],
       [ "SellableBasis", "structalgotradelib_1_1SellableBasis.html", "structalgotradelib_1_1SellableBasis" ],
+      [ "SessionHours", "structalgotradelib_1_1SessionHours.html", "structalgotradelib_1_1SessionHours" ],
       [ "StatedDate", "classalgotradelib_1_1StatedDate.html", "classalgotradelib_1_1StatedDate" ],
       [ "TickBand", "structalgotradelib_1_1TickBand.html", "structalgotradelib_1_1TickBand" ],
       [ "TopOfBook", "structalgotradelib_1_1TopOfBook.html", "structalgotradelib_1_1TopOfBook" ],

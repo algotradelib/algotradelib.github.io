@@ -52,6 +52,8 @@ var namespacealgotradelib_1_1runner =
     [ "source_names_buying_power_currencies&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().buying_power_currencies())&gt; &gt;", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html", null ],
     [ "source_provides_working_orders", "structalgotradelib_1_1runner_1_1source__provides__working__orders.html", null ],
     [ "source_provides_working_orders&lt; Source, std::void_t&lt; decltype(Source::provides_working_orders)&gt; &gt;", "structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html", null ],
+    [ "source_states_calendar_sessions", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions.html", null ],
+    [ "source_states_calendar_sessions&lt; Source, std::void_t&lt; decltype(Source::states_calendar_sessions)&gt; &gt;", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions_3_01Source_00_01std_1_1void__497b593350037081ad2186f1435eb9d0.html", null ],
     [ "source_states_charged_costs", "structalgotradelib_1_1runner_1_1source__states__charged__costs.html", null ],
     [ "source_states_charged_costs&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().charged_costs())&gt; &gt;", "structalgotradelib_1_1runner_1_1source__states__charged__costs_3_01Source_00_01std_1_1void__t_3_18ee40020b45d1e61f73c6245e3686dd.html", null ],
     [ "SteadyClock", "classalgotradelib_1_1runner_1_1SteadyClock.html", "classalgotradelib_1_1runner_1_1SteadyClock" ],

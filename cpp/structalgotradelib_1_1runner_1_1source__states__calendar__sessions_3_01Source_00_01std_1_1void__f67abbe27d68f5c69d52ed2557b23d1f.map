@@ -1,0 +1,10 @@
+<map id="algotradelib::runner::source_states_calendar_sessions&lt; Source, std::void_t&lt; decltype(Source::states_calendar_sessions)&gt; &gt;" name="algotradelib::runner::source_states_calendar_sessions&lt; Source, std::void_t&lt; decltype(Source::states_calendar_sessions)&gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="673,53,892,149"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,32,123,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,29,240,14,368,4,438,3,510,6,581,14,650,27,709,52,703,52,649,33,580,19,509,11,438,8,369,9,240,19,139,34"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1source__states__calendar__sessions.html" title="Detects whether a source declares static constexpr bool states_calendar_sessions = true,..." alt="" coords="172,49,404,110"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="137,54,174,61,169,63,138,60"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="192,134,384,196"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="399,148,670,115,676,114,400,153"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="420,96,428,97,555,102,676,104,670,105,555,107,428,102,420,102"/>
+</map>

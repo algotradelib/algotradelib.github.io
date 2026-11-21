@@ -198,7 +198,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a881a71ac7b72127d088830add726ca6d" id="r_a881a71ac7b72127d088830add726ca6d"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a881a71ac7b72127d088830add726ca6d">has_calendar_range</a> = Traits::has_calendar_range</td></tr>
 <tr class="memdesc:a881a71ac7b72127d088830add726ca6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether one calendar request covers a span of dates.  <br /></td></tr>
 <tr class="memitem:ad31ccf8f326edd3161d956c84822d2a5" id="r_ad31ccf8f326edd3161d956c84822d2a5"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#ad31ccf8f326edd3161d956c84822d2a5">has_calendar_sessions</a> = Traits::has_calendar_sessions</td></tr>
-<tr class="memdesc:ad31ccf8f326edd3161d956c84822d2a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the broker publishes intraday session hours (only Toss); the library does not expose them yet.  <br /></td></tr>
+<tr class="memdesc:ad31ccf8f326edd3161d956c84822d2a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the adapter fills each open day's session hours (<span class="tt"><a class="el" href="structalgotradelib_1_1TradingDay.html#abec6a4ccb4eb588306fdf888b7cc62ce" title="The exchange&#39;s regular session on an open day, where the adapter fills it.">TradingDay::regular_</a></span>, <span class="tt">extended_</span>); a live loop over such a broker takes the market phase from them (<span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#aef96e6043f3632b1bcacbdaad6c0fcd3" title="Returns the market phase at an instant from the session hours filled in a calendar.">strategy::stated_session_phase</a></span>).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Client&gt;<br />
@@ -561,7 +561,7 @@ template&lt;typename Client&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Whether the broker publishes intraday session hours (only Toss); the library does not expose them yet. </p>
+<p>Whether the adapter fills each open day's session hours (<span class="tt"><a class="el" href="structalgotradelib_1_1TradingDay.html#abec6a4ccb4eb588306fdf888b7cc62ce" title="The exchange&#39;s regular session on an open day, where the adapter fills it.">TradingDay::regular_</a></span>, <span class="tt">extended_</span>); a live loop over such a broker takes the market phase from them (<span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#aef96e6043f3632b1bcacbdaad6c0fcd3" title="Returns the market phase at an instant from the session hours filled in a calendar.">strategy::stated_session_phase</a></span>). </p>
 
 <p class="definition">Definition at line <a class="el" href="broker__caps_8hpp_source.html#l00193">193</a> of file <a class="el" href="broker__caps_8hpp_source.html">broker_caps.hpp</a>.</p>
 

@@ -1,0 +1,5 @@
+<map id="algotradelib::runner::source_states_calendar_sessions&lt; Source, typename &gt;" name="algotradelib::runner::source_states_calendar_sessions&lt; Source, typename &gt;">
+<area shape="rect" id="Node000001" title="Detects whether a source declares static constexpr bool states_calendar_sessions = true,..." alt="" coords="5,81,238,143"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="63,5,180,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,47,124,81,119,80,120,51"/>
+</map>

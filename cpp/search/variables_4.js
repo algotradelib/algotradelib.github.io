@@ -16,5 +16,6 @@ var searchData=
   ['exit_5f_13',['exit_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1ZScoreReversion_1_1Params.html#a79ae24b1bf2962ebc43338175f1d143d',1,'algotradelib::strategy::vanilla::ZScoreReversion::Params']]],
   ['expired_5fday_5forders_5f_14',['expired_day_orders_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#a917ac58525054be1fd3d8cd090ad3469',1,'algotradelib::backtest::ReplayResult::expired_day_orders_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#ae01363b0921197661a6ab4d890a4e053',1,'algotradelib::backtest::ReportCaveats::expired_day_orders_']]],
   ['expires_5fat_5f_15',['expires_at_',['../structalgotradelib_1_1network_1_1AuthBody.html#a19f1a02ae78e918458ba86e37aee2e2e',1,'algotradelib::network::AuthBody::expires_at_'],['../structalgotradelib_1_1network_1_1StoredToken.html#a4092922f0805ad4c5c8eb6695bb8476e',1,'algotradelib::network::StoredToken::expires_at_']]],
-  ['exposure_5fbasis_5f_16',['exposure_basis_',['../structalgotradelib_1_1strategy_1_1GuardInputs.html#ab3d2dcc31ead5cfc9c5cee17f38dcbce',1,'algotradelib::strategy::GuardInputs']]]
+  ['exposure_5fbasis_5f_16',['exposure_basis_',['../structalgotradelib_1_1strategy_1_1GuardInputs.html#ab3d2dcc31ead5cfc9c5cee17f38dcbce',1,'algotradelib::strategy::GuardInputs']]],
+  ['extended_5f_17',['extended_',['../structalgotradelib_1_1TradingDay.html#ab27b5bcc79ce754dad50c16534873f0f',1,'algotradelib::TradingDay']]]
 ];

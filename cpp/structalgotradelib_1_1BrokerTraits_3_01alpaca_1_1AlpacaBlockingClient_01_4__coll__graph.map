@@ -1,0 +1,5 @@
+<map id="algotradelib::BrokerTraits&lt; alpaca::AlpacaBlockingClient &gt;" name="algotradelib::BrokerTraits&lt; alpaca::AlpacaBlockingClient &gt;">
+<area shape="rect" id="Node000001" title="The BrokerSession adapter for alpaca::AlpacaBlockingClient." alt="" coords="5,145,246,190"/>
+<area shape="rect" id="Node000002" href="$structalgotradelib_1_1BrokerTraits.html" title="Describes one broker client to the library: its types, capabilities, call thunks and normalizers." alt="" coords="33,5,218,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,64,128,146,123,144,123,67"/>
+</map>

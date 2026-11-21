@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <p>Which minute bar closes depends on its stamp: of start-stamped KRX minute bars, the 15:29 bar (its period, 15:29 to 15:30, holds the close), and the 15:30 auction bar after it closes nothing more; of end-stamped ones, the bar stamped 15:30. Bars wholly before the open or after the close count in <span class="tt"><a class="el" href="#a7a125e7628d04d19aad67e3f79088962" title="Returns how many bars lay wholly outside their session (before its open or after its close).">outside()</a></span> and close nothing. Under the KRX window a close-stamped daily bar at midnight UTC is a point at the open (09:00 KST), which opens the session and closes nothing; one at midnight KST ends before its session opens and is neither edge.</p>
 <p>Feed it the bars of one series, or the first bar of each <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1BarSlice.html" title="Every instrument&#39;s bar of one interval for one period end, delivered to on_bars.">BarSlice</a></span> (one interval), in time order. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00348">348</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00450">450</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aebafa15f91a1b853a9cab38c6e495a3f" name="aebafa15f91a1b853a9cab38c6e495a3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebafa15f91a1b853a9cab38c6e495a3f">&#9670;&#160;</a></span>closed()</h2>
@@ -172,7 +172,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns how many sessions a bar has closed so far. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count; zero tells a tool that no bar's period held a session's close. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00395">395</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00497">497</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -213,7 +213,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Its edges. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00356">356</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00458">458</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns how many sessions a bar has opened so far. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count; zero tells a tool that the bars never reached into a session. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00387">387</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00489">489</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +273,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns how many bars lay wholly outside their session (before its open or after its close). </p>
 <dl class="section return"><dt>Returns</dt><dd>The count; above zero, pre-market or after-hours bars are in the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00403">403</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00505">505</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>

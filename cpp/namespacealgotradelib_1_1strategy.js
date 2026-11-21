@@ -129,6 +129,7 @@ var namespacealgotradelib_1_1strategy =
     [ "reject_reason_name", "namespacealgotradelib_1_1strategy.html#a7441fcdd2f2661fa34ae88bea734b3c7", null ],
     [ "sellable_convention_name", "namespacealgotradelib_1_1strategy.html#ab4a5367235531e59a372e4a9ef737ec2", null ],
     [ "size_kind_is_target", "namespacealgotradelib_1_1strategy.html#ac097cc56d34112816ead3a1c0e755977", null ],
+    [ "stated_session_phase", "namespacealgotradelib_1_1strategy.html#aef96e6043f3632b1bcacbdaad6c0fcd3", null ],
     [ "weight_target", "namespacealgotradelib_1_1strategy.html#a9f7ac198bfabe7c175a24def662c1618", null ],
     [ "all_halt_reasons", "namespacealgotradelib_1_1strategy.html#afb533691e7f20b50ff3673a599b6078d", null ],
     [ "all_market_phases", "namespacealgotradelib_1_1strategy.html#a372aca5260b4331d2ee74dc5d335fb03", null ],

@@ -146,12 +146,12 @@ graph TD
     BR[&quot;&lt;b&gt;&lt;broker&gt;&lt;/b&gt;&lt;br/&gt;BrokerTraits, BrokerCaps,&lt;br/&gt;BrokerSession&quot;]
     CO[&quot;&lt;b&gt;&lt;core&gt;&lt;/b&gt;&lt;br/&gt;Decimal64, Money, InstrumentId,&lt;br/&gt;bars, calendar, Result, BrokerError&quot;]
     NW[&quot;&lt;b&gt;&lt;network&gt;&lt;/b&gt;&lt;br/&gt;HTTPS transport, OAuth,&lt;br/&gt;WebSocket, rate-limit pacer&quot;]
-    KT[&quot;&lt;b&gt;&lt;kis&gt;&lt;/b&gt; &nbsp; &lt;b&gt;&lt;tossinvest&gt;&lt;/b&gt; &nbsp; &lt;b&gt;&lt;kiwoom&gt;&lt;/b&gt;&lt;br/&gt;adapters: one BrokerTraits&lt;br/&gt;specialization each&quot;]
+    KT[&quot;&lt;b&gt;&lt;kis&gt;&lt;/b&gt; &nbsp; &lt;b&gt;&lt;tossinvest&gt;&lt;/b&gt; &nbsp; &lt;b&gt;&lt;kiwoom&gt;&lt;/b&gt; &nbsp; &lt;b&gt;&lt;alpaca&gt;&lt;/b&gt;&lt;br/&gt;adapters: one BrokerTraits&lt;br/&gt;specialization each&quot;]
     MK[&quot;&lt;b&gt;&lt;mock&gt;&lt;/b&gt;&lt;br/&gt;an in-memory market over&lt;br/&gt;your bars; no transport&quot;]
     BB[&quot;&lt;b&gt;&lt;builtin_brokers&gt;&lt;/b&gt;&lt;br/&gt;the built-in blocking clients,&lt;br/&gt;for with_broker&quot;]
   end
 
-  X((&quot;KIS / Toss / Kiwoom&lt;br/&gt;HTTPS&quot;))
+  X((&quot;KIS / Toss / Kiwoom / Alpaca&lt;br/&gt;HTTPS&quot;))
 
   S --&gt; ST
   V --&gt; ST

@@ -182,7 +182,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>Blocking facade that drives <span class="tt"><a class="el" href="classalgotradelib_1_1tossinvest_1_1TossClient.html" title="The asynchronous Toss Securities REST client: market data, accounts and orders.">TossClient</a></span> on a private event loop. </p>
 <p>With a token store, clients on one key share one token, in this process or others (<span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1TokenStore.html" title="Where blocking broker clients on one key share its access token, across threads and processes.">network::TokenStore</a></span>): issuing a token revokes the one issued before it with the same key. Every token is then requested under the store's lock before a call, and none during it: a call whose token stops being usable while it runs returns <span class="tt">token_unusable</span> (<span class="tt">AUTHENTICATION</span>, not sent), and the next call prepares one. A request authorized just before another program replaced the token can still be refused (Toss answers 401 <span class="tt">token-revoked</span>); it is not sent again. A program stopped after Toss issued a token and before it was stored leaves the old one stored until Toss refuses it. </p>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03690">3690</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03689">3689</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f27184fab84f68d31f0d06cbd8783a6" name="a6f27184fab84f68d31f0d06cbd8783a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f27184fab84f68d31f0d06cbd8783a6">&#9670;&#160;</a></span>TossBlockingClient()</h2>
@@ -232,7 +232,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03699">3699</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03698">3698</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ Friends</h2></td></tr>
 <p>Discovers the brokerage accounts available to the current credentials. </p>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03727">3727</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03726">3726</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00865">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::accounts()</a>.</p>
 
@@ -301,7 +301,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if the token is empty or expires within five minutes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03996">3996</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03995">3995</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03827">3827</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03826">3826</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00846">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::bars()</a>.</p>
 
@@ -380,7 +380,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03856">3856</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03855">3855</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00886">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::buying_power()</a>.</p>
 
@@ -423,7 +423,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03756">3756</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03755">3755</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00795">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::calendar()</a>.</p>
 
@@ -466,7 +466,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03937">3937</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03936">3936</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00940">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::cancel_order()</a>.</p>
 
@@ -504,7 +504,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03885">3885</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03884">3884</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00907">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::commissions()</a>.</p>
 
@@ -542,7 +542,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03813">3813</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03812">3812</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00836">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::depth()</a>.</p>
 
@@ -580,7 +580,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03841">3841</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03840">3840</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00875">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::holdings()</a>.</p>
 
@@ -618,9 +618,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03741">3741</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03740">3740</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tossinvest_2client_8hpp_source.html#l03813">depth()</a>, <a class="el" href="tossinvest_2traits_8hpp_source.html#l00784">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::instrument()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l03770">price_limits()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l03714">quote()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l03871">sellable_quantity()</a>, and <a class="el" href="tossinvest_2client_8hpp_source.html#l03785">trades()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tossinvest_2client_8hpp_source.html#l03812">depth()</a>, <a class="el" href="tossinvest_2traits_8hpp_source.html#l00784">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::instrument()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l03769">price_limits()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l03713">quote()</a>, <a class="el" href="tossinvest_2client_8hpp_source.html#l03870">sellable_quantity()</a>, and <a class="el" href="tossinvest_2client_8hpp_source.html#l03784">trades()</a>.</p>
 
 </div>
 </div>
@@ -661,9 +661,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03966">3966</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03965">3965</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00974">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::order_by_id()</a>, and <a class="el" href="tossinvest_2client_8hpp_source.html#l03905">place_order()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00974">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::order_by_id()</a>, and <a class="el" href="tossinvest_2client_8hpp_source.html#l03904">place_order()</a>.</p>
 
 </div>
 </div>
@@ -699,7 +699,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03951">3951</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03950">3950</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00961">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::order_history()</a>, and <a class="el" href="tossinvest_2traits_8hpp_source.html#l00950">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::working_orders()</a>.</p>
 
@@ -743,7 +743,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The acknowledgement or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03905">3905</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03904">3904</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00918">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::place_order()</a>.</p>
 
@@ -781,7 +781,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03770">3770</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03769">3769</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00805">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::price_limits()</a>.</p>
 
@@ -819,7 +819,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03799">3799</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03798">3798</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00826">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::prices()</a>.</p>
 
@@ -857,7 +857,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03714">3714</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03713">3713</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00856">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::quote()</a>.</p>
 
@@ -889,7 +889,7 @@ Friends</h2></td></tr>
 <p>Returns the rate limiter's statistics (safe to read between calls). </p>
 <dl class="section return"><dt>Returns</dt><dd>The statistics, or null if the client has no rate-limit budget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03979">3979</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03978">3978</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00774">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::rate_limit_stats()</a>.</p>
 
@@ -932,7 +932,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03921">3921</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03920">3920</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00929">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::replace_order()</a>.</p>
 
@@ -975,7 +975,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03871">3871</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03870">3870</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00897">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::sellable_quantity()</a>.</p>
 
@@ -1007,9 +1007,9 @@ Friends</h2></td></tr>
 <p>Returns the access token; see <span class="tt"><a class="el" href="classalgotradelib_1_1tossinvest_1_1TossClient.html#ac2c70b06c93d6fc1826c3bb558decd5f" title="Returns the access token the client holds, to reuse in another client or a later process (adopt_token...">TossClient::token</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The token, empty until a request has obtained one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03987">3987</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03986">3986</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tossinvest_2client_8hpp_source.html#l03996">adopt_token()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tossinvest_2client_8hpp_source.html#l03995">adopt_token()</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1050,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03785">3785</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l03784">3784</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="tossinvest_2traits_8hpp_source.html#l00816">algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::trades()</a>.</p>
 
@@ -1077,7 +1077,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l04001">4001</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tossinvest_2client_8hpp_source.html#l04000">4000</a> of file <a class="el" href="tossinvest_2client_8hpp_source.html">client.hpp</a>.</p>
 
 </div>
 </div>

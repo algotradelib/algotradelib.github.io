@@ -20,5 +20,6 @@ var event_8hpp =
     [ "algotradelib::strategy::make_bar_event", "namespacealgotradelib_1_1strategy.html#a260ce20a00a13c5a743bd4c749e54d19", null ],
     [ "algotradelib::strategy::market_phase_name", "namespacealgotradelib_1_1strategy.html#a5e4df3e7b24619eacad1c8ca26b67b77", null ],
     [ "algotradelib::strategy::market_phase_session_ended", "namespacealgotradelib_1_1strategy.html#aab148d4132b0eb543fba8d22e27042a9", null ],
+    [ "algotradelib::strategy::stated_session_phase", "namespacealgotradelib_1_1strategy.html#aef96e6043f3632b1bcacbdaad6c0fcd3", null ],
     [ "algotradelib::strategy::all_market_phases", "namespacealgotradelib_1_1strategy.html#a372aca5260b4331d2ee74dc5d335fb03", null ]
 ];

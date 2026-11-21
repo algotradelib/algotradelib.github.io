@@ -157,9 +157,9 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The intraday session of a market, as the operator states it. </p>
 <p>Times are minutes from local midnight, with a fixed UTC offset. The default is the KRX regular session, 09:00-15:30 KST.</p>
-<dl class="section note"><dt>Note</dt><dd>The offset is fixed: a market that observes daylight saving needs a different window each season. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The offset is fixed: a market that observes daylight saving needs a different window each season, or an adapter that fills each day's session hours (see <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#aef96e6043f3632b1bcacbdaad6c0fcd3" title="Returns the market phase at an instant from the session hours filled in a calendar.">stated_session_phase</a></span>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00113">113</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00122">122</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ad9e36e53ce3c471e0b67ae4fab3b118c" name="ad9e36e53ce3c471e0b67ae4fab3b118c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9e36e53ce3c471e0b67ae4fab3b118c">&#9670;&#160;</a></span>closes_at()</h2>
@@ -193,7 +193,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The close of <span class="tt">local_date(now)</span>, whether or not that date trades. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00188">188</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00197">197</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -223,7 +223,7 @@ Public Attributes</h2></td></tr>
 <p>Returns the KRX regular session, 09:00-15:30 KST. </p>
 <dl class="section return"><dt>Returns</dt><dd>The default window. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00127">127</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00136">136</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The date in the market's time zone. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00167">167</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00176">176</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -296,7 +296,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The open of <span class="tt">local_date(now)</span>, whether or not that date trades. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00178">178</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00187">187</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">UNKNOWN</span> if <span class="tt">trading_day</span> is empty, <span class="tt">CLOSED</span> if it is <span class="tt">false</span>, and otherwise <span class="tt">PRE_OPEN</span>, <span class="tt">OPEN</span> or <span class="tt">POST_CLOSE</span> by local time. The open is inclusive, the close exclusive. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00140">140</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00149">149</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +356,7 @@ Public Attributes</h2></td></tr>
 
 <p>The session close, in minutes from local midnight. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00117">117</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00126">126</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -374,7 +374,7 @@ Public Attributes</h2></td></tr>
 
 <p>The session open, in minutes from local midnight. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00115">115</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00124">124</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ Public Attributes</h2></td></tr>
 
 <p>A description of where the window came from, for reports. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00121">121</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00130">130</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>
@@ -410,7 +410,7 @@ Public Attributes</h2></td></tr>
 
 <p>The market's offset from UTC. </p>
 
-<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00119">119</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00128">128</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
 </div>
 </div>

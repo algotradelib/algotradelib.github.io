@@ -154,10 +154,10 @@ Friends</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A <span class="tt"><a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html" title="Where blocking broker clients share a market&#39;s trading calendar, across threads and processes.">CalendarCache</a></span> in a private folder: one file per name. POSIX only; not provided on Windows. </p>
-<p>The folder is created (mode <span class="tt">0700</span>) if it does not exist; its parent must. For name <span class="tt">N</span> the cache keeps <span class="tt">N.calendar</span>: JSON with the format (<span class="tt">1</span>), the country, <span class="tt">received_at_ns</span> (nanoseconds since the epoch), <span class="tt">unreadable_days</span> and the days as <span class="tt">[YYYYMMDD, open]</span> pairs in their order. The folder and the file must be owned by the user running the program and give no permission to group or others; a cache that finds otherwise returns its error and leaves them as they were. A symbolic link at the file's name is refused, and so is one at the folder's own name when the folder is given without a trailing separator. A link earlier in the folder's path, or one reached through a trailing separator, is followed: avoiding both is the caller's part, and the folder and file opened must still be the user's alone. Descriptors are closed on <span class="tt">exec</span>. A file over 256 KiB, or one that is not well formed, reads as no calendar. <span class="tt"><a class="el" href="#a4caa9d9e92d2ebc14995adfae1d356f7" title="Replaces the name&#39;s calendar file.">publish</a></span> refuses a calendar received outside what signed 64-bit nanoseconds since the epoch hold, less a day at each end (about the years 1677 to 2262). A count of unreadable days larger than a signed 64-bit integer holds is stored but reads as no calendar.</p>
+<p>The folder is created (mode <span class="tt">0700</span>) if it does not exist; its parent must. For name <span class="tt">N</span> the cache keeps <span class="tt">N.calendar</span>: JSON with the format (<span class="tt">1</span>), the country, <span class="tt">received_at_ns</span> (nanoseconds since the epoch), <span class="tt">unreadable_days</span> and the days as <span class="tt">[YYYYMMDD, open]</span> pairs in their order. Session hours (<span class="tt"><a class="el" href="structalgotradelib_1_1TradingDay.html#abec6a4ccb4eb588306fdf888b7cc62ce" title="The exchange&#39;s regular session on an open day, where the adapter fills it.">TradingDay::regular_</a></span>, <span class="tt">extended_</span>) are not stored: a calendar read back has none. The folder and the file must be owned by the user running the program and give no permission to group or others; a cache that finds otherwise returns its error and leaves them as they were. A symbolic link at the file's name is refused, and so is one at the folder's own name when the folder is given without a trailing separator. A link earlier in the folder's path, or one reached through a trailing separator, is followed: avoiding both is the caller's part, and the folder and file opened must still be the user's alone. Descriptors are closed on <span class="tt">exec</span>. A file over 256 KiB, or one that is not well formed, reads as no calendar. <span class="tt"><a class="el" href="#a4caa9d9e92d2ebc14995adfae1d356f7" title="Replaces the name&#39;s calendar file.">publish</a></span> refuses a calendar received outside what signed 64-bit nanoseconds since the epoch hold, less a day at each end (about the years 1677 to 2262). A count of unreadable days larger than a signed 64-bit integer holds is stored but reads as no calendar.</p>
 <p>Writers take no lock: each writes a temporary file of its own, <span class="tt">N.calendar.&lt;process&gt;-&lt;count&gt;.tmp</span>, flushes it and renames it over <span class="tt">N.calendar</span>, so a reader sees a whole file and the last writer's calendar stays. A writer stopped before its rename can leave its temporary file; it is never read and may be removed. </p>
 
-<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00095">95</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00096">96</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a18425a115b87faaaebcfe3efd7d24ccb" name="a18425a115b87faaaebcfe3efd7d24ccb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18425a115b87faaaebcfe3efd7d24ccb">&#9670;&#160;</a></span>FileCalendarCache()</h2>
@@ -190,7 +190,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00101">101</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00102">102</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
 
 </div>
 </div>
@@ -229,7 +229,7 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html#ae14bd05396bed981fa1a32d46f95ffa1">algotradelib::network::CalendarCache</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00108">108</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00109">109</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
 
 </div>
 </div>
@@ -272,7 +272,7 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classalgotradelib_1_1network_1_1CalendarCache.html#a4c0de3824713f0818cea8552e08bc4c9">algotradelib::network::CalendarCache</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00143">143</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00144">144</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
 
 </div>
 </div>
@@ -297,7 +297,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00165">165</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00166">166</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
 
 </div>
 </div>

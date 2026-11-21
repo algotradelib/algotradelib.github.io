@@ -153,9 +153,9 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The trading days a broker reported for one market, ascending by date. </p>
 <p>A calendar covers a finite set of dates. <span class="tt"><a class="el" href="#a45f91eb94f4349df3d2313f5f2b0c156" title="Looks up whether the market opens on a date.">is_trading_day</a></span> tells "closed" apart from "not covered": a date the broker did not report, or one whose row could not be read, has no answer rather than a guessed one. The searches return reported days only, and do not say whether unreported dates are open.</p>
 <p>Keep <span class="tt"><a class="el" href="#ab500d5a6ed088ab89cc97c712d2ea539" title="The days the broker reported, ascending. A date outside them is uncovered, not closed.">days_</a></span> ascending if you fill it yourself.</p>
-<p>Intraday session hours are not part of this type, and the library does not expose them yet (Toss publishes them). </p>
+<p>An adapter that declares <span class="tt"><a class="el" href="structalgotradelib_1_1BrokerCaps.html#ad31ccf8f326edd3161d956c84822d2a5" title="Whether the adapter fills each open day&#39;s session hours (TradingDay::regular_, extended_); a live loo...">BrokerCaps::has_calendar_sessions</a></span> also fills each open day's session hours (<span class="tt"><a class="el" href="structalgotradelib_1_1TradingDay.html#abec6a4ccb4eb588306fdf888b7cc62ce" title="The exchange&#39;s regular session on an open day, where the adapter fills it.">TradingDay::regular_</a></span> and <span class="tt">extended_</span>), from which a live loop takes the market phase (<span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#aef96e6043f3632b1bcacbdaad6c0fcd3" title="Returns the market phase at an instant from the session hours filled in a calendar.">strategy::stated_session_phase</a></span>). <span class="tt"><a class="el" href="#a45f91eb94f4349df3d2313f5f2b0c156" title="Looks up whether the market opens on a date.">is_trading_day</a></span> and the searches ignore the hours. </p>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00044">44</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00072">72</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="afde8fa6b25876de7bbc549c5e77d9269" name="afde8fa6b25876de7bbc549c5e77d9269"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afde8fa6b25876de7bbc549c5e77d9269">&#9670;&#160;</a></span>covered()</h2>
@@ -183,7 +183,7 @@ Public Attributes</h2></td></tr>
 <p>Returns the first and last dates the calendar covers. </p>
 <dl class="section return"><dt>Returns</dt><dd>The pair <span class="tt">(first, last)</span>, or <span class="tt">std::nullopt</span> if the calendar is empty. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00136">136</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00164">164</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +219,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the market opens, <span class="tt">false</span> if it is closed, or <span class="tt">std::nullopt</span> if the calendar does not cover <span class="tt">date</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00069">69</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00097">97</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 
 </div>
 </div>
@@ -256,7 +256,7 @@ Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The first open day after <span class="tt">date</span>, or <span class="tt">std::nullopt</span> if none is covered. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8c0f4a0c7f71b0521bf911509ca31b19" title="How many rows from the broker had a date that could not be read.">unreadable_days_</a> for a day this search may skip. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00102">102</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00130">130</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@ Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The last open day before <span class="tt">date</span>, or <span class="tt">std::nullopt</span> if none is covered. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8c0f4a0c7f71b0521bf911509ca31b19" title="How many rows from the broker had a date that could not be read.">unreadable_days_</a> for a day this search may skip. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00118">118</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00146">146</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 
 </div>
 </div>
@@ -312,9 +312,9 @@ Public Attributes</h2></td></tr>
 
 <p>The market this calendar is for. </p>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00046">46</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00074">74</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l00838">algotradelib::kis::KisClient::adopt_calendar()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00197">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l00838">algotradelib::kis::KisClient::adopt_calendar()</a>, <a class="el" href="alpaca_2client_8hpp_source.html#l00852">algotradelib::alpaca::AlpacaBlockingClient::calendar()</a>, and <a class="el" href="example-live-loop_8cpp_source.html#l00197">main()</a>.</p>
 
 </div>
 </div>
@@ -332,9 +332,9 @@ Public Attributes</h2></td></tr>
 
 <p>The days the broker reported, ascending. A date outside them is uncovered, not closed. </p>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00048">48</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00076">76</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l00838">algotradelib::kis::KisClient::adopt_calendar()</a>, <a class="el" href="calendar_8hpp_source.html#l00136">covered()</a>, <a class="el" href="calendar_8hpp_source.html#l00069">is_trading_day()</a>, <a class="el" href="example-live-loop_8cpp_source.html#l00197">main()</a>, <a class="el" href="calendar_8hpp_source.html#l00102">next_trading_day()</a>, and <a class="el" href="calendar_8hpp_source.html#l00118">previous_trading_day()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kis_2client_8hpp_source.html#l00838">algotradelib::kis::KisClient::adopt_calendar()</a>, <a class="el" href="alpaca_2client_8hpp_source.html#l00852">algotradelib::alpaca::AlpacaBlockingClient::calendar()</a>, <a class="el" href="calendar_8hpp_source.html#l00164">covered()</a>, <a class="el" href="calendar_8hpp_source.html#l00097">is_trading_day()</a>, <a class="el" href="example-live-loop_8cpp_source.html#l00197">main()</a>, <a class="el" href="calendar_8hpp_source.html#l00130">next_trading_day()</a>, <a class="el" href="calendar_8hpp_source.html#l00146">previous_trading_day()</a>, and <a class="el" href="event_8hpp_source.html#l00238">algotradelib::strategy::stated_session_phase()</a>.</p>
 
 </div>
 </div>
@@ -352,9 +352,9 @@ Public Attributes</h2></td></tr>
 
 <p>When the calendar was received, on this machine's clock. </p>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00050">50</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00078">78</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="example-live-loop_8cpp_source.html#l00197">main()</a>, and <a class="el" href="calendar__cache_8hpp_source.html#l00143">algotradelib::network::FileCalendarCache::publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="alpaca_2client_8hpp_source.html#l00852">algotradelib::alpaca::AlpacaBlockingClient::calendar()</a>, <a class="el" href="example-live-loop_8cpp_source.html#l00197">main()</a>, and <a class="el" href="calendar__cache_8hpp_source.html#l00144">algotradelib::network::FileCalendarCache::publish()</a>.</p>
 
 </div>
 </div>
@@ -374,7 +374,9 @@ Public Attributes</h2></td></tr>
 <p>Each such row is dropped, and the day it described is uncovered: <span class="tt"><a class="el" href="#a45f91eb94f4349df3d2313f5f2b0c156" title="Looks up whether the market opens on a date.">is_trading_day</a></span> returns nothing for it.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The dropped day can fall inside the covered span. When this count is nonzero, <span class="tt"><a class="el" href="#a7465a36094773907e13048acefddbc6a" title="Finds the first trading day after a date.">next_trading_day</a></span> and <span class="tt"><a class="el" href="#ab936ec764b3f1e1c96286a8276ebbc1d" title="Finds the last trading day before a date.">previous_trading_day</a></span> may skip over a trading day. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00060">60</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="calendar_8hpp_source.html#l00088">88</a> of file <a class="el" href="calendar_8hpp_source.html">calendar.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="alpaca_2client_8hpp_source.html#l00852">algotradelib::alpaca::AlpacaBlockingClient::calendar()</a>, and <a class="el" href="event_8hpp_source.html#l00238">algotradelib::strategy::stated_session_phase()</a>.</p>
 
 </div>
 </div>

@@ -2,6 +2,12 @@ var hierarchy =
 [
     [ "algotradelib::AccountInfo&lt; Client &gt;", "structalgotradelib_1_1AccountInfo.html", null ],
     [ "algotradelib::strategy::AllCaps", "structalgotradelib_1_1strategy_1_1AllCaps.html", null ],
+    [ "algotradelib::alpaca::AlpacaAccount", "structalgotradelib_1_1alpaca_1_1AlpacaAccount.html", null ],
+    [ "algotradelib::alpaca::AlpacaAccountInfo", "structalgotradelib_1_1alpaca_1_1AlpacaAccountInfo.html", null ],
+    [ "algotradelib::alpaca::AlpacaAmendment", "structalgotradelib_1_1alpaca_1_1AlpacaAmendment.html", null ],
+    [ "algotradelib::alpaca::AlpacaBlockingClient", "classalgotradelib_1_1alpaca_1_1AlpacaBlockingClient.html", null ],
+    [ "algotradelib::alpaca::AlpacaOpenOrders", "structalgotradelib_1_1alpaca_1_1AlpacaOpenOrders.html", null ],
+    [ "algotradelib::alpaca::AlpacaOrderAck", "structalgotradelib_1_1alpaca_1_1AlpacaOrderAck.html", null ],
     [ "algotradelib::AmendInstruction", "structalgotradelib_1_1AmendInstruction.html", null ],
     [ "algotradelib::backtest::AppliedRate", "structalgotradelib_1_1backtest_1_1AppliedRate.html", null ],
     [ "algotradelib::network::AuthBody&lt; BrokerType &gt;", "structalgotradelib_1_1network_1_1AuthBody.html", null ],
@@ -26,8 +32,10 @@ var hierarchy =
     [ "algotradelib::BlockingSession&lt; Client &gt;", "classalgotradelib_1_1BlockingSession.html", null ],
     [ "std::bool_constant", null, [
       [ "algotradelib::runner::runner_keeps_sent_orders< Runner, std::void_t< decltype(Runner::keeps_sent_orders_until_listed)> >", "structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html", null ],
-      [ "algotradelib::runner::source_provides_working_orders< Source, std::void_t< decltype(Source::provides_working_orders)> >", "structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html", null ]
+      [ "algotradelib::runner::source_provides_working_orders< Source, std::void_t< decltype(Source::provides_working_orders)> >", "structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html", null ],
+      [ "algotradelib::runner::source_states_calendar_sessions< Source, std::void_t< decltype(Source::states_calendar_sessions)> >", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions_3_01Source_00_01std_1_1void__497b593350037081ad2186f1435eb9d0.html", null ]
     ] ],
+    [ "algotradelib::alpaca::Broker", "structalgotradelib_1_1alpaca_1_1Broker.html", null ],
     [ "algotradelib::kis::Broker", "structalgotradelib_1_1kis_1_1Broker.html", null ],
     [ "algotradelib::kiwoom::Broker", "structalgotradelib_1_1kiwoom_1_1Broker.html", null ],
     [ "algotradelib::mock::Broker", "structalgotradelib_1_1mock_1_1Broker.html", null ],
@@ -37,6 +45,7 @@ var hierarchy =
     [ "algotradelib::runner::BrokerRefusal", "structalgotradelib_1_1runner_1_1BrokerRefusal.html", null ],
     [ "algotradelib::BrokerSession&lt; Client &gt;", "classalgotradelib_1_1BrokerSession.html", null ],
     [ "algotradelib::BrokerTraits&lt; Client &gt;", "structalgotradelib_1_1BrokerTraits.html", null ],
+    [ "algotradelib::BrokerTraits&lt; alpaca::AlpacaBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01alpaca_1_1AlpacaBlockingClient_01_4.html", null ],
     [ "algotradelib::BrokerTraits&lt; mock::MockClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html", null ],
     [ "algotradelib::strategy::vanilla::BuyAndHold", "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html", null ],
     [ "algotradelib::BuyingPower", "structalgotradelib_1_1BuyingPower.html", null ],
@@ -60,6 +69,9 @@ var hierarchy =
     ] ],
     [ "algotradelib::runner::ChargedCosts", "structalgotradelib_1_1runner_1_1ChargedCosts.html", null ],
     [ "algotradelib::network::ClientCredentials&lt; BrokerType &gt;", "classalgotradelib_1_1network_1_1ClientCredentials.html", null ],
+    [ "algotradelib::network::ClientCredentials&lt; AlpacaConfig &gt;", "classalgotradelib_1_1network_1_1ClientCredentials.html", [
+      [ "algotradelib::alpaca::AlpacaConfig", "structalgotradelib_1_1alpaca_1_1AlpacaConfig.html", null ]
+    ] ],
     [ "algotradelib::network::ClientCredentials&lt; KisConfig &gt;", "classalgotradelib_1_1network_1_1ClientCredentials.html", [
       [ "algotradelib::kis::KisConfig", "structalgotradelib_1_1kis_1_1KisConfig.html", null ]
     ] ],
@@ -119,6 +131,7 @@ var hierarchy =
       [ "algotradelib::runner::runner_counts_warmup< Runner, std::void_t< decltype(std::declval< const Runner & >().warmup_instructions_discarded())> >", "structalgotradelib_1_1runner_1_1runner__counts__warmup_3_01Runner_00_01std_1_1void__t_3_01declty589a3e9bdd8d8dadba342111af057e9e.html", null ],
       [ "algotradelib::runner::source_names_buying_power_currencies< Source, std::void_t< decltype(std::declval< const Source & >().buying_power_currencies())> >", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html", null ],
       [ "algotradelib::runner::source_provides_working_orders< Source, std::void_t< decltype(Source::provides_working_orders)> >", "structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html", null ],
+      [ "algotradelib::runner::source_states_calendar_sessions< Source, std::void_t< decltype(Source::states_calendar_sessions)> >", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions_3_01Source_00_01std_1_1void__497b593350037081ad2186f1435eb9d0.html", null ],
       [ "algotradelib::runner::source_states_charged_costs< Source, std::void_t< decltype(std::declval< const Source & >().charged_costs())> >", "structalgotradelib_1_1runner_1_1source__states__charged__costs_3_01Source_00_01std_1_1void__t_3_18ee40020b45d1e61f73c6245e3686dd.html", null ],
       [ "algotradelib::backtest::is_price_join< Join, typename >", "structalgotradelib_1_1backtest_1_1is__price__join.html", null ],
       [ "algotradelib::backtest::is_window_scheme< Scheme, typename >", "structalgotradelib_1_1backtest_1_1is__window__scheme.html", null ],
@@ -126,6 +139,7 @@ var hierarchy =
       [ "algotradelib::runner::runner_counts_warmup< Runner, typename >", "structalgotradelib_1_1runner_1_1runner__counts__warmup.html", null ],
       [ "algotradelib::runner::source_names_buying_power_currencies< Source, typename >", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies.html", null ],
       [ "algotradelib::runner::source_provides_working_orders< Source, typename >", "structalgotradelib_1_1runner_1_1source__provides__working__orders.html", null ],
+      [ "algotradelib::runner::source_states_calendar_sessions< Source, typename >", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions.html", null ],
       [ "algotradelib::runner::source_states_charged_costs< Source, typename >", "structalgotradelib_1_1runner_1_1source__states__charged__costs.html", null ]
     ] ],
     [ "algotradelib::runner::FileJournal", "classalgotradelib_1_1runner_1_1FileJournal.html", null ],
@@ -308,6 +322,7 @@ var hierarchy =
     [ "algotradelib::strategy::SessionEdge", "structalgotradelib_1_1strategy_1_1SessionEdge.html", null ],
     [ "algotradelib::strategy::SessionEdges", "classalgotradelib_1_1strategy_1_1SessionEdges.html", null ],
     [ "algotradelib::live::SessionExecutor&lt; Session &gt;", "classalgotradelib_1_1live_1_1SessionExecutor.html", null ],
+    [ "algotradelib::SessionHours", "structalgotradelib_1_1SessionHours.html", null ],
     [ "algotradelib::live::SessionSource&lt; Session, Journal, MarketData &gt;", "classalgotradelib_1_1live_1_1SessionSource.html", null ],
     [ "algotradelib::runner::SessionWindow", "structalgotradelib_1_1runner_1_1SessionWindow.html", null ],
     [ "algotradelib::strategy::SessionWindow", "structalgotradelib_1_1strategy_1_1SessionWindow.html", null ],

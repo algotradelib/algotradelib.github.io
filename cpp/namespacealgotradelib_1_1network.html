@@ -360,7 +360,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="calendar__cache_8hpp_source.html#l00048">48</a> of file <a class="el" href="calendar__cache_8hpp_source.html">calendar_cache.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="calendar__cache_8hpp_source.html#l00048">calendar_cache_error()</a>, <a class="el" href="calendar__cache_8hpp_source.html#l00108">algotradelib::network::FileCalendarCache::load()</a>, and <a class="el" href="calendar__cache_8hpp_source.html#l00143">algotradelib::network::FileCalendarCache::publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="calendar__cache_8hpp_source.html#l00048">calendar_cache_error()</a>, <a class="el" href="calendar__cache_8hpp_source.html#l00109">algotradelib::network::FileCalendarCache::load()</a>, and <a class="el" href="calendar__cache_8hpp_source.html#l00144">algotradelib::network::FileCalendarCache::publish()</a>.</p>
 
 </div>
 </div>
@@ -395,9 +395,9 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00170">170</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00171">171</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00170">close_ssl_stream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00171">close_ssl_stream()</a>.</p>
 
 </div>
 </div>
@@ -446,16 +446,16 @@ template&lt;typename Client, typename Config&gt; </div>
   <table class="params">
     <tr><td class="paramname">context</td><td>The TLS context; borrowed, and must outlive the client. </td></tr>
     <tr><td class="paramname">config</td><td>The credentials and environment. </td></tr>
-    <tr><td class="paramname">options</td><td>HTTP options, pacing included; nothing is added (unset pacing is unpaced). </td></tr>
+    <tr><td class="paramname">options</td><td>HTTP options, pacing included; nothing is added here, and a client may choose its own pacing when none is set (the Alpaca client does). </td></tr>
     <tr><td class="paramname">stores</td><td>The run's stores. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The client. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="client__stores_8hpp_source.html#l00040">40</a> of file <a class="el" href="client__stores_8hpp_source.html">client_stores.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="client__stores_8hpp_source.html#l00041">41</a> of file <a class="el" href="client__stores_8hpp_source.html">client_stores.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="client__stores_8hpp_source.html#l00040">make_client()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="client__stores_8hpp_source.html#l00041">make_client()</a>.</p>
 
 </div>
 </div>
@@ -496,9 +496,9 @@ template&lt;typename Client, typename Config&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">host</span>, with <span class="tt">:port</span> appended unless the port is <span class="tt">443</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00144">144</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00145">145</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00144">make_host_header()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00145">make_host_header()</a>.</p>
 
 </div>
 </div>
@@ -654,9 +654,9 @@ template&lt;typename Client, typename Config&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00157">157</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00158">158</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00157">shutdown_ssl_stream()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00158">shutdown_ssl_stream()</a>.</p>
 
 </div>
 </div>
@@ -816,9 +816,9 @@ template&lt;typename Client, typename Config&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <span class="tt">CANCELLED</span> error for an aborted operation, otherwise <span class="tt">TRANSPORT</span>. <span class="tt">reached_broker_</span> is left at its default; the caller sets it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00130">130</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="http__client_8hpp_source.html#l00131">131</a> of file <a class="el" href="http__client_8hpp_source.html">http_client.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00130">transport_error()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="http__client_8hpp_source.html#l00131">transport_error()</a>.</p>
 
 </div>
 </div>

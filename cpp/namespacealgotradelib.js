@@ -1,5 +1,6 @@
 var namespacealgotradelib =
 [
+    [ "alpaca", "namespacealgotradelib_1_1alpaca.html", "namespacealgotradelib_1_1alpaca" ],
     [ "analytics", "namespacealgotradelib_1_1analytics.html", "namespacealgotradelib_1_1analytics" ],
     [ "backtest", "namespacealgotradelib_1_1backtest.html", "namespacealgotradelib_1_1backtest" ],
     [ "conformance", "namespacealgotradelib_1_1conformance.html", "namespacealgotradelib_1_1conformance" ],
@@ -18,6 +19,9 @@ var namespacealgotradelib =
     [ "runner", "namespacealgotradelib_1_1runner.html", "namespacealgotradelib_1_1runner" ],
     [ "strategy", "namespacealgotradelib_1_1strategy.html", "namespacealgotradelib_1_1strategy" ],
     [ "tossinvest", "namespacealgotradelib_1_1tossinvest.html", "namespacealgotradelib_1_1tossinvest" ],
+    [ "us", "namespacealgotradelib_1_1us.html", [
+      [ "equity_price_rule", "namespacealgotradelib_1_1us.html#ace766a700d3eddc00bd051fd92fe9cee", null ]
+    ] ],
     [ "AccountInfo", "structalgotradelib_1_1AccountInfo.html", "structalgotradelib_1_1AccountInfo" ],
     [ "AmendInstruction", "structalgotradelib_1_1AmendInstruction.html", "structalgotradelib_1_1AmendInstruction" ],
     [ "Bar", "structalgotradelib_1_1Bar.html", "structalgotradelib_1_1Bar" ],
@@ -28,6 +32,7 @@ var namespacealgotradelib =
     [ "BrokerError", "structalgotradelib_1_1BrokerError.html", "structalgotradelib_1_1BrokerError" ],
     [ "BrokerSession", "classalgotradelib_1_1BrokerSession.html", "classalgotradelib_1_1BrokerSession" ],
     [ "BrokerTraits", "structalgotradelib_1_1BrokerTraits.html", null ],
+    [ "BrokerTraits&lt; alpaca::AlpacaBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01alpaca_1_1AlpacaBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01alpaca_1_1AlpacaBlockingClient_01_4" ],
     [ "BrokerTraits&lt; kis::KisBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisBlockingClient_01_4" ],
     [ "BrokerTraits&lt; kis::KisClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kis_1_1KisClient_01_4" ],
     [ "BrokerTraits&lt; kiwoom::KiwoomBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4.html", "structalgotradelib_1_1BrokerTraits_3_01kiwoom_1_1KiwoomBlockingClient_01_4" ],
@@ -66,6 +71,7 @@ var namespacealgotradelib =
     [ "QuoteSnapshot", "structalgotradelib_1_1QuoteSnapshot.html", "structalgotradelib_1_1QuoteSnapshot" ],
     [ "Result", "classalgotradelib_1_1Result.html", "classalgotradelib_1_1Result" ],
     [ "SellableBasis", "structalgotradelib_1_1SellableBasis.html", "structalgotradelib_1_1SellableBasis" ],
+    [ "SessionHours", "structalgotradelib_1_1SessionHours.html", "structalgotradelib_1_1SessionHours" ],
     [ "StatedDate", "classalgotradelib_1_1StatedDate.html", "classalgotradelib_1_1StatedDate" ],
     [ "TickBand", "structalgotradelib_1_1TickBand.html", "structalgotradelib_1_1TickBand" ],
     [ "TopOfBook", "structalgotradelib_1_1TopOfBook.html", "structalgotradelib_1_1TopOfBook" ],
@@ -77,7 +83,7 @@ var namespacealgotradelib =
     [ "VenueKey", "classalgotradelib_1_1VenueKey.html", "classalgotradelib_1_1VenueKey" ],
     [ "WorkingOrder", "structalgotradelib_1_1WorkingOrder.html", "structalgotradelib_1_1WorkingOrder" ],
     [ "WorkingOrders", "structalgotradelib_1_1WorkingOrders.html", "structalgotradelib_1_1WorkingOrders" ],
-    [ "builtin_brokers", "namespacealgotradelib.html#ade0f7de038ca873cf482170f06085349", null ],
+    [ "builtin_brokers", "namespacealgotradelib.html#aed383668aabfd0ef30517b9b0a34f79c", null ],
     [ "tcp", "namespacealgotradelib.html#ad4cc4cfbaae4e7d14288fd523c8a73e3", null ],
     [ "BarInterval", "namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4", [
       [ "FIVE_MINUTES", "namespacealgotradelib.html#ad822be21460535bed6354950db4e7dc4a0cf459333080acbf409155b1440745be", null ],

@@ -19,6 +19,6 @@ var searchData=
   ['tradingcalendar_16',['TradingCalendar',['../structalgotradelib_1_1TradingCalendar.html',1,'algotradelib']]],
   ['tradingday_17',['TradingDay',['../structalgotradelib_1_1TradingDay.html',1,'algotradelib']]],
   ['type_5flist_18',['type_list',['../structalgotradelib_1_1type__list.html',1,'algotradelib']]],
-  ['type_5flist_3c_20kis_3a_3akisblockingclient_2c_20kiwoom_3a_3akiwoomblockingclient_2c_20tossinvest_3a_3atossblockingclient_20_3e_19',['type_list&lt; kis::KisBlockingClient, kiwoom::KiwoomBlockingClient, tossinvest::TossBlockingClient &gt;',['../structalgotradelib_1_1type__list.html',1,'algotradelib']]],
+  ['type_5flist_3c_20kis_3a_3akisblockingclient_2c_20kiwoom_3a_3akiwoomblockingclient_2c_20tossinvest_3a_3atossblockingclient_2c_20alpaca_3a_3aalpacablockingclient_20_3e_19',['type_list&lt; kis::KisBlockingClient, kiwoom::KiwoomBlockingClient, tossinvest::TossBlockingClient, alpaca::AlpacaBlockingClient &gt;',['../structalgotradelib_1_1type__list.html',1,'algotradelib']]],
   ['type_5ftag_20',['type_tag',['../structalgotradelib_1_1type__tag.html',1,'algotradelib']]]
 ];

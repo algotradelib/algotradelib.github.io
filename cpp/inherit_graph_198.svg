@@ -11,10 +11,10 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1runner_1_1TargetPosition.html" target="_top" xlink:title="The position a strategy wants to hold in one instrument.">
+<g id="a_Node000000"><a xlink:href="structalgotradelib_1_1runner_1_1RecoveryReport.html" target="_top" xlink:title="What a journal showed was left owed by the process that wrote it.">
 <polygon fill="white" stroke="#666666" points="112,-33.5 0,-33.5 0,0 112,0 112,-33.5"/>
 <text xml:space="preserve" text-anchor="start" x="8" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib::runner</text>
-<text xml:space="preserve" text-anchor="middle" x="56" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::TargetPosition</text>
+<text xml:space="preserve" text-anchor="middle" x="56" y="-7.25" font-family="Helvetica,sans-Serif" font-size="10.00">::RecoveryReport</text>
 </a>
 </g>
 </g>
