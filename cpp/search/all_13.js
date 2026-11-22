@@ -1,7 +1,7 @@
 var searchData=
 [
   ['paced_5foptions_0',['paced_options',['../kis__credentials_8hpp.html#a36f5abf674b6499305f15fb2cd0c22dc',1,'kis_credentials::paced_options()'],['../kiwoom__credentials_8hpp.html#a8078e306dfb6afbfe509876b4e0f8c19',1,'kiwoom_credentials::paced_options()']]],
-  ['pacing_1',['pacing',['../transport-and-pacing.html#autotoc_md115',1,'Request pacing'],['../transport-and-pacing.html',1,'Transport and request pacing']]],
+  ['pacing_1',['pacing',['../transport-and-pacing.html#autotoc_md116',1,'Request pacing'],['../transport-and-pacing.html',1,'Transport and request pacing']]],
   ['package_2',['As an installed package',['../index.html#autotoc_md5',1,'']]],
   ['panel_3',['Panel',['../classalgotradelib_1_1analytics_1_1Panel.html',1,'algotradelib::analytics::Panel'],['../classalgotradelib_1_1analytics_1_1Panel.html#a5e3456fcf234d4163ef251a018882b03',1,'algotradelib::analytics::Panel::Panel()']]],
   ['parallelism_20goes_4',['What is single-owner, and where parallelism goes',['../analytics-conventions.html#autotoc_md21',1,'']]],
@@ -122,7 +122,7 @@ var searchData=
   ['pricelimits_119',['PriceLimits',['../structalgotradelib_1_1PriceLimits.html',1,'algotradelib']]],
   ['pricelimitshandler_120',['PriceLimitsHandler',['../classalgotradelib_1_1kis_1_1KisClient.html#a7376c4eeb697f23610eddfdb17cb4afb',1,'algotradelib::kis::KisClient::PriceLimitsHandler'],['../classalgotradelib_1_1kiwoom_1_1KiwoomClient.html#a442b30d03fed8c7bcdb3858620bda999',1,'algotradelib::kiwoom::KiwoomClient::PriceLimitsHandler'],['../classalgotradelib_1_1tossinvest_1_1TossClient.html#ab855abf62da7dbd44e17151ac00ed9fd',1,'algotradelib::tossinvest::TossClient::PriceLimitsHandler']]],
   ['pricerule_121',['PriceRule',['../structalgotradelib_1_1PriceRule.html',1,'algotradelib']]],
-  ['prices_122',['Prices',['../writing-a-strategy.html#autotoc_md123',1,'']]],
+  ['prices_122',['Prices',['../writing-a-strategy.html#autotoc_md124',1,'']]],
   ['prices_123',['prices',['../classalgotradelib_1_1tossinvest_1_1TossBlockingClient.html#ac2a4ed311b6ac67f7e5b34b635686838',1,'algotradelib::tossinvest::TossBlockingClient::prices()'],['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html#aa93c80b459daa1a663a6ba0578c602f0',1,'algotradelib::BrokerTraits&lt; tossinvest::TossClient &gt;::prices()'],['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html#aca6137772baf60266cc7f7c2e1cf571d',1,'algotradelib::BrokerTraits&lt; tossinvest::TossBlockingClient &gt;::prices()'],['../classalgotradelib_1_1BlockingSession.html#aed340ee9fb6e26fbafdd092d6377c1fc',1,'algotradelib::BlockingSession::prices()']]],
   ['priceshandler_124',['PricesHandler',['../classalgotradelib_1_1tossinvest_1_1TossClient.html#a5d2032c0572824c3c6082604b5305c04',1,'algotradelib::tossinvest::TossClient']]],
   ['primary_5f_125',['primary_',['../structalgotradelib_1_1OrderRef.html#aa6c1afe535fc47e6772eda90416e97fe',1,'algotradelib::OrderRef']]],

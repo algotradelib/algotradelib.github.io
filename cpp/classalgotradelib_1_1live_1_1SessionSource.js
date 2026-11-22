@@ -22,5 +22,6 @@ var classalgotradelib_1_1live_1_1SessionSource =
     [ "set_journal", "classalgotradelib_1_1live_1_1SessionSource.html#abd079695b627bc66b05b8d788d81a449", null ],
     [ "set_match_window", "classalgotradelib_1_1live_1_1SessionSource.html#a90502c01f2ea7d1531fb2f5564ebb079", null ],
     [ "provides_working_orders", "classalgotradelib_1_1live_1_1SessionSource.html#a9e850d32307ae5788d48b0a2464aeac2", null ],
+    [ "reports_buying_power", "classalgotradelib_1_1live_1_1SessionSource.html#ae5b892001bf2fc1f582b942103ed5e5e", null ],
     [ "states_calendar_sessions", "classalgotradelib_1_1live_1_1SessionSource.html#ac1d9f345e1305c4cd892aa0dc8b18694", null ]
 ];

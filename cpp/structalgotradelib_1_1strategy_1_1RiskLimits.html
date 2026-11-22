@@ -147,12 +147,16 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a1bb82c07b4bfcf64fcec7b879933aea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The instruments that may be traded; absent means any.  <br /></td></tr>
 <tr class="memitem:ae7ebe64324f594d53b35de6496000819" id="r_ae7ebe64324f594d53b35de6496000819"><td class="memItemLeft">std::optional&lt; std::vector&lt; <a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae7ebe64324f594d53b35de6496000819">permitted_phases_</a> {std::vector&lt;<a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18f">MarketPhase</a>&gt;{<a class="el" href="namespacealgotradelib_1_1strategy.html#a268f818d283919cc59717ac4ea8fe18faa38bd5138bf35514df41a1795ebbf5c3">MarketPhase::OPEN</a>}}</td></tr>
 <tr class="memdesc:ae7ebe64324f594d53b35de6496000819"><td class="mdescLeft">&#160;</td><td class="mdescRight">The market phases in which a position may be opened or increased; absent means any.  <br /></td></tr>
+<tr class="memitem:a27555be7ad82a4bf8e25f930d0d11161" id="r_a27555be7ad82a4bf8e25f930d0d11161"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1Money.html">Money</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a27555be7ad82a4bf8e25f930d0d11161">run_budget_</a></td></tr>
+<tr class="memdesc:a27555be7ad82a4bf8e25f930d0d11161"><td class="mdescLeft">&#160;</td><td class="mdescRight">The run's starting cash, in one currency: buys spend it, sells return their proceeds, and the run never borrows.  <br /></td></tr>
+<tr class="memitem:a6fb5a9ca9d6871ca9b4904d6f86701f4" id="r_a6fb5a9ca9d6871ca9b4904d6f86701f4"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1strategy_1_1RunFees.html">RunFees</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6fb5a9ca9d6871ca9b4904d6f86701f4">run_fees_</a></td></tr>
+<tr class="memdesc:a6fb5a9ca9d6871ca9b4904d6f86701f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The fees a run budget estimates for each order; required with <span class="tt"><a class="el" href="#a27555be7ad82a4bf8e25f930d0d11161" title="The run&#39;s starting cash, in one currency: buys spend it, sells return their proceeds,...">run_budget_</a></span>, unread without it.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The limits the operator sets for <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1RiskGuard.html" title="Checks planned orders against RiskLimits, holds trading stopped, and counts orders sent.">RiskGuard</a></span>. </p>
 <p>Every limit is optional and absent means unlimited, except <span class="tt"><a class="el" href="#ae7ebe64324f594d53b35de6496000819" title="The market phases in which a position may be opened or increased; absent means any.">permitted_phases_</a></span>, which by default permits opening positions only while the market is <span class="tt">OPEN</span>, and <span class="tt"><a class="el" href="#a0134a5cbaa1a04ead5b90fd739ea6edf" title="Whether to refuse a sell larger than the broker&#39;s sellable quantity.">enforce_sellable_quantity_</a></span>, which is on by default. Holds (halts) are not limits; they are taken on the guard itself. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00274">274</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00412">412</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a0af48d7dd5e99dc03fa0a217e977692f" name="a0af48d7dd5e99dc03fa0a217e977692f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0af48d7dd5e99dc03fa0a217e977692f">&#9670;&#160;</a></span>enforce_buying_power_</h2>
@@ -169,7 +173,7 @@ Public Attributes</h2></td></tr>
 <p>Whether to refuse a buy that costs more than the broker's buying power. </p>
 <p>Off by default. The figure is a reading: a fill since the broker answered can change it, so passing this check does not guarantee the broker accepts the order. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00321">321</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00459">459</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -189,7 +193,7 @@ Public Attributes</h2></td></tr>
 <p>On by default: a sell is refused if the broker gave no sellable figure (the held quantity is not assumed sellable) or the figure's basis is not established. So an account that cannot sell what it does not hold never sends a sale that would open a short: every shipped adapter places cash orders, and a target below zero is refused here before it is sent.</p>
 <p>Turn it off, where the replay or the dry run is configured, to simulate short positions; that models no borrow. Turning it off for a live account borrows nothing either: it only lets the sale reach the broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00314">314</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00452">452</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +213,7 @@ Public Attributes</h2></td></tr>
 <p>Checked against the exposure if this order and every outstanding order filled, each valued at the highest price that could apply (see <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a856e034baa4972b2c7f9de0be810aa33" title="Computes the gross exposure in one currency if every outstanding order (and a candidate) filled.">projected_gross_exposure</a></span>). The ceiling applies to each currency separately; there is no account-wide converted cap.</p>
 <p>An order that does not raise this projection is permitted at any size, so an exit (a sell up to flat against a long) is allowed even when the account is over the ceiling. A sell that goes through flat into a short raises it and can be refused. To cap one order's size, use <span class="tt"><a class="el" href="#ab9fc3b4ca5baf8ae3a6e0ead2082886b" title="The largest value one order may have, in its own currency.">max_order_notional_</a></span>. An order that cannot be valued, or an incomplete <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1GuardInputs.html#ab3d2dcc31ead5cfc9c5cee17f38dcbce" title="The currency and mark of every instrument held or working, plus the order&#39;s.">GuardInputs::exposure_basis_</a></span>, is refused with <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badab8f593806ee7277ca27e51dfdd3216e2" title="A limit needed a value that is not known.">GuardReason::VALUE_NOT_KNOWN</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00297">297</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00435">435</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +231,7 @@ Public Attributes</h2></td></tr>
 
 <p>The largest value one order may have, in its own currency. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00276">276</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00414">414</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +249,7 @@ Public Attributes</h2></td></tr>
 
 <p>The most orders that may be sent within <span class="tt"><a class="el" href="#ae2fe5f164574e0cebe9c853a17105983" title="The window max_orders_per_window_ counts over.">rate_window_</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00299">299</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00437">437</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +268,7 @@ Public Attributes</h2></td></tr>
 <p>The largest absolute position, in shares, any instrument may reach. </p>
 <p>Checked against the net held quantity (all rows) plus everything working on the order's side plus the order, as if all of it filled. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00283">283</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00421">421</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +288,7 @@ Public Attributes</h2></td></tr>
 <p>The default permits only <span class="tt">OPEN</span>, so <span class="tt">UNKNOWN</span> (an uncovered calendar date) is refused.</p>
 <p>An order that only closes toward flat (it opposes the net held quantity and, with what is already working on the closing side, cannot carry it through flat) is permitted in any phase, so a flatten after the close can still be sent. The later checks (sellable, buying power, position and exposure ceilings) still apply to it, and the broker will likely reject it outside its session; <span class="tt"><a class="el" href="#a84877fc7becaa261f917482de4b49a40" title="The most orders that may be sent within rate_window_.">max_orders_per_window_</a></span> limits how often such an order is resent, and <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#aa7e8a38106a29b3f2b598e1ffa360cb5" title="Returns how many orders were sent in a market phase RiskLimits::permitted_phases_ does not permit,...">runner::Runner::sends_outside_permitted_phase</a></span> counts them. Cancellations are never checked against this. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00337">337</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00475">475</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -302,7 +306,7 @@ Public Attributes</h2></td></tr>
 
 <p>The instruments that may be traded; absent means any. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00323">323</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00461">461</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +324,45 @@ Public Attributes</h2></td></tr>
 
 <p>The window <span class="tt"><a class="el" href="#a84877fc7becaa261f917482de4b49a40" title="The most orders that may be sent within rate_window_.">max_orders_per_window_</a></span> counts over. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00301">301</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00439">439</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a27555be7ad82a4bf8e25f930d0d11161" name="a27555be7ad82a4bf8e25f930d0d11161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27555be7ad82a4bf8e25f930d0d11161">&#9670;&#160;</a></span>run_budget_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="structalgotradelib_1_1Money.html">Money</a>&gt; algotradelib::strategy::RiskLimits::run_budget_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The run's starting cash, in one currency: buys spend it, sells return their proceeds, and the run never borrows. </p>
+<p>The run starts flat and owns only the shares it buys. A buy must carry a positive limit price (<span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1bada5b76a3d5033bd5e1f16b5a2c3c068555" title="A budgeted run&#39;s buy carries no positive limit price of its own, so there is no cap to reserve agains...">GuardReason::RUN_BUY_NEEDS_LIMIT</a></span>). The buying-power check then spends the smaller of the broker's buying power (with <span class="tt"><a class="el" href="#a0af48d7dd5e99dc03fa0a217e977692f" title="Whether to refuse a buy that costs more than the broker&#39;s buying power.">enforce_buying_power_</a></span>) and the run's room: its cash less what its open buys reserve less this buy's estimated fee (<span class="tt"><a class="el" href="#a6fb5a9ca9d6871ca9b4904d6f86701f4" title="The fees a run budget estimates for each order; required with run_budget_, unread without it.">run_fees_</a></span>). A buy whose limit price times its quantity is more is refused, naming the smaller bound: <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badaf8867ce9876505d51d517687dd9c2555" title="The buy&#39;s value is more than the run&#39;s room (RiskLimits::run_budget_).">GuardReason::RUN_BUDGET_EXCEEDED</a></span> when the room is smaller, <span class="tt">INSUFFICIENT_BUYING_POWER</span> when the broker's is smaller or equal; equal passes. The sellable check bounds a sell by the smaller of the broker's sellable quantity less resting sells (with <span class="tt"><a class="el" href="#a0134a5cbaa1a04ead5b90fd739ea6edf" title="Whether to refuse a sell larger than the broker&#39;s sellable quantity.">enforce_sellable_quantity_</a></span>) and the run's own shares less its open sells: <span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badaa828697af7d84ee1c4d80becadd066ea" title="The sell is more than the run&#39;s own shares of the instrument less its open sells.">GuardReason::RUN_HOLDING_EXCEEDED</a></span> when the run's is smaller, <span class="tt">QUANTITY_NOT_SELLABLE</span> when the broker's is smaller or equal. Always name the currency (<span class="tt"><a class="el" href="classalgotradelib_1_1Currency.html" title="A three-letter currency code, such as KRW or USD (ISO 4217 style).">Currency</a></span> defaults to KRW); a buy priced in another currency is refused.</p>
+<p><span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">runner::Runner</a></span> keeps the run's cash and shares, and refuses to construct with a budget but no <span class="tt"><a class="el" href="#a6fb5a9ca9d6871ca9b4904d6f86701f4" title="The fees a run budget estimates for each order; required with run_budget_, unread without it.">run_fees_</a></span>, or over an executor that sends to a broker unless the runner keeps its run in the order journal (a serialized <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1JournalingExecutor.html" title="An executor wrapper that records each instruction in a journal before sending it.">runner::JournalingExecutor</a></span> over a broker that lists working orders). Such a runner opens its run at <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span>: a new run with this amount by default, once the journal's earlier run is closed, or the journal's run resumed when stated (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunOpening.html" title="How a budgeted runner opens its run when runner::recover_runner reads its journal (Runner::set_run_op...">runner::RunOpening</a></span>). It does not turn on <span class="tt"><a class="el" href="#a0af48d7dd5e99dc03fa0a217e977692f" title="Whether to refuse a buy that costs more than the broker&#39;s buying power.">enforce_buying_power_</a></span>. See "The run budget" in running-a-strategy-live.md. </p>
+
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00498">498</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6fb5a9ca9d6871ca9b4904d6f86701f4" name="a6fb5a9ca9d6871ca9b4904d6f86701f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb5a9ca9d6871ca9b4904d6f86701f4">&#9670;&#160;</a></span>run_fees_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="structalgotradelib_1_1strategy_1_1RunFees.html">RunFees</a>&gt; algotradelib::strategy::RiskLimits::run_fees_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The fees a run budget estimates for each order; required with <span class="tt"><a class="el" href="#a27555be7ad82a4bf8e25f930d0d11161" title="The run&#39;s starting cash, in one currency: buys spend it, sells return their proceeds,...">run_budget_</a></span>, unread without it. </p>
+
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00500">500</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>

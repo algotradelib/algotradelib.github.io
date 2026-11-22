@@ -38,6 +38,7 @@ var namespacealgotradelib_1_1runner =
     [ "RecoveryReport", "structalgotradelib_1_1runner_1_1RecoveryReport.html", "structalgotradelib_1_1runner_1_1RecoveryReport" ],
     [ "RefusedCancel", "structalgotradelib_1_1runner_1_1RefusedCancel.html", "structalgotradelib_1_1runner_1_1RefusedCancel" ],
     [ "RejectedCancel", "structalgotradelib_1_1runner_1_1RejectedCancel.html", "structalgotradelib_1_1runner_1_1RejectedCancel" ],
+    [ "RunLedger", "classalgotradelib_1_1runner_1_1RunLedger.html", "classalgotradelib_1_1runner_1_1RunLedger" ],
     [ "Runner", "classalgotradelib_1_1runner_1_1Runner.html", "classalgotradelib_1_1runner_1_1Runner" ],
     [ "runner_counts_kept_drops", "structalgotradelib_1_1runner_1_1runner__counts__kept__drops.html", null ],
     [ "runner_counts_kept_drops&lt; Runner, std::void_t&lt; decltype(std::declval&lt; const Runner &amp; &gt;().kept_intents_dropped())&gt; &gt;", "structalgotradelib_1_1runner_1_1runner__counts__kept__drops_3_01Runner_00_01std_1_1void__t_3_01d39a75f7f3706a263018f7dc31153d800.html", null ],
@@ -45,6 +46,11 @@ var namespacealgotradelib_1_1runner =
     [ "runner_counts_warmup&lt; Runner, std::void_t&lt; decltype(std::declval&lt; const Runner &amp; &gt;().warmup_instructions_discarded())&gt; &gt;", "structalgotradelib_1_1runner_1_1runner__counts__warmup_3_01Runner_00_01std_1_1void__t_3_01declty589a3e9bdd8d8dadba342111af057e9e.html", null ],
     [ "runner_keeps_sent_orders", "structalgotradelib_1_1runner_1_1runner__keeps__sent__orders.html", null ],
     [ "runner_keeps_sent_orders&lt; Runner, std::void_t&lt; decltype(Runner::keeps_sent_orders_until_listed)&gt; &gt;", "structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html", null ],
+    [ "RunOpening", "structalgotradelib_1_1runner_1_1RunOpening.html", "structalgotradelib_1_1runner_1_1RunOpening" ],
+    [ "RunPlacement", "structalgotradelib_1_1runner_1_1RunPlacement.html", "structalgotradelib_1_1runner_1_1RunPlacement" ],
+    [ "RunRecord", "structalgotradelib_1_1runner_1_1RunRecord.html", "structalgotradelib_1_1runner_1_1RunRecord" ],
+    [ "RunRecoverySummary", "structalgotradelib_1_1runner_1_1RunRecoverySummary.html", "structalgotradelib_1_1runner_1_1RunRecoverySummary" ],
+    [ "RunTransfer", "structalgotradelib_1_1runner_1_1RunTransfer.html", "structalgotradelib_1_1runner_1_1RunTransfer" ],
     [ "SeriesKey", "structalgotradelib_1_1runner_1_1SeriesKey.html", "structalgotradelib_1_1runner_1_1SeriesKey" ],
     [ "SessionWindow", "structalgotradelib_1_1runner_1_1SessionWindow.html", "structalgotradelib_1_1runner_1_1SessionWindow" ],
     [ "SignalStop", "classalgotradelib_1_1runner_1_1SignalStop.html", "classalgotradelib_1_1runner_1_1SignalStop" ],
@@ -52,6 +58,8 @@ var namespacealgotradelib_1_1runner =
     [ "source_names_buying_power_currencies&lt; Source, std::void_t&lt; decltype(std::declval&lt; const Source &amp; &gt;().buying_power_currencies())&gt; &gt;", "structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html", null ],
     [ "source_provides_working_orders", "structalgotradelib_1_1runner_1_1source__provides__working__orders.html", null ],
     [ "source_provides_working_orders&lt; Source, std::void_t&lt; decltype(Source::provides_working_orders)&gt; &gt;", "structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html", null ],
+    [ "source_reports_buying_power", "structalgotradelib_1_1runner_1_1source__reports__buying__power.html", null ],
+    [ "source_reports_buying_power&lt; Source, std::void_t&lt; decltype(Source::reports_buying_power)&gt; &gt;", "structalgotradelib_1_1runner_1_1source__reports__buying__power_3_01Source_00_01std_1_1void__t_3_92db6da9b3ec39970741f2475c559258.html", null ],
     [ "source_states_calendar_sessions", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions.html", null ],
     [ "source_states_calendar_sessions&lt; Source, std::void_t&lt; decltype(Source::states_calendar_sessions)&gt; &gt;", "structalgotradelib_1_1runner_1_1source__states__calendar__sessions_3_01Source_00_01std_1_1void__497b593350037081ad2186f1435eb9d0.html", null ],
     [ "source_states_charged_costs", "structalgotradelib_1_1runner_1_1source__states__charged__costs.html", null ],
@@ -71,7 +79,8 @@ var namespacealgotradelib_1_1runner =
     ] ],
     [ "JournalAction", "namespacealgotradelib_1_1runner.html#ac6ce2dd3ddcfc9bddc4a003a65ad5835", [
       [ "PLACE", "namespacealgotradelib_1_1runner.html#ac6ce2dd3ddcfc9bddc4a003a65ad5835a8c756b7e3daff6db3808a377b05a148f", null ],
-      [ "CANCEL", "namespacealgotradelib_1_1runner.html#ac6ce2dd3ddcfc9bddc4a003a65ad5835a2027c027133e22c8929e2874dc44dd36", null ]
+      [ "CANCEL", "namespacealgotradelib_1_1runner.html#ac6ce2dd3ddcfc9bddc4a003a65ad5835a2027c027133e22c8929e2874dc44dd36", null ],
+      [ "LEDGER", "namespacealgotradelib_1_1runner.html#ac6ce2dd3ddcfc9bddc4a003a65ad5835a90edd2c2f8e60f79a1b54485b1efdba1", null ]
     ] ],
     [ "JournalOutcome", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56e", [
       [ "PENDING", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eac69f06e1a9b016d133907b4e5f5864d2", null ],
@@ -80,7 +89,8 @@ var namespacealgotradelib_1_1runner =
       [ "INDETERMINATE", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56ea717bb676b27571e4f5392a911194842a", null ],
       [ "RESOLVED", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56ea874584b84df5da74c3964d8efbff7a02", null ],
       [ "CONFIRMED", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0", null ],
-      [ "HELD", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33", null ]
+      [ "HELD", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eab33343cae11179cc3df2575f7f6ddc33", null ],
+      [ "RECORDED", "namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56eae11c6364ef1be6b5ec2b5e507c7d0910", null ]
     ] ],
     [ "JournalReadStatus", "namespacealgotradelib_1_1runner.html#a43af025ab97573c4b5223ac3677a70bf", [
       [ "MISSING", "namespacealgotradelib_1_1runner.html#a43af025ab97573c4b5223ac3677a70bfa10d1208b485425756fcc932229386b02", null ],
@@ -116,6 +126,26 @@ var namespacealgotradelib_1_1runner =
       [ "UNCHANGED", "namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaa46335765005ff44b1fe1e38e5d2ddfcc", null ],
       [ "FAILED", "namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaab9e14d9b2886bcff408b85aefa780419", null ],
       [ "RATE_LIMITED", "namespacealgotradelib_1_1runner.html#a4b0650e6d65e9dcd541dd9e63f860ddaa0b481e215c9fdd207e9d14f6a0cc228f", null ]
+    ] ],
+    [ "RunPlacementState", "namespacealgotradelib_1_1runner.html#a419b183b8f5900f594e920578d739f62", [
+      [ "HELD", "namespacealgotradelib_1_1runner.html#a419b183b8f5900f594e920578d739f62ab33343cae11179cc3df2575f7f6ddc33", null ],
+      [ "UNBOOKED", "namespacealgotradelib_1_1runner.html#a419b183b8f5900f594e920578d739f62a9542dd9edcdf1788a6487e04d960644d", null ],
+      [ "BOOKED", "namespacealgotradelib_1_1runner.html#a419b183b8f5900f594e920578d739f62a4513f6b501d459db30787ec93204368e", null ]
+    ] ],
+    [ "RunRecordKind", "namespacealgotradelib_1_1runner.html#a7aaaf7b65a610f68d21db0a2b63a984a", [
+      [ "OPEN", "namespacealgotradelib_1_1runner.html#a7aaaf7b65a610f68d21db0a2b63a984aaa38bd5138bf35514df41a1795ebbf5c3", null ],
+      [ "DEPOSIT", "namespacealgotradelib_1_1runner.html#a7aaaf7b65a610f68d21db0a2b63a984aae2c141e421f9862e778b1f7a0749989f", null ],
+      [ "WITHDRAWAL", "namespacealgotradelib_1_1runner.html#a7aaaf7b65a610f68d21db0a2b63a984aadd4fd7a8ff1872e56da2312cf7143e83", null ],
+      [ "FILL", "namespacealgotradelib_1_1runner.html#a7aaaf7b65a610f68d21db0a2b63a984aae8225b11842409df543692aebed34fd1", null ]
+    ] ],
+    [ "RunRefusal", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541a", [
+      [ "NONE", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aab50339a10e1de285ac99d4c3990b8693", null ],
+      [ "NO_RUN", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aadd0bdf98a6ebd07519f9e50ec9377092", null ],
+      [ "DAMAGED", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aa3cf53b7601ee463412beea23294bd347", null ],
+      [ "LEDGER", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aa90edd2c2f8e60f79a1b54485b1efdba1", null ],
+      [ "CURRENCY", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aa4078b56c15c2087a7d223a5bdf104838", null ],
+      [ "TRANSFER", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aaeb5ddb3b6096fb90ff720d9c3e2a6628", null ],
+      [ "WRITE", "namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aad4b9e47f65b6e79b010582f15785867e", null ]
     ] ],
     [ "SendOutcome", "namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218ccc", [
       [ "ACCEPTED", "namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218cccaa806f1d2c42338ef5fa6497b66153e79", null ],
@@ -176,6 +206,7 @@ var namespacealgotradelib_1_1runner =
     [ "journal_outcome_refuses", "namespacealgotradelib_1_1runner.html#a574acffc200f16ddf87157fe51c889a5", null ],
     [ "journal_outcome_requires_operator", "namespacealgotradelib_1_1runner.html#aaccb83d6a32a4ba8fa8e9f1fb8c67765", null ],
     [ "journal_read_status_name", "namespacealgotradelib_1_1runner.html#a7aa2b2a96cea126035ca40639493cd17", null ],
+    [ "journal_run_of", "namespacealgotradelib_1_1runner.html#ac1a8013a0ea3301c23d87c8c6f72e8dd", null ],
     [ "match_against", "namespacealgotradelib_1_1runner.html#aa394dc4435e3533c5fd6305c2fb90255", null ],
     [ "match_against", "namespacealgotradelib_1_1runner.html#ab13f9b8fd3aafbe1a013c0542f263671", null ],
     [ "match_verdict_name", "namespacealgotradelib_1_1runner.html#aa673c1fabde0f941065f1da69601e97b", null ],
@@ -205,6 +236,8 @@ var namespacealgotradelib_1_1runner =
     [ "route_evidence", "namespacealgotradelib_1_1runner.html#afd31999575450627b8e00a32997e5c82", null ],
     [ "row_corresponds", "namespacealgotradelib_1_1runner.html#af68bbe2bce1e7c691a90a0bb68cb4552", null ],
     [ "row_might_correspond", "namespacealgotradelib_1_1runner.html#a1efeafad20c4bed85b4ddb0285087a25", null ],
+    [ "run_record_kind_from", "namespacealgotradelib_1_1runner.html#a089ddc1784f9e5833b047b109b444b65", null ],
+    [ "run_record_kind_name", "namespacealgotradelib_1_1runner.html#a807709e68dd4623c21a6e496e601a222", null ],
     [ "salvage_damaged", "namespacealgotradelib_1_1runner.html#a6d7f49e1b0fe85564da5054df3cd2556", null ],
     [ "salvage_journal_line", "namespacealgotradelib_1_1runner.html#af21827c1bf04be51e5b4942076c73147", null ],
     [ "send_outcome_is_local_failure", "namespacealgotradelib_1_1runner.html#ac5e0fd11d65ec2afc7bb66b7671284c1", null ],
@@ -223,10 +256,11 @@ var namespacealgotradelib_1_1runner =
     [ "unresolved_instructions", "namespacealgotradelib_1_1runner.html#abe75759c1f7351fcc6b793f2beac3198", null ],
     [ "withheld_plan_reason_name", "namespacealgotradelib_1_1runner.html#ac0b25c5053a894aed037f7f8884df5bf", null ],
     [ "withheld_reason_name", "namespacealgotradelib_1_1runner.html#a8719e841dd2ee26060f6728956da8a99", null ],
-    [ "all_journal_actions", "namespacealgotradelib_1_1runner.html#aac514b908a6218b4629cc86343c0bb7f", null ],
-    [ "all_journal_outcomes", "namespacealgotradelib_1_1runner.html#a530f271912ced67f8db7cbcfe6f6b8ff", null ],
+    [ "all_journal_actions", "namespacealgotradelib_1_1runner.html#aeea78b20e55bb8acdfc70c6a96806027", null ],
+    [ "all_journal_outcomes", "namespacealgotradelib_1_1runner.html#a780b33bbbf5fb254c7b98fee1a30530a", null ],
     [ "all_poll_kinds", "namespacealgotradelib_1_1runner.html#a83a408937aeb3dfebceb85876482a96a", null ],
     [ "all_poll_outcomes", "namespacealgotradelib_1_1runner.html#a9d22db34a115b553255f3b52d574d92e", null ],
+    [ "all_run_record_kinds", "namespacealgotradelib_1_1runner.html#aa85fdc3bc1e7dbc7c70fc94d4da3a82a", null ],
     [ "all_send_outcomes", "namespacealgotradelib_1_1runner.html#a5b7e6d487a9e5e30bf900aa8d52cef21", null ],
     [ "all_stop_intents", "namespacealgotradelib_1_1runner.html#a9cbb933ddcaf1b2be786ff786b466375", null ],
     [ "poll_kind_count", "namespacealgotradelib_1_1runner.html#aa81ef150f2729a1d33af80dbe61a3bab", null ]

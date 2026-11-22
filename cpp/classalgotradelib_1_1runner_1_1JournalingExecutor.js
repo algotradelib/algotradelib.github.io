@@ -11,6 +11,7 @@ var classalgotradelib_1_1runner_1_1JournalingExecutor =
     [ "last_error", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#ac3e1bb18df145568f359cf9934672efd", null ],
     [ "last_journal_error", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a4ced7f87294296e4817db8c91cff1e6d", null ],
     [ "last_ref", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a0c5fd403fa3abbf03517b2365d55f41d", null ],
+    [ "next_run_id", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a33f3411bcc4b9cad1bcadc2ab5c07091", null ],
     [ "place", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a9e7000c1eca093a25721704d13abc11e", null ],
     [ "place", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#ab2d340d6d115dcddec6d126a69c1dfb5", null ],
     [ "record", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#ad0a562e51c69e721f98123be72587270", null ],
@@ -18,6 +19,7 @@ var classalgotradelib_1_1runner_1_1JournalingExecutor =
     [ "route_of", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a71140362efe56df26bd8d19ba9cde226", null ],
     [ "route_of", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a2a2e74df42b2973c45de25e24f915b84", null ],
     [ "set_id_prefix", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a9d480e024cafa4a6fd617c2f1ceb8fb3", null ],
+    [ "set_run", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a5542a977a16ced85419028c8ac473e47", null ],
     [ "unjournaled_refusals", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a1fa56bfec5e11565e89093c2bde38dfd", null ],
     [ "reaches_a_broker", "classalgotradelib_1_1runner_1_1JournalingExecutor.html#a9e7decbeb53f62199b03e65cfae1a2e0", null ]
 ];

@@ -4,5 +4,7 @@ var structalgotradelib_1_1strategy_1_1GuardInputs =
     [ "now_", "structalgotradelib_1_1strategy_1_1GuardInputs.html#a169c0a83f2df777004883b8d7346d778", null ],
     [ "order_currency_", "structalgotradelib_1_1strategy_1_1GuardInputs.html#a1d031b94fc18fe1511b81034105c6c10", null ],
     [ "phase_", "structalgotradelib_1_1strategy_1_1GuardInputs.html#a020b076f05be1d5dc3792b57b7dc1ef6", null ],
-    [ "reference_price_", "structalgotradelib_1_1strategy_1_1GuardInputs.html#a3b10406a1195329f923a40fa3c11a1b3", null ]
+    [ "reference_price_", "structalgotradelib_1_1strategy_1_1GuardInputs.html#a3b10406a1195329f923a40fa3c11a1b3", null ],
+    [ "run_cash_", "structalgotradelib_1_1strategy_1_1GuardInputs.html#af3232a9cf705b7ae21156ccf2b5d870b", null ],
+    [ "run_holding_", "structalgotradelib_1_1strategy_1_1GuardInputs.html#ad9010aa7bee4b4805bf58367c8b72be5", null ]
 ];

@@ -5,7 +5,7 @@ var searchData=
   ['underneath_2',['Underneath',['../guide.html#autotoc_md59',1,'']]],
   ['underneath_20it_3',['The dependency rule, and the rule underneath it',['../architecture.html#autotoc_md23',1,'']]],
   ['units_20and_20why_20one_20share_20count_20is_20the_20weakest_4',['Three units, and why one share count is the weakest',['../binding-a-broker.html#autotoc_md34',1,'']]],
-  ['up_5',['Warm-up',['../writing-a-strategy.html#autotoc_md124',1,'']]],
+  ['up_5',['Warm-up',['../writing-a-strategy.html#autotoc_md125',1,'']]],
   ['user_20guide_6',['User guide',['../guide.html',1,'']]],
   ['using_20it_7',['Using it',['../index.html#autotoc_md8',1,'']]]
 ];

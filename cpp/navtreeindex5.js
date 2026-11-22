@@ -1,5 +1,11 @@
 var NAVTREEINDEX5 =
 {
+"classalgotradelib_1_1network_1_1FileCalendarCache.html":[1,0,0,11,6],
+"classalgotradelib_1_1network_1_1FileCalendarCache.html":[2,0,0,10,6],
+"classalgotradelib_1_1network_1_1FileCalendarCache.html#a18425a115b87faaaebcfe3efd7d24ccb":[1,0,0,11,6,0],
+"classalgotradelib_1_1network_1_1FileCalendarCache.html#a18425a115b87faaaebcfe3efd7d24ccb":[2,0,0,10,6,0],
+"classalgotradelib_1_1network_1_1FileCalendarCache.html#a4586593dfed686683c88e2f45548510c":[1,0,0,11,6,1],
+"classalgotradelib_1_1network_1_1FileCalendarCache.html#a4586593dfed686683c88e2f45548510c":[2,0,0,10,6,1],
 "classalgotradelib_1_1network_1_1FileCalendarCache.html#a4caa9d9e92d2ebc14995adfae1d356f7":[1,0,0,11,6,2],
 "classalgotradelib_1_1network_1_1FileCalendarCache.html#a4caa9d9e92d2ebc14995adfae1d356f7":[2,0,0,10,6,2],
 "classalgotradelib_1_1network_1_1FileTokenStore.html":[1,0,0,11,7],
@@ -243,11 +249,5 @@ var NAVTREEINDEX5 =
 "classalgotradelib_1_1runner_1_1FileStopChannel.html#adb11eead4bad6b00b0afa19cc41f7803":[1,0,0,12,11,3],
 "classalgotradelib_1_1runner_1_1FileStopChannel.html#adb11eead4bad6b00b0afa19cc41f7803":[2,0,0,11,11,3],
 "classalgotradelib_1_1runner_1_1FileStopChannel.html#ae436ed2ed53f5f1c619678304685405d":[1,0,0,12,11,4],
-"classalgotradelib_1_1runner_1_1FileStopChannel.html#ae436ed2ed53f5f1c619678304685405d":[2,0,0,11,11,4],
-"classalgotradelib_1_1runner_1_1IndeterminacyLedger.html":[1,0,0,12,13],
-"classalgotradelib_1_1runner_1_1IndeterminacyLedger.html":[2,0,0,11,13],
-"classalgotradelib_1_1runner_1_1IndeterminacyLedger.html#a11d8860dba3578ae533fac821ac22aaf":[1,0,0,12,13,0],
-"classalgotradelib_1_1runner_1_1IndeterminacyLedger.html#a11d8860dba3578ae533fac821ac22aaf":[2,0,0,11,13,0],
-"classalgotradelib_1_1runner_1_1IndeterminacyLedger.html#a5cf78c07b6566822932e53f006910159":[1,0,0,12,13,1],
-"classalgotradelib_1_1runner_1_1IndeterminacyLedger.html#a5cf78c07b6566822932e53f006910159":[2,0,0,11,13,1]
+"classalgotradelib_1_1runner_1_1FileStopChannel.html#ae436ed2ed53f5f1c619678304685405d":[2,0,0,11,11,4]
 };

@@ -182,6 +182,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks planned orders against <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html" title="The limits the operator sets for RiskGuard.">RiskLimits</a></span>, holds trading stopped, and counts orders sent.  <a href="classalgotradelib_1_1strategy_1_1RiskGuard.html#details">More...</a><br /></td></tr>
 <tr class="memitem:RiskLimits" id="r_RiskLimits"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html">RiskLimits</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The limits the operator sets for <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1RiskGuard.html" title="Checks planned orders against RiskLimits, holds trading stopped, and counts orders sent.">RiskGuard</a></span>.  <a href="structalgotradelib_1_1strategy_1_1RiskLimits.html#details">More...</a><br /></td></tr>
+<tr class="memitem:RunFees" id="r_RunFees"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1RunFees.html">RunFees</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The fees a run budget estimates for an order (<span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#a6fb5a9ca9d6871ca9b4904d6f86701f4" title="The fees a run budget estimates for each order; required with run_budget_, unread without it.">RiskLimits::run_fees_</a></span>).  <a href="structalgotradelib_1_1strategy_1_1RunFees.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SellableConventionProbe" id="r_SellableConventionProbe"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classalgotradelib_1_1strategy_1_1SellableConventionProbe.html">SellableConventionProbe</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Infers a broker's <span class="tt"><a class="el" href="#a19c42b8aaf6ae900f613a2aef0e1bae7" title="Whether a broker&#39;s sellable quantity already excludes sell orders resting at the broker.">SellableConvention</a></span> from successive portfolios.  <a href="classalgotradelib_1_1strategy_1_1SellableConventionProbe.html#details">More...</a><br /></td></tr>
 <tr class="memitem:SellableEvidence" id="r_SellableEvidence"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structalgotradelib_1_1strategy_1_1SellableEvidence.html">SellableEvidence</a></td></tr>
@@ -278,6 +280,11 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#a1c6d25b5684ed353484950ead20c1bada7df7376cf6bcbea8ebbb9ac432118fa3">QUANTITY_NOT_SELLABLE</a>
 , <a class="el" href="#a1c6d25b5684ed353484950ead20c1bada13bf32beb34d2105042c128402de0cad">SELLABLE_BASIS_UNESTABLISHED</a>
 , <a class="el" href="#a1c6d25b5684ed353484950ead20c1badabae7f8c020019539328bd7b3c5b750b1">INSUFFICIENT_BUYING_POWER</a>
+, <a class="el" href="#a1c6d25b5684ed353484950ead20c1badaf8867ce9876505d51d517687dd9c2555">RUN_BUDGET_EXCEEDED</a>
+, <br />
+&#160;&#160;<a class="el" href="#a1c6d25b5684ed353484950ead20c1bada5b76a3d5033bd5e1f16b5a2c3c068555">RUN_BUY_NEEDS_LIMIT</a>
+, <a class="el" href="#a1c6d25b5684ed353484950ead20c1badaa828697af7d84ee1c4d80becadd066ea">RUN_HOLDING_EXCEEDED</a>
+, <a class="el" href="#a1c6d25b5684ed353484950ead20c1bada184abf310ed7c4b106a2890730ed7b13">RUN_LEDGER_UNSETTLED</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a1c6d25b5684ed353484950ead20c1bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which check refused an order.  <a href="#a1c6d25b5684ed353484950ead20c1bad">More...</a><br /></td></tr>
@@ -415,7 +422,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00405">405</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00588">588</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,9 +472,21 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a1c6d25b5684ed353484950ead20c1badabae7f8c020019539328bd7b3c5b750b1" name="a1c6d25b5684ed353484950ead20c1badabae7f8c020019539328bd7b3c5b750b1"></a>INSUFFICIENT_BUYING_POWER&#160;</td><td class="fielddoc"><p>The buy costs more than the broker's buying power, or the broker gave none. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a1c6d25b5684ed353484950ead20c1badaf8867ce9876505d51d517687dd9c2555" name="a1c6d25b5684ed353484950ead20c1badaf8867ce9876505d51d517687dd9c2555"></a>RUN_BUDGET_EXCEEDED&#160;</td><td class="fielddoc"><p>The buy's value is more than the run's room (<span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#a27555be7ad82a4bf8e25f930d0d11161" title="The run&#39;s starting cash, in one currency: buys spend it, sells return their proceeds,...">RiskLimits::run_budget_</a></span>). </p>
+<p>The room is the run's cash less what its open buys reserve less this buy's estimated fee (<span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#a6fb5a9ca9d6871ca9b4904d6f86701f4" title="The fees a run budget estimates for each order; required with run_budget_, unread without it.">RiskLimits::run_fees_</a></span>); the value is its quantity times its limit price. <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1GuardRejection.html#a84954aea3ff236ce5e1fcd99aafcc283" title="The limit that was exceeded, where the reason has one.">GuardRejection::limit_</a></span> is the room, below zero when the run is, and <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1GuardRejection.html#aaaeabcfd49a70f5d01e7704cf9740d99" title="The value the order would have reached, where the reason has one.">GuardRejection::attempted_</a></span> the value. Also a buy priced in another currency than the run's: then <span class="tt">limit_</span> is the run's cash, in its own currency, and <span class="tt">attempted_</span> is absent. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c6d25b5684ed353484950ead20c1bada5b76a3d5033bd5e1f16b5a2c3c068555" name="a1c6d25b5684ed353484950ead20c1bada5b76a3d5033bd5e1f16b5a2c3c068555"></a>RUN_BUY_NEEDS_LIMIT&#160;</td><td class="fielddoc"><p>A budgeted run's buy carries no positive limit price of its own, so there is no cap to reserve against. </p>
+<p>Only a limit or a stop-limit with a positive price passes: every other type (market, best, primary, mid, closing, unknown, and a conditional limit, which becomes a market order at the close) is refused. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c6d25b5684ed353484950ead20c1badaa828697af7d84ee1c4d80becadd066ea" name="a1c6d25b5684ed353484950ead20c1badaa828697af7d84ee1c4d80becadd066ea"></a>RUN_HOLDING_EXCEEDED&#160;</td><td class="fielddoc"><p>The sell is more than the run's own shares of the instrument less its open sells. </p>
+<p>Shares the account held before the run are not the run's. <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1GuardRejection.html#a84954aea3ff236ce5e1fcd99aafcc283" title="The limit that was exceeded, where the reason has one.">GuardRejection::limit_</a></span> is never below zero. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c6d25b5684ed353484950ead20c1bada184abf310ed7c4b106a2890730ed7b13" name="a1c6d25b5684ed353484950ead20c1bada184abf310ed7c4b106a2890730ed7b13"></a>RUN_LEDGER_UNSETTLED&#160;</td><td class="fielddoc"><p>The run's cash, or its shares of the instrument, is not known. </p>
+<p><span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1GuardInputs.html#af3232a9cf705b7ae21156ccf2b5d870b" title="The run&#39;s cash less what its open buys reserve, read by a budgeted buy (RiskLimits::run_budget_).">GuardInputs::run_cash_</a></span> (for a buy) or <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1GuardInputs.html#ad9010aa7bee4b4805bf58367c8b72be5" title="The run&#39;s own shares of the order&#39;s instrument less its open sells, read by a budgeted sell.">GuardInputs::run_holding_</a></span> (for a sell) is absent, the run's cash is in another currency than the budget, or <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#a6fb5a9ca9d6871ca9b4904d6f86701f4" title="The fees a run budget estimates for each order; required with run_budget_, unread without it.">RiskLimits::run_fees_</a></span> is absent. A live run leaves them absent while it is not open, its journal writes have stopped, or an order of the run is unnamed, held, or released without a booking (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html#a129dfc14a342e55396346d6d87967b2c" title="Lists the run&#39;s placements that leave its ledger unsettled: held for an operator, or released by one ...">runner::Runner::run_unsettled</a></span>). </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00182">182</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00186">186</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -511,7 +530,7 @@ Variables</h2></td></tr>
 <p>Sizing against old holdings can double a position or miss one acquired since. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a" name="aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a"></a>BUYING_POWER_UNREAD&#160;</td><td class="fielddoc"><p>A buying-power limit is enforced, but there is no current reading to check it against. </p>
-<p>The reading was never polled, has not returned yet, or has aged out. </p>
+<p>The reading was never polled, has not returned yet, or has aged out. <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">runner::PollingLoop</a></span> also holds this over a source whose broker reports no buying power, or that does not say (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1source__reports__buying__power.html" title="Detects whether a source declares static constexpr bool reports_buying_power = true,...">runner::source_reports_buying_power</a></span>): without <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#a27555be7ad82a4bf8e25f930d0d11161" title="The run&#39;s starting cash, in one currency: buys spend it, sells return their proceeds,...">RiskLimits::run_budget_</a></span>, since nothing would then bound a buy, and with one while <span class="tt"><a class="el" href="structalgotradelib_1_1strategy_1_1RiskLimits.html#a0af48d7dd5e99dc03fa0a217e977692f" title="Whether to refuse a buy that costs more than the broker&#39;s buying power.">RiskLimits::enforce_buying_power_</a></span> is on, since no reading will ever arrive. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790" name="aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790"></a>POLL_FAILING&#160;</td><td class="fielddoc"><p>A poll kept failing and the loop gave up, as opposed to <span class="tt">STOPPING</span> on request. </p>
 </td></tr>
@@ -551,7 +570,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00092">92</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00096">96</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -860,9 +879,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether the order closes toward flat, or <span class="tt">std::nullopt</span> if that cannot be established (arithmetic that does not fit, or a working order filled beyond its quantity); treat <span class="tt">std::nullopt</span> as <span class="tt">false</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00613">613</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00796">796</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00613">closes_toward_flat()</a>, and <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00796">closes_toward_flat()</a>, and <a class="el" href="risk_8hpp_source.html#l01163">algotradelib::strategy::RiskGuard::evaluate()</a>.</p>
 
 </div>
 </div>
@@ -898,9 +917,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00222">222</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00258">258</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00222">guard_reason_name()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00258">guard_reason_name()</a>.</p>
 
 </div>
 </div>
@@ -942,9 +961,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">reason</span> stops <span class="tt">klass</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00115">115</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00119">119</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00845">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l00115">halt_blocks()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l01031">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l00119">halt_blocks()</a>.</p>
 
 </div>
 </div>
@@ -980,9 +999,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The name; empty for a value that is not a <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00145">145</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00149">149</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00145">halt_reason_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00149">halt_reason_name()</a>, and <a class="el" href="live__program_8hpp_source.html#l00218">live_program::print_loop()</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1170,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="event_8hpp_source.html#l00090">90</a> of file <a class="el" href="event_8hpp_source.html">event.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01856">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00090">market_phase_session_ended()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l02055">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::feed()</a>, and <a class="el" href="event_8hpp_source.html#l00090">market_phase_session_ended()</a>.</p>
 
 </div>
 </div>
@@ -1189,7 +1208,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="portfolio_8hpp_source.html#l00022">22</a> of file <a class="el" href="portfolio_8hpp_source.html">portfolio.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00613">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01202">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00022">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00436">projected_gross_exposure()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00573">reconcile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00796">closes_toward_flat()</a>, <a class="el" href="runner_8hpp_source.html#l01401">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::confirm_from_history()</a>, <a class="el" href="portfolio_8hpp_source.html#l00022">order_is_open()</a>, <a class="el" href="risk_8hpp_source.html#l00619">projected_gross_exposure()</a>, and <a class="el" href="reconcile_8hpp_source.html#l00573">reconcile()</a>.</p>
 
 </div>
 </div>
@@ -1255,9 +1274,9 @@ template&lt;typename Broker&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The exposure, or <span class="tt">std::nullopt</span> if it cannot be computed exactly: an instrument missing from <span class="tt">basis</span> or listed twice, a mark or price that is not positive, a working order filled beyond its quantity, or arithmetic that does not fit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00436">436</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00619">619</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00969">algotradelib::strategy::RiskGuard::evaluate()</a>, and <a class="el" href="risk_8hpp_source.html#l00436">projected_gross_exposure()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l01163">algotradelib::strategy::RiskGuard::evaluate()</a>, and <a class="el" href="risk_8hpp_source.html#l00619">projected_gross_exposure()</a>.</p>
 
 </div>
 </div>
@@ -1481,7 +1500,7 @@ template&lt;typename Broker&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="intent_8hpp_source.html#l00122">122</a> of file <a class="el" href="intent_8hpp_source.html">intent.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01281">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, and <a class="el" href="intent_8hpp_source.html#l00122">size_kind_is_target()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8hpp_source.html#l01480">algotradelib::runner::Runner&lt; Strategy, CapsType, Tag, Executor &gt;::retry_retained_targets()</a>, and <a class="el" href="intent_8hpp_source.html#l00122">size_kind_is_target()</a>.</p>
 
 </div>
 </div>
@@ -1620,18 +1639,18 @@ template&lt;typename Broker&gt; </div>
 <div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a">HaltReason::BUYING_POWER_UNREAD</a>,</div>
 <div class="line">  <a class="code hl_enumvalue" href="#aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790">HaltReason::POLL_FAILING</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a">algotradelib::strategy::HaltReason::BUYING_POWER_UNREAD</a></div><div class="ttdeci">@ BUYING_POWER_UNREAD</div><div class="ttdoc">A buying-power limit is enforced, but there is no current reading to check it against.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00067">risk.hpp:67</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a05e73c90bddc6d0e2dbba06a2d18ce1a">algotradelib::strategy::HaltReason::BUYING_POWER_UNREAD</a></div><div class="ttdeci">@ BUYING_POWER_UNREAD</div><div class="ttdoc">A buying-power limit is enforced, but there is no current reading to check it against.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00071">risk.hpp:71</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a0a7253e3bb64d5d84d1ded4d45582839"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a0a7253e3bb64d5d84d1ded4d45582839">algotradelib::strategy::HaltReason::LOCAL_FAILURE</a></div><div class="ttdeci">@ LOCAL_FAILURE</div><div class="ttdoc">Local machinery failed, such as the order journal not being writable; nothing is sent.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00040">risk.hpp:40</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a2e258ec19f84ad5d7d3763911c56a075"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a2e258ec19f84ad5d7d3763911c56a075">algotradelib::strategy::HaltReason::PORTFOLIO_ABSENT</a></div><div class="ttdeci">@ PORTFOLIO_ABSENT</div><div class="ttdoc">No holdings snapshot has been read yet, so what the account holds is unknown.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00055">risk.hpp:55</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a4c5f36b83e772a0359c29945bc588736"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a4c5f36b83e772a0359c29945bc588736">algotradelib::strategy::HaltReason::ORDER_LIST_UNREAD</a></div><div class="ttdeci">@ ORDER_LIST_UNREAD</div><div class="ttdoc">The broker&#39;s order list has not been read since this process started.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00049">risk.hpp:49</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752a986496ca5b23669b8661171566a167c3"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752a986496ca5b23669b8661171566a167c3">algotradelib::strategy::HaltReason::OPERATOR</a></div><div class="ttdeci">@ OPERATOR</div><div class="ttdoc">A person stopped trading with RiskGuard::halt(); only RiskGuard::resume() clears it.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00032">risk.hpp:32</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752aac301c8088ae5ae2b2edddba510bb765"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752aac301c8088ae5ae2b2edddba510bb765">algotradelib::strategy::HaltReason::PORTFOLIO_STALE</a></div><div class="ttdeci">@ PORTFOLIO_STALE</div><div class="ttdoc">The holdings snapshot is older than the configured maximum age.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00061">risk.hpp:61</a></div></div>
-<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790">algotradelib::strategy::HaltReason::POLL_FAILING</a></div><div class="ttdeci">@ POLL_FAILING</div><div class="ttdoc">A poll kept failing and the loop gave up, as opposed to STOPPING on request.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00069">risk.hpp:69</a></div></div>
+<div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752aca87a331970fe83285c87a4b3728e790">algotradelib::strategy::HaltReason::POLL_FAILING</a></div><div class="ttdeci">@ POLL_FAILING</div><div class="ttdoc">A poll kept failing and the loop gave up, as opposed to STOPPING on request.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00073">risk.hpp:73</a></div></div>
 <div class="ttc" id="anamespacealgotradelib_1_1strategy_html_aff76e0ec02bd1189fad25036355a2752af6cdb3c6710b50ec65ee07f740847e10"><div class="ttname"><a href="#aff76e0ec02bd1189fad25036355a2752af6cdb3c6710b50ec65ee07f740847e10">algotradelib::strategy::HaltReason::STOPPING</a></div><div class="ttdeci">@ STOPPING</div><div class="ttdoc">A stop was requested and the run is shutting down.</div><div class="ttdef"><b>Definition</b> <a href="risk_8hpp_source.html#l00042">risk.hpp:42</a></div></div>
 </div><!-- fragment -->
 <p>Every <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span>, in declaration order. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00073">73</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00077">77</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
 </div>
 </div>
@@ -1695,9 +1714,9 @@ template&lt;typename Broker&gt; </div>
 
 <p>The number of <span class="tt"><a class="el" href="#aff76e0ec02bd1189fad25036355a2752" title="Who or what is holding trading stopped.">HaltReason</a></span> values. </p>
 
-<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00085">85</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="risk_8hpp_source.html#l00089">89</a> of file <a class="el" href="risk_8hpp_source.html">risk.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l00845">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l00868">algotradelib::strategy::RiskGuard::holds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="risk_8hpp_source.html#l01031">algotradelib::strategy::RiskGuard::blocking_reason_for()</a>, and <a class="el" href="risk_8hpp_source.html#l01054">algotradelib::strategy::RiskGuard::holds()</a>.</p>
 
 </div>
 </div>

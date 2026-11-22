@@ -12,5 +12,7 @@ var classalgotradelib_1_1backtest_1_1Backtester =
     [ "finish_history", "classalgotradelib_1_1backtest_1_1Backtester.html#acf17870e4a7eac3cf422367da9984200", null ],
     [ "ledger", "classalgotradelib_1_1backtest_1_1Backtester.html#a467b358a3c18b251f0936816cbfd21ab", null ],
     [ "result", "classalgotradelib_1_1backtest_1_1Backtester.html#a5550e986a83ad759063d2e969e2404f5", null ],
+    [ "run_cash", "classalgotradelib_1_1backtest_1_1Backtester.html#a05fc26d173eeea13df4baec60990ac0d", null ],
+    [ "run_holding", "classalgotradelib_1_1backtest_1_1Backtester.html#a2b551589cb3bdb6b6fe00b7dcfcc7e61", null ],
     [ "strategy", "classalgotradelib_1_1backtest_1_1Backtester.html#af187daf2ab272637bb438b0ae35996ac", null ]
 ];

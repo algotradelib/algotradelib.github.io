@@ -1,0 +1,10 @@
+<map id="algotradelib::runner::source_reports_buying_power&lt; Source, std::void_t&lt; decltype(Source::reports_buying_power)&gt; &gt;" name="algotradelib::runner::source_reports_buying_power&lt; Source, std::void_t&lt; decltype(Source::reports_buying_power)&gt; &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="635,52,843,148"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,31,123,59"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,28,233,13,353,4,417,3,483,6,548,13,612,27,669,52,663,51,611,32,548,19,483,11,417,8,353,9,234,19,139,33"/>
+<area shape="rect" id="Node000004" href="$structalgotradelib_1_1runner_1_1source__reports__buying__power.html" title="Detects whether a source declares static constexpr bool reports_buying_power = true,..." alt="" coords="172,48,388,109"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="137,54,174,61,169,63,139,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="188,133,373,195"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="388,146,632,115,638,114,389,151"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="404,95,413,96,528,101,638,103,632,104,527,106,412,101,404,101"/>
+</map>

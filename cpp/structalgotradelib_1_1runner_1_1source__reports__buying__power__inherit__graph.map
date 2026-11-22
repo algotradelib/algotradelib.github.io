@@ -1,0 +1,7 @@
+<map id="algotradelib::runner::source_reports_buying_power&lt; Source, typename &gt;" name="algotradelib::runner::source_reports_buying_power&lt; Source, typename &gt;">
+<area shape="rect" id="Node000001" title="Detects whether a source declares static constexpr bool reports_buying_power = true,..." alt="" coords="172,44,388,106"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1runner_1_1source__reports__buying__power_3_01Source_00_01std_1_1void__t_3_92db6da9b3ec39970741f2475c559258.html" title=" " alt="" coords="635,27,843,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="404,72,638,75,632,75,404,78"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,61,123,89"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,72,174,74,169,76,139,78"/>
+</map>

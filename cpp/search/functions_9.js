@@ -23,6 +23,7 @@ var searchData=
   ['journal_5foutcome_5frefuses_20',['journal_outcome_refuses',['../namespacealgotradelib_1_1runner.html#a574acffc200f16ddf87157fe51c889a5',1,'algotradelib::runner']]],
   ['journal_5foutcome_5frequires_5foperator_21',['journal_outcome_requires_operator',['../namespacealgotradelib_1_1runner.html#aaccb83d6a32a4ba8fa8e9f1fb8c67765',1,'algotradelib::runner']]],
   ['journal_5fread_5fstatus_5fname_22',['journal_read_status_name',['../namespacealgotradelib_1_1runner.html#a7aa2b2a96cea126035ca40639493cd17',1,'algotradelib::runner']]],
-  ['journalingexecutor_23',['JournalingExecutor',['../classalgotradelib_1_1runner_1_1JournalingExecutor.html#afe6e2a9af0450f0eb3fd7a224341f3d2',1,'algotradelib::runner::JournalingExecutor']]],
-  ['jump_24',['jump',['../classalgotradelib_1_1runner_1_1ManualClock.html#a9ae54b61134c660ee3dc66ec8df7a800',1,'algotradelib::runner::ManualClock']]]
+  ['journal_5frun_5fof_23',['journal_run_of',['../namespacealgotradelib_1_1runner.html#ac1a8013a0ea3301c23d87c8c6f72e8dd',1,'algotradelib::runner']]],
+  ['journalingexecutor_24',['JournalingExecutor',['../classalgotradelib_1_1runner_1_1JournalingExecutor.html#afe6e2a9af0450f0eb3fd7a224341f3d2',1,'algotradelib::runner::JournalingExecutor']]],
+  ['jump_25',['jump',['../classalgotradelib_1_1runner_1_1ManualClock.html#a9ae54b61134c660ee3dc66ec8df7a800',1,'algotradelib::runner::ManualClock']]]
 ];

@@ -1,0 +1,55 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,262,146,290"/>
+<area shape="rect" id="Node000001" href="$structalgotradelib_1_1runner_1_1runner__keeps__sent__orders_3_01Runner_00_01std_1_1void__t_3_01dc42259f5f4ab53d8a5931c691f917354.html" title=" " alt="" coords="241,5,478,101"/>
+<area shape="poly" id="edge22_Node000000_Node000001" title=" " alt="" coords="88,247,129,179,158,143,192,111,242,84,239,88,195,115,162,146,133,182,93,249"/>
+<area shape="rect" id="Node000009" href="$structalgotradelib_1_1runner_1_1source__provides__working__orders_3_01Source_00_01std_1_1void__t562c699d9cec6741d83998265efb1a47.html" title=" " alt="" coords="251,331,468,426"/>
+<area shape="poly" id="edge23_Node000000_Node000009" title=" " alt="" coords="129,293,195,316,253,338,249,341,193,321,132,298"/>
+<area shape="rect" id="Node000010" href="$structalgotradelib_1_1runner_1_1source__reports__buying__power_3_01Source_00_01std_1_1void__t_3_92db6da9b3ec39970741f2475c559258.html" title=" " alt="" coords="256,451,464,546"/>
+<area shape="poly" id="edge24_Node000000_Node000010" title=" " alt="" coords="90,301,133,369,162,405,195,436,225,455,258,470,253,473,222,460,192,441,158,409,129,372,91,306"/>
+<area shape="rect" id="Node000011" href="$structalgotradelib_1_1runner_1_1source__states__calendar__sessions_3_01Source_00_01std_1_1void__497b593350037081ad2186f1435eb9d0.html" title=" " alt="" coords="251,125,469,221"/>
+<area shape="poly" id="edge25_Node000000_Node000011" title=" " alt="" coords="128,255,193,231,252,210,249,215,195,236,132,258"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="17,1387,134,1415"/>
+<area shape="poly" id="edge31_Node000004_Node000009" title=" " alt="" coords="78,1372,143,888,147,787,148,655,152,589,159,528,172,475,192,437,218,413,252,396,249,401,221,417,196,440,177,477,164,529,157,589,154,656,152,787,148,888,84,1372"/>
+<area shape="poly" id="edge32_Node000004_Node000010" title=" " alt="" coords="78,1371,141,911,191,557,220,531,257,515,254,519,223,536,196,560,146,911,83,1372"/>
+<area shape="poly" id="edge33_Node000004_Node000011" title=" " alt="" coords="79,1372,108,1170,143,888,153,555,166,350,177,275,183,248,192,232,217,207,252,190,249,195,221,211,196,235,188,250,182,276,171,350,159,555,148,888,113,1170,84,1372"/>
+<area shape="rect" id="Node000003" href="$structalgotradelib_1_1backtest_1_1is__price__join_3_01Join_00_01std_1_1enable__if__t_3_01std_1_1f8db1d5447abf19be8d6285ba8cb8e78.html" title="A join with the member join that resample_closes and resample_bars call." alt="" coords="254,571,466,701"/>
+<area shape="poly" id="edge26_Node000004_Node000003" title=" " alt="" coords="78,1371,96,1223,124,1015,158,819,175,750,191,710,219,683,255,664,252,668,222,688,196,713,180,751,163,821,130,1015,101,1224,83,1372"/>
+<area shape="rect" id="Node000005" href="$structalgotradelib_1_1backtest_1_1is__window__scheme_3_01Scheme_00_01std_1_1enable__if__t_3_01st78dd9823fcdae9fb5106fec7a4ed3015.html" title="A scheme with the member train that folds calls." alt="" coords="194,724,526,854"/>
+<area shape="poly" id="edge27_Node000004_Node000005" title=" " alt="" coords="77,1372,90,1262,114,1111,130,1035,148,965,168,906,192,865,206,852,203,857,196,868,173,908,153,966,135,1036,119,1112,96,1263,82,1372"/>
+<area shape="rect" id="Node000006" href="$structalgotradelib_1_1runner_1_1runner__counts__kept__drops_3_01Runner_00_01std_1_1void__t_3_01d39a75f7f3706a263018f7dc31153d800.html" title=" " alt="" coords="264,878,456,991"/>
+<area shape="poly" id="edge28_Node000004_Node000006" title=" " alt="" coords="75,1372,80,1299,97,1201,112,1148,132,1096,158,1047,192,1002,224,975,265,956,262,960,227,979,196,1006,163,1049,137,1098,117,1150,102,1202,85,1300,80,1372"/>
+<area shape="rect" id="Node000007" href="$structalgotradelib_1_1runner_1_1runner__counts__warmup_3_01Runner_00_01std_1_1void__t_3_01declty589a3e9bdd8d8dadba342111af057e9e.html" title=" " alt="" coords="252,1016,468,1128"/>
+<area shape="poly" id="edge29_Node000004_Node000007" title=" " alt="" coords="80,1372,93,1323,115,1261,147,1196,168,1166,192,1139,219,1118,253,1101,250,1105,222,1122,195,1143,172,1170,152,1199,120,1263,98,1324,85,1373"/>
+<area shape="rect" id="Node000008" href="$structalgotradelib_1_1runner_1_1source__names__buying__power__currencies_3_01Source_00_01std_1_1d0c4c80a9aa54d63fa8edb994aeb33ee.html" title=" " alt="" coords="239,1153,480,1266"/>
+<area shape="poly" id="edge30_Node000004_Node000008" title=" " alt="" coords="94,1374,136,1325,163,1299,192,1276,240,1250,237,1255,195,1281,167,1303,140,1329,99,1376"/>
+<area shape="rect" id="Node000012" href="$structalgotradelib_1_1runner_1_1source__states__charged__costs_3_01Source_00_01std_1_1void__t_3_18ee40020b45d1e61f73c6245e3686dd.html" title=" " alt="" coords="253,1290,467,1403"/>
+<area shape="poly" id="edge34_Node000004_Node000012" title=" " alt="" coords="148,1385,254,1365,251,1369,151,1389"/>
+<area shape="rect" id="Node000013" href="$structalgotradelib_1_1backtest_1_1is__price__join.html" title="Whether Join can join drawn blocks: true when a const Join has a member join(double,..." alt="" coords="278,1957,442,2019"/>
+<area shape="poly" id="edge35_Node000004_Node000013" title=" " alt="" coords="79,1428,93,1543,115,1698,131,1776,149,1847,171,1904,196,1943,213,1958,234,1969,280,1984,275,1985,232,1974,210,1962,192,1947,166,1907,144,1848,125,1777,110,1698,88,1544,79,1433"/>
+<area shape="rect" id="Node000014" href="$structalgotradelib_1_1backtest_1_1is__window__scheme.html" title="Whether Scheme can choose a fold&#39;s training range: true when a const Scheme has a member train(std::s..." alt="" coords="247,2042,473,2104"/>
+<area shape="poly" id="edge36_Node000004_Node000014" title=" " alt="" coords="78,1428,90,1559,110,1739,125,1830,144,1914,168,1983,181,2009,196,2029,219,2047,249,2062,244,2063,216,2052,192,2032,176,2012,163,1985,139,1916,120,1831,104,1739,84,1559,78,1433"/>
+<area shape="rect" id="Node000015" href="$structalgotradelib_1_1runner_1_1runner__counts__kept__drops.html" title="Detects whether a runner reports kept_intents_dropped()." alt="" coords="253,2128,467,2189"/>
+<area shape="poly" id="edge37_Node000004_Node000015" title=" " alt="" coords="78,1428,87,1574,104,1780,119,1885,139,1982,164,2061,179,2091,196,2114,222,2134,255,2150,250,2150,219,2139,192,2118,175,2094,159,2063,134,1983,114,1886,99,1780,81,1574,77,1433"/>
+<area shape="rect" id="Node000016" href="$structalgotradelib_1_1runner_1_1runner__counts__warmup.html" title="Detects whether a runner reports warmup_instructions_discarded()." alt="" coords="269,1426,450,1488"/>
+<area shape="poly" id="edge38_Node000004_Node000016" title=" " alt="" coords="148,1413,271,1438,267,1441,151,1418"/>
+<area shape="rect" id="Node000017" href="$structalgotradelib_1_1runner_1_1source__names__buying__power__currencies.html" title="Detects whether a source provides const std::vector&lt;Currency&gt;&amp; buying_power_currencies() const." alt="" coords="257,1512,462,1591"/>
+<area shape="poly" id="edge39_Node000004_Node000017" title=" " alt="" coords="100,1424,144,1462,195,1497,259,1525,254,1528,192,1502,140,1466,101,1429"/>
+<area shape="rect" id="Node000018" href="$structalgotradelib_1_1runner_1_1source__provides__working__orders.html" title="Detects whether a source declares static constexpr bool provides_working_orders = true,..." alt="" coords="251,1616,468,1677"/>
+<area shape="poly" id="edge40_Node000004_Node000018" title=" " alt="" coords="85,1427,103,1468,125,1514,156,1561,195,1600,222,1617,253,1630,248,1632,220,1621,192,1605,152,1564,121,1517,98,1470,86,1432"/>
+<area shape="rect" id="Node000019" href="$structalgotradelib_1_1runner_1_1source__reports__buying__power.html" title="Detects whether a source declares static constexpr bool reports_buying_power = true,..." alt="" coords="252,1701,468,1763"/>
+<area shape="poly" id="edge41_Node000004_Node000019" title=" " alt="" coords="80,1427,93,1485,113,1554,127,1591,146,1626,168,1659,195,1687,222,1705,254,1718,249,1720,219,1710,192,1691,164,1662,141,1629,122,1593,108,1556,87,1486,80,1433"/>
+<area shape="rect" id="Node000020" href="$structalgotradelib_1_1runner_1_1source__states__calendar__sessions.html" title="Detects whether a source declares static constexpr bool states_calendar_sessions = true,..." alt="" coords="244,1786,476,1848"/>
+<area shape="poly" id="edge42_Node000004_Node000020" title=" " alt="" coords="77,1428,85,1500,101,1593,116,1642,136,1689,162,1734,195,1773,218,1789,246,1803,241,1804,216,1794,192,1776,158,1737,131,1692,111,1643,96,1594,79,1501,77,1433"/>
+<area shape="rect" id="Node000021" href="$structalgotradelib_1_1runner_1_1source__states__charged__costs.html" title="Detects whether a source provides const ChargedCosts&amp; charged_costs() const, which LoopReport then re..." alt="" coords="255,1872,465,1933"/>
+<area shape="poly" id="edge43_Node000004_Node000021" title=" " alt="" coords="80,1427,97,1526,121,1655,136,1720,154,1778,174,1826,196,1858,223,1878,257,1892,252,1894,220,1883,192,1862,169,1829,149,1780,131,1721,116,1656,92,1527,80,1433"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="20,849,131,876"/>
+<area shape="poly" id="edge44_Node000002_Node000001" title=" " alt="" coords="78,833,132,433,166,218,180,146,191,112,214,91,242,76,239,80,217,95,196,115,185,147,171,219,137,434,83,834"/>
+<area shape="poly" id="edge45_Node000002_Node000003" title=" " alt="" coords="90,834,132,773,160,739,192,710,221,690,255,673,252,677,224,694,195,714,164,743,136,776,95,836"/>
+<area shape="poly" id="edge46_Node000002_Node000005" title=" " alt="" coords="144,843,195,830,191,834,148,846"/>
+<area shape="poly" id="edge47_Node000002_Node000006" title=" " alt="" coords="145,878,265,909,261,912,148,883"/>
+<area shape="poly" id="edge48_Node000002_Node000007" title=" " alt="" coords="93,887,137,944,165,974,195,1000,254,1034,249,1037,192,1005,161,978,133,947,94,892"/>
+<area shape="poly" id="edge50_Node000002_Node000008" title=" " alt="" coords="81,889,96,943,117,1009,150,1077,171,1109,196,1138,216,1155,241,1171,236,1173,213,1160,192,1142,167,1113,145,1080,112,1011,91,944,82,894"/>
+<area shape="poly" id="edge51_Node000002_Node000012" title=" " alt="" coords="77,889,84,967,100,1068,115,1123,135,1178,162,1229,196,1275,222,1298,255,1317,250,1319,219,1303,192,1279,157,1232,130,1180,110,1125,95,1070,79,967,77,894"/>
+<area shape="rect" id="Node000022" href="$structalgotradelib_1_1runner_1_1runner__keeps__sent__orders.html" title="Detects Runner::keeps_sent_orders_until_listed." alt="" coords="260,245,460,307"/>
+<area shape="poly" id="edge49_Node000002_Node000022" title=" " alt="" coords="76,833,88,720,110,565,125,487,144,416,166,357,192,317,223,294,261,281,258,285,225,299,196,320,171,359,149,417,131,488,115,566,93,720,82,833"/>
+</map>

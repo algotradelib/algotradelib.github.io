@@ -238,6 +238,10 @@ var NAVTREEINDEX1 =
 "classalgotradelib_1_1analytics_1_1TimeIndex.html#afc508e601c66c587e385b02af5ec104b":[2,0,0,1,4,4],
 "classalgotradelib_1_1backtest_1_1Backtester.html":[1,0,0,2,1],
 "classalgotradelib_1_1backtest_1_1Backtester.html":[2,0,0,2,1],
+"classalgotradelib_1_1backtest_1_1Backtester.html#a05fc26d173eeea13df4baec60990ac0d":[1,0,0,2,1,12],
+"classalgotradelib_1_1backtest_1_1Backtester.html#a05fc26d173eeea13df4baec60990ac0d":[2,0,0,2,1,12],
+"classalgotradelib_1_1backtest_1_1Backtester.html#a2b551589cb3bdb6b6fe00b7dcfcc7e61":[1,0,0,2,1,13],
+"classalgotradelib_1_1backtest_1_1Backtester.html#a2b551589cb3bdb6b6fe00b7dcfcc7e61":[2,0,0,2,1,13],
 "classalgotradelib_1_1backtest_1_1Backtester.html#a467b358a3c18b251f0936816cbfd21ab":[1,0,0,2,1,10],
 "classalgotradelib_1_1backtest_1_1Backtester.html#a467b358a3c18b251f0936816cbfd21ab":[2,0,0,2,1,10],
 "classalgotradelib_1_1backtest_1_1Backtester.html#a4db1451cfe6c19d37ecd73647e682a6f":[1,0,0,2,1,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "classalgotradelib_1_1backtest_1_1Backtester.html#a515e827e70fc863578aa5388bc2c1369":[1,0,0,2,1,3],
 "classalgotradelib_1_1backtest_1_1Backtester.html#a515e827e70fc863578aa5388bc2c1369":[2,0,0,2,1,3],
 "classalgotradelib_1_1backtest_1_1Backtester.html#a5550e986a83ad759063d2e969e2404f5":[1,0,0,2,1,11],
-"classalgotradelib_1_1backtest_1_1Backtester.html#a5550e986a83ad759063d2e969e2404f5":[2,0,0,2,1,11],
-"classalgotradelib_1_1backtest_1_1Backtester.html#a5f2f2a11698126d856f8053be40cfd7d":[1,0,0,2,1,6],
-"classalgotradelib_1_1backtest_1_1Backtester.html#a5f2f2a11698126d856f8053be40cfd7d":[2,0,0,2,1,6],
-"classalgotradelib_1_1backtest_1_1Backtester.html#a721677e15a1ddb65c632858c66e15820":[1,0,0,2,1,7],
-"classalgotradelib_1_1backtest_1_1Backtester.html#a721677e15a1ddb65c632858c66e15820":[2,0,0,2,1,7]
+"classalgotradelib_1_1backtest_1_1Backtester.html#a5550e986a83ad759063d2e969e2404f5":[2,0,0,2,1,11]
 };

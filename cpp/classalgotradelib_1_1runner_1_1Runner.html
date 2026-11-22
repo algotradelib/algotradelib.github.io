@@ -214,6 +214,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abfb1c8c54173a9877a429d20c6a99a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many orders were held back because the instrument was in the ledger (an order of unknown outcome, timed out unconfirmed, or held for an operator); see <span class="tt"><a class="el" href="#a77830aa700e732f0b2b507cfee389952" title="Returns how many orders reconciliation could not build (any strategy::RejectReason before sending,...">orders_unbuildable</a></span>.  <br /></td></tr>
 <tr class="memitem:a6073c04a4d4b1d657b6be32c84839b34" id="r_a6073c04a4d4b1d657b6be32c84839b34"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a6073c04a4d4b1d657b6be32c84839b34">orders_guard_refused</a> () const noexcept</td></tr>
 <tr class="memdesc:a6073c04a4d4b1d657b6be32c84839b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many orders the risk guard refused, for a limit or a hold; see <span class="tt"><a class="el" href="#a77830aa700e732f0b2b507cfee389952" title="Returns how many orders reconciliation could not build (any strategy::RejectReason before sending,...">orders_unbuildable</a></span>.  <br /></td></tr>
+<tr class="memitem:a1b81053b3d23d17e94d7a3d7bf5b39db" id="r_a1b81053b3d23d17e94d7a3d7bf5b39db"><td class="memItemLeft">std::optional&lt; <a class="el" href="structalgotradelib_1_1Money.html">Money</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1b81053b3d23d17e94d7a3d7bf5b39db">run_cash</a> () const</td></tr>
+<tr class="memdesc:a1b81053b3d23d17e94d7a3d7bf5b39db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the run's cash, with <span class="tt">RiskLimits::run_budget_</span> set.  <br /></td></tr>
+<tr class="memitem:a9db3bbd3a22356d270b53342a408a3e4" id="r_a9db3bbd3a22356d270b53342a408a3e4"><td class="memItemLeft">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9db3bbd3a22356d270b53342a408a3e4">run_holding</a> (const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;instrument) const</td></tr>
+<tr class="memdesc:a9db3bbd3a22356d270b53342a408a3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the run's own shares of an instrument, with <span class="tt">RiskLimits::run_budget_</span> set.  <br /></td></tr>
+<tr class="memitem:a129dfc14a342e55396346d6d87967b2c" id="r_a129dfc14a342e55396346d6d87967b2c"><td class="memItemLeft">std::vector&lt; <a class="el" href="structalgotradelib_1_1runner_1_1RunPlacement.html">RunPlacement</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a129dfc14a342e55396346d6d87967b2c">run_unsettled</a> () const</td></tr>
+<tr class="memdesc:a129dfc14a342e55396346d6d87967b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lists the run's placements that leave its ledger unsettled: held for an operator, or released by one (<span class="tt"><a class="el" href="#a949d60f8a08ac176f900a46b08eda827" title="Accounts for every order a serialized runner still owes on an instrument, on an operator&#39;s word.">release_obligations</a></span>) or confirmed by a runner without a budget, with no booking.  <br /></td></tr>
+<tr class="memitem:ac1e7d875c06c6ce4ec4df857e51c823a" id="r_ac1e7d875c06c6ce4ec4df857e51c823a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac1e7d875c06c6ce4ec4df857e51c823a">set_run_opening</a> (<a class="el" href="structalgotradelib_1_1runner_1_1RunOpening.html">RunOpening</a> opening)</td></tr>
+<tr class="memdesc:ac1e7d875c06c6ce4ec4df857e51c823a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets how <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span> opens a budgeted runner's run from its journal: a new run by default, closing the journal's earlier run first; resume only when stated, with deposits and withdrawals each applied once.  <br /></td></tr>
+<tr class="memitem:a2fa3bd436225c6cd4806edd7c559f9d2" id="r_a2fa3bd436225c6cd4806edd7c559f9d2"><td class="memItemLeft">const std::optional&lt; <a class="el" href="structalgotradelib_1_1runner_1_1RunRecoverySummary.html">RunRecoverySummary</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2fa3bd436225c6cd4806edd7c559f9d2">run_recovery</a> () const noexcept</td></tr>
+<tr class="memdesc:a2fa3bd436225c6cd4806edd7c559f9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span> opened the run, or why it did not, or that a new run waits for the old run's open orders (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunRecoverySummary.html#a8754c03a67001acbf2d5b1f94741aa4a" title="Whether a new run waits for the old run&#39;s open orders to be accounted for: not opened yet (Runner::ru...">RunRecoverySummary::closing_</a></span>), and then how that went.  <br /></td></tr>
+<tr class="memitem:a08a6b70c5f2065b7425cb0334a8e3b30" id="r_a08a6b70c5f2065b7425cb0334a8e3b30"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a08a6b70c5f2065b7425cb0334a8e3b30">run_writes_closed</a> () const noexcept</td></tr>
+<tr class="memdesc:a08a6b70c5f2065b7425cb0334a8e3b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a budgeted runner that keeps its run in a journal has stopped writing to it: its run is not open (not recovered, or refused other than <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aadd0bdf98a6ebd07519f9e50ec9377092" title="A resume found an intact journal with no run: no halt, buys and sells refused, withdrawals as usual.">RunRefusal::NO_RUN</a></span>), or a write failed (<span class="tt"><a class="el" href="#a3959155eb493c52afb12a44cf310dd08" title="Records that a write to a budgeted runner&#39;s journal failed, which stops its writes for the process&#39;s ...">note_run_journal_write_failed</a></span>).  <br /></td></tr>
+<tr class="memitem:a3959155eb493c52afb12a44cf310dd08" id="r_a3959155eb493c52afb12a44cf310dd08"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3959155eb493c52afb12a44cf310dd08">note_run_journal_write_failed</a> () noexcept</td></tr>
+<tr class="memdesc:a3959155eb493c52afb12a44cf310dd08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records that a write to a budgeted runner's journal failed, which stops its writes for the process's life (<span class="tt"><a class="el" href="#a08a6b70c5f2065b7425cb0334a8e3b30" title="Tests whether a budgeted runner that keeps its run in a journal has stopped writing to it: its run is...">run_writes_closed</a></span>); does nothing without <span class="tt">RiskLimits::run_budget_</span>.  <br /></td></tr>
+<tr class="memitem:a8d7835d1a14b71f53b517453cf5b02d3" id="r_a8d7835d1a14b71f53b517453cf5b02d3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8d7835d1a14b71f53b517453cf5b02d3">book_run_fill</a> (const std::string &amp;placement_id, const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;filled, const <a class="el" href="structalgotradelib_1_1Money.html">Money</a> &amp;amount, const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;fee, const std::string &amp;reason)</td></tr>
+<tr class="memdesc:a8d7835d1a14b71f53b517453cf5b02d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Books, on an operator's word, what a placement of the run released without a booking filled.  <br /></td></tr>
 <tr class="memitem:abdc9bc572cd91c01cbcea462a356b9a0" id="r_abdc9bc572cd91c01cbcea462a356b9a0"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abdc9bc572cd91c01cbcea462a356b9a0">orders_binding_refused</a> () const noexcept</td></tr>
 <tr class="memdesc:abdc9bc572cd91c01cbcea462a356b9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many orders the binding refused to send (no request made); see <span class="tt"><a class="el" href="#a77830aa700e732f0b2b507cfee389952" title="Returns how many orders reconciliation could not build (any strategy::RejectReason before sending,...">orders_unbuildable</a></span>.  <br /></td></tr>
 <tr class="memitem:a433b0b3fd99b3c4458f51e1459e254bd" id="r_a433b0b3fd99b3c4458f51e1459e254bd"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a433b0b3fd99b3c4458f51e1459e254bd">orders_broker_refused</a> () const noexcept</td></tr>
@@ -377,7 +393,7 @@ class algotradelib::runner::Runner&lt; Strategy, CapsType, BrokerTag, Executor &
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00286">286</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00305">305</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a41b8cc861f4235eb681975bf30162274" name="a41b8cc861f4235eb681975bf30162274"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41b8cc861f4235eb681975bf30162274">&#9670;&#160;</a></span>Context</h2>
@@ -395,7 +411,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>The context type handed to the strategy's handlers. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00291">291</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00310">310</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +431,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>The record type <span class="tt">on_data</span> takes (the strategy's <span class="tt">data_type</span>); a placeholder for a strategy without it. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00298">298</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00317">317</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,7 +451,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>What one <span class="tt"><a class="el" href="#a162a5a1d9be49ce80a71ffac434700d9" title="Feeds one bar: caches it, sets the last price and the clock to the bar&#39;s period end,...">feed</a></span> returns. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00293">293</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00312">312</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +471,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>The broker tag (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1DryTag.html" title="The broker tag of a dry run, whose order references reach no broker.">DryTag</a></span> for a dry run). </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00289">289</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00308">308</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,8 +525,14 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>With <span class="tt">RiskLimits::run_budget_</span> set, if the budget is not positive, <span class="tt">RiskLimits::run_fees_</span> is absent or states a negative rate or minimum, or the executor sends to a broker and the runner cannot keep its run in a journal (a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1JournalingExecutor.html" title="An executor wrapper that records each instruction in a journal before sending it.">JournalingExecutor</a></span> over a broker that lists working orders can). Such a runner opens its run in <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span>; any other opens it here. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00353">353</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00376">376</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +565,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Lets this runner place orders before holdings have ever been read. </p>
 <p><span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html#aed4b6e329a2122570c024d504448c7c9" title="Lets the run place orders before holdings have ever been read (for a broker without a holdings inquir...">PollingLoop::allow_absent_portfolio</a></span> calls it. A plan that would cancel something is still held back until holdings are read. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00467">467</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00493">493</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -576,12 +598,12 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>After a restart, orders a previous process sent and holdings had not yet shown are forgotten, and a target can place them again. A buy and a sell on one instrument whose fills have not reached holdings can both be taken as accounted for, and a later order confirmed by another's fill. Choose it only for a strategy that needs overlapping orders (an entry beside its protective stop) and accepts those.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>once anything was placed, or after <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span>. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>once anything was placed, after <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span>, or with <span class="tt">RiskLimits::run_budget_</span> set. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00967">967</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01145">1145</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -612,7 +634,69 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>Applies price bands of any age (replacing a stated maximum). </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00643">643</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00669">669</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8d7835d1a14b71f53b517453cf5b02d3" name="a8d7835d1a14b71f53b517453cf5b02d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7835d1a14b71f53b517453cf5b02d3">&#9670;&#160;</a></span>book_run_fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::book_run_fill </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>placement_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>filled</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1Money.html">Money</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>amount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fee</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>reason</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Books, on an operator's word, what a placement of the run released without a booking filled. </p>
+<p>Read the broker's history for the fill first. The journal's <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a7aaaf7b65a610f68d21db0a2b63a984aae8225b11842409df543692aebed34fd1" title="An operator&#39;s booking of a placement released without one (runner::Runner::book_run_fill).">RunRecordKind::FILL</a></span> record is written before the ledger changes; if it cannot be written the run's writes stop (<span class="tt"><a class="el" href="#a08a6b70c5f2065b7425cb0334a8e3b30" title="Tests whether a budgeted runner that keeps its run in a journal has stopped writing to it: its run is...">run_writes_closed</a></span>). While a new run waits for the old run to close (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunRecoverySummary.html#a8754c03a67001acbf2d5b1f94741aa4a" title="Whether a new run waits for the old run&#39;s open orders to be accounted for: not opened yet (Runner::ru...">RunRecoverySummary::closing_</a></span>), it books the old run's order, and the new run opens once the old run is settled.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">placement_id</td><td>The placement's journal id, as <span class="tt"><a class="el" href="#a129dfc14a342e55396346d6d87967b2c" title="Lists the run&#39;s placements that leave its ledger unsettled: held for an operator, or released by one ...">run_unsettled</a></span> lists it released (<span class="tt">UNBOOKED</span>). </td></tr>
+    <tr><td class="paramname">filled</td><td>The quantity filled, from zero to the placement's quantity; for a sell, at most the run's shares. </td></tr>
+    <tr><td class="paramname">amount</td><td>What it traded for, in the run's currency: above zero when something filled, zero otherwise. </td></tr>
+    <tr><td class="paramname">fee</td><td>Its commission and taxes together, zero or more. </td></tr>
+    <tr><td class="paramname">reason</td><td>Why, for the journal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if booked; <span class="tt">false</span>, writing nothing, for a placement not released unbooked or a fill that does not fit it or the run, while the run's writes are closed, or when the record could not be written. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00863">863</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -644,7 +728,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many cancellations had an unknown outcome (the order may or may not have been cancelled). </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01508">1508</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01707">1707</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -676,7 +760,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many cancellations a hold refused before sending. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01494">1494</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01693">1693</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -708,7 +792,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many cancellations were refused, by the broker or the binding (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RejectedCancel.html#ac73c326638efe89318f8612f68575718" title="true if the broker refused it; false if it was refused before sending (by the binding,...">RejectedCancel::by_broker_</a></span> tells which). </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01487">1487</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01686">1686</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -740,7 +824,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many cancellations named an order the portfolio does not list. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01501">1501</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01700">1700</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -771,7 +855,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>Discards every target waiting on a resting stop (<span class="tt"><a class="el" href="#a968e395c4efcc070be878397e59382b0" title="Returns the targets waiting for a stop on their instrument to be cancelled (at most one per instrumen...">deferred_targets</a></span>). The orders this runner owes are not touched. <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> does this when stopping: nothing a strategy stated before a stop is to be released after it. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01412">1412</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01611">1611</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -802,7 +886,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>Forgets the portfolio value, so weighted intents are refused again. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01582">1582</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01781">1781</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -833,7 +917,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>Discards every retained target and kept intent (<span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> does this when stopping). </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01402">1402</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01601">1601</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -871,7 +955,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01202">1202</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01401">1401</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -903,9 +987,9 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the context. </p>
 <dl class="section return"><dt>Returns</dt><dd>The context. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00574">574</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00600">600</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00925">algotradelib::runner::ManualSource&lt; Runner &gt;::poll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00958">algotradelib::runner::ManualSource&lt; Runner &gt;::poll()</a>.</p>
 
 </div>
 </div>
@@ -937,7 +1021,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the context, to arrange its state (instruments, portfolio) before feeding events. </p>
 <dl class="section return"><dt>Returns</dt><dd>The context. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00581">581</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00607">607</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -969,7 +1053,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns from when the broker's order history must be read to decide waiting targets. </p>
 <dl class="section return"><dt>Returns</dt><dd>The earliest instant a target whose stops are all unlisted began waiting, or <span class="tt">std::nullopt</span> if none can be decided from history yet. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00800">800</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00977">977</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1085,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many waiting targets were dropped because a stop they waited on had filled. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00791">791</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00968">968</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1124,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Not journalled: a restart loses it.</p>
 <dl class="section return"><dt>Returns</dt><dd>The waiting targets. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00770">770</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00947">947</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1072,7 +1156,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the executor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00371">371</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00397">397</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1104,7 +1188,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the executor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00378">378</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00404">404</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1142,7 +1226,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01845">1845</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l02044">2044</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1187,7 +1271,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01669">1669</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01868">1868</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1310,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01746">1746</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01945">1945</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1273,7 +1357,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01817">1817</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l02016">2016</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1395,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01834">1834</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l02033">2033</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1349,7 +1433,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01798">1798</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01997">1997</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1387,7 +1471,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01856">1856</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l02055">2055</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1433,7 +1517,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01696">1696</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01895">1895</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1472,7 +1556,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01761">1761</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01960">1960</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1517,7 +1601,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01774">1774</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01973">1973</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1549,7 +1633,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the risk guard. </p>
 <dl class="section return"><dt>Returns</dt><dd>The guard. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00589">589</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00615">615</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1581,7 +1665,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the risk guard, to halt or resume trading. </p>
 <dl class="section return"><dt>Returns</dt><dd>The guard. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00596">596</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00622">622</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1619,9 +1703,9 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00493">493</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00519">519</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01308">algotradelib::runner::recover_runner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01317">algotradelib::runner::recover_runner()</a>.</p>
 
 </div>
 </div>
@@ -1653,7 +1737,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many instructions (placements and cancellations) were not sent because local machinery was unavailable; each leaves the <span class="tt">LOCAL_FAILURE</span> hold. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01479">1479</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01678">1678</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1685,7 +1769,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many order intents are kept for the market phase, an unreachable broker or a rate limit; see <span class="tt"><a class="el" href="#a841a15c9335ae77f562e54d69c5ee0e3" title="Re-submits retained targets and kept intents once they can be acted on, and settles them.">retry_retained_targets</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number kept now. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01367">1367</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01566">1566</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1717,7 +1801,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many kept intents were dropped at release, because the holding they were decided against had changed or a stop now rests. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01376">1376</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01575">1575</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1749,7 +1833,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the broker's code and message for the most recent order it refused (<span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218ccca9cc8ad3d99798c6726d4af0bd14e49d2" title="The broker refused the instruction (for a placement, the order does not exist); nothing needs reconci...">SendOutcome::REJECTED</a></span>; at KIS, Toss and Kiwoom most refusals are <span class="tt">INDETERMINATE</span> and not recorded here). </p>
 <dl class="section return"><dt>Returns</dt><dd>The refusal, or <span class="tt">std::nullopt</span> if none (or the executor cannot report errors, as in a dry run or replay). A refusal with no detail clears it, so a nonzero <span class="tt"><a class="el" href="#a433b0b3fd99b3c4458f51e1459e254bd" title="Returns how many orders the broker refused (SendOutcome::REJECTED; a request was spent); see last_bro...">orders_broker_refused</a></span> can sit beside an empty value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01520">1520</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01719">1719</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1782,7 +1866,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>For example, a live weight-sized intent is refused <span class="tt">NO_PORTFOLIO_VALUE</span> on every pass unless <span class="tt"><a class="el" href="#a40563e29bc1aa6964365addd741e32b9" title="Sets the portfolio&#39;s total value, which a weight-sized intent needs live.">set_portfolio_value</a></span> was called.</p>
 <dl class="section return"><dt>Returns</dt><dd>The rejection, or <span class="tt">std::nullopt</span> if none. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01532">1532</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01731">1731</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1814,9 +1898,9 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the ledger of instruments withheld pending reconciliation or an operator: an order of unknown outcome, which a sweep of the broker's lists can resolve, or one that timed out unconfirmed or is held for an operator, which no listing clears (account for it with <span class="tt"><a class="el" href="#a949d60f8a08ac176f900a46b08eda827" title="Accounts for every order a serialized runner still owes on an instrument, on an operator&#39;s word.">release_obligations</a></span>, and clear the ledger entry yourself once the broker's state is read). </p>
 <dl class="section return"><dt>Returns</dt><dd>The ledger. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00389">389</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00415">415</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01308">algotradelib::runner::recover_runner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01317">algotradelib::runner::recover_runner()</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1932,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the ledger, so an operator who has read the broker's order list can clear an entry. </p>
 <dl class="section return"><dt>Returns</dt><dd>The ledger. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00396">396</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00422">422</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1881,7 +1965,39 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>The hold (<span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#aff76e0ec02bd1189fad25036355a2752a0a7253e3bb64d5d84d1ded4d45582839" title="Local machinery failed, such as the order journal not being writable; nothing is sent.">strategy::HaltReason::LOCAL_FAILURE</a></span>) stays until <span class="tt"><a class="el" href="#a0a42580a1a67d1ecb98e130d264519ef" title="Clears the local-failure hold, after an operator has fixed the cause.">resume_after_local_failure</a></span> (or a direct <span class="tt"><a class="el" href="#a7b9d359e09eaffbed27f22f5655cd6ac" title="Returns the risk guard, to halt or resume trading.">guard()</a>.resume</span>), even if the failure was transient. The detail is the first failure recorded through this runner.</p>
 <dl class="section return"><dt>Returns</dt><dd>The detail, or <span class="tt">std::nullopt</span> while sending works. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00408">408</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00434">434</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3959155eb493c52afb12a44cf310dd08" name="a3959155eb493c52afb12a44cf310dd08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3959155eb493c52afb12a44cf310dd08">&#9670;&#160;</a></span>note_run_journal_write_failed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::note_run_journal_write_failed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Records that a write to a budgeted runner's journal failed, which stops its writes for the process's life (<span class="tt"><a class="el" href="#a08a6b70c5f2065b7425cb0334a8e3b30" title="Tests whether a budgeted runner that keeps its run in a journal has stopped writing to it: its run is...">run_writes_closed</a></span>); does nothing without <span class="tt">RiskLimits::run_budget_</span>. </p>
+<p>The runner calls it for its own writes and its executor's; <span class="tt"><a class="el" href="classalgotradelib_1_1live_1_1SessionSource.html" title="The source a runner::PollingLoop polls: reads a broker session and feeds bars, quotes,...">live::SessionSource</a></span> for its reconciliations. </p>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00844">844</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1913,7 +2029,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Calls <span class="tt">on_stop</span> and settles what it asked for while <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span>'s <span class="tt">STOPPING</span> hold stands, so the strategy's parting orders are refused rather than sent beside the operator's closing orders. </p>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01641">1641</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01840">1840</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1951,7 +2067,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The most restrictive state of its orders not yet accounted for: <span class="tt">OPERATOR</span> over <span class="tt">UNNAMED</span> over <span class="tt">NAMED</span>; <span class="tt">NONE</span> if there are none or the runner is not serialized. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00980">980</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01161">1161</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +2099,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Lists every order a serialized runner still owes, on any instrument. </p>
 <dl class="section return"><dt>Returns</dt><dd>One entry per order, in the order sent; empty if none or the runner is not serialized. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01020">1020</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01201">1201</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2021,7 +2137,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>One entry per order, in the order sent; empty if none or the runner is not serialized. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01002">1002</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01183">1183</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2054,7 +2170,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>An order that is simply resting is not counted: only a withdrawal changes that. <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> reads this to decide whether a stop that closes should read again before its pass.</p>
 <dl class="section return"><dt>Returns</dt><dd>The count; zero for a runner that is not serialized. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01426">1426</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01625">1625</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2087,7 +2203,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p><span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> counts these as a closing pass begins and reports them, since the pass cannot see them.</p>
 <dl class="section return"><dt>Returns</dt><dd>The count; zero for a runner that is not serialized. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01121">1121</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01320">1320</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2119,7 +2235,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Shows the current portfolio to the sellable-convention probe, if it is on. </p>
 <p>Called on every pass and by <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> after it polls. Skipped while the working-order listing is newer than the holdings. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00538">538</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00564">564</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2151,7 +2267,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the instant last set by <span class="tt"><a class="el" href="#a4d661717f42861ca5c1fb11a73da6eb1" title="Sets the current wall-clock instant, used to measure the age of holdings and price bands.">set_observed_at</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The instant, or the epoch if never set. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00457">457</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00483">483</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2183,7 +2299,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many orders a serialized runner withheld because another order on the instrument was not yet accounted for, or the runner could not yet measure one; see <span class="tt"><a class="el" href="#aa5ce9952307cb427dddb906d925f2d84" title="Tests whether this runner is serialized: at most one order per instrument that holdings have not yet ...">serialized</a></span>. Whole plans withheld for it are in <span class="tt"><a class="el" href="#a4c8f295ba51f1296b72cb34ab5fcef96" title="Returns how many whole reconciliation plans were held back (any WithheldPlanReason: holdings absent,...">plans_withheld</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01109">1109</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01308">1308</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2215,7 +2331,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many orders the binding refused to send (no request made); see <span class="tt"><a class="el" href="#a77830aa700e732f0b2b507cfee389952" title="Returns how many orders reconciliation could not build (any strategy::RejectReason before sending,...">orders_unbuildable</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00721">721</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00898">898</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2247,7 +2363,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many orders the broker refused (<span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218ccca9cc8ad3d99798c6726d4af0bd14e49d2" title="The broker refused the instruction (for a placement, the order does not exist); nothing needs reconci...">SendOutcome::REJECTED</a></span>; a request was spent); see <span class="tt"><a class="el" href="#a273b118db388eeead81bdd5d8247d1ae" title="Returns the broker&#39;s code and message for the most recent order it refused (SendOutcome::REJECTED; at...">last_broker_refusal</a></span>. At KIS, Toss and Kiwoom most refusals count as unknown outcomes instead. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00730">730</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00907">907</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2279,7 +2395,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many orders the risk guard refused, for a limit or a hold; see <span class="tt"><a class="el" href="#a77830aa700e732f0b2b507cfee389952" title="Returns how many orders reconciliation could not build (any strategy::RejectReason before sending,...">orders_unbuildable</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00714">714</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00740">740</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2311,7 +2427,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many orders had an unknown outcome (<span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a79785df27a6d83da887dd61a78218ccca717bb676b27571e4f5392a911194842a" title="The outcome is unknown (see outcome_of): the request failed in transit or was cancelled,...">SendOutcome::INDETERMINATE</a></span>, which at KIS, Toss and Kiwoom includes most of the broker's own refusals). </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00738">738</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00915">915</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2343,7 +2459,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many orders were held back because the instrument was in the ledger (an order of unknown outcome, timed out unconfirmed, or held for an operator); see <span class="tt"><a class="el" href="#a77830aa700e732f0b2b507cfee389952" title="Returns how many orders reconciliation could not build (any strategy::RejectReason before sending,...">orders_unbuildable</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00707">707</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00733">733</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2376,7 +2492,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>One of eight counters of what became of placements: <span class="tt"><a class="el" href="#a77830aa700e732f0b2b507cfee389952" title="Returns how many orders reconciliation could not build (any strategy::RejectReason before sending,...">orders_unbuildable</a></span>, <span class="tt"><a class="el" href="#abfb1c8c54173a9877a429d20c6a99a9f" title="Returns how many orders were held back because the instrument was in the ledger (an order of unknown ...">orders_reconcile_withheld</a></span>, <span class="tt"><a class="el" href="#a699713b5b2e97bb1fa3779d75e3158ab" title="Returns how many orders a serialized runner withheld because another order on the instrument was not ...">orders_awaiting_confirmation</a></span>, <span class="tt"><a class="el" href="#a6073c04a4d4b1d657b6be32c84839b34" title="Returns how many orders the risk guard refused, for a limit or a hold; see orders_unbuildable.">orders_guard_refused</a></span>, <span class="tt"><a class="el" href="#abdc9bc572cd91c01cbcea462a356b9a0" title="Returns how many orders the binding refused to send (no request made); see orders_unbuildable.">orders_binding_refused</a></span>, <span class="tt"><a class="el" href="#a433b0b3fd99b3c4458f51e1459e254bd" title="Returns how many orders the broker refused (SendOutcome::REJECTED; a request was spent); see last_bro...">orders_broker_refused</a></span>, <span class="tt"><a class="el" href="#a86fd86d0a3c71f8acd5ee09babbcc679" title="Returns how many orders had an unknown outcome (SendOutcome::INDETERMINATE, which at KIS,...">orders_indeterminate</a></span> and <span class="tt"><a class="el" href="#acfb334a8425e5708ce9d4d5cb9ae5765" title="Returns how many instructions (placements and cancellations) were not sent because local machinery wa...">instructions_unavailable</a></span> (which counts cancellations too). All count over the runner's life, so a loop differences them; the per-instruction reasons are in each pass's <span class="tt"><a class="el" href="#a9d9db7103115bb0766acacc943f85d08" title="What one feed returns.">Report</a></span>. See also <span class="tt"><a class="el" href="#a9726f18be6e0933d47b85c948e11651e" title="Returns why reconciliation could not build the most recent instruction it refused.">last_unbuildable</a></span>.</p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00699">699</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00725">725</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2408,7 +2524,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many sent orders timed out unconfirmed; see <span class="tt"><a class="el" href="#a9abacd5d45e5821f64d6ab80f0367ecb" title="Sets how long a sent order&#39;s quantity may stay unexplained before it is counted as timed out (ten min...">set_confirmation_timeout</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01155">1155</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01354">1354</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2440,7 +2556,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many placements may have left an order at the broker (accepted or of unknown outcome). </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life; compare it before and after to tell whether a listing is out of date. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00501">501</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00527">527</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2472,7 +2588,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many whole reconciliation plans were held back (any <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a79d9bc0a47918cc1b2d8c91d044e0d2a" title="Why the runner held back a whole reconciliation plan (cancellations and placements) before sending an...">WithheldPlanReason</a></span>: holdings absent, stale or superseded, or a placement hold); the reasons are in each <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1DryRunReport.html#aaa5f9fb36d71a300b7455d4abc05f6a8" title="Whole plans (cancellations and placements) held back before any part was sent; see WithheldPlanReason...">Report::withheld_plans_</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00748">748</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00925">925</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2504,7 +2620,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many plans were built while a band was known for the instrument but not applied (counted per plan, not per order). </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00652">652</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00678">678</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2536,7 +2652,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Tests whether a price-band age policy has been stated (a maximum, or any age). </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if one has. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00660">660</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00686">686</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2574,7 +2690,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00528">528</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00554">554</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2618,7 +2734,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01715">1715</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01914">1914</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2662,7 +2778,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01732">1732</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01931">1931</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2694,7 +2810,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Rebuilds the reserved working rows against the portfolio as it is now. </p>
 <p>Every pass does this first; call it before reading <span class="tt">working_</span> outside a pass. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00856">856</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01033">1033</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2728,7 +2844,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </div><div class="memdoc">
 
 <p>Accounts for every order a serialized runner still owes on an instrument, on an operator's word. </p>
-<p>For an order held for an operator, one whose reply was lost and no sweep named, one from an older journal, or one whose holdings never arrived: read the broker's order list and holdings first. Each order gets a <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0" title="A serialized runner accounted for the placement: holdings showed what it filled, its history showed i...">JournalOutcome::CONFIRMED</a></span> line naming <span class="tt">reason</span> and is then forgotten; the next order on the instrument needs a holdings read received after this call. The indeterminacy ledger is left as it is. If a line cannot be written, that order is kept and the runner stops sending (<span class="tt">HaltReason::LOCAL_FAILURE</span>).</p>
+<p>For an order held for an operator, one whose reply was lost and no sweep named, one from an older journal, or one whose holdings never arrived: read the broker's order list and holdings first. Each order gets a <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0" title="A serialized runner accounted for the placement: holdings showed what it filled, its history showed i...">JournalOutcome::CONFIRMED</a></span> line naming <span class="tt">reason</span> and is then forgotten; the next order on the instrument needs a holdings read received after this call. The indeterminacy ledger is left as it is. An order of the run budget's run is released without a booking (<span class="tt"><a class="el" href="#a129dfc14a342e55396346d6d87967b2c" title="Lists the run&#39;s placements that leave its ledger unsettled: held for an operator, or released by one ...">run_unsettled</a></span>, <span class="tt"><a class="el" href="#a8d7835d1a14b71f53b517453cf5b02d3" title="Books, on an operator&#39;s word, what a placement of the run released without a booking filled.">book_run_fill</a></span>). If a line cannot be written, that order is kept and the runner stops sending (<span class="tt">HaltReason::LOCAL_FAILURE</span>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">instrument</td><td>The instrument. </td></tr>
@@ -2738,7 +2854,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> if any line could not be written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01054">1054</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01236">1236</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2776,7 +2892,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00481">481</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00507">507</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2832,7 +2948,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00878">878</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01055">1055</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2863,6 +2979,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p>Restores the orders a previous process left unaccounted for; <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span> calls it, and a serialized runner places nothing until it has run. </p>
 <p>Every placement with no <span class="tt">CONFIRMED</span> or <span class="tt">REJECTED</span> line comes back, named by an <span class="tt">ACCEPTED</span> or <span class="tt">RESOLVED</span> line's order id or else unnamed, measured from the holding its lines recorded. One with no recorded holding (an overlapping or older journal), lines that disagree or were damaged, a <span class="tt">HELD</span> line, or another such order on its instrument, is held for an operator and marks the ledger. Each instrument's latest <span class="tt">CONFIRMED</span> line means only a holdings read received after it sizes the next order. Does nothing else for a runner that is not serialized.</p>
+<p>With <span class="tt">RiskLimits::run_budget_</span>, it then opens the run from the journal as <span class="tt"><a class="el" href="#ac1e7d875c06c6ce4ec4df857e51c823a" title="Sets how runner::recover_runner opens a budgeted runner&#39;s run from its journal: a new run by default,...">set_run_opening</a></span> says: only from an intact journal, a new one once the old run's orders are accounted for, and it halts the runner (<span class="tt">LOCAL_FAILURE</span>) whenever it does not open one, except a resume on a journal with no run (<span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aadd0bdf98a6ebd07519f9e50ec9377092" title="A resume found an intact journal with no run: no halt, buys and sells refused, withdrawals as usual.">RunRefusal::NO_RUN</a></span>; <span class="tt"><a class="el" href="#a2fa3bd436225c6cd4806edd7c559f9d2" title="Returns how runner::recover_runner opened the run, or why it did not, or that a new run waits for the...">run_recovery</a></span>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">replay</td><td>The journal's contents. </td></tr>
@@ -2870,9 +2987,9 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01093">1093</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01285">1285</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01308">algotradelib::runner::recover_runner()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01317">algotradelib::runner::recover_runner()</a>.</p>
 
 </div>
 </div>
@@ -2904,7 +3021,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Clears the local-failure hold, after an operator has fixed the cause. </p>
 <p>It also acknowledges the journal failures seen so far, so the same failure does not halt again. Other holds, such as an operator's halt, stay. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00421">421</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00447">447</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2943,7 +3060,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The report of the settlement. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00822">822</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00999">999</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -2976,7 +3093,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Only for a replay, whose ledger is the broker: a stop it withdrew cannot have filled. A live caller uses <span class="tt"><a class="el" href="#a505e0605ab453bac5ff1282fdd4d4fa8" title="Decides each waiting target against the broker&#39;s order history, and settles what it released.">retry_deferred</a></span>.</p>
 <dl class="section return"><dt>Returns</dt><dd>The report of the settlement. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01471">1471</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01670">1670</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3018,7 +3135,178 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Nothing is released while holdings were never read or predate the listing, or while any hold is in force. If this method runs while <span class="tt">OPERATOR</span> or <span class="tt">LOCAL_FAILURE</span> holds, it discards every kept intent and every target kept for the phase or the broker (targets kept for the account stay). Halting and resuming without calling it in between discards nothing, so the kept work can still go out after the resume; call <span class="tt"><a class="el" href="#ac01ffc4263d2ce0f1a5a28f6e7051bd9" title="Discards every retained target and kept intent (PollingLoop does this when stopping).">clear_retained_targets</a></span> to drop it. A later target or intent for the instrument replaces a retained one, one still queued on the context when this is called included. <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> calls this once per iteration; a program driving a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">Runner</a></span> itself must call it (or <span class="tt"><a class="el" href="#ac01ffc4263d2ce0f1a5a28f6e7051bd9" title="Discards every retained target and kept intent (PollingLoop does this when stopping).">clear_retained_targets</a></span>).</p>
 <dl class="section return"><dt>Returns</dt><dd>The report of the settlement, empty if nothing was released. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01281">1281</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01480">1480</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b81053b3d23d17e94d7a3d7bf5b39db" name="a1b81053b3d23d17e94d7a3d7bf5b39db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b81053b3d23d17e94d7a3d7bf5b39db">&#9670;&#160;</a></span>run_cash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="structalgotradelib_1_1Money.html">Money</a> &gt; <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::run_cash </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the run's cash, with <span class="tt">RiskLimits::run_budget_</span> set. </p>
+<p>The budget, plus deposits, less withdrawals, less what the run's fills spent, plus what its sells returned, less every fee; open orders do not lower it.</p>
+<dl class="section return"><dt>Returns</dt><dd>The cash, or <span class="tt">std::nullopt</span> without a budget or while no run is open (a runner that keeps its run in a journal opens it in <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span>, a new one once the old run's orders are accounted for). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00752">752</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9db3bbd3a22356d270b53342a408a3e4" name="a9db3bbd3a22356d270b53342a408a3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db3bbd3a22356d270b53342a408a3e4">&#9670;&#160;</a></span>run_holding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="classalgotradelib_1_1Decimal64.html">Decimal64</a> &gt; <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::run_holding </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structalgotradelib_1_1InstrumentId.html">InstrumentId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>instrument</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the run's own shares of an instrument, with <span class="tt">RiskLimits::run_budget_</span> set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instrument</td><td>The instrument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>What the run's fills bought less what they sold (zero for an instrument it never traded), or <span class="tt">std::nullopt</span> without a budget or while no run is open. A placement on it held or released without a booking (<span class="tt"><a class="el" href="#a129dfc14a342e55396346d6d87967b2c" title="Lists the run&#39;s placements that leave its ledger unsettled: held for an operator, or released by one ...">run_unsettled</a></span>) is not counted. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00762">762</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2fa3bd436225c6cd4806edd7c559f9d2" name="a2fa3bd436225c6cd4806edd7c559f9d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa3bd436225c6cd4806edd7c559f9d2">&#9670;&#160;</a></span>run_recovery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt; <a class="el" href="structalgotradelib_1_1runner_1_1RunRecoverySummary.html">RunRecoverySummary</a> &gt; &amp; <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::run_recovery </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns how <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span> opened the run, or why it did not, or that a new run waits for the old run's open orders (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunRecoverySummary.html#a8754c03a67001acbf2d5b1f94741aa4a" title="Whether a new run waits for the old run&#39;s open orders to be accounted for: not opened yet (Runner::ru...">RunRecoverySummary::closing_</a></span>), and then how that went. </p>
+<dl class="section return"><dt>Returns</dt><dd>The summary, or <span class="tt">std::nullopt</span> for a runner that does not keep its run in a journal, without <span class="tt">RiskLimits::run_budget_</span>, or before recovery. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00816">816</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="reconcile__orders_8hpp_source.html#l01317">algotradelib::runner::recover_runner()</a>.</p>
+
+</div>
+</div>
+<a id="a129dfc14a342e55396346d6d87967b2c" name="a129dfc14a342e55396346d6d87967b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a129dfc14a342e55396346d6d87967b2c">&#9670;&#160;</a></span>run_unsettled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structalgotradelib_1_1runner_1_1RunPlacement.html">RunPlacement</a> &gt; <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::run_unsettled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lists the run's placements that leave its ledger unsettled: held for an operator, or released by one (<span class="tt"><a class="el" href="#a949d60f8a08ac176f900a46b08eda827" title="Accounts for every order a serialized runner still owes on an instrument, on an operator&#39;s word.">release_obligations</a></span>) or confirmed by a runner without a budget, with no booking. </p>
+<p>While one is listed, every buy of the run is refused, and so are sells of its instrument (<span class="tt"><a class="el" href="namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1bada184abf310ed7c4b106a2890730ed7b13" title="The run&#39;s cash, or its shares of the instrument, is not known.">strategy::GuardReason::RUN_LEDGER_UNSETTLED</a></span>); <span class="tt"><a class="el" href="#a8d7835d1a14b71f53b517453cf5b02d3" title="Books, on an operator&#39;s word, what a placement of the run released without a booking filled.">book_run_fill</a></span> books a released one.</p>
+<dl class="section return"><dt>Returns</dt><dd>The placements; empty without a run. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00774">774</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a08a6b70c5f2065b7425cb0334a8e3b30" name="a08a6b70c5f2065b7425cb0334a8e3b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a6b70c5f2065b7425cb0334a8e3b30">&#9670;&#160;</a></span>run_writes_closed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::run_writes_closed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether a budgeted runner that keeps its run in a journal has stopped writing to it: its run is not open (not recovered, or refused other than <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aadd0bdf98a6ebd07519f9e50ec9377092" title="A resume found an intact journal with no run: no halt, buys and sells refused, withdrawals as usual.">RunRefusal::NO_RUN</a></span>), or a write failed (<span class="tt"><a class="el" href="#a3959155eb493c52afb12a44cf310dd08" title="Records that a write to a budgeted runner&#39;s journal failed, which stops its writes for the process&#39;s ...">note_run_journal_write_failed</a></span>). </p>
+<p>While it holds, the runner writes no line, accounts for no order, sends no cancellation, and refuses the run's buys and sells; <span class="tt"><a class="el" href="classalgotradelib_1_1live_1_1SessionSource.html" title="The source a runner::PollingLoop polls: reads a broker session and feeds bars, quotes,...">live::SessionSource</a></span> writes no reconciliation. A failed write stops it for the process's life, since the line may be on disk whole, in part or not at all; the next process's recovery reads what persisted.</p>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">false</span> for any other runner. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00831">831</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3050,7 +3338,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the sellable-convention probe. </p>
 <dl class="section return"><dt>Returns</dt><dd>What it has inferred, with its counts. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00551">551</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00577">577</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3083,7 +3371,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Counts sends, including ones the broker then rejected (likely outside a session). Not by itself a fault: it shows a flatten after the close, or a strategy restating a close every pass (limit that with <span class="tt">RiskLimits::max_orders_per_window_</span>).</p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00515">515</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00541">541</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3122,7 +3410,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>It assumes this runner is the only one trading the account, that a holdings read received later shows no older content, and that the journal's clock and the holdings' <span class="tt">as_of_</span> are one clock (as they are live; a simulated market must journal on its own clock). Orders placed any other way are outside it, as is an executor that drives this runner from inside its own <span class="tt">place</span>. A runner that journals to a broker but lacks what this needs (a broker that lists working orders, and an executor with <span class="tt">last_entry</span>, <span class="tt"><a class="el" href="#ab39cc16573ad8d0feaaf986bedaf918e" title="Prepares one bar for a slice: caches it (with a linear algebra backend) and sets the last price and t...">record</a></span> and <span class="tt">place(order, baseline)</span>, as <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1JournalingExecutor.html" title="An executor wrapper that records each instruction in a journal before sending it.">JournalingExecutor</a></span> has) places nothing until <span class="tt"><a class="el" href="#a8c7fd29ede70c8b23448f94fa2e8d006" title="Lets several orders on one instrument be outstanding at once, as an unjournaled runner does,...">allow_overlapping_orders</a></span> is called.</p>
 <dl class="section return"><dt>Returns</dt><dd>Whether serialized. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00952">952</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01129">1129</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3160,7 +3448,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01147">1147</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01346">1346</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3198,7 +3486,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00436">436</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00462">462</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3237,7 +3525,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00636">636</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00662">662</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3275,7 +3563,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01551">1551</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01750">1750</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3313,7 +3601,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00449">449</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00475">475</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3351,7 +3639,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01563">1563</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01762">1762</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3389,7 +3677,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01576">1576</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01775">1775</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3432,9 +3720,54 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00613">613</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00639">639</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00925">algotradelib::runner::ManualSource&lt; Runner &gt;::poll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l00958">algotradelib::runner::ManualSource&lt; Runner &gt;::poll()</a>.</p>
+
+</div>
+</div>
+<a id="ac1e7d875c06c6ce4ec4df857e51c823a" name="ac1e7d875c06c6ce4ec4df857e51c823a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e7d875c06c6ce4ec4df857e51c823a">&#9670;&#160;</a></span>set_run_opening()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename BrokerTag = DryTag, typename Executor = RecordingExecutor&lt;DryTag&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">algotradelib::runner::Runner</a>&lt; Strategy, CapsType, BrokerTag, Executor &gt;::set_run_opening </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structalgotradelib_1_1runner_1_1RunOpening.html">RunOpening</a></td>          <td class="paramname"><span class="paramname"><em>opening</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets how <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span> opens a budgeted runner's run from its journal: a new run by default, closing the journal's earlier run first; resume only when stated, with deposits and withdrawals each applied once. </p>
+<p>Read only by a runner that keeps its run in a journal; any other opens a new run at construction. See <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunOpening.html" title="How a budgeted runner opens its run when runner::recover_runner reads its journal (Runner::set_run_op...">RunOpening</a></span>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opening</td><td>The opening. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>for transfers without <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunOpening.html#a098099a8febd64d9fd2f5df1215a49db" title="Resume the journal&#39;s latest run instead of opening a new one (none: RunRefusal::NO_RUN).">RunOpening::resume_</a></span>, an empty transfer id, two transfers with one id, or a transfer amount not above zero. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>without <span class="tt">RiskLimits::run_budget_</span>, or after <span class="tt"><a class="el" href="namespacealgotradelib_1_1runner.html#a9567fb795a6007cb144a1a6665352dc4" title="Recovers a journal into a runner at startup: marks each instrument left owed, restores a serialized r...">runner::recover_runner</a></span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00790">790</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3471,7 +3804,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01540">1540</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01739">1739</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3504,7 +3837,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p><span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> queues its closing orders and settles them with this.</p>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01653">1653</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01852">1852</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3538,7 +3871,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p><span class="tt"><a class="el" href="classalgotradelib_1_1backtest_1_1Backtester.html" title="Replays bars (and quotes) through one strategy, with a ledger and a fill model.">backtest::Backtester</a></span> and <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> call it before their first event. A caller driving a runner directly calls it before the first <span class="tt"><a class="el" href="#a162a5a1d9be49ce80a71ffac434700d9" title="Feeds one bar: caches it, sets the last price and the clock to the bar&#39;s period end,...">feed</a></span>, <span class="tt"><a class="el" href="#a6a4a112cb3ec60b20a7a6664af452573" title="Feeds one bar as history: like feed, but whatever the strategy asks for is discarded (counted in warm...">feed_warmup</a></span> or <span class="tt"><a class="el" href="#ab39cc16573ad8d0feaaf986bedaf918e" title="Prepares one bar for a slice: caches it (with a linear algebra backend) and sets the last price and t...">record</a></span>; otherwise the strategy decides before it was set up.</p>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01600">1600</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01799">1799</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3570,7 +3903,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Tests whether <span class="tt"><a class="el" href="#a72ad5263968ff073424caea9538bffb2" title="Calls on_start and settles what it asked for, the first time it is called.">start</a></span> has been called. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> once <span class="tt"><a class="el" href="#a72ad5263968ff073424caea9538bffb2" title="Calls on_start and settles what it asked for, the first time it is called.">start</a></span> has run. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01618">1618</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01817">1817</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3603,7 +3936,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>For a caller driving a runner directly; <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> uses <span class="tt"><a class="el" href="#a27df75d9928c3802bd2b97e279043478" title="Calls on_stop and settles what it asked for while PollingLoop&#39;s STOPPING hold stands,...">notify_stop</a></span> during a stop instead. It calls <span class="tt">on_stop</span> whether or not <span class="tt"><a class="el" href="#a72ad5263968ff073424caea9538bffb2" title="Calls on_start and settles what it asked for, the first time it is called.">start</a></span> was called.</p>
 <dl class="section return"><dt>Returns</dt><dd>The pass's report. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01630">1630</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01829">1829</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3635,7 +3968,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the strategy, to read the state it kept. </p>
 <dl class="section return"><dt>Returns</dt><dd>The strategy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00559">559</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00585">585</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3667,7 +4000,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns the strategy. </p>
 <dl class="section return"><dt>Returns</dt><dd>The strategy. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00566">566</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00592">592</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3699,7 +4032,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many targets have waited for a stop's cancellation; see <span class="tt"><a class="el" href="#a968e395c4efcc070be878397e59382b0" title="Returns the targets waiting for a stop on their instrument to be cancelled (at most one per instrumen...">deferred_targets</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00783">783</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00960">960</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3731,7 +4064,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many targets are retained, for any reason; see <span class="tt"><a class="el" href="#a841a15c9335ae77f562e54d69c5ee0e3" title="Re-submits retained targets and kept intents once they can be acted on, and settles them.">retry_retained_targets</a></span>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number retained now. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01384">1384</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01583">1583</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3763,7 +4096,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many retained targets wait for the market phase, an unreachable broker or a rate limit. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number retained now. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01393">1393</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01592">1592</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3795,7 +4128,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many orders carrying a price a withheld band would have clamped were refused before sending (by the risk guard or the binding; not counting <span class="tt">UNAVAILABLE</span>). </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00682">682</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00708">708</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3828,7 +4161,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Co-occurrence, not proof that the band caused the refusal. Orders refused before sending are in <span class="tt"><a class="el" href="#ad3e46eaba920a676b9a606b85609dd3e" title="Returns how many orders carrying a price a withheld band would have clamped were refused before sendi...">unclamped_orders_refused</a></span>.</p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00673">673</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00699">699</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3861,7 +4194,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>An order needs it when part of it is unexplained and either it passed the confirmation timeout (listed or not), or no listing carries it and it was listed before, its cancellation was accepted, or it was restored at startup. In a serialized runner, an order a sweep named and no dated row has confirmed always needs it. Excluded: an order the history already settled; one whose history had no answer after the timeout (until a later listing or holdings explain it again); an order held for an operator; in a serialized runner, an order with no name; and, overlapping, an order of unknown outcome with no reference while its instrument is in the ledger.</p>
 <dl class="section return"><dt>Returns</dt><dd>The earliest such order's send instant, or <span class="tt">std::nullopt</span> if none needs history. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01172">1172</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01371">1371</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3895,7 +4228,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>An accepted order not tracked (no reference, or sent before holdings were read, as <span class="tt"><a class="el" href="#a7a942a483981c0cfaed8ff8707981733" title="Lets this runner place orders before holdings have ever been read.">allow_absent_portfolio</a></span> permits) has no such protection: its reservation lasts only until the next listing. An order of unknown outcome not tracked (an executor without <span class="tt">last_ref()</span>) gets no reservation at all once the ledger entry is resolved. Only orders sent in this process are tracked, and a restart starts with none, unless the runner is serialized (<span class="tt"><a class="el" href="#aa5ce9952307cb427dddb906d925f2d84" title="Tests whether this runner is serialized: at most one order per instrument that holdings have not yet ...">serialized</a></span>).</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of such orders. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00847">847</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01024">1024</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3927,7 +4260,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p>Returns how many instructions <span class="tt"><a class="el" href="#a6a4a112cb3ec60b20a7a6664af452573" title="Feeds one bar as history: like feed, but whatever the strategy asks for is discarded (counted in warm...">feed_warmup</a></span> discarded. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count over the runner's life. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01789">1789</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01988">1988</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3966,7 +4299,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if this runner's accepted withdrawal of that order is on record. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01448">1448</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l01647">1647</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -3997,7 +4330,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 </div><!-- fragment -->
 <p><span class="tt">true</span> when this runner journals what it sends to a broker (a <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1JournalingExecutor.html" title="An executor wrapper that records each instruction in a journal before sending it.">JournalingExecutor</a></span>), which makes it serialized unless <span class="tt"><a class="el" href="#a8c7fd29ede70c8b23448f94fa2e8d006" title="Lets several orders on one instrument be outstanding at once, as an unjournaled runner does,...">allow_overlapping_orders</a></span> is called; see <span class="tt"><a class="el" href="#aa5ce9952307cb427dddb906d925f2d84" title="Tests whether this runner is serialized: at most one order per instrument that holdings have not yet ...">serialized</a></span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00341">341</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00360">360</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -4028,7 +4361,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p><span class="tt">true</span> when this runner keeps each order it sends in <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1Portfolio.html#a1c36c7bd2f875d05393065fde7471f57" title="Orders still outstanding at the broker.">Portfolio::working_</a></span> until a broker listing accounts for it: a live runner whose broker lists working orders (every shipped binding). </p>
 <p><span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> then requires the working-order poll (see <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1PollSchedule.html#a9f6e565645309dcdf9ad661fd5ab9615" title="How often to read the working orders.">PollSchedule::working_orders_</a></span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00334">334</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00353">353</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -4059,7 +4392,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 <p><span class="tt">true</span> when this runner sends to a broker and the strategy defines <span class="tt">on_fill</span>, which then never fires (no shipped live source produces fills). </p>
 <p>Nothing is refused; <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">PollingLoop</a></span> puts a note in its report. A program that feeds <span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1Fill.html" title="One execution of an order the strategy placed, delivered to on_fill.">Fill</a></span> events itself does reach <span class="tt">on_fill</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00310">310</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00329">329</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -4087,7 +4420,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p><span class="tt">true</span> unless the strategy declares <span class="tt">static constexpr bool reads_bar_history = false;</span>. When <span class="tt">false</span> this runner keeps no bar history: <span class="tt"><a class="el" href="#a6b54f10ce80bfd7ecd3942a77b5e0ed8" title="Returns the context, to arrange its state (instruments, portfolio) before feeding events.">context()</a>.bars()</span> throws <span class="tt">std::logic_error</span>, and each bar fed is still refused unless later than its series' last. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00325">325</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00344">344</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -4115,7 +4448,7 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p><span class="tt">true</span> when the strategy declares <span class="tt">on_bars</span>: bars are then fed with <span class="tt"><a class="el" href="#ab39cc16573ad8d0feaaf986bedaf918e" title="Prepares one bar for a slice: caches it (with a linear algebra backend) and sets the last price and t...">record</a></span> and delivered with <span class="tt"><a class="el" href="#a162a5a1d9be49ce80a71ffac434700d9" title="Feeds one bar: caches it, sets the last price and the clock to the bar&#39;s period end,...">feed</a>(const <a class="el" href="structalgotradelib_1_1strategy_1_1BarSlice.html" title="Every instrument&#39;s bar of one interval for one period end, delivered to on_bars.">strategy::BarSlice</a>&amp;)</span> (or <span class="tt"><a class="el" href="#a6a4a112cb3ec60b20a7a6664af452573" title="Feeds one bar as history: like feed, but whatever the strategy asks for is discarded (counted in warm...">feed_warmup</a></span> of one), and the single-bar <span class="tt"><a class="el" href="#a162a5a1d9be49ce80a71ffac434700d9" title="Feeds one bar: caches it, sets the last price and the clock to the bar&#39;s period end,...">feed</a></span> and <span class="tt"><a class="el" href="#a6a4a112cb3ec60b20a7a6664af452573" title="Feeds one bar as history: like feed, but whatever the strategy asks for is discarded (counted in warm...">feed_warmup</a></span> do not compile. </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00318">318</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00337">337</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
 </div>
 </div>
@@ -4143,9 +4476,9 @@ template&lt;typename Strategy, typename CapsType = strategy::NoCaps, typename Br
 
 <p><span class="tt">true</span> when the strategy declares <span class="tt">on_data</span>, so records may be fed (<span class="tt"><a class="el" href="#a162a5a1d9be49ce80a71ffac434700d9" title="Feeds one bar: caches it, sets the last price and the clock to the bar&#39;s period end,...">feed</a>(const <a class="el" href="structalgotradelib_1_1runner_1_1DataEvent.html" title="A record of data from outside the broker, delivered to on_data.">DataEvent</a>&amp;)</span>). </p>
 
-<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00301">301</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="runner_8hpp_source.html#l00320">320</a> of file <a class="el" href="runner_8hpp_source.html">runner.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l01315">algotradelib::runner::PollingLoop&lt; Runner, Source, Clock &gt;::set_data_poll()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="loop_8hpp_source.html#l01355">algotradelib::runner::PollingLoop&lt; Runner, Source, Clock &gt;::set_data_poll()</a>.</p>
 
 </div>
 </div>

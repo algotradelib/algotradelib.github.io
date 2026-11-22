@@ -258,7 +258,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:afe972bbffd8e55aa461b6fbd1c629151" id="r_afe972bbffd8e55aa461b6fbd1c629151"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#afe972bbffd8e55aa461b6fbd1c629151">has_batch_prices</a> = false</td></tr>
 <tr class="memdesc:afe972bbffd8e55aa461b6fbd1c629151"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">false</span>: one instrument a request.  <br /></td></tr>
 <tr class="memitem:a81cbfe0dedd69408de6644b79804b3fa" id="r_a81cbfe0dedd69408de6644b79804b3fa"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a81cbfe0dedd69408de6644b79804b3fa">has_buying_power</a> = false</td></tr>
-<tr class="memdesc:a81cbfe0dedd69408de6644b79804b3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">false</span>: no Alpaca figure is cash net of resting buys without credit (<span class="tt">buying_power</span> counts margin), so buys are not checked against cash; a buy above the cash borrows on the account's margin unless <span class="tt">RiskLimits::max_order_notional_</span> or <span class="tt">max_gross_exposure_</span> stops it.  <br /></td></tr>
+<tr class="memdesc:a81cbfe0dedd69408de6644b79804b3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">false</span>: no Alpaca figure is cash net of resting buys without credit (<span class="tt">buying_power</span> counts margin), so buys are not checked against cash; a buy above the cash borrows on the account's margin. <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">runner::PollingLoop</a></span> over it holds every placement unless <span class="tt">RiskLimits::run_budget_</span> is set, which a live runner takes when it keeps its run in the order journal.  <br /></td></tr>
 <tr class="memitem:a9a572cf6a3e6493527c0083cee285c40" id="r_a9a572cf6a3e6493527c0083cee285c40"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a9a572cf6a3e6493527c0083cee285c40">has_buying_power_quantity</a> = false</td></tr>
 <tr class="memdesc:a9a572cf6a3e6493527c0083cee285c40"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">false</span>: there is no buying power to express in shares.  <br /></td></tr>
 <tr class="memitem:a145bd613df6ad21c413f63d0890a47fc" id="r_a145bd613df6ad21c413f63d0890a47fc"><td class="memItemLeft">static constexpr <a class="el" href="namespacealgotradelib.html#a240f592350113b90da1d86d8957b7624">SellableSource</a>&#160;</td><td class="memItemRight"><a class="el" href="#a145bd613df6ad21c413f63d0890a47fc">sellable_source</a> = <a class="el" href="namespacealgotradelib.html#a240f592350113b90da1d86d8957b7624a7d6422d2e3a45ca998ef0d8915c9d604">SellableSource::HOLDINGS</a></td></tr>
@@ -477,7 +477,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00371">371</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00372">372</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -518,7 +518,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00341">341</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00342">342</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -565,7 +565,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00362">362</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00363">363</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -612,7 +612,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00413">413</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00414">414</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -648,7 +648,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00304">304</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00305">305</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -678,7 +678,7 @@ Static Public Attributes</h2></td></tr>
 <p>Returns where an order goes: Alpaca routes it, and no venue can be asked for. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">Venue::UNSPECIFIED</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00170">170</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00171">171</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -719,7 +719,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00381">381</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00382">382</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -760,9 +760,9 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00351">351</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00352">352</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="alpaca_2traits_8hpp_source.html#l00331">quote()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="alpaca_2traits_8hpp_source.html#l00332">quote()</a>.</p>
 
 </div>
 </div>
@@ -798,7 +798,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The placed order, or the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00214">214</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00215">215</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -834,7 +834,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The working orders, or the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00231">231</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00232">232</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -881,7 +881,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00434">434</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00435">435</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -928,7 +928,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00445">445</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00446">446</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -975,7 +975,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00392">392</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00393">393</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1016,7 +1016,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00331">331</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00332">332</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1052,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The statistics, or null if the connection has no budget. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00321">321</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00322">322</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1091,7 @@ Static Public Attributes</h2></td></tr>
 <p>Refuses a replacement; <span class="tt"><a class="el" href="#aac9347b293e7f1697bc7003e8582f656" title="Refuses every replacement: Alpaca&#39;s replacement is a new order that drops the client_order_id,...">to_replacement</a></span> refuses first, so a session never calls it. </p>
 <dl class="section return"><dt>Returns</dt><dd>An <span class="tt">INVALID_ARGUMENT</span> error (<span class="tt">replace_unsupported</span>, not sent). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00400">400</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00401">401</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1121,7 @@ Static Public Attributes</h2></td></tr>
 <p>Returns the account selector a session binds, which is empty. The argument is not used. </p>
 <dl class="section return"><dt>Returns</dt><dd>An empty selector. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00295">295</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00296">296</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1157,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> for 1, 5, 15 and 30 minutes, an hour and a day. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00160">160</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00161">161</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1198,7 +1198,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The amendment, or an <span class="tt">INVALID_ARGUMENT</span> error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00264">264</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00265">265</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1238,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The query, or an <span class="tt">INVALID_ARGUMENT</span> error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00281">281</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00282">282</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1272,7 +1272,7 @@ Static Public Attributes</h2></td></tr>
 <p>Refuses every replacement: Alpaca's replacement is a new order that drops the <span class="tt">client_order_id</span>, and a runner never replaces (it cancels and places). </p>
 <dl class="section return"><dt>Returns</dt><dd>An <span class="tt">INVALID_ARGUMENT</span> error (<span class="tt">replace_unsupported</span>, not sent). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00252">252</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00253">253</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1302,7 +1302,7 @@ Static Public Attributes</h2></td></tr>
 <p>Returns the account type, which this adapter does not read (the argument is not used). </p>
 <dl class="section return"><dt>Returns</dt><dd>An empty string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00312">312</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00313">313</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1338,7 +1338,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An error if refused (nothing is sent), otherwise <span class="tt">std::nullopt</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00179">179</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00180">180</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1379,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An error if refused (nothing is sent), otherwise <span class="tt">std::nullopt</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00189">189</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00190">190</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1415,7 +1415,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An error if refused (nothing is sent), otherwise <span class="tt">std::nullopt</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00205">205</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00206">206</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1456,7 +1456,7 @@ Static Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The result, or an error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00423">423</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00424">424</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1613,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">false</span>: one instrument a request. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00141">141</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00142">142</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1637,9 +1637,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><span class="tt">false</span>: no Alpaca figure is cash net of resting buys without credit (<span class="tt">buying_power</span> counts margin), so buys are not checked against cash; a buy above the cash borrows on the account's margin unless <span class="tt">RiskLimits::max_order_notional_</span> or <span class="tt">max_gross_exposure_</span> stops it. </p>
+<p><span class="tt">false</span>: no Alpaca figure is cash net of resting buys without credit (<span class="tt">buying_power</span> counts margin), so buys are not checked against cash; a buy above the cash borrows on the account's margin. <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1PollingLoop.html" title="Runs a runner for a live session: polls a source on a schedule, gates placements, derives the market ...">runner::PollingLoop</a></span> over it holds every placement unless <span class="tt">RiskLimits::run_budget_</span> is set, which a live runner takes when it keeps its run in the order journal. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00126">126</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00127">127</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1665,7 +1665,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">false</span>: there is no buying power to express in shares. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00129">129</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00130">130</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1691,7 +1691,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">true</span>: <span class="tt">/v3/calendar/XNYS</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00144">144</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00145">145</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1717,7 +1717,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">true</span>: one request covers the whole range. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00147">147</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00148">148</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1743,7 +1743,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">true</span>: the adapter fills each open day's regular session and, where stated, its extended span, so a live loop takes the market phase from them. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00153">153</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00154">154</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1795,7 +1795,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">false</span>: commission-free, and the per-share FINRA fee on sells has no <span class="tt"><a class="el" href="structalgotradelib_1_1CommissionRate.html" title="One commission rate, the market and venue it applies to, and the dates it applies on.">CommissionRate</a></span> shape. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00135">135</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00136">136</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -2003,7 +2003,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">true</span>: <span class="tt">/v2/assets/{symbol}</span>. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00138">138</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00139">139</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>
@@ -2109,7 +2109,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00104">104</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="alpaca_2traits_8hpp_source.html#l00281">to_history_query()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="alpaca_2traits_8hpp_source.html#l00282">to_history_query()</a>.</p>
 
 </div>
 </div>
@@ -2187,7 +2187,7 @@ Static Public Attributes</h2></td></tr>
 
 <p><span class="tt">HOLDINGS</span>: each position's <span class="tt">qty_available</span>, with the basis <span class="tt">AlpacaBlockingClient::holdings</span> states. </p>
 
-<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00132">132</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="alpaca_2traits_8hpp_source.html#l00133">133</a> of file <a class="el" href="alpaca_2traits_8hpp_source.html">traits.hpp</a>.</p>
 
 </div>
 </div>

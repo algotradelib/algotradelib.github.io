@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pacing_0',['pacing',['../transport-and-pacing.html#autotoc_md115',1,'Request pacing'],['../transport-and-pacing.html',1,'Transport and request pacing']]],
+  ['pacing_0',['pacing',['../transport-and-pacing.html#autotoc_md116',1,'Request pacing'],['../transport-and-pacing.html',1,'Transport and request pacing']]],
   ['package_1',['As an installed package',['../index.html#autotoc_md5',1,'']]],
   ['parallelism_20goes_2',['What is single-owner, and where parallelism goes',['../analytics-conventions.html#autotoc_md21',1,'']]],
   ['period_3',['The trap: your supervisor&apos;s grace period',['../running-a-strategy-live.html#autotoc_md94',1,'']]],
@@ -15,7 +15,7 @@ var searchData=
   ['pressure_12',['Reading it under pressure',['../recovering-after-a-crash.html#autotoc_md85',1,'']]],
   ['prevent_20a_20silent_20lookahead_13',['Two conventions that prevent a silent lookahead',['../market-data.html#autotoc_md60',1,'']]],
   ['price_20grid_20is_20the_20library_20s_20own_14',['The price grid is the library&apos;s own',['../market-data.html#autotoc_md61',1,'']]],
-  ['prices_15',['Prices',['../writing-a-strategy.html#autotoc_md123',1,'']]],
+  ['prices_15',['Prices',['../writing-a-strategy.html#autotoc_md124',1,'']]],
   ['process_20does_20and_20does_20not_20do_16',['What killing the process does, and does not do',['../binding-a-broker.html#autotoc_md40',1,'']]],
   ['programs_17',['programs',['../broker-clients.html#autotoc_md46',1,'Sharing a token between programs'],['../broker-clients.html#autotoc_md47',1,'Sharing the KIS calendar between programs']]],
   ['purpose_18',['The three gates that stop you trading, on purpose',['../running-a-strategy-live.html#autotoc_md95',1,'']]]

@@ -133,6 +133,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afe6e2a9af0450f0eb3fd7a224341f3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps an executor.  <br /></td></tr>
 <tr class="memitem:a9d480e024cafa4a6fd617c2f1ceb8fb3" id="r_a9d480e024cafa4a6fd617c2f1ceb8fb3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9d480e024cafa4a6fd617c2f1ceb8fb3">set_id_prefix</a> (std::string prefix)</td></tr>
 <tr class="memdesc:a9d480e024cafa4a6fd617c2f1ceb8fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the prefix of line ids.  <br /></td></tr>
+<tr class="memitem:a5542a977a16ced85419028c8ac473e47" id="r_a5542a977a16ced85419028c8ac473e47"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5542a977a16ced85419028c8ac473e47">set_run</a> (std::string run)</td></tr>
+<tr class="memdesc:a5542a977a16ced85419028c8ac473e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names the run budget's run that every later placement belongs to (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunRecord.html#a9d05c73885048992722c2bef84244fd9" title="The run&#39;s id: the id of its RunRecordKind::OPEN line.">RunRecord::run_</a></span>).  <br /></td></tr>
+<tr class="memitem:a33f3411bcc4b9cad1bcadc2ab5c07091" id="r_a33f3411bcc4b9cad1bcadc2ab5c07091"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a33f3411bcc4b9cad1bcadc2ab5c07091">next_run_id</a> ()</td></tr>
+<tr class="memdesc:a33f3411bcc4b9cad1bcadc2ab5c07091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new id for a run budget's ledger line: <span class="tt">run-</span>, the prefix, a hyphen and the counter.  <br /></td></tr>
 <tr class="memitem:a71140362efe56df26bd8d19ba9cde226" id="r_a71140362efe56df26bd8d19ba9cde226"><td class="memTemplParams" colspan="2">template&lt;typename E = Inner&gt; </td></tr>
 <tr class="memitem:a71140362efe56df26bd8d19ba9cde226 template"><td class="memItemLeft">auto&#160;</td><td class="memItemRight"><a class="el" href="#a71140362efe56df26bd8d19ba9cde226">route_of</a> (const <a class="el" href="structalgotradelib_1_1strategy_1_1PlannedOrder.html">strategy::PlannedOrder</a> &amp;order, int) const -&gt; decltype(std::declval&lt; const E &amp; &gt;().effective_route(order.venue_))</td></tr>
 <tr class="memdesc:a71140362efe56df26bd8d19ba9cde226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the venue the wrapped executor says an order will reach.  <br /></td></tr>
@@ -191,7 +195,7 @@ class algotradelib::runner::JournalingExecutor&lt; Inner, Journal, Clock &gt;</d
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00712">712</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00842">842</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afe6e2a9af0450f0eb3fd7a224341f3d2" name="afe6e2a9af0450f0eb3fd7a224341f3d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe6e2a9af0450f0eb3fd7a224341f3d2">&#9670;&#160;</a></span>JournalingExecutor()</h2>
@@ -237,7 +241,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00723">723</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00853">853</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +288,7 @@ template&lt;typename BrokerTag&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's outcome, or <span class="tt">UNAVAILABLE</span> if the <span class="tt">PENDING</span> line could not be written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00864">864</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01022">1022</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -322,9 +326,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The venue. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00773">773</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00930">930</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00793">place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00950">place()</a>.</p>
 
 </div>
 </div>
@@ -356,9 +360,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the wrapped executor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00897">897</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01055">1055</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00723">JournalingExecutor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00853">JournalingExecutor()</a>.</p>
 
 </div>
 </div>
@@ -390,7 +394,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the wrapped executor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The executor. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00904">904</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01062">1062</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -422,9 +426,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the journal. </p>
 <dl class="section return"><dt>Returns</dt><dd>The journal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00912">912</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01070">1070</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00723">JournalingExecutor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00853">JournalingExecutor()</a>.</p>
 
 </div>
 </div>
@@ -456,7 +460,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns how many journal writes have failed; <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">Runner</a></span> compares it with the count it last acknowledged to tell a new failure from an old one. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00937">937</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01095">1095</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +492,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the answering line last written (or attempted) for a placement the wrapped executor was asked to place, sent or refused before sending. </p>
 <dl class="section return"><dt>Returns</dt><dd>The line, or <span class="tt">std::nullopt</span> before any placement was asked for. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00835">835</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00993">993</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,9 +532,9 @@ template&lt;typename Executor = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The error, if the wrapped executor reports one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00968">968</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01126">1126</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00968">last_error()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l01126">last_error()</a>.</p>
 
 </div>
 </div>
@@ -562,7 +566,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns the first journal failure's description. </p>
 <dl class="section return"><dt>Returns</dt><dd>The description, or empty if no write has failed; never cleared. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00920">920</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01078">1078</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -602,9 +606,41 @@ template&lt;typename Executor = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The reference, if the wrapped executor reports one. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00958">958</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01116">1116</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00958">last_ref()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l01116">last_ref()</a>.</p>
+
+</div>
+</div>
+<a id="a33f3411bcc4b9cad1bcadc2ab5c07091" name="a33f3411bcc4b9cad1bcadc2ab5c07091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f3411bcc4b9cad1bcadc2ab5c07091">&#9670;&#160;</a></span>next_run_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classalgotradelib_1_1runner_1_1JournalingExecutor.html">algotradelib::runner::JournalingExecutor</a>&lt; Inner, Journal, Clock &gt;::next_run_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a new id for a run budget's ledger line: <span class="tt">run-</span>, the prefix, a hyphen and the counter. </p>
+<dl class="section return"><dt>Returns</dt><dd>The id; never one this executor returned before. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00895">895</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,9 +678,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's outcome, or <span class="tt">UNAVAILABLE</span> if the <span class="tt">PENDING</span> line could not be written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00782">782</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00939">939</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00782">place()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00939">place()</a>.</p>
 
 </div>
 </div>
@@ -687,7 +723,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's outcome, or <span class="tt">UNAVAILABLE</span> if the <span class="tt">PENDING</span> line could not be written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00793">793</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00950">950</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -726,7 +762,9 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether it was written. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00848">848</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01006">1006</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00881">set_run()</a>.</p>
 
 </div>
 </div>
@@ -772,7 +810,7 @@ template&lt;typename Executor = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The venue it routes to. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00948">948</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01106">1106</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -823,9 +861,9 @@ template&lt;typename E = Inner&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped executor's <span class="tt">effective_route</span> for the order's venue. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00753">753</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00910">910</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00773">effective_route_of()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="journal_8hpp_source.html#l00930">effective_route_of()</a>.</p>
 
 </div>
 </div>
@@ -867,7 +905,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">order.venue_</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00764">764</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00921">921</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -905,7 +943,45 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00738">738</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00868">868</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5542a977a16ced85419028c8ac473e47" name="a5542a977a16ced85419028c8ac473e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5542a977a16ced85419028c8ac473e47">&#9670;&#160;</a></span>set_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classalgotradelib_1_1runner_1_1JournalingExecutor.html">algotradelib::runner::JournalingExecutor</a>&lt; Inner, Journal, Clock &gt;::set_run </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>run</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Names the run budget's run that every later placement belongs to (<span class="tt"><a class="el" href="structalgotradelib_1_1runner_1_1RunRecord.html#a9d05c73885048992722c2bef84244fd9" title="The run&#39;s id: the id of its RunRecordKind::OPEN line.">RunRecord::run_</a></span>). </p>
+<p>Only <span class="tt"><a class="el" href="#a9e7000c1eca093a25721704d13abc11e" title="Records and places one order.">place</a></span> stamps it, on the placement's lines; a line passed to <span class="tt"><a class="el" href="#ad0a562e51c69e721f98123be72587270" title="Appends a line the caller built, such as a serialized Runner&#39;s CONFIRMED line.">record</a></span> keeps what it carries, so a closing line written for an older order does not take the run's id. A budgeted <span class="tt"><a class="el" href="classalgotradelib_1_1runner_1_1Runner.html" title="Runs one strategy: feeds it events, reconciles what it asks for, checks the risk limits,...">Runner</a></span> calls it once its run is open.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">run</td><td>The run's id; empty stops stamping. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00881">881</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -937,7 +1013,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 <p>Returns how many instructions were not sent because their <span class="tt">PENDING</span> line could not be written. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00928">928</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l01086">1086</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +1042,7 @@ template&lt;typename Inner, typename Journal, typename Clock = SteadyClock&gt; <
 
 <p>Whether the wrapped executor reaches a broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00715">715</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="journal_8hpp_source.html#l00845">845</a> of file <a class="el" href="journal_8hpp_source.html">journal.hpp</a>.</p>
 
 </div>
 </div>

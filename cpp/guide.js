@@ -28,14 +28,14 @@ var guide =
       [ "Where to go next", "architecture.html#autotoc_md29", null ]
     ] ],
     [ "Writing a strategy", "writing-a-strategy.html", [
-      [ "The handlers", "writing-a-strategy.html#autotoc_md120", null ],
+      [ "The handlers", "writing-a-strategy.html#autotoc_md121", null ],
       [ "Several instruments at once: <span class=\"tt\">on_bars</span>", "writing-a-strategy.html#several-instruments", null ],
-      [ "Emit a target, not an order", "writing-a-strategy.html#autotoc_md121", null ],
-      [ "What the context gives you", "writing-a-strategy.html#autotoc_md122", null ],
-      [ "Prices", "writing-a-strategy.html#autotoc_md123", null ],
-      [ "Warm-up", "writing-a-strategy.html#autotoc_md124", null ],
-      [ "Reaching a broker-specific feature", "writing-a-strategy.html#autotoc_md125", null ],
-      [ "What you do not have to handle", "writing-a-strategy.html#autotoc_md126", null ]
+      [ "Emit a target, not an order", "writing-a-strategy.html#autotoc_md122", null ],
+      [ "What the context gives you", "writing-a-strategy.html#autotoc_md123", null ],
+      [ "Prices", "writing-a-strategy.html#autotoc_md124", null ],
+      [ "Warm-up", "writing-a-strategy.html#autotoc_md125", null ],
+      [ "Reaching a broker-specific feature", "writing-a-strategy.html#autotoc_md126", null ],
+      [ "What you do not have to handle", "writing-a-strategy.html#autotoc_md127", null ]
     ] ],
     [ "Binding a broker", "binding-a-broker.html", [
       [ "Four umbrellas, and the line between them", "binding-a-broker.html#autotoc_md30", null ],
@@ -109,8 +109,9 @@ var guide =
       [ "Short positions", "running-a-strategy-live.html#autotoc_md103", null ],
       [ "What the broker says it charged you", "running-a-strategy-live.html#autotoc_md104", null ],
       [ "The portfolio exposure ceiling, and what it means by \"portfolio\"", "running-a-strategy-live.html#autotoc_md105", null ],
-      [ "What this does not do yet", "running-a-strategy-live.html#autotoc_md106", null ],
-      [ "Trying it without a broker", "running-a-strategy-live.html#autotoc_md107", null ]
+      [ "The run budget", "running-a-strategy-live.html#autotoc_md106", null ],
+      [ "What this does not do yet", "running-a-strategy-live.html#autotoc_md107", null ],
+      [ "Trying it without a broker", "running-a-strategy-live.html#autotoc_md108", null ]
     ] ],
     [ "Recovering after a crash", "recovering-after-a-crash.html", [
       [ "The sentence the whole thing rests on", "recovering-after-a-crash.html#autotoc_md82", null ],
@@ -124,12 +125,12 @@ var guide =
       [ "Trying it without a broker", "recovering-after-a-crash.html#autotoc_md89", null ]
     ] ],
     [ "The broker port", "broker-port.html", [
-      [ "Order identity", "broker-port.html#autotoc_md108", null ],
-      [ "Capabilities", "broker-port.html#autotoc_md109", null ],
-      [ "Example", "broker-port.html#autotoc_md110", null ],
-      [ "A market-data source that cannot trade", "broker-port.html#autotoc_md111", null ],
-      [ "Choosing a broker by name", "broker-port.html#autotoc_md112", null ],
-      [ "Where to go next", "broker-port.html#autotoc_md113", null ]
+      [ "Order identity", "broker-port.html#autotoc_md109", null ],
+      [ "Capabilities", "broker-port.html#autotoc_md110", null ],
+      [ "Example", "broker-port.html#autotoc_md111", null ],
+      [ "A market-data source that cannot trade", "broker-port.html#autotoc_md112", null ],
+      [ "Choosing a broker by name", "broker-port.html#autotoc_md113", null ],
+      [ "Where to go next", "broker-port.html#autotoc_md114", null ]
     ] ],
     [ "Talking to a broker directly", "broker-clients.html", [
       [ "Quote clients", "broker-clients.html#autotoc_md43", null ],
@@ -150,11 +151,11 @@ var guide =
       [ "Where to go next", "broker-clients.html#autotoc_md56", null ]
     ] ],
     [ "Transport and request pacing", "transport-and-pacing.html", [
-      [ "Transport behaviour", "transport-and-pacing.html#autotoc_md114", null ],
-      [ "Request pacing", "transport-and-pacing.html#autotoc_md115", null ],
-      [ "Traffic classes", "transport-and-pacing.html#autotoc_md116", null ],
-      [ "How the two brokers report a refusal", "transport-and-pacing.html#autotoc_md117", null ],
-      [ "Reading the counters", "transport-and-pacing.html#autotoc_md118", null ],
-      [ "Where to go next", "transport-and-pacing.html#autotoc_md119", null ]
+      [ "Transport behaviour", "transport-and-pacing.html#autotoc_md115", null ],
+      [ "Request pacing", "transport-and-pacing.html#autotoc_md116", null ],
+      [ "Traffic classes", "transport-and-pacing.html#autotoc_md117", null ],
+      [ "How the two brokers report a refusal", "transport-and-pacing.html#autotoc_md118", null ],
+      [ "Reading the counters", "transport-and-pacing.html#autotoc_md119", null ],
+      [ "Where to go next", "transport-and-pacing.html#autotoc_md120", null ]
     ] ]
 ];

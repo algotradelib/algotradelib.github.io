@@ -90,5 +90,13 @@ var searchData=
   ['rows_87',['rows',['../classalgotradelib_1_1analytics_1_1SeriesFrame.html#a95567078c1cf69e9e867998192640cfc',1,'algotradelib::analytics::SeriesFrame::rows()'],['../classalgotradelib_1_1analytics_1_1Panel.html#afd55210e7979a2f4729739818bf092fb',1,'algotradelib::analytics::Panel::rows()']]],
   ['rsi_88',['rsi',['../namespacealgotradelib_1_1analytics.html#a36c78df6ba03cd8abb6635822a79bf86',1,'algotradelib::analytics']]],
   ['run_89',['run',['../classalgotradelib_1_1runner_1_1PollingLoop.html#ac7114c02284c4f3ccf3c83a9259a4394',1,'algotradelib::runner::PollingLoop']]],
-  ['runner_90',['Runner',['../classalgotradelib_1_1runner_1_1Runner.html#a71b17138d83b8f7b23b60780e2911149',1,'algotradelib::runner::Runner']]]
+  ['run_5fcash_90',['run_cash',['../classalgotradelib_1_1backtest_1_1Backtester.html#a05fc26d173eeea13df4baec60990ac0d',1,'algotradelib::backtest::Backtester::run_cash()'],['../classalgotradelib_1_1runner_1_1Runner.html#a1b81053b3d23d17e94d7a3d7bf5b39db',1,'algotradelib::runner::Runner::run_cash()']]],
+  ['run_5fholding_91',['run_holding',['../classalgotradelib_1_1backtest_1_1Backtester.html#a2b551589cb3bdb6b6fe00b7dcfcc7e61',1,'algotradelib::backtest::Backtester::run_holding()'],['../classalgotradelib_1_1runner_1_1Runner.html#a9db3bbd3a22356d270b53342a408a3e4',1,'algotradelib::runner::Runner::run_holding()']]],
+  ['run_5frecord_5fkind_5ffrom_92',['run_record_kind_from',['../namespacealgotradelib_1_1runner.html#a089ddc1784f9e5833b047b109b444b65',1,'algotradelib::runner']]],
+  ['run_5frecord_5fkind_5fname_93',['run_record_kind_name',['../namespacealgotradelib_1_1runner.html#a807709e68dd4623c21a6e496e601a222',1,'algotradelib::runner']]],
+  ['run_5frecovery_94',['run_recovery',['../classalgotradelib_1_1runner_1_1Runner.html#a2fa3bd436225c6cd4806edd7c559f9d2',1,'algotradelib::runner::Runner']]],
+  ['run_5funsettled_95',['run_unsettled',['../classalgotradelib_1_1runner_1_1Runner.html#a129dfc14a342e55396346d6d87967b2c',1,'algotradelib::runner::Runner']]],
+  ['run_5fwrites_5fclosed_96',['run_writes_closed',['../classalgotradelib_1_1runner_1_1Runner.html#a08a6b70c5f2065b7425cb0334a8e3b30',1,'algotradelib::runner::Runner']]],
+  ['runledger_97',['RunLedger',['../classalgotradelib_1_1runner_1_1RunLedger.html#a23f074f5c0a13574eeb5b2968c951b2f',1,'algotradelib::runner::RunLedger']]],
+  ['runner_98',['Runner',['../classalgotradelib_1_1runner_1_1Runner.html#a71b17138d83b8f7b23b60780e2911149',1,'algotradelib::runner::Runner']]]
 ];

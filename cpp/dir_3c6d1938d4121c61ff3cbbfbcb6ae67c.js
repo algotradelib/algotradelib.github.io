@@ -9,6 +9,7 @@ var dir_3c6d1938d4121c61ff3cbbfbcb6ae67c =
     [ "loop.hpp", "loop_8hpp_source.html", null ],
     [ "order_updates.hpp", "order__updates_8hpp_source.html", null ],
     [ "reconcile_orders.hpp", "reconcile__orders_8hpp_source.html", null ],
+    [ "run_ledger.hpp", "run__ledger_8hpp_source.html", null ],
     [ "runner.hpp", "runner_8hpp_source.html", null ],
     [ "signal_stop.hpp", "signal__stop_8hpp_source.html", null ],
     [ "stop.hpp", "stop_8hpp_source.html", null ]

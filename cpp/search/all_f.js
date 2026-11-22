@@ -18,7 +18,7 @@ var searchData=
   ['layer_3a_20two_20numeric_20worlds_20and_20four_20conventions_15',['The analytics layer: two numeric worlds and four conventions',['../analytics-conventions.html',1,'guide']]],
   ['layers_16',['The layers',['../architecture.html#autotoc_md22',1,'']]],
   ['leaves_20you_20holding_17',['The three stops, and what each leaves you holding',['../running-a-strategy-live.html#autotoc_md91',1,'']]],
-  ['ledger_18',['LEDGER',['../namespacealgotradelib_1_1kis.html#a2cea30e9e574dc7877db08751a1beca5a90edd2c2f8e60f79a1b54485b1efdba1',1,'algotradelib::kis']]],
+  ['ledger_18',['LEDGER',['../namespacealgotradelib_1_1kis.html#a2cea30e9e574dc7877db08751a1beca5a90edd2c2f8e60f79a1b54485b1efdba1',1,'algotradelib::kis::LEDGER'],['../namespacealgotradelib_1_1runner.html#ac6ce2dd3ddcfc9bddc4a003a65ad5835a90edd2c2f8e60f79a1b54485b1efdba1',1,'algotradelib::runner::LEDGER'],['../namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aa90edd2c2f8e60f79a1b54485b1efdba1',1,'algotradelib::runner::LEDGER']]],
   ['ledger_19',['ledger',['../classalgotradelib_1_1backtest_1_1Backtester.html#a467b358a3c18b251f0936816cbfd21ab',1,'algotradelib::backtest::Backtester::ledger()'],['../classalgotradelib_1_1runner_1_1Runner.html#abd31d83e8748e853e7a7f8bbe1756518',1,'algotradelib::runner::Runner::ledger() const noexcept'],['../classalgotradelib_1_1runner_1_1Runner.html#aab8cd71420d31617da2c16ee5be8c62d',1,'algotradelib::runner::Runner::ledger() noexcept']]],
   ['ledger_2ehpp_20',['ledger.hpp',['../ledger_8hpp.html',1,'']]],
   ['levels_21',['Levels',['../structalgotradelib_1_1backtest_1_1Levels.html',1,'algotradelib::backtest']]],

@@ -18,7 +18,7 @@ var searchData=
   ['capacity_15',['capacity',['../classalgotradelib_1_1analytics_1_1SeriesBuffer.html#a85a63fdd597aa2a1f9032936ebf3ebc7',1,'algotradelib::analytics::SeriesBuffer::capacity()'],['../classalgotradelib_1_1Code.html#abf480c5a83311b1be5d00132f1226c3a',1,'algotradelib::Code::capacity()']]],
   ['carries_5fcaller_5fprice_16',['carries_caller_price',['../namespacealgotradelib.html#a5543ab0ac210eeba3659be9077ed9296',1,'algotradelib']]],
   ['carries_5ftrigger_5fprice_17',['carries_trigger_price',['../namespacealgotradelib.html#a4f8909d02379bac5e9737d072aa7f1e1',1,'algotradelib']]],
-  ['cash_18',['cash',['../classalgotradelib_1_1mock_1_1Market.html#a07f07291b1803c0592fb18b886496ab9',1,'algotradelib::mock::Market']]],
+  ['cash_18',['cash',['../classalgotradelib_1_1mock_1_1Market.html#a07f07291b1803c0592fb18b886496ab9',1,'algotradelib::mock::Market::cash()'],['../classalgotradelib_1_1runner_1_1RunLedger.html#a149fbc551042f8e7a26f5ef8536d9f11',1,'algotradelib::runner::RunLedger::cash()']]],
   ['cash_5fin_19',['cash_in',['../classalgotradelib_1_1backtest_1_1ReplayLedger.html#aff2834cbc52eabaafa51fb24485fb5e2',1,'algotradelib::backtest::ReplayLedger::cash_in()'],['../structalgotradelib_1_1strategy_1_1Portfolio.html#ac266bd31431563c54c0c48dd6d67749c',1,'algotradelib::strategy::Portfolio::cash_in()'],['../structalgotradelib_1_1runner_1_1Portfolio.html#ac266bd31431563c54c0c48dd6d67749c',1,'algotradelib::runner::Portfolio::cash_in()']]],
   ['chain_5fresults_20',['chain_results',['../namespacealgotradelib_1_1backtest.html#ad9703600deeb9a37a7aa0e8edaf3b673',1,'algotradelib::backtest']]],
   ['changed_21',['changed',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#a84035881af6eb27e06c7abbc85e67089',1,'algotradelib::runner::OrderUpdateWatch']]],
@@ -71,5 +71,6 @@ var searchData=
   ['contradicted_5frows_68',['contradicted_rows',['../classalgotradelib_1_1runner_1_1OrderUpdateWatch.html#a14d19202da89d2de30d18c147db54c84',1,'algotradelib::runner::OrderUpdateWatch']]],
   ['cool_5fdown_69',['cool_down',['../classalgotradelib_1_1network_1_1BasicRateLimitBucket.html#a683652f09cfa7122e15228fab4fdd9ce',1,'algotradelib::network::BasicRateLimitBucket']]],
   ['covered_70',['covered',['../structalgotradelib_1_1TradingCalendar.html#afde8fa6b25876de7bbc549c5e77d9269',1,'algotradelib::TradingCalendar']]],
-  ['currency_71',['Currency',['../classalgotradelib_1_1Currency.html#a7307177d8174102cfeaf15f23e7b17db',1,'algotradelib::Currency::Currency()'],['../classalgotradelib_1_1Currency.html#afa7a9daaf60b9cd522324cd028024c0e',1,'algotradelib::Currency::Currency(std::string_view code)']]]
+  ['currency_71',['Currency',['../classalgotradelib_1_1Currency.html#a7307177d8174102cfeaf15f23e7b17db',1,'algotradelib::Currency::Currency()'],['../classalgotradelib_1_1Currency.html#afa7a9daaf60b9cd522324cd028024c0e',1,'algotradelib::Currency::Currency(std::string_view code)']]],
+  ['currency_72',['currency',['../classalgotradelib_1_1runner_1_1RunLedger.html#a9a3876c69184d3c84c126cb8c3fa9735',1,'algotradelib::runner::RunLedger']]]
 ];

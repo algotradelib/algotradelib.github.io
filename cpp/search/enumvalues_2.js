@@ -15,5 +15,6 @@ var searchData=
   ['confirmed_12',['CONFIRMED',['../namespacealgotradelib_1_1runner.html#a9cc0e393ff3814afb3fc70c660f5b56ea1e314c89b115f3a21ca40f76d231bcd0',1,'algotradelib::runner']]],
   ['confirms_13',['CONFIRMS',['../namespacealgotradelib_1_1runner.html#ad7e4b613b463f3c4c87852c8318a6502a2ab02f097a20f06b8f3ff5e1145fe335',1,'algotradelib::runner']]],
   ['consolidated_14',['CONSOLIDATED',['../namespacealgotradelib_1_1kis.html#a180426dcbaf904ff2cca1189c5dc3289a7daff20b3b10dc2e854db794154096b6',1,'algotradelib::kis::CONSOLIDATED'],['../namespacealgotradelib_1_1kiwoom.html#a1476aa7a976b83d95727aee083da2ca1a7daff20b3b10dc2e854db794154096b6',1,'algotradelib::kiwoom::CONSOLIDATED']]],
-  ['contradicts_15',['CONTRADICTS',['../namespacealgotradelib_1_1runner.html#ad7e4b613b463f3c4c87852c8318a6502aae73c43bbd558ad1a42cd07e16d86a74',1,'algotradelib::runner']]]
+  ['contradicts_15',['CONTRADICTS',['../namespacealgotradelib_1_1runner.html#ad7e4b613b463f3c4c87852c8318a6502aae73c43bbd558ad1a42cd07e16d86a74',1,'algotradelib::runner']]],
+  ['currency_16',['CURRENCY',['../namespacealgotradelib_1_1runner.html#a824e41a11c66034219e50b452735541aa4078b56c15c2087a7d223a5bdf104838',1,'algotradelib::runner']]]
 ];

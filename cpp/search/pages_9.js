@@ -2,7 +2,7 @@ var searchData=
 [
   ['failures_0',['Poll failures are not send failures',['../running-a-strategy-live.html#autotoc_md100',1,'']]],
   ['failures_20are_20not_20send_20failures_1',['Poll failures are not send failures',['../running-a-strategy-live.html#autotoc_md100',1,'']]],
-  ['feature_2',['Reaching a broker-specific feature',['../writing-a-strategy.html#autotoc_md125',1,'']]],
+  ['feature_2',['Reaching a broker-specific feature',['../writing-a-strategy.html#autotoc_md126',1,'']]],
   ['feed_3',['What the loop adds over &lt;span class=&quot;tt&quot;&gt;feed&lt;/span&gt;',['../running-a-strategy-live.html#autotoc_md90',1,'']]],
   ['figures_20mean_20something_4',['Absent figures mean something',['../reading-a-backtest.html#autotoc_md78',1,'']]],
   ['file_20looks_20like_5',['What the file looks like',['../recovering-after-a-crash.html#autotoc_md84',1,'']]],

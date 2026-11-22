@@ -11,5 +11,6 @@ var classalgotradelib_1_1runner_1_1ManualSource =
     [ "set_default", "classalgotradelib_1_1runner_1_1ManualSource.html#a8fd5b91e00de4421f778457975036930", null ],
     [ "set_order_list", "classalgotradelib_1_1runner_1_1ManualSource.html#a81cc75e1c26a0c28f800ba6f1795197c", null ],
     [ "set_price_limits", "classalgotradelib_1_1runner_1_1ManualSource.html#a5bf93b602485c83144282a9515dcb234", null ],
-    [ "provides_working_orders", "classalgotradelib_1_1runner_1_1ManualSource.html#a1de3bd9e1154b7521ae2ab9cdb06c3d9", null ]
+    [ "provides_working_orders", "classalgotradelib_1_1runner_1_1ManualSource.html#a1de3bd9e1154b7521ae2ab9cdb06c3d9", null ],
+    [ "reports_buying_power", "classalgotradelib_1_1runner_1_1ManualSource.html#a8950780e5b55263bf0dec9d2d28aa617", null ]
 ];

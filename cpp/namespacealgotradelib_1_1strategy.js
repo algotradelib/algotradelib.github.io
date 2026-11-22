@@ -36,6 +36,7 @@ var namespacealgotradelib_1_1strategy =
     [ "Rejection", "structalgotradelib_1_1strategy_1_1Rejection.html", "structalgotradelib_1_1strategy_1_1Rejection" ],
     [ "RiskGuard", "classalgotradelib_1_1strategy_1_1RiskGuard.html", "classalgotradelib_1_1strategy_1_1RiskGuard" ],
     [ "RiskLimits", "structalgotradelib_1_1strategy_1_1RiskLimits.html", "structalgotradelib_1_1strategy_1_1RiskLimits" ],
+    [ "RunFees", "structalgotradelib_1_1strategy_1_1RunFees.html", "structalgotradelib_1_1strategy_1_1RunFees" ],
     [ "SellableConventionProbe", "classalgotradelib_1_1strategy_1_1SellableConventionProbe.html", "classalgotradelib_1_1strategy_1_1SellableConventionProbe" ],
     [ "SellableEvidence", "structalgotradelib_1_1strategy_1_1SellableEvidence.html", "structalgotradelib_1_1strategy_1_1SellableEvidence" ],
     [ "SessionEdge", "structalgotradelib_1_1strategy_1_1SessionEdge.html", "structalgotradelib_1_1strategy_1_1SessionEdge" ],
@@ -63,7 +64,11 @@ var namespacealgotradelib_1_1strategy =
       [ "VALUE_NOT_KNOWN", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badab8f593806ee7277ca27e51dfdd3216e2", null ],
       [ "QUANTITY_NOT_SELLABLE", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1bada7df7376cf6bcbea8ebbb9ac432118fa3", null ],
       [ "SELLABLE_BASIS_UNESTABLISHED", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1bada13bf32beb34d2105042c128402de0cad", null ],
-      [ "INSUFFICIENT_BUYING_POWER", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badabae7f8c020019539328bd7b3c5b750b1", null ]
+      [ "INSUFFICIENT_BUYING_POWER", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badabae7f8c020019539328bd7b3c5b750b1", null ],
+      [ "RUN_BUDGET_EXCEEDED", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badaf8867ce9876505d51d517687dd9c2555", null ],
+      [ "RUN_BUY_NEEDS_LIMIT", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1bada5b76a3d5033bd5e1f16b5a2c3c068555", null ],
+      [ "RUN_HOLDING_EXCEEDED", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1badaa828697af7d84ee1c4d80becadd066ea", null ],
+      [ "RUN_LEDGER_UNSETTLED", "namespacealgotradelib_1_1strategy.html#a1c6d25b5684ed353484950ead20c1bada184abf310ed7c4b106a2890730ed7b13", null ]
     ] ],
     [ "HaltReason", "namespacealgotradelib_1_1strategy.html#aff76e0ec02bd1189fad25036355a2752", [
       [ "OPERATOR", "namespacealgotradelib_1_1strategy.html#aff76e0ec02bd1189fad25036355a2752a986496ca5b23669b8661171566a167c3", null ],

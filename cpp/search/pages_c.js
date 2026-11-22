@@ -1,7 +1,7 @@
 var searchData=
 [
   ['i_20asked_20for_20go_20out_0',['Did everything I asked for go out?',['../running-a-strategy-live.html#autotoc_md97',1,'']]],
-  ['identity_1',['Order identity',['../broker-port.html#autotoc_md108',1,'']]],
+  ['identity_1',['Order identity',['../broker-port.html#autotoc_md109',1,'']]],
   ['in_20it_2',['Annualizing, and the trap in it',['../reading-a-backtest.html#autotoc_md77',1,'']]],
   ['input_3',['Convention 3: a result is as long as its input',['../analytics-conventions.html#autotoc_md16',1,'']]],
   ['inquiries_4',['Order inquiries',['../broker-clients.html#autotoc_md51',1,'']]],
@@ -28,6 +28,6 @@ var searchData=
   ['it_20means_20by_20portfolio_25',['The portfolio exposure ceiling, and what it means by &quot;portfolio&quot;',['../running-a-strategy-live.html#autotoc_md105',1,'']]],
   ['it_20on_26',['Turning it on',['../recovering-after-a-crash.html#autotoc_md83',1,'']]],
   ['it_20under_20pressure_27',['Reading it under pressure',['../recovering-after-a-crash.html#autotoc_md85',1,'']]],
-  ['it_20without_20a_20broker_28',['it without a broker',['../recovering-after-a-crash.html#autotoc_md89',1,'Trying it without a broker'],['../running-a-strategy-live.html#autotoc_md107',1,'Trying it without a broker']]],
+  ['it_20without_20a_20broker_28',['it without a broker',['../recovering-after-a-crash.html#autotoc_md89',1,'Trying it without a broker'],['../running-a-strategy-live.html#autotoc_md108',1,'Trying it without a broker']]],
   ['its_20input_29',['Convention 3: a result is as long as its input',['../analytics-conventions.html#autotoc_md16',1,'']]]
 ];

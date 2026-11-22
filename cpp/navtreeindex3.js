@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"classalgotradelib_1_1kis_1_1KisBlockingClient.html#a9fc49b88d361993c239d5c0e88d07453":[1,0,0,5,4,12],
+"classalgotradelib_1_1kis_1_1KisBlockingClient.html#a9fc49b88d361993c239d5c0e88d07453":[2,0,0,5,4,12],
+"classalgotradelib_1_1kis_1_1KisBlockingClient.html#aa5b7d01d061a39b9f9f25e5e5776a787":[1,0,0,5,4,14],
+"classalgotradelib_1_1kis_1_1KisBlockingClient.html#aa5b7d01d061a39b9f9f25e5e5776a787":[2,0,0,5,4,14],
 "classalgotradelib_1_1kis_1_1KisBlockingClient.html#aad51669d1699652585732e004f92c83b":[1,0,0,5,4,6],
 "classalgotradelib_1_1kis_1_1KisBlockingClient.html#aad51669d1699652585732e004f92c83b":[2,0,0,5,4,6],
 "classalgotradelib_1_1kis_1_1KisBlockingClient.html#ac09a8f43b935d486878847741d07a828":[1,0,0,5,4,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "classalgotradelib_1_1live_1_1SessionExecutor.html#ab91aee80f949f46c57d63f24eb5df82e":[1,0,0,8,0,6],
 "classalgotradelib_1_1live_1_1SessionExecutor.html#ab91aee80f949f46c57d63f24eb5df82e":[2,0,0,7,0,6],
 "classalgotradelib_1_1live_1_1SessionExecutor.html#aca2272e0cb207ce3da97587eddfd4835":[1,0,0,8,0,10],
-"classalgotradelib_1_1live_1_1SessionExecutor.html#aca2272e0cb207ce3da97587eddfd4835":[2,0,0,7,0,10],
-"classalgotradelib_1_1live_1_1SessionExecutor.html#adbdadfd1a5d440e95722f8f6fdaeb0f1":[1,0,0,8,0,5],
-"classalgotradelib_1_1live_1_1SessionExecutor.html#adbdadfd1a5d440e95722f8f6fdaeb0f1":[2,0,0,7,0,5],
-"classalgotradelib_1_1live_1_1SessionExecutor.html#ade7c987809bc2ff2a6874f761e9b6552":[1,0,0,8,0,13],
-"classalgotradelib_1_1live_1_1SessionExecutor.html#ade7c987809bc2ff2a6874f761e9b6552":[2,0,0,7,0,13]
+"classalgotradelib_1_1live_1_1SessionExecutor.html#aca2272e0cb207ce3da97587eddfd4835":[2,0,0,7,0,10]
 };

@@ -11,6 +11,7 @@ var structalgotradelib_1_1runner_1_1JournalEntry =
     [ "quantity_", "structalgotradelib_1_1runner_1_1JournalEntry.html#a100fe46ca04e9e5a136d2a122f6f2d7f", null ],
     [ "recorded_at_", "structalgotradelib_1_1runner_1_1JournalEntry.html#a07bb55de1fc9d1c710bbfc48dbfb2bd8", null ],
     [ "requires_operator_", "structalgotradelib_1_1runner_1_1JournalEntry.html#a8bc4181354e273f7dc883a9d44796d50", null ],
+    [ "run_", "structalgotradelib_1_1runner_1_1JournalEntry.html#ad921230c6a3f445a7d8c7e5fdb645720", null ],
     [ "scope_", "structalgotradelib_1_1runner_1_1JournalEntry.html#a8fb406a13a63f9bc0b92714ef891cce3", null ],
     [ "session_", "structalgotradelib_1_1runner_1_1JournalEntry.html#ab604ccd900922b1dad3518c723128e84", null ],
     [ "side_", "structalgotradelib_1_1runner_1_1JournalEntry.html#aa68a28ee9cbb2f80887b3c5a2f9bd270", null ],

@@ -156,6 +156,8 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a1de3bd9e1154b7521ae2ab9cdb06c3d9" id="r_a1de3bd9e1154b7521ae2ab9cdb06c3d9"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a1de3bd9e1154b7521ae2ab9cdb06c3d9">provides_working_orders</a> = true</td></tr>
 <tr class="memdesc:a1de3bd9e1154b7521ae2ab9cdb06c3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">true</span>: its outcomes stand for a real working-order listing.  <br /></td></tr>
+<tr class="memitem:a8950780e5b55263bf0dec9d2d28aa617" id="r_a8950780e5b55263bf0dec9d2d28aa617"><td class="memItemLeft">static constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a8950780e5b55263bf0dec9d2d28aa617">reports_buying_power</a> = true</td></tr>
+<tr class="memdesc:a8950780e5b55263bf0dec9d2d28aa617"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt">true</span>: its caller installs whatever buying power it has; it stands for no broker.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">Runner</a>&gt;<br />
@@ -168,7 +170,7 @@ class algotradelib::runner::ManualSource&lt; Runner &gt;</div><p>A source for te
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00833">833</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00864">864</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aff232a4cc6798f654e87c325b345d10f" name="aff232a4cc6798f654e87c325b345d10f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff232a4cc6798f654e87c325b345d10f">&#9670;&#160;</a></span>buying_power_currencies()</h2>
@@ -198,7 +200,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Returns the buying-power currencies. </p>
 <dl class="section return"><dt>Returns</dt><dd>The currencies. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00886">886</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00919">919</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,7 +232,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Returns how many times the order list was read. </p>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00894">894</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00927">927</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +275,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The outcome. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00925">925</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00958">958</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +313,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The count. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00903">903</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00936">936</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +355,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00843">843</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00876">876</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -385,7 +387,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 <p>Reads the order list: returns the configured outcome. The runner argument is ignored. </p>
 <dl class="section return"><dt>Returns</dt><dd>The outcome. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00954">954</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00987">987</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -422,7 +424,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00868">868</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00901">901</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -459,7 +461,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00877">877</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00910">910</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -501,7 +503,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00852">852</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00885">885</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -538,7 +540,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00860">860</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00893">893</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -580,7 +582,7 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00913">913</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00946">946</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +611,35 @@ template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.h
 
 <p><span class="tt">true</span>: its outcomes stand for a real working-order listing. </p>
 
-<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00836">836</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00867">867</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8950780e5b55263bf0dec9d2d28aa617" name="a8950780e5b55263bf0dec9d2d28aa617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8950780e5b55263bf0dec9d2d28aa617">&#9670;&#160;</a></span>reports_buying_power</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">Runner</a>&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classalgotradelib_1_1runner_1_1ManualSource.html">algotradelib::runner::ManualSource</a>&lt; <a class="el" href="classalgotradelib_1_1runner_1_1Runner.html">Runner</a> &gt;::reports_buying_power = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><span class="tt">true</span>: its caller installs whatever buying power it has; it stands for no broker. </p>
+
+<p class="definition">Definition at line <a class="el" href="loop_8hpp_source.html#l00869">869</a> of file <a class="el" href="loop_8hpp_source.html">loop.hpp</a>.</p>
 
 </div>
 </div>

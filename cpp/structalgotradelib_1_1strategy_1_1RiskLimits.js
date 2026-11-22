@@ -8,5 +8,7 @@ var structalgotradelib_1_1strategy_1_1RiskLimits =
     [ "max_position_quantity_", "structalgotradelib_1_1strategy_1_1RiskLimits.html#a4a2292256e35bc5143ebc657dac7f4af", null ],
     [ "permitted_phases_", "structalgotradelib_1_1strategy_1_1RiskLimits.html#ae7ebe64324f594d53b35de6496000819", null ],
     [ "permitted_universe_", "structalgotradelib_1_1strategy_1_1RiskLimits.html#a1bb82c07b4bfcf64fcec7b879933aea2", null ],
-    [ "rate_window_", "structalgotradelib_1_1strategy_1_1RiskLimits.html#ae2fe5f164574e0cebe9c853a17105983", null ]
+    [ "rate_window_", "structalgotradelib_1_1strategy_1_1RiskLimits.html#ae2fe5f164574e0cebe9c853a17105983", null ],
+    [ "run_budget_", "structalgotradelib_1_1strategy_1_1RiskLimits.html#a27555be7ad82a4bf8e25f930d0d11161", null ],
+    [ "run_fees_", "structalgotradelib_1_1strategy_1_1RiskLimits.html#a6fb5a9ca9d6871ca9b4904d6f86701f4", null ]
 ];
