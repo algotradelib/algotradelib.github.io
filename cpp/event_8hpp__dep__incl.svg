@@ -47,16 +47,16 @@
   </g>
 </defs>
 <script type="application/ecmascript" xlink:href="svg.min.js"/>
-<svg id="graph" class="graph" data-view-width="1603" data-view-height="389" data-section-id="dynsection-1">
+<svg id="graph" class="graph" data-view-width="1003" data-view-height="389" data-section-id="dynsection-1">
 <g id="viewport">
 <title>algotradelib/src/strategy/event.hpp</title>
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="The events a runner delivers to a strategy&#39;s handlers, and the market phase.">
-<polygon fill="#999999" stroke="#666666" points="805,-381 669.75,-381 669.75,-347.5 805,-347.5 805,-381"/>
-<text xml:space="preserve" text-anchor="start" x="677.75" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="737.38" y="-354.75" font-family="Helvetica,sans-Serif" font-size="10.00">/event.hpp</text>
+<polygon fill="#999999" stroke="#666666" points="623,-381 487.75,-381 487.75,-347.5 623,-347.5 623,-381"/>
+<text xml:space="preserve" text-anchor="start" x="495.75" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
+<text xml:space="preserve" text-anchor="middle" x="555.38" y="-354.75" font-family="Helvetica,sans-Serif" font-size="10.00">/event.hpp</text>
 </a>
 </g>
 </g>
@@ -74,8 +74,8 @@
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M658.81,-343.63C638.84,-335.97 618.5,-325.54 602.38,-311.5 580.71,-292.63 567.09,-261.23 560.39,-242.26"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="657.5,-346.88 668.09,-346.99 659.88,-340.3 657.5,-346.88"/>
+<path fill="none" stroke="#63b8ff" d="M555.38,-335.87C555.38,-307.79 555.38,-265.07 555.38,-242.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="551.88,-335.75 555.38,-345.75 558.88,-335.75 551.88,-335.75"/>
 </a>
 </g>
 </g>
@@ -93,8 +93,8 @@
 <g id="edge4_Node000001_Node000005" class="edge">
 <title>Node1&#45;&gt;Node5</title>
 <g id="a_edge4_Node000001_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M667.12,-343.86C637.51,-335 602.89,-323.76 572.38,-311.5 520.73,-290.75 463.27,-260.79 429.56,-242.47"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="665.76,-347.1 676.34,-346.58 667.74,-340.39 665.76,-347.1"/>
+<path fill="none" stroke="#63b8ff" d="M528.98,-339.92C497.45,-312.05 445.57,-266.2 418.34,-242.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="526.35,-342.26 536.16,-346.26 530.98,-337.02 526.35,-342.26"/>
 </a>
 </g>
 </g>
@@ -112,8 +112,8 @@
 <g id="edge15_Node000001_Node000006" class="edge">
 <title>Node1&#45;&gt;Node6</title>
 <g id="a_edge15_Node000001_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M658.24,-363.32C544.79,-361.91 343.21,-353.37 285.38,-311.5 238.57,-277.61 221.84,-205.23 216.55,-172.92"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="658.05,-366.81 668.09,-363.42 658.13,-359.81 658.05,-366.81"/>
+<path fill="none" stroke="#63b8ff" d="M476.21,-356.11C407.47,-348.49 314.52,-334.32 285.38,-311.5 239.99,-275.96 222.55,-204.78 216.82,-172.87"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="475.63,-359.56 485.94,-357.16 476.38,-352.6 475.63,-359.56"/>
 </a>
 </g>
 </g>
@@ -131,8 +131,8 @@
 <g id="edge11_Node000001_Node000011" class="edge">
 <title>Node1&#45;&gt;Node11</title>
 <g id="a_edge11_Node000001_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M658.49,-349.05C591.15,-336.93 495.28,-319.67 431.05,-308.11"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="657.51,-352.43 667.98,-350.76 658.75,-345.54 657.51,-352.43"/>
+<path fill="none" stroke="#63b8ff" d="M498.47,-343.35C469.83,-333.33 435.55,-321.34 408.56,-311.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="497.12,-346.58 507.72,-346.58 499.43,-339.98 497.12,-346.58"/>
 </a>
 </g>
 </g>
@@ -150,8 +150,8 @@
 <g id="edge16_Node000001_Node000012" class="edge">
 <title>Node1&#45;&gt;Node12</title>
 <g id="a_edge16_Node000001_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M659.03,-346.88C640.73,-339.22 623.39,-327.98 612.38,-311.5 604.1,-299.12 604.83,-290.83 612.38,-278 621.83,-261.91 638.3,-250.46 654.78,-242.5"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="657.56,-350.07 668.15,-350.35 660.04,-343.53 657.56,-350.07"/>
+<path fill="none" stroke="#63b8ff" d="M581.31,-339.56C611.86,-311.66 661.75,-266.1 687.99,-242.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="579.02,-336.92 573.99,-346.25 583.74,-342.09 579.02,-336.92"/>
 </a>
 </g>
 </g>
@@ -159,9 +159,9 @@
 <g id="Node000015" class="node">
 <title>Node15</title>
 <g id="a_Node000015"><a xlink:href="concept_8hpp.html" target="_top" xlink:title="What a strategy is, how a runner calls its handlers, and ATL_ASSERT_STRATEGY.">
-<polygon fill="white" stroke="#666666" points="757,-311.5 621.75,-311.5 621.75,-278 757,-278 757,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="629.75" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="689.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/concept.hpp</text>
+<polygon fill="white" stroke="#666666" points="830,-311.5 694.75,-311.5 694.75,-278 830,-278 830,-311.5"/>
+<text xml:space="preserve" text-anchor="start" x="702.75" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
+<text xml:space="preserve" text-anchor="middle" x="762.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/concept.hpp</text>
 </a>
 </g>
 </g>
@@ -169,8 +169,8 @@
 <g id="edge20_Node000001_Node000015" class="edge">
 <title>Node1&#45;&gt;Node15</title>
 <g id="a_edge20_Node000001_Node000015"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M719.49,-338.09C713.18,-329.23 706.28,-319.52 700.67,-311.63"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="716.47,-339.9 725.12,-346.02 722.18,-335.84 716.47,-339.9"/>
+<path fill="none" stroke="#63b8ff" d="M615.6,-343.61C646.48,-333.54 683.64,-321.42 712.84,-311.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="614.82,-340.19 606.4,-346.61 616.99,-346.84 614.82,-340.19"/>
 </a>
 </g>
 </g>
@@ -178,9 +178,9 @@
 <g id="Node000017" class="node">
 <title>Node17</title>
 <g id="a_Node000017"><a xlink:href="risk_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1066,-242 930.75,-242 930.75,-208.5 1066,-208.5 1066,-242"/>
-<text xml:space="preserve" text-anchor="start" x="938.75" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="998.38" y="-215.75" font-family="Helvetica,sans-Serif" font-size="10.00">/risk.hpp</text>
+<polygon fill="white" stroke="#666666" points="995,-311.5 859.75,-311.5 859.75,-278 995,-278 995,-311.5"/>
+<text xml:space="preserve" text-anchor="start" x="867.75" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
+<text xml:space="preserve" text-anchor="middle" x="927.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/risk.hpp</text>
 </a>
 </g>
 </g>
@@ -188,103 +188,8 @@
 <g id="edge23_Node000001_Node000017" class="edge">
 <title>Node1&#45;&gt;Node17</title>
 <g id="a_edge23_Node000001_Node000017"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M751.56,-337.25C763.3,-318.12 781.7,-292.95 804.38,-278 815.2,-270.87 878.94,-254.55 930.45,-242.13"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="748.56,-335.46 746.51,-345.85 754.59,-339 748.56,-335.46"/>
-</a>
-</g>
-</g>
-<!-- Node18 -->
-<g id="Node000018" class="node">
-<title>Node18</title>
-<g id="a_Node000018"><a xlink:href="buy__and__hold_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="957.12,-311.5 813.62,-311.5 813.62,-278 957.12,-278 957.12,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="821.62" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="885.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/vanilla/buy_and_hold.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node18 -->
-<g id="edge25_Node000001_Node000018" class="edge">
-<title>Node1&#45;&gt;Node18</title>
-<g id="a_edge25_Node000001_Node000018"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M783.06,-342.42C804.59,-332.59 829.9,-321.05 849.96,-311.9"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="781.85,-339.12 774.2,-346.45 784.75,-345.49 781.85,-339.12"/>
-</a>
-</g>
-</g>
-<!-- Node19 -->
-<g id="Node000019" class="node">
-<title>Node19</title>
-<g id="a_Node000019"><a xlink:href="crossover_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1110,-311.5 974.75,-311.5 974.75,-278 1110,-278 1110,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="982.75" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="1042.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/vanilla/crossover.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node19 -->
-<g id="edge26_Node000001_Node000019" class="edge">
-<title>Node1&#45;&gt;Node19</title>
-<g id="a_edge26_Node000001_Node000019"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M816.62,-345.71C865.51,-334.89 927.57,-321.16 974.25,-310.83"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="815.93,-342.28 806.92,-347.86 817.44,-349.12 815.93,-342.28"/>
-</a>
-</g>
-</g>
-<!-- Node20 -->
-<g id="Node000020" class="node">
-<title>Node20</title>
-<g id="a_Node000020"><a xlink:href="reversion_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1263,-311.5 1127.75,-311.5 1127.75,-278 1263,-278 1263,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="1135.75" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="1195.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/vanilla/reversion.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node20 -->
-<g id="edge27_Node000001_Node000020" class="edge">
-<title>Node1&#45;&gt;Node20</title>
-<g id="a_edge27_Node000001_Node000020"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M816.31,-354.19C893.73,-344.91 1015,-329.36 1119.38,-311.5 1122.03,-311.05 1124.74,-310.57 1127.47,-310.07"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="816.23,-350.67 806.72,-355.33 817.06,-357.62 816.23,-350.67"/>
-</a>
-</g>
-</g>
-<!-- Node21 -->
-<g id="Node000021" class="node">
-<title>Node21</title>
-<g id="a_Node000021"><a xlink:href="sizing_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1416,-311.5 1280.75,-311.5 1280.75,-278 1416,-278 1416,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="1288.75" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="1348.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/vanilla/sizing.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node21 -->
-<g id="edge28_Node000001_Node000021" class="edge">
-<title>Node1&#45;&gt;Node21</title>
-<g id="a_edge28_Node000001_Node000021"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M816.64,-358.27C921.37,-351.07 1111.41,-335.89 1272.38,-311.5 1275.04,-311.1 1277.75,-310.66 1280.49,-310.2"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="816.48,-354.77 806.74,-358.94 816.95,-361.75 816.48,-354.77"/>
-</a>
-</g>
-</g>
-<!-- Node22 -->
-<g id="Node000022" class="node">
-<title>Node22</title>
-<g id="a_Node000022"><a xlink:href="timed__liquidation_8hpp_source.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="1595.12,-311.5 1433.62,-311.5 1433.62,-278 1595.12,-278 1595.12,-311.5"/>
-<text xml:space="preserve" text-anchor="start" x="1441.62" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00">algotradelib/src/strategy</text>
-<text xml:space="preserve" text-anchor="middle" x="1514.38" y="-285.25" font-family="Helvetica,sans-Serif" font-size="10.00">/vanilla/timed_liquidation.hpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node22 -->
-<g id="edge29_Node000001_Node000022" class="edge">
-<title>Node1&#45;&gt;Node22</title>
-<g id="a_edge29_Node000001_Node000022"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M816.72,-359.87C945.04,-353.81 1205.9,-339.1 1425.38,-311.5 1428.02,-311.17 1430.71,-310.81 1433.42,-310.43"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="816.81,-356.36 806.98,-360.32 817.13,-363.35 816.81,-356.36"/>
+<path fill="none" stroke="#63b8ff" d="M634.48,-348.9C701.29,-336.77 795.97,-319.59 859.41,-308.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="633.88,-345.45 624.66,-350.68 635.13,-352.34 633.88,-345.45"/>
 </a>
 </g>
 </g>
@@ -508,8 +413,8 @@
 <g id="edge21_Node000015_Node000016" class="edge">
 <title>Node15&#45;&gt;Node16</title>
 <g id="a_edge21_Node000015_Node000016"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M738.13,-273.18C761.55,-263.3 789.21,-251.63 811.09,-242.4"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="736.95,-269.88 729.09,-276.99 739.67,-276.33 736.95,-269.88"/>
+<path fill="none" stroke="#63b8ff" d="M791.84,-270.89C803.92,-261.52 817.61,-250.9 828.6,-242.37"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="789.94,-267.93 784.19,-276.83 794.23,-273.46 789.94,-267.93"/>
 </a>
 </g>
 </g>
@@ -526,8 +431,8 @@
 <g id="edge24_Node000017_Node000013" class="edge">
 <title>Node17&#45;&gt;Node13</title>
 <g id="a_edge24_Node000017_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M934.51,-204.74C901.45,-194.65 861.57,-182.47 830.26,-172.9"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="933.41,-208.07 943.99,-207.64 935.45,-201.37 933.41,-208.07"/>
+<path fill="none" stroke="#63b8ff" d="M932.6,-266.5C934.51,-248.31 933.73,-224.82 921.38,-208.5 902.37,-183.4 870.11,-170.45 840.93,-163.78"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="929.15,-265.94 931.22,-276.33 936.08,-266.92 929.15,-265.94"/>
 </a>
 </g>
 </g>

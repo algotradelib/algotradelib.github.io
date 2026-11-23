@@ -23,7 +23,6 @@ var searchData=
   ['brokertraits_3c_20mock_3a_3amockclient_20_3e_20',['BrokerTraits&lt; mock::MockClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html',1,'algotradelib']]],
   ['brokertraits_3c_20tossinvest_3a_3atossblockingclient_20_3e_21',['BrokerTraits&lt; tossinvest::TossBlockingClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossBlockingClient_01_4.html',1,'algotradelib']]],
   ['brokertraits_3c_20tossinvest_3a_3atossclient_20_3e_22',['BrokerTraits&lt; tossinvest::TossClient &gt;',['../structalgotradelib_1_1BrokerTraits_3_01tossinvest_1_1TossClient_01_4.html',1,'algotradelib']]],
-  ['buyandhold_23',['BuyAndHold',['../structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html',1,'algotradelib::strategy::vanilla']]],
-  ['buyingpower_24',['BuyingPower',['../structalgotradelib_1_1BuyingPower.html',1,'algotradelib']]],
-  ['byinterval_25',['ByInterval',['../structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html',1,'algotradelib::backtest::Backtester::InstrumentSlot']]]
+  ['buyingpower_23',['BuyingPower',['../structalgotradelib_1_1BuyingPower.html',1,'algotradelib']]],
+  ['byinterval_24',['ByInterval',['../structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html',1,'algotradelib::backtest::Backtester::InstrumentSlot']]]
 ];

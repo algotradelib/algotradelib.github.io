@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['year_5f_0',['year_',['../structalgotradelib_1_1Date.html#a9b1fedede9661a77e437c78c54dcd210',1,'algotradelib::Date']]],
-  ['yes_1',['YES',['../namespacealgotradelib.html#a52d41eac5139822823392c23fa87c514a7469a286259799e5b37e5db9296f00b3',1,'algotradelib']]],
-  ['yet_2',['yet',['../broker-clients.html#autotoc_md54',1,'Not supported yet'],['../recovering-after-a-crash.html#autotoc_md88',1,'What this does not do yet'],['../running-a-strategy-live.html#autotoc_md107',1,'What this does not do yet']]],
-  ['you_3',['you',['../analytics-conventions.html#autotoc_md17',1,'Convention 4: two numbers describe a window, and nothing is annualized for you'],['../running-a-strategy-live.html#autotoc_md104',1,'What the broker says it charged you'],['../writing-a-strategy.html#autotoc_md123',1,'What the context gives you']]],
-  ['you_20about_20the_20account_4',['What each broker will tell you about the account',['../binding-a-broker.html#autotoc_md38',1,'']]],
-  ['you_20do_20not_20have_20to_20handle_5',['What you do not have to handle',['../writing-a-strategy.html#autotoc_md127',1,'']]],
-  ['you_20holding_6',['The three stops, and what each leaves you holding',['../running-a-strategy-live.html#autotoc_md91',1,'']]],
-  ['you_20trading_20on_20purpose_7',['The three gates that stop you trading, on purpose',['../running-a-strategy-live.html#autotoc_md95',1,'']]],
-  ['you_20trust_20a_20number_20or_20an_20account_8',['Before you trust a number, or an account',['../guide.html#autotoc_md58',1,'']]],
-  ['your_20supervisor_20s_20grace_20period_9',['The trap: your supervisor&apos;s grace period',['../running-a-strategy-live.html#autotoc_md94',1,'']]]
+  ['_7ekisauth_0',['~KisAuth',['../classalgotradelib_1_1kis_1_1KisAuth.html#a1dbd50b43d69b643f35f71eee3f77ccd',1,'algotradelib::kis::KisAuth']]],
+  ['_7ekiwoomauth_1',['~KiwoomAuth',['../classalgotradelib_1_1kiwoom_1_1KiwoomAuth.html#af9225182a3ec61fc17dfab308269f9e6',1,'algotradelib::kiwoom::KiwoomAuth']]],
+  ['_7emarketfile_2',['~MarketFile',['../classalgotradelib_1_1mock_1_1MarketFile.html#ac981204b796b5efc06dbfe762805c729',1,'algotradelib::mock::MarketFile']]],
+  ['_7etossauth_3',['~TossAuth',['../classalgotradelib_1_1tossinvest_1_1TossAuth.html#a610e51192176d17cc0b4a5e3dbb89b49',1,'algotradelib::tossinvest::TossAuth']]],
+  ['_7ewebsocketsessionbase_4',['~WebSocketSessionBase',['../classalgotradelib_1_1network_1_1WebSocketSessionBase.html#a07d1bf733cd5f07d70bce6e083efa275',1,'algotradelib::network::WebSocketSessionBase']]]
 ];

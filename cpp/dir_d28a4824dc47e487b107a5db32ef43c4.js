@@ -2,7 +2,6 @@ var dir_d28a4824dc47e487b107a5db32ef43c4 =
 [
     [ "example-analytics-offline.cpp", "example-analytics-offline_8cpp_source.html", null ],
     [ "example-backtest-broker.cpp", "example-backtest-broker_8cpp_source.html", null ],
-    [ "example-backtest-compare.cpp", "example-backtest-compare_8cpp_source.html", null ],
     [ "example-backtest-offline.cpp", "example-backtest-offline_8cpp_source.html", null ],
     [ "example-inverse-fund.cpp", "example-inverse-fund_8cpp_source.html", null ],
     [ "example-kis-account.cpp", "example-kis-account_8cpp_source.html", null ],

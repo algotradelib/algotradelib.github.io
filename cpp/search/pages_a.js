@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['gated_20boundary_0',['Two numeric worlds, one gated boundary',['../architecture.html#autotoc_md28',1,'']]],
-  ['gated_20boundary_20and_20it_20is_20narrower_20outbound_1',['Convention 1: one gated boundary, and it is narrower outbound',['../analytics-conventions.html#autotoc_md14',1,'']]],
-  ['gates_20that_20stop_20you_20trading_20on_20purpose_2',['The three gates that stop you trading, on purpose',['../running-a-strategy-live.html#autotoc_md95',1,'']]],
-  ['gives_20you_3',['What the context gives you',['../writing-a-strategy.html#autotoc_md123',1,'']]],
-  ['go_20next_4',['go next',['../architecture.html#autotoc_md29',1,'Where to go next'],['../broker-clients.html#autotoc_md56',1,'Where to go next'],['../market-data.html#autotoc_md66',1,'Where to go next'],['../broker-port.html#autotoc_md114',1,'Where to go next'],['../transport-and-pacing.html#autotoc_md120',1,'Where to go next']]],
-  ['go_20out_5',['go out',['../running-a-strategy-live.html#autotoc_md97',1,'Did everything I asked for go out?'],['../running-a-strategy-live.html#autotoc_md96',1,'What the report says about orders that did not go out']]],
-  ['goes_6',['What is single-owner, and where parallelism goes',['../analytics-conventions.html#autotoc_md21',1,'']]],
-  ['grace_20period_7',['The trap: your supervisor&apos;s grace period',['../running-a-strategy-live.html#autotoc_md94',1,'']]],
-  ['grid_20is_20the_20library_20s_20own_8',['The price grid is the library&apos;s own',['../market-data.html#autotoc_md61',1,'']]],
-  ['guarantee_20worth_20relying_20on_9',['The one guarantee worth relying on',['../reading-a-backtest.html#autotoc_md68',1,'']]],
-  ['guide_10',['User guide',['../guide.html',1,'']]]
+  ['handle_0',['What you do not have to handle',['../writing-a-strategy.html#autotoc_md126',1,'']]],
+  ['handlers_1',['The handlers',['../writing-a-strategy.html#autotoc_md120',1,'']]],
+  ['happens_20to_20one_20bar_2',['What happens to one bar',['../architecture.html#autotoc_md24',1,'']]],
+  ['have_20to_20handle_3',['What you do not have to handle',['../writing-a-strategy.html#autotoc_md126',1,'']]],
+  ['here_4',['Start here',['../guide.html#autotoc_md56',1,'']]],
+  ['hierarchy_20that_20actually_20matters_5',['The hierarchy that actually matters',['../running-a-strategy-live.html#autotoc_md92',1,'']]],
+  ['history_20a_20cold_20start_20reads_6',['The history a cold start reads',['../running-a-strategy-live.html#autotoc_md97',1,'']]],
+  ['holding_7',['The three stops, and what each leaves you holding',['../running-a-strategy-live.html#autotoc_md90',1,'']]],
+  ['holdings_20clients_8',['Account and holdings clients',['../broker-clients.html#autotoc_md43',1,'']]],
+  ['honestly_9',['Reading a backtest honestly',['../reading-a-backtest.html',1,'guide']]],
+  ['how_20finely_20a_20target_20is_20chased_10',['How finely a target is chased',['../binding-a-broker.html#autotoc_md32',1,'']]],
+  ['how_20the_20two_20brokers_20report_20a_20refusal_11',['How the two brokers report a refusal',['../transport-and-pacing.html#autotoc_md117',1,'']]],
+  ['how_20to_20stop_20one_20from_20outside_12',['How to stop one, from outside',['../running-a-strategy-live.html#autotoc_md91',1,'']]]
 ];

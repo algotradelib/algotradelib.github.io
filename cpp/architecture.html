@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('architecture.h
 <p>One sentence, and the rest of this page is the argument for it: <b>a strategy is pure, a broker is a type parameter, and the runner is the only thing that touches both.</b></p>
 <p>Everything else follows. A strategy that holds no session can be replayed against history without faking a transport, so a backtest exercises the same source a live account does. A broker that is a type parameter rather than a virtual base costs nothing at run time and turns "you handed a KIS
 reference to a Toss session" into a compile error. And a runner that is the only component holding both is the only place the order-safety rules have to be written.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 The layers</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -136,12 +136,11 @@ graph TD
 
   subgraph L[&quot;the library&quot;]
     direction TB
-    V[&quot;&lt;b&gt;&lt;vanilla&gt;&lt;/b&gt;&lt;br/&gt;reference strategies&quot;]
     ST[&quot;&lt;b&gt;&lt;strategy&gt;&lt;/b&gt;&lt;br/&gt;events, intents, portfolio,&lt;br/&gt;risk limits, reconciliation&quot;]
     RU[&quot;&lt;b&gt;&lt;runner&gt;&lt;/b&gt;&lt;br/&gt;Runner, context, dispatch,&lt;br/&gt;PollingLoop, journal, stops&quot;]
     BT[&quot;&lt;b&gt;&lt;backtest&gt;&lt;/b&gt;&lt;br/&gt;ReplayClock, fill and cost&lt;br/&gt;models, ledger, report&quot;]
     LV[&quot;&lt;b&gt;&lt;live&gt;&lt;/b&gt;&lt;br/&gt;SessionExecutor,&lt;br/&gt;SessionSource, bind&quot;]
-    AN[&quot;&lt;b&gt;&lt;analytics&gt;&lt;/b&gt;&lt;br/&gt;frames, indicators, metrics&quot;]
+    AN[&quot;&lt;b&gt;&lt;analytics&gt;&lt;/b&gt;&lt;br/&gt;frames, conversions, metrics&quot;]
     MA[&quot;&lt;b&gt;&lt;math&gt;&lt;/b&gt;&lt;br/&gt;Scalar, matrices&quot;]
     BR[&quot;&lt;b&gt;&lt;broker&gt;&lt;/b&gt;&lt;br/&gt;BrokerTraits, BrokerCaps,&lt;br/&gt;BrokerSession&quot;]
     CO[&quot;&lt;b&gt;&lt;core&gt;&lt;/b&gt;&lt;br/&gt;Decimal64, Money, InstrumentId,&lt;br/&gt;bars, calendar, Result, BrokerError&quot;]
@@ -154,7 +153,6 @@ graph TD
   X((&quot;KIS / Toss / Kiwoom / Alpaca&lt;br/&gt;HTTPS&quot;))
 
   S --&gt; ST
-  V --&gt; ST
   ST --&gt; CO
   RU --&gt; ST
   BT --&gt; RU
@@ -178,7 +176,7 @@ graph TD
   classDef io fill:#fdeee6,stroke:#a4663c,color:#123
   classDef you fill:#e7eefc,stroke:#3f5f9e,color:#123
   class S you
-  class V,ST,RU,BT,AN,MA,CO pure
+  class ST,RU,BT,AN,MA,CO pure
   class BR,NW,KT,LV,MK,BB io</pre>
 </div>
 <p>Green is I/O-free. Orange is the broker side; its HTTP and TLS code is in <span class="tt">&lt;network&gt;</span> and the adapters, which <span class="tt">&lt;algotradelib/broker&gt;</span> and <span class="tt">&lt;algotradelib/live&gt;</span> reach only as far as the rate-limit header. The green boundary is not a convention — it is asserted at compile time by two translation units that include exactly one umbrella header each and <span class="tt">#error</span> if a transport or adapter macro is visible: <span class="tt">tests/test-strategy-isolation.cpp</span> for <span class="tt">&lt;algotradelib/strategy&gt;</span>, and <span class="tt">tests/test-runner-isolation.cpp</span> for <span class="tt">&lt;algotradelib/runner&gt;</span>. A third, <span class="tt">tests/test-broker-isolation.cpp</span>, holds <span class="tt">&lt;algotradelib/broker&gt;</span> to a narrower line: Asio and the network module's rate-limit types, but no Beast and no OpenSSL. A fourth, <span class="tt">tests/test-mock-isolation.cpp</span>, holds <span class="tt">&lt;algotradelib/mock&gt;</span> to the same line: the mock broker reaches no HTTP, WebSocket or TLS code.</p>
@@ -186,9 +184,9 @@ graph TD
 <p>Two other edges are worth reading off the picture:</p>
 <ul>
 <li><b><span class="tt">&lt;core&gt;</span> does not include <span class="tt">&lt;network&gt;</span>.</b> <span class="tt">BrokerSession</span> includes one header of it, the rate-limit statistics (<span class="tt"><a class="el" href="rate__limit_8hpp_source.html">network/rate_limit.hpp</a></span>), which is why it ships under <span class="tt">&lt;algotradelib/broker&gt;</span> rather than being reachable from the value types. HTTP, WebSocket and TLS come with an adapter (<span class="tt">&lt;algotradelib/kis&gt;</span> and the others), not with the session. A program that only parses bars therefore compiles no transport code — though it still <em>links</em> libssl, because the package exports one interface target for every consumer. The paragraph above is the exact claim.</li>
-<li><b><span class="tt">&lt;analytics&gt;</span> is the only layer that <em>implements</em> against a linear-algebra backend</b>, and it is optional — but turning it off reaches further than that one box. With <span class="tt">ATL_USE_EIGEN=OFF</span>, <span class="tt">&lt;algotradelib/analytics&gt;</span> is a deliberate <span class="tt">#error</span> naming the option, <span class="tt">backtest::summarize</span> and <span class="tt">backtest::Report</span> are gone, and <span class="tt">&lt;algotradelib/vanilla&gt;</span> ships only <span class="tt">BuyAndHold</span> and <span class="tt">TimedLiquidation</span>, because every other vanilla sits in a header that needs <span class="tt">&lt;algotradelib/analytics&gt;</span>. The replay engine itself still runs, so such a build can execute a strategy; it cannot score one.</li>
+<li><b><span class="tt">&lt;analytics&gt;</span> is the only layer that <em>implements</em> against a linear-algebra backend</b>, and it is optional — but turning it off reaches further than that one box. With <span class="tt">ATL_USE_EIGEN=OFF</span>, <span class="tt">&lt;algotradelib/analytics&gt;</span> is a deliberate <span class="tt">#error</span> naming the option, and <span class="tt">backtest::summarize</span> and <span class="tt">backtest::Report</span> are gone. The replay engine itself still runs, so such a build can execute a strategy; it cannot score one.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
 The dependency rule, and the rule underneath it</h1>
 <p>An adapter must not expose vendor types to the strategy layer. That is the rule most libraries state, and on its own it is not enough here. The one underneath it is about <em>values</em>:</p>
 <blockquote class="doxtable">
@@ -197,7 +195,7 @@ The dependency rule, and the rule underneath it</h1>
 <p>The test is not "does this cover the brokers we have" but <b>"could someone add a broker for another
 country, in their own project, without editing this library?"</b> <span class="tt">BrokerTraits</span> is already specializable out of tree; the vocabulary has to be extensible the same way. Where it is not yet — <span class="tt">Venue</span> enumerates one country's market structure — that is a known gap rather than a settled design.</p>
 <p><span class="tt">Code&lt;N&gt;</span> is the fixed-capacity, allocation-free preservation type that exists for this: a code the library does not recognize is carried verbatim beside the normalized enums rather than discarded — <b>as far as it fits.</b> <span class="tt">Code&lt;N&gt;</span> holds at most <span class="tt">N</span> characters from <span class="tt">A</span>-<span class="tt">Z</span>, <span class="tt">0</span>-<span class="tt">9</span> and <span class="tt">_</span>, and a code outside that alphabet or over that length is not stored, which is why every field built on it documents an empty value as meaning either "nothing was sent" or "what was sent would not fit".</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
 One <span class="tt">Runner</span>, three configurations</h1>
 <p><span class="tt">Runner::feed</span> is the whole engine. What changes between a dry run, a backtest and a live session is the <b>executor</b> it sends through and the <b>clock</b> it reads — not the strategy, and not the reconciliation, the risk guard or the order-safety rules.</p>
 <div class="mermaidgraph">
@@ -227,7 +225,7 @@ graph LR
 </div>
 <p>The consequence that pays for the whole design: <span class="tt">NextBarFillModel::decide</span> takes the <em>next</em> bar and nothing else, so a backtest cannot see the signal's own bar. The lookahead discipline is structural rather than a rule to remember — and because the strategy source is byte-identical across the three columns, what the replay scored is what the live loop runs.</p>
 <p><span class="tt">PollingLoop</span> wraps the live column with a cadence, a stop control and two gates. It is not a fourth configuration; it calls the same <span class="tt">feed</span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
 What happens to one bar</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -259,7 +257,7 @@ sequenceDiagram
 </div>
 <p>The executor's answer — <span class="tt">ACCEPTED</span>, <span class="tt">REJECTED</span> or <span class="tt">INDETERMINATE</span> — is the step the rest of the library is arranged around. A POST that fails <b>in transit</b> is not a failure — it is an <em>unknown</em>, because the order may or may not have reached the broker. The runner never retries it. It marks the instrument in the indeterminacy ledger and withholds everything further for that instrument until the broker's own order list has been read, because a retry is exactly what doubles a position.</p>
 <p>The <span class="tt">append + fsync</span> before the send is why the journal exists. The record is appended, flushed and <span class="tt">fsync</span>ed <b>before</b> the send is attempted, so it exists during the exact window in which the process may vanish. An in-memory ledger cannot survive a <span class="tt">SIGKILL</span>, and an empty ledger after a restart means <em>nothing is remembered</em>, not that nothing is owed.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 Binding a broker</h1>
 <p>An adapter is a <span class="tt">BrokerTraits&lt;Client&gt;</span> specialization: associated types, <span class="tt">static constexpr bool</span> capability flags, one-line call thunks, and pure normalizers. It is <b>non-intrusive</b> — the client class does not inherit anything — and it lives in the adapter's own directory.</p>
 <div class="mermaidgraph">
@@ -295,7 +293,7 @@ graph TD
 <li><b>Order identity is a template parameter, not a stored field.</b> <span class="tt">OrderRef&lt;Broker&gt;</span> handed to the wrong session fails to compile. No comparison happens on any amendment path.</li>
 <li><b>The escape hatch is visible in the source.</b> <span class="tt">session.client()</span> returns the concrete client, so using one broker's particular strength is something you can grep for, never something that happens by accident.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 Normalize the intersection, expose the difference</h1>
 <p>Brokers do not publish the same information, and that is not a problem to be solved by normalization.</p>
 <ul>
@@ -305,7 +303,7 @@ Normalize the intersection, expose the difference</h1>
 </ul>
 <p>What this rules out is the tempting middle: a normalized model for something only one broker reports, so the shared type carries a field that is always empty for the other; or a synthesized value the broker never sent — resampling bars to fake an interval, deriving a session window from a holiday list. Both produce a surface that looks portable and is not. An interval a broker does not publish is <b>refused</b>, never aggregated from a shorter one.</p>
 <p>The same instinct is why nothing is ever silently downgraded. A condition the caller stated is either honored or rejected with <span class="tt">INVALID_ARGUMENT</span> before any authentication and before any socket write — never quietly approximated, because a downgrade changes when and at what price an order executes.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 Two numeric worlds, one gated boundary</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
@@ -324,7 +322,7 @@ graph LR
 <p>Prices, quantities and money stay in <span class="tt">Decimal64</span> anywhere they cross the wire or are reconciled, because binary floating point cannot hold them exactly and a reconciliation compares for equality. Analytics needs a float, so it gets one — and the two meet at three named, tested functions in <span class="tt"><a class="el" href="conversion_8hpp.html" title="Conversions between exact Decimal64 values and the analytics Scalar.">analytics/conversion.hpp</a></span>: <span class="tt">to_scalar</span> one way, and <span class="tt">to_decimal</span> (for a computed quantity or weight) and <span class="tt">round_scalar_to_tick</span> (for a price, whose result still goes through <span class="tt">Price::checked</span>) back.</p>
 <p><b>The return path is the narrow one.</b> <span class="tt"><a class="el" href="classalgotradelib_1_1strategy_1_1Price.html" title="A price known to be on its instrument&#39;s tick grid.">strategy::Price</a></span> has no public constructor. The only routes in validate against the instrument's <span class="tt">PriceRule</span>, so an indicator value cannot reach the wire as an off-tick limit price. An instrument whose ladder the library does not know gets <em>no answer</em> rather than a guess, because a guessed ladder finer than the exchange's would send an off-tick price, which the broker should refuse, with the library having confidently produced the price.</p>
 <p>The rule's type lives in core and its tables live with the brokers (<span class="tt">&lt;algotradelib/krx&gt;</span>), because the broker decides the venue whose grid applies. <span class="tt">PriceRule</span> records its own <span class="tt">source_</span>: no adapter builds the grid from a broker's reply (a broker states at most the tick at one price), so the table is this library's own and a stale one has to be visible rather than assumed.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
 Where to go next</h1>
 <ul>
 <li><a class="el" href="writing-a-strategy.html#md_doxygen_2vignettes_2writing-a-strategy" title="doxygen/vignettes/writing-a-strategy.md">Writing a strategy</a> — the surface you actually write against.</li>

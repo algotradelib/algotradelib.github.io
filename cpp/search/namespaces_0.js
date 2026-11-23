@@ -16,7 +16,6 @@ var searchData=
   ['algotradelib_3a_3arunner_13',['runner',['../namespacealgotradelib_1_1runner.html',1,'algotradelib']]],
   ['algotradelib_3a_3astrategy_14',['strategy',['../namespacealgotradelib_1_1strategy.html',1,'algotradelib']]],
   ['algotradelib_3a_3astrategy_3a_3adispatch_15',['dispatch',['../namespacealgotradelib_1_1strategy_1_1dispatch.html',1,'algotradelib::strategy']]],
-  ['algotradelib_3a_3astrategy_3a_3avanilla_16',['vanilla',['../namespacealgotradelib_1_1strategy_1_1vanilla.html',1,'algotradelib::strategy']]],
-  ['algotradelib_3a_3atossinvest_17',['tossinvest',['../namespacealgotradelib_1_1tossinvest.html',1,'algotradelib']]],
-  ['algotradelib_3a_3aus_18',['us',['../namespacealgotradelib_1_1us.html',1,'algotradelib']]]
+  ['algotradelib_3a_3atossinvest_16',['tossinvest',['../namespacealgotradelib_1_1tossinvest.html',1,'algotradelib']]],
+  ['algotradelib_3a_3aus_17',['us',['../namespacealgotradelib_1_1us.html',1,'algotradelib']]]
 ];

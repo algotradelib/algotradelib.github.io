@@ -11,7 +11,6 @@ var namespacealgotradelib_1_1math =
     [ "is_undefined", "namespacealgotradelib_1_1math.html#a113dc01ca9017f58f13b6b78193a8caa", null ],
     [ "missing", "namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1", null ],
     [ "observed", "namespacealgotradelib_1_1math.html#a19fc7f3d86cafd06105c227a9caed294", null ],
-    [ "observed_or", "namespacealgotradelib_1_1math.html#a721912adc1eeaa4f2083d6efe598f6fc", null ],
     [ "observed_parts", "namespacealgotradelib_1_1math.html#a010e581485da026600475308d51288eb", null ],
     [ "undefined", "namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb", null ],
     [ "unobserved", "namespacealgotradelib_1_1math.html#a565f05bdb8c4e28693e25ea163b6276a", null ],

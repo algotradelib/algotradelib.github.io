@@ -12,10 +12,9 @@ var searchData=
   ['listed_5fon_5f_9',['listed_on_',['../structalgotradelib_1_1Instrument.html#a5bb857a86eeaf75edabb3bdf287867a7',1,'algotradelib::Instrument']]],
   ['listing_5fdelay_5f_10',['listing_delay_',['../structalgotradelib_1_1runner_1_1MatchWindow.html#ad0e956255f65a3f908ed98bba488c67b',1,'algotradelib::runner::MatchWindow']]],
   ['log_5f_11',['log_',['../structalgotradelib_1_1runner_1_1DryRunReport.html#adeaf70d71f1c808e5188a6db8c35e0bf',1,'algotradelib::runner::DryRunReport']]],
-  ['lookback_5f_12',['lookback_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html#a0450354b21217822b2636959a037bd76',1,'algotradelib::strategy::vanilla::DonchianBreakout::Params']]],
-  ['lot_5fsize_5f_13',['lot_size_',['../structalgotradelib_1_1Instrument.html#a86dc03c515f5d1f7fb58d8e813918e98',1,'algotradelib::Instrument']]],
-  ['low_5f_14',['low_',['../structalgotradelib_1_1Bar.html#ae5a3ceae02c7fa770de9948f1e85a2af',1,'algotradelib::Bar']]],
-  ['lower_5f_15',['lower_',['../structalgotradelib_1_1PriceLimits.html#a01e98cf37f8c9a622989b5df7d1cf2f6',1,'algotradelib::PriceLimits']]],
-  ['lowest_5fcash_5f_16',['lowest_cash_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#ae994c9bc49c1816bbb1ac87369c63357',1,'algotradelib::backtest::ReplayResult::lowest_cash_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a7acf24a8ca4f3a1c288bbfeb351dd078',1,'algotradelib::backtest::ReportCaveats::lowest_cash_']]],
-  ['lowest_5fcash_5fat_5f_17',['lowest_cash_at_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#af39742b969e23b48edc730587681061f',1,'algotradelib::backtest::ReplayResult::lowest_cash_at_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a941d01fce3e932322850a4e845154e0a',1,'algotradelib::backtest::ReportCaveats::lowest_cash_at_']]]
+  ['lot_5fsize_5f_12',['lot_size_',['../structalgotradelib_1_1Instrument.html#a86dc03c515f5d1f7fb58d8e813918e98',1,'algotradelib::Instrument']]],
+  ['low_5f_13',['low_',['../structalgotradelib_1_1Bar.html#ae5a3ceae02c7fa770de9948f1e85a2af',1,'algotradelib::Bar']]],
+  ['lower_5f_14',['lower_',['../structalgotradelib_1_1PriceLimits.html#a01e98cf37f8c9a622989b5df7d1cf2f6',1,'algotradelib::PriceLimits']]],
+  ['lowest_5fcash_5f_15',['lowest_cash_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#ae994c9bc49c1816bbb1ac87369c63357',1,'algotradelib::backtest::ReplayResult::lowest_cash_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a7acf24a8ca4f3a1c288bbfeb351dd078',1,'algotradelib::backtest::ReportCaveats::lowest_cash_']]],
+  ['lowest_5fcash_5fat_5f_16',['lowest_cash_at_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#af39742b969e23b48edc730587681061f',1,'algotradelib::backtest::ReplayResult::lowest_cash_at_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a941d01fce3e932322850a4e845154e0a',1,'algotradelib::backtest::ReportCaveats::lowest_cash_at_']]]
 ];

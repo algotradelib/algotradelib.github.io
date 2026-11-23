@@ -1,7 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"classalgotradelib_1_1live_1_1SessionExecutor.html#adbdadfd1a5d440e95722f8f6fdaeb0f1":[1,0,0,8,0,5],
-"classalgotradelib_1_1live_1_1SessionExecutor.html#adbdadfd1a5d440e95722f8f6fdaeb0f1":[2,0,0,7,0,5],
 "classalgotradelib_1_1live_1_1SessionExecutor.html#ade7c987809bc2ff2a6874f761e9b6552":[1,0,0,8,0,13],
 "classalgotradelib_1_1live_1_1SessionExecutor.html#ade7c987809bc2ff2a6874f761e9b6552":[2,0,0,7,0,13],
 "classalgotradelib_1_1live_1_1SessionExecutor.html#ae3c4b1f9b9d7eea4b6ccde276f635d9e":[1,0,0,8,0,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX4 =
 "classalgotradelib_1_1network_1_1ClientCredentials.html#aa4393635ff763e81f5c366bd4ab23e89":[1,0,0,11,4,6],
 "classalgotradelib_1_1network_1_1ClientCredentials.html#aa4393635ff763e81f5c366bd4ab23e89":[2,0,0,10,4,6],
 "classalgotradelib_1_1network_1_1ClientCredentials.html#ae226abb8d7611d682c05fdefd8fe2fa7":[1,0,0,11,4,4],
-"classalgotradelib_1_1network_1_1ClientCredentials.html#ae226abb8d7611d682c05fdefd8fe2fa7":[2,0,0,10,4,4]
+"classalgotradelib_1_1network_1_1ClientCredentials.html#ae226abb8d7611d682c05fdefd8fe2fa7":[2,0,0,10,4,4],
+"classalgotradelib_1_1network_1_1FileCalendarCache.html":[1,0,0,11,6],
+"classalgotradelib_1_1network_1_1FileCalendarCache.html":[2,0,0,10,6]
 };

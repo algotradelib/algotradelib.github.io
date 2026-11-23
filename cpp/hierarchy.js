@@ -48,7 +48,6 @@ var hierarchy =
     [ "algotradelib::BrokerTraits&lt; Client &gt;", "structalgotradelib_1_1BrokerTraits.html", null ],
     [ "algotradelib::BrokerTraits&lt; alpaca::AlpacaBlockingClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01alpaca_1_1AlpacaBlockingClient_01_4.html", null ],
     [ "algotradelib::BrokerTraits&lt; mock::MockClient &gt;", "structalgotradelib_1_1BrokerTraits_3_01mock_1_1MockClient_01_4.html", null ],
-    [ "algotradelib::strategy::vanilla::BuyAndHold", "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html", null ],
     [ "algotradelib::BuyingPower", "structalgotradelib_1_1BuyingPower.html", null ],
     [ "algotradelib::backtest::Backtester&lt; Strategy, CapsType &gt;::InstrumentSlot::ByInterval", "structalgotradelib_1_1backtest_1_1Backtester_1_1InstrumentSlot_1_1ByInterval.html", null ],
     [ "algotradelib::network::CalendarCache", "classalgotradelib_1_1network_1_1CalendarCache.html", [
@@ -92,7 +91,6 @@ var hierarchy =
     [ "algotradelib::CommissionSchedule", "structalgotradelib_1_1CommissionSchedule.html", null ],
     [ "algotradelib::backtest::QueueingExecutor&lt; BrokerTag &gt;::Queue::const_iterator", "classalgotradelib_1_1backtest_1_1QueueingExecutor_1_1Queue_1_1const__iterator.html", null ],
     [ "algotradelib::runner::Context&lt; BrokerTag, CapsType &gt;", "classalgotradelib_1_1runner_1_1Context.html", null ],
-    [ "algotradelib::strategy::vanilla::Crossing", "structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html", null ],
     [ "algotradelib::Currency", "classalgotradelib_1_1Currency.html", null ],
     [ "algotradelib::runner::DataEvent&lt; T &gt;", "structalgotradelib_1_1runner_1_1DataEvent.html", null ],
     [ "algotradelib::strategy::DataEvent&lt; T &gt;", "structalgotradelib_1_1strategy_1_1DataEvent.html", null ],
@@ -103,10 +101,8 @@ var hierarchy =
     [ "algotradelib::DepthLevel", "structalgotradelib_1_1DepthLevel.html", null ],
     [ "algotradelib::DepthSnapshot", "structalgotradelib_1_1DepthSnapshot.html", null ],
     [ "algotradelib::backtest::Differences", "structalgotradelib_1_1backtest_1_1Differences.html", null ],
-    [ "algotradelib::strategy::vanilla::DonchianBreakout", "structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout.html", null ],
     [ "algotradelib::runner::DryRunReport&lt; BrokerTag &gt;", "structalgotradelib_1_1runner_1_1DryRunReport.html", null ],
     [ "algotradelib::runner::DryTag", "structalgotradelib_1_1runner_1_1DryTag.html", null ],
-    [ "algotradelib::strategy::vanilla::EmaCrossover", "structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover.html", null ],
     [ "std::enable_shared_from_this", null, [
       [ "algotradelib::network::WebSocketSessionBase< WsSession, websocket::stream< beast::tcp_stream > >", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html", [
         [ "algotradelib::network::WsSession", "classalgotradelib_1_1network_1_1WsSession.html", null ]
@@ -120,7 +116,6 @@ var hierarchy =
       [ "algotradelib::network::WebSocketSessionBase< Derived, Stream >", "classalgotradelib_1_1network_1_1WebSocketSessionBase.html", null ],
       [ "algotradelib::tossinvest::TossClient", "classalgotradelib_1_1tossinvest_1_1TossClient.html", null ]
     ] ],
-    [ "algotradelib::strategy::vanilla::EqualWeightRebalance", "structalgotradelib_1_1strategy_1_1vanilla_1_1EqualWeightRebalance.html", null ],
     [ "algotradelib::backtest::EquityPoint", "structalgotradelib_1_1backtest_1_1EquityPoint.html", null ],
     [ "algotradelib::backtest::Execution", "structalgotradelib_1_1backtest_1_1Execution.html", null ],
     [ "algotradelib::backtest::Expanding", "structalgotradelib_1_1backtest_1_1Expanding.html", null ],
@@ -218,7 +213,6 @@ var hierarchy =
     [ "algotradelib::mock::MockClient", "classalgotradelib_1_1mock_1_1MockClient.html", null ],
     [ "algotradelib::Money", "structalgotradelib_1_1Money.html", null ],
     [ "algotradelib::conformance::MoveOnlyCallback", "structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html", null ],
-    [ "algotradelib::strategy::vanilla::MovingAverageCrossover", "structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover.html", null ],
     [ "algotradelib::backtest::NextBarFillModel", "classalgotradelib_1_1backtest_1_1NextBarFillModel.html", null ],
     [ "algotradelib::data_only::NoAccount", "structalgotradelib_1_1data__only_1_1NoAccount.html", null ],
     [ "algotradelib::data_only::NoAck", "structalgotradelib_1_1data__only_1_1NoAck.html", null ],
@@ -256,14 +250,6 @@ var hierarchy =
     [ "algotradelib::OrderSnapshot", "structalgotradelib_1_1OrderSnapshot.html", null ],
     [ "algotradelib::runner::OrderUpdateWatch&lt; Broker &gt;", "classalgotradelib_1_1runner_1_1OrderUpdateWatch.html", null ],
     [ "algotradelib::analytics::Panel", "classalgotradelib_1_1analytics_1_1Panel.html", null ],
-    [ "algotradelib::strategy::vanilla::BuyAndHold::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold_1_1Params.html", null ],
-    [ "algotradelib::strategy::vanilla::DonchianBreakout::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout_1_1Params.html", null ],
-    [ "algotradelib::strategy::vanilla::EqualWeightRebalance::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1EqualWeightRebalance_1_1Params.html", null ],
-    [ "algotradelib::strategy::vanilla::MovingAverageCrossover::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover_1_1Params.html", null ],
-    [ "algotradelib::strategy::vanilla::RsiThreshold::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold_1_1Params.html", null ],
-    [ "algotradelib::strategy::vanilla::TimedLiquidation::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1TimedLiquidation_1_1Params.html", null ],
-    [ "algotradelib::strategy::vanilla::VolatilityTargetSizing::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing_1_1Params.html", null ],
-    [ "algotradelib::strategy::vanilla::ZScoreReversion::Params", "structalgotradelib_1_1strategy_1_1vanilla_1_1ZScoreReversion_1_1Params.html", null ],
     [ "algotradelib::PlacedOrder&lt; Broker &gt;", "structalgotradelib_1_1PlacedOrder.html", null ],
     [ "algotradelib::conformance::PlainCallback", "structalgotradelib_1_1conformance_1_1PlainCallback.html", null ],
     [ "algotradelib::strategy::Plan&lt; Broker &gt;", "structalgotradelib_1_1strategy_1_1Plan.html", null ],
@@ -308,7 +294,6 @@ var hierarchy =
     [ "algotradelib::strategy::RiskLimits", "structalgotradelib_1_1strategy_1_1RiskLimits.html", null ],
     [ "algotradelib::backtest::Rolling", "structalgotradelib_1_1backtest_1_1Rolling.html", null ],
     [ "algotradelib::strategy::PortfolioRows::Rows", "structalgotradelib_1_1strategy_1_1PortfolioRows_1_1Rows.html", null ],
-    [ "algotradelib::strategy::vanilla::RsiThreshold", "structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold.html", null ],
     [ "algotradelib::strategy::RunFees", "structalgotradelib_1_1strategy_1_1RunFees.html", null ],
     [ "algotradelib::runner::RunLedger", "classalgotradelib_1_1runner_1_1RunLedger.html", null ],
     [ "algotradelib::runner::Runner&lt; Strategy, CapsType, BrokerTag, Executor &gt;", "classalgotradelib_1_1runner_1_1Runner.html", null ],
@@ -340,7 +325,6 @@ var hierarchy =
     [ "algotradelib::runner::SignalStop", "classalgotradelib_1_1runner_1_1SignalStop.html", null ],
     [ "algotradelib::strategy::SizeSpec", "classalgotradelib_1_1strategy_1_1SizeSpec.html", null ],
     [ "algotradelib::backtest::SlippageModel", "structalgotradelib_1_1backtest_1_1SlippageModel.html", null ],
-    [ "algotradelib::strategy::vanilla::SmaCrossover", "structalgotradelib_1_1strategy_1_1vanilla_1_1SmaCrossover.html", null ],
     [ "algotradelib::StatedDate", "classalgotradelib_1_1StatedDate.html", null ],
     [ "algotradelib::runner::ChargedCosts::StatedTotal", "structalgotradelib_1_1runner_1_1ChargedCosts_1_1StatedTotal.html", null ],
     [ "algotradelib::runner::SteadyClock", "classalgotradelib_1_1runner_1_1SteadyClock.html", null ],
@@ -350,7 +334,6 @@ var hierarchy =
     [ "algotradelib::runner::TargetPosition", "structalgotradelib_1_1runner_1_1TargetPosition.html", null ],
     [ "algotradelib::strategy::TargetPosition", "structalgotradelib_1_1strategy_1_1TargetPosition.html", null ],
     [ "algotradelib::TickBand", "structalgotradelib_1_1TickBand.html", null ],
-    [ "algotradelib::strategy::vanilla::TimedLiquidation", "structalgotradelib_1_1strategy_1_1vanilla_1_1TimedLiquidation.html", null ],
     [ "algotradelib::analytics::TimeIndex", "classalgotradelib_1_1analytics_1_1TimeIndex.html", null ],
     [ "algotradelib::network::TokenStore", "classalgotradelib_1_1network_1_1TokenStore.html", [
       [ "algotradelib::network::FileTokenStore", "classalgotradelib_1_1network_1_1FileTokenStore.html", null ]
@@ -378,12 +361,10 @@ var hierarchy =
     [ "algotradelib::type_list&lt; Clients &gt;", "structalgotradelib_1_1type__list.html", null ],
     [ "algotradelib::type_tag&lt; T &gt;", "structalgotradelib_1_1type__tag.html", null ],
     [ "algotradelib::VenueKey", "classalgotradelib_1_1VenueKey.html", null ],
-    [ "algotradelib::strategy::vanilla::VolatilityTargetSizing", "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html", null ],
     [ "algotradelib::network::WebSocketSessionOptions", "structalgotradelib_1_1network_1_1WebSocketSessionOptions.html", null ],
     [ "algotradelib::strategy::WeightTarget", "structalgotradelib_1_1strategy_1_1WeightTarget.html", null ],
     [ "algotradelib::runner::WithheldOrder", "structalgotradelib_1_1runner_1_1WithheldOrder.html", null ],
     [ "algotradelib::runner::WithheldPlan&lt; BrokerTag &gt;", "structalgotradelib_1_1runner_1_1WithheldPlan.html", null ],
     [ "algotradelib::WorkingOrder&lt; Broker &gt;", "structalgotradelib_1_1WorkingOrder.html", null ],
-    [ "algotradelib::WorkingOrders&lt; Broker &gt;", "structalgotradelib_1_1WorkingOrders.html", null ],
-    [ "algotradelib::strategy::vanilla::ZScoreReversion", "structalgotradelib_1_1strategy_1_1vanilla_1_1ZScoreReversion.html", null ]
+    [ "algotradelib::WorkingOrders&lt; Broker &gt;", "structalgotradelib_1_1WorkingOrders.html", null ]
 ];

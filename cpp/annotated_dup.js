@@ -215,19 +215,6 @@ var annotated_dup =
         [ "WithheldPlan", "structalgotradelib_1_1runner_1_1WithheldPlan.html", "structalgotradelib_1_1runner_1_1WithheldPlan" ]
       ] ],
       [ "strategy", "namespacealgotradelib_1_1strategy.html", [
-        [ "vanilla", "namespacealgotradelib_1_1strategy_1_1vanilla.html", [
-          [ "BuyAndHold", "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1BuyAndHold" ],
-          [ "Crossing", "structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing" ],
-          [ "DonchianBreakout", "structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1DonchianBreakout" ],
-          [ "EmaCrossover", "structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1EmaCrossover" ],
-          [ "EqualWeightRebalance", "structalgotradelib_1_1strategy_1_1vanilla_1_1EqualWeightRebalance.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1EqualWeightRebalance" ],
-          [ "MovingAverageCrossover", "structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover" ],
-          [ "RsiThreshold", "structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1RsiThreshold" ],
-          [ "SmaCrossover", "structalgotradelib_1_1strategy_1_1vanilla_1_1SmaCrossover.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1SmaCrossover" ],
-          [ "TimedLiquidation", "structalgotradelib_1_1strategy_1_1vanilla_1_1TimedLiquidation.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1TimedLiquidation" ],
-          [ "VolatilityTargetSizing", "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1VolatilityTargetSizing" ],
-          [ "ZScoreReversion", "structalgotradelib_1_1strategy_1_1vanilla_1_1ZScoreReversion.html", "structalgotradelib_1_1strategy_1_1vanilla_1_1ZScoreReversion" ]
-        ] ],
         [ "AllCaps", "structalgotradelib_1_1strategy_1_1AllCaps.html", "structalgotradelib_1_1strategy_1_1AllCaps" ],
         [ "BarEvent", "structalgotradelib_1_1strategy_1_1BarEvent.html", "structalgotradelib_1_1strategy_1_1BarEvent" ],
         [ "BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", "structalgotradelib_1_1strategy_1_1BarSlice" ],

@@ -1,8 +1,20 @@
 var searchData=
 [
-  ['killing_20the_20process_20does_20and_20does_20not_20do_0',['What killing the process does, and does not do',['../binding-a-broker.html#autotoc_md40',1,'']]],
-  ['kinds_20of_20absence_20and_20every_20reduction_20masks_20both_1',['Convention 2: two kinds of absence, and every reduction masks both',['../analytics-conventions.html#autotoc_md15',1,'']]],
-  ['kis_20calendar_20between_20programs_2',['Sharing the KIS calendar between programs',['../broker-clients.html#autotoc_md47',1,'']]],
-  ['know_20it_3',['The market phase, and what the loop needs to know it',['../running-a-strategy-live.html#autotoc_md99',1,'']]],
-  ['knowing_4',['knowing',['../market-data.html#autotoc_md63',1,'Two broker-specific behaviours worth knowing'],['../binding-a-broker.html#autotoc_md35',1,'Two rules worth knowing']]]
+  ['layer_20deliberately_20does_20not_20compute_0',['What this layer deliberately does not compute',['../analytics-conventions.html#autotoc_md18',1,'']]],
+  ['layer_3a_20two_20numeric_20worlds_20and_20three_20conventions_1',['The analytics layer: two numeric worlds and three conventions',['../analytics-conventions.html',1,'guide']]],
+  ['layers_2',['The layers',['../architecture.html#autotoc_md21',1,'']]],
+  ['leaves_20you_20holding_3',['The three stops, and what each leaves you holding',['../running-a-strategy-live.html#autotoc_md90',1,'']]],
+  ['library_20s_20own_4',['The price grid is the library&apos;s own',['../market-data.html#autotoc_md60',1,'']]],
+  ['lies_5',['Costs, which are the most common way a backtest lies',['../reading-a-backtest.html#autotoc_md75',1,'']]],
+  ['like_6',['What the file looks like',['../recovering-after-a-crash.html#autotoc_md83',1,'']]],
+  ['limit_20orders_7',['Stop-limit orders',['../broker-clients.html#autotoc_md52',1,'']]],
+  ['limits_8',['Setting the limits',['../binding-a-broker.html#autotoc_md31',1,'']]],
+  ['line_20between_20them_9',['Three umbrellas, and the line between them',['../binding-a-broker.html#autotoc_md29',1,'']]],
+  ['live_10',['live',['../running-a-strategy-live.html',1,'Running a strategy live'],['../analytics-conventions.html#autotoc_md19',1,'Where the numbers live']]],
+  ['live_20run_11',['Quotes, and the one place a quote-driven replay differs from a quote-driven live run',['../reading-a-backtest.html#autotoc_md69',1,'']]],
+  ['live_20session_12',['Observing against a live session',['../binding-a-broker.html#autotoc_md41',1,'']]],
+  ['lookahead_13',['Two conventions that prevent a silent lookahead',['../market-data.html#autotoc_md59',1,'']]],
+  ['looks_20like_14',['What the file looks like',['../recovering-after-a-crash.html#autotoc_md83',1,'']]],
+  ['loop_20adds_20over_20feed_15',['What the loop adds over &lt;span class=&quot;tt&quot;&gt;feed&lt;/span&gt;',['../running-a-strategy-live.html#autotoc_md89',1,'']]],
+  ['loop_20needs_20to_20know_20it_16',['The market phase, and what the loop needs to know it',['../running-a-strategy-live.html#autotoc_md98',1,'']]]
 ];

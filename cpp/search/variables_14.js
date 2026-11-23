@@ -7,7 +7,7 @@ var searchData=
   ['unclamped_5forders_5frefused_5f_4',['unclamped_orders_refused_',['../structalgotradelib_1_1runner_1_1LoopReport.html#ace8c114572265a7088a0d1a9bfe67563',1,'algotradelib::runner::LoopReport']]],
   ['unclamped_5forders_5frejected_5f_5',['unclamped_orders_rejected_',['../structalgotradelib_1_1runner_1_1LoopReport.html#aea8861419d9deca8aa22b6f0d35d6251',1,'algotradelib::runner::LoopReport']]],
   ['unfilled_5f_6',['unfilled_',['../structalgotradelib_1_1backtest_1_1ReplayResult.html#a9a10283f434eab9a1586bcd6890225ad',1,'algotradelib::backtest::ReplayResult::unfilled_'],['../structalgotradelib_1_1backtest_1_1ReportCaveats.html#a4a93222705ae293b07f3b88bf24e317d',1,'algotradelib::backtest::ReportCaveats::unfilled_']]],
-  ['universe_5f_7',['universe_',['../structalgotradelib_1_1strategy_1_1vanilla_1_1EqualWeightRebalance_1_1Params.html#a106dcdbdf63129625aecf78f7089142c',1,'algotradelib::strategy::vanilla::EqualWeightRebalance::Params::universe_'],['../structlive__program_1_1Settings.html#a1f11a2727eea28012c2bb586fc7ce30f',1,'live_program::Settings::universe_']]],
+  ['universe_5f_7',['universe_',['../structlive__program_1_1Settings.html#a1f11a2727eea28012c2bb586fc7ce30f',1,'live_program::Settings']]],
   ['unreadable_5fbounds_5f_8',['unreadable_bounds_',['../structalgotradelib_1_1CommissionSchedule.html#a674e332d677f393d3f8711ee66bde935',1,'algotradelib::CommissionSchedule']]],
   ['unreadable_5fdays_5f_9',['unreadable_days_',['../structalgotradelib_1_1TradingCalendar.html#a8c0f4a0c7f71b0521bf911509ca31b19',1,'algotradelib::TradingCalendar']]],
   ['unreadable_5ffile_5f_10',['unreadable_file_',['../structalgotradelib_1_1runner_1_1RecoveryReport.html#aff0b726acf013ebd75595bef45e013d5',1,'algotradelib::runner::RecoveryReport']]],

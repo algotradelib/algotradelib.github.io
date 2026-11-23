@@ -23,6 +23,5 @@ var searchData=
   ['context_20',['Context',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
   ['context_3c_20drytag_2c_20strategy_3a_3anocaps_20_3e_21',['Context&lt; DryTag, strategy::NoCaps &gt;',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
   ['context_3c_20tag_2c_20strategy_3a_3anocaps_20_3e_22',['Context&lt; Tag, strategy::NoCaps &gt;',['../classalgotradelib_1_1runner_1_1Context.html',1,'algotradelib::runner']]],
-  ['crossing_23',['Crossing',['../structalgotradelib_1_1strategy_1_1vanilla_1_1Crossing.html',1,'algotradelib::strategy::vanilla']]],
-  ['currency_24',['Currency',['../classalgotradelib_1_1Currency.html',1,'algotradelib']]]
+  ['currency_23',['Currency',['../classalgotradelib_1_1Currency.html',1,'algotradelib']]]
 ];

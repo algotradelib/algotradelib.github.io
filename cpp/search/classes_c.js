@@ -17,6 +17,5 @@ var searchData=
   ['mockamendment_14',['MockAmendment',['../structalgotradelib_1_1mock_1_1MockAmendment.html',1,'algotradelib::mock']]],
   ['mockclient_15',['MockClient',['../classalgotradelib_1_1mock_1_1MockClient.html',1,'algotradelib::mock']]],
   ['money_16',['Money',['../structalgotradelib_1_1Money.html',1,'algotradelib']]],
-  ['moveonlycallback_17',['MoveOnlyCallback',['../structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html',1,'algotradelib::conformance']]],
-  ['movingaveragecrossover_18',['MovingAverageCrossover',['../structalgotradelib_1_1strategy_1_1vanilla_1_1MovingAverageCrossover.html',1,'algotradelib::strategy::vanilla']]]
+  ['moveonlycallback_17',['MoveOnlyCallback',['../structalgotradelib_1_1conformance_1_1MoveOnlyCallback.html',1,'algotradelib::conformance']]]
 ];

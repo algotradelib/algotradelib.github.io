@@ -7,7 +7,6 @@ var eigen_8hpp =
     [ "algotradelib::math::MutableSeriesView", "namespacealgotradelib_1_1math.html#a406ddcb2d143120814cfac7fbd83971e", null ],
     [ "algotradelib::math::SeriesView", "namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96", null ],
     [ "algotradelib::math::Vector", "namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f", null ],
-    [ "algotradelib::math::observed_or", "namespacealgotradelib_1_1math.html#a721912adc1eeaa4f2083d6efe598f6fc", null ],
     [ "algotradelib::math::observed_parts", "namespacealgotradelib_1_1math.html#a010e581485da026600475308d51288eb", null ],
     [ "algotradelib::math::unobserved", "namespacealgotradelib_1_1math.html#a565f05bdb8c4e28693e25ea163b6276a", null ],
     [ "algotradelib::math::unobserved", "namespacealgotradelib_1_1math.html#a5160233e89faca121f0807b7be230686", null ]

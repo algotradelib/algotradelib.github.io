@@ -1,7 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"classalgotradelib_1_1runner_1_1Runner.html#a23e90e5fcf4c0bace8639a6abeb5b436":[1,0,0,12,39,44],
-"classalgotradelib_1_1runner_1_1Runner.html#a23e90e5fcf4c0bace8639a6abeb5b436":[2,0,0,11,39,44],
 "classalgotradelib_1_1runner_1_1Runner.html#a273b118db388eeead81bdd5d8247d1ae":[1,0,0,12,39,40],
 "classalgotradelib_1_1runner_1_1Runner.html#a273b118db388eeead81bdd5d8247d1ae":[2,0,0,11,39,40],
 "classalgotradelib_1_1runner_1_1Runner.html#a27df75d9928c3802bd2b97e279043478":[1,0,0,12,39,46],
@@ -242,12 +240,14 @@ var NAVTREEINDEX7 =
 "classalgotradelib_1_1runner_1_1StopSource.html#ab0e1abf0f047d2d2820fff8a4af8268d":[2,0,0,11,65,0],
 "classalgotradelib_1_1runner_1_1StopSource.html#ab4836a499156f1afbd7a8cbfc17e711d":[1,0,0,12,65,2],
 "classalgotradelib_1_1runner_1_1StopSource.html#ab4836a499156f1afbd7a8cbfc17e711d":[2,0,0,11,65,2],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html":[1,0,0,13,13],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html":[2,0,0,12,12],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html#a1113d5bb86b6d5134c7cc15e1b61f65b":[1,0,0,13,13,11],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html#a1113d5bb86b6d5134c7cc15e1b61f65b":[2,0,0,12,12,11],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html#a38ea8c5a9a8cb92226a0177e445bdc5a":[1,0,0,13,13,13],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html#a38ea8c5a9a8cb92226a0177e445bdc5a":[2,0,0,12,12,13],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html#a478ac6b6fe953b1afdfa2342a26474f0":[1,0,0,13,13,9],
-"classalgotradelib_1_1strategy_1_1OrderIntent.html#a478ac6b6fe953b1afdfa2342a26474f0":[2,0,0,12,12,9]
+"classalgotradelib_1_1strategy_1_1OrderIntent.html":[1,0,0,13,12],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html":[2,0,0,12,11],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a1113d5bb86b6d5134c7cc15e1b61f65b":[1,0,0,13,12,11],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a1113d5bb86b6d5134c7cc15e1b61f65b":[2,0,0,12,11,11],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a38ea8c5a9a8cb92226a0177e445bdc5a":[1,0,0,13,12,13],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a38ea8c5a9a8cb92226a0177e445bdc5a":[2,0,0,12,11,13],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a478ac6b6fe953b1afdfa2342a26474f0":[1,0,0,13,12,9],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a478ac6b6fe953b1afdfa2342a26474f0":[2,0,0,12,11,9],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a6d8ac84d0f7f9dd97dc74a965d82822c":[1,0,0,13,12,8],
+"classalgotradelib_1_1strategy_1_1OrderIntent.html#a6d8ac84d0f7f9dd97dc74a965d82822c":[2,0,0,12,11,8]
 };

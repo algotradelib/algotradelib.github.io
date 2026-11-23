@@ -11,7 +11,6 @@ var namespacealgotradelib_1_1strategy =
       [ "start", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a1ad6a77a750832f4416311dc4baeabc8", null ],
       [ "stop", "namespacealgotradelib_1_1strategy_1_1dispatch.html#a1de504dc4ff9a2ce56060a8ce4ac727b", null ]
     ] ],
-    [ "vanilla", "namespacealgotradelib_1_1strategy_1_1vanilla.html", "namespacealgotradelib_1_1strategy_1_1vanilla" ],
     [ "AllCaps", "structalgotradelib_1_1strategy_1_1AllCaps.html", "structalgotradelib_1_1strategy_1_1AllCaps" ],
     [ "BarEvent", "structalgotradelib_1_1strategy_1_1BarEvent.html", "structalgotradelib_1_1strategy_1_1BarEvent" ],
     [ "BarSlice", "structalgotradelib_1_1strategy_1_1BarSlice.html", "structalgotradelib_1_1strategy_1_1BarSlice" ],

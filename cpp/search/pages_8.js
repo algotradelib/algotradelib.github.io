@@ -1,15 +1,21 @@
 var searchData=
 [
-  ['each_20broker_20will_20tell_20you_20about_20the_20account_0',['What each broker will tell you about the account',['../binding-a-broker.html#autotoc_md38',1,'']]],
-  ['each_20leaves_20you_20holding_1',['The three stops, and what each leaves you holding',['../running-a-strategy-live.html#autotoc_md91',1,'']]],
-  ['emit_20a_20target_20not_20an_20order_2',['Emit a target, not an order',['../writing-a-strategy.html#autotoc_md122',1,'']]],
-  ['ends_20only_3',['A replay&apos;s clock visits bar ends only',['../reading-a-backtest.html#autotoc_md73',1,'']]],
-  ['engine_20cannot_20fix_4',['Survivorship bias, which the engine cannot fix',['../reading-a-backtest.html#autotoc_md79',1,'']]],
-  ['equity_20curve_20is_20one_20currency_20s_5',['The equity curve is one currency&apos;s',['../reading-a-backtest.html#autotoc_md75',1,'']]],
-  ['every_20reduction_20masks_20both_6',['Convention 2: two kinds of absence, and every reduction masks both',['../analytics-conventions.html#autotoc_md15',1,'']]],
-  ['everything_20i_20asked_20for_20go_20out_7',['Did everything I asked for go out?',['../running-a-strategy-live.html#autotoc_md97',1,'']]],
-  ['example_8',['Example',['../market-data.html#autotoc_md65',1,'Example'],['../broker-port.html#autotoc_md111',1,'Example']]],
-  ['expose_20the_20difference_9',['Normalize the intersection, expose the difference',['../architecture.html#autotoc_md27',1,'']]],
-  ['exposure_20ceiling_20and_20what_20it_20means_20by_20portfolio_10',['The portfolio exposure ceiling, and what it means by &quot;portfolio&quot;',['../running-a-strategy-live.html#autotoc_md105',1,'']]],
-  ['external_20data_11',['Records of external data',['../reading-a-backtest.html#autotoc_md71',1,'']]]
+  ['failures_0',['Poll failures are not send failures',['../running-a-strategy-live.html#autotoc_md99',1,'']]],
+  ['failures_20are_20not_20send_20failures_1',['Poll failures are not send failures',['../running-a-strategy-live.html#autotoc_md99',1,'']]],
+  ['feature_2',['Reaching a broker-specific feature',['../writing-a-strategy.html#autotoc_md125',1,'']]],
+  ['feed_3',['What the loop adds over &lt;span class=&quot;tt&quot;&gt;feed&lt;/span&gt;',['../running-a-strategy-live.html#autotoc_md89',1,'']]],
+  ['figures_20mean_20something_4',['Absent figures mean something',['../reading-a-backtest.html#autotoc_md77',1,'']]],
+  ['file_20looks_20like_5',['What the file looks like',['../recovering-after-a-crash.html#autotoc_md83',1,'']]],
+  ['files_6',['Credentials from files',['../broker-clients.html#autotoc_md44',1,'']]],
+  ['fill_20model_20assumes_7',['What the fill model assumes',['../reading-a-backtest.html#autotoc_md68',1,'']]],
+  ['finely_20a_20target_20is_20chased_8',['How finely a target is chased',['../binding-a-broker.html#autotoc_md32',1,'']]],
+  ['first_9',['What to distrust first',['../reading-a-backtest.html#autotoc_md80',1,'']]],
+  ['five_20verdicts_10',['The five verdicts',['../recovering-after-a-crash.html#autotoc_md85',1,'']]],
+  ['fix_11',['Survivorship bias, which the engine cannot fix',['../reading-a-backtest.html#autotoc_md78',1,'']]],
+  ['for_20go_20out_12',['Did everything I asked for go out?',['../running-a-strategy-live.html#autotoc_md96',1,'']]],
+  ['for_20stops_20the_20run_13',['An order nobody can account for stops the run',['../running-a-strategy-live.html#autotoc_md101',1,'']]],
+  ['for_20you_14',['Convention 3: nothing is annualized for you',['../analytics-conventions.html#autotoc_md16',1,'']]],
+  ['from_20a_20quote_20driven_20live_20run_15',['Quotes, and the one place a quote-driven replay differs from a quote-driven live run',['../reading-a-backtest.html#autotoc_md69',1,'']]],
+  ['from_20files_16',['Credentials from files',['../broker-clients.html#autotoc_md44',1,'']]],
+  ['from_20outside_17',['How to stop one, from outside',['../running-a-strategy-live.html#autotoc_md91',1,'']]]
 ];

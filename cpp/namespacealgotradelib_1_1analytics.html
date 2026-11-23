@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacealgot
 </div><!--header-->
 <div class="contents">
 
-<p>Returns, rolling statistics, indicators and performance metrics over numeric series.  
+<p>Series buffers and frames, the conversions to and from exact decimals, and performance metrics.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -181,12 +181,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a89ce3336924ce286831cd51ff56fc35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase display name for a field, such as <span class="tt">"close"</span>.  <br /></td></tr>
 <tr class="memitem:ae3efdc25f1b58a29c8466dd77dc3ddd9" id="r_ae3efdc25f1b58a29c8466dd77dc3ddd9"><td class="memItemLeft"><a class="el" href="classalgotradelib_1_1analytics_1_1SeriesFrame.html">SeriesFrame</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae3efdc25f1b58a29c8466dd77dc3ddd9">from_bars</a> (const <a class="el" href="structalgotradelib_1_1BarSeries.html">BarSeries</a> &amp;series)</td></tr>
 <tr class="memdesc:ae3efdc25f1b58a29c8466dd77dc3ddd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a bar series into a frame of <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e" title="The floating-point type the analytics and math layers compute in (double).">Scalar</a></span> columns.  <br /></td></tr>
-<tr class="memitem:a3be8c6075fe7f979722b4fcb11a8cef3" id="r_a3be8c6075fe7f979722b4fcb11a8cef3"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3be8c6075fe7f979722b4fcb11a8cef3">zscore</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window, std::size_t min_observed)</td></tr>
-<tr class="memdesc:a3be8c6075fe7f979722b4fcb11a8cef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes how many trailing sample standard deviations each value lies from its trailing mean.  <br /></td></tr>
-<tr class="memitem:a237ffb991d597894121c788821d9a9b4" id="r_a237ffb991d597894121c788821d9a9b4"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a237ffb991d597894121c788821d9a9b4">zscore</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window)</td></tr>
-<tr class="memdesc:a237ffb991d597894121c788821d9a9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing z-score, requiring every row of the window.  <br /></td></tr>
-<tr class="memitem:a36c78df6ba03cd8abb6635822a79bf86" id="r_a36c78df6ba03cd8abb6635822a79bf86"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a36c78df6ba03cd8abb6635822a79bf86">rsi</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> prices, std::size_t period=14)</td></tr>
-<tr class="memdesc:a36c78df6ba03cd8abb6635822a79bf86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes Wilder's relative strength index.  <br /></td></tr>
 <tr class="memitem:ac722704ca00110ea27bd39822382ded7" id="r_ac722704ca00110ea27bd39822382ded7"><td class="memItemLeft"><a class="el" href="structalgotradelib_1_1analytics_1_1MaxDrawdown.html">MaxDrawdown</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac722704ca00110ea27bd39822382ded7">max_drawdown</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> levels)</td></tr>
 <tr class="memdesc:ac722704ca00110ea27bd39822382ded7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the worst peak-to-trough decline of a level series.  <br /></td></tr>
 <tr class="memitem:af24e9e7b0236d8585417e404de6f7c98" id="r_af24e9e7b0236d8585417e404de6f7c98"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#af24e9e7b0236d8585417e404de6f7c98">sharpe</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> period_returns, <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> risk_free=<a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>{0})</td></tr>
@@ -199,34 +193,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa007f4e18852c2ccd6e7a679693c7e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lowercase display name for an alignment, such as <span class="tt">"intersection"</span>.  <br /></td></tr>
 <tr class="memitem:a28c4fee1287618a2be87d940fd74bc75" id="r_a28c4fee1287618a2be87d940fd74bc75"><td class="memItemLeft">std::vector&lt; std::size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a28c4fee1287618a2be87d940fd74bc75">bootstrap_indices</a> (std::size_t count, <a class="el" href="#a67be6c54c9dbdb43c93218c6deb67a6c">BlockScheme</a> scheme, std::size_t block, std::uint64_t seed, std::uint64_t path)</td></tr>
 <tr class="memdesc:a28c4fee1287618a2be87d940fd74bc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the steps of one bootstrap path: entry <span class="tt">k</span> names the step from close <span class="tt">j</span> to close <span class="tt">j + 1</span>, as <span class="tt">j</span>, the path takes at step <span class="tt">k</span>.  <br /></td></tr>
-<tr class="memitem:ae513271d6929b08cab9a1b66ee56041c" id="r_ae513271d6929b08cab9a1b66ee56041c"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae513271d6929b08cab9a1b66ee56041c">returns</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> prices)</td></tr>
-<tr class="memdesc:ae513271d6929b08cab9a1b66ee56041c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes simple period returns, <span class="tt">p[i] / p[i - 1] - 1</span>.  <br /></td></tr>
-<tr class="memitem:a1939f6f853886d2c05bfba7875825e3d" id="r_a1939f6f853886d2c05bfba7875825e3d"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1939f6f853886d2c05bfba7875825e3d">rolling_mean</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window, std::size_t min_observed)</td></tr>
-<tr class="memdesc:a1939f6f853886d2c05bfba7875825e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing mean of the observed values.  <br /></td></tr>
-<tr class="memitem:ab1b8f680cb6dce9e7943695bf110acdb" id="r_ab1b8f680cb6dce9e7943695bf110acdb"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab1b8f680cb6dce9e7943695bf110acdb">rolling_mean</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window)</td></tr>
-<tr class="memdesc:ab1b8f680cb6dce9e7943695bf110acdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing mean, requiring every row of the window.  <br /></td></tr>
-<tr class="memitem:a50dba8c83a81847afbd24f49452ae7dd" id="r_a50dba8c83a81847afbd24f49452ae7dd"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a50dba8c83a81847afbd24f49452ae7dd">rolling_stdev</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window, std::size_t min_observed)</td></tr>
-<tr class="memdesc:a50dba8c83a81847afbd24f49452ae7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing sample standard deviation (divisor <span class="tt">count - 1</span>).  <br /></td></tr>
-<tr class="memitem:a5a2baf6b60706f5eadbde46fb255e5eb" id="r_a5a2baf6b60706f5eadbde46fb255e5eb"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5a2baf6b60706f5eadbde46fb255e5eb">rolling_stdev</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window)</td></tr>
-<tr class="memdesc:a5a2baf6b60706f5eadbde46fb255e5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing sample standard deviation, requiring every row of the window.  <br /></td></tr>
-<tr class="memitem:a2580f4fdae2f0d79527a122da204766e" id="r_a2580f4fdae2f0d79527a122da204766e"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2580f4fdae2f0d79527a122da204766e">rolling_min</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window, std::size_t min_observed)</td></tr>
-<tr class="memdesc:a2580f4fdae2f0d79527a122da204766e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing minimum of the observed values.  <br /></td></tr>
-<tr class="memitem:aa14da082dfe045b70173cd3b4acee2ac" id="r_aa14da082dfe045b70173cd3b4acee2ac"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa14da082dfe045b70173cd3b4acee2ac">rolling_min</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window)</td></tr>
-<tr class="memdesc:aa14da082dfe045b70173cd3b4acee2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing minimum, requiring every row of the window.  <br /></td></tr>
-<tr class="memitem:a9b9224024de5c7dd109a12a45d0e79e1" id="r_a9b9224024de5c7dd109a12a45d0e79e1"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9b9224024de5c7dd109a12a45d0e79e1">rolling_max</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window, std::size_t min_observed)</td></tr>
-<tr class="memdesc:a9b9224024de5c7dd109a12a45d0e79e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing maximum of the observed values.  <br /></td></tr>
-<tr class="memitem:a4cecfd4c2b8540b0f7d68a43e115b189" id="r_a4cecfd4c2b8540b0f7d68a43e115b189"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4cecfd4c2b8540b0f7d68a43e115b189">rolling_max</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window)</td></tr>
-<tr class="memdesc:a4cecfd4c2b8540b0f7d68a43e115b189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the trailing maximum, requiring every row of the window.  <br /></td></tr>
-<tr class="memitem:a6160efd6712a636201df7819faa086f8" id="r_a6160efd6712a636201df7819faa086f8"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6160efd6712a636201df7819faa086f8">sma</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window, std::size_t min_observed)</td></tr>
-<tr class="memdesc:a6160efd6712a636201df7819faa086f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the simple moving average; identical to <span class="tt"><a class="el" href="#a1939f6f853886d2c05bfba7875825e3d" title="Computes the trailing mean of the observed values.">rolling_mean</a></span>.  <br /></td></tr>
-<tr class="memitem:aa65ecda5275f95ad1791856febd3ed0f" id="r_aa65ecda5275f95ad1791856febd3ed0f"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa65ecda5275f95ad1791856febd3ed0f">sma</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t window)</td></tr>
-<tr class="memdesc:aa65ecda5275f95ad1791856febd3ed0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the simple moving average, requiring every row of the window.  <br /></td></tr>
-<tr class="memitem:a3c7f1fb6c402128348d4e004b76b10e6" id="r_a3c7f1fb6c402128348d4e004b76b10e6"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3c7f1fb6c402128348d4e004b76b10e6">alpha_from_span</a> (std::size_t span)</td></tr>
-<tr class="memdesc:a3c7f1fb6c402128348d4e004b76b10e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an EMA span to its smoothing factor, <span class="tt">2 / (span + 1)</span>.  <br /></td></tr>
-<tr class="memitem:a714d14c568658b14a495a49413661d80" id="r_a714d14c568658b14a495a49413661d80"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a714d14c568658b14a495a49413661d80">ema</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, <a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> alpha, std::size_t min_observed=1)</td></tr>
-<tr class="memdesc:a714d14c568658b14a495a49413661d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the exponentially weighted moving average of a series.  <br /></td></tr>
-<tr class="memitem:aa99731f9508ab4ad39127ee2c657b45f" id="r_aa99731f9508ab4ad39127ee2c657b45f"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa99731f9508ab4ad39127ee2c657b45f">ema</a> (<a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a> values, std::size_t span, std::size_t min_observed=1)=delete</td></tr>
-<tr class="memdesc:aa99731f9508ab4ad39127ee2c657b45f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted: an integer here would be a span. Write <span class="tt">ema(values, alpha_from_span(span))</span>.  <br /></td></tr>
 <tr class="memitem:ac779beb008cac496403576f7f5caaaf1" id="r_ac779beb008cac496403576f7f5caaaf1"><td class="memItemLeft"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1">missing</a> ()</td></tr>
 <tr class="memdesc:ac779beb008cac496403576f7f5caaaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value that stands for "no observation"; see <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot; (a quiet NaN).">math::missing</a></span>.  <br /></td></tr>
 <tr class="memitem:a19fc7f3d86cafd06105c227a9caed294" id="r_a19fc7f3d86cafd06105c227a9caed294"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a19fc7f3d86cafd06105c227a9caed294">observed</a> (<a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> value)</td></tr>
@@ -240,7 +206,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:aa9b64127b8c9f0d01c99f29abe7efde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of <span class="tt"><a class="el" href="#a36711d90c13978d4ae1a79e868f4d0f2" title="A bar field, used as a column of a SeriesFrame.">BarField</a></span> values, and so of columns in a <span class="tt"><a class="el" href="classalgotradelib_1_1analytics_1_1SeriesFrame.html" title="One instrument&#39;s bars as numeric columns: one row per bar, one column per BarField.">SeriesFrame</a></span>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Returns, rolling statistics, indicators and performance metrics over numeric series. </p>
+<div class="textblock"><p>Series buffers and frames, the conversions to and from exact decimals, and performance metrics. </p>
 <p>Needs a build with a linear algebra backend (<span class="tt">ATL_USE_EIGEN=ON</span>). </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="a12b8c1ca53ee5215eab439879f5e394e" name="a12b8c1ca53ee5215eab439879f5e394e"></a>
@@ -400,51 +366,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3c7f1fb6c402128348d4e004b76b10e6" name="a3c7f1fb6c402128348d4e004b76b10e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c7f1fb6c402128348d4e004b76b10e6">&#9670;&#160;</a></span>alpha_from_span()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a> algotradelib::analytics::alpha_from_span </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>span</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts an EMA span to its smoothing factor, <span class="tt">2 / (span + 1)</span>. </p>
-<p>This is the convention charting packages and <span class="tt">pandas.ewm(span=...)</span> use: <span class="tt">ema(closes, alpha_from_span(12))</span> is a "12-period EMA". Wilder's smoothing (<span class="tt">alpha = 1 / n</span>) is span <span class="tt">2n - 1</span>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">span</td><td>The EMA period, at least <span class="tt">1</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The smoothing factor, in <span class="tt">(0, 1]</span>. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">span</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00300">300</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rolling_8hpp_source.html#l00300">alpha_from_span()</a>, and <a class="el" href="signal_8hpp_source.html#l00122">algotradelib::strategy::vanilla::exponential_line()</a>.</p>
-
-</div>
-</div>
 <a id="ab19fa55f5c2131a1fc28ab652b43d0e1" name="ab19fa55f5c2131a1fc28ab652b43d0e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab19fa55f5c2131a1fc28ab652b43d0e1">&#9670;&#160;</a></span>annualize_ratio()</h2>
 
@@ -489,9 +410,9 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00199">199</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00198">198</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00199">annualize_ratio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00198">annualize_ratio()</a>.</p>
 
 </div>
 </div>
@@ -529,7 +450,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00048">48</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00201">algotradelib::analytics::SeriesFrame::at()</a>, <a class="el" href="frame_8hpp_source.html#l00048">bar_field_index()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00200">algotradelib::analytics::SeriesBuffer::column()</a>, <a class="el" href="frame_8hpp_source.html#l00149">algotradelib::analytics::SeriesFrame::column()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00157">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="frame_8hpp_source.html#l00216">algotradelib::analytics::SeriesFrame::set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00201">algotradelib::analytics::SeriesFrame::at()</a>, <a class="el" href="frame_8hpp_source.html#l00048">bar_field_index()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00199">algotradelib::analytics::SeriesBuffer::column()</a>, <a class="el" href="frame_8hpp_source.html#l00149">algotradelib::analytics::SeriesFrame::column()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00156">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="frame_8hpp_source.html#l00216">algotradelib::analytics::SeriesFrame::set()</a>.</p>
 
 </div>
 </div>
@@ -639,101 +560,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a714d14c568658b14a495a49413661d80" name="a714d14c568658b14a495a49413661d80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a714d14c568658b14a495a49413661d80">&#9670;&#160;</a></span>ema() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::ema </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e">Scalar</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the exponentially weighted moving average of a series. </p>
-<p>The level is seeded with the first observed value and then updated as <span class="tt">alpha * value + (1 - alpha) * level</span>. An unobserved value is skipped: the level carries over it and that row is <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span>. On observed rows the result equals <span class="tt">pandas.Series.ewm(alpha=alpha, adjust=False, ignore_na=True, min_periods=min_observed)
-.mean()</span> up to rounding.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The smoothing factor, in <span class="tt">(0, 1]</span>; for a period, pass <span class="tt">alpha_from_span(span)</span>. </td></tr>
-    <tr><td class="paramname">min_observed</td><td>How many values must have been observed before a level is reported; raise it to hide the rows where the seed still dominates. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The levels, one per row. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>unless <span class="tt">0 &lt; alpha &lt;= 1</span>, or if <span class="tt">min_observed</span> is zero (even for an empty series). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>In a live loop, keep the level yourself, as this function does: seed it with the first observed value, skip an unobserved one, and update on each later observed value as <span class="tt">level + alpha * (value - level)</span>, in that order, to match it exactly. Running <span class="tt"><a class="el" href="#a714d14c568658b14a495a49413661d80" title="Computes the exponentially weighted moving average of a series.">ema</a></span> over a trailing <span class="tt"><a class="el" href="classalgotradelib_1_1analytics_1_1SeriesBuffer.html" title="The most recent observations of a few fields, for a strategy fed one bar at a time.">SeriesBuffer</a></span> view reseeds from the oldest row each time and gives different levels. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00339">339</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rolling_8hpp_source.html#l00339">ema()</a>, <a class="el" href="#aa99731f9508ab4ad39127ee2c657b45f">ema()</a>, and <a class="el" href="signal_8hpp_source.html#l00122">algotradelib::strategy::vanilla::exponential_line()</a>.</p>
-
-</div>
-</div>
-<a id="aa99731f9508ab4ad39127ee2c657b45f" name="aa99731f9508ab4ad39127ee2c657b45f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa99731f9508ab4ad39127ee2c657b45f">&#9670;&#160;</a></span>ema() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::ema </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>span</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deleted: an integer here would be a span. Write <span class="tt">ema(values, alpha_from_span(span))</span>. </p>
-<p>A <span class="tt">long double</span> smoothing factor is ambiguous between the overloads; cast it to <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a12b8c1ca53ee5215eab439879f5e394e" title="The floating-point type the analytics and math layers compute in (double).">Scalar</a></span>. </p>
-
-</div>
-</div>
 <a id="ae3efdc25f1b58a29c8466dd77dc3ddd9" name="ae3efdc25f1b58a29c8466dd77dc3ddd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3efdc25f1b58a29c8466dd77dc3ddd9">&#9670;&#160;</a></span>from_bars()</h2>
 
@@ -812,9 +638,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The decline and its rows. With no observed level, <span class="tt">magnitude_</span> is <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> and both rows are <span class="tt">-1</span>; if levels exist but every running peak is at or below zero, <span class="tt">magnitude_</span> is <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span>. A series that never declines gives <span class="tt">0</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00083">83</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00082">82</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00083">max_drawdown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00082">max_drawdown()</a>.</p>
 
 </div>
 </div>
@@ -846,7 +672,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="scalar_8hpp_source.html#l00028">28</a> of file <a class="el" href="scalar_8hpp_source.html">scalar.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="panel_8hpp_source.html#l00185">algotradelib::analytics::Panel::from_bars()</a>, <a class="el" href="metrics_8hpp_source.html#l00083">max_drawdown()</a>, and <a class="el" href="returns_8hpp_source.html#l00027">returns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="panel_8hpp_source.html#l00185">algotradelib::analytics::Panel::from_bars()</a>, and <a class="el" href="metrics_8hpp_source.html#l00082">max_drawdown()</a>.</p>
 
 </div>
 </div>
@@ -884,455 +710,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="scalar_8hpp_source.html#l00038">38</a> of file <a class="el" href="scalar_8hpp_source.html">scalar.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00199">annualize_ratio()</a>, <a class="el" href="rolling_8hpp_source.html#l00339">ema()</a>, <a class="el" href="metrics_8hpp_source.html#l00083">max_drawdown()</a>, <a class="el" href="indicators_8hpp_source.html#l00132">rsi()</a>, and <a class="el" href="indicators_8hpp_source.html#l00077">zscore()</a>.</p>
-
-</div>
-</div>
-<a id="ae513271d6929b08cab9a1b66ee56041c" name="ae513271d6929b08cab9a1b66ee56041c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae513271d6929b08cab9a1b66ee56041c">&#9670;&#160;</a></span>returns()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::returns </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>prices</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes simple period returns, <span class="tt">p[i] / p[i - 1] - 1</span>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">prices</td><td>The price series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The returns, one per row. Row 0 is <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span>, as is any row whose price or previous price is unobserved, or whose previous price is zero or negative (from a negative base the ratio's sign is reversed, so a further fall would read as a gain). </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="returns_8hpp_source.html#l00027">27</a> of file <a class="el" href="returns_8hpp_source.html">returns.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, and <a class="el" href="returns_8hpp_source.html#l00027">returns()</a>.</p>
-
-</div>
-</div>
-<a id="a4cecfd4c2b8540b0f7d68a43e115b189" name="a4cecfd4c2b8540b0f7d68a43e115b189"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cecfd4c2b8540b0f7d68a43e115b189">&#9670;&#160;</a></span>rolling_max() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_max </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing maximum, requiring every row of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at; all must be observed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The maxima, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where any row of the window is unobserved. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00260">260</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a9b9224024de5c7dd109a12a45d0e79e1" name="a9b9224024de5c7dd109a12a45d0e79e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b9224024de5c7dd109a12a45d0e79e1">&#9670;&#160;</a></span>rolling_max() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_max </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing maximum of the observed values. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved and skipped. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at, observed or not. </td></tr>
-    <tr><td class="paramname">min_observed</td><td>How many of those rows must be observed for a result to be reported. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The maxima, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where fewer than <span class="tt">min_observed</span> rows are observed. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> or <span class="tt">min_observed</span> is zero, or <span class="tt">min_observed &gt; window</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00237">237</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="reversion_8hpp_source.html#l00240">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="rolling_8hpp_source.html#l00260">rolling_max()</a>, and <a class="el" href="rolling_8hpp_source.html#l00237">rolling_max()</a>.</p>
-
-</div>
-</div>
-<a id="ab1b8f680cb6dce9e7943695bf110acdb" name="ab1b8f680cb6dce9e7943695bf110acdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1b8f680cb6dce9e7943695bf110acdb">&#9670;&#160;</a></span>rolling_mean() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_mean </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing mean, requiring every row of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at; all must be observed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The means, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where any row of the window is unobserved. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00147">147</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a1939f6f853886d2c05bfba7875825e3d" name="a1939f6f853886d2c05bfba7875825e3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1939f6f853886d2c05bfba7875825e3d">&#9670;&#160;</a></span>rolling_mean() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_mean </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing mean of the observed values. </p>
-<p>Divides by the number of observed values in the window, not by <span class="tt">window</span>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved and skipped. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at, observed or not. </td></tr>
-    <tr><td class="paramname">min_observed</td><td>How many of those rows must be observed for a result to be reported. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The means, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where fewer than <span class="tt">min_observed</span> rows are observed. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> or <span class="tt">min_observed</span> is zero, or <span class="tt">min_observed &gt; window</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00125">125</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rolling_8hpp_source.html#l00147">rolling_mean()</a>, <a class="el" href="rolling_8hpp_source.html#l00125">rolling_mean()</a>, <a class="el" href="rolling_8hpp_source.html#l00285">sma()</a>, and <a class="el" href="rolling_8hpp_source.html#l00273">sma()</a>.</p>
-
-</div>
-</div>
-<a id="aa14da082dfe045b70173cd3b4acee2ac" name="aa14da082dfe045b70173cd3b4acee2ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa14da082dfe045b70173cd3b4acee2ac">&#9670;&#160;</a></span>rolling_min() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_min </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing minimum, requiring every row of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at; all must be observed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The minima, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where any row of the window is unobserved. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00224">224</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2580f4fdae2f0d79527a122da204766e" name="a2580f4fdae2f0d79527a122da204766e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2580f4fdae2f0d79527a122da204766e">&#9670;&#160;</a></span>rolling_min() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_min </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing minimum of the observed values. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved and skipped. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at, observed or not. </td></tr>
-    <tr><td class="paramname">min_observed</td><td>How many of those rows must be observed for a result to be reported. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The minima, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where fewer than <span class="tt">min_observed</span> rows are observed. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> or <span class="tt">min_observed</span> is zero, or <span class="tt">min_observed &gt; window</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00199">199</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="reversion_8hpp_source.html#l00240">algotradelib::strategy::vanilla::DonchianBreakout::on_bar()</a>, <a class="el" href="rolling_8hpp_source.html#l00224">rolling_min()</a>, and <a class="el" href="rolling_8hpp_source.html#l00199">rolling_min()</a>.</p>
-
-</div>
-</div>
-<a id="a5a2baf6b60706f5eadbde46fb255e5eb" name="a5a2baf6b60706f5eadbde46fb255e5eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a2baf6b60706f5eadbde46fb255e5eb">&#9670;&#160;</a></span>rolling_stdev() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_stdev </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing sample standard deviation, requiring every row of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at; all must be observed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The deviations, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where any row of the window is unobserved, and everywhere if <span class="tt">window</span> is <span class="tt">1</span>. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00186">186</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a50dba8c83a81847afbd24f49452ae7dd" name="a50dba8c83a81847afbd24f49452ae7dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50dba8c83a81847afbd24f49452ae7dd">&#9670;&#160;</a></span>rolling_stdev() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rolling_stdev </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing sample standard deviation (divisor <span class="tt">count - 1</span>). </p>
-<p>A window with fewer than two observed values reports <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span>, whatever <span class="tt">min_observed</span> says.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved and skipped. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at, observed or not. </td></tr>
-    <tr><td class="paramname">min_observed</td><td>How many of those rows must be observed for a result to be reported. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The deviations, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where fewer than <span class="tt">max(min_observed, 2)</span> rows are observed. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> or <span class="tt">min_observed</span> is zero, or <span class="tt">min_observed &gt; window</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00163">163</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="rolling_8hpp_source.html#l00186">rolling_stdev()</a>, and <a class="el" href="rolling_8hpp_source.html#l00163">rolling_stdev()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00198">annualize_ratio()</a>, and <a class="el" href="metrics_8hpp_source.html#l00082">max_drawdown()</a>.</p>
 
 </div>
 </div>
@@ -1392,56 +770,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a36c78df6ba03cd8abb6635822a79bf86" name="a36c78df6ba03cd8abb6635822a79bf86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36c78df6ba03cd8abb6635822a79bf86">&#9670;&#160;</a></span>rsi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::rsi </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>prices</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>period</em></span><span class="paramdefsep"> = </span><span class="paramdefval">14</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes Wilder's relative strength index. </p>
-<p>Average gains and losses use Wilder's smoothing (<span class="tt">alpha = 1 / period</span>, seeded with the simple mean of the first <span class="tt">period</span> changes), and the index is <span class="tt">100 - 100 / (1 + gain / loss)</span>. Only gains gives 100, only losses gives 0, and no movement at all gives 50.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">prices</td><td>The price series; <span class="tt">NaN</span> entries are unobserved, and a change needs both prices. </td></tr>
-    <tr><td class="paramname">period</td><td>The number of price changes averaged; 14 is Wilder's. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The index, in <span class="tt">[0, 100]</span>, one per row; the first <span class="tt">period</span> rows (and more after gaps) are <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span>. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">period</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="indicators_8hpp_source.html#l00132">132</a> of file <a class="el" href="indicators_8hpp_source.html">indicators.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="reversion_8hpp_source.html#l00158">algotradelib::strategy::vanilla::RsiThreshold::on_bar()</a>, and <a class="el" href="indicators_8hpp_source.html#l00132">rsi()</a>.</p>
-
-</div>
-</div>
 <a id="af24e9e7b0236d8585417e404de6f7c98" name="af24e9e7b0236d8585417e404de6f7c98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af24e9e7b0236d8585417e404de6f7c98">&#9670;&#160;</a></span>sharpe()</h2>
 
@@ -1480,111 +808,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The ratio; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> with fewer than two observations, and <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> if the returns never vary. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00127">127</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00126">126</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00127">sharpe()</a>.</p>
-
-</div>
-</div>
-<a id="aa65ecda5275f95ad1791856febd3ed0f" name="aa65ecda5275f95ad1791856febd3ed0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa65ecda5275f95ad1791856febd3ed0f">&#9670;&#160;</a></span>sma() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::sma </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the simple moving average, requiring every row of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at; all must be observed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The averages, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where any row of the window is unobserved. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00285">285</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6160efd6712a636201df7819faa086f8" name="a6160efd6712a636201df7819faa086f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6160efd6712a636201df7819faa086f8">&#9670;&#160;</a></span>sma() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::sma </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the simple moving average; identical to <span class="tt"><a class="el" href="#a1939f6f853886d2c05bfba7875825e3d" title="Computes the trailing mean of the observed values.">rolling_mean</a></span>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved and skipped. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at, observed or not. </td></tr>
-    <tr><td class="paramname">min_observed</td><td>How many of those rows must be observed for a result to be reported. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The averages, one per row; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> where fewer than <span class="tt">min_observed</span> rows are observed. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> or <span class="tt">min_observed</span> is zero, or <span class="tt">min_observed &gt; window</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="rolling_8hpp_source.html#l00273">273</a> of file <a class="el" href="rolling_8hpp_source.html">rolling.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="rolling_8hpp_source.html#l00285">sma()</a>, and <a class="el" href="rolling_8hpp_source.html#l00273">sma()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00126">sharpe()</a>.</p>
 
 </div>
 </div>
@@ -1626,9 +852,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The ratio; <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> with fewer than two observations, and <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> if no return falls below <span class="tt">target</span>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00152">152</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="metrics_8hpp_source.html#l00151">151</a> of file <a class="el" href="metrics_8hpp_source.html">metrics.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00152">sortino()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metrics_8hpp_source.html#l00151">sortino()</a>.</p>
 
 </div>
 </div>
@@ -1673,7 +899,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="conversion_8hpp_source.html#l00060">60</a> of file <a class="el" href="conversion_8hpp_source.html">conversion.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>, <a class="el" href="sizing_8hpp_source.html#l00061">algotradelib::strategy::vanilla::VolatilityTargetSizing::on_bar()</a>, <a class="el" href="conversion_8hpp_source.html#l00099">round_scalar_to_tick()</a>, and <a class="el" href="conversion_8hpp_source.html#l00060">to_decimal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>, <a class="el" href="conversion_8hpp_source.html#l00099">round_scalar_to_tick()</a>, and <a class="el" href="conversion_8hpp_source.html#l00060">to_decimal()</a>.</p>
 
 </div>
 </div>
@@ -1713,109 +939,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="conversion_8hpp_source.html#l00037">37</a> of file <a class="el" href="conversion_8hpp_source.html">conversion.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>, <a class="el" href="frame_8hpp_source.html#l00247">from_bars()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00157">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="conversion_8hpp_source.html#l00037">to_scalar()</a>.</p>
-
-</div>
-</div>
-<a id="a237ffb991d597894121c788821d9a9b4" name="a237ffb991d597894121c788821d9a9b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a237ffb991d597894121c788821d9a9b4">&#9670;&#160;</a></span>zscore() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::zscore </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes the trailing z-score, requiring every row of the window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows; all must be observed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The z-scores, one per row; see the overload with <span class="tt">min_observed</span>. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> is zero. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="indicators_8hpp_source.html#l00115">115</a> of file <a class="el" href="indicators_8hpp_source.html">indicators.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a3be8c6075fe7f979722b4fcb11a8cef3" name="a3be8c6075fe7f979722b4fcb11a8cef3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3be8c6075fe7f979722b4fcb11a8cef3">&#9670;&#160;</a></span>zscore() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacealgotradelib_1_1math.html#aabc11d522f83cde7f94a27adc0ddfb1f">math::Vector</a> algotradelib::analytics::zscore </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacealgotradelib_1_1math.html#ae4c8e078736dd52dd016c932bc975b96">math::SeriesView</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>window</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>min_observed</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Computes how many trailing sample standard deviations each value lies from its trailing mean. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The series; <span class="tt">NaN</span> entries are unobserved. </td></tr>
-    <tr><td class="paramname">window</td><td>The number of trailing rows each result looks at, observed or not. </td></tr>
-    <tr><td class="paramname">min_observed</td><td>How many of those rows must be observed for a result to be reported. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The z-scores, one per row. A row is <span class="tt"><a class="el" href="#ac779beb008cac496403576f7f5caaaf1" title="Returns the value that stands for &quot;no observation&quot;; see math::missing.">missing()</a></span> if its own value is unobserved or the window has fewer than <span class="tt">max(min_observed, 2)</span> observations, and <span class="tt"><a class="el" href="namespacealgotradelib_1_1math.html#a50c8c89e41d0eb721cf3d9a58659d7eb" title="Returns the value that stands for &quot;the data was there, but the statistic does not exist&quot;.">math::undefined()</a></span> if every observation in the window is equal (no dispersion; common for a halted instrument). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <span class="tt">window</span> or <span class="tt">min_observed</span> is zero, or <span class="tt">min_observed &gt; window</span>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="indicators_8hpp_source.html#l00077">77</a> of file <a class="el" href="indicators_8hpp_source.html">indicators.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="reversion_8hpp_source.html#l00060">algotradelib::strategy::vanilla::ZScoreReversion::on_bar()</a>, <a class="el" href="indicators_8hpp_source.html#l00115">zscore()</a>, and <a class="el" href="indicators_8hpp_source.html#l00077">zscore()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="report_8hpp_source.html#l00650">algotradelib::backtest::chain_results()</a>, <a class="el" href="frame_8hpp_source.html#l00247">from_bars()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00156">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="conversion_8hpp_source.html#l00037">to_scalar()</a>.</p>
 
 </div>
 </div>
@@ -1878,7 +1002,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="frame_8hpp_source.html#l00041">41</a> of file <a class="el" href="frame_8hpp_source.html">frame.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00124">algotradelib::analytics::SeriesFrame::columns()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00157">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="series__buffer_8hpp_source.html#l00042">algotradelib::analytics::SeriesBuffer::SeriesBuffer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="frame_8hpp_source.html#l00124">algotradelib::analytics::SeriesFrame::columns()</a>, <a class="el" href="series__buffer_8hpp_source.html#l00156">algotradelib::analytics::SeriesBuffer::push()</a>, and <a class="el" href="series__buffer_8hpp_source.html#l00041">algotradelib::analytics::SeriesBuffer::SeriesBuffer()</a>.</p>
 
 </div>
 </div>
