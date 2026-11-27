@@ -83,9 +83,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-147836aa028000c8f43acaefe04f05ef.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b35b1a70ce295e26cd1525e46457f4b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ffca01295c166742b038f8a8be4b0896.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-b35b1a70ce295e26cd1525e46457f4b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-070834da161db6b393bc45cff3f62a2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-248d7cf01e7ab24d6e899a0d861072e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-070834da161db6b393bc45cff3f62a2f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -416,7 +416,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    unchecked_fill_causality,</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    market_price_rule,</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    market_fills_by_rule,</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    expired_day_orders,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    multiple_instruments,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    cost_totals_incomplete,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    volume_ignored,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    bar_tape_unverified,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    sellable_is_whole_holding,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    buying_power_is_ledger_cash,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>What one replay produced.</p>
 <p><code>fills</code>, <code>equity</code>, <code>rejected</code> and <code>refused</code> are dicts of columns (<code>pandas.DataFrame(result.fills)</code> makes a table). Times are ns since the epoch (UTC). <code>halted</code> says why the replay stopped early, if it did; the figures then cover only what ran. Figures are NaN where the library has none.</p>
 <section id="attributes" class="level2 doc-section doc-section-attributes">
@@ -539,6 +546,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>market_fills_by_rule</td>
 <td>int</td>
 <td>Fills that rule priced; 0 under the default.</td>
+</tr>
+<tr class="even">
+<td>expired_day_orders</td>
+<td>int</td>
+<td>Orders withdrawn unfilled when their trading session ended, as a day order expires live: for example a “decision-close” order whose symbol had no price yet and whose next daily bar has no open.</td>
+</tr>
+<tr class="odd">
+<td>multiple_instruments</td>
+<td>bool</td>
+<td>Whether more than one symbol executed: the library’s caution about survivorship bias. A universe chosen from today’s listings leaves out names delisted during the period, which flatters the result; the library cannot see how the symbols were chosen, so a hand-picked list sets it too.</td>
+</tr>
+<tr class="even">
+<td>cost_totals_incomplete</td>
+<td>bool</td>
+<td>Whether some cost could not be summed exactly (amounts far beyond any real account, such as a huge <code>min_commission</code>); <code>commission_paid</code>, <code>tax_paid</code> and <code>slippage_paid</code> are then NaN.</td>
+</tr>
+<tr class="odd">
+<td>volume_ignored</td>
+<td>bool</td>
+<td>Always True: fills are never capped by traded volume, and queue position, market impact and borrowing are not modelled, so a result says nothing about how much capital the strategy can take.</td>
+</tr>
+<tr class="even">
+<td>bar_tape_unverified</td>
+<td>bool</td>
+<td>Always True: bars carry no venue, so the replay cannot know which tape (KRX, NXT or consolidated) they came from, and a live run’s bars can differ.</td>
+</tr>
+<tr class="odd">
+<td>sellable_is_whole_holding</td>
+<td>bool</td>
+<td>Always True: every share held counts as sellable; live, a broker can report fewer (unsettled, pledged or locked shares) and refuse a sale the replay allowed.</td>
+</tr>
+<tr class="even">
+<td>buying_power_is_ledger_cash</td>
+<td>bool</td>
+<td>Always True: the replay’s buying power is its own cash, with no settlement modelled, while a broker computes buying power on its own terms. pyatl does not cap buys at that cash either: a buy may take cash below zero, which <code>overdrawn_bars</code> and <code>lowest_cash</code> report.</td>
 </tr>
 </tbody>
 </table>
