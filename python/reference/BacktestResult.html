@@ -416,23 +416,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    unchecked_fill_causality,</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    market_price_rule,</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    market_fills_by_rule,</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    expired_day_orders,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    multiple_instruments,</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    cost_totals_incomplete,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    volume_ignored,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    bar_tape_unverified,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    sellable_is_whole_holding,</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    buying_power_is_ledger_cash,</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    expired_day_orders<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    multiple_instruments<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    cost_totals_incomplete<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    volume_ignored<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    bar_tape_unverified<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    sellable_is_whole_holding<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    buying_power_is_ledger_cash<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    periods_per_year<span class="op">=</span>math.nan,</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>What one replay produced.</p>
-<p><code>fills</code>, <code>equity</code>, <code>rejected</code> and <code>refused</code> are dicts of columns (<code>pandas.DataFrame(result.fills)</code> makes a table). Times are ns since the epoch (UTC). <code>halted</code> says why the replay stopped early, if it did; the figures then cover only what ran. Figures are NaN where the library has none.</p>
+<p><code>fills</code>, <code>equity</code>, <code>rejected</code> and <code>refused</code> are dicts of columns (<code>pandas.DataFrame(result.fills)</code> makes a table). Times are ns since the epoch (UTC). <code>halted</code> says why the replay stopped early, if it did; the figures then cover only what ran. Figures are NaN where the library has none. A result saved before a field existed loads with that field’s default: None for a count or flag it did not report, True for the four constant cautions (they held for every replay), NaN for <code>periods_per_year</code>; it keeps the <code>annualized_sharpe</code> it saved.</p>
 <section id="attributes" class="level2 doc-section doc-section-attributes">
 <h2 class="doc-section doc-section-attributes anchored" data-anchor-id="attributes">Attributes</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 8%">
-<col style="width: 6%">
-<col style="width: 85%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 92%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -480,7 +481,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>annualized_sharpe</td>
 <td>float</td>
-<td><code>sharpe</code> scaled to a year of KRX trading days.</td>
+<td><code>sharpe</code> times the square root of <code>periods_per_year</code>, a rule that assumes serially uncorrelated returns; NaN when there is no count. <code>sharpe</code>, per period, is reported either way.</td>
 </tr>
 <tr class="odd">
 <td>turnover</td>
@@ -549,17 +550,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>expired_day_orders</td>
-<td>int</td>
+<td>int or None</td>
 <td>Orders withdrawn unfilled when their trading session ended, as a day order expires live: for example a “decision-close” order whose symbol had no price yet and whose next daily bar has no open.</td>
 </tr>
 <tr class="odd">
 <td>multiple_instruments</td>
-<td>bool</td>
+<td>bool or None</td>
 <td>Whether more than one symbol executed: the library’s caution about survivorship bias. A universe chosen from today’s listings leaves out names delisted during the period, which flatters the result; the library cannot see how the symbols were chosen, so a hand-picked list sets it too.</td>
 </tr>
 <tr class="even">
 <td>cost_totals_incomplete</td>
-<td>bool</td>
+<td>bool or None</td>
 <td>Whether some cost could not be summed exactly (amounts far beyond any real account, such as a huge <code>min_commission</code>); <code>commission_paid</code>, <code>tax_paid</code> and <code>slippage_paid</code> are then NaN.</td>
 </tr>
 <tr class="odd">
@@ -581,6 +582,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>buying_power_is_ledger_cash</td>
 <td>bool</td>
 <td>Always True: the replay’s buying power is its own cash, with no settlement modelled, while a broker computes buying power on its own terms. pyatl does not cap buys at that cash either: a buy may take cash below zero, which <code>overdrawn_bars</code> and <code>lowest_cash</code> report.</td>
+</tr>
+<tr class="odd">
+<td>periods_per_year</td>
+<td>float</td>
+<td>The periods in a year that <code>annualized_sharpe</code> uses: the <code>periods_per_year</code> argument if given, otherwise counted from this replay’s own equity curve, as its points less one over the years between its first and last point (365.25 days each). A given count is reported as given, even on an empty replay; a counted one is NaN with fewer than two points at distinct times. Annualizing needs this number known: a replay shorter than a year extrapolates its own rate, with no full cycle of nights, weekends and holidays, so its annualized figure can be inflated (against 245 KRX sessions a year of 390 1m bars each, about 1.22 times for a week of daily bars and about 2.35 times for one day of 1m bars); give <code>periods_per_year</code> to set it. A counted rate is that of intervals between points, not of the returns that enter <code>sharpe</code>: the point after an unvalued bar carries no return, and a stretch of unvalued bars lowers the count.</td>
 </tr>
 </tbody>
 </table>

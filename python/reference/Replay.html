@@ -406,7 +406,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    scale<span class="op">=</span><span class="dv">4</span>,</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    shorts<span class="op">=</span><span class="va">False</span>,</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    fill<span class="op">=</span><span class="st">'next-open'</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    periods_per_year<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>One backtest that you feed yourself, in as many steps as you like, then finish once.</p>
 <p><code>backtest()</code> is a <code>Replay</code> fed once. Use a <code>Replay</code> when the sequence of bars is yours to define: a resampled path, a rolling window, bars generated as the run goes. The bars still run through the C++ engine one at a time; in our measurements, feeding a sequence in blocks took no longer than one <code>backtest()</code> call over the same bars.</p>
 <section id="parameters" class="level2 doc-section doc-section-parameters">
@@ -498,6 +499,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>str</td>
 <td>The price a target’s orders fill at, on the next eligible bar of that symbol, stamped at its period end. “next-open” (the default) is that bar’s open. “decision-close” is the symbol’s last observed close when the target was set, before slippage: the convention of backtests that trade on the close. It is optimistic, since a real order cannot trade at a close already seen. After a gap in the symbol’s data that close can be days old; with no close seen yet, the order fills at the next bar’s open. “next-close” is that bar’s close: the price basis of backtests that fill on the next bar’s close, a price convention, not a simulation of a closing order, and a bar stamped at its close is taken at that instant. It prices bars of a day or less: an order that would fill on a weekly or longer bar halts the replay, with the reason in <code>halted</code>; receiving such bars alone does not. <code>market_price_rule</code> and <code>market_fills_by_rule</code> in the result name the rule and count its fills.</td>
 <td><code>'next-open'</code></td>
+</tr>
+<tr class="odd">
+<td>periods_per_year</td>
+<td>float</td>
+<td>The periods in a year that <code>annualized_sharpe</code> uses. None (the default) counts them from the equity curve; see <code>BacktestResult.periods_per_year</code>. Must be finite and above 0.</td>
+<td><code>None</code></td>
 </tr>
 </tbody>
 </table>
